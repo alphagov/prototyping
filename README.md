@@ -25,6 +25,8 @@ Set "title" to the name of the app you are building - it controls what appears a
 
 Set "categories" to be whatever the gov.uk format might be - eg "service".
 
+Then underneath just start shoving in the content of the prototype!
+
 ## Starting the app
 
 Just type "jekyll --server" at the command line in the root folder.
