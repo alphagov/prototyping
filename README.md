@@ -3,6 +3,8 @@ Prototyping
 
 Use this app to make your protype static apps in!
 
+It uses jekyll - https://github.com/mojombo/jekyll - to generate static files generated from templates.
+
 ## How to make a new prototype and configuration
 
 Just create a new folder, named eg "app-name", then duplicate the root index.html into it.
