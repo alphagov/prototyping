@@ -35,6 +35,8 @@
       header.page-header hgroup {
         margin: 0;
         padding: 0 24px 60px 36px;
+        /*background-image: -webkit-linear-gradient(transparent 7px,#E4E4E4 1px);*/
+        /*background-size: 100% 8px;*/
       }
 
       article {
@@ -55,10 +57,10 @@
         font-weight: 300;
         letter-spacing: .01em;
         text-transform: none;
-        padding-top: 7px;
-        padding-top: .7rem;
+        padding-top: 8px;
+        padding-top: 0.8rem;
         padding-bottom: 5px;
-        padding-bottom: .5rem;
+        padding-bottom: 0.5rem;
 
         padding-left: 0;
         padding-right: 0;
@@ -77,23 +79,69 @@
         padding-bottom: 13px;
         padding-bottom: 1.3rem;
 
-        margin-bottom: -12px;
-        margin-bottom: -1.2rem;
+        margin-bottom: -9px;
+        margin-bottom: -0.9rem;
       }
 
 
       header.page-header hgroup p {
-        font-family: "Gill Sans W01 Book","Gill Sans MT","Gill Sans","Helvetica Neue",Arial,        Helvetica,sans-serif;
-        font-size: 18px;
-        font-size: 1.8rem;
-        line-height: 1.3333333333;
+        font-family: "Helvetica Neue","HelveticaNeue",Arial,Helvetica,sans-serif;
+        font-size: 15px;
+        font-size: 1.5rem;
+        line-height: 1.6;
         font-weight: 400;
         letter-spacing: .01em;
-        text-transform: none;
-        padding-top: 5px;
-        padding-top: .5rem;
-        padding-bottom: 11px;
-        padding-bottom: 1.1rem;
+        padding-top: 6px;
+        padding-top: .6rem;
+        padding-bottom: 10px;
+        padding-bottom: 1rem;
+
+        max-width: 40em;
+      }
+
+      #versions #versions-list {
+        display: none;
+        position: relative;
+        margin: 0 -24px 0 -36px;
+        padding: 0;
+        border: solid #f2f2f2;
+        background: #ddd;
+        border-width: 0 24px 24px;
+        /*display: none;*/
+      }
+
+      #versions strong {
+        font-weight: normal;
+      }
+
+      #toggle-target:target #versions #versions-list {
+        display: block;
+      }
+
+      #versions #versions-list li {
+        position: relative;
+        margin: 0;
+        padding: 0 12px 0;
+        list-style: none;
+        border: solid #f2f2f2;
+        border-width: 1px 0 0;
+
+
+        font-family: "Helvetica Neue","HelveticaNeue",Arial,Helvetica,sans-serif;
+        font-size: 15px;
+        font-size: 1.5rem;
+        line-height: 1.6;
+        font-weight: 400;
+        letter-spacing: .01em;
+        padding-top: 10px;
+        padding-top: 1rem;
+        padding-bottom: 10px;
+        padding-bottom: 1rem;
+      }
+
+      #versions #versions-list a span {
+        position: absolute;
+        left: -5000%;
       }
 
       article .inner {
@@ -107,11 +155,22 @@
       }
 
       article #how-it-works ul {
+        position: relative;
         margin: 0 0 0 -40px;
-        padding-left: 30px;
-        border-left: 8px solid #bbb;
+        padding-left: 38px;
         padding-right: 24px;
         border-right: 1px solid #eee;
+      }
+
+      article #how-it-works ul:before {
+        content: " ";
+        position: absolute;
+        overflow: hidden;
+        top: 2rem;
+        left: 0;
+        bottom: 0;
+        width: 8px;
+        background: #bbb;
       }
 
       article #how-it-works li {
@@ -142,7 +201,7 @@
         font-weight: 400;
         letter-spacing: 0;
         padding-top: 4px;
-        padding-top: .4rem;
+        padding-top: 0.4rem;
         padding-bottom: 12px;
         padding-bottom: 1.2rem;
       }
@@ -153,7 +212,7 @@
       }
 
       article #how-it-works h3 {
-        font-family: "Gill Sans W01 Book","Gill Sans MT","Gill Sans","Helvetica         Neue",Arial,Helvetica,sans-serif;
+        font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
         font-size: 32px;
         font-size: 3.2rem;
         line-height: 1.25;
@@ -271,10 +330,23 @@
     <div id="wrapper" class="licence-finder">
       <section id="content" role="main" class="group">
 
-          <header class="page-header group">
+          <header id="toggle-target" class="page-header group">
             <hgroup>
               <h1><span>Education</span> Student finance</h1>
               <p>Get help if you're at school, planning to go on to further or higher education, looking for training or interested in a student or career development loan.</p>
+              <div id="versions">
+                <p>
+                  <strong>Aug 2011&mdash;Sept 2012</strong>&nbsp;<a href="#toggle-target">previous versions</a>
+                </p>
+                <ol id="versions-list">
+                  <li>
+                    <strong>Aug 2010&mdash;Sept 2011</strong>&nbsp;<a href="#">view <span> this version</span></a>
+                  </li>
+                  <li>
+                    <strong>Aug 2009&mdash;Sept 2010</strong>&nbsp;<a href="#">view <span> this version</span></a>
+                  </li>
+                </ol>
+              </div>
             </hgroup>
           </header>
 
@@ -288,14 +360,6 @@
                     <li>
                       <h3><a href="#">Register or log in to student finance</a></h3>
                       <p>You can log in to your student finance account or sign up. Once registered, you can apply for student finance, see when your payments are due, track your application and change your details.</p>
-                    </li>
-                    <li>
-                      <h3><a href="#">Education Maintenance allowance (EMA)</a></h3>
-                      <p>New applicants can no longer apply for Education Maintenance Allowance (EMA) - you may be able to get the 16-19 Bursary Fund to help with study costs.</p>
-                    </li>
-                    <li>
-                      <h3><a href="#">16-19 Bursary Fund</a></h3>
-                      <p>If you're 16 to 19 and studying full-time or in training, then you might be able to get up to &pound;1,200 from the 16 - 19 Bursary Fund. You can't apply if you are studying at university.</p>
                     </li>
                     <li>
                       <h3><a href="#">Student finance evidence needed by students</a></h3>
