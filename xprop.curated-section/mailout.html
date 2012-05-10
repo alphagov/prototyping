@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student finance</title>
+    <link href="https://d17tffe05zdvwj.cloudfront.net/static/application-c98b0f836bb9e57ae7ec51d36dedf224.css" media="screen" rel="stylesheet" type="text/css">
+    <link class="wordsdifficult" href="https://d17tffe05zdvwj.cloudfront.net/static/wordsdifficult-ed25a7ddb7892df5392b85f0c6cf87b9.css" media="screen" rel="alternate stylesheet" title="I find words difficult" type="text/css">
+    <script src="https://d17tffe05zdvwj.cloudfront.net/static/libs/jquery/jquery-1.7.2.min-1c1a867d9c03290dff478512f3cc546a.js" type="text/javascript"></script>
+    <script src="https://d17tffe05zdvwj.cloudfront.net/static/libs/jquery/plugins/carousel-5cb9eb98c42034deb743736e96ab6d35.js" type="text/javascript"></script>
+    <script defer src="https://d17tffe05zdvwj.cloudfront.net/static/application-17ac6224e644197e0ef0fae154fe1aa2.js" type="text/javascript"></script>
+
+
+
+
+
+
+    <style type="text/css">
+
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        font-size: 160%;
+      }
+
+      body.citizen nav.header-context ol li:first-child {
+        margin-left: 0;
+      }
+
+      p {
+        margin: 0;
+        max-width: 33em;
+      }
+
+      article {
+        float: none;
+        display: block;
+        background: transparent;
+        min-height: 1px;
+        width: auto;
+      }
+
+      header.page-header {
+        position: relative;
+        clear: both;
+        overflow: hidden;
+        margin: 0;
+        padding: 24px 24px 0;
+        background-color: white;
+        /*background-image: -webkit-linear-gradient(transparent 7px,#E4E4E4 1px);*/
+        /*background-size: 100% 8px;*/
+      }
+      
+      header.page-header hgroup {
+        margin: 0;
+        padding: 0 12px;
+        min-height: 320px;
+        border: none;
+        background-color: rgba(255,0,0,0.3);
+      }
+
+      header.page-header hgroup h1 {
+        padding: 0;
+      }
+
+      header.page-header hgroup h1 strong {
+        position: relative;
+        margin: -16px 0 0;
+        display: block;
+
+        font-family: "Gill Sans W01 Book","Gill Sans MT","Gill Sans","Helvetica Neue",Arial,Helvetica,sans-serif;
+        font-size: 45px;
+        font-size: 4.5rem;
+        line-height: 1.1555555556;
+        font-weight: 300;
+        letter-spacing: .01em;
+        text-transform: none;
+        padding-top: 7px;
+        padding-top: 0.7rem;
+        padding-bottom: 5px;
+        padding-bottom: 0.5rem;
+      }
+
+      header.page-header hgroup h1 span {
+        margin: 0;
+
+        font-family: "Gill Sans W01 Book","Gill Sans MT","Gill Sans","Helvetica Neue",Arial,Helvetica,sans-serif;
+        font-size: 13px;
+        font-size: 1.3rem;
+        line-height: 1.2307692308;
+        font-weight: 400;
+        letter-spacing: .125em;
+        text-transform: uppercase;
+        padding-top: 11px;
+        padding-top: 1.1rem;
+        padding-bottom: 13px;
+        padding-bottom: 1.3rem;        
+      }
+
+      header.page-header hgroup p {
+        margin: 0;
+
+        font-family: "Helvetica Neue","HelveticaNeue",Arial,Helvetica,sans-serif;
+        font-size: 15px;
+        font-size: 1.5rem;
+        line-height: 1.6;
+        font-weight: 400;
+        letter-spacing: .01em;
+        padding-top: 6px;
+        padding-top: .6rem;
+        padding-bottom: 10px;
+        padding-bottom: 1rem;
+      }
+
+      .collection-container {
+        position: relative;
+        clear: both;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        /*background-image: -webkit-linear-gradient(transparent 7px,#E4E4E4 1px);*/
+        /*background-size: 100% 8px;*/
+      }
+
+      .collection {
+        position: relative;
+        clear: both;
+        overflow: hidden;
+        margin: 0;
+        padding: 16px 12px 0;
+      }
+
+      .collection + .collection {
+        padding-top: 0;
+      }
+
+      .collection h2 {
+        margin: 0;
+        padding-left: 12px;
+        padding-right: 12px;
+
+        font-family: "Gill Sans W01 Book","Gill Sans MT","Gill Sans","Helvetica Neue",Arial,Helvetica,sans-serif;
+        font-size: 32px;
+        font-size: 3.2rem;
+        line-height: 1.25;
+        font-weight: 300;
+        letter-spacing: .01em;
+        text-transform: none;
+        padding-top: 9px;
+        padding-top: .9rem;
+        padding-bottom: 7px;
+        padding-bottom: .7rem;
+      }
+
+      .collection:first-child h2 {
+        position: absolute;
+        left: -5000%;
+      }
+
+      .collection .column {
+        float: left;
+        display: inline;
+        width: 25%;
+      }
+
+      .collection article {
+        margin: 8px 12px 24px;
+        padding: 0;
+      }
+
+      .collection article a {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        padding: 0 12px;
+        min-height: 160px;
+        text-decoration: none;
+      }
+
+      .column:nth-child(2n) article:nth-child(2n-1) a {
+        min-height: 240px;
+      }
+
+      .column:nth-child(2n-1) article:nth-child(2n) a {
+        min-height: 240px;
+      }
+
+      .collection article strong {
+        color: white;
+        margin-top: 4px;
+        position: relative;
+        display: block;
+        z-index: 80;
+        -webkit-font-smoothing: antialiased;
+
+        font-family: "Helvetica Neue","HelveticaNeue",Arial,Helvetica,sans-serif;
+        font-size: 18px;
+        font-size: 1.8rem;
+        line-height: 1.3333333333;
+        font-weight: 700;
+        letter-spacing: 0;
+        padding-top: 4px;
+        padding-top: .4rem;
+        padding-bottom: 12px;
+        padding-bottom: 1.2rem;
+      }
+
+      .collection article a img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: auto;
+        max-height: 100%;
+        min-width: 100%;
+      }
+
+      .collection article a .tint {
+        position: absolute;
+        z-index: 70;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+        -webkit-transition: 3s ease;
+      }
+
+      .collection article a:hover .tint,
+      .collection article a:focus .tint {
+        opacity: 0.95;
+        -webkit-transition: 0.6s ease;
+      }
+
+      .collection article.campaign a .tint,
+      .collection article.campaign a strong {
+        display: none;
+      }
+
+      .collection article.campaign a img {
+        width: auto;
+        top: -80px;
+        max-height: 10000000%;
+      }
+
+      .collection article.guide a .tint {
+        background-color: rgb(190, 79, 25);
+      }
+
+      .collection article.service a .tint {
+        background-color: rgb(34, 119, 112);
+      }
+
+      .collection article.quick-answer a .tint {
+        background-color: rgb(211, 56, 131);
+      }
+
+      .collection article.benefits-and-credits a .tint {
+        background-color: rgb(46, 54, 142);
+      }
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </head>
+  <body class="citizen">
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
+    <header role="banner" class="group" id="global-header">
+      <div class="header-global group">
+        <h1><a href="/" title="Go to the gov.uk homepage">GOV.UK</a></h1>
+        <nav role="navigation">
+          <ul>
+            <li><a href="/settings" class="customisation-settings">Settings</a></li>
+            <li><a href="/help">Help</a></li>
+            <li id="gs-feedback"><a href="/feedback">Feedback</a></li>
+          </ul>
+        </nav>
+        <div class="search-help">
+          <form id="search" class="site-search" action="/search" method="get" role="search">
+            <label for="site-search-text" class="visuallyhidden">
+              <span>Search</span>
+            </label>
+            <input type="search" name="q" id="site-search-text" title="Search"><input type="submit" value="Search" class="button">
+          </form>
+        </div>
+      </div>
+    </header>
+    <nav role="navigation" class="header-context">
+      <div class="beta-notice">
+        <div class="inner">
+          <p><a href="http://digital.cabinetoffice.gov.uk/2012/02/01/govuk-beta-day1/">BETA</a></p>
+        </div>
+      </div>
+      <ol class="group">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Section</a></li>
+      </ol>
+    </nav>
+    <div id="wrapper" class="licence-finder">
+      <section id="content" role="main" class="group">
+
+          <header class="page-header group">
+            <hgroup>
+              <h1><span>Education</span> <strong>Student finance</strong></h1>
+              <p>Get help if you're at school, planning to go on to further or higher education, looking for training or interested in a student or career development loan.</p>
+            </hgroup>
+          </header>
+
+
+          <div class="collection-container group">
+            <div class="collection">
+              <h2>How it works</h2>
+              <div class="column">
+                <article class="campaign">
+                  <a href="#">
+                    <strong>Campaign</strong>
+                    <img src="assets/future-students3.png" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+                <article class="quick-answer">
+                  <a href="#">
+                    <strong>Student finance evidence needed by students</strong>
+                    <img src="assets/7125676457_d7d57e89d2_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+              </div>
+              <div class="column">
+                <article class="quick-answer">
+                  <a href="#">
+                    <strong>Student finance: evidence needed by parents and partners</strong>
+                    <img src="assets/7168844330_2b020ae665_o.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+                <article class="quick-answer">
+                  <a href="#">
+                    <strong>Extra money to pay for university</strong>
+                    <img src="assets/6158266166_15a7e3b194_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+              </div>
+             <div class="column">
+                <article class="quick-answer">
+                  <a href="#">
+                    <strong>Student jobs - paying tax</strong>
+                    <img src="assets/7125676457_d7d57e89d2_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+                <article class="quick-answer">
+                  <a href="#">
+                    <strong>Funding for postgraduate study</strong>
+                    <img src="assets/7168844330_2b020ae665_o.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+              </div>
+              <div class="column">
+                <article class="service">
+                  <a href="#">
+                    <strong>Register or log in to student finance</strong>
+                    <img src="assets/6158266166_15a7e3b194_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+                <article class="quick-answer">
+                  <a href="#">
+                    <strong>Paying back your student loan</strong>
+                    <img src="assets/6158266166_15a7e3b194_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+              </div>
+            </div>
+
+            <div class="collection">
+              <h2>Additional funding</h2>
+              <div class="column">
+                <article class="benefits-and-credits">
+                  <a href="#">
+                    <strong>Access to Learning Fund</strong>
+                    <img src="assets/7125676457_d7d57e89d2_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+                <article class="benefits-and-credits">
+                  <a href="#">
+                    <strong>NHS Bursaries</strong>
+                    <img src="assets/7168844330_2b020ae665_o.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+                <article class="quick-answer">
+                  <a href="#">
+                    <strong>Teacher training funding</strong>
+                    <img src="assets/6158266166_15a7e3b194_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+                <article class="benefits-and-credits">
+                  <a href="#">
+                    <strong>Social work bursaries</strong>
+                    <img src="assets/7125676457_d7d57e89d2_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+              </div>
+              <div class="column">
+                <article class="benefits-and-credits">
+                  <a href="#">
+                    <strong>Parents' Learning Allowance</strong>
+                    <img src="assets/7168844330_2b020ae665_o.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+                <article class="benefits-and-credits">
+                  <a href="#">
+                    <strong>Adult Dependants Grant</strong>
+                    <img src="assets/6158266166_15a7e3b194_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+                <article class="guide">
+                  <a href="#">
+                    <strong>Professional and Career Development Loans</strong>
+                    <img src="assets/7125676457_d7d57e89d2_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+              </div>
+              <div class="column">
+                <article class="benefits-and-credits">
+                  <a href="#">
+                    <strong>Disabled Students Allowances (DSAs)</strong>
+                    <img src="assets/7168844330_2b020ae665_o.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+                <article class="benefits-and-credits">
+                  <a href="#">
+                    <strong>Discretionary Learner Support</strong>
+                    <img src="assets/6158266166_15a7e3b194_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+                <article class="benefits-and-credits">
+                  <a href="#">
+                    <strong>Residential Support Scheme</strong>
+                    <img src="assets/7125676457_d7d57e89d2_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+              </div>
+              <div class="column">
+                <article class="benefits-and-credits">
+                  <a href="#">
+                    <strong>Care to Learn</strong>
+                    <img src="assets/7168844330_2b020ae665_o.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+                <article class="benefits-and-credits">
+                  <a href="#">
+                    <strong>Childcare Grant</strong>
+                    <img src="assets/6158266166_15a7e3b194_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+                <article class="benefits-and-credits">
+                  <a href="#">
+                    <strong>Loans for EU students</strong>
+                    <img src="assets/7125676457_d7d57e89d2_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+              </div>
+            </div>
+
+            <div class="collection">
+              <h2>Tools</h2>
+              <div class="column">
+                <article class="quick-answer">
+                  <a href="#">
+                    <strong>Student finance calculator 2012-13</strong>
+                    <img src="assets/7168844330_2b020ae665_o.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+              </div>
+              <div class="column">
+                <article class="quick-answer">
+                  <a href="#">
+                    <strong>Contact Student Finance England</strong>
+                    <img src="assets/6158266166_15a7e3b194_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+              </div>
+            </div>
+
+            <div class="collection">
+              <h2>Previous years and other regions</h2>
+              <div class="column">
+                <article class="guide">
+                  <a href="#">
+                    <strong>Student finance 2011-12</strong>
+                    <img src="assets/7125676457_d7d57e89d2_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+                <article class="guide">
+                  <a href="#">
+                    <strong>Student finance 2010-11</strong>
+                    <img src="assets/7168844330_2b020ae665_o.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+              </div>
+              <div class="column">
+                <article class="guide">
+                  <a href="#">
+                    <strong>Student finance in Northern Ireland</strong>
+                    <img src="assets/6158266166_15a7e3b194_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+              </div>
+              <div class="column">
+                <article class="guide">
+                  <a href="#">
+                    <strong>Student finance in Scotland</strong>
+                    <img src="assets/7125676457_d7d57e89d2_b.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+              </div>
+              <div class="column">
+                <article class="guide">
+                  <a href="#">
+                    <strong>Student finance in Wales</strong>
+                    <img src="assets/7168844330_2b020ae665_o.jpg" alt=" " />
+                    <span class="tint"></span>
+                  </a>
+                </article>
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+
+      </section>
+    </div><!--end wrapper-->
+    <footer class="group" id="footer" role="contentinfo">
+      <div class="beta-notice">
+        <p>This is a <a href="http://digital.cabinetoffice.gov.uk/2012/01/31/beta/">test website</a>, so may be inaccurate or misleading. The official website remains <a href="http://www.direct.gov.uk">Directgov</a> and the website of the <a href="http://www.cabinetoffice.gov.uk/content/list-government-departments-and-ministers">relevant government department or organisation</a></p>
+      </div>
+      <div class="inner group">
+        <div class="colophon-and-help">
+          <nav class="help">
+            <ul>
+              <li><a href="/help">Help</a></li>
+              <li><a href="/help/cookies">Cookies</a></li>
+            </ul>
+          </nav>
+          <div class="colophon">
+            <p>Much of the information on this website is available for reuse under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/" rel="license">Open Government Licence</a></p>
+            <p>Built by the <a href="http://digital.cabinetoffice.gov.uk">Government Digital Service</a></p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; Crown Copyright</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
