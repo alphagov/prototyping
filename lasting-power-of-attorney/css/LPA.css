@@ -1,0 +1,259 @@
+
+/* PATTERNS FOR DESCRIBING STEPPED PROCESSES
+--------------------------------------------
+
+There are three related patterns:
+
+1.	Process Steps
+	Gives the number and title of each step
+	Only the current step is highlighted
+	Intended as an orientation device at the top of a page
+
+2.	Process Overview
+	As above, but a brief description of each step is added
+	Each step can contain a pictogram, caption and links
+	Intended as an overview and to launch transactions or more detailed info
+
+3.	Process Details
+	As above, but a detailed description of each step is added
+	The pictogram and caption are placed in a right-floated panel
+	Intended to take up a whole page
+
+
+*/
+
+.process.overview{
+	display: table;
+	padding: 1em;
+	margin: 0 -5em; /* extend panel to edges of wrapper */
+}
+.process{
+	counter-reset:li; /* Initiate a counter */
+	list-style-type: none;
+}
+.process.overview > li{
+	background-color: #e8f0f0;
+	border-right: 1em solid #FFF;
+	display: table-cell;
+	font-size: 100%; /* reduce font size slightly */
+	padding: 0.5em;
+	width: 29%;
+}
+.process > li:before {
+	/* Replace standard numerals with styled ones*/
+    background-color: #006435;
+    color: #FFF;
+    content:counter(li); /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    float: left;
+    padding: 0.35em 0.7em;
+}
+.process.overview > li:before {
+    font-size: 1.3em;
+    padding: 0.4em 0.7em;
+}
+.process img{
+	margin-top: 1em;
+	max-width: 12em;
+	width: 100%;
+}
+.process.overview > li:last-child{
+	border-right: 0;
+}
+.process > li h3{
+	background-color: #e8f0f0;
+	font-size: 1.3em;
+	padding: 0.2em 0.5em 0.3em 1.7em;
+}
+.process.overview > li h3{
+	background-color: #c1cacb;
+	margin: -0.4em;
+	padding: 0.2em 0.5em 0.3em 2.7em;
+}
+.process.overview h3 em{
+	display: block;
+}
+.process ul {
+	padding-left: 0;
+}
+.process ul li{
+	list-style-image: none;
+	list-style-type: none;
+	padding-left: 0;
+}
+.process.overview .button{
+	margin-top: 0.5em;
+	width: 75%;
+}
+.process.overview ul li, 
+.process.overview figure{
+	text-align: center;
+}
+
+.process > li.disabled h3{
+	background-color: #FFF;
+	color: #083640;
+}
+.process > li.disabled:before {
+	background-color: #083640;
+}
+
+/* Process - detailed view */
+
+.process.details figure{
+	background-color: #e8f0f0;
+	float: right;
+	margin: 0 0 1em 1em;
+	padding: 0 1em 1em 1em;
+	text-align: center;
+	width: 45%;
+}
+
+/* Transaction toolbar */
+.transaction-toolbar{
+	background-color: #c1cacb;
+	padding: 0.5em;
+	margin: -1em -4em 1em -4em; /* extend panel to edges of wrapper */
+}
+
+/* Launch-transaction panel */
+
+.launch-transaction {
+	background-color: #D9E0E0;
+	padding: 0.5em 0 1.5em 0;
+	text-align: center;
+}
+.launch-transaction p{
+	font-weight: bold;
+}
+.launch-transaction .button {
+	display: block;
+	font-weight: normal;
+	margin: 0.6em auto;
+	width: 50%;
+}
+
+/* Anti-headbut anchor links */
+/* http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-D */
+.process.details li {
+    border-top:5em solid transparent;
+    margin-top:-5em;
+  -webkit-background-clip:padding-box;
+     -moz-background-clip:padding;
+    	  background-clip:padding-box;
+}
+.process.details > li:before {
+	margin-top: 1.7em;
+}
+
+
+/* CSS-ONLY TOOLTIP
+-------------------------
+
+The tooltip content immediately follows the tooltip link in the code.
+So make sure it reads semantically. A question/answer format works well.
+Individual tooltips may need extra stying, depending on context and their content.
+Based on: http://viget.com/inspire/css-pointer-events-and-a-pure-css3-animating-tooltip
+GOOD: CSS-only
+BAD: You may need to style left margin and width of individual tooltips	
+*/
+
+.tooltip-wrapper {
+  	border-bottom: 1px dotted #2E3191;
+  	position: relative;
+	text-decoration:none;
+}
+
+.tooltip-wrapper .tooltip a {
+	color: #FFF;
+}
+
+.tooltip-wrapper .tooltip a:hover {
+	text-decoration: none;
+}
+
+.tooltip-wrapper .tooltip {
+  	background: #2b8cc4;
+  	bottom: 100%;
+  	color: #fff;
+  	display: block;
+  	font-weight: bold;
+  	left: -1em;
+  	margin-bottom: 15px;
+  	opacity: 0;
+  	padding: 0.5em 1em 0.7em 1em;
+  	pointer-events: none;
+  	position: absolute;
+  	text-align: left;
+  	width: 100%;
+  -webkit-transform: translateZ(0); /* webkit flicker fix */
+  -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
+  -webkit-transform: translateY(10px);
+     -moz-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+       -o-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+     -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+       -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+#donor-tooltip .tooltip {
+  	margin-left: -3.5em;
+  	width: 10.5em;
+}
+
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.tooltip-wrapper .tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}  
+
+/* CSS Triangles - see Trevor's post */
+.tooltip-wrapper .tooltip:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid #2b8cc4 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 50%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0;
+}
+  
+.tooltip-wrapper:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+     -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+/* IE can just show/hide with no transition */
+.lte8 .tooltip-wrapper .tooltip {
+  display: none;
+}
+
+.lte8 .tooltip-wrapper:hover .tooltip {
+  display: block;
+}​
+
+
+
+
