@@ -56,7 +56,12 @@
         padding: 0 12px;
         min-height: 320px;
         border: none;
-        background-color: rgba(255,0,0,0.3);
+        background: url(assets/lead-promo.jpg) no-repeat top left;
+      }
+
+      header.page-header hgroup * {
+        -webkit-font-smoothing: antialiased;
+        color: white;
       }
 
       header.page-header hgroup h1 {
@@ -259,6 +264,62 @@
         background-color: rgb(46, 54, 142);
       }
 
+      .collection article.guide a:after {
+        content: ' ';
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        width: 64px;
+        height: 72px;
+        /*z-index: 85;*/
+        background: url(assets/icon-guide.png) no-repeat bottom left;
+      }
+
+      .collection article.service a:after {
+        content: ' ';
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        width: 64px;
+        height: 72px;
+        /*z-index: 85;*/
+        background: url(assets/icon-service.png) no-repeat bottom left;
+      }
+
+      .collection article.quick-answer a:after {
+        content: ' ';
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        width: 64px;
+        height: 72px;
+        /*z-index: 85;*/
+        background: url(assets/icon-answer.png) no-repeat bottom left;
+      }
+
+      .collection article.benefits-and-credits a:after {
+        content: ' ';
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        width: 64px;
+        height: 72px;
+        /*z-index: 85;*/
+        background: url(assets/icon-benefit.png) no-repeat bottom left;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
     </style>
 
 
@@ -322,10 +383,10 @@
             <div class="collection">
               <h2>How it works</h2>
               <div class="column">
-                <article class="campaign">
+                <article class="service">
                   <a href="#">
-                    <strong>Campaign</strong>
-                    <img src="assets/future-students3.png" alt=" " />
+                    <strong>Register or log in to student finance</strong>
+                    <img src="assets/6158266166_15a7e3b194_b.jpg" alt=" " />
                     <span class="tint"></span>
                   </a>
                 </article>
@@ -370,13 +431,6 @@
                 </article>
               </div>
               <div class="column">
-                <article class="service">
-                  <a href="#">
-                    <strong>Register or log in to student finance</strong>
-                    <img src="assets/6158266166_15a7e3b194_b.jpg" alt=" " />
-                    <span class="tint"></span>
-                  </a>
-                </article>
                 <article class="quick-answer">
                   <a href="#">
                     <strong>Paying back your student loan</strong>
