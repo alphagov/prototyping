@@ -10,6 +10,22 @@ header.page-header h1 span {
   color: #10370d;
 }
 
+.licence-info {
+
+}
+
+.relevant-authority {
+  border-bottom: 1px solid #93A1A1;
+  margin: 0.5em 0 1em 0;
+  overflow: hidden;
+  /*padding: 0.5em 1em;*/
+  padding-bottom: 1em;
+}
+
+.relevant-authority > p {
+  margin-top: 0;
+}
+
 aside {
   float: left;
   width: 25%;
@@ -51,17 +67,17 @@ aside nav ol li.active a {
   z-index: 2;
 }
 
-article.licence-info {
+article.licence {
   border-left: solid 1px #C9D0D0;
   margin-left: -1px;
   min-height: 40em;
   width: 75%;
 }
 
-article.licence-info .inner {
+article.licence .inner {
   padding: 0.5em 2.5em 1em 2.5em;
 }
 
-article.licence-info .inner > h1 {
+article.licence .inner > h1 {
   margin-top: 0;
 }
