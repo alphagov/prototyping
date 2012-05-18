@@ -15,20 +15,28 @@ header.page-header h1 span {
 }
 
 .relevant-authority {
-  border-bottom: 1px solid #93A1A1;
-  margin: 0.5em 0 1em 0;
+  border-bottom: 1px solid #C9D0D0;
+  margin: 0.5em 0 0.5em 0;
   overflow: hidden;
   /*padding: 0.5em 1em;*/
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
+}
+
+.relevant-authority p {
+  font-size: 0.85em;
 }
 
 .relevant-authority > p {
   margin-top: 0;
 }
 
+.relevant-authority img {
+  width: 75%;
+}
+
 aside {
   float: left;
-  width: 25%;
+  width: 14%;
 }
 
 aside nav {
@@ -71,7 +79,7 @@ article.licence {
   border-left: solid 1px #C9D0D0;
   margin-left: -1px;
   min-height: 40em;
-  width: 75%;
+  width: 86%;
 }
 
 article.licence .inner {
