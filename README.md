@@ -30,7 +30,29 @@ Then underneath just start shoving in the content of the prototype!
 ## Starting the app
 
 Just type "jekyll --server" at the command line in the root folder.
+(add "&" at the end if you don't want to lock up your command line and are happy killing processes)
 
-Then in your browser navigate to http://localhost:4000/app-name/index.html
+Then in your browser navigate to http://localhost:4000/[app-name]/index.html
 
 Bosh!
+
+## Prerequisites & installation
+
+Needs Ruby 1.9.x (not installed by default on OS X 10.7, but GDS dev build includes it)
+& jekyll
+
+Follow this process to get up to speed:
+
+1. After installing git and creating github account
+http://help.github.com/mac-set-up-git/
+
+2. Update Ruby, easiest way was to follow the "Install Ruby 1.9" instructions on
+http://pragmaticstudio.com/blog/2010/9/23/install-rails-ruby-mac
+
+3. then run
+sudo gem install jekyll
+(see https://github.com/mojombo/jekyll/wiki/install )
+
+4. then finally
+git clone git@github.com:alphagov/prototyping.git prototyping
+to get a copy of the prototyping tool.
