@@ -112,12 +112,16 @@ li.done .answer ul li {
   /*display: inline-block;*/
   margin-bottom: 0.25em;
   padding: 0 0.25em;
-  /*width: 60%;*/
+  /* width: 60%; */
 }
 
 li.done h3 {
   display: block;
   margin-bottom: 0.5em;
+}
+
+li.done a {
+  color: #ffffff;
 }
 
 .highlighted {
@@ -141,4 +145,26 @@ aside {
 article.tariff {
   width: 80%;
 }
+
+
+li.done-thin {
+  width:64.3%;
+}
+
+li.done-thin div.answer {
+  width:100%;
+}
+
+.start-again-white {
+  top: auto;
+  height: auto;
+  width: auto;
+  list-style-type: none;
+  text-align: left;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.start-again-white a {
+  text-align: left;
 }
