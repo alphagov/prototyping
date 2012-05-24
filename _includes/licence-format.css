@@ -10,28 +10,31 @@ header.page-header h1 span {
   color: #10370d;
 }
 
-.licence-info {
-
-}
-
 .relevant-authority {
-  border-bottom: 1px solid #C9D0D0;
-  margin: 0.5em 0 0.5em 0;
-  overflow: hidden;
-  /*padding: 0.5em 1em;*/
-  padding-bottom: 0.5em;
+  margin-left: 5.125em;
+  margin-bottom: 2em;
 }
 
 .relevant-authority p {
+  font-size: 112.5%;
+  margin: 0;
+}
+
+.set-location p {
   font-size: 0.85em;
 }
 
-.relevant-authority > p {
+.set-location > p {
   margin-top: 0;
 }
 
-.relevant-authority img {
+.set-location img {
   width: 75%;
+}
+
+.relevant-authority-contact {
+  font-size: 0.85em;
+  margin-top: 2em;
 }
 
 aside {
@@ -83,9 +86,38 @@ article.licence {
 }
 
 article.licence .inner {
-  padding: 0.5em 2.5em 1em 2.5em;
+  padding: 0 2.5em 1em 2.5em;
 }
 
 article.licence .inner > h1 {
+  margin-top: 0;
+}
+
+article.override-bad-styles li p {
+  font-size: inherit;
+  margin: inherit;
+}
+
+article.override-bad-styles li ul,
+article.override-bad-styles li ol {
+  list-style-position: inherit;
+  padding-left: 1em;
+}
+
+div.application-notes {
+  margin-bottom: 2em;
+}
+
+article.application-for-licence {
+  background: transparent;
+  border-top: solid 1px #cccccc;
+  float: none;
+  margin-bottom: 3em;
+  min-height: none;
+  padding-top: 1em;
+  width: auto;
+}
+
+article.application-for-licence > h2 {
   margin-top: 0;
 }
