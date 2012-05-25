@@ -1,40 +1,119 @@
 ---
-layout: default-smartanswer
-title: Licence finder
+layout: get-passport
+title: Apply for or renew a passport
 categories: Quick answer
 ---
 
 <style>
-  {% include licence-finder.css %}
+  {% include get-passport.css %}
 </style>
 
-<div class="step current">
-  <div class="current-question group">
-    <h2>
-      <span class="question-number">1 </span>What kind of activities or business do you need a licence for?
-    </h2>
-    <div class="question-body">
-      <div class="search-container">
-        <input id="business-type" type="text" />
-        <a href="step-02.html" class="button">Search</a>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="done-questions">
-  <ol>
-    <li class="done">
-      <h3 class="question">
-        <span class="question-number">2</span>
-        What will your activities or business involve doing?
-      </h3>
+
+<!-- PROTOTYPE CONTENT -->
+
+<h2>
+	<span class="question-number">1</span>
+	Applicant's details
+</h2>
+
+<h2>
+	What sort of passport application are you making?
+</h2>
+      <div class="question-body">
+
+          <p class="hint">Are you an employee with an employment contract - rather than a 'worker' or self-employed.</p>
+
+        <div class="">
+
+          <ul>
+<li>
+      <label for="response_0">
+        <input id="response_0" name="response" type="radio" value="yes">
+        Yes
+      </label>
     </li>
-    <li class="done">
-      <h3 class="question">
-        <span class="question-number">3</span>
-        Where will your activities or business be located?
-      </h3>
+    <li>
+      <label for="response_1">
+        <input id="response_1" name="response" type="radio" value="no">
+        No
+      </label>
     </li>
-  </ol>
+</ul>
 </div>
+      </div>
+
+
+
+
+
+
+
+<h2>
+	Where does the applicant live?
+</h2>
+
+
+
+<h2>
+	What is the applicant's date of birth?
+</h2>
+
+<form>
+<fieldset>
+<label for="response_day">Day
+    <select id="response_day" name="response[day]"><option value=""></option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option></select></label>
+  <label for="response_month">Month
+    <select id="response_month" name="response[month]"><option value=""></option>
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option></select></label>
+  <label for="response_year">Year
+    <select id="response_year" name="response[year]"><option value=""></option>
+<option value="1977">1977</option>
+	</select></label>
+</fieldset>
+</form>
+
+<!-- /PROTOTYPE CONTENT -->
+

@@ -1,0 +1,32 @@
+header.page-header hgroup h1 {
+	background-repeat: no-repeat;
+	color: #000;
+	font-family: 'Gill Sans','Gill Sans W01 Medium', sans-serif;
+	font-size: 2.75em;
+	font-weight: normal;
+	letter-spacing: 0.025em;
+	line-height: 1.05em;
+	padding: 0.1em 1.5em 0 1.65em;
+}
+
+header.page-header hgroup {
+	border-color: #D33883;
+}
+
+header.page-header h1 {
+	background-image: url(https://d17tffe05zdvwj.cloudfront.net/static/icon-answer-l-13f440085d437f019a08573b382c20ad.png);
+	background-position: 12px 4px;
+}
+
+header.page-header hgroup h1 span {
+    color: #D33883;
+}
+
+#global-header h1 {
+    font-family: 'Gill Sans','Gill Sans W01 Medium', sans-serif;
+    font-size: 1.6em;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    line-height: 1.15em;
+    text-transform: uppercase;
+}
