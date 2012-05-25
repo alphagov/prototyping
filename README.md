@@ -71,25 +71,25 @@ So you can push to Heroku from your own machine follow these steps:
 
 4. At the command line:
 
-<pre>
-$ heroku login
-Enter your Heroku credentials.
-Email: adam@example.com
-Password: 
-Could not find an existing public key.
-Would you like to generate one? [Yn] 
-Generating new SSH public key.
-Uploading ssh public key /Users/adam/.ssh/id_rsa.pub
-</pre>
+  <pre>
+  $ heroku login
+  Enter your Heroku credentials.
+  Email: adam@example.com
+  Password: 
+  Could not find an existing public key.
+  Would you like to generate one? [Yn] 
+  Generating new SSH public key.
+  Uploading ssh public key /Users/adam/.ssh/id_rsa.pub
+  </pre>
 
 5. Make sure you're in the repository, then enter "git remote add heroku git@heroku.com:govuk-prototyping.git", which adds the Heroku instance as a remote server for the repo, so you can push to it
 
 6. You can confirm this has worked by using "git remote" then checking you see:
 
-<pre>
-origin
-heroku
-</pre>
+  <pre>
+  origin
+  heroku
+  </pre>
 
 7. Then every time you updated and committed your latest work, you can push to Heroku with "git push heroku master"
 
