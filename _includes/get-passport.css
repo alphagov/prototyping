@@ -69,9 +69,7 @@ a.button {
 }
 
 li.done .answer {
-  background-color: transparent;
-  display: inline-block;
-  width: 60%;
+  display: inline;
 }
 
 li.done .answer ul {
