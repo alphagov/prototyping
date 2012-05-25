@@ -56,3 +56,43 @@ sudo gem install jekyll
 4. then finally
 git clone git@github.com:alphagov/prototyping.git prototyping
 to get a copy of the prototyping tool.
+
+## Pushing online
+
+We have an instance of Heroku (http://www.heroku.com/) that you can push the prototyping app to, in order to share prototypes externally. It lives at http://govuk-prototyping.herokuapp.com
+
+So you can push to Heroku from your own machine follow these steps:
+
+1. Sign up to Heroku
+
+2. Get invited into our Heroku instance as a contributor
+
+3. Install the Heroku toolbelt from https://toolbelt.herokuapp.com/
+
+4. At the command line:
+
+<pre>
+$ heroku login
+Enter your Heroku credentials.
+Email: adam@example.com
+Password: 
+Could not find an existing public key.
+Would you like to generate one? [Yn] 
+Generating new SSH public key.
+Uploading ssh public key /Users/adam/.ssh/id_rsa.pub
+</pre>
+
+5. Make sure you're in the repository, then enter "git remote add heroku git@heroku.com:govuk-prototyping.git", which adds the Heroku instance as a remote server for the repo, so you can push to it
+
+6. You can confirm this has worked by using "git remote" then checking you see:
+
+<pre>
+origin
+heroku
+</p>
+
+7. Then every time you updated and committed your latest work, you can push to Heroku with "git push heroku master"
+
+8. Finally, you can visit eg http://govuk-prototyping.herokuapp.com/licence-format/ to see your prototype
+
+We might want to think about putting on a password at some point.
