@@ -89,7 +89,7 @@ Uploading ssh public key /Users/adam/.ssh/id_rsa.pub
 <pre>
 origin
 heroku
-</p>
+</pre>
 
 7. Then every time you updated and committed your latest work, you can push to Heroku with "git push heroku master"
 
