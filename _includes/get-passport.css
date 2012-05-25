@@ -1,4 +1,3 @@
-
 header.page-header hgroup h1 {
 	background-repeat: no-repeat;
 	color: #000;
@@ -30,7 +29,7 @@ header.page-header hgroup h1 span {
     letter-spacing: 0.05em;
     line-height: 1.15em;
     text-transform: uppercase;
-}
+=======
 a.button {
   padding: 0.25em 0.5em;
 }
@@ -88,4 +87,61 @@ li.done .answer ul li {
 li.done h3 {
   display: block;
   margin-bottom: 0.5em;
+}
+
+#get-passport {
+	display:block;
+	width:2000px;
+	height:2000px;
+	background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* buttons! */
+.button,
+.button:visited {
+  background-color: #666;
+  background-image: url(https://d17tffe05zdvwj.cloudfront.net/static/button-overlay-e41aa29f6f02a347c2a33e6f2cbac961.png);
+  _background-image:none;
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  border: solid 1px #000;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  font-family: "Gill Sans";
+  font-weight: 300;
+}
+.button:hover {
+  background-color: #000;
+  border: solid 1px #000;
+  color: #fff;
+}
+.button:active {
+  background-color: #DD322D;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.5);
 }

@@ -4,116 +4,150 @@ title: Apply for or renew a passport
 categories: Quick answer
 ---
 
-<style>
-  {% include get-passport.css %}
-</style>
+
 
 
 
 <!-- PROTOTYPE CONTENT -->
 
+<style>
+  {% include get-passport.css %}
+</style>
+
+<div class="step current" data-step="employment-status">
+<form accept-charset="UTF-8" action="step-02.html" method="get">
+<div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+<div class="current-question" id="current-question">
 <h2>
-	<span class="question-number">1</span>
-	Applicant's details
+<span class="question-number"> </span>What do you want to do?
 </h2>
-
-<h2>
-	What sort of passport application are you making?
-</h2>
-      <div class="question-body">
-
-          <p class="hint">Are you an employee with an employment contract - rather than a 'worker' or self-employed.</p>
-
-        <div class="">
-
-          <ul>
-<li>
-      <label for="response_0">
-        <input id="response_0" name="response" type="radio" value="yes">
-        Yes
-      </label>
-    </li>
-    <li>
-      <label for="response_1">
-        <input id="response_1" name="response" type="radio" value="no">
-        No
-      </label>
-    </li>
-</ul>
+      
+      
+<div class="question-body" style="margin-bottom:2.5em;">
+	<!-- <p class="hint">What do you want to do?</p> -->
+	<div class="">
+		<ul>
+			<li>
+			<label for="response_0">
+			<input id="response_0" name="type" type="radio" value="yes" checked>
+			Renew an existing passport
+			</label>
+			</li>
+			<li>
+			<label for="response_1">
+			<input id="response_1" name="type" type="radio" value="no">
+			Amend an existing passport
+			</label>
+			</li>
+			
+			<li>
+			<label for="response_1">
+			<input id="response_1" name="type" type="radio" value="no">
+			Apply for a new passport
+			</label>
+			</li>
+		</ul>
+	</div>
 </div>
-      </div>
-
-
-
-
-
 
 
 <h2>
-	Where does the applicant live?
+<span class="question-number"> </span>Do you live in the UK?
 </h2>
-
+<div class="question-body" style="margin-bottom:2.5em; display:block;">
+	<!-- <p class="hint">Do you live in the UK or outside of the UK?</p> -->
+	<div class="">
+		<ul class="applicant-origin">
+			<li style="position:relative; float:left; margin:0;">
+			<label for="response_0">
+			<input id="response_0" name="origin" type="radio" value="yes" checked>
+			Yes - I live in the UK
+			</label>
+			</li>
+			
+			<li style="position:relative; float:left; margin:0; margin-left:1em;">
+			<label for="response_1">
+			<input id="response_1" name="origin" type="radio" value="no">
+			No - I do not live in the UK
+			</label>
+			</li>
+		</ul>
+	</div>
+</div>
+<br/>
 
 
 <h2>
-	What is the applicant's date of birth?
+<span class="question-number"> </span>When were you born?
 </h2>
+<div class="question-body" style="margin-bottom:2.5em; display:block;">
+	<!-- <p class="hint">If you are applying on behalf of someone else, this should be their birth date.</p> -->
+	<div class="">
+		<form>
+			<fieldset>
+			<label for="response_day">Day
+			<select id="response_day" name="response[day]"><option value=""></option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+			<option value="26">26</option>
+			<option value="27">27</option>
+			<option value="28">28</option>
+			<option value="29">29</option>
+			<option value="30">30</option>
+			<option value="31">31</option></select></label>
+			<label for="response_month">Month
+			<select id="response_month" name="response[month]"><option value=""></option>
+			<option value="1">January</option>
+			<option value="2">February</option>
+			<option value="3">March</option>
+			<option value="4">April</option>
+			<option value="5">May</option>
+			<option value="6">June</option>
+			<option value="7">July</option>
+			<option value="8">August</option>
+			<option value="9">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option></select></label>
+			<label for="response_year">Year
+			<select id="response_year" name="response[year]"><option value=""></option>
+			<option value="1977">1977</option>
+			</select></label>
+			</fieldset>
+		</form> 
+	</div>
+	
+	<div class="next-question" style="margin-top:2.5em;">
+        <input name="next" type="submit" value="Next step" class="medium button">
+    </div>
+</div>
 
-<form>
-<fieldset>
-<label for="response_day">Day
-    <select id="response_day" name="response[day]"><option value=""></option>
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="6">6</option>
-<option value="7">7</option>
-<option value="8">8</option>
-<option value="9">9</option>
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-<option value="13">13</option>
-<option value="14">14</option>
-<option value="15">15</option>
-<option value="16">16</option>
-<option value="17">17</option>
-<option value="18">18</option>
-<option value="19">19</option>
-<option value="20">20</option>
-<option value="21">21</option>
-<option value="22">22</option>
-<option value="23">23</option>
-<option value="24">24</option>
-<option value="25">25</option>
-<option value="26">26</option>
-<option value="27">27</option>
-<option value="28">28</option>
-<option value="29">29</option>
-<option value="30">30</option>
-<option value="31">31</option></select></label>
-  <label for="response_month">Month
-    <select id="response_month" name="response[month]"><option value=""></option>
-<option value="1">January</option>
-<option value="2">February</option>
-<option value="3">March</option>
-<option value="4">April</option>
-<option value="5">May</option>
-<option value="6">June</option>
-<option value="7">July</option>
-<option value="8">August</option>
-<option value="9">September</option>
-<option value="10">October</option>
-<option value="11">November</option>
-<option value="12">December</option></select></label>
-  <label for="response_year">Year
-    <select id="response_year" name="response[year]"><option value=""></option>
-<option value="1977">1977</option>
-	</select></label>
-</fieldset>
-</form>
+
+
+
 
 <!-- /PROTOTYPE CONTENT -->
 
