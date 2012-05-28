@@ -1,0 +1,313 @@
+/* @override http://dev.gov.uk:4000/xprop.search/assets/css/search-prototype.css */
+
+/* Header
+============================================================================ */
+
+/* This is all overwriting stuff in search.css */
+
+#wrapper .ancillary.search header {
+  background-color: #fff;
+  color: inherit;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+#wrapper .ancillary.search header hgroup {
+  border-top: solid 2px #FFC10E;
+  padding: 1.5em 2.5em;
+}
+
+#wrapper .ancillary.search header hgroup h1 {
+  font-size: 2.75em;
+}
+
+#wrapper .ancillary.search header hgroup h1 em {
+  color: #2E3191;
+}
+
+#wrapper .ancillary.search .search-container {
+  margin: 0;
+}
+
+/* Search Form
+============================================================================ */
+form.search-header {
+  display: block;
+}
+
+/* button styles taken from core.css, should be changed to also apply to <button>s */
+button {
+  background-color: #B01117;
+  background-image: url(/assets/images/button-overlay.png);
+  _background-image:none;
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  border: solid 1px #B01117;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+}
+button:hover {
+  background-color: #DD322D;
+  border: solid 1px #760418;
+  color: #fff;
+}
+button:active {
+  background-color: #DD322D;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* reset pesky webkit search styles */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* Stealing styles from the homepage, should be standardised */
+form.search-header input, form.search-header button {
+  font-size: 1.5em;
+  line-height: 1.25em;
+  padding: 0.125em;
+}
+
+form.search-header input[type="text"],
+form.search-header input[type="search"] {
+  height: 1.25em; width: 63%;
+  background-color: #fff;
+  -webkit-appearance: textfield;
+  border: 2px inset;
+}
+
+form.search-header button,
+form.search-header .button {
+  background-color: #4370CD;
+  border-color: #4370CD;
+  line-height: 1.25em;
+  padding: 0.2em 0.5em;
+}
+
+.number-results {
+  font-size: .875rem;
+  padding: .75rem 0;
+  color: #999;
+}
+
+/* Results
+============================================================================ */
+.search .results {
+  padding: 0;
+  margin-left: -12.5rem;
+  float: right;
+  width: 100%;
+}
+
+.search .results-wrapper {
+  padding: 0; margin: 0px 0px 0px 12.5rem;
+}
+
+.search .results-list {
+  padding: 0; margin: 0;
+  list-style: none;
+}
+
+.search .results-list li {
+  padding: 0; margin: 0px 0px 1rem 0px;
+}
+
+.search .results-list li a {
+  margin: 0; padding: 0;
+  font-size: 1rem;
+}
+
+.search .results-list li p {
+  margin: 0; 
+  font-size: .875rem;
+  width: auto;
+}
+
+.search .results-list .result-meta {
+  padding: 0;
+  margin: 0;
+  font-size: .875rem;
+}
+
+.search .results-list .result-meta li {
+  display: inline-block;
+  color: #999;
+  line-height: 1.75rem;
+  margin: 0;
+}
+
+.search .results-list .result-meta li:first-child {
+  border-right: 1px solid #999;
+  margin-right: 5px; padding-right: 5px;
+}
+
+.search .results-list .result-meta li a {
+  color: #999;
+  font-size: .875rem;
+}
+
+/* icons taken from core.css hardcoded image uris */
+.search .results-list .result-meta li.guide {
+  text-indent: 30px;
+  background-image: url(../images/icon-guide-s.png);
+  background-repeat: no-repeat;
+  background-position: 0 0.25em;
+}
+.search .results-list .result-meta li.answer,
+.search .results-list .result-meta li.calendar,
+.search .results-list .result-meta li.smart_answer,
+.search .results-list .result-meta li.calculator,
+.search .results-list .result-meta li.custom-application {
+  text-indent: 30px;
+  background-image: url(../images/icon-answer-s.png);
+  background-repeat: no-repeat;
+  background-position: 0 0.25em;
+}
+.search .results-list .result-meta li.local_transaction,
+.search .results-list .result-meta li.transaction,
+.search .results-list .result-meta li.place,
+.search .results-list .result-meta li.nearest,
+.search .results-list .result-meta li.service {
+  text-indent: 30px;
+  background-image: url(../images/icon-service-s.png);
+  background-repeat: no-repeat;
+  background-position: 0 0.25em;
+}
+.search .results-list .result-meta li.programme {
+  text-indent: 30px;
+  background-image: url(../images/icon-programme-s.png);
+  background-repeat: no-repeat;
+  background-position: 0 0.25em;
+}
+
+.search .results .recommended {
+  background-color: #d5e8f3;
+  margin-bottom: 1rem;
+}
+
+.search .results .recommended h2 {
+  color: #2b8cc4;
+  font-family: 'Gill Sans W01 Medium', sans-serif;
+  font-size: 0.85em;
+  font-weight: normal;
+  height: 30px;
+  letter-spacing: 0.15em;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.search .results-list li.inside-government {
+  background-color: #e1e8e8;
+  padding: 1rem;
+}
+
+
+/* Filters
+============================================================================ */
+.filters {
+  width: 14rem;
+  background-color: #c1cacb;
+  float: left;
+  margin: 0 0 0 -2.5rem;
+}
+
+.filters .group {
+  margin-bottom: 1rem;
+}
+
+.filters h2 {
+  font-family: 'Gill Sans W01 Medium', sans-serif;
+  font-size: 0.85em;
+  font-weight: normal;
+  height: 30px;
+  letter-spacing: 0.15em;
+  line-height: 1.5em;
+  margin: 0 0 .5rem 0;
+  padding: 0;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.filters ul {
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+}
+
+.filters ul li {
+  display: block;
+  /* height: 30px; */
+  margin-bottom: 0;
+}
+
+.filters ul li a {
+  border-radius: 2px;
+  display: block;
+  padding: 2px;
+  text-decoration: none;
+  -webkit-transition: 0.4s ease-out;
+  -moz-transition: 0.4s ease-out;
+  -o-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.filters ul li a:hover {
+  background-color: #eee;
+}
+
+.filters ul li a span {
+  background-color: #fff;
+  border-radius: 2px;
+  color: #999;
+  display: block;
+  float: right; 
+  font-size: .875rem;
+  height: 20px;
+  line-height: 20px;
+  min-width: 16px;
+  padding: 2px 4px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.filters ul li.transaction a,
+.filters ul li.smart_answer a,
+.filters ul li.guide a {
+  background-position: 0.1em 0.15em;
+  text-indent: 26px;
+}
+
+.filters ul li.transaction a span,
+.filters ul li.smart_answer a span,
+.filters ul li.guide a span {
+  text-indent: 0;
+}
+
+/* Related
+============================================================================ */
+
+#wrapper .search .related ul li a {
+  padding: 0; margin-bottom: 0;
+  font-size: 1em;
+}
+
+#wrapper .search .related ul li p {
+  font-size: .875em;
+  margin-top: 0;
+}
+
