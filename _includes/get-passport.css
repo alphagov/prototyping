@@ -131,9 +131,20 @@ li.done h3 {
   background-position: 0 100%;
   background-repeat: repeat-x;
   border: solid 1px #000;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
+  /*-webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;*/
+  
+  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.75), inset 0 1px 1px white;
+  -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.75), inset 0 1px 1px white;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.15), inset 0 1px 1px #666;
+
+/*
+-webkit-box-shadow: 5px 5px 0 1px black;
+-moz-box-shadow: 5px 5px 0 1px black;
+box-shadow: 5px 5px 0 1px black;
+*/
+  
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -159,7 +170,7 @@ li.done h3 {
 .get-started {
   margin: 0;
   text-align: center;
-  text-align: left;
+  text-align: right;
 }
 
 .get-started .button {
@@ -179,9 +190,9 @@ li.done h3 {
 
 
 .get-started .button.big {
-
   background-image: url('https://d17tffe05zdvwj.cloudfront.net/static/button-arrow-d7e46fca5a640cbc65ed7dc18bf5db88.png');
   background-image: none;
+  padding: 0.5em 2em 0.5em 0.5em;
   /*background-position: 95% 50%;
   background-repeat: no-repeat;
   padding: 0.65em 2em 0.65em 0.5em;*/
@@ -642,9 +653,111 @@ li.upcoming h3 {
 	padding-left:0.9em;
 }
 
+.and-breathe {
+	margin-top: 2.4em;
+}
+/*
 h2 {
 	margin-left: 7em;
 }
+*/
 
 
 /* /FROM LICENCE-FINDER.CSS */
+
+
+
+
+
+
+
+
+
+/* GUY BUTTONS */
+
+.btn {		
+	display: inline-block;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow:0 4px 0 #ccc,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 4px 0 #ccc, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 4px 0 #ccc, 0 8px 10px rgba(0,0,0,.05);
+}
+.btn span {	
+	display: inline-block;
+	padding: 10px  20px;
+	padding-top:13px;
+	padding-right:2.4em;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1.6em;
+	font-weight: 200;
+	letter-spacing: 0.03em;
+	line-height: 1;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.btn:active {	
+	-webkit-box-shadow: 0 4px 0 #000,0 12px 10px rgba(0,0,0,.0);
+	-moz-box-shadow: 0 4px 0 #000,0 12px 10px rgba(0,0,0,.0);
+	box-shadow: 0 4px 0 #000,0 12px 10px rgba(0,0,0,.0);
+}
+
+.btn:active span {	
+	-webkit-transform: translate(0, 4px);
+	-moz-transform: translate(0, 4px);
+	-o-transform: translate(0, 4px);
+	transform: translate(0, 4px);
+}
+
+.blue {
+	-webkit-box-shadow:0 4px 0 #196E7C,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 4px 0 #196E7C, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 4px 0 #196E7C, 0 8px 10px rgba(0,0,0,.05);
+}
+.blue span {
+	background: #3194c6;
+	color: #fff;
+	background-image: url(pointer.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+
+.grey {
+	-webkit-box-shadow:0 4px 0 #999,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 4px 0 #999, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 4px 0 #999, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.grey span {
+	background: #ccc;
+	color: #444;
+}
+
+.green {
+	-webkit-box-shadow:0 4px 0 #004921,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 4px 0 #004921, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 4px 0 #004921, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.green span {
+	background: #006435;
+	color: #fff;
+	background-image: url(pointer.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.small span {
+	padding: 6px 14px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1.2em;
+	font-weight: 200;
+	letter-spacing: 0.03em;
+	background-image: none;
+}
+
+/* /GUY BUTTONS */
