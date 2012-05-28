@@ -92,7 +92,7 @@ aside nav.actions ol li.active a {
   margin: 0 0 -1px -1px;
 }
 
-nav.footer-actions {
+/*nav.footer-actions {
   float: left;
   margin-left: 14%;
   width: 86%;
@@ -113,14 +113,11 @@ nav.footer-actions ol li {
 nav.footer-actions ol li.active a {
   border-right: solid 1px #C9D0D0;
   border-top: none;
-  /*margin: 0 0 -1px -1px;*/
-}
+}*/
 
 article.licence {
-  border-bottom: solid 1px #C9D0D0;
   border-left: solid 1px #C9D0D0;
   margin-left: -1px;
-  margin-bottom: -1px;
   min-height: 40em;
   padding-bottom: 1em;
   width: 86%;
