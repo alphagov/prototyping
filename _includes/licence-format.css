@@ -92,29 +92,6 @@ aside nav.actions ol li.active a {
   margin: 0 0 -1px -1px;
 }
 
-/*nav.footer-actions {
-  float: left;
-  margin-left: 14%;
-  width: 86%;
-}
-
-nav.footer-actions ol {
-  margin-left: -1px;
-  margin-top: 0;
-  padding: 0;
-  width: 100%;
-}
-
-nav.footer-actions ol li {
-  float: left;
-  list-style-type: none;
-}
-
-nav.footer-actions ol li.active a {
-  border-right: solid 1px #C9D0D0;
-  border-top: none;
-}*/
-
 article.licence {
   border-left: solid 1px #C9D0D0;
   margin-left: -1px;
