@@ -1,4 +1,9 @@
 .nav-and-controls {
+  /*background-color: #fff;*/
+  margin-right: 15rem;
+  /*padding-bottom: 2em;*/
+  margin-bottom: 1em;
+  padding: 0 1em 1em 1em;
   position: relative;
 }
 
@@ -6,7 +11,7 @@
   background: yellow;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -15em;
   width: 13em;
 }
 
@@ -21,11 +26,9 @@
 /* hierarchy navigation */
 
 .hierarchy {
-  background-color: #ddd;
+  /*background-color: #ddd;*/
   font-size: 0.85em;
   line-height: 1.5;
-  margin-right: 15rem;
-  margin-bottom: 2em;
   padding: 0.5em 0.5em 0 0;
 }
 
@@ -51,7 +54,8 @@
 }
 
 .hierarchy ol li a {
-  color: #444;
+  /*color: #444;*/
+  text-decoration: underline;
 }
 
 .hierarchy ol li a:hover {
@@ -107,6 +111,7 @@ header.page-header h1 span {
 
 nav.tabs ol {
   list-style: none;
+  margin-top: 0;
   margin-bottom: -1px;
   margin-left: 1.5em;
   padding: 0;
@@ -139,13 +144,14 @@ nav.tabs ol li.active a {
 }
 
 .tariff-container {
+  /*background: #fff;*/
+  margin-right: 15em;
   position: relative;
 }
 
 article.tariff {
   border-top: solid 1px #C9D0D0;
   min-height: 40em;
-  margin-right: 15em;
   width: auto;
 }
 
@@ -160,16 +166,20 @@ article.tariff .inner > h1 {
 aside {
   position: absolute;
   top: 2em;
-  right: 0;
+  right: -15em;
   width: 13em;
 }
 
 aside .info-notice {
-  background: none;
+  background: #fff;
   border: solid 1px #C9D0D0;
   color: #666;
   margin-top: 0;
   padding: 0.5em 1em;
+}
+
+aside article {
+  background: transparent;
 }
 
 
