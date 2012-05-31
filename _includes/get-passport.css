@@ -675,7 +675,7 @@ h2 {
 
 /* GUY BUTTONS */
 
-.btn {		
+.btn,.btn:visited {		
 	display: inline-block;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -687,7 +687,6 @@ h2 {
 .btn span {	
 	display: inline-block;
 	padding: 10px  20px;
-	
 	padding-right:2.7em;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 21px;
@@ -699,11 +698,13 @@ h2 {
 	border-radius: 3px;
 }
 
-.btn:active {	
+/*
+.button:active {	
 	-webkit-box-shadow: 0 4px 0 #000,0 12px 10px rgba(0,0,0,.0);
 	-moz-box-shadow: 0 4px 0 #000,0 12px 10px rgba(0,0,0,.0);
 	box-shadow: 0 4px 0 #000,0 12px 10px rgba(0,0,0,.0);
 }
+*/
 
 .btn:active span {	
 	-webkit-transform: translate(0, 4px);
@@ -712,6 +713,19 @@ h2 {
 	transform: translate(0, 4px);
 }
 
+.small:active span {	
+	-webkit-transform: translate(0, 2px);
+	-moz-transform: translate(0, 2px);
+	-o-transform: translate(0, 2px);
+	transform: translate(0, 2px);
+}
+
+
+
+
+/* BUTTON COLOURS */
+
+/*
 .blue {
 	-webkit-box-shadow:0 4px 0 #196E7C,0 8px 10px rgba(0,0,0,.05);
 	-moz-box-shadow:0 4px 0 #196E7C, 0 8px 10px rgba(0,0,0,.05);
@@ -720,24 +734,6 @@ h2 {
 .blue span {
 	background: #3194c6;
 	color: #fff;
-	background-image: url(pointer.png);
-	background-repeat: no-repeat;
-	background-position: right center;
-}
-
-
-.grey {
-	-webkit-box-shadow:0 4px 0 #000,0 8px 10px rgba(0,0,0,.05);
-	-moz-box-shadow:0 4px 0 #000, 0 8px 10px rgba(0,0,0,.05);
-	box-shadow: 0 4px 0 #000, 0 8px 10px rgba(0,0,0,.05);
-}
-
-.grey span {
-	background: #444;
-	color: #fff;
-	background-image: url(pointer.png);
-	background-repeat: no-repeat;
-	background-position: right center;
 }
 
 .green {
@@ -749,15 +745,115 @@ h2 {
 .green span {
 	background: #006435;
 	color: #fff;
+}
+*/
+
+.black {
+	-webkit-box-shadow:0 4px 0 #000,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 4px 0 #000, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 4px 0 #000, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.black.small {
+	-webkit-box-shadow:0 2px 0 #000,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 2px 0 #000, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 2px 0 #000, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.black span {
+	background: #444;
+	color: #fff;
+}
+
+
+.grey {
+	-webkit-box-shadow:0 4px 0 #999,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 4px 0 #999, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 4px 0 #999, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.grey.small {
+	-webkit-box-shadow:0 2px 0 #999,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 2px 0 #999, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 2px 0 #999, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.grey span {
+	background: #d5d5d5;
+	color: #333;
+}
+
+
+.turquoise {
+	-webkit-box-shadow:0 4px 0 #1C7F73,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 4px 0 #1C7F73, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 4px 0 #1C7F73, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.turquoise.small {
+	-webkit-box-shadow:0 2px 0 #1C7F73,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 2px 0 #1C7F73, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 2px 0 #1C7F73, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.turquoise span {
+	background: #28a197;
+	color:#fff;
+}
+
+.red {
+	-webkit-box-shadow:0 4px 0 #b10e1e,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 4px 0 #b10e1e, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 4px 0 #b10e1e, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.red.small {
+	-webkit-box-shadow:0 2px 0 #b10e1e,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 2px 0 #b10e1e, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 2px 0 #b10e1e, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.red span {
+	background: #df3034;
+	color:#fff;
+}
+
+/* BUTTON SIZES/INVERSION */
+
+.invert span {
+	background-image: none;
+	background-image: url(pointer_invert.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.large span {
+	padding: 0.8rem 1.2rem;
+	padding-right:2.7em;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1.3rem;
+	font-weight: 200;
+	letter-spacing: 0.03em;
+	background-image: none;
 	background-image: url(pointer.png);
 	background-repeat: no-repeat;
 	background-position: right center;
 }
 
-.small span {
-	padding: 6px 14px;
+.medium span {
+	padding: 0.5rem 0.9rem;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 1.2em;
+	font-size: 1.1rem;
+	font-weight: 200;
+	letter-spacing: 0.03em;
+	background-image: none;
+}
+
+.small span {
+	padding: 0.35rem 0.7rem;
+	padding-top:0.4rem;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 0.9rem;
 	font-weight: 200;
 	letter-spacing: 0.03em;
 	background-image: none;
