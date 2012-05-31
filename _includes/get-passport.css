@@ -727,14 +727,17 @@ h2 {
 
 
 .grey {
-	-webkit-box-shadow:0 4px 0 #999,0 8px 10px rgba(0,0,0,.05);
-	-moz-box-shadow:0 4px 0 #999, 0 8px 10px rgba(0,0,0,.05);
-	box-shadow: 0 4px 0 #999, 0 8px 10px rgba(0,0,0,.05);
+	-webkit-box-shadow:0 4px 0 #000,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 4px 0 #000, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 4px 0 #000, 0 8px 10px rgba(0,0,0,.05);
 }
 
 .grey span {
-	background: #ccc;
-	color: #444;
+	background: #444;
+	color: #fff;
+	background-image: url(pointer.png);
+	background-repeat: no-repeat;
+	background-position: right center;
 }
 
 .green {
