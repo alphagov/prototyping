@@ -102,6 +102,51 @@ form.search-header .button {
   color: #999;
 }
 
+/* Quick Results
+============================================================================ */
+.search .quick-results {
+  background-color: #ffc;
+  margin-bottom: 1rem;
+}
+
+.search .quick-results h2 {
+  font-family: 'Gill Sans W01 Medium', sans-serif;
+  font-size: 0.85em;
+  font-weight: normal;
+  height: 30px;
+  letter-spacing: 0.15em;
+  line-height: 1.5em;
+  margin: 0 0 .5rem 0;
+  padding: 0;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.search .quick-results .quick-results-section {
+  width: 30%;
+  margin-right: 5%;
+  float: left;
+}
+
+.search .quick-results .quick-results-section:last-child {
+  margin-right: 0%;
+}
+
+.search .quick-results .quick-results-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search .quick-results .quick-results-section h3 {
+  font-size: 1rem;
+}
+
+.search .quick-results .quick-results-section li {
+  font-size: .875rem;
+}
+
+
 /* Results
 ============================================================================ */
 .search .results {
@@ -146,6 +191,14 @@ form.search-header .button {
   color: #999;
   line-height: 1.75rem;
   margin: 0;
+  
+  -webkit-transition: opacity 0.2s ease;
+/*
+  -moz-transition: opacity 0.2s ease 0, height 0.2s ease 0.2s;
+  -ms-transition: opacity 0.2s ease 0, height 0.2s ease 0.2s;
+  -o-transition: opacity 0.2s ease 0, height 0.2s ease 0.2s;
+  transition: opacity 0.2s ease 0, height 0.2s ease 0.2s;
+*/
 }
 
 .search .results-list .result-meta li:first-child {
@@ -156,6 +209,12 @@ form.search-header .button {
 .search .results-list .result-meta li a {
   color: #999;
   font-size: .875rem;
+}
+
+.search .results-list .result-meta li.dept {
+  float: right;
+  /* background-color: #ccc; */
+  padding: 0 4px;
 }
 
 /* icons taken from core.css hardcoded image uris */
@@ -211,9 +270,14 @@ form.search-header .button {
   text-transform: uppercase;
 }
 
-.search .results-list li.inside-government {
+.search .results-list li.whitehall {
   background-color: #e1e8e8;
   padding: 1rem;
+}
+
+.search .results li.filtered {
+  opacity: 0;
+/*   height: 0; */
 }
 
 
@@ -252,13 +316,13 @@ form.search-header .button {
 .filters ul li {
   display: block;
   /* height: 30px; */
-  margin-bottom: 0;
+  margin: 0 -2px 0 -6px;
 }
 
 .filters ul li a {
   border-radius: 2px;
   display: block;
-  padding: 2px;
+  padding: 2px 2px 2px 6px;
   text-decoration: none;
   -webkit-transition: 0.4s ease-out;
   -moz-transition: 0.4s ease-out;
@@ -268,6 +332,10 @@ form.search-header .button {
 
 .filters ul li a:hover {
   background-color: #eee;
+}
+
+.filters ul li.active a {
+  background-color: yellow;
 }
 
 .filters ul li a span {

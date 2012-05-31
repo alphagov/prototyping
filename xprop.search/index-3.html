@@ -3,6 +3,7 @@ layout: search
 title: Search Results Prototype
 categories: Search
 css: assets/css/search-prototype.css
+js: assets/javascript/search-prototype.js
 section_class: search ancillary
 ---
 
@@ -20,60 +21,54 @@ section_class: search ancillary
   <div class="group">
     <div class="results">
       <div class="results-wrapper">
-        <div class="recommended inner">
-          <h2>Recommended Results</h2>
-        
-          <ul class="results-list">
-            <li>
-              <a href="#">Get a tax disc (vehicle licence)</a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
-      
-              <ul class="result-meta">
-                <li class="transaction">Services</li><li><a href="/browse/driving">Driving</a></li>
-              </ul>
-            </li>
-      
-            <li>
-              <a href="#">Calculate vehicle tax rates</a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
-      
-              <ul class="result-meta">
-                <li class="transaction">Services</li><li><a href="/browse/driving">Driving</a></li>
-              </ul>
-            </li>
-      
-            <li>
-              <a href="#">Apply for a tax disc refund (form V14)</a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
-      
-              <ul class="result-meta">
-                <li class="transaction">Services</li><li><a href="/browse/driving">Driving</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-    
         <ul class="results-list">
-          <li>
+          <li class="section-driving type-transaction">
+            <a href="#">Get a tax disc (vehicle licence)</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
+    
+            <ul class="result-meta">
+              <li class="transaction">Services</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
+            </ul>
+          </li>
+    
+          <li class="section-driving type-transaction">
+            <a href="#">Calculate vehicle tax rates</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
+    
+            <ul class="result-meta">
+              <li class="transaction">Services</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
+            </ul>
+          </li>
+    
+          <li class="section-driving type-transaction">
+            <a href="#">Apply for a tax disc refund (form V14)</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
+    
+            <ul class="result-meta">
+              <li class="transaction">Services</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
+            </ul>
+          </li>
+
+          <li class="section-driving type-smart_answer">
             <a href="#">Exchange a tax disc</a>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
     
             <ul class="result-meta">
-              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li>
+              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
             </ul>
           </li>
     
-          <li>
+          <li class="section-driving type-smart_answer">
             <a href="#">Vehicle tax rate tables</a>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
     
             <ul class="result-meta">
-              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li>
+              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
             </ul>
           </li>
     
@@ -83,27 +78,27 @@ section_class: search ancillary
             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
     
             <ul class="result-meta">
-              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li>
+              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
             </ul>
           </li>
     
-          <li>
+          <li class="section-driving type-smart_answer">
             <a href="#">Vehicles exempt from vehicle tax</a>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
     
             <ul class="result-meta">
-              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li>
+              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
             </ul>
           </li>
     
-          <li>
+          <li class="section-driving type-smart_answer">
             <a href="#">Get a tax disc (vehicle licence) using form V10</a>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
     
             <ul class="result-meta">
-              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li>
+              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
             </ul>
           </li>
   
@@ -113,27 +108,27 @@ section_class: search ancillary
             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
     
             <ul class="result-meta">
-              <li><a href="/goverment">Inside Government</a></li><li><a href="#">DVLA</a></li>
+              <li><a href="/goverment">Inside Government</a></li><li><a href="#">DVLA</a></li><li class="dept">DVLA</li>
             </ul>
           </li>
   
-          <li>
+          <li class="section-driving type-smart_answer">
             <a href="#">Applying for a HGV vehicle licence (tax disc) - form V85</a>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
     
             <ul class="result-meta">
-              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li>
+              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
             </ul>
           </li>
     
-          <li>
+          <li class="section-driving type-smart_answer">
             <a href="#">Report an untaxed vehicle</a>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
             magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
     
             <ul class="result-meta">
-              <li class="transaction">Services</li><li><a href="/browse/driving">Driving</a></li>
+              <li class="transaction">Services</li><li><a href="/browse/driving">Driving</a></li><li class="dept">Dept. for Transport</li>
             </ul>
           </li>
           
@@ -147,9 +142,9 @@ section_class: search ancillary
           <h2>Section</h2>
     
           <ul>
-            <li><a href="#">Driving <span>43</span></a></li>
-            <li><a href="#">Money &amp; Tax <span>13</span></a></li>
-            <li><a href="#">Work <span>5</span></a></li>
+            <li data-filter="section-driving"><a href="#">Driving <span>43</span></a></li>
+            <li data-filter="section-money-tax"><a href="#">Money &amp; Tax <span>13</span></a></li>
+            <li data-filter="section-work"><a href="#">Work <span>5</span></a></li>
           </ul>
         </div>
     
@@ -157,9 +152,9 @@ section_class: search ancillary
           <h2>Content Type</h2>
     
           <ul>
-            <li class="transaction"><a href="#">Services <span>30</span></a></li>
-            <li class="smart_answer"><a href="#">Quick Answers <span>10</span></a></li>
-            <li class="guide"><a href="#">Guides <span>10</span></a></li>
+            <li data-filter="type-transaction"><a href="#">Services <span>30</span></a></li>
+            <li data-filter="type-smart_answer"><a href="#">Quick Answers <span>10</span></a></li>
+            <li data-filter="type-guide"><a href="#">Guides <span>10</span></a></li>
           </ul>
         </div>
         
