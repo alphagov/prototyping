@@ -30,6 +30,7 @@ header.page-header hgroup h1 span {
     line-height: 1.15em;
     text-transform: uppercase;
 }
+
 a.button {
   padding: 0.25em 0.5em;
 }
@@ -654,7 +655,7 @@ li.upcoming h3 {
 }
 
 .and-breathe {
-	margin-top: 2.4em;
+	margin-top: 2em;
 }
 /*
 h2 {
@@ -860,3 +861,58 @@ h2 {
 }
 
 /* /GUY BUTTONS */
+
+
+
+
+
+
+/* GUY TYPOGRAPHY FINESSING */
+header.page-header hgroup h1 {
+  background-repeat:no-repeat no-repeat;
+  color:#000000;
+  font-family:'Gill Sans', 'Gill Sans W01 Medium', sans-serif;
+  font-size:2.75em;
+  font-weight:300;
+  letter-spacing:0.025em;
+  line-height:1.05em;
+  padding:0.1em 1.5em 0 1.65em;
+}
+
+
+/*
+#wrapper  h2 {
+  font-family:'Gill Sans', 'Gill Sans W01 Medium', sans-serif;
+  font-size:1.8em;
+  font-weight:300;
+  letter-spacing:0.025em;
+  line-height:1.05em;
+}
+*/
+
+/* CRUFT TIDY UP */
+div.beta-notice {
+	display:none;
+}
+
+#wrapper header hgroup {
+  border-width: 1px 0 0;
+  border-color: #e5e5e5;
+}
+
+
+#wrapper, body.citizen nav.header-context {
+  background-color: #F2F2F2;
+  background-color: #f0f0f0;
+}
+
+
+#wrapper .inner h1,#wrapper .inner h2 {
+	font-weight: normal;
+	font-size:18px;
+	line-height: 24px;
+}
+
+#wrapper .inner h2 {
+	
+}
