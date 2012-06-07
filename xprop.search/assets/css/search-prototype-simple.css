@@ -1,7 +1,20 @@
 /* @override http://dev.gov.uk:4000/xprop.search/assets/css/search-prototype.css */
 
+html { background-color: #ccc; }
+a, a:active, a:visited, a:hover { color: #000; }
+
 /* Header
 ============================================================================ */
+
+body.citizen nav.header-context a {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+}
+
+body.citizen nav.header-context .beta-notice p {
+  background-color: #999;
+  font-size: 1.6rem;
+}
 
 /* This is all overwriting stuff in search.css */
 
@@ -13,7 +26,7 @@
 }
 
 #wrapper .ancillary.search header hgroup {
-  border-top: solid 2px #FFC10E;
+  border-top: solid 2px #000;
   padding: 1.5em 2.5em;
 }
 
@@ -21,8 +34,12 @@
   font-size: 2.75em;
 }
 
-#wrapper .ancillary.search header hgroup h1 em {
-  color: #2E3191;
+#wrapper .ancillary.search header hgroup h1 span {
+  color: #000;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 #wrapper .ancillary.search .search-container {
@@ -82,6 +99,7 @@ form.search-header input, form.search-header button {
 
 form.search-header input[type="text"],
 form.search-header input[type="search"] {
+  font-size: 1.6rem;
   height: 1.25em; width: 63%;
   background-color: #fff;
   -webkit-appearance: textfield;
@@ -90,16 +108,18 @@ form.search-header input[type="search"] {
 
 form.search-header button,
 form.search-header .button {
-  background-color: #4370CD;
-  border-color: #4370CD;
+  background-color: #bebebe;
+  border-color: #bebebe;
   line-height: 1.25em;
   padding: 0.2em 0.5em;
+  
+  font-size: 1.6rem;
 }
 
 .number-results {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   padding: 1.2rem 0;
-  color: #999;
+  color: #000;
 }
 
 /* Quick Results
@@ -176,19 +196,19 @@ form.search-header .button {
 
 .search .results-list li p {
   margin: 0; 
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   width: auto;
 }
 
 .search .results-list .result-meta {
   padding: 0;
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 
 .search .results-list .result-meta li {
   display: inline-block;
-  color: #999;
+  color: #000;
   line-height: 2.8rem;
   margin: 0;
   
@@ -207,48 +227,24 @@ form.search-header .button {
 }
 
 .search .results-list .result-meta li a {
-  color: #999;
-  font-size: 1.4rem;
+  color: #000;
+  display: inline;
 }
 
 .search .results-list .result-meta li.dept {
   float: right;
   /* background-color: #ccc; */
-  padding: 0 4px;
 }
 
 /* icons taken from core.css hardcoded image uris */
-.search .results-list .result-meta li.guide {
-  text-indent: 30px;
-  background-image: url(../images/icon-guide-s.png);
-  background-repeat: no-repeat;
-  background-position: 0 0.25em;
-}
-.search .results-list .result-meta li.answer,
-.search .results-list .result-meta li.calendar,
-.search .results-list .result-meta li.smart_answer,
-.search .results-list .result-meta li.calculator,
-.search .results-list .result-meta li.custom-application {
-  text-indent: 30px;
-  background-image: url(../images/icon-answer-s.png);
-  background-repeat: no-repeat;
-  background-position: 0 0.25em;
-}
-.search .results-list .result-meta li.local_transaction,
-.search .results-list .result-meta li.transaction,
-.search .results-list .result-meta li.place,
-.search .results-list .result-meta li.nearest,
-.search .results-list .result-meta li.service {
-  text-indent: 30px;
-  background-image: url(../images/icon-service-s.png);
-  background-repeat: no-repeat;
-  background-position: 0 0.25em;
-}
-.search .results-list .result-meta li.programme {
-  text-indent: 30px;
-  background-image: url(../images/icon-programme-s.png);
-  background-repeat: no-repeat;
-  background-position: 0 0.25em;
+.search .results-list .result-meta li:first-child:before {
+  content: " ";
+  display: inline-block;
+  width: 25px; height: 25px;
+  background-color: #666;
+  margin-right: 5px;
+  position: relative;
+  top: 5px;
 }
 
 .search .results .recommended {
@@ -280,89 +276,12 @@ form.search-header .button {
 /*   height: 0; */
 }
 
-/* Results v2
-============================================================================ */
-.search .results-2 {
-  margin-left: -26rem;
-}
-
-.search .results-2 .results-wrapper {
-  margin-left: 26rem;
-}
-
-.search .results-2 .results-list li {
-  margin-bottom: 2.4rem;
-}
-
-.search .results-2 .results-list li {
-  max-width: 52rem;
-}
-
-.search .results-2 .results-list .result-meta li {
-  line-height: 2.4rem;
-}
-
-.search .results-2 .results-list .result-meta li.guide,
-.search .results-2 .results-list .result-meta li.answer,
-.search .results-2 .results-list .result-meta li.calendar,
-.search .results-2 .results-list .result-meta li.smart_answer,
-.search .results-2 .results-list .result-meta li.calculator,
-.search .results-2 .results-list .result-meta li.custom-application,
-.search .results-2 .results-list .result-meta li.local_transaction,
-.search .results-2 .results-list .result-meta li.transaction,
-.search .results-2 .results-list .result-meta li.place,
-.search .results-2 .results-list .result-meta li.nearest,
-.search .results-2 .results-list .result-meta li.service,
-.search .results-2 .results-list .result-meta li.programme {
-  background-position: 0 0;
-}
-
-/* Results v3
-============================================================================ */
-.search .results-3 {
-  margin-left: 0;
-  float: left;
-  width: 62rem;
-}
-
-.search .results-wrapper {
-  padding: 0; margin-left: 0;
-}
-
-.search .results-3 .results-list li {
-  margin-bottom: 2.4rem;
-}
-
-.search .results-3 .results-list li {
-  max-width: 58rem;
-}
-
-.search .results-3 .results-list .result-meta li {
-  line-height: 2.4rem;
-}
-
-.search .results-3 .results-list .result-meta li.guide,
-.search .results-3 .results-list .result-meta li.answer,
-.search .results-3 .results-list .result-meta li.calendar,
-.search .results-3 .results-list .result-meta li.smart_answer,
-.search .results-3 .results-list .result-meta li.calculator,
-.search .results-3 .results-list .result-meta li.custom-application,
-.search .results-3 .results-list .result-meta li.local_transaction,
-.search .results-3 .results-list .result-meta li.transaction,
-.search .results-3 .results-list .result-meta li.place,
-.search .results-3 .results-list .result-meta li.nearest,
-.search .results-3 .results-list .result-meta li.service,
-.search .results-3 .results-list .result-meta li.programme {
-  background-position: 0 0;
-}
-
-
 
 /* Filters
 ============================================================================ */
 .filters {
   width: 22.4rem;
-  /* background-color: #c1cacb; */
+  background-color: #ccc;
   float: left;
   margin: 0 0 0 -4rem;
 }
@@ -372,16 +291,16 @@ form.search-header .button {
 }
 
 .filters h2 {
-  font-family: 'Gill Sans W01 Medium', sans-serif;
-  font-size: 0.85em;
+  font-family: sans-serif;
+  font-size: 1.6rem;
   font-weight: normal;
   height: 30px;
-  letter-spacing: 0.15em;
+  letter-spacing: normal;
   line-height: 1.5em;
   margin: 0 0 .8rem 0;
   padding: 0;
   position: relative;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .filters ul {
@@ -418,7 +337,7 @@ form.search-header .button {
 .filters ul li a span {
   background-color: #fff;
   border-radius: 2px;
-  color: #999;
+  color: #000;
   display: block;
   float: right; 
   font-size: 1.4rem;
@@ -443,42 +362,6 @@ form.search-header .button {
   text-indent: 0;
 }
 
-/* Filters v2
-============================================================================ */
-.filters-2 {
-  background-color: transparent;
-  margin-left: 0;
-}
-
-.filters-2 .inner {
-  padding-top: 0;
-}
-
-.filters-2 h2 {
-  height: auto;
-  line-height: 2.4rem;
-  margin-bottom: 0;
-}
-
-.filters-2 ul li a {
-  line-height: 2rem;
-}
-
-.filters-2 ul li a span {
-  height: 1.6rem; line-height: 1.6rem;
-}
-
-.filters-2 .group {
-  margin-bottom: 2.4rem;
-}
-
-/* Filters v3
-============================================================================ */
-.filters-3 {
-  float: right;
-}
-
-
 /* Related
 ============================================================================ */
 
@@ -492,3 +375,15 @@ form.search-header .button {
   margin-top: 0;
 }
 
+#footer {
+  background-color: #ccc;
+}
+
+#footer .beta-notice {
+  background-color: #999;
+}
+
+#footer .colophon p {
+  font-size: 1.6rem;
+  color: #000;
+}
