@@ -3,7 +3,7 @@ header.page-header hgroup {
 }
 
 header.page-header h1 {
-  background-image: url(images/licence-icon.png);
+  background-image: url(/licence-format/images/licence-icon.png);
 }
 
 header.page-header h1 span {
@@ -135,4 +135,8 @@ article.application-for-licence {
 
 article.application-for-licence > h2 {
   margin-top: 0;
+}
+
+.button.medium {
+  padding: 0.25em 0.5em;
 }
