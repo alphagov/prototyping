@@ -102,6 +102,24 @@ form.search-header .button {
   color: #999;
 }
 
+/* Search Form 2
+============================================================================ */
+/* Stealing styles from the homepage, should be standardised */
+form.search-header-2 input, form.search-header-2 button {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+form.search-header-2 input[type="text"],
+form.search-header-2 input[type="search"] {
+  height: 2.4rem; width: 70.3rem;
+  background-color: #fff;
+  -webkit-appearance: textfield;
+  border: 2px inset;
+}
+
+
+
 /* Quick Results
 ============================================================================ */
 .search .quick-results {
@@ -166,7 +184,18 @@ form.search-header .button {
 }
 
 .search .results-list li {
+  display: block;
   padding: 0; margin: 0px 0px 1.6rem 0px;
+  overflow: hidden;
+
+  -webkit-transition: opacity 0.2s ease, height 0.2s ease 0.2s, padding-bottom 0.2s ease 0.2s, visibility 0s linear;
+/*
+  -moz-transition: opacity 0.2s ease 0, height 0.2s ease 0.2s;
+  -ms-transition: opacity 0.2s ease 0, height 0.2s ease 0.2s;
+  -o-transition: opacity 0.2s ease 0, height 0.2s ease 0.2s;
+  transition: opacity 0.2s ease 0, height 0.2s ease 0.2s;
+*/
+
 }
 
 .search .results-list li a {
@@ -191,14 +220,6 @@ form.search-header .button {
   color: #999;
   line-height: 2.8rem;
   margin: 0;
-  
-  -webkit-transition: opacity 0.2s ease;
-/*
-  -moz-transition: opacity 0.2s ease 0, height 0.2s ease 0.2s;
-  -ms-transition: opacity 0.2s ease 0, height 0.2s ease 0.2s;
-  -o-transition: opacity 0.2s ease 0, height 0.2s ease 0.2s;
-  transition: opacity 0.2s ease 0, height 0.2s ease 0.2s;
-*/
 }
 
 .search .results-list .result-meta li:first-child {
@@ -276,8 +297,9 @@ form.search-header .button {
 }
 
 .search .results li.filtered {
+/*   visibility: hidden; */
   opacity: 0;
-/*   height: 0; */
+  height: 0; padding-bottom: 0;
 }
 
 /* Results v2
@@ -300,6 +322,7 @@ form.search-header .button {
 
 .search .results-2 .results-list .result-meta li {
   line-height: 2.4rem;
+  margin-bottom: 0;
 }
 
 .search .results-2 .results-list .result-meta li.guide,
@@ -325,7 +348,7 @@ form.search-header .button {
   width: 62rem;
 }
 
-.search .results-wrapper {
+.search .results-3 .results-wrapper {
   padding: 0; margin-left: 0;
 }
 
@@ -339,6 +362,7 @@ form.search-header .button {
 
 .search .results-3 .results-list .result-meta li {
   line-height: 2.4rem;
+  margin-bottom: 0;
 }
 
 .search .results-3 .results-list .result-meta li.guide,
@@ -412,7 +436,8 @@ form.search-header .button {
 }
 
 .filters ul li.active a {
-  background-color: yellow;
+  background-color: #2E3191;
+  color: #fff;
 }
 
 .filters ul li a span {
