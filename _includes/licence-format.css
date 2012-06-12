@@ -45,7 +45,7 @@ header.page-header h1 span {
 
 aside {
   float: left;
-  width: 14%;
+  width: 25%;
 }
 
 aside nav.actions {
@@ -97,7 +97,7 @@ article.licence {
   margin-left: -1px;
   min-height: 40em;
   padding-bottom: 1em;
-  width: 86%;
+  width: 75%;
 }
 
 article.licence .inner {
