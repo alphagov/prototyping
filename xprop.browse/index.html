@@ -3,131 +3,135 @@ layout: browse
 title: Crime &amp; Justice
 categories: Sections
 css: assets/css/browse-prototype.css
-section_class: search ancillary
+section_class: section-page ancillary
 ---
 
-<div class="search-container group">
-  <form action="/search" method="get" accept-charset="utf-8" class="search-header search-header-2">
-    <fieldset>
-      <legend class="visuallyhidden">Search gov.uk</legend>
-      <label for="search-main" class="visuallyhidden">Search</label>
-      <input type="search" name="q" value="car tax" id="search-main" /><button type="submit">Search</button>
-    </fieldset>
+<header class="page-header group">
+  <hgroup>
+    <h1>
+      <span>{{ page.categories }}</span>
+      {{ page.title }}
+    </h1>
+  </hgroup>
+</header>
 
-    <div class="number-results">50 results found for <i>car tax</i></div>
-  </form>
+<div class="browse-container group">
+
 
   <div class="group">
     <div class="results results-2">
       <div class="results-wrapper">
+        <div class="summary">
+          <p>Simple information to help answer your questions on jury service, courts, sentencing, ASBOs and prisons.</p>
+        </div>
+        
         <ul class="results-list">
-          <li class="section-driving type-transaction">
-            <a href="#">Get a tax disc (vehicle licence)</a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
+          <li class="type-transaction">
+            <a href="#">Pay a court fine online</a>
+            <p>How to pay your court fine online or by telephone using a credit or debit card</p>
     
             <ul class="result-meta">
-              <li class="transaction">Services</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
+              <li class="transaction">Services</li><li><a href="/browse/crime-and-justice#courts">Courts</a></li>
             </ul>
           </li>
-    
-          <li class="section-driving type-transaction">
-            <a href="#">Calculate vehicle tax rates</a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
+          
+          <li class="type-guide">
+            <a href="#">Jury service</a>
+            <p>Getting and responding to a jury summons, the rules about taking time off work and how to claim expenses after being a juror</p>
     
             <ul class="result-meta">
-              <li class="transaction">Services</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
+              <li class="guide">Guides</li><li><a href="/browse/crime-and-justice#courts">Courts</a></li>
             </ul>
           </li>
-    
-          <li class="section-driving type-transaction">
-            <a href="#">Apply for a tax disc refund (form V14)</a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
-    
+          
+          <li class="type-guide">
+            <a href="#">Prison life</a>
+            <p>What to expect if you're sent to prison - prison rules and regulations, healthcare and education, prisoner rights</p>
+            
             <ul class="result-meta">
-              <li class="transaction">Services</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
+              <li class="guide">Guides</li><li><a href="/browse/crime-and-justice#courts">Courts</a></li>
             </ul>
           </li>
-    
-          <li class="section-driving type-smart_answer">
-            <a href="#">Exchange a tax disc</a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
-    
+          
+          <li class="type-guide">
+            <a href="#">Become a magistrate</a>
+            <p>How to volunteer as a magistrate, who can and can't apply, the application form, and what magistrates do in court</p>
+            
             <ul class="result-meta">
-              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
+              <li class="guide">Guides</li><li><a href="/browse/crime-and-justice#courts">Courts</a></li>
             </ul>
           </li>
-    
-          <li class="section-driving type-smart_answer">
-            <a href="#">Vehicle tax rate tables</a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
-    
+          
+          <li class="type-guide">
+            <a href="#">Staying in touch with someone in prison</a>
+            <p>Visiting a prisoner, finding out about visiting times and keeping in touch with them by telephone or letter - including sending them money</p>
+            
             <ul class="result-meta">
-              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
+              <li class="guide">Guides</li><li><a href="/browse/crime-and-justice#courts">Courts</a></li>
             </ul>
           </li>
-    
-          <li>
-            <a href="#">Apply for a duplicate tax disc</a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
-    
+          
+          <li class="type-guide">
+            <a href="#">Criminal courts</a>
+            <p>The different types of court - magistrates' court, Crown Court and youth court - the crimes they deal with and the level of sentences they can give</p>
+            
             <ul class="result-meta">
-              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
+              <li class="guide">Guides</li><li><a href="/browse/crime-and-justice#courts">Courts</a></li>
             </ul>
           </li>
-    
-          <li class="section-driving type-smart_answer">
-            <a href="#">Vehicles exempt from vehicle tax</a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
-    
+          
+          <li class="type-guide">
+            <a href="#">Being arrested - your rights</a>
+            <p>The police have to follow strict rules if you're arrested, questioned or charged with a crime - you can get legal advice at a police station</p>
+            
             <ul class="result-meta">
-              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
+              <li class="guide">Guides</li><li><a href="/browse/crime-and-justice#courts">Courts</a></li>
             </ul>
           </li>
-    
-          <li class="section-driving type-smart_answer">
-            <a href="#">Get a tax disc (vehicle licence) using form V10</a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
-    
+          
+          <li class="type-guide">
+            <a href="#">Going to court as a victim or witness</a>
+            <p>How to get help if you're going to court as a victim or witness, claiming for expenses and the support available in the court-room</p>
+            
             <ul class="result-meta">
-              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
+              <li class="guide">Guides</li><li><a href="/browse/crime-and-justice#courts">Courts</a></li>
             </ul>
           </li>
-  
-          <li class="whitehall">
-            <a href="#">A test result from Inside Goverment</a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
-    
+          
+          <li class="type-smart_answer">
+            <a href="#">Report a crime or anti-social behaviour</a>
+            <p>Report a crime or anti-social behaviour by calling the police, or Crimestoppers if you want to remain anonymous</p>
+            
             <ul class="result-meta">
-              <li><a href="/goverment">Inside Government</a></li><li><a href="#">DVLA</a></li><li class="dept">DVLA</li>
+              <li class="smart_answer">Quick Answers</li><li><a href="/browse/crime-and-justice#courts">Courts</a></li>
             </ul>
           </li>
-  
-          <li class="section-driving type-smart_answer">
-            <a href="#">Applying for a HGV vehicle licence (tax disc) - form V85</a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
-    
+          
+          <li class="type-smart_answer">
+            <a href="#">Report domestic abuse</a>
+            <p>Domestic abuse or violence is a crime and should be reported to the police - call 999 if it is an emergency or you are in immediate danger</p>
+            
             <ul class="result-meta">
-              <li class="smart_answer">Quick Answer</li><li><a href="/browse/driving">Driving</a></li><li class="dept">DVLA</li>
+              <li class="smart_answer">Quick Answers</li><li><a href="/browse/crime-and-justice#courts">Courts</a></li>
             </ul>
           </li>
-    
-          <li class="section-driving type-smart_answer">
-            <a href="#">Report an untaxed vehicle</a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco…</p>
-    
+          
+          <li class="type-smart_answer">
+            <a href="#">Get support as a victim of crime</a>
+            <p>You can get free help and advice from Victim Support if you have been the victim of crime</p>
+            
             <ul class="result-meta">
-              <li class="transaction">Services</li><li><a href="/browse/driving">Driving</a></li><li class="dept">Dept. for Transport</li>
+              <li class="smart_answer">Quick Answers</li><li><a href="/browse/crime-and-justice#courts">Courts</a></li>
+            </ul>
+          </li>
+          
+          
+          <li class="type-smart_answer">
+            <a href="#">Legal aid</a>
+            <p>Legal aid helps pay for legal advice, mediation or representation in court - call Community Legal Advice or speak to your solicitor to see if you can get legal aid</p>
+            
+            <ul class="result-meta">
+              <li class="smart_answer">Quick Answers</li><li><a href="/browse/crime-and-justice#courts">Courts</a></li>
             </ul>
           </li>
           
@@ -137,34 +141,37 @@ section_class: search ancillary
   
     <aside class="filters filters-2">
         <div class="group">
-          <h2><span class="visuallyhidden">Filter by </span>Section</h2>
+          <h2>Sections</h2>
     
           <ul>
-            <li data-filter="section-driving"><a href="#">Driving <span>43</span><span class="visuallyhidden"> results</span></a></li>
-            <li data-filter="section-money-tax"><a href="#">Money &amp; Tax <span>13</span><span class="visuallyhidden"> results</span></a></li>
-            <li data-filter="section-work"><a href="#">Work <span>5</span><span class="visuallyhidden"> results</span></a></li>
+            <li class="open">
+              <a href="/browse/crime-and-justice">Crime and justice</a>
+            
+              <ul>
+                <li data-filter="subsection-complaints"><a href="#complaints">Complaints <span>20</span></a></li>
+                <li data-filter="subsection-courts"><a href="#courts">Courts <span>20</span></a></li>
+                <li data-filter="subsection-prisons-and-probation"><a href="#prisons-and-probation">Prisons and probation <span>20</span></a></li>
+                <li data-filter="subsection-reporting-crime"><a href="#reporting-crime">Reporting crime <span>20</span></a></li>
+                <li data-filter="subsection-sentencing"><a href="#sentencing">Sentencing <span>20</span></a></li>
+                <li data-filter="subsection-terrorism-and-extremism"><a href="#terrorism-and-extremism">Terrorism and extremism <span>20</span></a></li>
+                <li data-filter="subsection-the-police"><a href="#the-police">The police <span>20</span></a></li>
+                <li data-filter="subsection-victims-of-crime"><a href="#victims-of-crime">Victims of crime <span>20</span></a></li>
+                <li data-filter="subsection-young-people-and-crime"><a href="#young-people-and-crime">Young people and crime <span>20</span></a></li>
+                <li data-filter="subsection-neighbourhood"><a href="#your-neighbourhood">Your neighbourhood <span>20</span></a></li>
+              </ul>
+            </li>
+            <li><a href="/browse/driving">Driving</a></li>
+            <li><a href="/browse/education">Education</a></li>
+            <li><a href="/browse/family">Family</a></li>
+            <li><a href="/browse/housing">Housing</a></li>
+            <li><a href="/browse/life-in-the-uk">Life in the UK</a></li>
+            <li><a href="/browse/money-and-tax">Money and tax</a></li>
+            <li><a href="/browse/neighbourhoods">Neighbourhoods</a></li>
+            <li><a href="/browse/travel">Travel</a></li>
+            <li><a href="/browse/work">Work</a></li>
           </ul>
         </div>
     
-        <div class="group">
-          <h2><span class="visuallyhidden">Filter by</span> Content Type</h2>
-    
-          <ul>
-            <li data-filter="type-transaction"><a href="#">Services <span>30</span></a></li>
-            <li data-filter="type-smart_answer"><a href="#">Quick Answers <span>10</span></a></li>
-            <li data-filter="type-guide"><a href="#">Guides <span>10</span></a></li>
-          </ul>
-        </div>
-        
-        <div class="group">
-        	<h2><span class="visuallyhidden">Results from</span> Inside Government</h2>
-        	
-        	<ul>
-        	 <li><a href="#">Dept. for Transport <span>200</span></a></li>
-        	 <li><a href="#">DVLA <span>40</span></a></li>
-        	 <li><a href="#">HMRC <span>20</span></a></li>
-        	 <li><a href="#">HM Treasury <span>10</span></a></li>
-        </div>
     </aside>
   </div>
 </div>
