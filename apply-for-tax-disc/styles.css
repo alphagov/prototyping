@@ -1,0 +1,40 @@
+
+@import url("button-styles.css");
+
+.sketch{
+	width: 100%;
+}
+
+.product_image{
+	float: right;
+	height: 10em;
+	width: 10em;
+	margin: -6em -3em 1em 3em;
+}
+
+.footnote{
+	font-style: italic;
+	font-size: 1em;
+	color: #aaa;
+	margin-top: 2em;
+}
+
+
+/* Progressive disclosure link */
+
+
+.progressive_disclosure{
+	background-color: #ebebeb;
+	padding: 0.5em;
+	margin-bottom: 1em;
+}
+.progressive_disclosure .visible{
+	font-weight: normal;
+	color: #2E3191;
+	text-decoration: underline;
+	cursor: pointer;
+	margin-top: 0;
+}
+.progressive_disclosure .visible:hover{
+  color: #1D97FF;
+}

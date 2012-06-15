@@ -1,0 +1,222 @@
+/* REDESIGNED BUTTON STYLES
+   http://govuk-prototyping.herokuapp.com/redesigned-buttons/
+
+   'button' class name has been changed to 'buttonV2' so they can be
+   used in the current templates without interfering with the existing
+   button styles. This should be considered a temporary fix
+
+   Likewise, button and font size declarations have been scaled to work
+   within the standard templates
+
+*/
+
+
+/* BUTTONS */
+
+
+.buttonV2,.buttonV2:visited {		
+	display: inline-block;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow:0 4px 0 #ccc,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 4px 0 #ccc, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 4px 0 #ccc, 0 8px 10px rgba(0,0,0,.05);
+}
+.buttonV2 span {	
+	display: inline-block;
+	padding: 10px  20px;
+	padding-right:2.7em;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 21px;
+	font-weight: 200;
+	letter-spacing: 0.03em;
+	line-height: 1;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/*
+.buttonV2:active {	
+	-webkit-box-shadow: 0 4px 0 #000,0 12px 10px rgba(0,0,0,.0);
+	-moz-box-shadow: 0 4px 0 #000,0 12px 10px rgba(0,0,0,.0);
+	box-shadow: 0 4px 0 #000,0 12px 10px rgba(0,0,0,.0);
+}
+*/
+
+.buttonV2:active span {	
+	-webkit-transform: translate(0, 4px);
+	-moz-transform: translate(0, 4px);
+	-o-transform: translate(0, 4px);
+	transform: translate(0, 4px);
+}
+
+.small:active span {	
+	-webkit-transform: translate(0, 2px);
+	-moz-transform: translate(0, 2px);
+	-o-transform: translate(0, 2px);
+	transform: translate(0, 2px);
+}
+
+/*
+.buttonV2 span:hover {
+	background-color: #1E9188;
+}
+*/
+
+
+
+
+/* BUTTON COLOURS */
+
+/*
+.blue {
+	-webkit-box-shadow:0 4px 0 #196E7C,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 4px 0 #196E7C, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 4px 0 #196E7C, 0 8px 10px rgba(0,0,0,.05);
+}
+.blue span {
+	background: #3194c6;
+	color: #fff;
+}
+
+.green {
+	-webkit-box-shadow:0 4px 0 #004921,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 4px 0 #004921, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 4px 0 #004921, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.green span {
+	background: #006435;
+	color: #fff;
+}
+*/
+
+.black {
+	-webkit-box-shadow:0 4px 0 #000,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 4px 0 #000, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 4px 0 #000, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.black.small {
+	-webkit-box-shadow:0 2px 0 #000,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 2px 0 #000, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 2px 0 #000, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.black span {
+	background: #555;
+	color: #fff;
+}
+
+.black span:hover {
+	background-color: #666;
+}
+
+
+.grey {
+	-webkit-box-shadow:0 4px 0 #999,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 4px 0 #999, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 4px 0 #999, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.grey.small {
+	-webkit-box-shadow:0 2px 0 #999,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 2px 0 #999, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 2px 0 #999, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.grey span {
+	background: #d5d5d5;
+	color: #333;
+}
+
+.grey span:hover {
+	background-color: #e0e0e0;
+}
+
+
+.turquoise {
+	-webkit-box-shadow:0 4px 0 #1C7568,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 4px 0 #1C7568, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 4px 0 #1C7568, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.turquoise.small {
+	-webkit-box-shadow:0 2px 0 #1C7568,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 2px 0 #1C7568, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 2px 0 #1C7568, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.turquoise span {
+	background: #28a197;
+	color:#fff;
+}
+
+.turquoise span:hover {
+	background-color: #33AFA0;
+}
+
+
+.red {
+	-webkit-box-shadow:0 4px 0 #9B0B20,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 4px 0 #9B0B20, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 4px 0 #9B0B20, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.red.small {
+	-webkit-box-shadow:0 2px 0 #9B0B20,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 2px 0 #9B0B20, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 2px 0 #9B0B20, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.red span {
+	background: #df3034;
+	color:#fff;
+}
+
+.red span:hover {
+	background-color: #E83D46;
+}
+
+/* BUTTON SIZES/INVERSION */
+
+.invert span {
+	background-image: none;
+	background-image: url(images/pointer_invert.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.large span {
+	padding: 1.2rem 1.7rem;
+	padding-right:2.7em;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 2rem;
+	font-weight: 200;
+	letter-spacing: 0.03em;
+	background-image: none;
+	background-image: url(images/pointer.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.medium span {
+	padding: 0.5rem 0.9rem;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1.1rem;
+	font-weight: 200;
+	letter-spacing: 0.03em;
+	background-image: none;
+}
+
+.small span {
+	padding: 0.35rem 0.7rem;
+	padding-top:0.4rem;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 0.9rem;
+	font-weight: 200;
+	letter-spacing: 0.03em;
+	background-image: none;
+}
