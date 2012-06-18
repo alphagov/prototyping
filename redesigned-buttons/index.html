@@ -13,9 +13,14 @@
 
 <style type="text/css">
 
-body {
-	margin:3em;
+/* FOR SIZING FONTS WITH REMS */
+
+html {
+	font-size: 62.5%;
 }
+
+
+
 
 
 /* BUTTONS */
@@ -29,27 +34,20 @@ body {
 	-moz-box-shadow:0 4px 0 #ccc, 0 8px 10px rgba(0,0,0,.05);
 	box-shadow: 0 4px 0 #ccc, 0 8px 10px rgba(0,0,0,.05);
 }
+
 .button span {	
 	display: inline-block;
-	padding: 10px  20px;
-	padding-right:2.7em;
+	padding: 10px 20px;
+	padding-right: 27px;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 21px;
+	font-size: 2.1rem;
 	font-weight: 200;
-	letter-spacing: 0.03em;
-	line-height: 1;
+	letter-spacing: 0.1px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 }
-
-/*
-.button:active {	
-	-webkit-box-shadow: 0 4px 0 #000,0 12px 10px rgba(0,0,0,.0);
-	-moz-box-shadow: 0 4px 0 #000,0 12px 10px rgba(0,0,0,.0);
-	box-shadow: 0 4px 0 #000,0 12px 10px rgba(0,0,0,.0);
-}
-*/
 
 .button:active span {	
 	-webkit-transform: translate(0, 4px);
@@ -65,39 +63,10 @@ body {
 	transform: translate(0, 2px);
 }
 
-/*
-.button span:hover {
-	background-color: #1E9188;
-}
-*/
-
 
 
 
 /* BUTTON COLOURS */
-
-/*
-.blue {
-	-webkit-box-shadow:0 4px 0 #196E7C,0 8px 10px rgba(0,0,0,.05);
-	-moz-box-shadow:0 4px 0 #196E7C, 0 8px 10px rgba(0,0,0,.05);
-	box-shadow: 0 4px 0 #196E7C, 0 8px 10px rgba(0,0,0,.05);
-}
-.blue span {
-	background: #3194c6;
-	color: #fff;
-}
-
-.green {
-	-webkit-box-shadow:0 4px 0 #004921,0 8px 10px rgba(0,0,0,.05);
-	-moz-box-shadow:0 4px 0 #004921, 0 8px 10px rgba(0,0,0,.05);
-	box-shadow: 0 4px 0 #004921, 0 8px 10px rgba(0,0,0,.05);
-}
-
-.green span {
-	background: #006435;
-	color: #fff;
-}
-*/
 
 .black {
 	-webkit-box-shadow:0 4px 0 #000,0 8px 10px rgba(0,0,0,.05);
@@ -117,7 +86,7 @@ body {
 }
 
 .black span:hover {
-	background-color: #666;
+	background-color: #888;
 }
 
 
@@ -139,7 +108,7 @@ body {
 }
 
 .grey span:hover {
-	background-color: #e0e0e0;
+	background-color: #eaeaea;
 }
 
 
@@ -161,7 +130,7 @@ body {
 }
 
 .turquoise span:hover {
-	background-color: #33AFA0;
+	background-color: #3ABAA8;
 }
 
 
@@ -183,7 +152,7 @@ body {
 }
 
 .red span:hover {
-	background-color: #E83D46;
+	background-color: #F24455;
 }
 
 
@@ -201,12 +170,13 @@ body {
 }
 
 .large span {
-	padding: 0.8rem 1.2rem;
-	padding-right:2.7em;
+	padding: 8px 12px;
+	padding-right:45px;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 1.3rem;
+	font-size: 21px;
+	font-size: 2.1rem;
 	font-weight: 200;
-	letter-spacing: 0.03em;
+	letter-spacing: 0.1px;
 	background-image: none;
 	background-image: url(pointer.png);
 	background-repeat: no-repeat;
@@ -214,21 +184,23 @@ body {
 }
 
 .medium span {
-	padding: 0.5rem 0.9rem;
+	padding: 5px 9px;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 1.1rem;
+	font-size: 18px;
+	font-size: 1.8rem;
 	font-weight: 200;
-	letter-spacing: 0.03em;
+	letter-spacing: 0.1px;
 	background-image: none;
 }
 
 .small span {
-	padding: 0.35rem 0.7rem;
-	padding-top:0.4rem;
+	padding: 4px 7px;
+	padding-top:4px;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 0.9rem;
+	font-size: 14px;
+	font-size: 1.4rem;
 	font-weight: 200;
-	letter-spacing: 0.03em;
+	letter-spacing: 0.1px;
 	background-image: none;
 }
 
@@ -243,19 +215,22 @@ body {
 
 
 
+/* CSS FOR THIS DOC ONLY, NOT NEEDED FOR BUTTONS */
+
 body {
-	margin:3em;
+	margin:30px;
 }
 
 h1, h2 {
 	font-family: "Gill Sans",sans-serif;
 	font-weight: 300;
-	font-size: 2.2rem;
-	margin-top: 3rem;
+	font-size: 35px;
+	font-size: 3.5rem;
+	margin-top: 30px;
 }
 
 h2 {
-	font-size: 1.5rem;
+	font-size: 24px;
 }
 
 .space {
@@ -265,8 +240,10 @@ h2 {
 
 p {
 	font-family: "Helvetica Neue",Helvetica,sans-serif;
-	font-size: 1rem;
-	line-height: 1.5rem;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 24px;
+	line-height: 2.4rem;
 	font-weight: 200;
 	max-width:450px;
 	color:#444;
@@ -280,7 +257,15 @@ code {
 	max-width: 550px;
 }
 
-hr {background:#bbb;color:#ddd;clear:both;float:none;width:100%;height:.1em;margin:0 0 1.45em;border:none;}
+hr {
+	background:#bbb;
+	color:#ddd;clear:both;
+	float:none;
+	width:100%;
+	height:1px;
+	margin:0 0 24px;
+	border:none;
+}
 
 </style>
 
