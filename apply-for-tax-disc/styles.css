@@ -1,10 +1,12 @@
 
 @import url("button-styles.css");
 
+/* Temporary sketch images */
 .sketch{
 	width: 100%;
 }
 
+/* Product image (ie. a tax disc)*/
 .product_image{
 	float: right;
 	height: 10em;
@@ -12,6 +14,7 @@
 	margin: -5em -3em 1em 3em;
 }
 
+/* Footnote style */
 .footnote{
 	font-style: italic;
 	font-size: 1em;
@@ -19,30 +22,65 @@
 	margin-top: 2em;
 }
 
-
-.car_reg{
-	background-color: #fbe712;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	padding: 0.2em;
+/* Results table for car lookup */
+.car_reg,
+.car_tax{
+	padding: 0 0.2em;
 	color: #000;
 	font-weight: bold;
 	font-size: 3rem;
 	text-align: center;
 	width: 5em;
+	margin: 0 auto 0.5em auto;
+}
+
+.car_reg{
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fbe712), color-stop(100%,#d3c100));
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	box-shadow: 2px 2px 1px rgba(100, 100, 100, 0.8);
+}
+
+.car_tax{
+ background-color:#d53880;
+ color: #fff;
+ font-weight: normal;
+ width: 11em;
+}
+
+.car_tax_details{
+	text-align: center;
+}
+
+.article table tr th{
+	text-align: center;
+}
+
+.car_tax_details td{
+	padding: 1em;
+}
+.car_tax_details td p{
+	margin-top: 0;
 }
 
 
+/* Image of the V11 form */
 #v11image{
 	width: 130px;
 	float: right;
-	margin: -1em 0 0 1em;
+	margin: -1em 0 0 3em;
 }
 
+/* text input field */
 input[type=text]{
 	display: block;
 	margin-bottom: 1em;
+}
+
+/* Back button */
+.back{
+	margin-left: 1em;
 }
 
 

@@ -1,11 +1,11 @@
 ---
-layout: default
+layout: default-local
 title: Buy a tax disc
 categories: Service
 ---
 
 <link media="screen" type="text/css" rel="stylesheet" href="styles.css" />
-<script src="http://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"></script>
+<!--<script src="http://code.jquery.com/jquery-1.7.2.min.js" type="text/javascript"></script>-->
 <script src="behaviours.js" type="text/javascript"></script>
 
 <ol class="transaction-step-indicator">
@@ -20,8 +20,29 @@ categories: Service
     </li>
 </ol>
 
-<p>Is this the vehicle that you want to tax?</p>
+<p>Please check the vehicle details and tax status.</p>
+<table class="car_tax_details">
+	<tr>
+		<th>Vehicle details</th>
+		<th>Tax status</th>
+	</tr>
+	<tr>
+		<td>
+		  <p>Blue Ford Focus</p>
+		  <p class="car_reg">A17 9QT</p>
+		  <p><a href="">Wrong vehicle?</a></p>
+	  </td>
+	  <td>
+	  	<p>Vehicle is taxed until 12/06/2012</p>
+	  	<p class="car_tax">£467</p>
+	  	<p>(cost of an annual tax disc for this vehicle)</p>
+	  </td>
+	</tr>
+</table>
 
-<h3 class="car_reg">A17 9QT</h3>
+<a href="5.html" class="large buttonV2 turquoise"><span>Proceed to payment</span></a>
+<a class="back" href="2a.html">Back</a>
 
+<!--
 <a href="5.html"><img class="sketch" src="images/sketches/4.jpg" /></a>
+-->
