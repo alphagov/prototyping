@@ -1,14 +1,13 @@
 $(function() {
 
-
-// Progressive disclosure
-
-// Hide any content to be progressivly disclosed
-$('.progressive_disclosure *:not(.visible)').hide();
+// =======================================================================
+// Simple inline expand
+// =======================================================================
 
 // Toggle the hidden content when the user clicks on the visible trigger
-$(".progressive_disclosure .visible").click(function() {
-  $(this).siblings().slideToggle("fast");
+$("details summary").click(function() {
+  //$(this).siblings().slideToggle(60);
+  $(this).parents().toggleClass("open");
 });
 
 });

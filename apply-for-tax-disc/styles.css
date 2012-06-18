@@ -9,7 +9,7 @@
 	float: right;
 	height: 10em;
 	width: 10em;
-	margin: -6em -3em 1em 3em;
+	margin: -5em -3em 1em 3em;
 }
 
 .footnote{
@@ -20,21 +20,116 @@
 }
 
 
-/* Progressive disclosure link */
+.car_reg{
+	background-color: #fbe712;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	padding: 0.2em;
+	color: #000;
+	font-weight: bold;
+	font-size: 3rem;
+	text-align: center;
+	width: 5em;
+}
 
 
-.progressive_disclosure{
-	background-color: #ebebeb;
-	padding: 0.5em;
+#v11image{
+	width: 130px;
+	float: right;
+	margin: -1em 0 0 1em;
+}
+
+input[type=text]{
+	display: block;
 	margin-bottom: 1em;
 }
-.progressive_disclosure .visible{
-	font-weight: normal;
-	color: #2E3191;
-	text-decoration: underline;
+
+
+/* ==================================================
+ * Simple Inline Expansion
+ * ================================================== */
+
+ /* A styled-up version of the details/summary HTML5 elements */
+
+details{
+	margin: 0 -1em 1em -1em;
+	padding: 0.7em 1em;
+}
+details summary{
 	cursor: pointer;
 	margin-top: 0;
+	font-size: 112.5%;
 }
-.progressive_disclosure .visible:hover{
+
+/* Closed state */
+details:not(.open){
+	padding-bottom: 0;
+}
+details:not(.open) summary{
+	/* Display element in standard link style */
+	color: #2E3191;
+	display: inline;
+	margin-bottom: 1em;
+	text-decoration: underline;
+}
+details:not(.open) summary:hover{
   color: #1D97FF;
+}
+
+/* Open state */
+details.open{
+	background-color: #f2f2f2;
+}
+details.open summary{
+  font-weight: bold;
+}
+
+summary:focus{
+	outline: none;
+}
+
+
+/* ==================================================
+ * Transaction step indicator
+ * ================================================== */
+
+ /* Taken from ERTP prototype */
+
+ol.transaction-step-indicator {
+	list-style-type: none;
+	font-size:1.1em;
+	text-align:center;
+	padding:0;
+	margin:0;
+}
+
+.transaction-step-indicator > li {
+	width: 161px;
+	height: 60px;
+	margin-left: -35px;
+	background-image: url('images/unselected-icon.png');
+	background-position: right;
+	background-repeat: no-repeat;
+	line-height: 60px;
+	display: inline-block;
+	font-weight:normal;
+	color:#666;
+	text-align:left;
+}
+
+.transaction-step-indicator > li.current {
+	background-image: url('images/selected-icon.png');
+	font-weight:500;
+	color: #fff;
+}
+
+.transaction-step-number {
+	padding: 21px;
+	text-align:center;
+}
+
+.transaction-content {
+	background-color: white;
+	padding: 0em 2em 0em 5em;
 }
