@@ -26,12 +26,18 @@
 .car_reg,
 .car_tax{
 	padding: 0 0.2em;
+	line-height: 1.5em;
 	color: #000;
+	display: block;
 	font-weight: bold;
 	font-size: 3rem;
 	text-align: center;
 	width: 5em;
-	margin: 0 auto 0.5em auto;
+	margin: 0.5em auto 0.5em auto;
+}
+.car_reg h3,
+.car_tax h3{
+	margin: 0;
 }
 
 .car_reg{
@@ -46,7 +52,6 @@
  background-color:#d53880;
  color: #fff;
  font-weight: normal;
- width: 11em;
 }
 
 .car_tax_details{
