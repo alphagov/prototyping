@@ -2,8 +2,54 @@
 layout: default
 title: Buy a tax disc
 categories: Service
+section_class: tax-disc
+css: assets/css/styles.css
 ---
 
-<link media="screen" type="text/css" rel="stylesheet" href="styles.css" />
+<ol class="transaction-step-indicator">
+    <li class="">
+        <span class="transaction-step-number">1</span> Details
+    </li>
+    <li class="current">
+        <span class="transaction-step-number">2</span> Pay
+    </li>
+    <li class="">
+        <span class="transaction-step-number">3</span> Done
+    </li>
+</ol>
 
-<a href="8.html"><img class="sketch" src="images/sketches/7.jpg" /></a>
+<h2>Confirm details &amp; pay</h2>
+
+<table class="car_tax_details">
+  <thead>
+    <tr>
+      <th>Details</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td>
+        <p>Blue Ford Focus <span class="car_reg">A17 9QT</span></p>
+        <p>6 months tax expires 30/06/2012</p>
+      </td>
+      <td class="currency numeric">&pound;467.00</td>
+    </tr>
+    
+    <tr>
+      <td>Credit card fee</td>
+      <td class="currency numeric">&pound;2.50</td>
+    </tr>
+    
+    <tr>
+      <th scope="row">Total</th>
+      <td class="currency numeric total">&pound;469.50</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="buttons">
+  <a href="8.html" class="buttonV2 turquoise medium"><span>Pay</span></a>
+  <a href="6.html" class="buttonV2 grey medium"><span>Change payment details</span></a>
+</div>

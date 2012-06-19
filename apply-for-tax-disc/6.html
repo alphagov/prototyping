@@ -2,8 +2,152 @@
 layout: default
 title: Buy a tax disc
 categories: Service
+section_class: tax-disc
+css: assets/css/styles.css
 ---
 
-<link media="screen" type="text/css" rel="stylesheet" href="styles.css" />
+<ol class="transaction-step-indicator">
+    <li class="">
+        <span class="transaction-step-number">1</span> Details
+    </li>
+    <li class="current">
+        <span class="transaction-step-number">2</span> Pay
+    </li>
+    <li class="">
+        <span class="transaction-step-number">3</span> Done
+    </li>
+</ol>
 
-<a href="7.html"><img class="sketch" src="images/sketches/6.jpg" /></a>
+<h2>Choose your tax disc</h2>
+
+<form action="6.html" method="post" accept-charset="utf-8">
+  <fieldset class="group">
+    <div class="tax-option">
+      <label for="six_months">
+        <input id="six_months" type="radio" name="tax_type" value="six_months" /> 6 Months
+        <div class="car_tax">&pound;68.75</div>
+        <div class="note">Expires 31/12/2012</div>
+      </label>
+    </div>
+    
+    <div class="tax-option">
+      <label for="twelve_months">
+        <input id="twelve_months" type="radio" name="tax_type" value="twelve_months" checked="checked" /> 12 Months
+        <div class="car_tax">&pound;120.00</div>
+        <div class="note">
+          Expires 31/06/2013<br />
+          <small><em>Save 10% when you pay for 12 months.</em></small>
+        </div>
+      </label>
+    </div>
+  </fieldset>
+  
+  <fieldset>
+    <h3>Choose your payment type</h3>
+  
+    <div class="accepted-cards group">
+      <div class="debit">
+        <h4>Debit Cards</h4>
+        <label for="debit_card_delta"><span class="visuallyhidden">Delta</span> <img src="assets/img/payment-icon-set/icons/delta-straight-48px.png" alt="Delta" /> <input type="radio" name="card_type" id="debit_card_delta" value="debit_card_delta" /></label>
+        <label for="debit_card_visa"><span class="visuallyhidden">Visa Debit</span> <img src="assets/img/payment-icon-set/icons/visa-straight-48px.png" alt="Visa Debit" /> <input type="radio" name="card_type" id="debit_card_visa" value="debit_card_visa" /></label>
+        <label for="debit_card_maestro"><span class="visuallyhidden">Maestro</span> <img src="assets/img/payment-icon-set/icons/maestro-straight-48px.png" alt="Maestro" /> <input type="radio" name="card_type" id="debit_card_maestro" value="debit_card_maestro" /></label>
+        <label for="debit_card_visa_electron"><span class="visuallyhidden">Visa Electron</span> <img src="assets/img/payment-icon-set/icons/visa-electron-straight-48px.png" alt="Visa Electron" /> <input type="radio" name="card_type" id="debit_card_visa_electron" value="debit_card_visa_electron" /></label>
+        <label for="debit_card_solo"><span class="visuallyhidden">Solo</span> <img src="assets/img/payment-icon-set/icons/solo-straight-48px.png" alt="Solo" /> <input type="radio" name="card_type" id="debit_card_solo" value="debit_card_solo" /></label>
+      </div>
+       
+      <div class="credit">
+        <h4>Credit Cards</h4>
+        <label for="credit_card_visa"><span class="visuallyhidden">Visa</span> <img src="assets/img/payment-icon-set/icons/visa-straight-48px.png" alt="Visa" /> <input type="radio" name="card_type" id="credit_card_visa" value="credit_card_visa" /></label>
+        <label for="credit_card_mastercard"><span class="visuallyhidden">Mastercard</span> <img src="assets/img/payment-icon-set/icons/mastercard-straight-48px.png" alt="Mastercard" /> <input type="radio" name="card_type" id="credit_card_mastercard" value="credit_card_mastercard" /></label>
+      </div>
+    </div>
+    
+     <div class="help-notice">Using a credit card incurs a &pound;2.50 surcharge</div>
+
+    <div class="group">
+      <div class="form-column">
+        <label for="card_number">Card Number</label>
+        <input id="card_number" type="text" name="card_number" value="" class="long-input" />
+      </div>
+      
+      <div class="form-column">
+        <label for="expiry_date_month">Expiry Date</label>
+        <select name="expiry_date_month" id="expiry_date_month" class="month-select">
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        
+        <select name="expiry_date_year" id="expiry_date_year" class="year-select">
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+          <option value="2015">2015</option>
+          <option value="2014">2014</option>
+          <option value="2013">2013</option>
+          <option value="2012">2012</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="group hide" id="solo_maestro_only">
+      <div class="form-column">
+        <label for="start_date_month">Start Date</label>
+        <select name="start_date_month" id="start_date_month" class="month-select">
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        
+        <select name="start_date_year" id="start_date_year" class="year-select">
+          <option value="2007">2007</option>
+          <option value="2008">2008</option>
+          <option value="2009">2009</option>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+        </select>
+      </div>
+      
+      <div class="form-column">
+        <label for="issue_no">Issue Number</label>
+        <input id="issue_no" type="text" name="issue_no" value="" class="short-input" />
+      </div>
+    </div>
+
+    <div class="form-column">
+      <label for="security_code">Security Code</label>
+      <input id="security_code" type="text" name="security_code" value="" class="short-input">
+      <span class="help">The security code is the 3 digit number found on the reverse of your card</span>
+    </div>
+    
+    <div class="form-column">
+      <h4>Would you like a confirmation email?</h4>
+      <label for="email_address">Email Address</label>
+      <input id="email_address" type="email" name="email_address" value="" />
+    </div>
+    
+  </fieldset>
+  
+  <div class="buttons">
+    <a class="buttonV2 medium turquoise" href="7.html"><span>Confirm Payment</span></a>
+    <a class="buttonV2 medium grey" href="5.html"><span>Return to details</span></a>
+  </div>
+</form>

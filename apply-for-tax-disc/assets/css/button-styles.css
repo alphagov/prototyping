@@ -25,12 +25,12 @@
 }
 .buttonV2 span {	
 	display: inline-block;
-	padding: 10px  20px;
-	padding-right:2.7em;
+	padding: 1rem  2rem;
+	padding-right:2.7rem;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 21px;
+	font-size: 2.1rem;
 	font-weight: 200;
-	letter-spacing: 0.03em;
+	letter-spacing: 0.01rem;
 	line-height: 1;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -184,20 +184,20 @@
 
 .invert span {
 	background-image: none;
-	background-image: url(images/pointer_invert.png);
+	background-image: url(../img/pointer_invert.png);
 	background-repeat: no-repeat;
 	background-position: right center;
 }
 
 .large span {
-	padding: 1.2rem 1.7rem;
-	padding-right:2.7em;
+	padding: 0.8rem 1.2rem;
+	padding-right:4.5rem;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 2rem;
+	font-size: 2.1rem;
 	font-weight: 200;
-	letter-spacing: 0.03em;
+	letter-spacing: 0.01rem;
 	background-image: none;
-	background-image: url(images/pointer.png);
+	background-image: url(../img/pointer.png);
 	background-repeat: no-repeat;
 	background-position: right center;
 }
@@ -205,18 +205,18 @@
 .medium span {
 	padding: 0.5rem 0.9rem;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 1.1rem;
+	font-size: 1.8rem;
 	font-weight: 200;
-	letter-spacing: 0.03em;
+	letter-spacing: 0.01rem;
 	background-image: none;
 }
 
 .small span {
-	padding: 0.35rem 0.7rem;
+	padding: 0.4rem 0.7rem;
 	padding-top:0.4rem;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 0.9rem;
+	font-size: 1.4rem;
 	font-weight: 200;
-	letter-spacing: 0.03em;
+	letter-spacing: 0.01rem;
 	background-image: none;
 }
