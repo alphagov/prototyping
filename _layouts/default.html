@@ -5,10 +5,13 @@
     <title>{{ page.title }}</title>
     <!-- References production assets -->
     <link href="https://static.production.alphagov.co.uk/static/application.css" media="screen" rel="stylesheet" type="text/css">
-    <link class="wordsdifficult" href="https://static.production.alphagov.co.uk/wordsdifficult.css" media="screen" rel="alternate stylesheet" title="I find words difficult" type="text/css">
-    <script src="https://static.production.alphagov.co.uk/libs/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
-    <script src="https://static.production.alphagov.co.uk/libs/plugins/carousel.js" type="text/javascript"></script>
-    <script defer src="https://static.production.alphagov.co.uk/application.js" type="text/javascript"></script>   
+    <link class="wordsdifficult" href="https://static.production.alphagov.co.uk/stylesheets/wordsdifficult.css" media="screen" rel="alternate stylesheet" title="I find words difficult" type="text/css">
+    <script src="https://static.production.alphagov.co.uk/javascripts/libs/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+    {% if page.css  %}
+    <link rel="stylesheet" href="{{ page.css }}" />
+    {% endif %}
+    <script src="https://static.production.alphagov.co.uk/javascripts/libs/jquery/plugins/carousel.js" type="text/javascript"></script>
+    <script defer src="https://static.production.alphagov.co.uk/javascripts/application.js" type="text/javascript"></script>   
     
     <script type="text/javascript">
     setTimeout(function(){var a=document,g,b={families:(g=
@@ -52,7 +55,7 @@
         <li><a href="#">Section</a></li>
       </ol>
     </nav>
-    <div id="wrapper" class="licence-finder {{ page.categories }}">
+    <div id="wrapper" class="{{ page.categories }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
       <section id="content" role="main" class="group">
         <header class="page-header group">
           <hgroup>

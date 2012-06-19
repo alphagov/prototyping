@@ -7,6 +7,9 @@
     <!-- References local (probably out of date) copies of assets. Only use if you need to work offline temporarily -->
     <link href="/static/application.css" media="screen" rel="stylesheet" type="text/css">
     <link class="wordsdifficult" href="../static/wordsdifficult.css" media="screen" rel="alternate stylesheet" title="I find words difficult" type="text/css">
+    {% if page.css  %}
+    <link rel="stylesheet" href="{{ page.css }}" />
+    {% endif %}
     <script src="/static/jquery-1.7.2.min.js" type="text/javascript"></script>
     <script src="/static/carousel.js" type="text/javascript"></script>
     <script defer src="/static/application.js" type="text/javascript"></script>   
