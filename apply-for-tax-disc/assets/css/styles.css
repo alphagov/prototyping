@@ -4,12 +4,17 @@
  * Overwrite default styles
  * ================================================== */
 
+/*
+  page headers
+*/
+
 #wrapper.tax-disc header.page-header hgroup {
   border-color: #2DA096;
   margin-right: 0;
 }
 
-#wrapper.tax-disc header.page-header hgroup h1 span {
+#wrapper.tax-disc header.page-header hgroup h1 span,
+#wrapper.tax-disc header.page-header hgroup h2 span {
   /*
     new colour should be added to the palette
     this version is much more contrast-friendly than #2DA096
@@ -17,12 +22,52 @@
   color: #227770;
 }
 
-#wrapper.tax-disc header.page-header hgroup h1 {
+#wrapper.tax-disc header.page-header hgroup h2 {
+/*  background-position: 0 2px;*/
+  background-repeat: no-repeat;
+  color: #000;
+  font-family: 'Gill Sans W01 Medium', sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 0.025em;
+  line-height: 1.05em;
+  padding: 0.4rem 6.5rem 2.5rem 7.25rem ;
+  margin: 0;
+}
+.lte-ie8 #wrapper.tax-disc header.page-header hgroup h2 {
+  height: 1%;
+}
+
+#wrapper.tax-disc header.page-header hgroup h2 {
+  background-position: 0 9px;
+}
+
+#wrapper.tax-disc header.page-header hgroup h2 span {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: 0.15em;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+
+#wrapper.tax-disc header.page-header hgroup h1,
+#wrapper.tax-disc header.page-header hgroup h2 {
   background-image: url(https://static.production.alphagov.co.uk/images/icon-service-l.png);
 }
 
 #wrapper.tax-disc .article-container {
   margin-right: 0;
+}
+
+section#content {
+  position: relative;
+}
+
+#wrapper.tax-disc article h1 {
+  margin-top: 0;
+  font-size: 3.6rem;
 }
 
 /* ==================================================
@@ -71,7 +116,16 @@
 }
 
 .start {
-  text-align: right;
+  margin: 5.4rem 2rem 0 2rem;
+  padding: 2rem;
+  background-color: #d5ecea;
+  
+  text-align: center;
+}
+
+.start img {
+  display: block;
+  margin: 0 auto 1.6rem;
 }
 
 
@@ -137,8 +191,10 @@
 }
 
 .accepted-cards>div {
+/*
   float: left;
   margin-right: 10px;
+*/
 }
 
 .accepted-cards label {
@@ -237,10 +293,8 @@ tr.total td, tr.total th {
 
 /* Product image (ie. a tax disc)*/
 .product_image{
-	float: right;
 	height: 10em;
 	width: 10em;
-	margin: -5em -3em 1em 3em;
 }
 
 /* Footnote style */
@@ -268,11 +322,12 @@ tr.total td, tr.total th {
 }
 
 .car_reg{
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fbe712), color-stop(100%,#d3c100));
+/* 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fbe712), color-stop(100%,#d3c100)); */
+  background: #ffbf47;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
-	box-shadow: 2px 2px 1px rgba(100, 100, 100, 0.8);
+/* 	box-shadow: 2px 2px 1px rgba(100, 100, 100, 0.8); */
 	line-height: 4.8rem;
 }
 
@@ -371,7 +426,7 @@ summary:focus{
 
  /* Taken from ERTP prototype */
 
-/*
+
 ol.transaction-step-indicator {
 	list-style-type: none;
 	font-size:1.1em;
@@ -405,18 +460,8 @@ ol.transaction-step-indicator {
 	text-align:center;
 }
 
-.transaction-content {
-	background-color: white;
-	padding: 0em 2em 0em 5em;
-}
 
-/* Complate */
-.transaction_complete {
-    text-align:center;
-    padding-bottom:1.5em;
-}
-*/
-
+/*
 .transaction-step-indicator {
 	list-style-type: none;
 	display: block;
@@ -426,6 +471,9 @@ ol.transaction-step-indicator {
 	
 	padding:0;
 	margin:0;
+	
+	position: absolute;
+	top: 2rem; right: 1.6rem;
 }
 
 .transaction-step-indicator>li {
@@ -461,6 +509,8 @@ ol.transaction-step-indicator {
 	border-radius: 1rem;
 	margin-right: 5px;
 }
+*/
+
 /* Payment */
 #cartax_payment h2 {
     border-bottom:solid 1px #999;
