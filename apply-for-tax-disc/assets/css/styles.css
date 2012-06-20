@@ -371,6 +371,7 @@ summary:focus{
 
  /* Taken from ERTP prototype */
 
+/*
 ol.transaction-step-indicator {
 	list-style-type: none;
 	font-size:1.1em;
@@ -414,7 +415,52 @@ ol.transaction-step-indicator {
     text-align:center;
     padding-bottom:1.5em;
 }
+*/
 
+.transaction-step-indicator {
+	list-style-type: none;
+	display: block;
+	
+	font-size:1.6rem;
+	line-height: 4rem;
+	
+	padding:0;
+	margin:0;
+}
+
+.transaction-step-indicator>li {
+  display: block;
+  width: 12rem; height: 4rem;
+  
+  float: left;
+  
+  background: #E8EBD9 url(../img/progress-sprite.png) 100% 0 no-repeat;
+  border: 1px solid #D2DFD5;
+  border-width: 1px 0;
+}
+
+.transaction-step-indicator>li:first-child { border-radius: 4px 0 0 4px; border-width: 1px 0 1px 1px; }
+.transaction-step-indicator>li:last-child { border-radius: 0 4px 4px 0; background-image: none; border-width: 1px 1px 1px 0; }
+
+.transaction-step-indicator>li.current {
+  background-color: #91B097;
+  border-color: #778F7B;
+  background-position: 100% 100%;
+}
+
+.transaction-step-number {
+  display: inline-block;
+  width: 1.9rem; height: 1.9rem;
+
+  background-color: #fff;
+  
+	text-align:center;
+	font-size: 1.2rem;
+	line-height: 2rem;
+	
+	border-radius: 1rem;
+	margin-right: 5px;
+}
 /* Payment */
 #cartax_payment h2 {
     border-bottom:solid 1px #999;
