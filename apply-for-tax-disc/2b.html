@@ -18,29 +18,33 @@ css: assets/css/styles.css
   </li>
 </ol>
 
-<h2>Identify your vehicle</h2>
+<h2>Enter your log book (V5C) and number plate details</h2>
 
 <form action="" method="post">
   <div class="help-notice">
     Do not proceed if you have recently purchased your vehicle and do not have a registration certificate!
   </div>
 
-  <div class="form-column">
-    <label for="v5c_number">Log book (V5C) number</label>
-    <input type="text" name="v5c_number" id="v5c_number" placeholder="V5CXXX" class="long-input" required />
+  <div class="group">
+    <div class="form-column">
+      <label for="v5c_number">Log book (V5C) number</label>
+      <input type="text" name="v5c_number" id="v5c_number" class="long-input" required />
+    </div>
     
-    <div class="help">
-      <img src="assets/img/v5c-cover.jpg" alt="Cover of log book (V5C)" />
-      You will find this on page one of your log book
+    <div class="form-help">
+      <img src="http://placehold.it/120x170" alt="Cover of log book (V5C)" />
+      You will find this on the first page of your log book
     </div>
   </div>
 
-  <div class="form-column">
-    <label for="vrm_number">Number plate</label>
-    <input type="text" name="vrm_number" id="vrm_number" placeholder="ABC1 457X" class="long-input" required />
+  <div class="group">
+    <div class="form-column">
+      <label for="vrm_number">Number plate</label>
+      <input type="text" name="vrm_number" id="vrm_number" class="long-input" required />
+    </div>
     
-    <div class="help">
-      <img src="assets/img/car-licence-plate.jpg" alt="Photo showing a car licence plate" />
+    <div class="form-help">
+      <img src="http://placehold.it/240x170" alt="Photo showing a car licence plate" />
       This is also known as a vehicle registration mark
     </div>
 
@@ -48,6 +52,6 @@ css: assets/css/styles.css
 </form>
 
 <div class="buttons">
-  <a href="4.html" class="medium buttonV2 turquoise"><span>Look up vehicle</span></a>
+  <a href="4.html" class="medium buttonV2 turquoise"><span>Check vehicle details</span></a>
 </div>
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Buy a tax disc
+title: Apply for a tax disc
 categories: Service
 section_class: tax-disc
 css: assets/css/styles.css
@@ -17,24 +17,26 @@ css: assets/css/styles.css
   </li>
 </ol>
 
-<h2>Identify your vehicle</h2>
+<h2>Find your vehicle</h2>
 
 <form action="">
-  <div class="form-column">
-    <label for="v11_reference">Please enter your reference number below</label>
-    <input type="text" name="v11_reference" id="v11_reference" class="long-input" value="" />
-	</div>
-
-  <details>
-  	<summary>Where's my reference number?</summary>
-  	<a href="assets/img/v11.jpeg"><img id="v11image" src="assets/img/v11.jpeg" /></a>
-  	<p>Its on the reminder letter or email that we send out when your tax disc is due for renewal.<p>
-  	<p>If you didn't get one of these you can still buy your tax disc online by providing us with
-  		your <a href="2b.html">car registration and log-book number instead</a></p>
-  </details>
+  <div class="group">
+    <div class="form-column">
+      <label for="v11_reference">Enter the reference number on your V11 form</label>
+      <input type="text" name="v11_reference" id="v11_reference" class="long-input" value="" required />
+    </div>
+    
+    <div class="form-help">
+      <img src="http://placehold.it/120x170" alt="Example of a V11 form with reference number highlighted" />
+      This 16 digit number can be found in the Top Right corner of the form.
+    </div>
+  </div>
+  
+  <div>Haven’t received a V11 form? <a href="2b.html">Use your V5C and number plate details</a></div>
 
   <div class="buttons">
-    <a href="4.html" class="medium buttonV2 turquoise"><span>Look up vehicle</span></a>
+    <a href="4.html" class="medium buttonV2 turquoise"><span>Check Vehicle Details</span></a>
   </div>
+
 </form>
 

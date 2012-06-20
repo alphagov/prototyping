@@ -20,21 +20,23 @@ css: assets/css/styles.css
 
 <h2>Your order has been confirmed</h2>
 
-<table class="car_tax_details">
+<table class="car_tax_receipt">
   <thead>
     <tr>
       <th>Details</th>
-      <th>Price</th>
+      <th class="currency">Price</th>
     </tr>
   </thead>
   
   <tbody>
     <tr>
       <td>
-        <p>Blue Ford Focus <span class="car_reg">A17 9QT</span></p>
-        <p>6 months tax expires 30/06/2012</p>
+        Ford (Diesel)<br />
+        <span class="car_reg">A17 9QT</span><br />
+        6 months tax expires 31/12/2012
       </td>
-      <td class="currency numeric">&pound;467.00</td>
+      
+      <td class="currency numeric">&pound;68.75</td>
     </tr>
     
     <tr>
@@ -42,17 +44,21 @@ css: assets/css/styles.css
       <td class="currency numeric">&pound;2.50</td>
     </tr>
     
-    <tr>
+    <tr class="total">
       <th scope="row">Total</th>
-      <td class="currency numeric total">&pound;469.50</td>
+      <td class="currency numeric total">&pound;71.25</td>
     </tr>
   </tbody>
 </table>
 
+<p>Your tax disc will be posted to the registered address for your vehicle. You should receive the tax disc in five working days.</p>
 
 <h2>What next?</h2>
 
-<p>Why not set up an email alert to remind you to renew you tax disc next time?</p>
-
-<a href="1.html"><img class="sketch" src="assets/img/sketches/8.jpg" /></a>
-
+<ul class="next-steps">
+  <li><a href="1.html">Buy a tax disc for another vehicle</a></li>
+  <li><a href="#">Why not set up an email alert to remind you to renew you tax disc next time?</a></li>
+  <li><a href="#">Renew an existing or apply for a new passport</a></li>
+  <li><a href="#">Apply for tax credits</a></li>
+  <li><a href="#">Something else</a></li>
+</ul>

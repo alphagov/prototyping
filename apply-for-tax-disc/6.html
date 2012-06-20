@@ -33,7 +33,7 @@ css: assets/css/styles.css
     <div class="tax-option">
       <label for="twelve_months">
         <input id="twelve_months" type="radio" name="tax_type" value="twelve_months" checked="checked" /> 12 Months
-        <div class="car_tax">&pound;120.00</div>
+        <div class="car_tax">&pound;125.00</div>
         <div class="note">
           Expires 31/06/2013<br />
           <small><em>Save 10% when you pay for 12 months.</em></small>
@@ -62,15 +62,15 @@ css: assets/css/styles.css
       </div>
     </div>
     
-     <div class="help-notice">Using a credit card incurs a &pound;2.50 surcharge</div>
+     <div class="info-notice">To cover charges made by credit card companies, a &pound;2.50 surcharge is applied to credit card payments made online or by phone. Debit card and cash payments made online, over the phone or at a post office carry no additional charge.</div>
 
     <div class="group">
-      <div class="form-column">
+      <div class="form-row">
         <label for="card_number">Card Number</label>
         <input id="card_number" type="text" name="card_number" value="" class="long-input" />
       </div>
       
-      <div class="form-column">
+      <div class="form-row">
         <label for="expiry_date_month">Expiry Date</label>
         <select name="expiry_date_month" id="expiry_date_month" class="month-select">
           <option value="01">01</option>
@@ -99,7 +99,7 @@ css: assets/css/styles.css
     </div>
     
     <div class="group hide" id="solo_maestro_only">
-      <div class="form-column">
+      <div class="form-row">
         <label for="start_date_month">Start Date</label>
         <select name="start_date_month" id="start_date_month" class="month-select">
           <option value="01">01</option>
@@ -126,19 +126,19 @@ css: assets/css/styles.css
         </select>
       </div>
       
-      <div class="form-column">
+      <div class="form-row">
         <label for="issue_no">Issue Number</label>
         <input id="issue_no" type="text" name="issue_no" value="" class="short-input" />
       </div>
     </div>
 
-    <div class="form-column">
+    <div class="form-row">
       <label for="security_code">Security Code</label>
       <input id="security_code" type="text" name="security_code" value="" class="short-input">
       <span class="help">The security code is the 3 digit number found on the reverse of your card</span>
     </div>
     
-    <div class="form-column">
+    <div class="form-row">
       <h4>Would you like a confirmation email?</h4>
       <label for="email_address">Email Address</label>
       <input id="email_address" type="email" name="email_address" value="" />
@@ -148,6 +148,6 @@ css: assets/css/styles.css
   
   <div class="buttons">
     <a class="buttonV2 medium turquoise" href="7.html"><span>Confirm Payment</span></a>
-    <a class="buttonV2 medium grey" href="2a.html"><span>Change vehicle details details</span></a>
+    <a class="back" href="2a.html"><span>Change vehicle details</span></a>
   </div>
 </form>

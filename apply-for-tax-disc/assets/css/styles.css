@@ -65,6 +65,15 @@
 	background-position:0 0;
 }
 
+.column {
+  width: 50%;
+  float: left;
+}
+
+.start {
+  text-align: right;
+}
+
 
 /* ==================================================
  * Price Options 
@@ -153,15 +162,28 @@
  * General Form
  * ================================================== */
 
-.form-column {
-/*
-  width: 50%;
-  float: left;
-*/
+.form-row {
   margin-bottom: 1em;
 }
 
-.form-column label {
+.form-column {
+  width: 50%;
+  margin-bottom: 1em;
+  float: left;
+}
+
+.form-help {
+  width: 50%;
+  float: right;
+}
+
+.form-help img {
+  float: left;
+  margin: 0 10px 10px 0;
+  display: block;
+}
+
+.form-column label, .form-row label {
   display: block;
 }
 
@@ -172,6 +194,36 @@
 .buttons {
   border-top: 1px solid #999;
   margin-top: 1.6rem; padding-top: 1.6rem;
+}
+
+/* ==================================================
+ * Tables
+ * ================================================== */
+
+.car_tax_receipt td, .car_tax_receipt th {
+  border: none;
+  font-size: 1.6rem;
+}
+
+.car_tax_receipt thead th {
+  border-right: 2px solid #fff;
+  background-color: #999;
+}
+
+.car_tax_receipt td, .car_tax_receipt tr:nth-child(even) td {
+  vertical-align: bottom;
+  background-color: transparent;
+}
+
+td.currency, th.currency {
+  text-align: right;
+}
+
+tr.total td, tr.total th {
+  background-color: transparent;
+  border-top: 2px solid #999;
+  color: #333;
+  font-weight: bold;
 }
 
 /* ==================================================
@@ -200,6 +252,10 @@
 }
 
 /* Results table for car lookup */
+.equal-width {
+  width: 50%;
+}
+
 .car_reg,
 .car_tax{
 	padding: 0 0.2em;
@@ -217,6 +273,7 @@
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	box-shadow: 2px 2px 1px rgba(100, 100, 100, 0.8);
+	line-height: 4.8rem;
 }
 
 .car_tax{
@@ -224,6 +281,7 @@
  color: #fff;
  font-weight: normal;
  width: 11em;
+ line-height: 4.8rem;
 }
 
 .car_tax_details{
