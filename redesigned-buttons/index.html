@@ -23,7 +23,18 @@ html {
 
 
 
-/* BUTTONS */
+/* BUTTONS —
+
+This CSS was written for prototyping purposes only 
+so likely needs refactoring for use in production
+
+Would be good to refactor without a need for the <span> 
+within the <a>
+
+We also need need to apply these styles to form input/s
+
+*/
+
 
 .button,.button:visited {		
 	display: inline-block;
@@ -69,9 +80,9 @@ html {
 /* BUTTON COLOURS */
 
 .black {
-	-webkit-box-shadow:0 4px 0 #000,0 8px 10px rgba(0,0,0,.05);
-	-moz-box-shadow:0 4px 0 #000, 0 8px 10px rgba(0,0,0,.05);
-	box-shadow: 0 4px 0 #000, 0 8px 10px rgba(0,0,0,.05);
+	-webkit-box-shadow:0 3px 0 #000,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 3px 0 #000, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 3px 0 #000, 0 8px 10px rgba(0,0,0,.05);
 }
 
 .black.small {
@@ -91,9 +102,9 @@ html {
 
 
 .grey {
-	-webkit-box-shadow:0 4px 0 #999,0 8px 10px rgba(0,0,0,.05);
-	-moz-box-shadow:0 4px 0 #999, 0 8px 10px rgba(0,0,0,.05);
-	box-shadow: 0 4px 0 #999, 0 8px 10px rgba(0,0,0,.05);
+	-webkit-box-shadow:0 3px 0 #999,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 3px 0 #999, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 3px 0 #999, 0 8px 10px rgba(0,0,0,.05);
 }
 
 .grey.small {
@@ -113,9 +124,9 @@ html {
 
 
 .turquoise {
-	-webkit-box-shadow:0 4px 0 #1C7568,0 8px 10px rgba(0,0,0,.05);
-	-moz-box-shadow:0 4px 0 #1C7568, 0 8px 10px rgba(0,0,0,.05);
-	box-shadow: 0 4px 0 #1C7568, 0 8px 10px rgba(0,0,0,.05);
+	-webkit-box-shadow:0 3px 0 #1C7568,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 3px 0 #1C7568, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 3px 0 #1C7568, 0 8px 10px rgba(0,0,0,.05);
 }
 
 .turquoise.small {
@@ -135,9 +146,9 @@ html {
 
 
 .red {
-	-webkit-box-shadow:0 4px 0 #9B0B20,0 8px 10px rgba(0,0,0,.05);
-	-moz-box-shadow:0 4px 0 #9B0B20, 0 8px 10px rgba(0,0,0,.05);
-	box-shadow: 0 4px 0 #9B0B20, 0 8px 10px rgba(0,0,0,.05);
+	-webkit-box-shadow:0 3px 0 #9B0B20,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 3px 0 #9B0B20, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 3px 0 #9B0B20, 0 8px 10px rgba(0,0,0,.05);
 }
 
 .red.small {
@@ -184,21 +195,21 @@ html {
 }
 
 .medium span {
-	padding: 5px 9px;
+	padding: 5px 13px;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 18px;
-	font-size: 1.8rem;
+	font-size: 17px;
+	font-size: 1.7rem;
 	font-weight: 200;
 	letter-spacing: 0.1px;
 	background-image: none;
 }
 
 .small span {
-	padding: 4px 7px;
+	padding: 4px 9px;
 	padding-top:4px;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	font-size: 1.4rem;
+	font-size: 15px;
+	font-size: 1.5rem;
 	font-weight: 200;
 	letter-spacing: 0.1px;
 	background-image: none;
@@ -292,6 +303,8 @@ hr {
 
 
 
+
+
 <h2>Medium/small turquoise</h2>
 <hr>
 <p>Continuing through a series of steps in a transaction/service.</p>
@@ -364,7 +377,16 @@ hr {
 
 
 
+<h2>Form inputs as yet unstyled</h2>
+<hr>
 
+<input type="submit" value="Search" class="">
+
+<div class="space"></div>
+
+<input type="submit" value="Find" class="">
+
+<div class="space"></div>
 
 
 
