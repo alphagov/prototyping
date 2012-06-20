@@ -409,7 +409,14 @@ ol.transaction-step-indicator {
 	padding: 0em 2em 0em 5em;
 }
 
+/* Complate */
 .transaction_complete {
     text-align:center;
     padding-bottom:1.5em;
+}
+
+/* Payment */
+#cartax_payment h2 {
+    border-bottom:solid 1px #999;
+    padding-bottom:0.5em;
 }
