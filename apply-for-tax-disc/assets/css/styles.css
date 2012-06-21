@@ -33,6 +33,7 @@
   line-height: 1.05em;
   padding: 0.4rem 6.5rem 2.5rem 7.25rem ;
   margin: 0;
+  border-bottom:solid 1px #ccc!important;
 }
 .lte-ie8 #wrapper.tax-disc header.page-header hgroup h2 {
   height: 1%;
@@ -460,6 +461,9 @@ ol.transaction-step-indicator {
 	text-align:center;
 }
 
+.transaction-step-indicator {
+    position:absolute; top:-5.5em; right:1em;
+}
 
 /*
 .transaction-step-indicator {
@@ -516,3 +520,5 @@ ol.transaction-step-indicator {
     border-bottom:solid 1px #999;
     padding-bottom:0.5em;
 }
+
+article .inner {padding:0 2em 2em 2em;}
