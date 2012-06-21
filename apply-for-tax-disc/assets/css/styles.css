@@ -283,6 +283,12 @@ tr.total td, tr.total th {
   font-weight: bold;
 }
 
+tr.subtotal td, tr.subtotal th {
+  background-color: transparent;
+  border-top: 1px solid #999;
+  color: #333;
+}
+
 /* ==================================================
  * Tim's styles 
  * ================================================== */
@@ -521,4 +527,18 @@ ol.transaction-step-indicator {
     padding-bottom:0.5em;
 }
 
-article .inner {padding:0 2em 2em 2em;}
+/* Next steps */
+div.next-steps  {
+    border:solid 1px #ccc;
+    background:#f9f9f9;
+    padding-left:2em;
+}
+
+
+article .inner {
+    padding:0 2em 2em 2em;
+}
+
+.transaction_complete {
+    padding-bottom:1em;
+}
