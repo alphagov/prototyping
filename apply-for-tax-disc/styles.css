@@ -31,13 +31,11 @@
 	display: block;
 	font-weight: bold;
 	font-size: 3rem;
-	text-align: center;
-	width: 5em;
+	/*width: 5em;*/
 	margin: 0.5em auto 0.5em auto;
 }
-.car_reg h3,
-.car_tax h3{
-	margin: 0;
+article .car_tax_details h3{
+	margin-top: 0;
 }
 
 .car_reg{
@@ -48,18 +46,15 @@
 	box-shadow: 2px 2px 1px rgba(100, 100, 100, 0.8);
 }
 
-.car_tax{
+.car_tax{/*
  background-color:#d53880;
  color: #fff;
- font-weight: normal;
+ font-weight: normal;*/
 }
 
-.car_tax_details{
-	text-align: center;
-}
-
-.article table tr th{
-	text-align: center;
+.car_tax_details,
+article .car_tax_details tr th{
+	/*text-align: center;*/
 }
 
 .car_tax_details td{
