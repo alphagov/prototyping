@@ -1,41 +1,48 @@
 ---
-layout: tax-disc
-title: Apply for a tax disc
-categories: Service
-section_class: tax-disc
-css: assets/css/styles.css
-step: 1
+layout: buy-a-tax-disc
+title: Buy a tax disc
+categories: service
 ---
 
-<h1>Is this the vehicle you want to tax?</h1>
+<ol class="transaction-step-indicator">
+    <li class="current">
+        <span class="transaction-step-number">1</span>Details
+    </li>
+    <li class="">
+        <span class="transaction-step-number">2</span>Pay
+    </li>
+    <li class="">
+        <span class="transaction-step-number">3</span>Done
+    </li>
+</ol>
 
-<table class="car_tax_details">
-	<tr>
-		<th class="equal-width">Vehicle details</th>
-		<th class="equal-width">Tax status</th>
-	</tr>
-	<tr>
-		<td>
-		  <h3>Ford (Diesel)</h3>
-		  <p>Registration number<br />
-		  <span class="car_reg">A17 9QT</span>
-		  </p>
-	  </td>
-	  <td>
-	  	<h3>Taxed until 30 June 2012</h3>
-	  	<p>The annual tax for this vehicle is<br />
-  	  	<span class="car_tax">£125.00</span>
-	    </p>
-	  </td>
-	</tr>
-</table>
+<h2>Is this the right vehicle?</h2>
 
-<div class="buttons">
-  <a href="5.html" class="medium buttonV2 turquoise"><span>Proceed to payment *</span></a>
-  <a class="back" href="2a.html"><span>Re-enter reference number</span></a>
-	<a class="back" href="2a.html"><span>These details are incorrect</span></a>
-	<p><small>* we will check electronically whether your vehicle has its MOT and is insured</small></p>
+<div class="vehicle">
+<div class="reg">
+	<p>Registration number</p>
+	<strong>A17 9QT</strong>
 </div>
+<div class="details">
+	<ul>
+		<li>Ford</li>
+		<li>Diesel car</li>
+		<li>Currently licenced for road use</li>
+	</ul>
+	<a href="#">Incorrect details?</a>
+	<!--
+	<details>
+			<summary>Wrong details?</summary>
+			<p><a href="#">Find out how to correct them</a></p>
+	</details>
+-->
+</div>
+</div>
+
+<!--<p>The disc that you are about to buy will start on 1 July 2012</p>-->
+
+<a href="5.html" class="large buttonV2 turquoise"><span>Yes, continue</span></a>
+<a class="back" href="2a.html">Back</a>
 
 <!--
 <a href="5.html"><img class="sketch" src="images/sketches/4.jpg" /></a>

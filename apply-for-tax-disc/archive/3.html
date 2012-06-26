@@ -1,0 +1,21 @@
+---
+layout: tax-disc
+title: Apply for a tax disc
+categories: Service
+section_class: tax-disc
+css: assets/css/styles.css
+step: 1
+---
+
+<div id="waiting_message">
+	<p>Retreiving vehicle details&hellip;</p>
+</div>
+
+
+<!-- http://fgnass.github.com/spin.js/ -->
+<script src="assets/js/spin.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var target = document.getElementById('waiting_message');
+var spinner = new Spinner().spin(target);
+setTimeout("window.location = '4.html'",4000);
+</script>

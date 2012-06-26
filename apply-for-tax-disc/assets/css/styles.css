@@ -1,134 +1,210 @@
+
 @import url("button-styles.css");
 
-/* ==================================================
- * Overwrite default styles
- * ================================================== */
-
-/*
-  page headers
-*/
-
-#wrapper.tax-disc header.page-header hgroup {
-  border-color: #2DA096;
-  margin-right: 0;
+/* Temporary sketch images */
+.sketch{
+	width: 100%;
 }
 
-#wrapper.tax-disc header.page-header hgroup h1 span,
-#wrapper.tax-disc header.page-header hgroup h2 span {
-  /*
-    new colour should be added to the palette
-    this version is much more contrast-friendly than #2DA096
-  */
-  color: #227770;
+/* =================================
+ * Landing page
+ * ================================= */
+
+.intro{
+	margin-top: 2em;
+}
+.get-started-intro h3{
+	margin-top: 0;
 }
 
-#wrapper.tax-disc header.page-header hgroup h2 {
-/*  background-position: 0 2px;*/
-  background-repeat: no-repeat;
-  color: #000;
-  font-family: 'Gill Sans W01 Medium', sans-serif;
-  font-size: 2rem;
-  font-weight: normal;
-  letter-spacing: 0.025em;
-  line-height: 1.05em;
-  padding: 0.4rem 6.5rem 2.5rem 7.25rem ;
-  margin: 0;
-  border-bottom:solid 1px #ccc!important;
-}
-.lte-ie8 #wrapper.tax-disc header.page-header hgroup h2 {
-  height: 1%;
+/* Product image (ie. a tax disc)*/
+.product_image{
+	/*float: right;
+	height: 7em;
+	width: 7em;
+	margin: -6em -3em 1em 3em;*/
+	float: left;
+	height: 5em;
+	width: 5em;
+	margin: -0.5em 1.3em 2em 0;
 }
 
-#wrapper.tax-disc header.page-header hgroup h2 {
-  background-position: 0 9px;
+/* product owner (ie. DVLA)*/ 
+.product_owner{
+	background: url(../assets/img/DVLA_logo.png) no-repeat right center;
+	float: right;
+	height: 45px;
+	width: 80px;
+	font-size: 1em;
+	margin: 1em -0.5em 0 0;
+	text-indent: -9999px;
 }
 
-#wrapper.tax-disc header.page-header hgroup h2 span {
-  display: block;
-  font-size: 1.4rem;
-  letter-spacing: 0.15em;
-  line-height: 1em;
-  margin-bottom: 0.5em;
-  text-transform: uppercase;
-  text-shadow: none;
+/* Footnote style */
+.footnote{
+	font-style: italic;
+	font-size: 1em;
+	color: #666;
+	margin-top: 2em;
 }
 
-#wrapper.tax-disc header.page-header hgroup h1,
-#wrapper.tax-disc header.page-header hgroup h2 {
-  background-image: url(https://static.production.alphagov.co.uk/images/icon-service-l.png);
+.card_images .footnote{
+	margin-top: -1em;
 }
 
-#wrapper.tax-disc .article-container {
-  margin-right: 0;
+.service_info{
+	padding-bottom: 2em;
+}
+.service_info details{
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+.service_info details p{
+	padding-bottom: 0.5em;
+}
+.service_info summary{
+	padding: 0;
+}
+/* ======================
+ * Don't proceed message
+ * ======================
+ */
+
+.dont_proceed{
+	float: right;
+	background-color: #f2f2f2;
+	/*margin: 0 -1em 1em -1em;*/
+	margin: 0 0em 1em 0em;
+	padding: 0.5em;
+}
+.dont_proceed h3,
+.dont_proceed p,
+.dont_proceed summary{
+	margin: 0;
+	font-size: 1em;
+}
+.dont_proceed ul{
+	margin-bottom: 0;
+}
+.dont_proceed li{
+	list-style-type: none;
 }
 
-section#content {
-  position: relative;
+/* =================================
+ * Enter V11 number
+ * ================================= */
+
+/* Image of the V11 form */
+#v11image{
+	width: 109px;
+	float: right;
+	margin: 0.4em 0 0 1em;
+}
+#v11 {
+	margin-bottom: 1em;
+}
+#v11 input,
+.jumbo{
+	font-size: 3rem;
+	width: 12em;
+	letter-spacing: 0.5rem;
+	margin: 0;
+	height: 30px;
 }
 
-#wrapper.tax-disc article h1 {
-  margin-top: 0;
-  font-size: 3.6rem;
+#v11 .buttonV2{
+	margin-top: -2.8em;
+	margin-right: 2.4em;
+	display: block;
+	float: right;
+	height: 39px;
+}
+#v11 .buttonV2 span{
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
 }
 
-/* ==================================================
- * Homepage – You Will Need 
- * ================================================== */
-
-.you-will-need-row {
-	padding:1.6rem 1.6rem 1.6rem 6.4rem;
-	border-bottom:1px solid #ccc;
-	font-size:1.6rem;
-	font-weight:bold;
+#v5c .footnote{
+	width: 18em;
+	float: right;
+	margin: -6.8em 2em 0 0;
+}
+#v5c img{
+	float: left;
+	margin-right: 0.5em;
 }
 
-.you-will-need-further {
-	font-weight:normal;
-	font-size:1.6rem;
+#vrm_number{
+	width: 5em;
+}
+#v5c_number{
+	width: 8em;
 }
 
-.you-will-need .header {
-	padding:1.6rem;
-	font-size:1.9rem;
-	font-weight:bold;
+/* =================================
+ * Check vehicle details
+ * ================================= */
+
+.reg {
+	width: 15em;
+}
+.reg strong{
+	text-align: center;
+	color: #000;
+	font-weight: bold;
+	font-size: 4rem;
+	line-height: 1.5em;
+	margin: 0 auto;
+	padding: 0 0.4em;
+	background-color: #fbe712;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	width: 5em;
+}
+.vehicle{
+	overflow: auto;
+	padding: 1em 0;
+	width: 100%;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	margin: 0 0 1em 0;
+}
+.vehicle div{
+	float: left;
+}
+.vehicle h3{
+	margin: 0;
+}
+.vehicle .details{
+	background: #f2f2f2;
+	padding: 0.5em;
+	width: 19em;
+}
+.vehicle .details ul{
+	margin: 0 0 0 -1em;
+}
+.vehicle .details details{
+	font-size: 1em;
+	margin: 0 -0.5em;
+	padding: 0 0 0 0.75em;
+}
+.vehicle .details a{
+	margin-left: 1.4em;
 }
 
-.you-will-need .time {
-	background-image:url('../img/time-icon.png');
-	background-repeat:no-repeat;
-	background-position:0 0;
-}
+/* ======================
+ * Wating message
+ * ======================
 
-.you-will-need .nino {
-	background-image:url('../img/nino-icon.png');
-	background-repeat:no-repeat;
-	background-position:0 0;
-}
+ * Uses spin.js to embed 'spinner' image into element
+ * http://fgnass.github.com/spin.js/ 
+ */
 
-.you-will-need .full-address {
-	background-image:url('../img/address-icon.png');
-	background-repeat:no-repeat;
-	background-position:0 0;
+#waiting_message{
+	height: 10em;
+	text-align: center;
 }
-
-.column {
-  width: 50%;
-  float: left;
-}
-
-.start {
-  margin: 5.4rem 2rem 0 2rem;
-  padding: 2rem;
-  background-color: #d5ecea;
-  
-  text-align: center;
-}
-
-.start img {
-  display: block;
-  margin: 0 auto 1.6rem;
-}
-
 
 /* ==================================================
  * Price Options 
@@ -137,7 +213,6 @@ section#content {
 .tax-option {
   width: 48%;
   margin-right: 4%;
-  
   float: left;
 }
 
@@ -146,41 +221,53 @@ section#content {
 }
 
 .tax-option label {
+	border: 4px solid #fff;
   display: block;
-  width: 80%; height: 100%;
-  padding: 10%;
+  padding: 0.5em 1em;
   
   text-align: center;
   font-size: 2rem;
   
   color: #333;
-  background-color: #C4CACB;
-  
-  -webkit-transition: background-color 0.2s ease;
-  -moz-transition: background-color 0.2s ease;
-  -o-transition: background-color 0.2s ease;
-  transition: background-color 0.2s ease;
+  background-color: #f2f2f2;
   
   cursor: pointer;
 } 
 
 .tax-option label:hover {
-  background-color: #e1e8e8;
+  background-color: #ccc;
 }
 
 .tax-option input {
   margin-right: 5px;
 }
 
+.tax-option input:checked+label{ 
+	font-weight: bold;
+	border: 4px solid #28A197;
+  background-color: #e1e8e8;
+}
+.tax-option input:checked+label{ 
+
+}
+
 .tax-option .car_tax {
   width: auto;
-  margin: 0.5em auto;
-  padding: 0.5em;
+  margin: 0.1em 0;
+	text-align: center;
+  color: #28A197;
+	font-size: 5rem;
+  /*font-weight: bold;*/
+  line-height: 1em;
 }
 
 .tax-option small {
   display: block;
   margin-bottom: -2.4rem;
+}
+
+.note{
+	font-size: 0.8em;
 }
 
 /* ==================================================
@@ -215,167 +302,87 @@ section#content {
   margin: 0 auto;
 }
 
-/* ==================================================
- * General Form
- * ================================================== */
-
-.form-row {
-  margin-bottom: 1em;
+.card_images{
+	display: inline-block;
+	line-height: 4em;
+	height: 2em;
+	margin: -1em 0 0 0.5em;
+}
+.card_images img{
+	width: 2em;
+	margin-top: 0.5em;
 }
 
-.form-column {
-  width: 50%;
-  margin-bottom: 1em;
-  float: left;
+.form-row{
+	margin-bottom: 2em;
 }
 
-.form-help {
-  width: 50%;
-  float: right;
+.card_codes{
+	width: 3em;
 }
 
-.form-help img {
-  float: left;
-  margin: 0 10px 10px 0;
-  display: block;
+#payment_details label{
+	width: 7em;
+}
+#payment_details .form-row{
+	overflow: hidden;
+	margin-bottom: 1em;
+
 }
 
-.form-column label, .form-row label {
-  display: block;
+#payment_details{
+	margin-bottom: 2em;
+}
+#payment_details input,
+#payment_details label{
+	float: left;
+	margin-bottom: 0;
 }
 
-.short-input {
-  width: 8rem;
+.whats_this{
+	display: inline-block;
+	padding: 0 0 0 1em;
+	width: 27em;
+	font-size: 0.8em;
+}
+.whats_this[open]{
+	background-color: transparent;
 }
 
-.buttons {
-  border-top: 1px solid #999;
-  margin-top: 1.6rem; padding-top: 1.6rem;
+.whats_this summary::-webkit-details-marker {
+  display: none
+}
+.whats_this summary{
+	margin-top: 0.25em;
 }
 
-/* ==================================================
- * Tables
- * ================================================== */
-
-.car_tax_receipt td, .car_tax_receipt th {
-  border: none;
-  font-size: 1.6rem;
-}
-
-.car_tax_receipt thead th {
-  border-right: 2px solid #fff;
-  background-color: #999;
-}
-
-.car_tax_receipt td, .car_tax_receipt tr:nth-child(even) td {
-  vertical-align: bottom;
-  background-color: transparent;
-}
-
-td.currency, th.currency {
-  text-align: right;
-}
-
-tr.total td, tr.total th {
-  background-color: transparent;
-  border-top: 2px solid #999;
-  color: #333;
-  font-weight: bold;
-}
-
-tr.subtotal td, tr.subtotal th {
-  background-color: transparent;
-  border-top: 1px solid #999;
-  color: #333;
-}
-
-/* ==================================================
- * Tim's styles 
- * ================================================== */
-
-/* Temporary sketch images */
-.sketch{
-	width: 100%;
-}
-
-/* Product image (ie. a tax disc)*/
-.product_image{
-	height: 10em;
-	width: 10em;
-}
-
-/* Footnote style */
-.footnote{
-	font-style: italic;
-	font-size: 1em;
-	color: #aaa;
-	margin-top: 2em;
-}
-
-/* Results table for car lookup */
-.equal-width {
-  width: 50%;
-}
-
-.car_reg,
-.car_tax{
-	padding: 0 0.2em;
-	color: #000;
-	font-weight: bold;
-	font-size: 3rem;
-	text-align: center;
-	width: 5em;
-	margin: 0 auto 0.5em auto;
-}
-
-.car_reg{
-/* 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fbe712), color-stop(100%,#d3c100)); */
-  background: #ffbf47;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-/* 	box-shadow: 2px 2px 1px rgba(100, 100, 100, 0.8); */
-	line-height: 4.8rem;
-}
-
-.car_tax{
- background-color: #28A197;
- color: #fff;
- font-weight: normal;
- width: 11em;
- line-height: 4.8rem;
-}
-
-.car_tax_details{
-	text-align: center;
-}
-
-.article table tr th{
-	text-align: center;
-}
-
-.car_tax_details td{
-	padding: 1em;
-}
-.car_tax_details td p{
-	margin-top: 0;
-}
-
-
-/* Image of the V11 form */
-#v11image{
-	width: 130px;
-	float: right;
-	margin: -1em 0 0 3em;
-}
+/* ======================
+ * FORM STYLES
+ * ====================== */
 
 /* text input field */
-/*
-input[type=text]{
+input[type=text],
+input[type=email]{
 	display: block;
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
+	border: 1px solid #CDCDCD;
+	background-color: #F2F2F2;
+	padding: 0.2em 0.2em;
 }
-*/
+
+details input[type=text]{
+	background-color: #fff;
+}
+
+article label {
+  font-size: 112.5%;
+  /*
+  font-weight: bold;
+	color: #666;
+	*/
+  margin-bottom: 0.5em;
+  display: block;
+}
 
 /* Back button */
 .back{
@@ -387,42 +394,37 @@ input[type=text]{
  * Simple Inline Expansion
  * ================================================== */
 
- /* A styled-up version of the details/summary HTML5 elements */
+ /* A styled-up version of the details/summary HTML5 elements
+  * For the benefits or otherwise of details/summary, see:
+  * http://html5doctor.com/the-details-and-summary-elements/
+  * http://mathiasbynens.be/notes/html5-details-jquery
+  */
 
 details{
-	margin: 0 -1em 1em -1em;
-	padding: 0.7em 1em;
+	margin:  0 -1em 1em -1em;
+	padding: 0.7em 1em 1em 1em;
 }
 details summary{
-	cursor: pointer;
-	margin-top: 0;
-	font-size: 112.5%;
-}
-
-/* Closed state */
-details:not(.open){
-	padding-bottom: 0;
-}
-details:not(.open) summary{
-	/* Display element in standard link style */
 	color: #2E3191;
+	cursor: pointer;
+	font-size: 112.5%;
 	display: inline;
-	margin-bottom: 1em;
 	text-decoration: underline;
 }
-details:not(.open) summary:hover{
+details summary:hover{
   color: #1D97FF;
 }
 
 /* Open state */
-details.open{
+details[open]{
 	background-color: #f2f2f2;
 }
-details.open summary{
+details[open] > summary{
+  color: #000;
   font-weight: bold;
+  text-decoration: none;
 }
-
-summary:focus{
+details summary:focus{
 	outline: none;
 }
 
@@ -432,7 +434,6 @@ summary:focus{
  * ================================================== */
 
  /* Taken from ERTP prototype */
-
 
 ol.transaction-step-indicator {
 	list-style-type: none;
@@ -467,64 +468,60 @@ ol.transaction-step-indicator {
 	text-align:center;
 }
 
-.transaction-step-indicator {
-    position:absolute; top:-5.5em; right:1em;
+.transaction-content {
+	background-color: white;
+	padding: 0em 2em 0em 5em;
 }
 
-/*
-.transaction-step-indicator {
-	list-style-type: none;
-	display: block;
-	
-	font-size:1.6rem;
-	line-height: 4rem;
-	
-	padding:0;
-	margin:0;
-	
+/* ==================================================
+ * Tables
+ * ================================================== */
+
+.car_tax_receipt td, .car_tax_receipt th {
+  border: none;
+  font-size: 1.6rem;
+}
+
+.car_tax_receipt thead th {
+  border-right: 2px solid #fff;
+  /*background-color: #999;*/
+}
+
+.car_tax_receipt td, .car_tax_receipt tr:nth-child(even) td {
+  vertical-align: bottom;
+  background-color: transparent;
+}
+
+td.currency, th.currency {
+  text-align: right;
+}
+
+tr.total td, tr.total th {
+  background-color: transparent;
+  border-top: 2px solid #999;
+  color: #333;
+  font-weight: bold;
+  text-align: right;
+}
+tr.total th:after{
+	content: ":";
+}
+
+tr.subtotal td, tr.subtotal th {
+  background-color: transparent;
+  border-top: 1px solid #999;
+  color: #333;
+}
+
+.edit_order{
 	position: absolute;
-	top: 2rem; right: 1.6rem;
+	margin-top: -3em;
+	margin-left: 0.5em;
 }
 
-.transaction-step-indicator>li {
-  display: block;
-  width: 12rem; height: 4rem;
-  
-  float: left;
-  
-  background: #E8EBD9 url(../img/progress-sprite.png) 100% 0 no-repeat;
-  border: 1px solid #D2DFD5;
-  border-width: 1px 0;
-}
-
-.transaction-step-indicator>li:first-child { border-radius: 4px 0 0 4px; border-width: 1px 0 1px 1px; }
-.transaction-step-indicator>li:last-child { border-radius: 0 4px 4px 0; background-image: none; border-width: 1px 1px 1px 0; }
-
-.transaction-step-indicator>li.current {
-  background-color: #91B097;
-  border-color: #778F7B;
-  background-position: 100% 100%;
-}
-
-.transaction-step-number {
-  display: inline-block;
-  width: 1.9rem; height: 1.9rem;
-
-  background-color: #fff;
-  
-	text-align:center;
-	font-size: 1.2rem;
-	line-height: 2rem;
-	
-	border-radius: 1rem;
-	margin-right: 5px;
-}
-*/
-
-/* Payment */
-#cartax_payment h2 {
-    border-bottom:solid 1px #999;
-    padding-bottom:0.5em;
+#email_confirmation h3{
+	font-weight: normal;
+	margin: 0 0 0.5em 0;
 }
 
 /* Next steps */
@@ -533,12 +530,34 @@ div.next-steps  {
     background:#f9f9f9;
     padding-left:2em;
 }
-
-
-article .inner {
-    padding:0 2em 2em 2em;
+div.next-steps h2{
+	border-bottom: 0;
 }
 
-.transaction_complete {
-    padding-bottom:1em;
-}
+/* ==================================================
+ * Buttons
+ * ================================================== */
+
+ .button_row{
+ 	/*padding-top: 0.5em;
+ 	border-top: 1px solid #c1cacb;*/
+ }
+
+/* ==================================================
+ * Overwritten basic styles
+ * ================================================== */
+
+ h2{
+ 	border-bottom: 1px solid #c1cacb;
+ 	padding-bottom: 0.5em;
+ }
+
+ hr{
+ 	border: solid #DDD;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 2em 0;
+  height: 0;
+ }
+
+
