@@ -20,6 +20,7 @@
 
 }
 
+h1 span {font-family: NTA, 'Gill Sans W01 Medium', sans-serif;}
 
 .start-again a {
   text-align: left;
@@ -116,10 +117,39 @@ input#commodity_search_q {
   vertical-align: top;
 }
 
+.chapter_identifier {
+  background: #cce0d6;
+  border-top: solid 1px #7fb299;
+  border-right: solid 1px #7fb299;
+  display: inline-block;
+  margin-left: -2em;
+  padding-left: 0.25em;
+  width: 1.5em;
+  vertical-align: top;
+}
+
+.heading_identifier {
+  background: #cce0d6;
+  border-top: solid 1px #7fb299;
+  border-right: solid 1px #7fb299;
+  display: inline-block;
+  margin-left: -2.813em;
+  padding-left: 0.25em;
+  width: 2.563em;
+  vertical-align: top;
+}
+
 .description {
   display: inline-block;
   padding-left: 0.5em;
   vertical-align: top;
+}
+
+.heading_description {
+  display: inline-block;
+  padding-left: 1.5em;
+  vertical-align: top;
+  margin_right: 0;
 }
 
 header.page-header hgroup {
@@ -203,7 +233,7 @@ article.tariff {
 }
 
 article.tariff .inner {
-  padding: 1em 2em 1em 2.5em;
+  padding: 1em 2.5em 1em 2.5em;
     border-left: none;
   border-right: none;
 }
@@ -365,6 +395,18 @@ a.add {
 
 }
 
+.hierarchy h1 { 
+  font-family: NTA, 'Gill Sans W01 Medium', sans-serif;
+  padding: 0.5em 0.5em 0em 0.5em;
+  font-weight: normal;
+}
+
+.search-results h2 { 
+  font-family: NTA, 'Gill Sans W01 Medium', sans-serif;
+  padding: 1.5em 0.5em 0em -0.5em;
+  font-weight: normal;
+}
+
 .hierarchy ol {
   margin: 0;
   padding: 0;
@@ -429,6 +471,10 @@ a.add {
   /*vertical-align: top;*/
 }
 
+.tariff-browse .search-results {
+  padding-left: 0;
+}
+
 .tariff-browse .rate {
   /*float: right;*/
   padding-right: 0.25em;
@@ -489,3 +535,48 @@ a.add {
 #sector-navigation ol {
   display:none;
 }
+
+.browsenav {
+  font-color: #eee;
+  font-size: 80%;
+}
+
+.popdown {
+  display: none;
+  font-size: 12px;
+  list-style: none;
+}
+
+.popdown li {
+  font-size: 12px;
+  list-style: none;
+  font-weight: normal;
+}
+
+/* expanded detail within tables stuff */
+
+table td {
+  position: relative;
+}
+
+article table td.contains-conditions {
+  background-color: #CCE0D6;
+}
+
+.conditiontable {
+  position: absolute;
+  right: -40em;
+  top: 0;
+  width: 40em;
+  z-index: 10;
+}
+
+.conditiontable table {
+  width: 100%;
+  /*width: 200px;*/
+}
+
+.conditiontable table th {
+  border-top: solid 2px #CCE0D6;
+}
+
