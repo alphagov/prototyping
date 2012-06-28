@@ -43,7 +43,6 @@ categories: service
   
     <fieldset id="payment_details">
       <h3>Next, enter your payment details</h3>
-
     	<div class="group">
     		<div class="form-row">
     			<label for="card_type">Card type</label>
@@ -62,12 +61,12 @@ categories: service
 		    			</optgroup>
     			</select>
     			<div class="card_images"> 
-						<img src="assets/img/payment-icon-set/icons/delta-straight-32px.png" alt="Delta" />
-						<img src="assets/img/payment-icon-set/icons/visa-straight-32px.png" alt="Delta" />
-						<img src="assets/img/payment-icon-set/icons/maestro-straight-32px.png" alt="Delta" />
-						<img src="assets/img/payment-icon-set/icons/visa-electron-straight-32px.png" alt="Delta" />
-						<img src="assets/img/payment-icon-set/icons/solo-straight-32px.png" alt="Delta" />
-						<img src="assets/img/payment-icon-set/icons/mastercard-straight-32px.png" alt="Delta" />
+            <img src="assets/img/payment-icon-set/icons/delta-straight-32px.png" alt="Delta" />
+            <img src="assets/img/payment-icon-set/icons/visa-straight-32px.png" alt="Visa" />
+            <img src="assets/img/payment-icon-set/icons/maestro-straight-32px.png" alt="Maestro" />
+            <img src="assets/img/payment-icon-set/icons/visa-electron-straight-32px.png" alt="Visa Electron" />
+            <img src="assets/img/payment-icon-set/icons/solo-straight-32px.png" alt="Solo" />
+            <img src="assets/img/payment-icon-set/icons/mastercard-straight-32px.png" alt="Mastercard" />
 					</div>
     			<div class="info-notice hidden" id="credit_warning">
           	A &pound;2.50 surcharge is applied to credit card payments (to cover charges made by credit card companies). Please note, credit cards can only be used online or over the phone.
@@ -146,25 +145,17 @@ categories: service
       <div class="form-row">
         <label for="security_code">Security code</label>
         <input id="security_code" type="text" name="security_code" value="" class="card_codes">
-        
         <details class="whats_this">
         	<summary><img src="assets/img/security-code.png" /></summary>
         	It's the 3 digit number on the back of your card
         </details>
-      
-        <!--<p class="whats_this">It's the 3 digit number on the back of your card</p>-->
       </div>
-    <div class="form-row" id="email_confirmation">
-        <label for="email_address">Email address</label>
-        <input id="email_address" type="email" name="email_address" value="" />
-        <p class="footnote">Optional (we'll use it to send you a confirmation email)</p>
-    </div>
-
-    
+      <div class="form-row" id="email_confirmation">
+          <label for="email_address">Email address</label>
+          <input id="email_address" type="email" name="email_address" value="" />
+          <p class="footnote">Optional (we'll use it to send you a confirmation email)</p>
+      </div>
     </fieldset>
-
-    
-  
     <div class="buttons">
       <a class="buttonV2 large turquoise" href="7.html"><span>Check order details</span></a>
       <a class="back" href="2a.html"><span>Back</span></a>

@@ -1,37 +1,30 @@
 
 @import url("button-styles.css");
 
-/* Temporary sketch images */
-.sketch{
-	width: 100%;
-}
+/* ==================================================
+ * Overwritten default styles
+ * ================================================== */
+
+ h2{
+ 	border-bottom: 1px solid #c1cacb;
+ 	padding-bottom: 0.5em;
+ }
+
+ hr{
+ 	border: solid #DDD;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 2em 0;
+  height: 0;
+ }
 
 /* =================================
- * Landing page
+ * Transaction-wide styles
  * ================================= */
 
-.intro{
-	margin-top: 2em;
-}
-.get-started-intro h3{
-	margin-top: 0;
-}
-
-/* Product image (ie. a tax disc)*/
-.product_image{
-	/*float: right;
-	height: 7em;
-	width: 7em;
-	margin: -6em -3em 1em 3em;*/
-	float: left;
-	height: 5em;
-	width: 5em;
-	margin: -0.5em 1.3em 2em 0;
-}
-
-/* product owner (ie. DVLA)*/ 
+/* product owner branding (ie. DVLA) */ 
 .product_owner{
-	background: url(../assets/img/DVLA_logo.png) no-repeat right center;
+	background: url(../img/DVLA_logo.png) no-repeat right center;
 	float: right;
 	height: 45px;
 	width: 80px;
@@ -40,327 +33,11 @@
 	text-indent: -9999px;
 }
 
-/* Footnote style */
-.footnote{
-	font-style: italic;
-	font-size: 1em;
-	color: #666;
-	margin-top: 2em;
-}
-
-.card_images .footnote{
-	margin-top: -1em;
-}
-
-.service_info{
-	padding-bottom: 2em;
-}
-.service_info details{
-	margin-bottom: 0;
-	padding-bottom: 0;
-}
-.service_info details p{
-	padding-bottom: 0.5em;
-}
-.service_info summary{
-	padding: 0;
-}
-/* ======================
- * Don't proceed message
- * ======================
- */
-
-.dont_proceed{
-	float: right;
-	background-color: #f2f2f2;
-	/*margin: 0 -1em 1em -1em;*/
-	margin: 0 0em 1em 0em;
-	padding: 0.5em;
-}
-.dont_proceed h3,
-.dont_proceed p,
-.dont_proceed summary{
-	margin: 0;
-	font-size: 1em;
-}
-.dont_proceed ul{
-	margin-bottom: 0;
-}
-.dont_proceed li{
-	list-style-type: none;
-}
-
-/* =================================
- * Enter V11 number
- * ================================= */
-
-/* Image of the V11 form */
-#v11image{
-	width: 109px;
-	float: right;
-	margin: 0.4em 0 0 1em;
-}
-#v11 {
-	margin-bottom: 1em;
-}
-#v11 input,
-.jumbo{
-	font-size: 3rem;
-	width: 12em;
-	letter-spacing: 0.5rem;
-	margin: 0;
-	height: 30px;
-}
-
-#v11 .buttonV2{
-	margin-top: -2.8em;
-	margin-right: 2.4em;
-	display: block;
-	float: right;
-	height: 39px;
-}
-#v11 .buttonV2 span{
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-}
-
-#v5c .footnote{
-	width: 18em;
-	float: right;
-	margin: -6.8em 2em 0 0;
-}
-#v5c img{
-	float: left;
-	margin-right: 0.5em;
-}
-
-#vrm_number{
-	width: 5em;
-}
-#v5c_number{
-	width: 8em;
-}
-
-/* =================================
- * Check vehicle details
- * ================================= */
-
-.reg {
-	width: 15em;
-}
-.reg strong{
-	text-align: center;
-	color: #000;
-	font-weight: bold;
-	font-size: 4rem;
-	line-height: 1.5em;
-	margin: 0 auto;
-	padding: 0 0.4em;
-	background-color: #fbe712;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	width: 5em;
-}
-.vehicle{
-	overflow: auto;
-	padding: 1em 0;
-	width: 100%;
-	border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	margin: 0 0 1em 0;
-}
-.vehicle div{
-	float: left;
-}
-.vehicle h3{
-	margin: 0;
-}
-.vehicle .details{
-	background: #f2f2f2;
-	padding: 0.5em;
-	width: 19em;
-}
-.vehicle .details ul{
-	margin: 0 0 0 -1em;
-}
-.vehicle .details details{
-	font-size: 1em;
-	margin: 0 -0.5em;
-	padding: 0 0 0 0.75em;
-}
-.vehicle .details a{
-	margin-left: 1.4em;
-}
-
-/* ======================
- * Wating message
- * ======================
-
- * Uses spin.js to embed 'spinner' image into element
- * http://fgnass.github.com/spin.js/ 
- */
-
-#waiting_message{
-	height: 10em;
-	text-align: center;
-}
-
-/* ==================================================
- * Price Options 
- * ================================================== */
-
-.tax-option {
-  width: 48%;
-  margin-right: 4%;
-  float: left;
-}
-
-.tax-option:last-child {
-  margin-right: 0;
-}
-
-.tax-option label {
-	border: 4px solid #fff;
-  display: block;
-  padding: 0.5em 1em;
-  
-  text-align: center;
-  font-size: 2rem;
-  
-  color: #333;
-  background-color: #f2f2f2;
-  
-  cursor: pointer;
-} 
-
-.tax-option label:hover {
-  background-color: #ccc;
-}
-
-.tax-option input {
-  margin-right: 5px;
-}
-
-.tax-option input:checked+label{ 
-	font-weight: bold;
-	border: 4px solid #28A197;
-  background-color: #e1e8e8;
-}
-.tax-option input:checked+label{ 
-
-}
-
-.tax-option .car_tax {
-  width: auto;
-  margin: 0.1em 0;
-	text-align: center;
-  color: #28A197;
-	font-size: 5rem;
-  /*font-weight: bold;*/
-  line-height: 1em;
-}
-
-.tax-option small {
-  display: block;
-  margin-bottom: -2.4rem;
-}
-
-.note{
-	font-size: 0.8em;
-}
-
-/* ==================================================
- * Accepted Cards 
- * ================================================== */
-
-.accepted-cards {
-  margin-bottom: 2.4rem;
-}
-
-.accepted-cards>div {
-/*
-  float: left;
-  margin-right: 10px;
-*/
-}
-
-.accepted-cards label {
-  display: inline-block;
-  text-align: center;
-  width: 76px;
-  cursor: pointer;
-}
-
-.accepted-cards label img {
-  display: block;
-  margin-bottom: 0.8rem;
-}
-
-.accepted-cards label input {
-  display: block;
-  margin: 0 auto;
-}
-
-.card_images{
-	display: inline-block;
-	line-height: 4em;
-	height: 2em;
-	margin: -1em 0 0 0.5em;
-}
-.card_images img{
-	width: 2em;
-	margin-top: 0.5em;
-}
-
-.form-row{
-	margin-bottom: 2em;
-}
-
-.card_codes{
-	width: 3em;
-}
-
-#payment_details label{
-	width: 7em;
-}
-#payment_details .form-row{
-	overflow: hidden;
-	margin-bottom: 1em;
-
-}
-
-#payment_details{
-	margin-bottom: 2em;
-}
-#payment_details input,
-#payment_details label{
-	float: left;
-	margin-bottom: 0;
-}
-
-.whats_this{
-	display: inline-block;
-	padding: 0 0 0 1em;
-	width: 27em;
-	font-size: 0.8em;
-}
-.whats_this[open]{
-	background-color: transparent;
-}
-
-.whats_this summary::-webkit-details-marker {
-  display: none
-}
-.whats_this summary{
-	margin-top: 0.25em;
-}
-
 /* ======================
  * FORM STYLES
  * ====================== */
 
-/* text input field */
+/* text input fields */
 input[type=text],
 input[type=email]{
 	display: block;
@@ -376,10 +53,6 @@ details input[type=text]{
 
 article label {
   font-size: 112.5%;
-  /*
-  font-weight: bold;
-	color: #666;
-	*/
   margin-bottom: 0.5em;
   display: block;
 }
@@ -428,7 +101,6 @@ details summary:focus{
 	outline: none;
 }
 
-
 /* ==================================================
  * Transaction step indicator
  * ================================================== */
@@ -473,8 +145,297 @@ ol.transaction-step-indicator {
 	padding: 0em 2em 0em 5em;
 }
 
+/* ======================
+ * Wating message
+ * ======================
+
+ * Uses spin.js to embed 'spinner' image into element
+ * http://fgnass.github.com/spin.js/ 
+ */
+
+#waiting_message{
+	height: 10em;
+	text-align: center;
+}
+
+
+
+/* =================================
+ * Landing page
+ * ================================= */
+
+.intro{
+	margin-top: 2em;
+}
+
+/* Product image (ie. a tax disc) */
+.product_image{
+	float: left;
+	height: 5em;
+	width: 5em;
+	margin: -0.5em 1.5em 2em 0;
+}
+
+/* Footnote style */
+.footnote{
+	font-style: italic;
+	font-size: 1em;
+	color: #666;
+}
+
+/* Landing page footer */
+#landing_page_footer{
+	border-top: 1px solid #ddd;
+	display: block;
+	margin: 2em -3em;
+	padding: 0.5em 3em;
+	line-height: 1em;
+}
+
+/* =================================
+ * Enter V11 page
+ * ================================= */
+
+/* Form */
+#v11 {
+	margin-bottom: 2em;
+}
+
+/* Image of the V11 form */
+#v11_image{
+	width: 109px;
+	float: right;
+	margin: 0.4em 0 0 1em;
+}
+
+/* Jumbo text field */
+#v11 input,
+.jumbo{
+	font-size: 3rem;
+	width: 12em;
+	letter-spacing: 0.5rem;
+	margin: 0;
+	height: 30px;
+}
+
+/* Search button */
+#v11 .buttonV2{
+	margin-top: -2.8em;
+	margin-right: 2.4em;
+	display: block;
+	float: right;
+	height: 39px;
+}
+#v11 .buttonV2 span{
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+/* =================================
+ * Enter V5C and number plate page
+ * ================================= */
+
+/* Text field widths */
+#vrm_number{
+	width: 5em;
+}
+#v5c_number{
+	width: 8em;
+}
+
+/* Help text */
+#v5c .footnote{
+	width: 18em;
+	float: right;
+	margin: -6.8em 2em 0 0;
+}
+
+/* Image of V5C form */
+#v5c img{
+	float: left;
+	margin-right: 0.5em;
+}
+
+/* =================================
+ * Check vehicle details page
+ * ================================= */
+
+/* layout */
+.vehicle{
+	border-bottom: 1px solid #ccc;
+	margin: 0 0 1em 0;
+	overflow: auto;
+	padding: 0.3em 0 1em 0;
+	width: 100%;
+}
+.vehicle > div{
+	float: left;
+}
+
+/* Registration plate */
+.vehicle .reg {
+	width: 15em;
+}
+.vehicle .reg strong{
+	background-color: #fbe712;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #000;
+	font-weight: bold;
+	font-size: 4rem;
+	line-height: 1.5em;
+	margin: 0 auto;
+	padding: 0 0.4em;
+	text-align: center;
+	width: 5em;
+}
+
+/* Vehicle details */
+.vehicle .details{
+	background: #f2f2f2;
+	padding: 0.5em;
+	width: 19em;
+}
+.vehicle .details ul{
+	margin: 0 0 0 -1em;
+}
+.vehicle .details a{
+	margin-left: 1.4em;
+}
+
 /* ==================================================
- * Tables
+ * Price Options 
+ * ================================================== */
+
+.tax-option {
+  width: 48%;
+  margin-right: 4%;
+  float: left;
+}
+
+.tax-option:last-child {
+  margin-right: 0;
+}
+
+.tax-option label {
+	border: 4px solid #fff;
+  display: block;
+  padding: 0.5em 1em;
+  
+  text-align: center;
+  font-size: 2rem;
+  
+  color: #333;
+  background-color: #f2f2f2;
+  
+  cursor: pointer;
+} 
+
+.tax-option label:hover {
+  background-color: #ccc;
+}
+
+.tax-option input {
+  margin-right: 5px;
+}
+
+.tax-option input:checked+label{ 
+	font-weight: bold;
+	border: 4px solid #28a197;
+  background-color: #e1e8e8;
+}
+.tax-option input:checked+label{ 
+
+}
+
+.tax-option .car_tax {
+  width: auto;
+  margin: 0.1em 0;
+	text-align: center;
+  color: #28A197;
+	font-size: 5rem;
+  line-height: 1em;
+}
+
+.tax-option small {
+  display: block;
+  margin-bottom: -2.4rem;
+}
+
+.note{
+	font-size: 0.8em;
+}
+
+/* ==================================================
+ * Accepted Cards 
+ * ================================================== */
+
+.card_images{
+	display: inline-block;
+	line-height: 4em;
+	height: 2em;
+	margin: -1em 0 0 0.5em;
+}
+.card_images img{
+	width: 2em;
+	margin-top: 0.5em;
+}
+
+.form-row{
+	margin-bottom: 2em;
+}
+
+.card_codes{
+	width: 3em;
+}
+
+#payment_details label{
+	width: 7em;
+}
+#payment_details .form-row{
+	overflow: hidden;
+	margin-bottom: 1em;
+
+}
+
+#payment_details{
+	margin-bottom: 2em;
+}
+#payment_details input,
+#payment_details label{
+	float: left;
+	margin-bottom: 0;
+}
+
+/* Security code help */
+.whats_this{
+	display: inline-block;
+	padding: 0 0 0 1em;
+	width: 27em;
+	font-size: 0.8em;
+}
+.whats_this[open]{
+	background-color: transparent;
+}
+
+.whats_this summary::-webkit-details-marker {
+  display: none
+}
+.whats_this summary{
+	margin-top: 0.25em;
+}
+
+#email_confirmation h3{
+	font-weight: normal;
+	margin: 0 0 0.5em 0;
+}
+#email_confirmation .footnote{
+	clear: left;
+}
+
+/* ==================================================
+ * Check order page
  * ================================================== */
 
 .car_tax_receipt td, .car_tax_receipt th {
@@ -519,10 +480,9 @@ tr.subtotal td, tr.subtotal th {
 	margin-left: 0.5em;
 }
 
-#email_confirmation h3{
-	font-weight: normal;
-	margin: 0 0 0.5em 0;
-}
+/* ==================================================
+ * Confirm order page
+ * ================================================== */
 
 /* Next steps */
 div.next-steps  {
@@ -534,30 +494,5 @@ div.next-steps h2{
 	border-bottom: 0;
 }
 
-/* ==================================================
- * Buttons
- * ================================================== */
-
- .button_row{
- 	/*padding-top: 0.5em;
- 	border-top: 1px solid #c1cacb;*/
- }
-
-/* ==================================================
- * Overwritten basic styles
- * ================================================== */
-
- h2{
- 	border-bottom: 1px solid #c1cacb;
- 	padding-bottom: 0.5em;
- }
-
- hr{
- 	border: solid #DDD;
-  border-width: 1px 0 0;
-  clear: both;
-  margin: 2em 0;
-  height: 0;
- }
 
 
