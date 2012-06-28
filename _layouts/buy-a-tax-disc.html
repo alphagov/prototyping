@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="{{ page.css }}" />
     {% endif %}
     <script src="https://static.production.alphagov.co.uk/javascripts/libs/jquery/plugins/carousel.js" type="text/javascript"></script>
-    <script defer src="https://static.production.alphagov.co.uk/javascripts/application.js" type="text/javascript"></script>   
+    <script defer src="https://static.production.alphagov.co.uk/javascripts/application.js" type="text/javascript"></script>
+
+    <link media="screen" type="text/css" rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/behaviours.js" type="text/javascript"></script> 
     
     <script type="text/javascript">
     setTimeout(function(){var a=document,g,b={families:(g=
@@ -52,31 +55,20 @@
       </div>
       <ol class="group">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Section</a></li>
+        <li><a href="1.html">Driving</a></li>
       </ol>
     </nav>
     <div id="wrapper" class="{{ page.categories }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
       <section id="content" role="main" class="group">
         <header class="page-header group">
           <hgroup>
-            <h2><span>{{ page.categories }}</span> {{ page.title }}</h2>
+            <span class="product_owner">Brought to you by the DVLA</span>
+            <h1><span>{{ page.categories }}</span> {{ page.title }}</h1>
           </hgroup>
         </header>
         <div class="article-container group">
           <article role="article" class="group">
             <div class="inner">
-              <ol class="transaction-step-indicator group">
-                <li{% if page.step == 1 %} class="current"{% endif %}>
-                  <span class="transaction-step-number">1</span>Vehicle details
-                </li>
-                <li{% if page.step == 2 %} class="current"{% endif %}>
-                  <span class="transaction-step-number">2</span>Payment
-                </li>
-                <li{% if page.step == 3 %} class="current"{% endif %}>
-                  <span class="transaction-step-number">3</span>Finish
-                </li>
-              </ol>
-            
               {{ content }}
             </div>
           </article>

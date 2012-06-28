@@ -25,12 +25,12 @@
 }
 .buttonV2 span {	
 	display: inline-block;
-	padding: 1rem  2rem;
-	padding-right:2.7rem;
+	padding: 10px  20px;
+	padding-right:2.7em;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 2.1rem;
+	font-size: 21px;
 	font-weight: 200;
-	letter-spacing: 0.01rem;
+	letter-spacing: 0.03em;
 	line-height: 1;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -190,12 +190,12 @@
 }
 
 .large span {
-	padding: 0.8rem 1.2rem;
-	padding-right:4.5rem;
+	padding: 1.2rem 1.7rem;
+	padding-right:2.7em;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 2.1rem;
+	font-size: 2rem;
 	font-weight: 200;
-	letter-spacing: 0.01rem;
+	letter-spacing: 0.03em;
 	background-image: none;
 	background-image: url(../img/pointer.png);
 	background-repeat: no-repeat;
@@ -205,18 +205,18 @@
 .medium span {
 	padding: 0.5rem 0.9rem;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 1.8rem;
+	font-size: 1.1rem;
 	font-weight: 200;
-	letter-spacing: 0.01rem;
+	letter-spacing: 0.03em;
 	background-image: none;
 }
 
 .small span {
-	padding: 0.4rem 0.7rem;
+	padding: 0.35rem 0.7rem;
 	padding-top:0.4rem;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 1.4rem;
+	font-size: 0.9rem;
 	font-weight: 200;
-	letter-spacing: 0.01rem;
+	letter-spacing: 0.03em;
 	background-image: none;
 }

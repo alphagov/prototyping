@@ -1,31 +1,46 @@
 ---
-layout: tax-disc
-title: Apply for a tax disc
-categories: Service
-section_class: tax-disc
-css: assets/css/styles.css
-step: 1
+layout: buy-a-tax-disc
+title: Buy a tax disc
+categories: service
 ---
-<h1>Find the vehicle you want to tax</h1>
 
-<form action="">
-  <div class="group">
-    <div class="form-column">
-      <label for="v11_reference">Enter the reference number on your V11 form</label>
-      <input type="text" name="v11_reference" id="v11_reference" class="long-input" value="" required />
-    </div>
-    
-    <div class="form-help">
-      <img src="http://placehold.it/120x170" alt="Example of a V11 form with reference number highlighted" />
-      This 16 digit number can be found in the Top Right corner of the form.
-    </div>
-  </div>
 
-  <div>Haven&rsquo;t received a V11 form? <a href="2b.html">Use your log book (V5C) and number plate details</a></div>
+<ol class="transaction-step-indicator">
+    <li class="current">
+        <span class="transaction-step-number">1</span>Details
+    </li>
+    <li class="">
+        <span class="transaction-step-number">2</span>Pay
+    </li>
+    <li class="">
+        <span class="transaction-step-number">3</span>Done
+    </li>
+</ol>
 
-  <div class="buttons">
-    <a href="4.html" class="medium buttonV2 turquoise"><span>Check vehicle details</span></a>
-  </div>
-
+<h2>First we need your vehicle details</h2>
+<form id="v11">
+    <label for="v11_number">Please enter your V11 reference number below</label>
+	<input type="text" id="v11_number" class="jumbo" />
+    <a href="3.html" class="large buttonV2 turquoise"><span>Continue</span></a>
 </form>
+<details open>
+	<summary>What's a V11 reference number?</summary>
+	<a href="assets/img/V11_pictogram.png"><img id="v11_image" src="assets/img/V11_pictogram.png" alt="The reference number is towards the top middle of the V11 letter" /></a>
+	<p>It's the 16 digit number on the reminder letter that we send out when your tax disc is due for renewal.</p>
+    <details>
+        <summary>I don't have this letter</summary>
+        <p>You can still buy your tax disc online using your vehicle licence and registration certificate (log book) numbers instead.</p>
+        <a href="2b.html" class="large buttonV2 turquoise"><span>Use these details instead</span></a>
+    </details>
+</details>
 
+
+
+
+
+
+
+
+<!--
+<a href="3.html"><img class="sketch" src="images/sketches/2a.jpg" /></a>
+-->

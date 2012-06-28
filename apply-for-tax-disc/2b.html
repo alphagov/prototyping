@@ -1,47 +1,44 @@
 ---
-layout: tax-disc
-title: Apply for a tax disc
-categories: Service
-section_class: tax-disc
-css: assets/css/styles.css
-step: 1
+layout: buy-a-tax-disc
+title: Buy a tax disc
+categories: service
 ---
 
-<h1>Enter your log book (V5C) and number plate details</h1>
+<ol class="transaction-step-indicator">
+    <li class="current">
+        <span class="transaction-step-number">1</span>Details
+    </li>
+    <li class="">
+        <span class="transaction-step-number">2</span>Pay
+    </li>
+    <li class="">
+        <span class="transaction-step-number">3</span>Done
+    </li>
+</ol>
 
-<form action="" method="post">
+<h2>Please enter your vehicle details</h2>
   <div class="help-notice">
-    Do not proceed if you have recently purchased your vehicle and do not have a registration certificate. 
+    <strong>IMPORTANT: </strong>Do not proceed if you have recently purchased your vehicle and do not have a registration certificate. 
     You must be in possession of the full log book. <b>The green slip alone is not enough</b>.
   </div>
+<form>
+  <fieldset class="group"> 
+    <div class="form-row">
+      <label for="vrm_number">Vehicle registration number</label>
+      <input type="text" name="vrm_number" id="vrm_number" class="jumbo" required />
+    </div>
+    <div class="form-row" id="v5c">
+      <label for="v5c_number">Registration certificate number</label>
+      <input type="text" name="v5c_number" id="v5c_number" class="jumbo" required />
 
-  <div class="group">
-    <div class="form-column">
-      <label for="v5c_number">Log book (V5C) number</label>
-      <input type="text" name="v5c_number" id="v5c_number" class="long-input" required />
+      <p class="footnote">
+        <a href="assets/img/V5C_crop.png">
+          <img id="v11_image" src="assets/img/V5C_crop.png" alt="Image of a car registration certicicate" />
+        </a>
+        It's on the front cover of the registration certificate
+      </p>
     </div>
-    
-    <div class="form-help">
-      <img src="http://placehold.it/120x170" alt="Cover of log book (V5C)" />
-      You will find this on the first page of your log book.
-    </div>
-  </div>
-
-  <div class="group">
-    <div class="form-column">
-      <label for="vrm_number">Number plate</label>
-      <input type="text" name="vrm_number" id="vrm_number" class="long-input" required />
-    </div>
-    
-    <div class="form-help">
-      <img src="http://placehold.it/240x170" alt="Photo showing a car licence plate" />
-      This is also known as a vehicle registration mark.
-    </div>
-
-  </div>
+  </fieldset>
+  <a href="3.html" class="large buttonV2 turquoise"><span>Continue</span></a>
 </form>
-
-<div class="buttons">
-  <a href="4.html" class="medium buttonV2 turquoise"><span>Check vehicle details</span></a>
-</div>
 

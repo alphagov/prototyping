@@ -83,6 +83,10 @@ input[type=text]{
 	margin-left: 1em;
 }
 
+.form-help img{
+	width: 130px;
+}
+
 
 /* ==================================================
  * Simple Inline Expansion
@@ -125,6 +129,19 @@ details.open summary{
 
 summary:focus{
 	outline: none;
+}
+
+/* ======================
+ * Wating message
+ * ======================
+
+ * Uses spin.js to embed 'spinner' image into element
+ * http://fgnass.github.com/spin.js/ 
+ */
+
+#waiting_message{
+	height: 10em;
+	text-align: center;
 }
 
 
