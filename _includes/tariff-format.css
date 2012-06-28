@@ -397,13 +397,13 @@ a.add {
 
 .hierarchy h1 { 
   font-family: NTA, 'Gill Sans W01 Medium', sans-serif;
-  padding: 0.5em 0.5em 0em 0.5em;
+  /* padding: 0.5em 0.5em 0em 0.5em; */
   font-weight: normal;
 }
 
 .search-results h2 { 
   font-family: NTA, 'Gill Sans W01 Medium', sans-serif;
-  padding: 1.5em 0.5em 0em -0.5em;
+  padding: 1em 0.5em 0 0;
   font-weight: normal;
 }
 
@@ -418,6 +418,12 @@ a.add {
   font-size: 0.85em;
   line-height: 1.5;
   padding: 0.5em 1em 1em 0.5em;
+}
+
+.tariff-browse h3 {
+  margin-top:1.5em;
+  font-family: NTA, 'Gill Sans W01 Medium', sans-serif; 
+  font-size: 100%;
 }
 
 .tariff-browse a {
@@ -534,6 +540,15 @@ a.add {
 
 #sector-navigation ol {
   display:none;
+}
+
+#section-navigation .section {
+  width: 6em;
+}
+
+#section-navigation .description {
+  width: 40em;
+  margin-right: 0;
 }
 
 .browsenav {
