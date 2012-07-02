@@ -24,7 +24,7 @@ categories: service
   <form action="6.html" method="post" accept-charset="utf-8">
     <fieldset class="group">  
       <div class="tax-option">
-        <input id="twelve_months" class="visuallyhidden" type="radio" name="tax_type" value="twelve_months" checked="checked" />
+        <input id="twelve_months" class="visuallyhidden" type="radio" name="tax_type" value="twelve_months" checked="checked" track="data_time_period" />
         <label for="twelve_months"> 12 Months
           <div class="car_tax">&pound;125.00</div>
           <div class="note">
@@ -33,7 +33,7 @@ categories: service
         </label>
       </div>
       <div class="tax-option">
-        <input id="six_months" class="visuallyhidden" type="radio" name="tax_type" value="six_months" />
+        <input id="six_months" class="visuallyhidden" type="radio" name="tax_type" value="six_months" track="data_time_period" />
         <label for="six_months"> 6 Months
           <div class="car_tax">&pound;68.75</div>
           <div class="note">1 Jul 2012 &mdash; 31 Dec 2012</div>
@@ -46,7 +46,7 @@ categories: service
     	<div class="group">
     		<div class="form-row">
     			<label for="card_type">Card type</label>
-    			<select name="card_type" id="card_type">
+    			<select name="card_type" id="card_type" track="data_card_type">
 							<option value="">Select a card type</option>					
 							<optgroup label="Debit cards">
 		    				<option value="debit_card_delta">Delta</option>
@@ -146,7 +146,7 @@ categories: service
         <label for="security_code">Security code</label>
         <input id="security_code" type="text" name="security_code" value="" class="card_codes">
         <details class="whats_this">
-        	<summary><img src="assets/img/security-code.png" /></summary>
+        	<summary track="help_security_code"><img src="assets/img/security-code.png" /></summary>
         	It's the 3 digit number on the back of your card
         </details>
       </div>
@@ -158,7 +158,7 @@ categories: service
     </fieldset>
     <div class="buttons">
       <a class="buttonV2 large turquoise" href="7.html"><span>Check order details</span></a>
-      <a class="back" href="2a.html"><span>Back</span></a>
+      <a class="back" href="2a.html#back"><span>Back</span></a>
     </div>
   </form>
 </div>
