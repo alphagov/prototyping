@@ -1,0 +1,123 @@
+---
+layout: default-local
+title: Make a lasting power of attorney
+categories: Service
+---
+
+<link media="screen" type="text/css" rel="stylesheet" href="assets/LPA.css" />
+<link media="screen" type="text/css" rel="stylesheet" href="assets/patterns.css" />
+<!--<script src="assets/LPA.js" type="text/javascript"></script>-->
+<script type="text/javascript">
+$(function() {
+	// Move from intro state to edit state
+	$("#part2-intro").click(function() {
+      $(this).closest(".intro-state").removeClass('intro-state').addClass('edit-state');
+      return false;
+    });
+});
+</script>
+
+<ol class="process overview">
+	<li>
+		<h3><em>Create</em> your <abbr>LPA</abbr></h3>
+	</li>
+	<li class="disabled">
+		<h3><em>Sign</em> your <abbr>LPA</abbr></h3>
+	</li>
+	<li class="disabled">
+		<h3><em>Register</em> your <abbr>LPA</abbr></h3>
+	</li>
+</ol>
+<div class="transaction-toolbar">
+	<h2>Create an LPA for property and finances</h2>
+</div>
+
+<ol class="smart-form">
+	<li class="compact-state">
+		<header>
+				<a href="#" class="edit button">Edit</a>
+	        	<h1><span>Part 1:</span> About the donor</h1>
+	    </header>
+	    <section class="intro">
+	    		<p>In this part we'll ask you to provide information about the donor. This is the person who is giving lasting power of attorney.</p>
+	    		<a href="#" class="continue button">Continue</a>
+	    </section>
+	    <section class="question">
+	    	<header>
+	    		<h2>The donor</h2>
+	    		<p>The person making the lasting power of attorney</p>
+	    		<a class="help button" href="">Learn more</a>
+	    	</header>
+	    	<ul class="response">
+	    		<li class="person">Bob Dobbs</li>
+	    	</ul>
+	    </section>
+	    <footer>
+	    	<a class="button">Continue to part 2</a>
+	    </footer>
+	</li>
+	<li class="intro-state">
+		<header>
+	        	<h1><span>Part 2:</span> About the attorneys</h1>
+	    </header>
+	    <section class="intro">
+	    		<p>In this part we'll ask you to provide information about the attorneys. This is the person or people who will be given lasting power of attorney over the donor.</p>
+	    		<a id="part2-intro" href="#" class="continue button">Continue</a>
+	    </section>
+	    <section class="question">
+	    	<header>
+	    		<h2>The attorneys</h2>
+	    		<p>These are the people who will act on the donors behalf</p>
+	    		<a class="help button" href="">Learn more</a>
+	    	</header>
+	    	<ul class="response">
+	    		<li class="add person"><a href="">Add attorney details</a></li>
+	    	</ul>
+	    </section>
+	    <footer>
+	    	<a class="button">Continue to part 3</a>
+	    </footer>
+	</li>
+	<li class="disabled-state">
+		<header>
+	        	<h1><span>Part 3:</span> About the decisions the attorneys make</h1>
+	    </header>
+	    <section class="question">
+	    	<header>
+	    		<h2>Making decisions</h2>
+	    		<p>How should the attorneys make decisions for the donor?</p>
+	    		<a class="help button" href="">Learn more</a>
+	    	</header>
+	    	<div class="response">
+	    		<fieldset class="touchy">
+    				<label for="radio1"><input type="radio" id="radio1" name="radioGroup1" checked="checked" >They can make any decisions on their own</label>
+    				<label for="radio2"><input type="radio" id="radio2" name="radioGroup1" >They <em>must</em> make all decisions as a group</label>
+    				<label for="radio3"><input type="radio" id="radio3" name="radioGroup1">It depends on the decision&hellip;</label>
+    				<a class="radio-action" href="">Provide details</a>
+    			</fieldset>
+	    	</div>
+	    </section>
+	    <section class="question">
+	    	<header>
+	    		<dl>
+	    			<dt>Additional information</dt>
+	    			<dd>Do you want to give any guidance or restrictions for the attorneys?</dd>
+	    		</dl>
+	    		<a class="help button" href="">Learn more</a>
+	    	</header>
+	    	<div class="response">
+	    		<fieldset class="touchy">
+    				<label for="radio4"><input type="radio" id="radio4" name="radioGroup2" checked="checked" >No thanks</label>
+    				<label for="radio5"><input type="radio" id="radio5" name="radioGroup2" >Yes please&hellip;</label>
+    				<a class="radio-action" href="">Provide details</a>
+    			</fieldset>
+	    	</div>
+	    </section>
+	    <footer>
+	    	<a class="button">Continue to part 4</a>
+	    </footer>
+	</li>
+</ol>
+
+
+

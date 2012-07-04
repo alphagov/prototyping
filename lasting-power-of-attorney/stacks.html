@@ -1,0 +1,222 @@
+---
+layout: default-local
+title: Create a lasting power of attorney
+categories: Service
+---
+
+<style>
+.stacks > li{
+  list-style-type: none;
+  margin: 0 -4.5em 0 -4.3em;
+	padding: 0;
+  border-top: 1px solid #FFF;
+ }
+.stacks > li > header{
+	background-color: #d5ecea;
+
+ 	border-top: 1px solid #cce0d6;
+  padding: 0.2em 0.4em;
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+.stacks > li > section{
+	background-color: #FFF;
+	padding: 0.5em 0.5em 1em 0.5em;
+	font-weight: bold;
+}
+.stacks > li > footer{
+	background-color: #e8f0f0;
+	padding: 0.5em;
+}
+.stacks > li > footer .button{
+	padding: 0.2em 0.4em;
+}
+.stacks > li > footer{
+	background-color: #e8f0f0;
+}
+
+/* STATE: Compact */
+.stacks > .compact-state > footer{
+	display: none;
+}
+
+/* STATE: Not started */
+.stacks > .not-started-state{
+	margin: 0 -5em;
+	box-shadow: 0em 0.25em 0.5em #ccc;
+}
+.stacks > .not-started-state > section,
+.stacks > .not-started-state > footer{
+	display: none;
+}
+
+/* STATE: Open */
+.stacks .open-state{
+	margin: 0 -5em;
+  border-top: 0;
+	box-shadow: 0em 0.25em 0.5em #ccc;
+}
+.stacks .open-state > section,
+.stacks .open-state > footer{
+ 	display: block;
+}
+.stacks .open-state > header{
+ 	background-color: #cce0d6;
+}
+
+ /* Temp */
+  .stacks .open-state > section{
+ height: 10em;
+ }
+
+ .stacks section:target{
+ height: 10em;
+ }
+
+.stacks section{
+ 	display: table;
+ 	margin: 0;
+ 	padding: 0;
+ }
+ .stacks section .open-state{
+ 	width: 100%;
+ }
+.stacks section header,
+.stacks section ul{
+ 	display: table-cell;
+ 	margin: 0;
+ 	padding: 0 0.3em;
+}
+.stacks section header h2,
+.stacks section ul li{
+	font-size: 1rem;
+ 	margin: 0;
+ 	padding: 0;
+}
+.stacks section header{
+ 	background-color: #e8f0f0;
+}
+.stacks .open-state section header{
+ 	width: 33%;
+}
+.stacks section ul li{
+	list-style-image: none;
+	list-style-type: none;
+}
+
+.stacks .compact-state section header{
+	display: none;
+}
+.stacks .compact-state section ul li{
+	display: inline;
+}
+.stacks .compact-state section ul li:after{
+	content:",";
+}
+.stacks .compact-state section ul li:last-child:after{
+	content:"";
+}
+
+</style>
+
+<ol class="stacks">
+	<li class="compact-state" id="section1">
+		<header>
+	       Section one: Who is the donor? <a href="#section1">(edit)</a>
+	  </header>
+	  <section id="edit1">
+	  		<header>
+	  			<h2>The donor</h2>
+	  		</header>
+	  		<ul>
+	  			<li>Henry Smith</li>
+	  		</ul>
+	  </section>
+	  <footer>
+	    	
+	   </footer>
+	</li>
+	<li class="compact-state">
+		<header>
+	        Section two: Who are the attorneys?
+	  </header>
+	  <section>
+	  		<header>
+	  			<h2>The attorneys</h2>
+	  		</header>
+	  		<ul>
+	  			<li>Jane Briggs</li>
+	  			<li>John Smith</li>
+	  			<li>Alice Jones</li>
+	  		</ul>
+	  </section>
+	  <footer>
+	    	
+	   </footer>
+	</li>
+	<li class="compact-state">
+		<header>
+	      Section three: How should the attorneys make decisions?
+	  </header>
+	  <section>
+	  		<header>
+	  			<h2>Decisions</h2>
+	  		</header>
+	  		<ul>
+	  			<li>The attorneys must make all decisions as a group</li>
+	  		</ul>
+	  </section>
+	  <footer>
+	    	
+	   </footer>
+	</li>
+	<li class="compact-state">
+		<header>
+	      Section four: When do you want the LPA to be able to be used?
+	  </header>
+	  <section>
+	  		<ul>
+	  			<li>Only if the donor has lost mental capacity</li>
+	  		</ul>
+	  </section>
+	  <footer>
+	    	
+	   </footer>
+	</li>
+	<li class="open-state">
+		<header>
+	      Section five: Who will be notified when the LPA is registered?
+	  </header>
+	  <section>
+	  		Section content
+	  </section>
+	  <footer>
+	    	<a href="#" class="button">Continue</a>
+	   </footer>
+	</li>
+	<li class="not-started-state">
+		<header>
+	      Section six: Who will vouch that this LPA has been correctly made?
+	  </header>
+	  <section>
+	  		Section content
+	  </section>
+	  <footer>
+	    	
+	   </footer>
+	</li>
+	<li class="not-started-state">
+		<header>
+	      Section seven
+	  </header>
+	  <section>
+	  		Section content
+	  </section>
+	  <footer>
+	    	
+	   </footer>
+	</li>
+</ol>
+
+
+
