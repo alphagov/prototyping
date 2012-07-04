@@ -23,14 +23,19 @@
  * ================================= */
 
 /* product owner branding (ie. DVLA) */ 
-.product_owner{
+.product-owner{
 	background: url(../img/DVLA_logo.png) no-repeat right center;
 	float: right;
 	height: 45px;
 	width: 80px;
 	font-size: 1em;
-	margin: 1em -0.5em 0 0;
+	margin: 1em 1em 0 0;
 	text-indent: -9999px;
+}
+
+/* Display summary/details tags as standard panels (for now) */
+summary::-webkit-details-marker {
+  display: none
 }
 
 /* ======================
@@ -153,7 +158,7 @@ ol.transaction-step-indicator {
  * http://fgnass.github.com/spin.js/ 
  */
 
-#waiting_message{
+#waiting-message{
 	height: 10em;
 	text-align: center;
 }
@@ -165,15 +170,19 @@ ol.transaction-step-indicator {
  * ================================= */
 
 .intro{
-	margin-top: 2em;
+	/*margin-top: 2em;*/
 }
 
 /* Product image (ie. a tax disc) */
-.product_image{
+.product-image{
 	float: left;
 	height: 5em;
 	width: 5em;
 	margin: -0.5em 1.5em 2em 0;
+}
+
+.get-started-intro #what-you-need-to-know{
+	margin-top: 0.5em;
 }
 
 /* Footnote style */
@@ -184,12 +193,21 @@ ol.transaction-step-indicator {
 }
 
 /* Landing page footer */
-#landing_page_footer{
+#landing-page-footer{
 	border-top: 1px solid #ddd;
 	display: block;
 	margin: 2em -3em;
 	padding: 0.5em 3em;
 	line-height: 1em;
+}
+
+.more .card-images{
+	margin-left: 0em;
+	margin-top: -1em;
+}
+
+.card-images .footnote img{
+	vertical-align: text-bottom;
 }
 
 /* =================================
@@ -202,7 +220,7 @@ ol.transaction-step-indicator {
 }
 
 /* Image of the V11 form */
-#v11_image{
+#v11-image{
 	width: 109px;
 	float: right;
 	margin: 0.4em 0 0 1em;
@@ -236,10 +254,10 @@ ol.transaction-step-indicator {
  * ================================= */
 
 /* Text field widths */
-#vrm_number{
+#vrm-number{
 	width: 5em;
 }
-#v5c_number{
+#v5c-number{
 	width: 8em;
 }
 
@@ -371,13 +389,13 @@ ol.transaction-step-indicator {
  * Accepted Cards 
  * ================================================== */
 
-.card_images{
+.card-images{
 	display: inline-block;
 	line-height: 4em;
 	height: 2em;
 	margin: -1em 0 0 0.5em;
 }
-.card_images img{
+.card-images img{
 	width: 2em;
 	margin-top: 0.5em;
 }
@@ -386,51 +404,51 @@ ol.transaction-step-indicator {
 	margin-bottom: 2em;
 }
 
-.card_codes{
+.card-codes{
 	width: 3em;
 }
 
-#payment_details label{
+#payment-details label{
 	width: 7em;
 }
-#payment_details .form-row{
+#payment-details .form-row{
 	overflow: hidden;
 	margin-bottom: 1em;
 
 }
 
-#payment_details{
+#payment-details{
 	margin-bottom: 2em;
 }
-#payment_details input,
-#payment_details label{
+#payment-details input,
+#payment-details label{
 	float: left;
 	margin-bottom: 0;
 }
 
 /* Security code help */
-.whats_this{
+.whats-this{
 	display: inline-block;
 	padding: 0 0 0 1em;
 	width: 27em;
 	font-size: 0.8em;
 }
-.whats_this[open]{
+.whats-this[open]{
 	background-color: transparent;
 }
 
-.whats_this summary::-webkit-details-marker {
+.whats-this summary::-webkit-details-marker {
   display: none
 }
-.whats_this summary{
+.whats-this summary{
 	margin-top: 0.25em;
 }
 
-#email_confirmation h3{
+#email-confirmation h3{
 	font-weight: normal;
 	margin: 0 0 0.5em 0;
 }
-#email_confirmation .footnote{
+#email-confirmation .footnote{
 	clear: left;
 }
 
@@ -438,17 +456,17 @@ ol.transaction-step-indicator {
  * Check order page
  * ================================================== */
 
-.car_tax_receipt td, .car_tax_receipt th {
+.car-tax-receipt td, .car-tax-receipt th {
   border: none;
   font-size: 1.6rem;
 }
 
-.car_tax_receipt thead th {
+.car-tax-receipt thead th {
   border-right: 2px solid #fff;
   /*background-color: #999;*/
 }
 
-.car_tax_receipt td, .car_tax_receipt tr:nth-child(even) td {
+.car-tax-receipt td, .car-tax-receipt tr:nth-child(even) td {
   vertical-align: bottom;
   background-color: transparent;
 }
@@ -474,7 +492,7 @@ tr.subtotal td, tr.subtotal th {
   color: #333;
 }
 
-.edit_order{
+.edit-order{
 	position: absolute;
 	margin-top: -3em;
 	margin-left: 0.5em;

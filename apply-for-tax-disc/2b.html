@@ -2,43 +2,31 @@
 layout: buy-a-tax-disc
 title: Buy a tax disc
 categories: service
+step: 1
 ---
-
-<ol class="transaction-step-indicator">
-    <li class="current">
-        <span class="transaction-step-number">1</span>Details
-    </li>
-    <li class="">
-        <span class="transaction-step-number">2</span>Pay
-    </li>
-    <li class="">
-        <span class="transaction-step-number">3</span>Done
-    </li>
-</ol>
 
 <h2>Please enter your vehicle details</h2>
   <div class="help-notice">
-    <strong>IMPORTANT: </strong>Do not proceed if you have recently purchased your vehicle and do not have a registration certificate. 
-    You must be in possession of the full log book. <b>The green slip alone is not enough</b>.
+    <strong>IMPORTANT: </strong>Do not proceed if you have recently purchased your vehicle and do not have the full registration certificate (V5 or logbook). <b>The green slip alone is not enough</b>.
   </div>
 <form>
   <fieldset class="group"> 
     <div class="form-row">
-      <label for="vrm_number">Vehicle registration number</label>
-      <input type="text" name="vrm_number" id="vrm_number" class="jumbo" track="data_vrm_number" required />
+      <label for="vrm-number">Vehicle registration number</label>
+      <input type="text" name="vrm-number" id="vrm-number" class="jumbo" track="data_vrm-number" required />
     </div>
     <div class="form-row" id="v5c">
-      <label for="v5c_number">Registration certificate number</label>
-      <input type="text" name="v5c_number" id="v5c_number" class="jumbo" track="data_v5c_number" required />
+      <label for="v5c-number">Registration certificate number</label>
+      <input type="text" name="v5c-number" id="v5c-number" class="jumbo" track="data_v5c-number" required />
 
       <p class="footnote">
         <a href="assets/img/V5C_crop.png">
-          <img id="v11_image" src="assets/img/V5C_crop.png" alt="Image of a car registration certicicate" />
+          <img id="v11-image" src="assets/img/V5C_crop.png" alt="Image of a car registration certicicate" />
         </a>
         It's on the front cover of the registration certificate
       </p>
     </div>
   </fieldset>
-  <a href="3.html" class="large buttonV2 turquoise"><span>Continue</span></a>
+  <a href="4.html" class="large buttonV2 turquoise"><span>Continue</span></a>
 </form>
 

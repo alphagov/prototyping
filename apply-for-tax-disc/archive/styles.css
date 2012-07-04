@@ -7,7 +7,7 @@
 }
 
 /* Product image (ie. a tax disc)*/
-.product_image{
+.product-image{
 	float: right;
 	height: 10em;
 	width: 10em;
@@ -139,7 +139,7 @@ summary:focus{
  * http://fgnass.github.com/spin.js/ 
  */
 
-#waiting_message{
+#waiting-message{
 	height: 10em;
 	text-align: center;
 }

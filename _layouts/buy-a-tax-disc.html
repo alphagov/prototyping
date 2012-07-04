@@ -69,12 +69,87 @@
         <div class="article-container group">
           <article role="article" class="group">
             <div class="inner">
+              {% if page.step != null %}
+              <ol class="transaction-step-indicator group">
+                <li{% if page.step == 1 %} class="current"{% endif %}>
+                  <span class="transaction-step-number">1</span>Details
+                </li>
+                <li{% if page.step == 2 %} class="current"{% endif %}>
+                  <span class="transaction-step-number">2</span>Pay
+                </li>
+                <li{% if page.step == 3 %} class="current"{% endif %}>
+                  <span class="transaction-step-number">3</span>Done
+                </li>
+              </ol>
+              {% endif %}
+
               {{ content }}
             </div>
           </article>
         </div>
       </section>
+      {% if page.step == null %}
+      <!--start related content-->
+      <div class="related-positioning" style="position: fixed; ">
+        <div class="related-container">
+          <div class="related">
+            <div class="inner group">
+              <h2>Related topics</h2>
+              <nav role="navigation"><ul> 
+               <li class="transaction">
+                  <a href="/calculate-vehicle-tax-rates">Calculate vehicle tax rates</a>
+               </li>
+               <li class="answer">
+                  <a href="/vehicle-exempt-from-car-tax">Vehicles exempt from vehicle tax</a>
+                </li>
+               <li class="transaction">
+                  <a href="/register-sorn-statutory-off-road-notification">Register a SORN</a>
+                </li>
+                <li class="transaction">
+                  <a href="/apply-for-tax-disc-refund-form-v14">Apply for a tax disc refund (form V14)</a>
+                </li>
+                <li class="answer">
+                  <a href="/apply-duplicate-tax-disc">Apply for a duplicate tax disc</a>
+                </li>
+                <li class="answer">
+                  <a href="/exchange-tax-disc">Exchange a tax disc</a>
+                </li>
+                <li class="related-topic">
+                  <a href="/browse/driving">More from the <span>Driving</span> section</a>
+                </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div><!--end related content-->
+      {% endif %}
+      {% if page.step == 3 %}
+      <!--start related content-->
+      <div class="related-positioning" style="position: fixed; ">
+        <div class="related-container">
+          <div class="related">
+            <div class="inner group">
+              <h2>Related topics</h2>
+              <nav role="navigation">
+                <ul>
+                  <li class="transaction">
+                    <a href="/change-photo-driving-licence">Change the photo on your driving licence</a>
+                  </li>
+                  <li class="answer">
+                    <a href="/change-name-driving-licence">Changing the name on your driving licence</a>
+                  </li>
+                  <li class="related-topic"><a href="/browse/driving">More from the <span>Driving</span> section</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div><!--end related content-->
+      {% endif %}
     </div><!--end wrapper-->
+
     <footer class="group" id="footer" role="contentinfo">
       <div class="beta-notice">
         <p>This is a <a href="http://digital.cabinetoffice.gov.uk/2012/01/31/beta/">test website</a>, so may be inaccurate or misleading. The official website remains <a href="http://www.direct.gov.uk">Directgov</a> and the website of the <a href="http://www.cabinetoffice.gov.uk/content/list-government-departments-and-ministers">relevant government department or organisation</a></p>
