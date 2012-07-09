@@ -133,7 +133,7 @@ BAD: You may need to style left margin and width of individual tooltips
 #popup.help-system{
   background-color: #fff;
   padding: 1em 0 1em 1.5em;
-  width:60%;
+  /*width:60%;*/
   min-height: 26em;
   position: absolute; /* popup scrolls with page, so we can have long popups */
 }

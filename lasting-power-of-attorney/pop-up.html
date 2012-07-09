@@ -14,9 +14,9 @@ $(function() {
   });
 });
 </script>
-
+<!--
 <a id="pop-up-link" href="#help-system">Open popup</a>
-
+<span class="section-page"></span>
 <div id="help-system" style="display: none">
 <p class="close"><a href="#" title="Click or press escape to close this help">Close</a></p>
       <div class="inner">
@@ -71,7 +71,52 @@ $(function() {
         </ul>
       </nav>
     </div>
+</div>  end help system -->
 
+<div id="popular">
+  <h2>POPULAR</h2>
+</div>
+<div class="hidden" id="page1">
+  <h2>PAGE 1</h2>
+</div>
+<div class="hidden" id="page2">
+  <h2>PAGE 2</h2>
+</div>
+<div class="hidden" id="page3">
+  <h2>PAGE 3</h2>
+</div>
+<div class="hidden" id="page4">
+  <h2>PAGE 4</h2>
+</div>
+<div class="hidden" id="page5">
+  <h2>PAGE 5</h2>
 </div>
 
+<aside class="filters">
+  <div class="group">
+    <h2 class="visuallyhidden">Current Section</h2>
+    <ul>
+      <li class="open">
+        <!--<a href="/browse/driving">Driving</a>-->
+        <ul class="subsections">
+          <li data-filter="section-page1">
+            <a href="#/page1">Page 1</a>
+          </li>
+          <li data-filter="section-page2">
+            <a href="#/page2">Page 2</a>
+          </li>
+          <li data-filter="section-page3">
+            <a href="#/page3">Page 3</a>
+          </li>
+          <li data-filter="section-page4">
+            <a href="#/page4">Page 4</a>
+          </li>
+          <li data-filter="section-page5">
+            <a href="#/page5">Page 5</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>    
+</aside>
 
