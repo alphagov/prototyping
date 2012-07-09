@@ -301,7 +301,7 @@ background-color:rgba(0,0,0,.5) !important;
   float: left;
   width: 27px;
   height: 27px;
-  top: -5px;
+  top: -3px;
 }
 .progress-bar li:before {
   background-color: #ebebeb;
