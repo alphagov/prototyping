@@ -103,23 +103,20 @@ BAD: You may need to style left margin and width of individual tooltips
 -------------------------
 
 */
+.touchy{
+  margin-left: -0.5em;
+}
 .touchy input[type="checkbox"], .touchy input[type="radio"] {
   margin-right: 0.5em;
   position: relative;
 }
 .touchy label{
-  padding: 0.5em 1em;
+  padding: 0.5em 2em 0.5em 2em;
   display: block;
-  margin-bottom: 0.5em;
-  -webkit-border-radius: 10px;
-     -moz-border-radius: 10px;
-      -ms-border-radius: 10px;
-       -o-border-radius: 10px;
-          border-radius: 1.5em;
+  margin: 0 -0.9em 0.2em -0.5em;
 }
 .checked{
-  background-color: #F2F2F2;
-  font-weight: bold;
+  background-color: #f2f2f2;
 }
 .radio-action{
   float: right;

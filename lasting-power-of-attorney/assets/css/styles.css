@@ -76,8 +76,7 @@
 }
 .accordion-content, .accordion-confirm {
   background-color: white;
-  /*padding: 0.5em 2em 0.5em 5em;*/
-  padding: 0 2em 0 5em;
+  padding: 0 5em;
 }
 
 .complete .accordion-confirm{
@@ -98,9 +97,6 @@
 }
 .accordion-content {
   position: relative;
-}
-.accordion-content .intro{
-  margin-right: 2em;
 }
 .confirm-text {
 padding-right: 2em;
@@ -129,8 +125,7 @@ font-weight: bold;
 
 .help-block.examples{
   float: right;
-  margin-top: -0.1em;
-  padding-right: 3.5em;
+  margin: -0.1em -0.5em 0 0;
 }
 
 /* ================================
@@ -390,6 +385,18 @@ select[size] {
   line-height: 0.8em;
   margin-bottom:  1em;
 }
+
+label.radio:hover,
+label.checkbox:hover{
+  background-color: #f2f2f2;
+  cursor: pointer;
+  /*text-decoration: underline;*/
+}
+label.radio.checked:hover{
+  cursor: default;
+  text-decoration: none;
+}
+
 .radio input[type="radio"],
 .checkbox input[type="checkbox"] {
   float: left;
@@ -398,7 +405,7 @@ select[size] {
 }
 .controls > .radio:first-child,
 .controls > .checkbox:first-child {
-  padding-top: 5px;
+  /*padding-top: 5px;*/
 }
 .radio.inline,
 .checkbox.inline {
@@ -427,7 +434,8 @@ select[size] {
   width: 270px;
 }
 .input-xxlarge {
-  width: 530px;
+  /*width: 530px;*/
+  width: 29em;
 }
 
 input,
@@ -599,11 +607,17 @@ label details summary{
 }
 label details[open]{
   background-color: transparent;
+  padding-top: 0;
+  margin-right: -1.5em;
  }
 label details[open] summary{
   margin-bottom: 0.5em;
  }
 
+label details summary{
+  font-weight: 300;
+  font-size: 1em;
+}
 
 .toolbar{
   padding: 0.5em 1em;
@@ -612,4 +626,8 @@ label details[open] summary{
 }
 .toolbar h2{
   margin: 0;
+}
+
+details textarea {
+margin: 0.2em -1em 0 -1em;
 }

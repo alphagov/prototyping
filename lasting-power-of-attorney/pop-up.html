@@ -3,120 +3,246 @@ layout: default
 title: Create a lasting power of attorney
 categories: service
 ---
-<link media="screen" type="text/css" rel="stylesheet" href="assets/styles.css" />
+<link media="screen" type="text/css" rel="stylesheet" href="assets/css/styles.css" />
 <link media="screen" type="text/css" rel="stylesheet" href="assets/patterns.css" />
 
 <script type="text/javascript">
 $(function() {
   // Trigger help system popup
   $("#pop-up-link").click(function() {
-    BetaPopup.popup($("#help-system").html(), "help-system", $(this));
+   BetaPopup.popup($("#help-system").removeClass('hidden'), "help-system", $(this));
   });
 });
 </script>
-<!--
+
 <a id="pop-up-link" href="#help-system">Open popup</a>
-<span class="section-page"></span>
-<div id="help-system" style="display: none">
-<p class="close"><a href="#" title="Click or press escape to close this help">Close</a></p>
-      <div class="inner">
-        <div class="content">
-        <h2>Attorneys</h2>
-        <br />
-        <details open>
-          <summary>What is an attorney?</summary>
-          <p>An attorney is a person appointed by <a href="">the donor</a> to make decisions on the donor's behalf when they are unable to make decisions for themselves.</p>
-        </details>
-        <details>
-          <summary>What is a replacement attorney?</summary>
-          <p>The donor can appoint one or more replacement attorneys to take over if one of the original attorneys can no longer act for them (if an attorney dies, loses capacity or decides they do not want to act as an attorney). It's a good idea to include at least one replacement attorney.</p>
-        </details>
-        <details>
-          <summary>Who can be an attorney?</summary>
-          <p>Anyone aged 18 or over can be an attorney, including a family member, friend, professional (eg a solicitor) or spouse, partner or civil partner. An attorney for a property and financial affairs LPA cannot be bankrupt. An attorney for a health and welfare LPA must be an individual. The donor can appoint one or more attorneys.</p>
 
-          <p>It is very important that the donor completely trusts the people they appoint as attorneys, because the LPA will allow attorneys to make all the decisions that the donor would otherwise make.</p>
-        </details>
-        <details>
-          <summary>What makes a good attorney?</summary>
-          <p>A good attorney should:</p>
-          <ul>
-            <li>know the donor well enough to make decisions on their behalf</li>
-            <li>be trusted to make decisions in the donor's best interests</li>
-            <li>be willing to act on behalf of the donor</li>
-          </ul>
-        </details>
-        <details>
-          <summary>What information will I need to provide for each attorney?</summary>
-          <p>You'll need to tell us:</p>
-          <ul>
-          <li>their name, age and address</li>
-          <li>how they should <a href="">make decisions</a></li>
-          <li>about any <a href="">conditions or guidance</a> they should follow</li>
-        </ul>
-        </details>
-        <div class="form-download">
-          <p><a href="#" rel="external">Download a fact sheet on this topic (PDF, 87KB)</a></p>
-        </div>
+
+<div id="help-system" class="hidden" >
+  <p class="close"><a href="#" title="Click or press escape to close this help">Close</a></p>
+  <div class="inner">
+    <div class="content section-page">
+    <div id="donor">
+      <h2>The donor</h2>
+      <br />
+      <details open>
+        <summary>What is a donor?</summary>
+        <p>The donor is the person who makes an LPA and chooses people to make decisions for them. The purpose of an LPA is to make sure decisions are made in the donor’s best interests. It is OK for someone to help the donor complete the LPA, or to complete it for them, as long as the decisions in the LPA have been made by the donor.</p>
+      </details>
+      <div class="form-download">
+        <p><a href="#" rel="external">Download a fact sheet on this topic (PDF, 87KB)</a></p>
       </div>
-      <nav>
-        <h3>Help topics</h3>
-        <ul>
-          <li><a href="#">The donor</a></li>
-          <li class="current"><a href="#">Attorneys</a></li>
-          <li><a href="#">Certificate providers</a></li>
-          <li><a href="#">People to be told</a></li>
-          <li><a href="#">Making decisions</a></li>
-          <li><a href="#">Conditions &amp; guidance</a></li>
-        </ul>
-      </nav>
     </div>
-</div>  end help system -->
+    <div id="attorneys" class="hidden">
+      <h2>Attorneys</h2>
+      <br />
+      <details open>
+        <summary>What is an attorney?</summary>
+        <p>An attorney is a person appointed by <a href="">the donor</a> to make decisions on the donor's behalf when they are unable to make decisions for themselves.</p>
+      </details>
+      <details>
+        <summary>What is a replacement attorney?</summary>
+        <p>The donor can appoint one or more replacement attorneys to take over if one of the original attorneys can no longer act for them (if an attorney dies, loses capacity or decides they do not want to act as an attorney). It's a good idea to include at least one replacement attorney.</p>
+      </details>
+      <details>
+        <summary>Who can be an attorney?</summary>
+        <p>Anyone aged 18 or over can be an attorney, including a family member, friend, professional (eg a solicitor) or spouse, partner or civil partner. An attorney for a property and financial affairs LPA cannot be bankrupt. An attorney for a health and welfare LPA must be an individual. The donor can appoint one or more attorneys.</p>
 
-<div id="popular">
-  <h2>POPULAR</h2>
-</div>
-<div class="hidden" id="page1">
-  <h2>PAGE 1</h2>
-</div>
-<div class="hidden" id="page2">
-  <h2>PAGE 2</h2>
-</div>
-<div class="hidden" id="page3">
-  <h2>PAGE 3</h2>
-</div>
-<div class="hidden" id="page4">
-  <h2>PAGE 4</h2>
-</div>
-<div class="hidden" id="page5">
-  <h2>PAGE 5</h2>
-</div>
-
-<aside class="filters">
-  <div class="group">
-    <h2 class="visuallyhidden">Current Section</h2>
-    <ul>
-      <li class="open">
-        <!--<a href="/browse/driving">Driving</a>-->
-        <ul class="subsections">
-          <li data-filter="section-page1">
-            <a href="#/page1">Page 1</a>
-          </li>
-          <li data-filter="section-page2">
-            <a href="#/page2">Page 2</a>
-          </li>
-          <li data-filter="section-page3">
-            <a href="#/page3">Page 3</a>
-          </li>
-          <li data-filter="section-page4">
-            <a href="#/page4">Page 4</a>
-          </li>
-          <li data-filter="section-page5">
-            <a href="#/page5">Page 5</a>
-          </li>
+        <p>It is very important that the donor completely trusts the people they appoint as attorneys, because the LPA will allow attorneys to make all the decisions that the donor would otherwise make.</p>
+      </details>
+      <details>
+        <summary>What makes a good attorney?</summary>
+        <p>A good attorney should:</p>
+        <ul>
+          <li>know the donor well enough to make decisions on their behalf</li>
+          <li>be trusted to make decisions in the donor's best interests</li>
+          <li>be willing to act on behalf of the donor</li>
         </ul>
-      </li>
-    </ul>
-  </div>    
-</aside>
+      </details>
+      <details>
+        <summary>What information will I need to provide for each attorney?</summary>
+        <p>You'll need to tell us:</p>
+        <ul>
+        <li>their name, age and address</li>
+        <li>how they should <a href="">make decisions</a></li>
+        <li>about any <a href="">conditions or guidance</a> they should follow</li>
+      </ul>
+      </details>
+      <div class="form-download">
+        <p><a href="#" rel="external">Download a fact sheet on this topic (PDF, 87KB)</a></p>
+      </div>
+    </div>
 
+    <div class="hidden" id="certificate-providers">
+      <h2>Certificate providers</h2>
+      <br />
+      <details open>
+        <summary>What is a certificate provider?</summary>
+        <p>A certificate provider acts as a very important safeguard for a donor making an LPA. A certificate provider is someone the donor chooses to check and confirm:</p>
+        <ul>
+          <li>that they understand their LPA</li>
+          <li>that they not been put under pressure to make it</li>
+          <li>that the LPA has not been created fraudulently</li>
+          <li>that there is no other reason to be concerned about the LPA.</li>
+        </ul>
+        <p>A certificate provider is not a witness. Your role is not to prove that the donor made and signed the LPA, but to be very certain that they did so in the right circumstances. Being a certificate provider is an important role. You must fully understand what the role involves before agreeing to take it on – and you can refuse to do it if you do not feel able to confirm everything that you are being asked to certify.</p>
+      </details>
+      <details>
+        <summary>Who can be a certificate provider?</summary>
+        <p>A certificate provider must be over the age of 18 and can be either:</p>
+        <ul>
+          <li>someone who has known the donor for at least two years</li>
+          <li>someone who has the relevant skills or knowledge to be able to form a professional judgment about the donor’s understanding of the LPA and what it involves.</li>
+        </ul>
+        <p>To be chosen for your relevant professional skills, you must be one of the following:</p>
+        <ul>
+          <li>a registered healthcare professional, such as the donor’s doctor</li>
+          <li>a solicitor, barrister, or advocate</li>
+          <li>a registered social worker</li>
+          <li>an Independent Mental Capacity Advocate (IMCA)</li>
+          <li>someone who considers that they have the relevant professional skills and can specify what those skills are in the LPA.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Who can not be a certificate provider?</summary>
+        <p>The following people cannot be a certificate provider for an LPA:</p>
+        <ul>
+          <li>an attorney appointed under the LPA</li>
+          <li>an attorney appointed under any other LPA made by the donor or under an Enduring Power of Attorney made by the donor</li>
+          <li>a member of the donor’s family or a member of an attorney’s family</li>
+          <li>a business partner or employee of either the donor or an attorney</li>
+          <li>an owner, director, manager or employee of any care home in which the donor is living when they make the LPA, or a member of that person’s family.</li>
+        </ul>
+        <p>The list of family members who cannot be a certificate provider includes:</p>
+        <ul>
+          <li>a spouse, civil partner or partner</li>
+          <li>children, step-children or grandchildren</li>
+          <li>parents, step-parents or grandparents</li>
+          <li>brothers or sisters, including half-brothers, half-sisters, step-brothers or step-sisters</li>
+          <li>aunts, uncles, nieces or nephews</li>
+          <li>someone related by marriage (such as a son-in-law or daughter-in-law).</li>
+        </ul>
+        <p>There are other family relationships that the Public Guardian or Court of Protection may
+        decide are not suitable. It is best not to ask anybody with a family connection to be the
+        certificate provider.</p>
+      </details>
+      <details>
+        <summary>What does a certificate provider do?</summary>
+        <p>A certificate provider completes and signs part of the LPA after the donor has created and signed their part of the LPA. The donor’s part of the LPA includes naming their attorneys, deciding how the attorneys will make decisions and setting out restrictions, conditions and guidance for how their attorneys will act.</p>
+        <p>In completing your part of the LPA, you are confirming that in your opinion:</p>
+        <ul>
+          <li>the donor has mental capacity to make the LPA and: (i) understands what an LPA is; (ii) understands the contents of their LPA, and (iii) understands the powers they are giving to their attorneys</li>
+          <li>the donor is not being put under pressure, being tricked, or being forced by someone else to make the LPA</li>
+          <li>nothing else exists that would prevent the donor’s LPA being created.</li>
+        </ul>
+        <p>You should read through the LPA and discuss it with the donor to make sure that all
+        of the things listed are true. It is advisable to ask the donor questions about their
+        understanding of the LPA and the circumstances in which they are making it. It is best
+        if this conversation is held in private, without anybody else able to overhear it or able to
+        lead or guide the donor’s answers to your questions.
+        </p>
+      </details>
+      <div class="form-download">
+        <p><a href="#" rel="external">Download a fact sheet on this topic (PDF, 87KB)</a></p>
+      </div>
+    </div>
+
+    <div class="hidden" id="people-to-be-told">
+      <h2>People to be told</h2>
+      <p class="intro">People to be told are people who know the donor well and who the donor wants to be
+given the opportunity to raise any concerns before the LPA is registered. When the donor
+or attorneys apply to register the LPA, they will send each of the people to be told a form
+to let them know. The people to be told will then have five weeks to raise any concerns
+about the way the LPA was made or some relevant fact that might affect the LPA. They
+do not have to say or do anything, but this is an opportunity for people who know the
+donor to raise concerns.</p>
+
+<p>The donor can choose up to five people to be told. They are often family members
+or friends. The donor does not have to choose anybody to be told but if they do not,
+they must have two certificate providers instead of one. An attorney or a replacement
+attorney cannot be a person to be told.</p>
+
+<p>If the donor decides not to name any people to be told, they must choose two people for
+the next part (confirming the donor’s understanding) instead of one.</p>
+    </div>
+
+    <div class="hidden" id="making-decisions">
+      <h2>Making decisions</h2>
+      <br />
+<details open>
+  <summary>How should multiple attorneys make decisions?</summary>
+<p>If the donor has chosen to have more than one attorney then they must decide whether
+they want the attorneys to make some or all decisions either together or independently.
+The legal terms used are “jointly” and “severally”. The three choices are:</p>
+</details>
+
+<details>
+  <summary>Jointly</summary>
+<p>Attorneys must always make all decisions together. They must agree on all decisions and they must all sign any relevant documents. The donor might choose this option if they want to make sure that the attorneys are all in agreement on every decision, regardless of how large or small it is. If all of the
+attorneys do not agree on a decision, then that decision cannot be made on the donor’s behalf.</p>
+
+<p>If the donor appoints the attorneys to act jointly, then if one of them becomes unable
+to act for some reason, the LPA will be cancelled unless the donor has appointed one or
+more replacement attorneys.</p>
+</details>
+
+<details>
+  <summary>Jointly and severally</summary>
+  <p>Attorneys can make any decisions together but can also make any decisions independently. Any action taken by any attorney alone is as valid as if they were the only attorney. It is up to the attorneys to choose how they make decisions.</p>
+
+  <p>Many people choose this option because it means that their attorneys have the flexibility
+  to make simple or urgent decisions quickly and easily. It also means that if one of the
+  attorneys dies or can no longer act for some reason, the LPA will not be cancelled.</p>
+</details>
+
+<details>
+  <summary>It depends on the decision</summary>
+<p>Attorneys must make certain decisions together but they may also make other decisions independently. The donor decides which decisions all attorneys must make together. If the donor chooses this option they must clearly state which decisions the attorneys should make as a group and which should be made either
+together or as a group.</p>
+
+<p>The donor might choose this option if they are happy for the attorneys to make day-to-day decisions independently but want them to get together to make more significant decisions. If you choose this option you must clearly state which decisions the attorneys should make jointly and which should be made jointly and severally.</p>
+</details>
+
+<p>If you are not sure which option is suitable for the donor you may want to get legal
+advice.</p>
+
+      <div class="form-download">
+        <p><a href="#" rel="external">Download a fact sheet on this topic (PDF, 87KB)</a></p>
+      </div>
+
+    </div>
+
+    <div class="hidden" id="conditions-and-guidance">
+      <h2>Conditions &amp; guidance</h2>
+    </div>
+  </div>
+  <nav class="filters">
+    <div class="group">
+      <h3>Help topics</h3>
+      <ul>
+        <li class="open">
+          <ul class="subsections">
+            <li data-filter="section-donor" class="active">
+              <a href="#/help/thedonor">The donor</a>
+            </li>
+            <li data-filter="section-attorneys">
+              <a href="#/help/attorneys">Attorneys</a>
+            </li>
+            <li data-filter="section-certificate-providers" >
+              <a href="#/help/certificate-providers">Certificate providers</a>
+            </li>
+            <li data-filter="section-people-to-be-told" >
+              <a href="#/help/people-to-be-told">People to be told</a>
+            </li>
+            <li data-filter="section-making-decisions" >
+              <a href="#/help/making-decisions">Making decisions</a>
+            </li>
+            <li data-filter="section-conditions-and-guidance" >
+              <a href="#/help/conditions">Conditions &amp; guidance</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
