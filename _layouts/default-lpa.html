@@ -52,15 +52,25 @@
       </div>
       <ol class="group">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Section</a></li>
+        <li><a href="#">Family</a></li>
       </ol>
     </nav>
     <div id="wrapper" class="{{ page.categories }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
       <section id="content" role="main" class="group">
         <header class="page-header group">
           <hgroup>
+              
+            <div class="toolbar">
+              <ul class="account-links">
+                {% if page.signedin == yes %}<li>Signed in as: <a href="">contact@timpaul.co.uk</a></li>
+                <li style="float: right"><a href="">Sign out</a></li>{% endif %}
+
+                {% if page.signedin != yes %}
+                <li style="float: right"><a href="">Sign in</a></li>{% endif %}
+              </ul>
+            </div>
             <h1><span>{{ page.categories }}</span> {{ page.title }}</h1>
-          </hgroup>
+        </hgroup>
         </header>
         <div class="article-container group">
           <article role="article" class="group">

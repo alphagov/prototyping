@@ -99,21 +99,25 @@ BAD: You may need to style left margin and width of individual tooltips
   display: block;
 }
 
-/* TOUCHY RADIOS
--------------------------
+/* EMPHASISED RADIOS & CHECKBOXES
+---------------------------------
 
 */
-.touchy{
+.emphasised{
   margin-left: -0.5em;
 }
-.touchy input[type="checkbox"], .touchy input[type="radio"] {
+.emphasised input[type="checkbox"], .emphasised input[type="radio"] {
   margin-right: 0.5em;
   position: relative;
 }
-.touchy label{
+.emphasised label{
   padding: 0.5em 2em 0.5em 2em;
   display: block;
   margin: 0 -0.9em 0.2em -0.5em;
+}
+.emphasised label.radio:hover,
+.emphasised label.checkbox:hover{
+  background-color: #f2f2f2;
 }
 .checked{
   background-color: #f2f2f2;
