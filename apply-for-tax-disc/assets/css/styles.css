@@ -18,6 +18,12 @@
   height: 0;
  }
 
+ /* Display summary/details tags as standard panels
+summary::-webkit-details-marker {
+  display: none
+  pointer: ;
+} */
+
 /* =================================
  * Transaction-wide styles
  * ================================= */
@@ -31,11 +37,6 @@
 	font-size: 1em;
 	margin: 1em 1em 0 0;
 	text-indent: -9999px;
-}
-
-/* Display summary/details tags as standard panels (for now) */
-summary::-webkit-details-marker {
-  display: none
 }
 
 /* ======================
@@ -69,7 +70,7 @@ article label {
 
 
 /* ==================================================
- * Simple Inline Expansion
+ * DETAILS / SUMMARY
  * ================================================== */
 
  /* A styled-up version of the details/summary HTML5 elements
@@ -79,15 +80,15 @@ article label {
   */
 
 details{
-	margin:  0 -1em 1em -1em;
-	padding: 0.7em 1em 1em 1em;
+  margin:  0 -1em 1em -1em;
+  padding: 0.7em 1em 1em 1em;
 }
 details summary{
-	color: #2E3191;
-	cursor: pointer;
-	font-size: 112.5%;
-	display: inline;
-	text-decoration: underline;
+  color: #2E3191;
+  cursor: pointer;
+  font-size: 112.5%;
+  display: inline;
+  text-decoration: underline;
 }
 details summary:hover{
   color: #1D97FF;
@@ -95,7 +96,7 @@ details summary:hover{
 
 /* Open state */
 details[open]{
-	background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 details[open] > summary{
   color: #000;
@@ -103,51 +104,60 @@ details[open] > summary{
   text-decoration: none;
 }
 details summary:focus{
-	outline: none;
+  outline: none;
 }
 
-/* ==================================================
- * Transaction step indicator
- * ================================================== */
+/* ================================================================
+ * PROGRESS BAR
+ * ================================================================
+ * 
+ * Based on ERTP design, but this one scales and doesn't use images
+ */
 
- /* Taken from ERTP prototype */
-
-ol.transaction-step-indicator {
-	list-style-type: none;
-	font-size:1.1em;
-	text-align:center;
-	padding:0;
-	margin:0;
+ .progress-bar{
+  counter-reset:li;       /* Initiate a counter */
+  list-style-type: none;  /* Remove default numerals */
+  margin-bottom: 2em;
+  text-align: center;
 }
-
-.transaction-step-indicator > li {
-	width: 161px;
-	height: 60px;
-	margin-left: -35px;
-	background-image: url('../img/unselected-icon.png');
-	background-position: right;
-	background-repeat: no-repeat;
-	line-height: 60px;
-	display: inline-block;
-	font-weight:normal;
-	color:#666;
-	text-align:left;
+.progress-bar li{
+  background: #ebebeb;
+  border-radius: 20px;
+  color: #666;
+  display: inline-block;
+  padding: 7px 33px;
+  position: relative;
 }
-
-.transaction-step-indicator > li.current {
-	background-image: url('../img/selected-icon.png');
-	font-weight:500;
-	color: #fff;
+.progress-bar li:before,  /* Grey circle */
+.progress-bar li:after{   /* White border around grey circle */
+  position: absolute;
+  float: left;
+  width: 27px;
+  height: 27px;
+  top: -3px;
 }
-
-.transaction-step-number {
-	padding: 21px;
-	text-align:center;
+.progress-bar li:before {
+  background-color: #ebebeb;
+  border: 10px solid #ebebeb;
+  border-radius: 30px;
+  color: #666;
+  content:counter(li);  /* Use the counter as content */
+  counter-increment:li; /* Increment the counter by 1 */
+  left: -18px;
+  z-index: 99999;
 }
-
-.transaction-content {
-	background-color: white;
-	padding: 0em 2em 0em 5em;
+.progress-bar li.current:before,
+.progress-bar li.current {
+  background: #666;
+  border-color: #666;
+  color: #fff;
+}
+.progress-bar li:after {
+  background-color: #fff;
+  border: 10px solid #fff;
+  border-radius: 32px;
+  content: " ";
+  left: -21px;
 }
 
 /* ======================
@@ -216,14 +226,21 @@ ol.transaction-step-indicator {
 
 /* Form */
 #v11 {
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 
-/* Image of the V11 form */
+/* Image of the V11 & V5C forms */
+#v11-image,
+#v5C-image{
+  width: 109px;
+  float: right;
+}
+
 #v11-image{
-	width: 109px;
-	float: right;
 	margin: 0.4em 0 0 1em;
+}
+#v5C-image{
+
 }
 
 /* Jumbo text field */

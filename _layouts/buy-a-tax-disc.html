@@ -62,7 +62,7 @@
       <section id="content" role="main" class="group">
         <header class="page-header group">
           <hgroup>
-            <span class="product_owner">Brought to you by the DVLA</span>
+            <span class="product-owner">Brought to you by the DVLA</span>
             <h1><span>{{ page.categories }}</span> {{ page.title }}</h1>
           </hgroup>
         </header>
@@ -70,17 +70,13 @@
           <article role="article" class="group">
             <div class="inner">
               {% if page.step != null %}
-              <ol class="transaction-step-indicator group">
-                <li{% if page.step == 1 %} class="current"{% endif %}>
-                  <span class="transaction-step-number">1</span>Details
-                </li>
-                <li{% if page.step == 2 %} class="current"{% endif %}>
-                  <span class="transaction-step-number">2</span>Pay
-                </li>
-                <li{% if page.step == 3 %} class="current"{% endif %}>
-                  <span class="transaction-step-number">3</span>Done
-                </li>
-              </ol>
+              <div class="progress-bar">
+                  <ol>
+                      <li{% if page.step == 1 %} class="current"{% endif %}>Enter details</li>
+                      <li{% if page.step == 2 %} class="current"{% endif %}>Pay</li>
+                      <li{% if page.step == 3 %} class="current"{% endif %}>Done</li>
+                  </ol>
+              </div>
               {% endif %}
 
               {{ content }}
