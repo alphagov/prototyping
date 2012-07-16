@@ -11,38 +11,28 @@ step: 1
 	<input type="text" id="v11_number" class="jumbo" track="data_v11_number" />
     <a href="4.html" class="large buttonV2 turquoise"><span>Continue</span></a>
 </form>
-<details>
+<details open>
 	<summary track="help_v11_number">What's a V11 reference number?</summary>
 	<a href="assets/img/V11_pictogram.png"><img id="v11-image" src="assets/img/V11_pictogram.png" alt="The reference number is towards the top middle of the V11 letter" /></a>
 	<p>It's the 16 digit number on the reminder letter that we send out when your tax disc is due for renewal.</p>
     <details>
         <summary track="help_no_v11">I don't have the reminder</summary>
             <p>You can still buy your tax disc online using the vehicle's registration number and V5C (log book) number instead.</p> 
-            <p><strong>IMPORTANT: </strong>You can't do this if you've recently purchased your vehicle and don't yet have the full V5C (the green slip alone is not enough).</p>
-
-            <details>
-                <summary>OK, continue</summary>
-            <form>
-              <fieldset class="group"> 
-                <div class="form-row">
-                  <label for="vrm-number">Enter vehicle registration number</label>
-                  <input type="text" name="vrm-number" id="vrm-number" class="jumbo" track="data_vrm-number" required />
-                </div>
-                <div class="form-row" id="v5c">
-                  <label for="v5c-number">Enter V5C (log book) number</label>
-                  <input type="text" name="v5c-number" id="v5c-number" class="jumbo" track="data_v5c-number" required />
-
-                  <p class="footnote">
-                    <a href="assets/img/V5C_crop.png">
+            <p>Don't do this if you've recently purchased your vehicle and don't yet have the full V5C (the green slip alone is not enough).</p>
+            <form id="v5c-form" class="intro">
+              <fieldset>
+                  <label for="v5c-number">Enter V5C number (it's on the front cover)
                       <img id="v5C-image" src="assets/img/V5C_crop.png" alt="Image of a car registration certicicate" />
-                    </a>
-                    It's on the front cover of the registration certificate
-                  </p>
-                </div>
+                  </label>
+                  <input type="text" name="v5c-number" id="v5c-number" class="input-xxlarge" track="data_v5c-number" required />
+                  <label for="vrm-number">Enter vehicle registration number</label>
+                  <input type="text" name="vrm-number" id="vrm-number" class="input-xxlarge" track="data_vrm-number" required />
               </fieldset>
-              <a href="4.html" class="large buttonV2 turquoise"><span>Continue</span></a>
+              <br>
+              <div class="form-actions">
+                <a href="4.html" class="large buttonV2 turquoise"><span>Continue</span></a>
+              </div>
             </form>
-        </details>
     </details>
 </details>
 

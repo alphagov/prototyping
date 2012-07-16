@@ -18,11 +18,13 @@
   height: 0;
  }
 
- /* Display summary/details tags as standard panels
-summary::-webkit-details-marker {
-  display: none
-  pointer: ;
-} */
+ /* Display summary/details tags as standard panels */
+summary[track="help_v11_number"]::-webkit-details-marker {
+  display: none;
+}
+summary[track="help_v11_number"]{
+  margin-left: 0;
+}
 
 /* =================================
  * Transaction-wide styles
@@ -245,9 +247,6 @@ details summary:focus{
 #v11-image{
 	margin: 0.4em 0 0 1em;
 }
-#v5C-image{
-
-}
 
 /* Jumbo text field */
 #v11 input,
@@ -270,6 +269,10 @@ details summary:focus{
 #v11 .buttonV2 span{
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
+}
+
+#v5c-form{
+  margin: 0;
 }
 
 /* =================================
@@ -568,6 +571,7 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   display: inline-block;
+  margin: 0;
   /*height: 18px;
   padding: 4px;
   margin-bottom: 9px;
