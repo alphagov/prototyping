@@ -80,8 +80,8 @@ article label {
   */
 
 details{
-  margin:  0 -1em 1em -1em;
-  padding: 0.7em 1em 1em 1em;
+  margin:  0 -1em 0 -1em;
+  padding: 0.7em 1em 0 1em;
 }
 details summary{
   color: #2E3191;
@@ -89,6 +89,10 @@ details summary{
   font-size: 112.5%;
   display: inline;
   text-decoration: underline;
+  margin-left: 1em;
+}
+details summary::-webkit-details-marker{
+  margin-left: -1em;
 }
 details summary:hover{
   color: #1D97FF;
@@ -97,6 +101,8 @@ details summary:hover{
 /* Open state */
 details[open]{
   background-color: #f2f2f2;
+  padding: 0.7em 1em 1em 1em;
+  margin:  0.5em -1em 1em -1em;
 }
 details[open] > summary{
   color: #000;
@@ -356,6 +362,7 @@ details summary:focus{
 .tax-option label {
 	border: 4px solid #fff;
   display: block;
+  margin-left: -4px;
   padding: 0.5em 1em;
   
   text-align: center;
@@ -379,9 +386,6 @@ details summary:focus{
 	font-weight: bold;
 	border: 4px solid #28a197;
   background-color: #e1e8e8;
-}
-.tax-option input:checked+label{ 
-
 }
 
 .tax-option .car_tax {
@@ -415,14 +419,6 @@ details summary:focus{
 .card-images img{
 	width: 2em;
 	margin-top: 0.5em;
-}
-
-.form-row{
-	margin-bottom: 2em;
-}
-
-.card-codes{
-	width: 3em;
 }
 
 #payment-details label{
@@ -467,6 +463,17 @@ details summary:focus{
 }
 #email-confirmation .footnote{
 	clear: left;
+}
+
+/* Adjust form label widths to suit copy */
+#cartax_payment .form-horizontal .control-label{
+  width: 6em;
+}
+#cartax_payment .form-horizontal .controls {
+  margin-left: 8em;
+}
+#cartax_payment .form-horizontal .form-actions{
+  padding-left: 8em;
 }
 
 /* ==================================================
@@ -529,5 +536,270 @@ div.next-steps h2{
 	border-bottom: 0;
 }
 
+/* ===============================
+ * FORMS FRAMEWORK
+ * ===============================
+ *
+ * Stripped down subset of Twitter Bootstrap classes.
+ * The idea being that you can mark up your forms HTML as per Bootstrap
+ * and it'll behave broadly as expected.
+ */
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 1.1875em
+}
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  display: inline-block;
+  /*height: 18px;
+  padding: 4px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #555555;*/
+}
+textarea {
+  min-height: 10em;
+  height: auto;
+  padding: 0.25em 0.5em;
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+select[multiple],
+select[size] {
+  height: auto;
+}
+.radio,
+.checkbox {
+  min-height: 1em;
+  padding-left: 1em;
+  line-height: 0.8em;
+  margin-bottom:  1em;
+}
+
+label.radio:hover,
+label.checkbox:hover{
+  cursor: pointer;
+  /*text-decoration: underline;*/
+}
+label.radio.checked:hover{
+  cursor: default;
+  text-decoration: none;
+}
+
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: -18px;
+  margin-right: 0.5em;
+}
+.controls > .radio:first-child,
+.controls > .checkbox:first-child {
+  /*padding-top: 5px;*/
+}
+.radio.inline,
+.checkbox.inline {
+  display: inline-block;
+  padding-top: 5px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+  margin-left: 10px;
+}
+.input-mini {
+  width: 60px;
+  max-width: 60px; /* Override applicatiom.css style */
+}
+.input-small {
+  width: 90px;
+}
+.input-medium {
+  width: 150px;
+}
+.input-large {
+  width: 210px;
+}
+.input-xlarge {
+  width: 270px;
+}
+.input-xxlarge {
+  /*width: 530px;*/
+  width: 28.3em;
+}
+
+input,
+textarea,
+.uneditable-input {
+  margin-left: 0;
+  margin-bottom: 0.5em;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  border-color: #ddd;
+}
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][readonly],
+input[type="checkbox"][readonly] {
+  background-color: transparent;
+}
+
+.help-block,
+.help-inline {
+  color: #555555;
+}
+.help-block {
+  display: block;
+  margin-bottom: 9px;
+}
+.help-inline {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+
+.form-search input,
+.form-inline input,
+.form-horizontal input,
+.form-search textarea,
+.form-inline textarea,
+.form-horizontal textarea,
+.form-search select,
+.form-inline select,
+.form-horizontal select,
+.form-search .help-inline,
+.form-inline .help-inline,
+.form-horizontal .help-inline,
+.form-search .uneditable-input,
+.form-inline .uneditable-input,
+.form-horizontal .uneditable-input,
+.form-search .input-prepend,
+.form-inline .input-prepend,
+.form-horizontal .input-prepend,
+.form-search .input-append,
+.form-inline .input-append,
+.form-horizontal .input-append {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  margin-bottom: 0;
+}
+
+.form-search .hide,
+.form-inline .hide,
+.form-horizontal .hide {
+  display: none;
+}
+.form-search label,
+.form-inline label {
+  display: inline-block;
+}
+.form-search .input-append,
+.form-inline .input-append,
+.form-search .input-prepend,
+.form-inline .input-prepend {
+  margin-bottom: 0;
+}
+.form-search .radio,
+.form-search .checkbox,
+.form-inline .radio,
+.form-inline .checkbox {
+  padding-left: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.form-search .radio input[type="radio"],
+.form-search .checkbox input[type="checkbox"],
+.form-inline .radio input[type="radio"],
+.form-inline .checkbox input[type="checkbox"] {
+  float: left;
+  margin-right: 3px;
+  margin-left: 0;
+}
+.control-group {
+  margin-bottom: 9px;
+}
+legend + .control-group {
+  margin-top: 1em;
+  -webkit-margin-top-collapse: separate;
+}
+.form-horizontal .control-group {
+  /*margin-bottom: 1em;*/
+  *zoom: 1;
+}
+.form-horizontal .control-group:before,
+.form-horizontal .control-group:after {
+  display: table;
+  content: "";
+}
+.form-horizontal .control-group:after {
+  clear: both;
+}
+.form-horizontal .control-label {
+  float: left;
+  width: 140px;
+  /*padding-top: 5px;*/
+  margin-bottom: 0;
+  text-align: right;
+
+}
+.form-horizontal .controls {
+  *display: inline-block;
+  *padding-left: 20px;
+  margin-left: 160px;
+  *margin-left: 0;
+}
+.form-horizontal .controls:first-child {
+  *padding-left: 160px;
+}
+.form-horizontal .help-block {
+  margin-top: 9px;
+  margin-bottom: 0;
+}
+.form-horizontal .form-actions {
+  padding-left: 160px;
+}
+
+.form-horizontal input[type="text"], 
+.form-horizontal input[type="search"]{
+  margin: 0;
+}
 
 
