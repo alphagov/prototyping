@@ -74,7 +74,8 @@
   font-weight: bold;
   margin-bottom: 1em;
 }
-.accordion-content, .accordion-confirm {
+.accordion-content,
+.accordion-confirm{
   background-color: white;
   padding: 0 5em;
 }
@@ -99,6 +100,23 @@ font-weight: bold;
   margin: 2em 0;
 }
 
+.added-attorney{
+background-color: #E8F0F0;
+margin: 0 -1.2em 1em -1.2em;
+padding: 1em;
+}
+.added-attorney .edit{
+  float: right;
+  margin-left: 0.5em;
+}
+.added-attorney .label{
+  display: inline-block;
+  width: 10em;
+  margin-left: -3em;
+  text-align: right;
+  margin-right: 0.5em;
+  font-weight: normal;
+}
 
 .secondary-action .button{
   background-color: #E1E8E8;
@@ -735,4 +753,12 @@ summary.button::-webkit-details-marker { display:none; }
 }
 .link-style:hover{
   color: #2E8ACA;
+}
+
+
+/* PROTOTYPE ONLY STYLE */
+/* Helper styles for the prototype - not intended as production code */
+
+#later-attorney-example{
+  display: none;
 }
