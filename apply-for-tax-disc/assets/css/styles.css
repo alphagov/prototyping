@@ -168,28 +168,11 @@ details summary:focus{
   left: -21px;
 }
 
-/* ======================
- * Wating message
- * ======================
-
- * Uses spin.js to embed 'spinner' image into element
- * http://fgnass.github.com/spin.js/ 
- */
-
-#waiting-message{
-	height: 10em;
-	text-align: center;
-}
-
-
 
 /* =================================
  * Landing page
  * ================================= */
 
-.intro{
-	/*margin-top: 2em;*/
-}
 
 /* Product image (ie. a tax disc) */
 .product-image{

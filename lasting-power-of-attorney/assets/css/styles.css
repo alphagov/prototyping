@@ -755,10 +755,42 @@ summary.button::-webkit-details-marker { display:none; }
   color: #2E8ACA;
 }
 
+.example {
+background: none repeat scroll 0 0 #E7EBDA;
+margin: 0.75em -1em;
+padding: 0.5em 1em;
+}
 
 /* PROTOTYPE ONLY STYLE */
 /* Helper styles for the prototype - not intended as production code */
 
 #later-attorney-example{
   display: none;
+}
+
+
+/* REGISTRATION STYLES */
+
+.capture-dates .controls label{
+  margin-top: -2em;
+}
+.capture-dates h3{
+  font-size: 1.1875em;
+}
+.capture-dates .controls label,
+.capture-dates h3{
+  font-weight: bold;
+}
+.capture-dates .control-label{
+  text-align: left;
+}
+.card-images{
+  display: inline-block;
+  line-height: 4em;
+  height: 2em;
+  margin: -1em 0 0 0.5em;
+}
+.card-images img{
+  width: 2em;
+  margin-top: 0.5em;
 }
