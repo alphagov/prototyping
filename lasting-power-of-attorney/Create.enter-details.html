@@ -6,7 +6,6 @@ signed-in: yes
 ---
 
 <link media="screen" type="text/css" rel="stylesheet" href="assets/css/styles.css" />
-<link media="screen" type="text/css" rel="stylesheet" href="assets/patterns.css" />
 <script src="assets/js/behaviours.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(function() {
@@ -59,18 +58,14 @@ $(function() {
 
 
 
-<div id="accordion" class="accordion">
+<div id="accordion" class="accordion no-future">
   <!-- Step 0 -->
       <div id="step0" class="accordion-item">
-        <!--
-        <h2 class="accordion-header"> 
-          1. What is a lasting power of attorney?
-        </h2>-->
         <div class="accordion-content">
           <div class="intro"><p>A lasting power of attorney (LPA) is a powerful legal document that allows someone (the “donor”) to choose other people (the “attorneys”) to make decisions on their behalf if they lose the mental capacity to make those decisions themselves. If you're not yet familiar with the process we suggest that you find out more before continuing.</p>       
           <p><a href=""><strong>Find out more&hellip;</strong></a></p></div>
           <ul class="form-actions">
-            <li><a href="#step2" class="next-part button">Continue to step 1 of 10</a></li>
+            <li><a href="#step2" class="next-part button">First question (of 11)</a></li>
           </ul> 
 
         </div>
@@ -103,7 +98,7 @@ $(function() {
                     <div>Don't worry, once you've created the first LPA you'll be able to use the information you entered to quickly create another one.</div>
                   </details>
           <ul class="form-actions">
-            <li><a href="#step2" class="next-part button">Continue to step 2 of 10</a></li>
+            <li><a href="#step2" class="next-part button">Next question (2 of 11)</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
           </ul> 
 
@@ -412,7 +407,7 @@ $(function() {
   </div>
 </div>
           <ul class="form-actions">
-            <li><a href="#step3" class="next-part button">Continue to step 3 of 10</a></li>
+            <li><a href="#step3" class="next-part button">Next question (3 of 11)</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
             <li class="secondary-action"><a href="" class="button">Print preview</a></li>
@@ -435,10 +430,12 @@ $(function() {
                 <div class="control-group">
                   <label class="control-label" for="optionsCheckbox"><strong>When should this LPA take effect?</strong></label>
                   <div class="emphasised controls">
+                    <!--
                     <label class="radio">
                       <input type="radio" name="LPAwhenRadios" id="optionsRadios1" value="option1">
                       Only when the donor has lost mental capacity
                     </label>
+                  -->
                     <label class="radio">
                       <input type="radio" name="LPAwhenRadios" id="optionsRadios2" value="option2">
                       As soon as it's registered
@@ -446,10 +443,12 @@ $(function() {
                     <label class="radio">
                       <input type="radio" name="LPAwhenRadios" id="optionsRadios3" value="option3">
                       <details>
-                        <summary>Some other time&hellip;</summary>
+                        <!--<summary>Some other time&hellip;</summary>-->
+                        <summary>Only when the donor has lost mental capacity</summary>
                         <label class="visuallyhidden">Please provide details</label>                        
-                        <span class="help-block examples"><a href="">Not sure what to put?&hellip;</a></span>
-                        <textarea class="input-xxlarge" placeholder="Please provide details"></textarea>
+                        <!--<span class="help-block examples"><a href="">Not sure what to put?&hellip;</a></span>-->
+                        <textarea class="input-xxlarge" placeholder="Please provide details">Lorem ipsum...
+                        </textarea>
                       </details>
                     </label>
                   </div>
@@ -457,7 +456,7 @@ $(function() {
                 </div>
               </fieldset>
           <ul class="form-actions">
-            <li><a href="#step4" class="next-part button">Continue to step 4 of 10</a></li>
+            <li><a href="#step4" class="next-part button">Next question (4 of 11)</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
             <li class="secondary-action"><a href="" class="button">Print preview</a></li>
@@ -491,13 +490,7 @@ $(function() {
             <a href="#" class="edit">edit</a>
           <span class="confirm-text"><strong class="label">1st attorney:</strong> Jane Smith</span>
         </div>
-        <div class="added-attorney">
-            <a href="#" class="edit">delete</a>
-            <a href="#" class="edit">edit</a>
-          <span class="confirm-text"><strong class="label">Replacement:</strong> John Bloggs</span>
-        </div>
         <p class="add"><a href="#" id="open-attorney-form">Add a second attorney?</a></p>
-        <p class="add"><a href="#" id="open-attorney-form">Add a second replacement attorney?</a></p>
       </div>
 
 <!-- START OF ATTORNEY FORM -->
@@ -787,7 +780,7 @@ $(function() {
 
 
           <ul class="form-actions">
-            <li><a href="#step5" class="next-part button">Continue to step 5 of 10</a></li>
+            <li><a href="#step5" class="next-part button">Next question (5 of 11)</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
             <li class="secondary-action"><a href="" class="button">Print preview</a></li>
@@ -800,14 +793,37 @@ $(function() {
         <div class="accordion-confirm">
           <span class="confirm-text"><strong class="label">2nd attorney:</strong> Fred Bloggs</span>
         </div>
-        <div class="accordion-confirm">
-          <span class="confirm-text"><strong class="label">Replacement:</strong> Graham Briggs</span>
-        </div>
       </div>
+
 <!-- Step 5 -->
       <div id="step5" class="accordion-item">
         <h2 class="accordion-header"> 
-          5. How should any decisions be made?
+          5. Do you want to appoint any replacement attorneys?
+        </h2>
+        <div class="accordion-content">
+            <p class="intro">The donor can appoint one or more replacement attorneys to take over if one of the original attorneys can no longer act for them (if an attorney dies, loses capacity or decides they do not want to act as an attorney). It's a good idea to include at least one replacement attorney. <a class="open-help" href="">Learn more&hellip;</a></p>
+
+        <p class="add"><a href="#" id="open-attorney-form">Add a replacement attorney?</a></p>
+
+        <ul class="form-actions">
+            <li><a href="#step5" class="next-part button">Next question (6 of 11)</a></li>
+            <li class="secondary-action"><a href="" class="button">Quit</a></li>
+            <li class="secondary-action"><a href="" class="button">Save for later</a></li>
+            <li class="secondary-action"><a href="" class="button">Print preview</a></li>
+          </ul>     
+        </div>
+        <div class="accordion-confirm">
+            <a href="#" class="edit">change this</a>
+          <span class="confirm-text"><strong class="label">1st replacement:</strong> Fred Smith</span>
+        </div>
+      </div>
+
+
+
+<!-- Step 6 -->
+      <div id="step6" class="accordion-item">
+        <h2 class="accordion-header"> 
+          6. How should any decisions be made?
         </h2>
         <div class="accordion-content">
               <p class="intro">
@@ -837,12 +853,37 @@ $(function() {
                       </details>
                     </label>
                   </div>
+                </div>
+              </fieldset>
 
+              <fieldset>
+                <div class="control-group">
+                  <label class="control-label" for="optionsCheckbox"><strong>How should the replacement attorneys be used?</strong></label>
+                  <div class="emphasised controls">
+                    <label class="radio">
+                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                      Option 1
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                      Option 2
+                    </label>
+
+                    <label class="radio">
+                      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                      <details>
+                        <summary>Option 3&hellip;</summary>
+                        <label class="visuallyhidden">Please provide details</label>
+                        <span class="help-block examples"><a href="">Not sure what to put?&hellip;</a></span>
+                        <textarea class="input-xxlarge" placeholder="Please provide details"></textarea>
+                      </details>
+                    </label>
+                  </div>
                 </div>
               </fieldset>
 
           <ul class="form-actions">
-            <li><a href="#step6" class="next-part button">Continue to step 6 of 10</a></li>
+            <li><a href="#step6" class="next-part button">Next question (7 of 11)</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
             <li class="secondary-action"><a href="" class="button">Print preview</a></li>
@@ -853,10 +894,10 @@ $(function() {
           <span class="confirm-text"><strong class="label">Decisions made:</strong> as a group</span>
         </div>
       </div>
-<!-- Step 6 -->
-      <div id="step6" class="accordion-item">
+<!-- Step 7 -->
+      <div id="step7" class="accordion-item">
         <h2 class="accordion-header"> 
-          6. Are there any extra restrictions or guidance that should be followed?
+          7. Are there any extra restrictions or guidance that should be followed?
         </h2>
         <div class="accordion-content">
               <p class="intro">
@@ -891,7 +932,7 @@ $(function() {
               </fieldset>
 
           <ul class="form-actions">
-            <li><a href="#step7" class="next-part button">Continue to step 7 of 10</a></li>
+            <li><a href="#step7" class="next-part button">Next question (7 of 11)</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
             <li class="secondary-action"><a href="" class="button">Print preview</a></li>
           </ul> 
@@ -901,10 +942,10 @@ $(function() {
           <span class="confirm-text"><strong class="label">Yes: </strong> details provided</span>
         </div>
       </div>
-<!-- Step 7 -->
-<div id="step7" class="accordion-item">
+<!-- Step 8 -->
+<div id="step8" class="accordion-item">
         <h2 class="accordion-header"> 
-          7. Are the attorneys to be paid for their services?
+          8. Are the attorneys to be paid for their services?
         </h2>
         <div class="accordion-content">
           <p class="intro">All attorneys can claim reasonable expenses from the donor's funds. However, professional attorneys (eg solicitors) often make additional charges for their services. <a class="open-help" href="">Learn more&hellip;</a></p>
@@ -930,7 +971,7 @@ $(function() {
                 </div>
               </fieldset>
           <ul class="form-actions">
-            <li><a href="#step8" class="next-part button">Continue to step 8 of 10</a></li>
+            <li><a href="#step8" class="next-part button">Next question (9 of 11)</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
             <li class="secondary-action"><a href="" class="button">Print preview</a></li>
@@ -942,9 +983,9 @@ $(function() {
             <span class="confirm-text"><strong class="label">Yes:</strong> details provided</span>
         </div>
       </div>
-      <div id="step8" class="accordion-item">
+      <div id="step9" class="accordion-item">
         <h2 class="accordion-header"> 
-          8. Will the donor notify anyone when the LPA is registered?
+          9. Will the donor notify anyone when the LPA is registered?
         </h2>
         <div class="accordion-content">
           <p class="intro">
@@ -954,7 +995,7 @@ $(function() {
           <p class="add"><a href="2b.html">Add details of a person to be notified</a></p>
 
           <ul class="form-actions">
-            <li><a href="#step9" class="next-part button">Continue to step 9 of 10</a></li>
+            <li><a href="#step9" class="next-part button">Next question (10 of 11)</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
             <li class="secondary-action"><a href="" class="button">Print preview</a></li>
@@ -966,9 +1007,9 @@ $(function() {
             <span class="confirm-text"><strong class="label">Yes:</strong> John Bloggs</span>
         </div>
       </div>
-      <div id="step9" class="accordion-item">
+      <div id="step10" class="accordion-item">
         <h2 class="accordion-header"> 
-          9. Is the donor doing this of their own free will?
+          10. Is the donor doing this of their own free will?
         </h2>
         <div class="accordion-content">
           <p class="intro">
@@ -982,13 +1023,14 @@ $(function() {
             <li><a href="#step10" class="next-part button">Continue to final step</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
+            <li class="secondary-action"><a href="" class="button">Print preview</a></li>
           </ul> 
 
         </div>
       </div>
-      <div id="step10" class="accordion-item">
+      <div id="step11" class="accordion-item">
         <h2 class="accordion-header"> 
-          10. Review the details
+          11. Review the details
         </h2>
         <div class="accordion-content">
           <p class="intro">
@@ -996,9 +1038,10 @@ $(function() {
           </p>
 
           <ul class="form-actions">
-            <li><a href="print.html" class="next-part button">Continue</a></li>
+            <li><a href="Create.print.html" class="next-part button">Continue</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
+            <li class="secondary-action"><a href="" class="button">Print preview</a></li>
           </ul> 
 
         </div>

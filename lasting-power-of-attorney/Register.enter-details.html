@@ -1,51 +1,17 @@
 ---
 layout: default-lpa
-title: Create a lasting power of attorney
+title: Register a lasting power of attorney
 categories: service
 signed-in: yes
 ---
 
 <link media="screen" type="text/css" rel="stylesheet" href="assets/css/styles.css" />
-<link media="screen" type="text/css" rel="stylesheet" href="assets/patterns.css" />
 <script src="assets/js/behaviours.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(function() {
   // Trigger help system popup
   $(".open-help").click(function() {
    BetaPopup.popup($("#help-system").removeClass('hidden'), "help-system", $(this));
-  });
-  // Trigger donor form popup
-  $("#open-donor-form").click(function() {
-   BetaPopup.popup($("#donor-form").removeClass('hidden'), "form", $(this));
-  });
-
-  // Trigger attorney form popup
-  $("#open-attorney-form").click(function() {
-   BetaPopup.popup($("#attorney-form").removeClass('hidden'), "form", $(this));
-  });
-
-  // Postcode lookup behaviours
-  $(".postcode-lookup").click(function() {
-   $(this).closest('.form-actions').siblings('.address-list').removeClass('hidden');
-   return false;
-  });
-  $(".address-fields-link a, .address-list li a").click(function() {
-   $('.address-list, .address-fields-link').addClass('hidden');
-   $('.address-fields, .save-details').removeClass('hidden');
-   return false;
-  });
-
-  $("#other-name-link").click(function() {
-   $('#other-name').toggleClass('hidden');
-   return false;
-  });
-
-
-  $("#save-attorney-details").click(function() {
-    $('#open-attorney-form').parent().hide();
-    $('#later-attorney-example').show();
-    closePopup();
-   return false;
   });
 });
 </script>
@@ -60,7 +26,7 @@ $(function() {
 
 
 
-<div id="accordion" class="accordion">
+<div id="accordion" class="accordion no-future">
   <!-- Step 0 -->
       <div id="step0" class="accordion-item">
         <div class="accordion-content">
@@ -175,6 +141,85 @@ $(function() {
       <!-- Step 3 -->
       <div id="step3" class="accordion-item">
         <h2 class="accordion-header"> 
+          3. Has the donor made any other LPAs?
+        </h2>
+        <div class="accordion-content">
+          <p class="intro">
+            Lorem ipsum EPA etc...</p>
+
+              <fieldset>
+                <div class="control-group">
+                  <label class="control-label" for="optionsCheckbox"><strong>Has the donor previously made any other lasting or enduring powers of attorney?</strong></label>
+                  <div class="emphasised controls">
+                    <label class="radio">
+                      <input type="radio" name="LPAwhenRadios" id="optionsRadios2" value="option2">
+                      No
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="LPAwhenRadios" id="optionsRadios3" value="option3">
+                      <details>
+                        <summary>Yes</summary>
+                        <label class="visuallyhidden">Please provide details</label>                        
+                        <span class="help-block examples"><a href="">Not sure what to put?&hellip;</a></span>
+                        <textarea class="input-xxlarge" placeholder="Please provide details"></textarea>
+                      </details>
+                    </label>
+                  </div>
+
+                </div>
+              </fieldset>
+            
+        <ul class="form-actions">
+          <li><a href="#step9" class="next-part button">Continue to step 9 of X</a></li>
+          <li class="secondary-action"><a href="" class="button">Quit</a></li>
+          <li class="secondary-action"><a href="" class="button">Save for later</a></li>
+        </ul> 
+        </div>
+        <div class="accordion-confirm">
+            <a href="#" class="edit">change this</a>
+            <p>No, the donor has not made any other LPAs</p>
+        </div>
+      </div>
+      <!-- Step 4 -->
+      <div id="step4" class="accordion-item">
+        <h2 class="accordion-header"> 
+          4. Does the donor want to apply for a full or partial fee remission?
+        </h2>
+        <div class="accordion-content">
+          <p class="intro">If the donor has an income of under £12,000 or is currently claiming benefits they <em>may</em> qualify for a half or full fee reimbursement. The full amount must still be paid initially and supporting evidence must be provided in order to qualify. <a href="">Learn more&hellip;</a></p>
+
+              <fieldset>
+                <div class="control-group">
+                  <label class="control-label" for="optionsCheckbox"><strong>Does the donor want to apply for fee remission?</strong></label>
+                  <div class="emphasised controls">
+                    <label class="radio">
+                      <input type="radio" name="LPAwhenRadios" id="optionsRadios2" value="option2">
+                      No
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="LPAwhenRadios" id="optionsRadios3" value="option3">
+                      Yes
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+
+              [More conditional form fields to go here]
+            
+        <ul class="form-actions">
+          <li><a href="#step9" class="next-part button">Continue to step 9 of X</a></li>
+          <li class="secondary-action"><a href="" class="button">Quit</a></li>
+          <li class="secondary-action"><a href="" class="button">Save for later</a></li>
+        </ul> 
+        </div>
+        <div class="accordion-confirm">
+            <a href="#" class="edit">change this</a>
+          <p>No, the donor does not qualify for a fee remission</p>
+        </div>
+      </div>
+      <!-- Step 3 -->
+      <div id="step3" class="accordion-item">
+        <h2 class="accordion-header"> 
           3. Confirm understanding
         </h2>
         <div class="accordion-content">
@@ -182,7 +227,7 @@ $(function() {
             By clicking 'Continue' I certify that the above information is correct and that to the best of my knowledge and belief, I have completed the application in accordance with the provisions of the Mental Capacity Act 2005 and all statutory instruments made under it.</p>
             
         <ul class="form-actions">
-          <li><a href="8.Register-payment.html" class="button">Continue to payment</a></li>
+          <li><a href="Register.payment.html" class="button">Continue to payment</a></li>
           <li class="secondary-action"><a href="" class="button">Quit</a></li>
           <li class="secondary-action"><a href="" class="button">Save for later</a></li>
         </ul> 

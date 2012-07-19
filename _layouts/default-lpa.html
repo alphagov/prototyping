@@ -62,10 +62,10 @@
               
             <div class="toolbar">
               <ul class="account-links">
-                {% if page.signedin == yes %}<li>Signed in as: <a href="">contact@timpaul.co.uk</a></li>
+                {% if page.signed-in == yes %}<li>Signed in as: <a href="">contact@timpaul.co.uk</a></li>
                 <li style="float: right"><a href="">Sign out</a></li>{% endif %}
 
-                {% if page.signedin != yes %}
+                {% if page.signed-in != yes %}
                 <li style="float: right"><a href="">Sign in</a></li>{% endif %}
               </ul>
             </div>
