@@ -7,6 +7,10 @@
   padding: 1em 2.5em 1em 2.5em;
 }
 
+.structure-container {
+  margin: 1.2em 0;
+}
+
 /* Results
 ============================================================================ */
 .finance-finder .results {

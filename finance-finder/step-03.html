@@ -40,30 +40,22 @@ js: assets/javascript/finance.js
       <span class="question-number">3</span> How is your business structured?
     </h2>
     
-    <div class="search-container">
-      <div class="business-stage-results search-picker">
-        <p class="hint">Choose the applicable option</p>
-        <ul>
-          <li><span>Private company</span> <a href="#" class="add">Add</a></li>
-          <li><span>Partnership</span> <a href="#" class="add">Add</a></li>
-          <li><span>Public limited company</span> <a href="#" class="add">Add</a></li>
-          <li><span>Sole trader</span> <a href="#" class="add">Add</a></li>
-          <li><span>Social enterprise</span> <a href="#" class="add">Add</a></li>
-          <li><span>Charity</span> <a href="#" class="add">Add</a></li>
-        </ul>
-      </div>
+    <div class="business-stage-results structure-container">
+      <label for="select-structure">Select a structure
+
+        <select id="select-structure" name="structure">
+          <option>Select one…</option>
+          <option>Private company</option>
+          <option>Partnership</option>
+          <option>Public limited company</option>
+          <option>Sole trader</option>
+          <option>Social enterprise</option>
+          <option>Charity</option>
+        </select>
+      </label>
     </div>
 
-    <div class="business-stage-picked picked-items">
-      <h3>Your business structure</h3>
-      <p class="hint">Your chosen options will appear here</p>
-      <ul id="picked-business-stage"></ul>
-
-      <div class="button-container hidden">
-        <a href="step-04.html" class="button medium" id="next-step">Next step</a>
-      </div>
-    </div>
-
+    <a class="button medium" href="step-04.html">Next Step</a>
   </div>
 </div>
 
