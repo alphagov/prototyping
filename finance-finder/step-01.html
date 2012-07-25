@@ -1,0 +1,81 @@
+---
+layout: default-smartanswer
+title: Finance finder
+categories: Quick answer
+css: assets/css/styles.css
+js: assets/javascript/finance.js
+---
+
+<div class="step current">
+  <div class="current-question group">
+    <h2>
+      <span class="question-number">1</span> What is your activity or business?
+    </h2>
+    
+    <div class="search-container" role="search">
+      <form accept-charset="UTF-8" action="/licence-finder/sectors" method="get">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+        <input id="hidden-sectors" name="sectors" type="hidden"><label class="visuallyhidden" for="search-sectors">Search for areas</label>
+        <input id="search-sectors" name="q" type="text"><input class="button" id="search-button" name="commit" type="submit" value="Search">
+      </form>
+    </div>
+
+    <div class="browse-container">
+      <p class="or-browse">Or <a href="#" id="browse-sectors">choose your area of interest</a>.</p>
+
+      <div id="business-sectors" class="hidden search-picker">
+        <h3>All activities and businesses:</h3>
+
+        <ul id="sector-navigation">
+          <li><span class="sector-name">Manufacturing</span> <a href="#" class="add">Add</a></li>
+          <li><span class="sector-name">Information, Communication and Media</span> <a href="#" class="add">Add</a></li>
+          <li><span class="sector-name">Agriculture</span> <a href="#" class="add">Add</a></li>
+          <li><span class="sector-name">Travel and Leisure</span> <a href="#" class="add">Add</a></li>
+          <li><span class="sector-name">Science and Technology</span> <a href="#" class="add">Add</a></li>
+          <li><span class="sector-name">Construction</span> <a href="#" class="add">Add</a></li>
+          <li><span class="sector-name">Hospitality and Catering</span> <a href="#" class="add">Add</a></li>
+          <li><span class="sector-name">Wholesale and Retail</span> <a href="#" class="add">Add</a></li>
+          <li><span class="sector-name">Service Industries</span> <a href="#" class="add">Add</a></li>
+          <li><span class="sector-name">Transport and Distribution</span> <a href="#" class="add">Add</a></li>
+          <li><span class="sector-name">Business and Finance</span> <a href="#" class="add">Add</a></li>
+          <li><span class="sector-name">Utilities</span> <a href="#" class="add">Add</a></li>
+          <li><span class="sector-name">Health</span> <a href="#" class="add">Add</a></li>
+          <li><span class="sector-name">Real Estate</span> <a href="#" class="add">Add</a></li>
+          <li><span class="sector-name">Education</span> <a href="#" class="add">Add</a></li>
+          <li><span class="sector-name">Mining</span> <a href="#" class="add">Add</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="business-sector-picked picked-items" aria-live="polite">
+      <h3>Your chosen areas of interest</h3>
+      <p class="hint">Your chosen areas will appear here</p>
+      <ul id="picked-business-sectors"></ul>
+
+      <div class="button-container hidden">
+        <a href="step-02.html" class="button medium" id="next-step">Next step</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="upcoming-questions">
+  <ol>
+    <li class="upcoming">
+      <h3 class="question">
+        <span class="question-number">2</span> What stage is your business at?
+      </h3>
+    </li>
+    <li class="upcoming">
+      <h3 class="question">
+        <span class="question-number">3</span> How is your business structured?
+      </h3>
+    </li>
+    <li class="upcoming">
+      <h3 class="question">
+        <span class="question-number">4</span> Where will you be located?
+      </h3>
+    </li>
+  </ol>
+</div>

@@ -1,0 +1,78 @@
+---
+layout: default-smartanswer
+title: Finance finder
+categories: Quick answer
+css: assets/css/styles.css
+js: assets/javascript/finance.js
+---
+
+<div class="done-questions">
+  <div class="start-again"><a href="/finance-finder">Start again</a></div>
+  <ol>
+    <li class="done">
+      <h3 class="question">
+        <span class="question-number">1</span> What is your activity or business?
+      </h3>
+      <div class="answer">
+        <ul>
+          <li>Manufacturing</li>
+        </ul>
+      </div>
+      <p class="undo"><a href="step-01.html">Change this answer</a></p>
+    </li>
+    <li class="done">
+      <h3 class="question">
+        <span class="question-number">2</span> What stage is your business at?
+      </h3>
+      <div class="answer">
+        <ul>
+          <li>Grow and sustain</li>
+        </ul>
+      </div>
+      <p class="undo"><a href="step-02.html">Change this answer</a></p>
+    </li>
+  </ol>
+</div>
+
+<div class="step current">
+  <div class="current-question group">
+    <h2>
+      <span class="question-number">3</span> How is your business structured?
+    </h2>
+    
+    <div class="search-container">
+      <div class="business-stage-results search-picker">
+        <p class="hint">Choose the applicable option</p>
+        <ul>
+          <li><span>Private company</span> <a href="#" class="add">Add</a></li>
+          <li><span>Partnership</span> <a href="#" class="add">Add</a></li>
+          <li><span>Public limited company</span> <a href="#" class="add">Add</a></li>
+          <li><span>Sole trader</span> <a href="#" class="add">Add</a></li>
+          <li><span>Social enterprise</span> <a href="#" class="add">Add</a></li>
+          <li><span>Charity</span> <a href="#" class="add">Add</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="business-stage-picked picked-items">
+      <h3>Your business structure</h3>
+      <p class="hint">Your chosen options will appear here</p>
+      <ul id="picked-business-stage"></ul>
+
+      <div class="button-container hidden">
+        <a href="step-04.html" class="button medium" id="next-step">Next step</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="upcoming-questions">
+  <ol>
+    <li class="upcoming">
+      <h3 class="question">
+        <span class="question-number">4</span> Where will you be located?
+      </h3>
+    </li>
+  </ol>
+</div>
