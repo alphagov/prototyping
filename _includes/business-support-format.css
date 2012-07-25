@@ -1,0 +1,11 @@
+.page-header hgroup h1 {
+  background: url(https://static.production.alphagov.co.uk/static/icon-answer-l.png) 12px 14px no-repeat;
+}
+
+table td ul {
+  font-weight: inherit;
+}
+
+table td ul li {
+  font-size: inherit;
+}
