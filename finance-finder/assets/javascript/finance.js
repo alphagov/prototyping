@@ -6,13 +6,6 @@ function initToggle () {
 }
 
 $(document).ready(function() {
-  // show business sectors
-  $('#browse-sectors').on('click', function (e) {
-    e.preventDefault();
-    $(this).parent().hide();
-    $('#business-sectors').removeClass('hidden');
-  });
-
   // add items to list
   $('.search-picker').on('click', 'a.add', function (e) {
     e.preventDefault();

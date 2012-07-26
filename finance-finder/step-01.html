@@ -12,19 +12,9 @@ js: assets/javascript/finance.js
       <span class="question-number">1</span> What is your activity or business?
     </h2>
     
-    <div class="search-container" role="search">
-      <form accept-charset="UTF-8" action="/licence-finder/sectors" method="get">
-        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
-        <input id="hidden-sectors" name="sectors" type="hidden"><label class="visuallyhidden" for="search-sectors">Search for areas</label>
-        <input id="search-sectors" name="q" type="text"><input class="button" id="search-button" name="commit" type="submit" value="Search">
-      </form>
-    </div>
-
     <div class="browse-container">
-      <p class="or-browse">Or <a href="#" id="browse-sectors">choose your area of interest</a>.</p>
-
-      <div id="business-sectors" class="hidden search-picker">
-        <h3>All activities and businesses:</h3>
+      <div id="business-sectors" class="search-picker">
+        <h3>Choose your area of business:</h3>
 
         <ul id="sector-navigation">
           <li><span class="sector-name">Manufacturing</span> <a href="#" class="add">Add</a></li>
