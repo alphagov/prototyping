@@ -41,9 +41,6 @@
 
 .finance-finder .results-list li a {
   margin: 0; padding: 0;
-}
-
-.section-page .results-list li a {
   font-size: 1.1875em;
 }
 
@@ -52,7 +49,7 @@
   width: auto;
 }
 
-.section-page .results-list li p {
+.finance-finder .results-list li p {
   font-size: 1em;
 }
 
@@ -127,15 +124,16 @@
 /* Filters
 ============================================================================ */
 .finance-finder .filters ul li {
-  margin-left: 0;
+  margin: 0;
   font-size: 1.1875em;
   line-height: 1.315789474em;
 }
 
 .finance-finder .filters ul li a {
-  margin-left: -30px;
-  padding: 0 0 0 30px;
-  background: transparent url(../images/disclosure-arrows.png) no-repeat 0 0;
+  background-image: url(https://www.preview.alphagov.co.uk/licence-finder/assets/expand-collapse-arrow-a824d23ae9e8a29e5e3395a33f357b3e.png);
+  background-position: 0 12px;
+  background-repeat: no-repeat;
+  padding-left: 1em;
 }
 
 .finance-finder .filters ul li a:hover {
@@ -150,7 +148,7 @@
 }
 
 .finance-finder .filters ul li.open a {
-  background-position: 0 -70px;
+  background-position: 0 -80px;
 }
 
 .finance-finder .filters ul li.open ul {
@@ -159,7 +157,6 @@
 
 .finance-finder .filters ul li ul li {
   display: block;
-  margin: 0 0 0 30px;
   font-size: .842105263em;
 }
 
@@ -167,8 +164,8 @@
   color: #333;
   border-radius: 2px;
   display: block;
-  padding: 4px 2px 2px 5px;
-  text-decoration: none;
+  padding: 4px 30px 2px 5px;
+  text-decoration: underline;
   background-image: none; 
 }
 
@@ -182,4 +179,8 @@
 .finance-finder .filters ul li ul li.active a:hover {
   background-color: #999;
   color: #fff;
+}
+
+.finance-finder .filters ul li ul li a span {
+  margin-right: -28px;
 }
