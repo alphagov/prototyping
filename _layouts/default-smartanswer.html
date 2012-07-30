@@ -86,7 +86,7 @@
         <li><a href="#">Section</a></li>
       </ol>
     </nav>
-    <div id="wrapper" class="licence-finder">
+    <div id="wrapper" class="licence-finder {{ page.categories }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
       <section id="content" role="main" class="smart-answer-questions group">
         <header class="page-header group">
           <hgroup>
