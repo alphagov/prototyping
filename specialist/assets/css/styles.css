@@ -1,0 +1,20 @@
+.article-container .specialist {
+  border: 2px solid #2B8CC4;
+  background-color: transparent;
+  box-sizing: border-box;
+  margin: 0.75em -1em;
+  padding: 0.25em 1em;
+  min-width: 60%;
+}
+
+.article-container .specialist h2 {
+  margin-top: 0;
+}
+
+.specialist-wrapper {
+  float: left;
+}
+
+.specialist-wrapper .inner {
+  padding: 0 5em;
+}
