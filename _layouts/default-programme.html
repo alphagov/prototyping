@@ -36,7 +36,11 @@
     <script defer src="http://static.preview.alphagov.co.uk/static/welcome.js?body=1" type="text/javascript"></script>
     <script defer src="http://static.preview.alphagov.co.uk/static/browse.js?body=1" type="text/javascript"></script>
     <script defer src="http://static.preview.alphagov.co.uk/static/application.js?body=1" type="text/javascript"></script>
-    
+    <script defer src="http://static.preview.alphagov.co.uk/static/jquery.tabs.js?body=1" type="text/javascript"></script>
+    <script defer src="http://static.preview.alphagov.co.uk/static/jquery.history.js?body=1" type="text/javascript"></script>
+
+    <script src="assets/javascripts/programmes.js" type="text/javascript" charset="utf-8" async defer></script>
+
     <!--[if lt IE 9]>
     <script src="http://static.preview.alphagov.co.uk/static/html5.js?body=1" type="text/javascript"></script>
     <script src="http://static.preview.alphagov.co.uk/static/selectivizr-min.js?body=1" type="text/javascript"></script>
@@ -52,6 +56,10 @@
     
     {% if page.css  %}
     <link rel="stylesheet" href="{{ page.css }}" />
+    {% endif %}
+
+    {% if page.js %}
+    <script src="{{ page.js }}" type="text/javascript"></script>
     {% endif %}
     
   </head>
