@@ -12,9 +12,14 @@
 }
 
 .specialist-wrapper {
-  float: left;
+  clear: left;
+}
+
+.specialist-wrapper .specialist {
+  margin: 0.75em -1.6em;
 }
 
 .specialist-wrapper .inner {
   padding: 0 5em;
+  font-size: 1.16em;
 }
