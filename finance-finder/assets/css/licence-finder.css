@@ -144,7 +144,7 @@ a.add {
 }
 
 #sector-navigation li a {
-  background-image: url(/licence-finder/assets/expand-collapse-arrow.png);
+  background-image: url(../images/expand-collapse-arrow.png);
   background-position: 0 5px;
   background-repeat: no-repeat;
   padding-left: 1em;
