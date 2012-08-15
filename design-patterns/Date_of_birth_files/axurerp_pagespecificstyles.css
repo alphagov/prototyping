@@ -777,9 +777,9 @@ div {
 
 .u48 {
     position:absolute;
-    left:664px;
+    left:587px;
     top:106px;
-    width:193px;
+    width:270px;
     height:21px;
     ;
     ;
@@ -789,7 +789,7 @@ div {
     word-wrap:break-word;
 }
 
-.u50 {
+.u51 {
     position:absolute;
     left:50px;
     top:167px;
@@ -801,27 +801,6 @@ div {
     font-family:Arial;
     text-align:left;
     word-wrap:break-word;
-}
-
-.u51_line {
-    background-image: url('../Date_of_birth_files/u51_line.png');
-}
-
-.u51_line {
-    position:absolute;
-    left:4px;
-    top:0px;
-    width:3px;
-    height:431px;
-}
-
-.u51 {
-    position:absolute;
-    left:425px;
-    top:216px;
-    width:10px;
-    height:431px;
-    
 }
 
 .u52_line {
@@ -838,8 +817,8 @@ div {
 
 .u52 {
     position:absolute;
-    left:849px;
-    top:215px;
+    left:425px;
+    top:216px;
     width:10px;
     height:431px;
     
@@ -859,8 +838,8 @@ div {
 
 .u53 {
     position:absolute;
-    left:124px;
-    top:216px;
+    left:849px;
+    top:215px;
     width:10px;
     height:431px;
     
@@ -880,7 +859,7 @@ div {
 
 .u54 {
     position:absolute;
-    left:20px;
+    left:124px;
     top:216px;
     width:10px;
     height:431px;
@@ -893,18 +872,18 @@ div {
 
 .u55_line {
     position:absolute;
-    left:0px;
-    top:4px;
-    width:829px;
-    height:3px;
+    left:4px;
+    top:0px;
+    width:3px;
+    height:431px;
 }
 
 .u55 {
     position:absolute;
-    left:25px;
-    top:210px;
-    width:829px;
-    height:10px;
+    left:20px;
+    top:216px;
+    width:10px;
+    height:431px;
     
 }
 
@@ -923,7 +902,7 @@ div {
 .u56 {
     position:absolute;
     left:25px;
-    top:244px;
+    top:210px;
     width:829px;
     height:10px;
     
@@ -944,7 +923,7 @@ div {
 .u57 {
     position:absolute;
     left:25px;
-    top:351px;
+    top:244px;
     width:829px;
     height:10px;
     
@@ -965,7 +944,7 @@ div {
 .u58 {
     position:absolute;
     left:25px;
-    top:481px;
+    top:351px;
     width:829px;
     height:10px;
     
@@ -977,13 +956,34 @@ div {
 
 .u59_line {
     position:absolute;
+    left:0px;
+    top:4px;
+    width:829px;
+    height:3px;
+}
+
+.u59 {
+    position:absolute;
+    left:25px;
+    top:481px;
+    width:829px;
+    height:10px;
+    
+}
+
+.u60_line {
+    background-image: url('../Date_of_birth_files/u60_line.png');
+}
+
+.u60_line {
+    position:absolute;
     left:3px;
     top:0px;
     width:5px;
     height:39px;
 }
 
-.u59 {
+.u60 {
     position:absolute;
     left:21px;
     top:157px;
@@ -992,11 +992,11 @@ div {
     
 }
 
-.u60_normal {
-    background-image: url('../Footer_files/u34_normal.png');
+.u61_normal {
+    background-image: url('../Footer_files/u35_normal.png');
 }
 
-.u60_container {
+.u61_container {
     position:absolute;
     left:0px;
     top:1126px;
@@ -1004,7 +1004,7 @@ div {
     height:80px;
 }
 
-#u60_img {
+#u61_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -1012,7 +1012,7 @@ div {
     height:86px;
 }
 
-.u61 {
+.u62 {
     position:absolute;
     left:2px;
     top:32px;

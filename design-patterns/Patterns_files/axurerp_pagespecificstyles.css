@@ -140,9 +140,9 @@ div {
 
 .u8 {
     position:absolute;
-    left:664px;
+    left:587px;
     top:106px;
-    width:193px;
+    width:270px;
     height:21px;
     ;
     ;
@@ -152,11 +152,11 @@ div {
     word-wrap:break-word;
 }
 
-.u10_normal {
-    background-image: url('../Patterns_files/u10_normal.png');
+.u11_normal {
+    background-image: url('../Patterns_files/u11_normal.png');
 }
 
-.u10_container {
+.u11_container {
     position:absolute;
     left:22px;
     top:410px;
@@ -164,7 +164,7 @@ div {
     height:241px;
 }
 
-#u10_img {
+#u11_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -172,7 +172,7 @@ div {
     height:247px;
 }
 
-.u11 {
+.u12 {
     position:absolute;
     left:2px;
     top:16px;
@@ -186,11 +186,11 @@ div {
     word-wrap:break-word;
 }
 
-.u13_normal {
+.u14_normal {
     background-image: url('../resources/images/transparent.gif');
 }
 
-.u13_container {
+.u14_container {
     position:absolute;
     left:23px;
     top:198px;
@@ -198,7 +198,7 @@ div {
     height:159px;
 }
 
-#u13_img {
+#u14_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -206,7 +206,7 @@ div {
     height:165px;
 }
 
-.u14 {
+.u15 {
     position:absolute;
     left:2px;
     top:2px;
@@ -220,11 +220,11 @@ div {
     word-wrap:break-word;
 }
 
-.u16_normal {
+.u17_normal {
     background-image: url('../resources/images/transparent.gif');
 }
 
-.u16_container {
+.u17_container {
     position:absolute;
     left:23px;
     top:177px;
@@ -232,7 +232,7 @@ div {
     height:22px;
 }
 
-#u16_img {
+#u17_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -240,7 +240,7 @@ div {
     height:28px;
 }
 
-.u17 {
+.u18 {
     position:absolute;
     left:2px;
     top:2px;
@@ -254,19 +254,19 @@ div {
     word-wrap:break-word;
 }
 
-.u18_normal {
+.u19_normal {
     background-image: url('../resources/images/transparent.gif');
 }
 
-.u18_container {
+.u19_container {
     position:absolute;
     left:418px;
-    top:210px;
+    top:198px;
     width:235px;
     height:159px;
 }
 
-#u18_img {
+#u19_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -274,7 +274,7 @@ div {
     height:165px;
 }
 
-.u19 {
+.u20 {
     position:absolute;
     left:2px;
     top:2px;
@@ -288,11 +288,11 @@ div {
     word-wrap:break-word;
 }
 
-.u20_normal {
+.u21_normal {
     background-image: url('../resources/images/transparent.gif');
 }
 
-.u20_container {
+.u21_container {
     position:absolute;
     left:418px;
     top:177px;
@@ -300,7 +300,7 @@ div {
     height:22px;
 }
 
-#u20_img {
+#u21_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -308,7 +308,7 @@ div {
     height:28px;
 }
 
-.u21 {
+.u22 {
     position:absolute;
     left:2px;
     top:2px;
@@ -322,11 +322,11 @@ div {
     word-wrap:break-word;
 }
 
-.u22_normal {
+.u23_normal {
     background-image: url('../resources/images/transparent.gif');
 }
 
-.u22_container {
+.u23_container {
     position:absolute;
     left:666px;
     top:200px;
@@ -334,7 +334,7 @@ div {
     height:159px;
 }
 
-#u22_img {
+#u23_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -342,7 +342,7 @@ div {
     height:165px;
 }
 
-.u23 {
+.u24 {
     position:absolute;
     left:2px;
     top:2px;
@@ -356,11 +356,11 @@ div {
     word-wrap:break-word;
 }
 
-.u24_normal {
+.u25_normal {
     background-image: url('../resources/images/transparent.gif');
 }
 
-.u24_container {
+.u25_container {
     position:absolute;
     left:666px;
     top:177px;
@@ -368,7 +368,7 @@ div {
     height:22px;
 }
 
-#u24_img {
+#u25_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -376,7 +376,7 @@ div {
     height:28px;
 }
 
-.u25 {
+.u26 {
     position:absolute;
     left:2px;
     top:2px;
@@ -390,11 +390,11 @@ div {
     word-wrap:break-word;
 }
 
-.u26_normal {
+.u27_normal {
     background-image: url('../resources/images/transparent.gif');
 }
 
-.u26_container {
+.u27_container {
     position:absolute;
     left:246px;
     top:198px;
@@ -402,7 +402,7 @@ div {
     height:47px;
 }
 
-#u26_img {
+#u27_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -410,7 +410,7 @@ div {
     height:53px;
 }
 
-.u27 {
+.u28 {
     position:absolute;
     left:2px;
     top:2px;
@@ -424,11 +424,11 @@ div {
     word-wrap:break-word;
 }
 
-.u28_normal {
+.u29_normal {
     background-image: url('../resources/images/transparent.gif');
 }
 
-.u28_container {
+.u29_container {
     position:absolute;
     left:246px;
     top:177px;
@@ -436,7 +436,7 @@ div {
     height:22px;
 }
 
-#u28_img {
+#u29_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -444,7 +444,7 @@ div {
     height:28px;
 }
 
-.u29 {
+.u30 {
     position:absolute;
     left:2px;
     top:2px;
@@ -458,19 +458,19 @@ div {
     word-wrap:break-word;
 }
 
-.u30_normal {
+.u31_normal {
     background-image: url('../resources/images/transparent.gif');
 }
 
-.u30_container {
+.u31_container {
     position:absolute;
     left:246px;
-    top:282px;
+    top:281px;
     width:157px;
     height:87px;
 }
 
-#u30_img {
+#u31_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -478,7 +478,7 @@ div {
     height:93px;
 }
 
-.u31 {
+.u32 {
     position:absolute;
     left:2px;
     top:2px;
@@ -492,19 +492,19 @@ div {
     word-wrap:break-word;
 }
 
-.u32_normal {
+.u33_normal {
     background-image: url('../resources/images/transparent.gif');
 }
 
-.u32_container {
+.u33_container {
     position:absolute;
     left:246px;
-    top:260px;
+    top:259px;
     width:205px;
     height:22px;
 }
 
-#u32_img {
+#u33_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -512,7 +512,7 @@ div {
     height:28px;
 }
 
-.u33 {
+.u34 {
     position:absolute;
     left:2px;
     top:2px;
@@ -526,11 +526,11 @@ div {
     word-wrap:break-word;
 }
 
-.u34_normal {
-    background-image: url('../Footer_files/u34_normal.png');
+.u35_normal {
+    background-image: url('../Footer_files/u35_normal.png');
 }
 
-.u34_container {
+.u35_container {
     position:absolute;
     left:0px;
     top:766px;
@@ -538,7 +538,7 @@ div {
     height:80px;
 }
 
-#u34_img {
+#u35_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -546,7 +546,7 @@ div {
     height:86px;
 }
 
-.u35 {
+.u36 {
     position:absolute;
     left:2px;
     top:32px;

@@ -1,12 +1,22 @@
-for(var i = 0; i < 23; i++) { var scriptId = 'u' + i; window[scriptId] = document.getElementById(scriptId); }
+for(var i = 0; i < 24; i++) { var scriptId = 'u' + i; window[scriptId] = document.getElementById(scriptId); }
 
 $axure.eventManager.pageLoad(
 function (e) {
 
 });
-gv_vAlignTable['u19'] = 'center';gv_vAlignTable['u17'] = 'center';gv_vAlignTable['u15'] = 'center';gv_vAlignTable['u11'] = 'top';
-u12.style.cursor = 'pointer';
-$axure.eventManager.click('u12', function(e) {
+gv_vAlignTable['u20'] = 'center';gv_vAlignTable['u18'] = 'center';gv_vAlignTable['u16'] = 'center';
+u10.style.cursor = 'pointer';
+$axure.eventManager.click('u10', function(e) {
+
+if (true) {
+
+	self.location.href='GDS-Design-Patterns-V0.1.rp';
+
+}
+});
+gv_vAlignTable['u12'] = 'top';
+u13.style.cursor = 'pointer';
+$axure.eventManager.click('u13', function(e) {
 
 if (true) {
 
@@ -34,4 +44,4 @@ if (true) {
 
 }
 });
-gv_vAlignTable['u9'] = 'top';gv_vAlignTable['u21'] = 'center';
+gv_vAlignTable['u9'] = 'top';gv_vAlignTable['u22'] = 'center';

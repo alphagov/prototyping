@@ -13,13 +13,13 @@
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="Pattern_Library_Header_files/u4_normal.png");
 }
 
-* html .u10_normal {
+* html .u11_normal {
     background-image: none;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="Patterns_files/u10_normal.png");
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="Patterns_files/u11_normal.png");
 }
 
-* html .u34_normal {
+* html .u35_normal {
     background-image: none;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="Footer_files/u34_normal.png");
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="Footer_files/u35_normal.png");
 }
 
