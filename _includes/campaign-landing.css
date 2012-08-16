@@ -176,29 +176,46 @@ section#landing .sections-links {
 /* Campaign Landing Page styles
 ============================================================================ */
 
-section#landing h1,
-section#landing h2 {
+#landing h1,
+#landing h2 {
 	color:#000;	
+}
+
+#landing h1 {
+	padding-top: 0.65em;
+	padding-bottom: 0.4em;
+	padding-left: 0.8em;
+	margin-left: -3px;
+    font-size: 2.75em;
+    line-height: 1.1;
+    font-weight: 300;
+    max-width: 500px;
 }
 
 .campaign-image {
 	position: relative;
 	float: left;
-	width: 682px;
-	height: 260px;
-	background-image: url(http://placehold.it/682x280/d5d5d5/d5d5d5);
+	width: 100%;
+	height: 300px;
+	background-image: url('assets/images/placeholder.gif');
 	vertical-align: bottom;
 }
 
-.campaign-image h1 {
-	position: absolute;
-	bottom: 0.5em;
-	padding-left: 0.8em;
-	margin-left: -3px;
-    font-size: 2.5em;
-    line-height: 1;
-    font-weight: 300;
-    max-width: 400px;
+.heading {
+	float: left;
+}
+
+.campaign-logo {
+	padding-top: 2em;
+	padding-right: 2em;
+	float: right;
+}
+
+.logo {
+	display:block;
+	width: 160px;
+	height:60px;
+	background-image: url('https://dl.dropbox.com/u/1312500/gov.uk/dwp_logo.png');
 }
 
 h2.jump-off {
@@ -206,43 +223,50 @@ h2.jump-off {
 }
 
 .campaign-links {
-	float:left;
-	width: 278px;
-	min-height: 260px;
-	background-color: #E5E5E5;
 	padding:0;
+	margin: 0;
+	position:absolute;
+	right:2em;
+	bottom:2em;
+	background-color: #E5E5E5;
 }
+
+.campaign-links nav {
+	margin: 0;
+	padding: 0;
+}
+
+.campaign-links h2 {
+	padding: 0;
+	margin:0;
+	padding-bottom: 0.5em;	
+}
+
 .campaign {
 	float:left;
-	padding-left: 2em;
+	margin-left: 2em;
 	padding-right: 9em;
 	padding-top: 1.75em;
-	width: 682px;
+	padding-bottom: 2em;
+	border-bottom: solid 1px #d5d5d5;
+}
+
+.take-me-elsewhere {
+	float:left;
+	margin-left: 2em;
+	display: block;
 }
 
 ul.links {
 	list-style: none;
-	margin:0 padding:0;
-	margin-left: -1em;
-	margin-right: 1.25em;
-	margin-top: 1.5em;
+	margin:0; padding:0;
 }
 
 ul.links li {
 	margin:0 padding:0;
-	margin-bottom: 1.5em;	
 }
 
 section#landing p {
 	max-width: 662px;
-}
-
-.logo {
-	
-}
-
-.student-loans {
-	width: 145px;
-	height: 44px;
-	background-image: url('assets/images/student_loans_logo.png')
+	font-size: 1.16em;
 }
