@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-
     <!-- References static preview assets -->
     <link href="http://static.preview.alphagov.co.uk/static/admin/jquery-ui-1.8.14.css?body=1" media="screen" rel="stylesheet" type="text/css">
     <link href="http://static.preview.alphagov.co.uk/static/normalize.css?body=1" media="screen" rel="stylesheet" type="text/css">
@@ -22,7 +21,7 @@
     <link href="http://static.preview.alphagov.co.uk/static/multi-step.css?body=1" media="screen" rel="stylesheet" type="text/css">
     <link href="http://static.preview.alphagov.co.uk/static/application.css?body=1" media="screen" rel="stylesheet" type="text/css">
     <link href="http://static.preview.alphagov.co.uk/static/fonts.css?body=1" media="screen" rel="stylesheet" type="text/css">
-
+    
     <script src="http://static.preview.alphagov.co.uk/static/libs/jquery/jquery-1.7.2.min.js?body=1" type="text/javascript"></script>
     <script defer src="http://static.preview.alphagov.co.uk/static/libs/jquery/jquery-ui-1.8.16.custom.min.js?body=1" type="text/javascript"></script>
     <script defer src="http://static.preview.alphagov.co.uk/static/libs/jquery/plugins/jquery.base64.js?body=1" type="text/javascript"></script>
@@ -49,11 +48,12 @@
     <!-- For third-generation iPad with high-resolution Retina display: --><link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://static.preview.alphagov.co.uk/static/apple-touch-icon-144x144.png">
     <!-- For iPhone with high-resolution Retina display: --><link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://static.preview.alphagov.co.uk/static/apple-touch-icon-114x114.png">
     <!-- For first- and second-generation iPad: --><link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://static.preview.alphagov.co.uk/static/apple-touch-icon-72x72.png">
-    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --><link rel="apple-touch-icon-precomposed" href="http://static.preview.alphagov.co.uk/static/apple-touch-icon-57x57.png"> 
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --><link rel="apple-touch-icon-precomposed" href="http://static.preview.alphagov.co.uk/static/apple-touch-icon-57x57.png">        
+    
     {% if page.css  %}
     <link rel="stylesheet" href="{{ page.css }}" />
     {% endif %}
-
+    
   </head>
   <body class="citizen">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
@@ -85,34 +85,11 @@
       </div>
       <ol class="group">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Family</a></li>
+        <li><a href="#">Section</a></li>
       </ol>
     </nav>
     <div id="wrapper" class="{{ page.categories }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
-      <section id="content" role="main" class="group">
-        <header class="page-header group">
-          <hgroup>
-              
-            <div class="toolbar">
-              <ul class="account-links">
-                {% if page.signed-in == yes %}<li>Signed in as: <a href="">contact@timpaul.co.uk</a></li>
-                <li style="float: right"><a href="">Sign out</a></li>{% endif %}
-
-                {% if page.signed-in != yes %}
-                <li style="float: right"><a href="">Sign in</a></li>{% endif %}
-              </ul>
-            </div>
-            <h1><span>{{ page.categories }}</span> {{ page.title }}</h1>
-        </hgroup>
-        </header>
-        <div class="article-container group">
-          <article role="article" class="group">
-            <!--<div class="inner">-->
-              {{ content }}
-            <!--</div>-->
-          </article>
-        </div>
-      </section>
+    {{ content }}
     </div><!--end wrapper-->
     <footer class="group" id="footer" role="contentinfo">
       <div class="beta-notice">
