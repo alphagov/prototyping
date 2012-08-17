@@ -1,16 +1,3 @@
-section#landing {
-  max-width: 960px;
-  min-height: 1000px;
-  margin: 0 auto;
-  padding-bottom: 2.5em;
-  background-color: #fff;
-}
-
-.lte-ie8 section#landing {
-  _width: 960px;
-}
-
-
 /* Homepage Header
 ============================================================================ */
 
@@ -176,6 +163,25 @@ section#landing .sections-links {
 /* Campaign Landing Page styles
 ============================================================================ */
 
+section#content {
+	background-color: #fff;
+	padding-bottom: 3em;
+}
+
+section#landing {
+  position: relative;
+  display: block;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 2.5em;
+  background-color: #fff;
+}
+
+.lte-ie8 section#landing {
+  _width: 960px;
+}
+
+
 #landing h1,
 #landing h2 {
 	color:#000;	
@@ -196,8 +202,8 @@ section#landing .sections-links {
 	position: relative;
 	float: left;
 	width: 100%;
-	height: 300px;
-	background-image: url('assets/images/placeholder.gif');
+	height: 360px;
+	background: url('https://dl.dropbox.com/u/1312500/gov.uk/dwp_campaign.jpg') no-repeat;
 	vertical-align: bottom;
 }
 
@@ -213,9 +219,9 @@ section#landing .sections-links {
 
 .logo {
 	display:block;
-	width: 160px;
-	height:60px;
-	background-image: url('https://dl.dropbox.com/u/1312500/gov.uk/dwp_logo.png');
+	width: 93px;
+	height:79px;
+	background: url('https://dl.dropbox.com/u/1312500/gov.uk/dwp_logo.png') no-repeat;
 }
 
 h2.jump-off {
@@ -228,7 +234,8 @@ h2.jump-off {
 	position:absolute;
 	right:2em;
 	bottom:2em;
-	background-color: #E5E5E5;
+	min-width: 240px;
+	background-color: #fff;
 }
 
 .campaign-links nav {
@@ -243,21 +250,26 @@ h2.jump-off {
 }
 
 .campaign {
+	display: block;
 	float:left;
 	margin-left: 2em;
-	padding-right: 9em;
+	margin-right: 2em;
+	padding-right: 20em;
 	padding-top: 1.75em;
-	padding-bottom: 2em;
+	padding-bottom: 1em;
 	border-bottom: solid 1px #d5d5d5;
 }
 
 .take-me-elsewhere {
+	display: block;
 	float:left;
+	width:97%;
 	margin-left: 2em;
 	display: block;
 }
 
-ul.links {
+ul.links, 
+ul.more {
 	list-style: none;
 	margin:0; padding:0;
 }
@@ -266,7 +278,19 @@ ul.links li {
 	margin:0 padding:0;
 }
 
+.link-group {
+	display: block;
+	width:50%;
+	position: relative;
+	float: left;
+}
+
 section#landing p {
 	max-width: 662px;
 	font-size: 1.16em;
+}
+
+h3 {
+	margin-top:1.5em;
+	margin-bottom:0.5em;
 }
