@@ -12,6 +12,10 @@ screen and (max-width: 600px) {
     display:none;
   }
 
+  #global-header h1 {
+    margin-right:1em;
+  }
+
   section#content {
     max-width:100%;
   }
