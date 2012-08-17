@@ -1,0 +1,30 @@
+@media screen and (max-device-width: 480px),
+screen and (max-width: 600px) {
+  #banner h1 {
+    width:34px;
+    display:block;
+    overflow:hidden;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #global-header nav {
+    display:none;
+  }
+  
+  header.page-header hgroup,
+  .article-container {
+    margin-right:0;
+  }
+
+  .related-positioning {
+    position:static !important;
+  }
+  .related-container {
+    height:auto;
+  }
+  .related {
+    position:static;
+    width:auto;
+  }
+}
