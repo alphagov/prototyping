@@ -8,12 +8,24 @@ screen and (max-width: 600px) {
 }
 
 @media screen and (max-width: 780px) {
+  .table-wrapper {
+    overflow:scroll;
+  }
+
+  article table {
+    width:auto;
+    margin-left:0;
+    margin-right:0;
+    min-width:780px;
+  }
   #global-header nav {
     display:none;
   }
 
   #global-header h1 {
     margin-right:1em;
+    width:34px;
+    overflow:hidden;
   }
 
   section#content {
