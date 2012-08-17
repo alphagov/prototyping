@@ -8,8 +8,13 @@ screen and (max-width: 600px) {
 }
 
 @media screen and (max-width: 780px) {
+  body {
+    font-size:140%;
+  }
   .table-wrapper {
     overflow:scroll;
+    margin-left:-1em;
+    margin-right:-1em;
   }
 
   article table {
@@ -63,5 +68,11 @@ screen and (max-width: 600px) {
   .related {
     position:static;
     width:auto;
+  }
+
+  article .help-notice p,
+  article .info-notice p,
+  article .subscribe p {
+    padding-right:2em;
   }
 }
