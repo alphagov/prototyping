@@ -50,9 +50,8 @@
     <!-- For first- and second-generation iPad: --><link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://static.preview.alphagov.co.uk/static/apple-touch-icon-72x72.png">
     <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --><link rel="apple-touch-icon-precomposed" href="http://static.preview.alphagov.co.uk/static/apple-touch-icon-57x57.png">        
     
-    {% if page.css  %}
-    <link rel="stylesheet" href="{{ page.css }}" />
-    {% endif %}
+    {% if page.css  %}<link rel="stylesheet" href="{{ page.css }}" />{% endif %}
+    {% if page.js  %}<script src="{{ page.js }}" type="text/javascript" defer></script>{% endif %}
     
   </head>
   <body class="citizen">

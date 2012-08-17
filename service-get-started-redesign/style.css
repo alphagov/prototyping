@@ -6,3 +6,138 @@ article .intro .get-started-intro p {
   font-size: 1.5em;
 }
 
+article ul, article ol {
+  margin-top: 1em;
+}
+
+/*  ============================================================================
+    Tabs
+    ========================================================================  */
+    
+.nav-tabs {
+  zoom: 1;
+  background: #fff;
+  padding: 0;
+  position: relative;
+}
+
+.nav-tabs:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.nav-tabs ol,
+.nav-tabs ul {
+  background-color: #C9D0D0;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 5;
+}
+
+.lte-ie8 .nav-tabs ol, .lte-ie8 .nav-tabs ul {
+  _overflow: hidden;
+  _padding: 1px 1px 0 0;
+}
+
+.nav-tabs ol li,
+.nav-tabs ul li {
+  float: left;
+}
+
+.lte-ie8 .nav-tabs ol li, .lte-ie8 .nav-tabs ul li {
+  _width: 7.5em;
+}
+
+.nav-tabs li a {
+  background-color: #E1E8E8;
+  display: block;
+  height: 2.25em;
+  line-height: 2.25em;
+  margin-left: 1px;
+  padding: 0 1em 0 0.75em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+}
+
+.lte-ie8 .nav-tabs li a {
+  _background-image: none;
+  _padding: 0 0.5em;
+}
+
+.nav-tabs li:first-child a {
+  border-left: solid 1px #E1E8E8;
+  margin-left: 0;
+}
+
+.nav-tabs li a:hover {
+  background-color: #97C5E5;
+  color: inherit;
+}
+
+.nav-tabs li.active a {
+  background-color: #fff;
+  border: solid 1px #C9D0D0;
+  border-bottom: solid 1px #fff;
+  color: #000;
+  margin: -1px -1px -1px 0;
+  position: relative;
+  z-index: 5;
+}
+
+.lte-ie8 .nav-tabs li.active a {
+  _bottom: -1px;
+}
+
+.nav-tabs li.active a:hover {
+  background-color: #fff;
+  color: #2E8ACA;
+}
+
+.nav-tabs li {
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+}
+
+.tab-content {
+  margin: 0 -4.44em;
+}
+
+.tab-content .tab-pane {
+  padding: 0 4.44em;
+  border-top: solid 1px #C9D0D0;
+  clear: both;
+}
+
+.tab-content .inner {
+  padding: 0em 2.5em 1em;
+}
+
+.tab-content h1.visuallyhidden + h2 {
+  margin-top: 2em;
+}
+
+.tab-content p {
+  /* font-size: 1.188em; */
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tab-content em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.tab-content nav {
+  margin: 1em -1.375em 0;
+  /* override for static styles */
+}
