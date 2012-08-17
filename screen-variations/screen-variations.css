@@ -11,18 +11,39 @@ screen and (max-width: 600px) {
   #global-header nav {
     display:none;
   }
-  
+
+  section#content {
+    max-width:100%;
+  }
+
   header.page-header hgroup,
   .article-container {
     margin-right:0;
   }
 
+  article .inner,
+  .page-header hgroup {
+    padding-left:1.5em;
+    padding-right:1.5em;
+  }
+
+  header.page-header hgroup h1 {
+    padding-left:0;
+    padding-right:0;
+    font-size: 2em;
+    padding: 0.3em 1.5em 0.35em 1em;
+    position: relative;
+  }
+
   .related-positioning {
     position:static !important;
   }
+
+  .related-positioning,
   .related-container {
     height:auto;
   }
+
   .related {
     position:static;
     width:auto;
