@@ -7,6 +7,14 @@
   font-size: 1.26em;
 }
 
+article .intro {
+  background-color: transparent !important;
+}
+
+article .intro .get-started-intro p {
+  font-size: 1.5em;
+}
+
 .get-started-intro h2 {
   margin-top: 0;
 }
