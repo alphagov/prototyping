@@ -126,11 +126,11 @@ article ul, article ol {
 }
 
 .tab-content {
-  margin: 0 -4.44em;
+  margin: 0 -5em;
 }
 
 .tab-content .tab-pane {
-  padding: 0 4.44em;
+  padding: 0 5em;
   border-top: solid 1px #C9D0D0;
   clear: both;
 }
