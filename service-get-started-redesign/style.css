@@ -10,6 +10,24 @@ article ul, article ol {
   margin-top: 1em;
 }
 
+.get-started .button.disabled .call-to-action,
+.get-started .button.disabled:hover .call-to-action {
+  background-color: #D5D5D5;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  cursor: default;
+}
+
+.get-started .button.disabled:active,
+.get-started .button.disabled:active .call-to-action,
+.get-started .button.disabled:active .destination {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  transform: none;  
+}
+
 /*  ============================================================================
     Tabs
     ========================================================================  */
