@@ -91,7 +91,7 @@ So you can push to Heroku from your own machine follow these steps:
   heroku
   </pre>
 
-7. Then every time you updated and committed your latest work, you can push to Heroku with "git push heroku master"
+7. Then every time you updated and committed your latest work, you can push to Heroku with "git push heroku master", make sure you have also pushed your changes to github to keep the two origins in sync
 
 8. Finally, you can visit eg http://govuk-prototyping.herokuapp.com/licence-format/ to see your prototype
 
