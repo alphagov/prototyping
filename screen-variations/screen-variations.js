@@ -1,5 +1,4 @@
 (function () {
-  alert('Js is working');
   var $navbar = $('div.article-container aside nav.page-navigation'),
       $navItems = $navbar.find('ol li')
       $showAllLink = $('<a href="#" class="show-all-parts">Show all parts of this guide</a>'),
@@ -18,8 +17,6 @@
         $span.html(labelHTML[action][0] + (activeIdx + 1) + labelHTML[action][1]);
       };
 
-  // if the navbar is floated to the left of content, this is not needed
-  if ($navbar.closest('aside').css('float') === 'left') { return; }
 
   $showAllLink.insertBefore($navbar);
   $showAllLink.on('click', function (e) {
