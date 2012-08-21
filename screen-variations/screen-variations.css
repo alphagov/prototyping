@@ -92,6 +92,11 @@ screen and (max-width: 600px) {
     float:none;
     width:auto;
   }
+  #content.multi-page aside .part-label,
+  #content.multi-page aside .page-navigation-open .active .part-label {
+    width:4em;
+    text-align:left;
+  }
   
   #content.multi-page aside .part-label {
     float:right;
@@ -102,10 +107,6 @@ screen and (max-width: 600px) {
     width:6em;
     text-align:right;
   } 
-
-  #content.multi-page aside .page-navigation-open .active .part-label {
-    width:4em;
-  }
 
   #content.multi-page aside .part-title {
     overflow: hidden;
