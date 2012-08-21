@@ -4,7 +4,7 @@
       $showAllLink = $('<a href="#" class="show-all-parts">Show all parts</a>'),
       labelHTML = {
         open : ['Page ', '<span class="visuallyhidden">:</span>'],
-        close : ['Page ', ' of ']
+        close : ['Page ', ' of ' + $navItems.length]
       },
       activeTab = $navItems.index('.active'),
       $nonActiveTabs = $navItems.not('.active'),
