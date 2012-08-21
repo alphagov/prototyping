@@ -75,4 +75,56 @@ screen and (max-width: 600px) {
   article .subscribe p {
     padding-right:2em;
   }
+  
+  /* Guide pages */
+
+  aside .page-navigation {
+    margin-top:0;
+  }
+
+  #content.multi-page article {
+    width:auto;
+    clear:both; 
+  }
+   
+  aside .page-navigation, 
+  #content.multi-page aside {
+    float:none;
+    width:auto;
+  }
+  
+  #content.multi-page aside .part-label {
+    float:right;
+    margin-left:1em;
+  }
+
+  #content.multi-page aside .active .part-label {
+    width:6em;
+    text-align:right;
+  } 
+
+  #content.multi-page aside .page-navigation-open .active .part-label {
+    width:4em;
+  }
+
+  #content.multi-page aside .part-title {
+    overflow: hidden;
+  }
+
+  .show-all-parts {
+    display:block;
+    padding:0.75em 3em 0.75em 0.75em;
+    border-top:solid 1px #C9D0D0;
+    background:url(/screen-variations/arrow.png) 95% 14px no-repeat;
+  }
+
+  .show-all-parts,
+  .show-all-parts:hover,
+  .show-all-parts:focus {
+    text-decoration:none;
+  }
+
+  .show-all-parts-open {
+    background-position: 95% -31px;
+  }
 }
