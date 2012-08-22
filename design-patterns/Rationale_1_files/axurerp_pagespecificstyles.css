@@ -57,52 +57,18 @@ div {
 }
 
 .u2_normal {
-    background-image: url('../Rationale_1_files/u2_normal.png');
+    background-image: url('../Pattern_Library_Header_files/u2_normal.png');
 }
 
 .u2_container {
     position:absolute;
-    left:25px;
-    top:352px;
-    width:596px;
-    height:368px;
-}
-
-#u2_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:602px;
-    height:374px;
-}
-
-.u3 {
-    position:absolute;
-    left:2px;
-    top:176px;
-    width:592px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u4_normal {
-    background-image: url('../Pattern_Library_Header_files/u2_normal.png');
-}
-
-.u4_container {
-    position:absolute;
     left:0px;
-    top:94px;
+    top:93px;
     width:1297px;
     height:44px;
 }
 
-#u4_img {
+#u2_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -110,7 +76,7 @@ div {
     height:50px;
 }
 
-.u5 {
+.u3 {
     position:absolute;
     left:2px;
     top:14px;
@@ -124,19 +90,19 @@ div {
     word-wrap:break-word;
 }
 
-.u6_normal {
+.u4_normal {
     background-image: url('../Pattern_Library_Header_files/u4_normal.png');
 }
 
-.u6_container {
+.u4_container {
     position:absolute;
     left:13px;
-    top:8px;
+    top:7px;
     width:434px;
     height:78px;
 }
 
-#u6_img {
+#u4_img {
     position:absolute;
     left:0px;
     top:0px;
@@ -144,7 +110,7 @@ div {
     height:78px;
 }
 
-.u7 {
+.u5 {
     position:absolute;
     left:2px;
     top:31px;
@@ -158,10 +124,10 @@ div {
     word-wrap:break-word;
 }
 
-.u8 {
+.u6 {
     position:absolute;
     left:27px;
-    top:107px;
+    top:106px;
     width:193px;
     height:21px;
     ;
@@ -172,11 +138,11 @@ div {
     word-wrap:break-word;
 }
 
-.u10 {
+.u8 {
     position:absolute;
-    left:587px;
+    left:162px;
     top:106px;
-    width:270px;
+    width:49px;
     height:21px;
     ;
     ;
@@ -186,7 +152,41 @@ div {
     word-wrap:break-word;
 }
 
-.u13 {
+.u9_normal {
+    background-image: url('../Pattern_Library_Header_files/u9_normal.png');
+}
+
+.u9_container {
+    position:absolute;
+    left:768px;
+    top:0px;
+    width:89px;
+    height:39px;
+}
+
+#u9_img {
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:89px;
+    height:39px;
+}
+
+.u10 {
+    position:absolute;
+    left:2px;
+    top:12px;
+    width:85px;
+    height:16px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u12 {
     position:absolute;
     left:79px;
     top:167px;
@@ -200,11 +200,11 @@ div {
     word-wrap:break-word;
 }
 
-.u15_line {
-    background-image: url('../Rationale_1_files/u15_line.png');
+.u14_line {
+    background-image: url('../Rationale_1_files/u14_line.png');
 }
 
-.u15_line {
+.u14_line {
     position:absolute;
     left:3px;
     top:0px;
@@ -212,7 +212,7 @@ div {
     height:39px;
 }
 
-.u15 {
+.u14 {
     position:absolute;
     left:21px;
     top:157px;
@@ -221,11 +221,11 @@ div {
     
 }
 
-.u16_normal {
-    background-image: url('../Rationale_1_files/u16_normal.png');
+.u15_normal {
+    background-image: url('../Rationale_1_files/u15_normal.png');
 }
 
-.u16_container {
+.u15_container {
     position:absolute;
     left:46px;
     top:169px;
@@ -233,7 +233,7 @@ div {
     height:12px;
 }
 
-#u16_img {
+#u15_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -241,7 +241,7 @@ div {
     height:18px;
 }
 
-.u17 {
+.u16 {
     position:absolute;
     left:2px;
     top:-2px;
@@ -255,11 +255,11 @@ div {
     word-wrap:break-word;
 }
 
-.u18_normal {
-    background-image: url('../Rationale_1_files/u18_normal.png');
+.u17_normal {
+    background-image: url('../Rationale_1_files/u17_normal.png');
 }
 
-.u18_container {
+.u17_container {
     position:absolute;
     left:51px;
     top:174px;
@@ -267,7 +267,7 @@ div {
     height:2px;
 }
 
-#u18_img {
+#u17_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -275,7 +275,7 @@ div {
     height:8px;
 }
 
-.u19 {
+.u18 {
     position:absolute;
     left:2px;
     top:-7px;
@@ -289,11 +289,11 @@ div {
     word-wrap:break-word;
 }
 
-.u20_normal {
-    background-image: url('../Rationale_1_files/u20_normal.png');
+.u19_normal {
+    background-image: url('../Rationale_1_files/u19_normal.png');
 }
 
-.u20_container {
+.u19_container {
     position:absolute;
     left:65px;
     top:174px;
@@ -301,7 +301,7 @@ div {
     height:6px;
 }
 
-#u20_img {
+#u19_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -309,7 +309,7 @@ div {
     height:12px;
 }
 
-.u21 {
+.u20 {
     position:absolute;
     left:2px;
     top:-5px;
@@ -323,45 +323,11 @@ div {
     word-wrap:break-word;
 }
 
-.u22_normal {
-    background-image: url('../Rationale_1_files/u22_normal.png');
+.u21_normal {
+    background-image: url('../Footer_files/u36_normal.png');
 }
 
-.u22_container {
-    position:absolute;
-    left:39px;
-    top:448px;
-    width:169px;
-    height:103px;
-}
-
-#u22_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:175px;
-    height:109px;
-}
-
-.u23 {
-    position:absolute;
-    left:6px;
-    top:83px;
-    width:158px;
-    height:15px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u24_normal {
-    background-image: url('../Footer_files/u35_normal.png');
-}
-
-.u24_container {
+.u21_container {
     position:absolute;
     left:0px;
     top:1406px;
@@ -369,7 +335,7 @@ div {
     height:80px;
 }
 
-#u24_img {
+#u21_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -377,7 +343,7 @@ div {
     height:86px;
 }
 
-.u25 {
+.u22 {
     position:absolute;
     left:2px;
     top:32px;
@@ -391,11 +357,11 @@ div {
     word-wrap:break-word;
 }
 
-.u27_normal {
-    background-image: url('../Rationale_1_files/u27_normal.png');
+.u24_normal {
+    background-image: url('../Rationale_1_files/u24_normal.png');
 }
 
-.u27_container {
+.u24_container {
     position:absolute;
     left:22px;
     top:737px;
@@ -403,7 +369,7 @@ div {
     height:457px;
 }
 
-#u27_img {
+#u24_img {
     position:absolute;
     left:-3px;
     top:-3px;
@@ -411,318 +377,12 @@ div {
     height:463px;
 }
 
-.u28 {
+.u25 {
     position:absolute;
     left:2px;
     top:2px;
     width:828px;
     height:461px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u30_normal {
-    background-image: url('../Rationale_1_files/u30_normal.png');
-}
-
-.u30_container {
-    position:absolute;
-    left:42px;
-    top:453px;
-    width:158px;
-    height:71px;
-}
-
-#u30_img {
-    position:absolute;
-    left:0px;
-    top:0px;
-    width:158px;
-    height:71px;
-}
-
-.u31 {
-    position:absolute;
-    left:2px;
-    top:28px;
-    width:154px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u32_normal {
-    background-image: url('../Rationale_1_files/u32_normal.png');
-}
-
-.u32_container {
-    position:absolute;
-    left:38px;
-    top:560px;
-    width:361px;
-    height:78px;
-}
-
-#u32_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:367px;
-    height:84px;
-}
-
-.u33 {
-    position:absolute;
-    left:6px;
-    top:58px;
-    width:350px;
-    height:15px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u34_normal {
-    background-image: url('../Rationale_1_files/u34_normal.png');
-}
-
-.u34_container {
-    position:absolute;
-    left:43px;
-    top:565px;
-    width:348px;
-    height:46px;
-}
-
-#u34_img {
-    position:absolute;
-    left:0px;
-    top:0px;
-    width:348px;
-    height:46px;
-}
-
-.u35 {
-    position:absolute;
-    left:2px;
-    top:15px;
-    width:344px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u36_normal {
-    background-image: url('../Rationale_1_files/u36_normal.png');
-}
-
-.u36_container {
-    position:absolute;
-    left:39px;
-    top:366px;
-    width:573px;
-    height:74px;
-}
-
-#u36_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:579px;
-    height:80px;
-}
-
-.u37 {
-    position:absolute;
-    left:6px;
-    top:54px;
-    width:562px;
-    height:15px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u38_normal {
-    background-image: url('../Rationale_1_files/u38_normal.png');
-}
-
-.u38_container {
-    position:absolute;
-    left:43px;
-    top:370px;
-    width:560px;
-    height:42px;
-}
-
-#u38_img {
-    position:absolute;
-    left:0px;
-    top:0px;
-    width:560px;
-    height:42px;
-}
-
-.u39 {
-    position:absolute;
-    left:2px;
-    top:13px;
-    width:556px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u40_normal {
-    background-image: url('../Rationale_1_files/u40_normal.png');
-}
-
-.u40_container {
-    position:absolute;
-    left:233px;
-    top:453px;
-    width:278px;
-    height:98px;
-}
-
-#u40_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:284px;
-    height:104px;
-}
-
-.u41 {
-    position:absolute;
-    left:6px;
-    top:78px;
-    width:267px;
-    height:15px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u42_normal {
-    background-image: url('../Rationale_1_files/u42_normal.png');
-}
-
-.u42_container {
-    position:absolute;
-    left:237px;
-    top:459px;
-    width:266px;
-    height:64px;
-}
-
-#u42_img {
-    position:absolute;
-    left:0px;
-    top:0px;
-    width:266px;
-    height:64px;
-}
-
-.u43 {
-    position:absolute;
-    left:2px;
-    top:24px;
-    width:262px;
-    height:16px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u44_normal {
-    background-image: url('../Rationale_1_files/u44_normal.png');
-}
-
-.u44_container {
-    position:absolute;
-    left:39px;
-    top:644px;
-    width:292px;
-    height:66px;
-}
-
-#u44_img {
-    position:absolute;
-    left:-3px;
-    top:-3px;
-    width:298px;
-    height:72px;
-}
-
-.u45 {
-    position:absolute;
-    left:6px;
-    top:46px;
-    width:281px;
-    height:15px;
-    ;
-    ;
-    ;
-    font-family:Arial;
-    text-align:left;
-    word-wrap:break-word;
-}
-
-.u46_normal {
-    background-image: url('../Rationale_1_files/u46_normal.png');
-}
-
-.u46_container {
-    position:absolute;
-    left:43px;
-    top:652px;
-    width:277px;
-    height:30px;
-}
-
-#u46_img {
-    position:absolute;
-    left:0px;
-    top:0px;
-    width:277px;
-    height:30px;
-}
-
-.u47 {
-    position:absolute;
-    left:2px;
-    top:7px;
-    width:273px;
-    height:16px;
     ;
     ;
     ;
