@@ -117,7 +117,7 @@ screen and (max-width: 600px) {
     display:block;
     padding:0.75em 3em 0.75em 0.75em;
     border-top:solid 1px #C9D0D0;
-    background:url(/screen-variations/arrows.png) 95% -30px no-repeat;
+    background:url(/screen-variations/arrows.png) 95% -24px no-repeat;
   }
 
   .show-all-parts,
@@ -127,6 +127,6 @@ screen and (max-width: 600px) {
   }
 
   .show-all-parts-open {
-    background-position: 95% 12px;
+    background-position: 95% 6px;
   }
 }
