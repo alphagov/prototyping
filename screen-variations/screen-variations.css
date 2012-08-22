@@ -13,15 +13,14 @@ screen and (max-width: 600px) {
   }
   .table-wrapper {
     overflow:scroll;
-    margin-left:-1em;
-    margin-right:-1em;
+    border:solid 1px #C9D0D0;
+    padding:0.75em 0.75em 1.5em;
   }
 
-  article table {
+  .table-wrapper table {
     width:auto;
-    margin-left:0;
-    margin-right:0;
     min-width:780px;
+    margin:0;
   }
   #global-header nav {
     display:none;
@@ -33,28 +32,52 @@ screen and (max-width: 600px) {
     overflow:hidden;
   }
 
-  section#content {
-    max-width:100%;
-  }
-
   header.page-header hgroup,
   .article-container {
     margin-right:0;
   }
 
+  header.page-header hgroup h1 {
+    margin-bottom:0.5em;
+  }
+
+  header.page-header hgroup p {
+    margin:0;
+    color:#2E3191;
+    background:#E5E5E5;
+    padding:0.5em 0.75em;
+  }
+
   article .inner,
+  .multi-page article .inner,
+  .meta-data .inner,
   .page-header hgroup {
-    padding-left:1.5em;
-    padding-right:1.5em;
+    padding-left:0.75em;
+    padding-right:0.75em;
+  }
+
+  article .application-notice,
+  article .advisory.minor,
+  article .form-download, article .subscribe,
+  .pagination {
+    margin-right:0;
+    margin-left:0;
   }
 
   header.page-header hgroup h1 {
     padding-left:0;
     padding-right:0;
     font-size: 2em;
-    padding: 0.3em 1.5em 0.35em 1.25em;
+    padding: 0.3em 1.5em 0.35em 45px;
     position: relative;
+  }
+
+  #wrapper.Guide header.page-header hgroup h1 {
     background:url(/screen-variations/icon-guide-s.png) 0 0.25em no-repeat;
+  }
+
+  #wrapper.answer header.page-header hgroup h1 {
+    background:url(/screen-variations/icon-answer-s.png) 0 0.25em no-repeat;
   }
 
   .related-positioning {
@@ -86,6 +109,7 @@ screen and (max-width: 600px) {
   #content.multi-page article {
     width:auto;
     clear:both; 
+    float:none;
   }
    
   aside .page-navigation, 
@@ -128,5 +152,11 @@ screen and (max-width: 600px) {
 
   .show-all-parts-open {
     background-position: 95% 6px;
+  }
+
+  .print-link a,
+  .print-link a:link,
+  .print-link a:visited {
+    padding-right:2.3em;
   }
 }
