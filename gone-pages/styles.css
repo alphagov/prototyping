@@ -22,7 +22,7 @@ html.no-branding {
   margin: 0 0 20px 20px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
   .no-branding body {
     padding: 0;
   }
@@ -36,7 +36,7 @@ html.no-branding {
   }
 
   .no-branding .old-site-logo {
-    float: none;
+    width: 50%;
   }
 
   .no-branding article {
