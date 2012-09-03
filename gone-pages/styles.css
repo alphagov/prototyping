@@ -23,6 +23,10 @@ html.no-branding {
 }
 
 @media screen and (max-width: 320px) {
+  .no-branding body {
+    padding: 0;
+  }
+
   .no-branding section#content {
     margin: 0;
   }
@@ -37,5 +41,6 @@ html.no-branding {
 
   .no-branding article {
     padding: 0;
+    margin: 0 10px;
   }
 }
