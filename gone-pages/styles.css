@@ -37,6 +37,12 @@ html.no-branding {
   background: #ff5b00 url(directgov-logo.png) no-repeat 80px 18px;
 }
 
+@media screen and (max-width: 720px) {
+  .no-branding body {
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .no-branding body {
     padding: 0;
@@ -44,6 +50,11 @@ html.no-branding {
 
   .no-branding section#content {
     margin: 0;
+  }
+
+  .no-branding header.page-header.directgov hgroup,
+  .no-branding header.page-header.businesslink hgroup {
+    background-position: 10px 18px;
   }
 
   .no-branding header.page-header hgroup h1 {
