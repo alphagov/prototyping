@@ -8,7 +8,14 @@ html.no-branding {
 
 .no-branding header.page-header hgroup {
   margin: 0;
-  padding-top: 2em;
+  padding: 4em 0 0 0;
+  background: #333;
+}
+
+.no-branding header.page-header hgroup h1 {
+  padding: 0.6em 1.5em 0.35em 1.818181818em;
+  color: #333;
+  background-color: #fff;
 }
 
 .no-branding article {
@@ -20,6 +27,14 @@ html.no-branding {
 .old-site-logo {
   float: right;
   margin: 0 0 20px 20px;
+}
+
+.no-branding header.page-header.businesslink hgroup {
+  background: #0077b6 url(businesslink-logo.png) no-repeat 80px 18px;
+}
+
+.no-branding header.page-header.directgov hgroup {
+  background: #ff5b00 url(directgov-logo.png) no-repeat 80px 18px;
 }
 
 @media screen and (max-width: 500px) {
