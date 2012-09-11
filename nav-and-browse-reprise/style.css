@@ -1,0 +1,91 @@
+body.mainstream nav.header-context ol {
+  margin-right: 0;
+}
+
+header.page-header hgroup {
+  background-color: #303030;
+  margin-right: 0;
+  padding: 0;
+}
+
+.sub-category-page header.page-header hgroup {
+  /*background-color: #fff;*/
+}
+
+header.page-header hgroup h1 {
+  color: #fff;
+  line-height: 1;
+  padding: 0.3em 0.7em 0.35em 0.7em;
+}
+
+.sub-category-page header.page-header hgroup h1 {
+  /*font-size: 1.5em;*/
+  /*padding: 0.5em 1.25em;*/
+}
+
+.sub-category-page header.page-header hgroup h1 a {
+  color: #fff;
+}
+
+header.page-header hgroup h2 {
+  background-color: #E5E5E5;
+  /*background-color: #000;*/
+  /*color: #fff;*/
+  color: inherit;
+  font-size: 1.5em;
+  /*font-size: 2.75em;*/
+  margin: 0;
+  padding: 0.5em 1.25em;
+  /*padding: 0.3em 0.7em 0.35em 0.7em;*/
+}
+
+.category-page .search-container {
+  background-color: #fff;
+  padding: 0 2em 1em 2em;
+}
+
+.category-page .search-container h3 {
+  font-size: 1.1875em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.category-page .search-container .summary {
+  /*background-color: #D5E8F3;*/
+  font-size: 1.5em;
+  margin: 0 -1.35em 0.5em -1.35em;
+  padding: 1em 1.35em;
+}
+
+.category-page .search-container .summary p {
+  margin: 0;
+  width: 66%;
+}
+
+.category-page .search-container ul.sub-categories {
+  padding-left: 0;
+}
+
+.category-page .search-container ul.sub-categories li {
+  float: left;
+  list-style: none;
+  margin-right: 4.25%;
+  margin-bottom: 1em;
+  width: 30.5%;
+}
+
+.category-page .search-container ul.sub-categories li:nth-child(3n) {
+  margin-right: 0;
+}
+
+.category-page .search-container ul.results-list {
+  padding-top: 1.5em;
+}
+
+.category-page .search-container h3 + ul.results-list {
+  padding: 0;
+}
+
+.category-page .search-container ul.results-list li {
+
+}
