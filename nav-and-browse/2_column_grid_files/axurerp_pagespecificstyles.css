@@ -852,12 +852,8 @@ div {
     word-wrap:break-word;
 }
 
-.u50_mouseOver {
-    background-image: url('../2_column_grid_files/u50_mouseOver.png');
-}
-
 .u50_normal {
-    background-image: url('../2_column_grid_files/u50_mouseOver.png');
+    background-image: url('../2_column_grid_files/u50_normal.png');
 }
 
 .u50_container {

@@ -103,14 +103,9 @@
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="2_column_grid_files/u46_normal.png");
 }
 
-* html .u50_mouseOver {
-    background-image: none;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="2_column_grid_files/u50_mouseOver.png");
-}
-
 * html .u50_normal {
     background-image: none;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="2_column_grid_files/u50_mouseOver.png");
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="2_column_grid_files/u50_normal.png");
 }
 
 * html .u52_normal {

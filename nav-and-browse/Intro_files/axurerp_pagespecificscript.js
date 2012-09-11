@@ -1,4 +1,4 @@
-for(var i = 0; i < 42; i++) { var scriptId = 'u' + i; window[scriptId] = document.getElementById(scriptId); }
+for(var i = 0; i < 46; i++) { var scriptId = 'u' + i; window[scriptId] = document.getElementById(scriptId); }
 
 $axure.eventManager.pageLoad(
 function (e) {
@@ -44,7 +44,7 @@ if (true) {
 
 }
 });
-
+gv_vAlignTable['u42'] = 'top';
 u40.style.cursor = 'pointer';
 $axure.eventManager.click('u40', function(e) {
 
@@ -65,6 +65,26 @@ if (true) {
 }
 });
 
+u45.style.cursor = 'pointer';
+$axure.eventManager.click('u45', function(e) {
+
+if (true) {
+
+	self.location.href=$axure.globalVariableProvider.getLinkUrl('Screengrabs.html');
+
+}
+});
+
+u43.style.cursor = 'pointer';
+$axure.eventManager.click('u43', function(e) {
+
+if (true) {
+
+	self.location.href=$axure.globalVariableProvider.getLinkUrl('Long_crumbs.html');
+
+}
+});
+gv_vAlignTable['u44'] = 'top';
 u10.style.cursor = 'pointer';
 $axure.eventManager.click('u10', function(e) {
 
