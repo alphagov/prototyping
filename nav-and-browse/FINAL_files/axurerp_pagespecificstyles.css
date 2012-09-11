@@ -118,3 +118,31 @@ div {
     word-wrap:break-word;
 }
 
+.u10 {
+    position:absolute;
+    left:27px;
+    top:276px;
+    width:802px;
+    height:21px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+
+.u15 {
+    position:absolute;
+    left:27px;
+    top:239px;
+    width:150px;
+    height:15px;
+    ;
+    ;
+    ;
+    font-family:Arial;
+    text-align:left;
+    word-wrap:break-word;
+}
+

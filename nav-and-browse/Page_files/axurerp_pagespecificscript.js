@@ -1,4 +1,4 @@
-for(var i = 0; i < 63; i++) { var scriptId = 'u' + i; window[scriptId] = document.getElementById(scriptId); }
+for(var i = 0; i < 69; i++) { var scriptId = 'u' + i; window[scriptId] = document.getElementById(scriptId); }
 
 $axure.eventManager.pageLoad(
 function (e) {
@@ -26,7 +26,7 @@ if (true) {
 
 }
 });
-gv_vAlignTable['u27'] = 'top';gv_vAlignTable['u28'] = 'top';gv_vAlignTable['u29'] = 'top';gv_vAlignTable['u60'] = 'top';gv_vAlignTable['u62'] = 'center';gv_vAlignTable['u31'] = 'center';u32.tabIndex = 0;
+gv_vAlignTable['u27'] = 'top';gv_vAlignTable['u28'] = 'top';gv_vAlignTable['u29'] = 'top';gv_vAlignTable['u60'] = 'top';gv_vAlignTable['u62'] = 'center';gv_vAlignTable['u64'] = 'center';gv_vAlignTable['u65'] = 'top';gv_vAlignTable['u67'] = 'center';gv_vAlignTable['u68'] = 'top';gv_vAlignTable['u31'] = 'center';u32.tabIndex = 0;
 
 u32.style.cursor = 'pointer';
 $axure.eventManager.click('u32', function(e) {
