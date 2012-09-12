@@ -19,7 +19,7 @@ categories: Format
 ---
 </pre>
 
-Set "layout" to the template file you want to use - the current one "default" is just the header and footer from gov.uk. It currently pulls in CSS from the gov.uk CDN. So you can probably leave this alone.
+Set "layout" to the template file you want to use - the "default" one is just the header and footer from gov.uk. It currently pulls in CSS from the gov.uk CDN. So you can probably leave this alone.
 
 Set "title" to the name of the app you are building - it controls what appears as the main page title.
 
@@ -56,6 +56,18 @@ sudo gem install jekyll
 4. then finally
 git clone git@github.com:alphagov/prototyping.git prototyping
 to get a copy of the prototyping tool.
+
+## Using Sass
+
+If you have Sass installed and want to make use of it you can. '.scss' files will be converted to their '.css' equivalents in the generated site (in the same location). If you don't have Sass installed then at the command line, type 'gem install sass'.
+
+One thing, in order for it to work you need to start each '.scss' file with empty YAML front matter, like this:
+
+    ---
+    ---
+
+    #background
+      color: black
 
 ## Pushing online
 
