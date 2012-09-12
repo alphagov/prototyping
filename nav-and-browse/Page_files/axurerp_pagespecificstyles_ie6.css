@@ -128,3 +128,13 @@
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="Page_files/u61_normal.png");
 }
 
+* html .u63_normal {
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="Page_files/u53_normal.png");
+}
+
+* html .u66_normal {
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="Page_files/u58_normal.png");
+}
+
