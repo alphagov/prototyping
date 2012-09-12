@@ -78,6 +78,7 @@ header.page-header hgroup h2 {
 
 .category-page .search-container ul.sub-categories li {
   float: left;
+  height: 11em;
   list-style: none;
   margin-right: 4.25%;
   margin-bottom: 1em;
