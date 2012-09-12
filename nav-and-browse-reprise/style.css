@@ -1,48 +1,83 @@
+.content-fixed {
+  top: 0;
+  position: fixed;
+}
+.shim {
+  display: block;
+}
+
+#global-header h1 {
+  /*margin-left: -10px;*/
+  margin-left: 32px;
+}
+
+body.mainstream {
+  padding-top: 0;
+}
+
+.js-enabled #global-header {
+  position: static;
+}
+
+body.mainstream nav.header-context {
+  /*background-color: #f2f2f2;*/
+  background-color: #fff;
+  margin: 0;
+  width: 100%;
+  max-width: none !important;
+  z-index: 9999;
+}
+
+body.mainstream nav.header-context.content-fixed {
+  border-bottom: solid 3px #F2F2F2;
+  /*box-shadow: 0 1px 3px rgba(0,0,0,0.08);*/
+}
+
 body.mainstream nav.header-context ol {
-  margin-right: 0;
+  /*background-color: #fff;*/
+  background-color: transparent;
+  /*border-bottom: solid 1px #f2f2f2;*/
+  display: block;
+  margin: 0 auto;
+  width: 896px;
+  padding: 0.5em 32px;
+}
+
+body.mainstream nav.header-context ol li {
+  font-size: 19px;
+}
+
+body.mainstream nav.header-context ol li:first-child {
+  margin-left: 0;
 }
 
 header.page-header hgroup {
   /*background-color: #303030;*/
   margin-right: 0;
   padding: 0;
+  padding: 1em 0 0 0;
+}
+
+section#content {
+  margin-top: 1em;
 }
 
 .sub-category-page header.page-header hgroup {
-  /*background-color: #E5E5E5;*/
+  
 }
 
 header.page-header hgroup h1 {
   /*color: #fff;*/
   line-height: 1;
-  padding: 0.3em 0.7em 0.35em 0.7em;
-}
-
-.sub-category-page header.page-header hgroup h1 {
-  /*background-color: #E5E5E5;*/
-  border-bottom: solid 8px #E5E5E5;
-  /*font-size: 1.5em;*/
-  /*padding: 0.5em 1.25em;*/
-  padding-left: 0.2em;
-  margin: 0 0.5em;
-}
-
-.sub-category-page header.page-header hgroup h1 a {
-  /*color: #999;*/
+  font-size: 48px;
+  margin: 0 32px;
+  padding: 0;
 }
 
 header.page-header hgroup h2 {
-  /*background-color: #E5E5E5;*/
-  /*background-color: #000;*/
-  border-bottom: solid 4px #f47738;
-  /*color: #fff;*/
   color: inherit;
-  font-size: 1.75em;
-  /*font-size: 2.75em;*/
-  margin: 0 1.15em 0 2.25em;
-  padding: 0.5em 0;
-  /*padding: 0.3em 0.7em 0.35em 0.7em;*/
-  width: 19em;
+  font-size: 32px;
+  margin: 8px 32px 0 32px;
 }
 
 .category-page .search-container {
@@ -51,7 +86,7 @@ header.page-header hgroup h2 {
 }
 
 .category-page.sub-category-page .search-container {
-  padding-left: 4em;
+  
 }
 
 .category-page .search-container h3 {
