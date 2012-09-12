@@ -3,45 +3,55 @@ body.mainstream nav.header-context ol {
 }
 
 header.page-header hgroup {
-  background-color: #303030;
+  /*background-color: #303030;*/
   margin-right: 0;
   padding: 0;
 }
 
 .sub-category-page header.page-header hgroup {
-  /*background-color: #fff;*/
+  /*background-color: #E5E5E5;*/
 }
 
 header.page-header hgroup h1 {
-  color: #fff;
+  /*color: #fff;*/
   line-height: 1;
   padding: 0.3em 0.7em 0.35em 0.7em;
 }
 
 .sub-category-page header.page-header hgroup h1 {
+  /*background-color: #E5E5E5;*/
+  border-bottom: solid 8px #E5E5E5;
   /*font-size: 1.5em;*/
   /*padding: 0.5em 1.25em;*/
+  padding-left: 0.2em;
+  margin: 0 0.5em;
 }
 
 .sub-category-page header.page-header hgroup h1 a {
-  color: #fff;
+  /*color: #999;*/
 }
 
 header.page-header hgroup h2 {
-  background-color: #E5E5E5;
+  /*background-color: #E5E5E5;*/
   /*background-color: #000;*/
+  border-bottom: solid 4px #f47738;
   /*color: #fff;*/
   color: inherit;
-  font-size: 1.5em;
+  font-size: 1.75em;
   /*font-size: 2.75em;*/
-  margin: 0;
-  padding: 0.5em 1.25em;
+  margin: 0 1.15em 0 2.25em;
+  padding: 0.5em 0;
   /*padding: 0.3em 0.7em 0.35em 0.7em;*/
+  width: 19em;
 }
 
 .category-page .search-container {
   background-color: #fff;
   padding: 0 2em 1em 2em;
+}
+
+.category-page.sub-category-page .search-container {
+  padding-left: 4em;
 }
 
 .category-page .search-container h3 {
