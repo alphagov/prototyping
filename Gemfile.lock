@@ -20,6 +20,7 @@ GEM
     maruku (0.6.0)
       syntax (>= 1.0.0)
     posix-spawn (0.3.6)
+    sass (3.2.1)
     syntax (1.0.0)
 
 PLATFORMS
@@ -28,3 +29,4 @@ PLATFORMS
 DEPENDENCIES
   RedCloth
   jekyll
+  sass
