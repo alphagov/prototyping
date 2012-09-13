@@ -13,26 +13,7 @@
   </head>
   <body class="citizen mainstream">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
-    <header role="banner" class="group" id="global-header">
-      <div class="header-global group">
-        <h1><a href="/" title="Go to the gov.uk homepage">GOV.UK</a></h1>
-        <nav role="navigation">
-          <ul>
-            <li><a href="/settings" class="customisation-settings">Settings</a></li>
-            <li><a href="/help">Help</a></li>
-            <li id="gs-feedback"><a href="/feedback">Feedback</a></li>
-          </ul>
-        </nav>
-        <div class="search-help">
-          <form id="search" class="site-search" action="/search" method="get" role="search">
-            <label for="site-search-text" class="visuallyhidden">
-              <span>Search</span>
-            </label>
-            <input type="search" name="q" id="site-search-text" title="Search"><input type="submit" value="Search" class="button">
-          </form>
-        </div>
-      </div>
-    </header>
+    {% include _header.html %}
     <nav role="navigation" class="header-context">
       <div class="beta-notice">
         <div class="inner">
@@ -56,27 +37,6 @@
         
       </section>
     </div><!--end wrapper-->
-    <footer class="group" id="footer" role="contentinfo">
-      <div class="beta-notice">
-        <p>This is a <a href="http://digital.cabinetoffice.gov.uk/2012/01/31/beta/">test website</a>, so may be inaccurate or misleading. The official website remains <a href="http://www.direct.gov.uk">Directgov</a> and the website of the <a href="http://www.cabinetoffice.gov.uk/content/list-government-departments-and-ministers">relevant government department or organisation</a></p>
-      </div>
-      <div class="inner group">
-        <div class="colophon-and-help">
-          <nav class="help">
-            <ul>
-              <li><a href="/help">Help</a></li>
-              <li><a href="/help/cookies">Cookies</a></li>
-            </ul>
-          </nav>
-          <div class="colophon">
-            <p>Much of the information on this website is available for reuse under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/" rel="license">Open Government Licence</a></p>
-            <p>Built by the <a href="http://digital.cabinetoffice.gov.uk">Government Digital Service</a></p>
-          </div>
-        </div>
-        <div class="copyright">
-          <p>&copy; Crown Copyright</p>
-        </div>
-      </div>
-    </footer>
+    {% include _footer.html %}
   </body>
 </html>
