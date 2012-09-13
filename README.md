@@ -49,17 +49,21 @@ http://help.github.com/mac-set-up-git/
 2. Update Ruby, easiest way was to follow the "Install Ruby 1.9" instructions on
 http://pragmaticstudio.com/blog/2010/9/23/install-rails-ruby-mac
 
-3. then run
-sudo gem install jekyll
-(see https://github.com/mojombo/jekyll/wiki/install )
+3. Get the code
 
-4. then finally
-git clone git@github.com:alphagov/prototyping.git prototyping
+    git clone git@github.com:alphagov/prototyping.git prototyping
+
 to get a copy of the prototyping tool.
+
+4. Finally install jekyll and dependencies:
+
+    sudo gem install bundle
+    bundle install
+
 
 ## Using Sass
 
-If you have Sass installed and want to make use of it you can. '.scss' files will be converted to their '.css' equivalents in the generated site (in the same location). If you don't have Sass installed then at the command line, type 'gem install sass'.
+Sass is automatically installed with the dependencies. '.scss' files will be converted to their '.css' equivalents in the generated site (in the same location). If you don't have Sass installed then at the command line, type 'gem install sass'.
 
 One thing, in order for it to work you need to start each '.scss' file with empty YAML front matter, like this:
 
