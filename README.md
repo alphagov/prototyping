@@ -51,15 +51,16 @@ http://pragmaticstudio.com/blog/2010/9/23/install-rails-ruby-mac
 
 3. Get the code
 
-    git clone git@github.com:alphagov/prototyping.git prototyping
+    `git clone git@github.com:alphagov/prototyping.git prototyping`
 
 to get a copy of the prototyping tool.
 
 4. Finally install jekyll and dependencies:
 
+    <pre>
     sudo gem install bundle
     bundle install
-
+    </pre>
 
 ## Using Sass
 
