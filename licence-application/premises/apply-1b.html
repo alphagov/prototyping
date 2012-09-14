@@ -1,0 +1,66 @@
+---
+layout: default-no-article-wrapper
+title: Premises licence (England &amp; Wales)
+categories: Licence
+css: ../css/licence.css
+section_class: licence
+---
+
+<div class="relevant-authority">
+  <h2>
+    Apply for a premises licence <br> <!-- This reflects the specific form within a licence the user has chosen -->
+    from <strong>London Borough of Westminster</strong>
+  </h2>
+</div>
+
+<div>
+  <nav role="navigation" class="transaction-progress group">
+    <span class="visuallyhidden step-count">Step 1 of 4</span>
+    <ol class="group">
+      <li class="active">Submit application</li>
+      <li>Email address</li>
+      <li>Pay licence fee</li>
+      <li>Done</li>
+    </ol>
+  </nav>
+  <article>
+    <div class="inner">
+        <form method="get" action="apply-2.html">
+            <fieldset>
+              <legend>Submit the application form</legend>
+                <!-- Display if the authority allows postal submission of application forms and supporting docs 
+                <div class="application-notice info-notice">
+                  <p>If you don't want to submit these documents electronically you can post them to the address given on the final screen of this service.</p>
+                </div>-->
+              <div class="application-notice">
+                <p>
+                  <label for="licence-form">Submit the application form</label>
+                  <input type="file" name="licence-form">
+                </p>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Submit any supporting documents</legend>
+              <p>We accept the following document formats:<br> PDF, Word, TXT, RTF, JPG and PNG.</p>
+
+              <div class="application-notice">
+                <p>
+                  <label for="premises-plan">Submit the premises plan</label>
+                  <input type="file" name="premises-plan">
+                </p>
+              </div>
+              <!--<div class="application-notice info-notice">-->
+                <p>The following documents aren't required, but providing them may improve your chances of a successful application.</p>
+              <!--</div>-->
+                <div class="application-notice">
+                <p>
+                  <label for="consent-form">Submit the consent form of premises planner (optional)</label>
+                  <input type="file" name="consent-form">
+                </p>
+              </div>
+            </fieldset>
+          <input type="submit" class="button" value="Continue">
+        </form>
+    </div>
+  </article>
+</div>
