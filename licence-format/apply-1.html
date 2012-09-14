@@ -23,7 +23,7 @@ css: css/licence.css
   <article class="">
     <div class="inner">
       <h1>Step 1: Submit your application</h1>
-      <p>Follow the instructions beloww:</p>
+      <p>Follow the instructions below:</p>
       <ol class="steps">
       <li>Download the application form for this licence
         <div class="form-download">
@@ -51,13 +51,19 @@ css: css/licence.css
             </fieldset>
             <fieldset>
               <legend>Submit supporting documents</legend>
+
+              <!-- Appears if one or more supporting documents are optional -->
+              <div class="application-notice info-notice">
+                <p>Not all supporting documents are required, but the more you can provide, the better your chance of a successful application</p>
+              </div>
+
               <div class="application-notice">
                 <p>
                   <label for="premises-plan">Premises plan</label>
                   <input type="file" name="premises-plan">
                 </p>
                 <p>
-                  <label for="consent-form">Consent form of premises planner (if required)</label>
+                  <label for="consent-form">Consent form of premises planner (optional)</label>
                   <input type="file" name="consent-form">
                 </p>
               </div>
