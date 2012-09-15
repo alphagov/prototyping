@@ -1,0 +1,28 @@
+---
+layout: default-no-article-wrapper
+title: A test of the HTML5 details tag
+categories: Licence
+css: ../css/licence.css
+section_class: licence
+---
+
+<article>
+  <div class="inner">
+
+    <h2>Option 1</h2>
+
+    <details>
+      <summary>Summary 1</summary>
+      Details 1
+    </details>
+
+    <h2>Option 2</h2>
+
+    <details role="section" aria-expanded="false" aria-labelledby="label">
+      <summary id="label" role="button" aria-controls="content">Summary 2</summary>
+      <div id="content" aria-hidden="true">Details 2</div>
+    </details>
+
+
+  </div>
+</article>

@@ -18,7 +18,8 @@ header.page-header h1 span {
   margin-bottom: 2em;
 }
 
-.relevant-authority h2 {
+.relevant-authority h2,
+.relevant-authority p {
   /*font-size: 112.5%;*/
   margin: 0;
 }
@@ -288,5 +289,45 @@ li h4{
 }
 li h3{
   margin-top: 0.2em;
+}
+
+/* ==================================================
+ * Simple Inline Expansion
+ * ================================================== */
+
+ /* A styled-up version of the details/summary HTML5 elements
+  * For the benefits or otherwise of details/summary, see:
+  * http://html5doctor.com/the-details-and-summary-elements/
+  * http://mathiasbynens.be/notes/html5-details-jquery
+  */
+
+details{
+  margin:  0 -1em 1em -1em;
+  padding-left: 1em;
+}
+details summary{
+  color: #2E3191;
+  cursor: pointer;
+  display: inline;
+  text-decoration: underline;
+}
+details summary:hover{
+  color: #1D97FF;
+}
+
+/* Open state */
+details[open]{
+  background-color: #f2f2f2;
+  margin-top: -0.7em;
+  padding: 0.7em 1em 1em 1em;
+}
+details[open] > summary{
+  /*
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;*/
+}
+details summary:focus{
+  outline: none;
 }
 
