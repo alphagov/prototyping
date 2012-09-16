@@ -25,13 +25,11 @@ section_class: licence
   </nav>
   <article>
     <div class="inner">
+        <!--<h3>Submit the application form and any supporting documents</h3>-->
+
         <form method="get" action="apply-2.html">
             <fieldset>
-              <legend>Submit the application form</legend>
-                <!-- Display if the authority allows postal submission of application forms and supporting docs 
-                <div class="application-notice info-notice">
-                  <p>If you don't want to submit these documents electronically you can post them to the address given on the final screen of this service.</p>
-                </div>-->
+              <legend>Application form</legend>
               <div class="application-notice">
                 <p>
                   <label for="licence-form">Submit the application form</label>
@@ -40,8 +38,8 @@ section_class: licence
               </div>
             </fieldset>
             <fieldset>
-              <legend>Submit any supporting documents</legend>
-              <p>We accept the following document formats:<br> PDF, Word, TXT, RTF, JPG and PNG.</p>
+              <legend>Supporting documents</legend>
+              <p>(PDF, Word, TXT, RTF, JPG or PNG)</p>
 
               <div class="application-notice">
                 <p>
@@ -49,16 +47,22 @@ section_class: licence
                   <input type="file" name="premises-plan">
                 </p>
               </div>
-              <!--<div class="application-notice info-notice">-->
-                <p>The following documents aren't required, but providing them may improve your chances of a successful application.</p>
-              <!--</div>-->
                 <div class="application-notice">
                 <p>
                   <label for="consent-form">Submit the consent form of premises planner (optional)</label>
                   <input type="file" name="consent-form">
                 </p>
               </div>
+
+              <details>
+                <summary>What if I can't submit all of these documents?</summary>
+                <p>You don't have to submit documents marked 'optional', but if you can it may improve your chances of a successful application.</p>
+                <p>If you can't submit the documents digitally you can send copies by post instead. We'll give you the address once you've paid the licence fee.</p>
+              </details>
+              
             </fieldset>
+
+
           <input type="submit" class="button" value="Continue">
         </form>
     </div>
