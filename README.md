@@ -66,7 +66,7 @@ to get a copy of the prototyping tool.
 
 '.scss' files will be converted to their '.css' counterparts in the generated site. If you import 'mixins.scss' to your .scss file you'll also have access to all the GOV.UK mixins from the Static and Toolkit repos.
 
-Finally, in order for .scss conversion to work with Jekyll you'll need to start each '.scss' file with empty YAML front matter. Put this altogether and you get a .scss file that starts like this:
+Finally, in order for .scss conversion to work with Jekyll you'll need to start each '.scss' file with empty YAML front matter. Put this all together and you get a .scss file that starts like this:
 
     ---
     ---
