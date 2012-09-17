@@ -1,5 +1,6 @@
 ---
 ---
+@import "_mixins.scss";
 
 header.page-header hgroup {
   border-color: #617900;
@@ -289,36 +290,27 @@ li h3{
 details{
   margin:  0 -1em 1em -1em;
   padding-left: 1em;
-}
-details summary{
-  color: #2E3191;
-  cursor: pointer;
-  display: inline;
-  text-decoration: underline;
-}
-details summary:hover{
-  color: #1D97FF;
-}
-
-/* Open state */
-details[open]{
-  background-color: #f2f2f2;
-  margin-top: -0.7em;
-  padding: 0.7em 1em 1em 1em;
-}
-details[open] > summary{
-  /*
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;*/
-}
-details summary:focus{
-  outline: none;
+  summary{
+    color: #2E3191;
+    cursor: pointer;
+    display: inline;
+    text-decoration: underline;
+    &:hover{ color: #1D97FF; }
+    &:focus{ outline: none; }
+  }
+  &[open]{
+    background-color: $cool-grey;
+    margin-top: -0.7em;
+    padding: 0.7em 1em 1em 1em;
+  }
 }
 
 
-/* Update text.css with these */
-article legend,
+/* Update text.css with these. Use the core-19 mixin */
+article legend{
+  @include core-19;
+  font-weight: 600;
+}
 article summary{
-  font-size: 1.16em;
+  @include core-19;
 }
