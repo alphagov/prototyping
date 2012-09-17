@@ -1,0 +1,245 @@
+@import "_print.scss";
+
+//  GOV.UK typography palettes
+
+//  ANATOMY OF A TYPE STYLE
+//  -----------------------
+//  These are a collection of graphic styles. They are deliberately
+//  abstracted from semantic HTML context to enable flexible re-use.
+//  Although there is a lot of duplication within this file, as long
+//  as you GZIP your CSS it shouldnt cause any bloat.
+//
+//
+//  @mixin brand-45 {
+//  _ Style name refers to graphic style rather than semantic use
+//
+//      font-size: 45px;
+//      font-size: 4.5rem;
+//      _ Font-sizing in rems to avoid issues with relative sizing
+//        and DOM context. Font-size in pixels as fallback for
+//        older browsers.
+//
+//      line-height: 1.1555555556;
+//      _ Unit-less, relative leading value.
+//        line-height (52px) / font-size (45px) = relative line-height
+//
+//      font-weight: 300;
+//      letter-spacing: 0.01em;
+//      text-transform: none;
+//      _ Again, we cant assume anything about pre-exising CSS on the
+//        page, so setting these values (even if just resetting them
+//        to default values) will increase the robustness of the style.
+//
+//      padding-top: 7px;
+//      padding-top: 0.7rem;
+//      padding-bottom: 5px;
+//      padding-bottom: 0.5rem;
+//      _ Set top and bottom padding values to ensure an appropriate
+//        vertical measure before & after the text, ideally sitting it
+//        on the 8px baseline grid. Rem sizing will allow the
+//        whitespace to scale proportionally along with the text.
+//  }
+
+// CORE FONTS - NEW TRANSPORT
+
+@mixin core-48($line-height: (50 / 48), $line-height-640: (30 / 25)) {
+  font-family: $NTA-Light;
+  font-size: 48px;
+  font-size: 4.8rem;
+  @include print {
+    font-size: 18pt;
+  }
+  line-height: $line-height;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  @media (max-width: 640px) {
+    font-size: 2.5rem;
+    line-height: $line-height-640;
+  }
+}
+
+// Suitable for page headings
+@mixin heading-48 {
+  @include core-48;
+  padding-top: 12px;
+  padding-top: 1.2rem;
+  padding-bottom: 8px;
+  padding-bottom: 0.8rem;
+  @media (max-width: 640px) {
+    padding-top: 0.8rem;
+    padding-bottom: 0.7rem;
+  }
+}
+
+// This is used on July 4th homepage & browse page
+@mixin core-36($line-height: (42 / 36), $line-height-640: (30 / 25)) {
+  font-family: $NTA-Light;
+  font-size: 36px;
+  font-size: 3.6rem;
+  line-height: $line-height;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  @media (max-width: 640px) {
+    font-size: 2.5rem;
+    line-height: $line-height-640;
+  }
+}
+
+@mixin core-27($line-height: (30 / 27), $line-height-640: (25 / 19)) {
+  font-family: $NTA-Light;
+  font-size: 27px;
+  font-size: 2.7rem;
+  line-height: $line-height;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  @media (max-width: 640px) {
+    font-size: 1.9rem;
+    line-height: $line-height-640;
+  }
+}
+
+// Suitable for body headings
+@mixin heading-27 {
+  @include core-27;
+  padding-top: 3px;
+  padding-top: 0.3rem;
+  padding-bottom: 2px;
+  padding-bottom: 0.2rem;
+  @media (max-width: 640px) {
+    padding-top: 0.7rem;
+    padding-bottom: 0.3rem;
+  }
+}
+
+@mixin core-24($line-height: (30 / 24), $line-height-640: (25 / 17)) {
+  font-family: $NTA-Light;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: $line-height;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  @media (max-width: 640px) {
+    font-size: 1.7rem;
+    line-height: $line-height-640;
+  }
+}
+
+// Suitable for short body copy
+@mixin copy-24 {
+  @include core-24;
+  padding-top: 3px;
+  padding-top: 0.3rem;
+  padding-bottom: 2px;
+  padding-bottom: 0.2rem;
+  @media (max-width: 640px) {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
+}
+
+// Suitable for body headings
+@mixin heading-24 {
+  @include core-24;
+  padding-top: 0;
+  padding-bottom: 12px;
+  padding-bottom: 1.2rem;
+  @media (max-width: 640px) {
+    padding-top: 0;
+    padding-bottom: 0.8rem;
+  }
+}
+
+@mixin core-19($line-height: (25 / 19), $line-height-640: (20 / 13)) {
+  font-family: $NTA-Light;
+  font-size: 19px;
+  font-size: 1.9rem;
+  @include print {
+    font-size:14pt;
+  }
+  line-height: $line-height;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  @media (max-width: 640px) {
+    font-size: 1.3rem;
+    line-height: $line-height-640;
+  }
+}
+
+// Suitable for long body copy
+@mixin copy-19 {
+  @include core-19;
+  padding-top: 7px;
+  padding-top: 0.7rem;
+  padding-bottom: 3px;
+  padding-bottom: 0.3rem;
+  @media (max-width: 640px) {
+    padding-top: 0.6rem;
+    padding-bottom: 0.4rem;
+  }
+}
+
+@mixin core-16($line-height: (20 / 16), $line-height-640: (20 / 13)) {
+  font-family: $NTA-Light;
+  font-size: 16px;
+  font-size: 1.6rem;
+  @include print {
+    font-size: 12pt;
+  }
+  line-height: $line-height;
+  font-weight: 300;
+  letter-spacing: 0;
+  text-transform: none;
+  @media (max-width: 640px) {
+    font-size: 1.3rem;
+    line-height: $line-height-640;
+  }
+}
+
+// Suitable for body pullouts and asides
+@mixin pullout-aside-16 {
+  @include core-16;
+  padding-top: 5px;
+  padding-top: 0.5rem;
+  padding-bottom: 5px;
+  padding-bottom: 0.5rem;
+  @media (max-width: 640px) {
+    padding-top: 0.6rem;
+    padding-bottom: 0.4rem;
+  }
+}
+
+@mixin core-14($line-height: (20 / 14), $line-height-640: (15 / 12)) {
+  font-family: $NTA-Light;
+  font-size: 14px;
+  font-size: 1.4rem;
+  @include print {
+    font-size: 11pt;
+  }
+  line-height: $line-height; 
+  font-weight: 400;
+  -webkit-font-smoothing: subpixel-antialiased;
+  letter-spacing: 0;
+  text-transform: none;
+  @media (max-width: 640px) {
+    font-size: 1.2rem;
+    line-height: $line-height-640;
+  }
+}
+
+// Suitable for captions, buttons etc
+@mixin caption-button-14 {
+  @include core-14;
+  padding-top: 6px;
+  padding-top: 0.6rem;
+  padding-bottom: 4px;
+  padding-bottom: 0.4rem;
+  @media (max-width: 640px) {
+    padding-top: 0.4rem;
+    padding-bottom: 0.1rem;
+  }
+}
