@@ -6,10 +6,6 @@ css: ../css/licence.css
 section_class: licence
 ---
 
-<style>
-  {% include licence-format-2.css %}
-</style>
-
 <div class="relevant-authority">
   <h2>
     Apply for a licence <br> <!-- This reflects the specific form within a licence the user has chosen -->
@@ -23,31 +19,30 @@ section_class: licence
               <span class="visuallyhidden step-count">Step 2 of 4</span>
               <ol class="group">
                 <li>Submit application</li>
-                <li>Email address</li>
-                <li class="active">Pay licence fee</li>
+                <li class="active">Email address</li>
+                <li>Pay licence fee</li>
                 <li>Done</li>
               </ol>
             </nav>
   <article class="">
     <div class="inner">
+      <h1>2. Enter your email address</h1>
+        <p>We'll pass this on to the relevant licencing authority so they can let you know if your application has been successful or not.</p>
 
-      <h1>3. Pay the licence fee</h1>
-
-      <!--
-      <p>You are about to submit the following documents:</p>
-      <ol>
-        <li>Applicaton form</li>
-        <li>Premises plan</li>
-        <li>Consent form of premises planner</li>
-      </ol>-->
-
-      <div class="application-notice info-notice">
-        <!--<img class="payment-thumb" src="">-->
-      <p>There is a fee of <strong>£500</strong> to apply for this licence. You will be sent to our payment partner, World Pay, in order to pay it.</p>
-      </div>
-
-      <p><a href="apply-4.html" class="button">Continue to World Pay website</a></p>
-      <p><a href="apply-2.html">Back</a></p>
+        <form method="get" action="page-5.html">
+          <p>
+            <label for="email-address">Enter email address</label>
+            <input type="text" name="email-address">
+          </p>
+          <p>
+            <label for="email-address">Confirm email address</label>
+            <input type="text" name="email-address">
+          </p>
+          <p>
+            <input type="submit" class="button" value="Continue">
+          </p>
+        </form>
+        <p><a href="#">Back</a></p>
 
     </div>
   </article>
