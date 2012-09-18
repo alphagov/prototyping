@@ -299,7 +299,7 @@ details{
     &:focus{ outline: none; }
   }
   &[open]{
-    background-color: $cool-grey;
+    /*background-color: $cool-grey;*/
     margin-top: -0.7em;
     padding: 0.7em 1em 1em 1em;
   }
@@ -314,3 +314,78 @@ article legend{
 article summary{
   @include core-19;
 }
+
+.application-notice h3:first-child,
+.application-notice h2:first-child {
+  margin-top: 0.5em; /* Reduced top-margin for headers starting panels */
+}
+
+/* Update _buttons.scss
+.button.big {
+  @include core-24($line-height: (16 / 24)); 
+  padding: 0.45em 1.7em 0.45em 0.5em;
+  background-image: image-url("icon-pointer.png");
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+} */
+
+.get-started{
+  text-align: left;
+}
+
+.footnote {
+    border-top: 1px solid #ccc;
+    margin-top: 2em;
+}
+
+article li ul, article li ol {
+  margin-left: -1.5em; /* overwrite */
+}
+
+article .help-notice p, article .info-notice p, article .subscribe p {
+padding-right: 2em; /* overwrite text.css */
+}
+
+
+/* Core.scss */
+
+body.mainstream nav.header-context {
+  margin: 0.5em auto 0.25em auto;
+  max-width: 960px;
+
+  ol {
+    background-color: #fff;
+    margin: 0 15em 0 0;
+    padding: 0.25em 0.75em;
+
+    @include ie-lte(7) {
+      padding: 0.25em 0;
+      width: 960px;
+    }
+    
+    li {
+      background-repeat: no-repeat;
+      background-image: image-url("separator.png");
+      background-position: 100% 50%;
+      float: left;
+      list-style: none;
+      margin-left: 0.5em;
+      padding-right: 1em;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        background: none;
+        margin-right: 0
+      }
+
+      a {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
