@@ -4,6 +4,9 @@
     {% if page.assets == 'local' %}
         {% comment %} References local assets, for working temporarily offline {% endcomment %}
         {% include _head.local.html %}
+    {% else if page.assets == 'merged' %}
+        {% comment %} References merged assets on static.preview {% endcomment %}
+        {% include _head.static.preview.html %}
     {% else %}
         {% comment %} References individual assets on static.preview, for easy debugging {% endcomment %}
         {% include _head.unmerged-preview.html %}
