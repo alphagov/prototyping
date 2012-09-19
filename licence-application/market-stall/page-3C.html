@@ -13,7 +13,7 @@ section_class: licence
   </h2>
 </div>
 
-<nav role="navigation" class="transaction-progress group">
+<nav role="navigation" class="progress-indicator group">
   <span class="visuallyhidden step-count">Step 1 of 4</span>
   <ol class="group">
     <li>Complete application</li>
@@ -40,11 +40,17 @@ section_class: licence
             </fieldset>
             <fieldset>
               <legend>Supporting documents</legend>
-              <p><!--PDF, Word, TXT, RTF, JPG or PNG format.--> All documents are required, unless stated otherwise. Photos of documents are acceptable, as long as all the relevant information is clear. We'll only share these documents with the licencing authority.</p>
+              <p>All documents are required, unless stated otherwise. Photos of documents are acceptable, as long as all the relevant information is clear. We'll only share these documents with the licencing authority.</p>
               <details>
                 <summary>What if I can't submit all of these documents?</summary>
+                <!-- START: Only show this if some docs are optional -->
                 <p>You don't have to submit optional documents, but it may improve your chances of a successful application if you do.</p>
+                <!-- END -->
+
+                <!-- START: Only show this if authority offers postal submission -->
                 <p>If you can't submit the documents digitally you can send copies by post instead. We'll give you the address and reference number to quote once you've paid the licence fee.</p>
+                <!-- END -->
+                
                 <p><a href="page-5C.html">OK, I'll submit all the documents by post instead</a></p>
               </details>
 
@@ -75,8 +81,11 @@ section_class: licence
               
             </fieldset>
 
-
-          <input type="submit" class="button" value="Continue">
+            <p>
+              <a href="page-5C.html" class="big button">
+                Continue to pay fee
+              </a>  
+            </p>
         </form>
     </div>
   </article>
