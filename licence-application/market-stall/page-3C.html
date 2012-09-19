@@ -89,3 +89,14 @@ section_class: licence
         </form>
     </div>
   </article>
+
+<!-- Accessible, cross browser support for details tags -->
+<script src="../js/jquery.details.js?v=0.0.6"></script>
+<script>
+  $(function() {
+    // Add conditional classname based on support
+    $('html').addClass($.fn.details.support ? 'details' : 'no-details');
+    // Emulate <details> where necessary and enable open/close event handlers
+    $('details').details();
+  });
+</script>
