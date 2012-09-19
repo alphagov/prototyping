@@ -1,0 +1,99 @@
+//  PROTOTYPING LIBRARY
+
+//  If you've produced any reusable CSS during the creation of a
+//  prototype, put it in here so everyone can share it.
+//  
+//  If any patterns are genuinely useful to every page we can
+//  migrate them to the core CSS in the static repository.
+
+// =======================================================
+
+
+
+@mixin progress-indicator {
+
+  /* Progress indicator */
+
+  nav.progress-indicator {
+    margin-left: 4em;
+    padding: 0;
+  }
+  nav.progress-indicator ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+  }
+  nav.progress-indicator ol li {
+    background-color: #E1E8E8;
+    float: left;
+    line-height: 1.75;
+    border: solid 1px #bbb;
+    border-bottom: 1px solid #C9D0D0;
+    margin: 0;
+    padding: 0.25em 0.5em 0.25em 1.75em;
+    position: relative;
+    border-right: none;
+    border-left: none;
+  }
+  nav.progress-indicator ol li:first-child {
+    margin-left: 0;
+    padding-left: 1em;
+    border-left: 1px solid #bbb;
+  }
+  nav.progress-indicator ol li.active {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+  }
+  nav.progress-indicator ol li.done {
+    color: #777;
+    border-top-color: #ccc;
+  }
+  nav.progress-indicator ol li:last-child {
+    border-right: 1px solid #bbb;
+    padding-right: 1em;
+  }
+  nav.progress-indicator ol li:last-child::before,
+  nav.progress-indicator ol li:last-child::after {
+    display: none;
+  }
+  nav.progress-indicator ol li:before,
+  nav.progress-indicator ol li:after {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+  }
+  nav.progress-indicator ol li:after {
+    border-left-color: #E1E8E8;
+    border-width: 18px;
+    top: 29px;
+    right: -36px;
+    margin-top: -29px;
+  }
+  nav.progress-indicator ol li:before {
+    border-left-color: #ccc;
+    border-width: 18px;
+    top: 29px;
+    right: -37px;
+    margin-top: -29px;
+  }
+  nav.progress-indicator ol li.active:after {
+    border-left-color: #fff;
+  }
+  .lte-ie8 nav.progress-indicator ol li {
+    padding: 0.25em 1em;
+    border-right: 1px solid #bbb;
+  }
+  .lte-ie8 nav.progress-indicator .step-count {
+    display: block;
+    position: relative;
+    left: 0;
+    font-size: 0.85em;
+    margin-bottom: 0.25em;
+  }
+
+}

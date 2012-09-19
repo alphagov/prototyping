@@ -62,16 +62,6 @@ to get a copy of the prototyping tool.
     bundle install
     </pre>
 
-## Using Sass
-
-'.scss' files will be converted to their '.css' counterparts in the generated site. If you import 'mixins.scss' to your .scss file you'll also have access to all the GOV.UK mixins from the Static and Toolkit repos.
-
-Finally, in order for .scss conversion to work with Jekyll you'll need to start each '.scss' file with empty YAML front matter. Put this all together and you get a .scss file that starts like this:
-
-    ---
-    ---
-    @import "_mixins.scss";
-
 ## Pushing online
 
 We have an instance of Heroku (http://www.heroku.com/) that you can push the prototyping app to, in order to share prototypes externally. It lives at http://govuk-prototyping.herokuapp.com
@@ -111,3 +101,26 @@ So you can push to Heroku from your own machine follow these steps:
 8. Finally, you can visit eg http://govuk-prototyping.herokuapp.com/licence-format/ to see your prototype
 
 We might want to think about putting on a password at some point.
+
+## Using Sass
+
+'.scss' files will be converted to their '.css' counterparts in the generated site. If you import 'mixins.scss' to your .scss file you'll also have access to all the GOV.UK mixins from the Static and Toolkit repos.
+
+Finally, in order for .scss conversion to work with Jekyll you'll need to start each '.scss' file with empty YAML front matter. Put this all together and you get a .scss file that starts like this:
+
+    ---
+    ---
+    @import "_mixins.scss";
+
+## Sharing CSS code
+
+If you find that you've created some useful and reusable styles in your prototype, share it with the rest of us by adding them as mixins to '/_includes/scss/_prototyping-library.scss'
+
+## Working offline
+
+By default the templates reference the unmerged assets in our preview environment. This helps with debugging and means you're always working with the
+latest version of the assets. However, there might be times when you need to work offline temporarily. To do this, add the following to the YAML front matter of the page you're working on:
+
+    assets: local
+
+The page will now reference local copies of those assets (in '/static'). Note - these local assets aren't synced in any way and will almost certainly be out date - which is why you should only use this as a temporary measure.
