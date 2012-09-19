@@ -1,14 +1,37 @@
+// =======================================================
 //  PROTOTYPING LIBRARY
 
-//  If you've produced any reusable CSS during the creation of a
-//  prototype, put it in here so everyone can share it.
+//  If you've produced any reusable CSS during the
+//  creation of a prototype, put it in here so everyone
+//  can share it.
 //  
-//  If any patterns are genuinely useful to every page we can
-//  migrate them to the core CSS in the static repository.
+//  If any patterns are genuinely useful to every page we
+//  can migrate them to the core CSS in the static
+//  repository.
 
 // =======================================================
+// CONTENTS
+//
+// progress-indicator
+// details-and-summary
 
 
+// =======================================================
+// PROGRESS INDICATOR
+
+/* Example use:
+
+   <nav role="navigation" class="progress-indicator group">
+    <span class="visuallyhidden step-count">Step 1 of 4</span>
+    <ol class="group">
+      <li class="active">First step</li>
+      <li>Second step</li>
+      <li>Third step</li>
+      <li>Fourth step</li>
+    </ol>
+   </nav>
+
+*/
 
 @mixin progress-indicator {
 
@@ -96,4 +119,47 @@
     margin-bottom: 0.25em;
   }
 
+}
+
+// =======================================================
+// DETAILS AND SUMMARY TAGS
+
+// Progressive disclosure, yay!
+
+/* Example use:
+    <details>
+      <summary>Wanna know more?</sumary>
+      <p>Of course you do!</p>
+    </details>
+*/
+
+// You'll need to add and initialize jquery.details.js to
+// your page if you want accessible, cross-browser support
+// for this pattern. 
+
+@mixin details-and-summary {
+  details{
+    display: block;
+    margin:  0 -1em 1em -1em;
+    padding-left: 1em;
+    summary{
+      @include core-19;
+      color: #2E3191;
+      cursor: pointer;
+      display: block;
+      text-decoration: underline;
+      margin-bottom: 0.5em;
+      &:hover{ color: #1D97FF; }
+      &:focus{ outline: none; }
+    }
+    &[open]{
+      margin-top: -0.7em;
+      padding: 0.7em 1em 1em 1em;
+    }
+  }
+  /* Styles for browsers that don't yet natively support details/summary */
+  .no-details details > * { display: none; }
+  .no-details details > summary:before { float: left; width: 20px; content: '► '; }
+  .no-details details.open > summary:before { content: '▼ '; }
+  .no-details details summary { display: block; }
 }
