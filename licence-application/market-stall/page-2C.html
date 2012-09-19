@@ -41,26 +41,25 @@ section_class: licence
             <h2>Now, submit the application</h2>
 
             <div class="application-notice info-notice">
-            <ul>
-              <li>There's a <strong>£500</strong> annual licence fee</li>
-              <li>You'll need a debit or credit card</li>
-              <li>You'll need to provide copies of the following:
+              <h2>Before you apply...</h2>
+              <p>There's a <strong>£500</strong> annual licence fee.</p>
+              <p>You'll need a debit or credit card.</p>
+              <p>You'll need to provide copies of the following:
                 <ul>
-                  <li>Proof of address (utility bill or bank statement)</li>
-                  <li>Photo ID (driving licence or passport)</li>
                   <li>Public liability insurance certificate</li>
+                  <li>Photo ID (driving licence or passport)</li>
+                  <li>Proof of address (utility bill or bank statement)</li>
                   <li>Food hygiene/safety certificate</li>
                 </ul>
-                <details>
-                  <summary>What if I don't have electronic copies?</summary>
-                  <p>Photos or scans of documents are acceptable, providing the relevant information is clear.</p>
-                  <p>
-                    If you can't provide electronic versions you can still apply online, but you'll need to send in copies by post. 
-                    We'll give you the address and reference number once you've completed the application.
-                  </p>
-                </details>
-              </li>
-            </ul>
+              </p>
+              <details>
+                <summary>What if I don't have electronic copies?</summary>
+                <p>Photos or scans of documents are acceptable, providing the relevant information is clear.</p>
+                <p>
+                  If you can't provide electronic versions you can still apply online, but you'll need to send in copies by post. 
+                  We'll give you the address and reference number once you've completed the application.
+                </p>
+              </details>
             </div>
 
             <p>
@@ -74,3 +73,14 @@ section_class: licence
 
   </div>
 </article>
+
+<!-- Accessible, cross browser support for details tags -->
+<script src="../js/jquery.details.js?v=0.0.6"></script>
+<script>
+  $(function() {
+    // Add conditional classname based on support
+    $('html').addClass($.fn.details.support ? 'details' : 'no-details');
+    // Emulate <details> where necessary and enable open/close event handlers
+    $('details').details();
+  });
+</script>

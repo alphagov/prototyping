@@ -1,8 +1,8 @@
 ---
 ---
 @import "_mixins.scss";
-
 @include progress-indicator;
+@include details-and-summary;
 
 
 /* =============================================
@@ -126,24 +126,10 @@ input[type="text"]{
   margin-left: 0; /* overwrite */
 }
 
-/* Details and summary tags */
-details{
-  margin:  0 -1em 1em -1em;
-  padding-left: 1em;
-  summary{
-    @include core-19;
-    color: #2E3191;
-    cursor: pointer;
-    display: inline;
-    text-decoration: underline;
-    &:hover{ color: #1D97FF; }
-    &:focus{ outline: none; }
-  }
-  &[open]{
-    margin-top: -0.7em;
-    padding: 0.7em 1em 1em 1em;
-  }
-}
+
+
+
+
 
 
 /* ==========================

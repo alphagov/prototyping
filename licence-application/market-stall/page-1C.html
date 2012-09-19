@@ -6,6 +6,7 @@ css: ../css/licence.css
 section_class: licence
 ---
 
+
 <div class="relevant-authority">
   <h2>From London Borough of Barnet</a></h2>
 </div>
@@ -29,29 +30,31 @@ section_class: licence
       <article class="application-for-licence" id="part1">
 
         <p>You can apply for this licence online.</p>
+        
         <div class="application-notice info-notice">
-        <h2>Before you apply...</h2>
-        <ul>
-          <li>There's a <strong>£500</strong> annual licence fee</li>
-          <li>You'll need a debit or credit card</li>
-          <li>You'll need to provide copies of the following:
+          <h2>Before you apply...</h2>
+          <p>There's a <strong>£500</strong> annual licence fee.</p>
+          <p>You'll need a debit or credit card.</p>
+          <p>You'll need to provide copies of the following:
             <ul>
               <li>Public liability insurance certificate</li>
               <li>Photo ID (driving licence or passport)</li>
               <li>Proof of address (utility bill or bank statement)</li>
               <li>Food hygiene/safety certificate</li>
             </ul>
-            <details>
-              <summary>What if I don't have electronic copies?</summary>
-              <p>Photos or scans of documents are acceptable, providing the relevant information is clear.</p>
-              <p>
-                If you can't provide electronic versions you can still apply online, but you'll need to send in copies by post. 
-                We'll give you the address and reference number once you've completed the application.
-              </p>
-            </details>
-          </li>
-        </ul>
-      </div>
+          </p>
+          <details>
+            <summary>What if I don't have electronic copies?</summary>
+            <p>Photos or scans of documents are acceptable, providing the relevant information is clear.</p>
+            <p>
+              If you can't provide electronic versions you can still apply online, but you'll need to send in copies by post. 
+              We'll give you the address and reference number once you've completed the application.
+            </p>
+          </details>
+        </div>
+
+
+
 
         <p>We recommend you get everything ready before you start the application.</p>
         <p><a href="page-2C.html" class="big button">Apply online</a></p>
@@ -72,3 +75,14 @@ section_class: licence
     </ol>
   </nav>
 </div>
+
+<!-- Accessible, cross browser support for details tags -->
+<script src="../js/jquery.details.js?v=0.0.6"></script>
+<script>
+  $(function() {
+    // Add conditional classname based on support
+    $('html').addClass($.fn.details.support ? 'details' : 'no-details');
+    // Emulate <details> where necessary and enable open/close event handlers
+    $('details').details();
+  });
+</script>
