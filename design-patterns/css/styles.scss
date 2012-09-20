@@ -1,0 +1,28 @@
+---
+---
+
+@import "_mixins.scss";
+@import url('coderay.css');
+@include progress-indicator;
+
+
+/* Pattern library styles */
+
+header.page-header hgroup {
+  margin-right: 0 /* Extend page header out to end of search button */
+}
+
+.pattern-example{
+  background-color: #f2f2f2;
+  padding: 1em;
+  margin: 0 -1em;
+  .inner{
+    background-color: white;
+    border: 1px solid #CCC;
+    padding-top: 2em;
+  }
+}
+
+.CodeRay pre{
+  font-size: 0.8em;
+}
