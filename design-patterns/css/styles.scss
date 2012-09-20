@@ -3,7 +3,7 @@
 
 @import "_mixins.scss";
 @import url('coderay.css');
-@include progress-indicator($light-blue, $white, $light-blue-grey);
+@include progress-indicator;
 
 
 /* Pattern library styles */
