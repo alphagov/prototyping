@@ -91,7 +91,6 @@ header.page-header hgroup h2 {
 
 .category-page .search-container h3 {
   font-size: 1.1875em;
-  margin-top: 1em;
   margin-bottom: 0.5em;
 }
 
@@ -113,7 +112,7 @@ header.page-header hgroup h2 {
 
 .category-page .search-container ul.sub-categories li {
   float: left;
-  height: 11em;
+  min-height: 11em;
   list-style: none;
   margin-right: 4.25%;
   margin-bottom: 1em;
@@ -136,9 +135,18 @@ header.page-header hgroup h2 {
 
 }
 
-.detailed-guidance {
+.category-page .search-container .detailed-guidance {
   border: solid 4px #2b8cc4;
   padding: 1em 2em;
+}
+
+.category-page .search-container .detailed-guidance ul {
+  padding-left: 0;
+}
+
+.category-page .search-container .detailed-guidance ul li {
+  list-style: none;
+  margin-bottom: 1em;
 }
 
 /* ----------------
