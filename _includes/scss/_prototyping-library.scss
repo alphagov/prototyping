@@ -58,7 +58,10 @@
     padding: 0.25em 0.5em 0.25em 1.75em;
     position: relative;
     border-right: none;
-    border-left: none;
+    border-left: none;   
+    @if lightness($background-colour) < 50% {
+      color: white;
+    }
   }
   nav.progress-indicator ol li:first-child {
     border-left: solid 1px $border-colour;

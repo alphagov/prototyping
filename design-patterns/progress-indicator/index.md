@@ -58,15 +58,15 @@ Include the following in your SCSS to pull in styles for this pattern:
 The progress-indicator mixin accepts three optional arguments:
 
 `$active-colour`
-: The colour of the currently highlighted step (default is white)
+: The colour of the current step
 
 
 `$border-colour`
-: The border colour (default is light blue grey)
+: The border colour
 
 
 `$background-colour`
-: The background colour (default is cool grey)
+: The background colour
 
 * * *
 

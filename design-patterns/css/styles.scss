@@ -3,7 +3,7 @@
 
 @import "_mixins.scss";
 @import url('coderay.css');
-@include progress-indicator;
+@include progress-indicator($light-blue, $white, $light-blue-grey);
 
 
 /* Pattern library styles */
@@ -23,12 +23,18 @@ header.page-header hgroup {
   }
 }
 
-.CodeRay pre{
+pre, code{
   font-size: 0.8em;
 }
 
+
+/* Update text.scss with these */
 hr{
   border: 0;
   background-color: $light-blue-grey;
   height: 1px;
+}
+
+article dd{
+  font-size: 1.16em;
 }
