@@ -136,6 +136,11 @@ header.page-header hgroup h2 {
 
 }
 
+.detailed-guidance {
+  border: solid 4px #2b8cc4;
+  padding: 1em 2em;
+}
+
 /* ----------------
    Footer nav
    ---------------- */
