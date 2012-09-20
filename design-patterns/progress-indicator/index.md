@@ -67,3 +67,15 @@ The progress-indicator mixin accepts three optional arguments:
 
 `$background-colour`
 : The background colour (default is cool grey)
+
+* * *
+
+# Rationale
+
+The pattern needs to imply a linear progression through a series of steps.
+We've chosen to do this by numbering the steps and using a chevron motif.
+
+The individual steps are not links, for the following reasons:
+
+* We can't guarantee users will be able to move back or forth through the steps at will
+* A stronger call to action is required to allow users to move forward or back one step
