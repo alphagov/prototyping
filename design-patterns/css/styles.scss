@@ -23,8 +23,27 @@ header.page-header hgroup {
   }
 }
 
-pre, code{
-  font-size: 0.8em;
+pre,
+code{
+  color: black;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+
+}
+pre code{
+  border: 0 solid;
+  padding: 0;
+}
+code{
+  padding: 0.5em;
+}
+pre{
+  margin-bottom: 2em;
 }
 
 
@@ -33,6 +52,7 @@ hr{
   border: 0;
   background-color: $light-blue-grey;
   height: 1px;
+  margin: 2em 0;
 }
 
 article dd{

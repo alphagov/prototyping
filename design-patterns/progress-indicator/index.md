@@ -33,42 +33,37 @@ what's involved in each step.
 
 ### Code
 
-~~~ html
-<nav role="navigation" class="progress-indicator group">
-  <span class="visuallyhidden step-count">Step 1 of 4</span>
-  <ol class="group">
-    <li class="active">Current step</li>
-    <li>Step two</li>
-    <li>Step three</li>
-    <li>Step four</li>
-  </ol>
-</nav>
-~~~
+
+    <nav role="navigation" class="progress-indicator group">
+      <span class="visuallyhidden step-count">Step 1 of 4</span>
+      <ol class="group">
+        <li class="active">Current step</li>
+        <li>Step two</li>
+        <li>Step three</li>
+        <li>Step four</li>
+      </ol>
+    </nav>
+
 
 
 # Dependencies
 
 Include the following in your SCSS to pull in styles for this pattern:
 
-~~~ css
-@import "_mixins.scss";
-@include progress-indicator;
-~~~
+    @import "_mixins.scss";
+    @include progress-indicator;
 
 The progress-indicator mixin accepts three optional arguments:
 
-`$active-colour`
-: The colour of the current step
+`$active-colour` : The colour of the current step
 
+`$border-colour` : The border colour
 
-`$border-colour`
-: The border colour
+`$background-colour` : The background colour
 
-
-`$background-colour`
-: The background colour
 
 * * *
+
 
 # Rationale
 
