@@ -33,7 +33,7 @@
 
 */
 
-@mixin progress-indicator {
+@mixin progress-indicator($active-colour: white, $border-colour: $light-blue-grey, $background-colour: $cool-grey) {
 
   /* Progress indicator */
 
@@ -48,11 +48,12 @@
     padding: 0;
   }
   nav.progress-indicator ol li {
-    background-color: #E1E8E8;
+    background-color: $background-colour;
     float: left;
+    font-size: 1em;
+    font-weight: 300;
     line-height: 1.75;
-    border: solid 1px #bbb;
-    border-bottom: 1px solid #C9D0D0;
+    border: solid 1px $border-colour;
     margin: 0;
     padding: 0.25em 0.5em 0.25em 1.75em;
     position: relative;
@@ -60,20 +61,21 @@
     border-left: none;
   }
   nav.progress-indicator ol li:first-child {
+    border-left: solid 1px $border-colour;
     margin-left: 0;
     padding-left: 1em;
-    border-left: 1px solid #bbb;
   }
   nav.progress-indicator ol li.active {
-    background-color: #fff;
-    border-top: 1px solid #ddd;
+    background-color: $active-colour;
+    @if lightness($active-colour) < 50% {
+      color: white;
+    }
   }
   nav.progress-indicator ol li.done {
     color: #777;
-    border-top-color: #ccc;
   }
   nav.progress-indicator ol li:last-child {
-    border-right: 1px solid #bbb;
+    border-right: 1px solid $border-colour;
     padding-right: 1em;
   }
   nav.progress-indicator ol li:last-child::before,
@@ -91,25 +93,24 @@
     z-index: 10;
   }
   nav.progress-indicator ol li:after {
-    border-left-color: #E1E8E8;
+    border-left-color: $background-colour;
     border-width: 18px;
     top: 29px;
     right: -36px;
     margin-top: -29px;
   }
   nav.progress-indicator ol li:before {
-    border-left-color: #ccc;
+    border-left-color: $border-colour;
     border-width: 18px;
     top: 29px;
     right: -37px;
     margin-top: -29px;
   }
   nav.progress-indicator ol li.active:after {
-    border-left-color: #fff;
+    border-left-color: $active-colour;
   }
   .lte-ie8 nav.progress-indicator ol li {
     padding: 0.25em 1em;
-    border-right: 1px solid #bbb;
   }
   .lte-ie8 nav.progress-indicator .step-count {
     display: block;
