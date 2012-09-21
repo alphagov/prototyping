@@ -1,11 +1,7 @@
 ---
-layout: design-patterns
+layout: design-pattern
 title: Progress indicator
-template: wide
-css: ../css/styles.css
-section_class: guide
-category: Design patterns
-categories: Design pattern
+status: draft
 ---
 
 Use this near the top of multi-page transactions to help users understand
@@ -14,7 +10,7 @@ which step they are on and
 what's involved in each step.
 
 
-### Example
+### Default example
 <div class="pattern-example">
   <div class="inner">
 
@@ -61,16 +57,39 @@ The progress-indicator mixin accepts three optional arguments:
 
 `$background-colour` : The background colour
 
+So for example, this code:
+
+    @include progress-indicator($green, $green, $white);
+
+produces the following:
+
+<div class="alt pattern-example">
+  <div class="inner">
+
+    <nav role="navigation" class="progress-indicator group">
+      <span class="visuallyhidden step-count">Step 1 of 4</span>
+      <ol class="group">
+        <li class="active">Current step</li>
+        <li>Step two</li>
+        <li>Step three</li>
+        <li>Step four</li>
+      </ol>
+    </nav>
+
+  </div>
+</div>
+
+Note that the text colour will switch automatically from dark to light, depending on the background colours chosen.
 
 * * *
 
 
 # Rationale
 
-The pattern needs to imply a linear progression through a series of steps.
-We've chosen to do this by numbering the steps and using a chevron motif.
+* This pattern is best used to represent progress through a fixed number of steps
+* The steps are numbered to indicate the fixed order in which they must be completed
+* The arrow motif is used to emphasise the goal of progressing through the steps
+* Steps are *not* links:
+  * Their affordance isn't strong enough to rely on them as links
+  * In many cases we won't be able to let users jump back and forth through steps anyway
 
-The individual steps are not links, for the following reasons:
-
-* We can't guarantee users will be able to move back or forth through the steps at will
-* A stronger call to action is required to allow users to move forward or back one step

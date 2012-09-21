@@ -5,6 +5,9 @@
 @import url('coderay.css');
 @include progress-indicator;
 
+.alt {
+  @include progress-indicator($green, $green, $white);
+}
 
 /* Pattern library styles */
 
@@ -21,6 +24,16 @@ header.page-header hgroup {
     border: 1px solid #CCC;
     padding-top: 2em;
   }
+}
+
+.pattern-status{
+  display: block;
+  float: right;
+  color: $white;
+  background-color: $fuschia;
+  padding: 0.2em 1.5em 0em 1.5em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 pre,
