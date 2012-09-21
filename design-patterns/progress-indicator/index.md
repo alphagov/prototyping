@@ -4,10 +4,8 @@ title: Progress indicator
 status: draft
 ---
 
-Use this near the top of multi-page transactions to help users understand
-how many steps there are, 
-which step they are on and 
-what's involved in each step.
+Use this near the top of multi-page transactions to help users understand how
+many steps there are, which step they are on and what's involved in each step.
 
 
 ### Default example
@@ -56,6 +54,7 @@ The progress-indicator mixin accepts three optional arguments:
 `$border-colour` : The border colour
 
 `$background-colour` : The background colour
+
 
 So for example, this code:
 
