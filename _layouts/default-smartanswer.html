@@ -6,17 +6,7 @@
   <body class="citizen mainstream">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
     {% include _header.html %}
-    <nav role="navigation" class="header-context">
-      <div class="beta-notice">
-        <div class="inner">
-          <p><a href="http://digital.cabinetoffice.gov.uk/2012/02/01/govuk-beta-day1/">BETA</a></p>
-        </div>
-      </div>
-      <ol class="group">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Section</a></li>
-      </ol>
-    </nav>
+    {% include _navigation.html %}
     <div id="wrapper" class="licence-finder {{ page.categories }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
       <section id="content" role="main" class="smart-answer-questions group">
         <header class="page-header group">
