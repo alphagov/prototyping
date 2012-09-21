@@ -19,19 +19,7 @@
 // =======================================================
 // PROGRESS INDICATOR
 
-/* Example use:
-
-   <nav role="navigation" class="progress-indicator group">
-    <span class="visuallyhidden step-count">Step 1 of 4</span>
-    <ol class="group">
-      <li class="active">First step</li>
-      <li>Second step</li>
-      <li>Third step</li>
-      <li>Fourth step</li>
-    </ol>
-   </nav>
-
-*/
+// http://govuk-prototyping.herokuapp.com/design-patterns/progress-indicator/
 
 @mixin progress-indicator($active-colour: white, $border-colour: $light-blue-grey, $background-colour: $cool-grey) {
 
