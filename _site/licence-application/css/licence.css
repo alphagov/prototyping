@@ -1,0 +1,486 @@
+@charset "UTF-8";
+@font-face {
+  font-family: GDS-Regular;
+  src: local("NTA-Light"), local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+/*
+ * Old green: 28a198
+ * New green: 008270
+ */
+/* buttons! */
+.button,
+.button:visited {
+  display: inline;
+  border: none;
+  text-decoration: none;
+  position: relative;
+  top: -3px;
+  line-height: 1.25;
+  -webkit-box-shadow: 0 2px 0 #000;
+  -moz-box-shadow: 0 2px 0 #000;
+  box-shadow: 0 2px 0 #000; }
+
+.button:active,
+.button:focus {
+  background-color: #28A197; }
+
+.button,
+.button.medium {
+  padding: 0.25em 0.5em; }
+
+.button.medium {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.36842;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none; }
+  @media (max-width: 640px) {
+    .button.medium {
+      font-size: 1.3rem;
+      line-height: 1.53846; } }
+
+.get-started .button .call-to-action,
+.get-started .button.big,
+.button,
+.button:visited {
+  background-color: #008270;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 0 #000;
+  -moz-box-shadow: 0 3px 0 #000;
+  box-shadow: 0 3px 0 #000;
+  font-weight: 300; }
+
+.get-started .button:hover span.call-to-action,
+.get-started .button.big:hover,
+.button:hover {
+  background-color: #3ABAA8;
+  color: #fff; }
+
+.button:active,
+.button.big:active,
+.button:active span.call-to-action {
+  -webkit-transform: translate(0, 3px);
+  -moz-transform: translate(0, 3px);
+  -o-transform: translate(0, 3px);
+  transform: translate(0, 3px);
+  box-shadow: none;
+  outline: none; }
+
+.get-started .button .call-to-action,
+.get-started .button.big,
+#search .button.big {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 0.66667;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  padding: 0.45em 1.7em 0.45em 0.5em;
+  background-image: image-url("icon-pointer.png");
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  display: inline-block; }
+  @media (max-width: 640px) {
+    .get-started .button .call-to-action,
+    .get-started .button.big,
+    #search .button.big {
+      font-size: 1.7rem;
+      line-height: 1.47059; } }
+
+/* get started buttons */
+.get-started {
+  margin: 1.5em 0 0 0;
+  text-align: right; }
+  .get-started .button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    box-shadow: none;
+    text-align: left;
+    /* 
+     * In selectors such as .get-started .button.big the chained .button.big is read as
+     * .big by IE6 (see http://www.maxdesign.com.au/articles/multiple-classes/)
+     * This means it no longer has the precedence given by 2 classes and gets overwritten
+     * by the .get-started .button classes that follow.
+     * Just for IE6, add styles to this block to re-assert the styles after those that overwrite.
+    */ }
+    .get-started .button:active {
+      /* 
+       * this compensates for this style being pushed down twice by keeping 
+       * the inner span still 
+       */
+      /* this compensates for the whole thing being pushed down by pushing back up */ }
+      .get-started .button:active .call-to-action {
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0); }
+      .get-started .button:active .destination {
+        -webkit-transform: translate(0, -3px);
+        -moz-transform: translate(0, -3px);
+        -o-transform: translate(0, -3px);
+        transform: translate(0, -3px); }
+    .get-started .button span {
+      cursor: pointer; }
+    .get-started .button .destination {
+      font-family: "nta", "GDS-Regular", sans-serif;
+      font-size: 14px;
+      font-size: 1.4rem;
+      line-height: 1.42857;
+      font-weight: 400;
+      -webkit-font-smoothing: subpixel-antialiased;
+      letter-spacing: 0;
+      text-transform: none;
+      color: #333;
+      display: block;
+      margin-top: 0.5em;
+      max-width: 13em; }
+      @media (max-width: 640px) {
+        .get-started .button .destination {
+          font-size: 1.2rem;
+          line-height: 1.25; } }
+
+a.button[rel="external"]:after {
+  content: none;
+  margin-left: 0;
+  margin-right: 0; }
+
+input {
+  /* below fixes a bug where IE puts a nasty black border around these elements */ }
+  input[disabled="disabled"] {
+    opacity: 0.5; }
+  input[type="text"], input[type="search"] {
+    font-family: "nta", "GDS-Regular", sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    letter-spacing: 0;
+    text-transform: none;
+    border: 1px solid #bbb;
+    min-width: 8em;
+    margin: 0 0.5em;
+    padding: 0.25em; }
+    @media (max-width: 640px) {
+      input[type="text"], input[type="search"] {
+        font-size: 1.3rem;
+        line-height: 1.53846; } }
+
+/* Example use:
+    <details>
+      <summary>Wanna know more?</sumary>
+      <p>Of course you do!</p>
+    </details>
+*/
+/* Progress indicator */
+nav.progress-indicator {
+  margin-left: 4em;
+  padding: 0; }
+
+nav.progress-indicator ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0; }
+
+nav.progress-indicator ol li {
+  background-color: #e8f0f0;
+  float: left;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.75;
+  border: solid 1px #c1cacb;
+  margin: 0;
+  padding: 0.25em 0.5em 0.25em 1.75em;
+  position: relative;
+  border-right: none;
+  border-left: none; }
+
+nav.progress-indicator ol li:first-child {
+  border-left: solid 1px #c1cacb;
+  margin-left: 0;
+  padding-left: 1em; }
+
+nav.progress-indicator ol li.active {
+  background-color: white; }
+
+nav.progress-indicator ol li.done {
+  color: #777; }
+
+nav.progress-indicator ol li:last-child {
+  border-right: 1px solid #c1cacb;
+  padding-right: 1em; }
+
+nav.progress-indicator ol li:last-child::before,
+nav.progress-indicator ol li:last-child::after {
+  display: none; }
+
+nav.progress-indicator ol li:before,
+nav.progress-indicator ol li:after {
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 10; }
+
+nav.progress-indicator ol li:after {
+  border-left-color: #e8f0f0;
+  border-width: 18px;
+  top: 29px;
+  right: -36px;
+  margin-top: -29px; }
+
+nav.progress-indicator ol li:before {
+  border-left-color: #c1cacb;
+  border-width: 18px;
+  top: 29px;
+  right: -37px;
+  margin-top: -29px; }
+
+nav.progress-indicator ol li.active:after {
+  border-left-color: white; }
+
+.lte-ie8 nav.progress-indicator ol li {
+  padding: 0.25em 1em; }
+
+.lte-ie8 nav.progress-indicator .step-count {
+  display: block;
+  position: relative;
+  left: 0;
+  font-size: 0.85em;
+  margin-bottom: 0.25em; }
+
+details {
+  display: block;
+  margin: 0 -1em 1em -1em;
+  padding-left: 1em; }
+  details summary {
+    font-family: "nta", "GDS-Regular", sans-serif;
+    font-size: 19px;
+    font-size: 1.9rem;
+    line-height: 1.31579;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    color: #2E3191;
+    cursor: pointer;
+    display: block;
+    text-decoration: underline;
+    margin-bottom: 0.5em; }
+    @media (max-width: 640px) {
+      details summary {
+        font-size: 1.3rem;
+        line-height: 1.53846; } }
+    details summary:hover {
+      color: #1D97FF; }
+    details summary:focus {
+      outline: none; }
+  details[open] {
+    margin-top: -0.7em;
+    padding: 0.7em 1em 1em 1em; }
+
+/* Styles for browsers that don't yet natively support details/summary */
+.no-details details > * {
+  display: none; }
+
+.no-details details > summary:before {
+  float: left;
+  width: 20px;
+  content: '► '; }
+
+.no-details details.open > summary:before {
+  content: '▼ '; }
+
+.no-details details summary {
+  display: block; }
+
+/* =============================================
+   APPLICATION-WIDE STYLES */
+.relevant-authority {
+  margin-left: 5.125em;
+  margin-bottom: 2em; }
+  .relevant-authority h2 {
+    margin: 0; }
+
+/* =============================================
+   OVERVIEW PAGE STYLES (Licence Format) */
+/* Set location */
+.set-location {
+  background-color: #D9E0E0;
+  margin-bottom: 1em;
+  padding: 1em; }
+  .set-location > p {
+    margin-top: 0; }
+
+/* Left tabs on overview page */
+aside {
+  float: left;
+  width: 25%; }
+
+aside nav.actions {
+  float: right;
+  width: 95%; }
+
+nav.actions ol {
+  list-style: none;
+  padding: 0; }
+
+nav.actions ol li a {
+  background-color: #E1E8E8;
+  display: block;
+  padding: 0.75em;
+  text-decoration: none; }
+
+nav.actions ol li a:hover {
+  background-color: #97C5E5;
+  color: #2E3191; }
+
+nav.actions ol li.active a {
+  background-color: white;
+  border: solid 1px #C9D0D0;
+  display: block;
+  position: relative;
+  z-index: 2; }
+
+aside nav.actions ol li:first-child a {
+  border-top: none; }
+
+aside nav.actions ol li a {
+  border-top: solid 1px #C9D0D0; }
+
+aside nav.actions ol li.active a {
+  border-top: solid 1px #C9D0D0;
+  border-right: none;
+  margin: 0 0 -1px -1px; }
+
+/* Content area on overview page */
+article.licence {
+  border-left: solid 1px #C9D0D0;
+  margin-left: -1px;
+  min-height: 40em;
+  padding-bottom: 1em;
+  width: 75%; }
+
+article.licence .inner {
+  padding: 0 2.5em 1em 2.5em; }
+
+article.licence .inner > h1 {
+  margin-top: 0; }
+
+/* Intro to overview page */
+div.application-notes {
+  margin-bottom: 2em; }
+
+/* Section on overview page */
+article.application-for-licence {
+  background: transparent;
+  border-top: solid 1px #cccccc;
+  float: none;
+  margin-bottom: 3em;
+  min-height: none;
+  padding-top: 1em;
+  width: auto; }
+
+article.application-for-licence > h2 {
+  margin-top: 0; }
+
+/* ==============================================================
+   UPDATES TO GLOBAL CSS
+   ==============================================================
+
+   The following styles should be integrated into the global CSS
+   in the 'Static' repository.
+*/
+/* ==========================
+   basic.scss
+*/
+label {
+  display: block; }
+
+input[type=file] {
+  padding: 0.25em; }
+
+input[type="text"] {
+  margin-left: 0;
+  /* overwrite */ }
+
+/* ==========================
+   text.scss
+*/
+/* Style fieldset legends */
+article legend {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 600; }
+  @media (max-width: 640px) {
+    article legend {
+      font-size: 1.3rem;
+      line-height: 1.53846; } }
+
+/* Improve styles inside notices */
+/* Reset top-margin for headers that appear at the top of .application-notice panels */
+.application-notice h6:first-child {
+  margin-top: 0.5em; }
+
+.application-notice h5:first-child {
+  margin-top: 0.5em; }
+
+.application-notice h4:first-child {
+  margin-top: 0.5em; }
+
+.application-notice h3:first-child {
+  margin-top: 0.5em; }
+
+.application-notice h2:first-child {
+  margin-top: 0.5em; }
+
+.application-notice h1:first-child {
+  margin-top: 0.5em; }
+
+/* More compact nested lists in notices */
+article .info-notice li ul,
+article .info-notice li ol {
+  padding-left: 1em; }
+
+/* Shrink right-padding in notices down to 2em */
+article .help-notice p, article .info-notice p, article .subscribe p {
+  padding-right: 2em;
+  /* overwrite text.css */ }
+
+/* ==========================
+   _buttons.scss
+*/
+.button.big {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 0.66667;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  padding: 0.45em 1.7em 0.45em 0.5em;
+  background-image: image-url("icon-pointer.png");
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  display: inline-block; }
+  @media (max-width: 640px) {
+    .button.big {
+      font-size: 1.7rem;
+      line-height: 1.47059; } }

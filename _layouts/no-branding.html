@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="no-branding">
+  <head>
+    {% include _head.html %}
+  </head>
+  <body>
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+      <section id="content" role="main" class="group">
+        <header class="page-header group{% if page.header_class  %} {{ page.header_class }}{% endif %}">
+          <hgroup>
+            <h1>{{ page.title }}</h1>
+          </hgroup>
+        </header>
+    
+        <article role="article" class="group">
+          {{ content }}
+        </article>
+      </section>
+
+    </div><!--end wrapper-->
+  </body>
+</html>

@@ -1,0 +1,281 @@
+header.page-header hgroup {
+  border-color: #617900;
+}
+
+header.page-header h1 {
+  background-image: url(/licence-format/images/licence-icon.png);
+}
+
+header.page-header h1 span {
+  color: #10370d;
+}
+
+.relevant-authority {
+  margin-left: 5.125em;
+  margin-bottom: 2em;
+}
+
+.relevant-authority p {
+  font-size: 112.5%;
+  margin: 0;
+}
+
+.set-location {
+  background-color: #D9E0E0;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+.set-location p {
+  /*font-size: 0.85em;*/
+}
+
+.set-location > p {
+  margin-top: 0;
+}
+
+.set-location img {
+  /*width: 75%;*/
+}
+
+.relevant-authority-contact {
+  font-size: 0.85em;
+  margin-top: 2em;
+}
+
+aside {
+  float: left;
+  width: 25%;
+}
+
+aside nav.actions {
+  float: right;
+  width: 95%;
+}
+
+nav.actions ol {
+  list-style: none;
+  padding: 0;
+}
+
+nav.actions ol li a {
+  background-color: #E1E8E8;
+  display: block;
+  padding: 0.75em;
+  text-decoration: none;
+}
+
+nav.actions ol li a:hover {
+  background-color: #97C5E5;
+  color: #2E3191;
+}
+
+nav.actions ol li.active a {
+  background-color: white;
+  border: solid 1px #C9D0D0;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+aside nav.actions ol li:first-child a {
+  border-top: none;
+}
+
+aside nav.actions ol li a {
+  border-top: solid 1px #C9D0D0;
+}
+
+aside nav.actions ol li.active a {
+  border-top: solid 1px #C9D0D0;
+  border-right: none;
+  margin: 0 0 -1px -1px;
+}
+
+article.licence {
+  border-left: solid 1px #C9D0D0;
+  margin-left: -1px;
+  min-height: 40em;
+  padding-bottom: 1em;
+  width: 75%;
+}
+
+article.licence .inner {
+  padding: 0 2.5em 1em 2.5em;
+}
+
+article.licence .inner > h1 {
+  margin-top: 0;
+}
+
+article.override-bad-styles li p {
+  font-size: inherit;
+  margin: inherit;
+}
+
+article.override-bad-styles li ul,
+article.override-bad-styles li ol {
+  list-style-position: inherit;
+  padding-left: 1em;
+}
+
+div.application-notes {
+  margin-bottom: 2em;
+}
+
+article.application-for-licence {
+  background: transparent;
+  border-top: solid 1px #cccccc;
+  float: none;
+  margin-bottom: 3em;
+  min-height: none;
+  padding-top: 1em;
+  width: auto;
+}
+
+article.application-for-licence > h2 {
+  margin-top: 0;
+}
+
+.button.medium {
+  padding: 0.25em 0.5em;
+}
+
+
+
+
+
+
+/* ===================================================== */
+
+/* Progress bar */
+
+nav.transaction-progress {
+  margin-left: 4em;
+  padding: 0;
+}
+
+nav.transaction-progress ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+nav.transaction-progress ol li {
+  background-color: #E1E8E8;
+  float: left;
+  line-height: 1.75;
+  border: solid 1px #bbb;
+  border-bottom: 1px solid #C9D0D0;
+  margin: 0;
+  padding: 0.25em 0.5em 0.25em 1.75em;
+  position: relative;
+  border-right: none;
+  border-left: none;
+}
+
+nav.transaction-progress ol li:first-child {
+  margin-left: 0;
+  padding-left: 1em;
+  border-left: 1px solid #bbb;
+}
+
+nav.transaction-progress ol li.active {
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+nav.transaction-progress ol li.done {
+  color: #777;
+  border-top-color: #ccc;
+}
+
+nav.transaction-progress ol li:last-child {
+  border-right: 1px solid #bbb;
+  padding-right: 1em;
+}
+
+nav.transaction-progress ol li:last-child::before,
+nav.transaction-progress ol li:last-child::after {
+  display: none;
+}
+
+
+nav.transaction-progress ol li:before,
+nav.transaction-progress ol li:after {
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+}
+
+nav.transaction-progress ol li:after {
+  border-left-color: #E1E8E8;
+  border-width: 18px;
+  top: 29px;
+  right: -36px;
+  margin-top: -29px;
+}
+
+nav.transaction-progress ol li:before {
+  border-left-color: #ccc;
+  border-width: 18px;
+  top: 29px;
+  right: -37px;
+  margin-top: -29px;
+}
+
+nav.transaction-progress ol li.active:after {
+  border-left-color: #fff;
+}
+
+.lte-ie8 nav.transaction-progress ol li {
+  padding: 0.25em 1em;
+  border-right: 1px solid #bbb;
+}
+
+.lte-ie8 nav.transaction-progress .step-count {
+  display: block;
+  position: relative;
+  left: 0;
+  font-size: 0.85em;
+  margin-bottom: 0.25em;
+}
+
+/* Forms */
+
+form label{
+  display: block;
+}
+form legend{
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+article li p{
+  margin: 0.75em 0;
+}
+
+article .info-notice{
+  background-color: #F2F2F2;
+}
+
+input[type=file]{
+  /*background-color: #white;*/
+  padding: 0.25em;
+}
+input[type="text"]{
+  margin-left: 0; /* overwright */
+}
+
+.payment-thumb{
+  height: 87px;
+  width: 100px;
+  float: left;
+  margin: 0.75em 1em 0 0;
+}

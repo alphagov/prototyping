@@ -1,0 +1,792 @@
+
+@import url("button-styles.css");
+
+/* ==================================================
+ * Overwritten default styles
+ * ================================================== */
+
+ h2{
+ 	border-bottom: 1px solid #c1cacb;
+ 	padding-bottom: 0.5em;
+ }
+
+ hr{
+ 	border: solid #DDD;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 2em 0;
+  height: 0;
+ }
+
+ /* Display summary/details tags as standard panels */
+summary[track="help_v11_number"]::-webkit-details-marker {
+  display: none;
+}
+summary[track="help_v11_number"]{
+  margin-left: 0;
+}
+
+/* =================================
+ * Transaction-wide styles
+ * ================================= */
+
+/* product owner branding (ie. DVLA) */ 
+.product-owner{
+	background: url(../img/DVLA_logo.png) no-repeat right center;
+	float: right;
+	height: 45px;
+	width: 80px;
+	font-size: 1em;
+	margin: 1em 1em 0 0;
+	text-indent: -9999px;
+}
+
+/* ======================
+ * FORM STYLES
+ * ====================== */
+
+/* text input fields */
+input[type=text],
+input[type=email]{
+	display: block;
+	margin-bottom: 0.5em;
+	border: 1px solid #CDCDCD;
+	background-color: #F2F2F2;
+	padding: 0.2em 0.2em;
+}
+
+details input[type=text]{
+	background-color: #fff;
+}
+
+article label {
+  font-size: 112.5%;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+/* Back button */
+.back{
+	margin-left: 1em;
+}
+
+
+/* ==================================================
+ * DETAILS / SUMMARY
+ * ================================================== */
+
+ /* A styled-up version of the details/summary HTML5 elements
+  * For the benefits or otherwise of details/summary, see:
+  * http://html5doctor.com/the-details-and-summary-elements/
+  * http://mathiasbynens.be/notes/html5-details-jquery
+  */
+
+details{
+  margin:  0 -1em 0 -1em;
+  padding: 0.7em 1em 0 1em;
+}
+details summary{
+  color: #2E3191;
+  cursor: pointer;
+  font-size: 112.5%;
+  display: inline;
+  text-decoration: underline;
+  margin-left: 1em;
+}
+details summary::-webkit-details-marker{
+  margin-left: -1em;
+}
+details summary:hover{
+  color: #1D97FF;
+}
+
+/* Open state */
+details[open]{
+  background-color: #f2f2f2;
+  padding: 0.7em 1em 1em 1em;
+  margin:  0.5em -1em 1em -1em;
+}
+details[open] > summary{
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+details summary:focus{
+  outline: none;
+}
+
+/* ================================================================
+ * PROGRESS BAR
+ * ================================================================
+ * 
+ * Based on ERTP design, but this one scales and doesn't use images
+ */
+
+ .progress-bar{
+  counter-reset:li;       /* Initiate a counter */
+  list-style-type: none;  /* Remove default numerals */
+  margin-bottom: 2em;
+  text-align: center;
+}
+.progress-bar li{
+  background: #ebebeb;
+  border-radius: 20px;
+  color: #666;
+  display: inline-block;
+  padding: 7px 33px;
+  position: relative;
+}
+.progress-bar li:before,  /* Grey circle */
+.progress-bar li:after{   /* White border around grey circle */
+  position: absolute;
+  float: left;
+  width: 27px;
+  height: 27px;
+  top: -3px;
+}
+.progress-bar li:before {
+  background-color: #ebebeb;
+  border: 10px solid #ebebeb;
+  border-radius: 30px;
+  color: #666;
+  content:counter(li);  /* Use the counter as content */
+  counter-increment:li; /* Increment the counter by 1 */
+  left: -18px;
+  z-index: 99999;
+}
+.progress-bar li.current:before,
+.progress-bar li.current {
+  background: #666;
+  border-color: #666;
+  color: #fff;
+}
+.progress-bar li:after {
+  background-color: #fff;
+  border: 10px solid #fff;
+  border-radius: 32px;
+  content: " ";
+  left: -21px;
+}
+
+
+/* =================================
+ * Landing page
+ * ================================= */
+
+
+/* Product image (ie. a tax disc) */
+.product-image{
+	float: left;
+	height: 5em;
+	width: 5em;
+	margin: -0.5em 1.5em 2em 0;
+}
+
+.get-started-intro #what-you-need-to-know{
+	margin-top: 0.5em;
+}
+
+/* Footnote style */
+.footnote{
+	font-style: italic;
+	font-size: 1em;
+	color: #666;
+}
+
+/* Landing page footer */
+#landing-page-footer{
+	border-top: 1px solid #ddd;
+	display: block;
+	margin: 2em -3em;
+	padding: 0.5em 3em;
+	line-height: 1em;
+}
+
+.more .card-images{
+	margin-left: 0em;
+	margin-top: -1em;
+}
+
+.card-images .footnote img{
+	vertical-align: text-bottom;
+}
+
+/* =================================
+ * Enter V11 page
+ * ================================= */
+
+/* Form */
+#v11 {
+	margin-bottom: 1em;
+}
+
+/* Image of the V11 & V5C forms */
+#v11-image,
+#v5C-image{
+  width: 109px;
+  float: right;
+}
+
+#v11-image{
+	margin: 0.4em 0 0 1em;
+}
+
+/* Jumbo text field */
+#v11 input,
+.jumbo{
+	font-size: 3rem;
+	width: 12em;
+	letter-spacing: 0.5rem;
+	margin: 0;
+	height: 30px;
+}
+
+/* Search button */
+#v11 .buttonV2{
+	margin-top: -2.8em;
+	margin-right: 2.4em;
+	display: block;
+	float: right;
+	height: 39px;
+}
+#v11 .buttonV2 span{
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+#v5c-form{
+  margin: 0;
+}
+
+/* =================================
+ * Enter V5C and number plate page
+ * ================================= */
+
+/* Text field widths */
+#vrm-number{
+	width: 5em;
+}
+#v5c-number{
+	width: 8em;
+}
+
+/* Help text */
+#v5c .footnote{
+	width: 18em;
+	float: right;
+	margin: -6.8em 2em 0 0;
+}
+
+/* Image of V5C form */
+#v5c img{
+	float: left;
+	margin-right: 0.5em;
+}
+
+/* =================================
+ * Check vehicle details page
+ * ================================= */
+
+/* layout */
+.vehicle{
+	border-bottom: 1px solid #ccc;
+	margin: 0 0 1em 0;
+	overflow: auto;
+	padding: 0.3em 0 1em 0;
+	width: 100%;
+}
+.vehicle > div{
+	float: left;
+}
+
+/* Registration plate */
+.vehicle .reg {
+	width: 15em;
+}
+.vehicle .reg strong{
+	background-color: #fbe712;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #000;
+	font-weight: bold;
+	font-size: 4rem;
+	line-height: 1.5em;
+	margin: 0 auto;
+	padding: 0 0.4em;
+	text-align: center;
+	width: 5em;
+}
+
+/* Vehicle details */
+.vehicle .details{
+	background: #f2f2f2;
+	padding: 0.5em;
+	width: 19em;
+}
+.vehicle .details ul{
+	margin: 0 0 0 -1em;
+}
+.vehicle .details a{
+	margin-left: 1.4em;
+}
+
+/* ==================================================
+ * Price Options 
+ * ================================================== */
+
+.tax-option {
+  width: 48%;
+  margin-right: 4%;
+  float: left;
+}
+
+.tax-option:last-child {
+  margin-right: 0;
+}
+
+.tax-option label {
+	border: 4px solid #fff;
+  display: block;
+  margin-left: -4px;
+  padding: 0.5em 1em;
+  
+  text-align: center;
+  font-size: 2rem;
+  
+  color: #333;
+  background-color: #f2f2f2;
+  
+  cursor: pointer;
+} 
+
+.tax-option label:hover {
+  background-color: #ccc;
+}
+
+.tax-option input {
+  margin-right: 5px;
+}
+
+.tax-option input:checked+label{ 
+	font-weight: bold;
+	border: 4px solid #28a197;
+  background-color: #e1e8e8;
+}
+
+.tax-option .car_tax {
+  width: auto;
+  margin: 0.1em 0;
+	text-align: center;
+  color: #28A197;
+	font-size: 5rem;
+  line-height: 1em;
+}
+
+.tax-option small {
+  display: block;
+  margin-bottom: -2.4rem;
+}
+
+.note{
+	font-size: 0.8em;
+}
+
+/* ==================================================
+ * Accepted Cards 
+ * ================================================== */
+
+.card-images{
+	display: inline-block;
+	line-height: 4em;
+	height: 2em;
+	margin: -1em 0 0 0.5em;
+}
+.card-images img{
+	width: 2em;
+	margin-top: 0.5em;
+}
+
+#payment-details label{
+	width: 7em;
+}
+#payment-details .form-row{
+	overflow: hidden;
+	margin-bottom: 1em;
+
+}
+
+#payment-details{
+	margin-bottom: 2em;
+}
+#payment-details input,
+#payment-details label{
+	float: left;
+	margin-bottom: 0;
+}
+
+/* Security code help */
+.whats-this{
+	display: inline-block;
+	padding: 0 0 0 1em;
+	width: 27em;
+	font-size: 0.8em;
+}
+.whats-this[open]{
+	background-color: transparent;
+}
+
+.whats-this summary::-webkit-details-marker {
+  display: none
+}
+.whats-this summary{
+	margin-top: 0.25em;
+}
+
+#email-confirmation h3{
+	font-weight: normal;
+	margin: 0 0 0.5em 0;
+}
+#email-confirmation .footnote{
+	clear: left;
+}
+
+/* Adjust form label widths to suit copy */
+#cartax_payment .form-horizontal .control-label{
+  width: 6em;
+}
+#cartax_payment .form-horizontal .controls {
+  margin-left: 8em;
+}
+#cartax_payment .form-horizontal .form-actions{
+  padding-left: 8em;
+}
+
+/* ==================================================
+ * Check order page
+ * ================================================== */
+
+.car-tax-receipt td, .car-tax-receipt th {
+  border: none;
+  font-size: 1.6rem;
+}
+
+.car-tax-receipt thead th {
+  border-right: 2px solid #fff;
+  /*background-color: #999;*/
+}
+
+.car-tax-receipt td, .car-tax-receipt tr:nth-child(even) td {
+  vertical-align: bottom;
+  background-color: transparent;
+}
+
+td.currency, th.currency {
+  text-align: right;
+}
+
+tr.total td, tr.total th {
+  background-color: transparent;
+  border-top: 2px solid #999;
+  color: #333;
+  font-weight: bold;
+  text-align: right;
+}
+tr.total th:after{
+	content: ":";
+}
+
+tr.subtotal td, tr.subtotal th {
+  background-color: transparent;
+  border-top: 1px solid #999;
+  color: #333;
+}
+
+.edit-order{
+	position: absolute;
+	margin-top: -3em;
+	margin-left: 0.5em;
+}
+
+/* ==================================================
+ * Confirm order page
+ * ================================================== */
+
+/* Next steps */
+div.next-steps  {
+    border:solid 1px #ccc;
+    background:#f9f9f9;
+    padding-left:2em;
+}
+div.next-steps h2{
+	border-bottom: 0;
+}
+
+/* ===============================
+ * FORMS FRAMEWORK
+ * ===============================
+ *
+ * Stripped down subset of Twitter Bootstrap classes.
+ * The idea being that you can mark up your forms HTML as per Bootstrap
+ * and it'll behave broadly as expected.
+ */
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 1.1875em
+}
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  display: inline-block;
+  margin: 0;
+  /*height: 18px;
+  padding: 4px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #555555;*/
+}
+textarea {
+  min-height: 10em;
+  height: auto;
+  padding: 0.25em 0.5em;
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+select[multiple],
+select[size] {
+  height: auto;
+}
+.radio,
+.checkbox {
+  min-height: 1em;
+  padding-left: 1em;
+  line-height: 0.8em;
+  margin-bottom:  1em;
+}
+
+label.radio:hover,
+label.checkbox:hover{
+  cursor: pointer;
+  /*text-decoration: underline;*/
+}
+label.radio.checked:hover{
+  cursor: default;
+  text-decoration: none;
+}
+
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: -18px;
+  margin-right: 0.5em;
+}
+.controls > .radio:first-child,
+.controls > .checkbox:first-child {
+  /*padding-top: 5px;*/
+}
+.radio.inline,
+.checkbox.inline {
+  display: inline-block;
+  padding-top: 5px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+  margin-left: 10px;
+}
+.input-mini {
+  width: 60px;
+  max-width: 60px; /* Override applicatiom.css style */
+}
+.input-small {
+  width: 90px;
+}
+.input-medium {
+  width: 150px;
+}
+.input-large {
+  width: 210px;
+}
+.input-xlarge {
+  width: 270px;
+}
+.input-xxlarge {
+  /*width: 530px;*/
+  width: 28.3em;
+}
+
+input,
+textarea,
+.uneditable-input {
+  margin-left: 0;
+  margin-bottom: 0.5em;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  border-color: #ddd;
+}
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][readonly],
+input[type="checkbox"][readonly] {
+  background-color: transparent;
+}
+
+.help-block,
+.help-inline {
+  color: #555555;
+}
+.help-block {
+  display: block;
+  margin-bottom: 9px;
+}
+.help-inline {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+
+.form-search input,
+.form-inline input,
+.form-horizontal input,
+.form-search textarea,
+.form-inline textarea,
+.form-horizontal textarea,
+.form-search select,
+.form-inline select,
+.form-horizontal select,
+.form-search .help-inline,
+.form-inline .help-inline,
+.form-horizontal .help-inline,
+.form-search .uneditable-input,
+.form-inline .uneditable-input,
+.form-horizontal .uneditable-input,
+.form-search .input-prepend,
+.form-inline .input-prepend,
+.form-horizontal .input-prepend,
+.form-search .input-append,
+.form-inline .input-append,
+.form-horizontal .input-append {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  margin-bottom: 0;
+}
+
+.form-search .hide,
+.form-inline .hide,
+.form-horizontal .hide {
+  display: none;
+}
+.form-search label,
+.form-inline label {
+  display: inline-block;
+}
+.form-search .input-append,
+.form-inline .input-append,
+.form-search .input-prepend,
+.form-inline .input-prepend {
+  margin-bottom: 0;
+}
+.form-search .radio,
+.form-search .checkbox,
+.form-inline .radio,
+.form-inline .checkbox {
+  padding-left: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.form-search .radio input[type="radio"],
+.form-search .checkbox input[type="checkbox"],
+.form-inline .radio input[type="radio"],
+.form-inline .checkbox input[type="checkbox"] {
+  float: left;
+  margin-right: 3px;
+  margin-left: 0;
+}
+.control-group {
+  margin-bottom: 9px;
+}
+legend + .control-group {
+  margin-top: 1em;
+  -webkit-margin-top-collapse: separate;
+}
+.form-horizontal .control-group {
+  /*margin-bottom: 1em;*/
+  *zoom: 1;
+}
+.form-horizontal .control-group:before,
+.form-horizontal .control-group:after {
+  display: table;
+  content: "";
+}
+.form-horizontal .control-group:after {
+  clear: both;
+}
+.form-horizontal .control-label {
+  float: left;
+  width: 140px;
+  /*padding-top: 5px;*/
+  margin-bottom: 0;
+  text-align: right;
+
+}
+.form-horizontal .controls {
+  *display: inline-block;
+  *padding-left: 20px;
+  margin-left: 160px;
+  *margin-left: 0;
+}
+.form-horizontal .controls:first-child {
+  *padding-left: 160px;
+}
+.form-horizontal .help-block {
+  margin-top: 9px;
+  margin-bottom: 0;
+}
+.form-horizontal .form-actions {
+  padding-left: 160px;
+}
+
+.form-horizontal input[type="text"], 
+.form-horizontal input[type="search"]{
+  margin: 0;
+}
+
+

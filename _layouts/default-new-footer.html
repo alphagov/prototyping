@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include _head.html %}
+  </head>
+  <body class="citizen mainstream">
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
+    {% include _header.html %}
+    <nav role="navigation" class="header-context">
+      <ol class="group">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">{{ page.category }}</a></li>
+      </ol>
+    </nav>
+    <div id="wrapper" class="{{ page.categories }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
+      {{ content }}
+    </div><!--end wrapper-->
+    <footer class="group" id="footer" role="contentinfo">
+      <div class="inner group">
+        <div class="colophon-and-help">
+          <nav class="categories">
+            <!--<h1>GOV.UK is the UK government website for information on:</h1>-->
+            <!--<h1>Explore GOV.UK</h1>-->
+            <!--<h1>Search for information on:</h1>-->
+            <h1>Find out more from the UK government about:</h1>
+            <ul>
+              <li><a href="/">Business, work and employment</a></li>
+              <li><a href="/">Money, benefits and tax</a></li>
+              <li><a href="/">Travel and transport</a></li>
+              <li><a href="/">Crime, justice and the law</a></li>
+              <li><a href="/">Housing and local services</a></li>
+              <li><a href="/">Family</a></li>
+              <li><a href="/">Citizenship and life in the UK</a></li>
+              <li><a href="/">Education</a></li>
+              <li><a href="/">UK Government</a></li>
+            </ul>
+          </nav>
+          <nav class="help">
+            <ul>
+              <li><a href="/help">Help</a></li>
+              <li><a href="/help/cookies">Cookies</a></li>
+              <li><a href="/">Feedback</a></li>
+            </ul>
+          </nav>
+          <div class="colophon">
+            <p>Much of the information on this website is available for reuse under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/" rel="license">Open Government Licence</a></p>
+            <p>Built by the <a href="http://digital.cabinetoffice.gov.uk">Government Digital Service</a></p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; Crown Copyright</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <!-- References production assets -->
+    <link href="https://static.production.alphagov.co.uk/static/application.css" media="screen" rel="stylesheet" type="text/css">
+    <link class="wordsdifficult" href="https://static.production.alphagov.co.uk/stylesheets/wordsdifficult.css" media="screen" rel="alternate stylesheet" title="I find words difficult" type="text/css">
+    <script src="https://static.production.alphagov.co.uk/javascripts/libs/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+    {% if page.css  %}
+    <link rel="stylesheet" href="{{ page.css }}" />
+    {% endif %}
+    <script src="https://static.production.alphagov.co.uk/javascripts/libs/jquery/plugins/carousel.js" type="text/javascript"></script>
+    <script defer src="https://static.production.alphagov.co.uk/javascripts/application.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function() { 
+      $('.contextual-help a').click(function() {
+        $('.contextual-help-content').toggle('fast');
+        return false;
+      });
+    });
+    </script>
+    <style>
+      .contextual-help a{
+        font-size:0.65em;
+        color: #999999;
+      }
+      .contextual-help-content{
+        display:none;
+        background-color:#d5e8f3;
+        width:100%;
+        overflow:auto;
+        margin:0 -1em;
+      }
+      .contextual-help-content div, .contextual-help-content form{
+        width:44%;
+        float:left;
+        padding:1em;
+      }
+      .contextual-help-content form{
+        padding-top:1.75em;
+      }
+      .contextual-help-content form legend{
+        font-size:1.175em;
+        padding-bottom:0.5em;
+      }
+      body.citizen nav.header-context ol.help-stuff{
+        float: right;
+        left: 70%;
+        padding: 0;
+        position: absolute;
+        top: 48px;
+      }
+      .contextual-help-content form input{
+        margin: 0.5em 0 0 0;
+      }
+      #global-header .header-global nav ul li {
+        display:none;
+      }
+      body.citizen nav.header-context ol.help-stuff li:first-child {
+        background-image:none;
+      }
+    </style>
+    <link media="screen" type="text/css" rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/behaviours.js" type="text/javascript"></script> 
+    
+    <script type="text/javascript">
+    setTimeout(function(){var a=document,g,b={families:(g=
+      ["Gill","Sassoon"]),urls:["https://fast.fonts.com/cssapi/172cb3ce-d500-423b-9495-ef65783e8f1d.css"]},
+      c="https://static.production.alphagov.co.uk/static/libs/goog/webfont-debug.js",d="script",
+      e=a.createElement(d),f=a.getElementsByTagName(d)[0],h=g.length;WebFontConfig
+      ={custom:b},e.src=c,f.parentNode.insertBefore(e,f);for(;h--;a.documentElement
+        .className+=' wf-'+g[h].replace(/\s/g,'').toLowerCase()+'-n4-loading');},0)
+    </script> 
+  </head>
+  <body class="citizen mainstream">
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
+    {% include _header.html %}
+    <nav role="navigation" class="header-context">
+      <div class="beta-notice">
+        <div class="inner">
+          <p><a href="http://digital.cabinetoffice.gov.uk/2012/02/01/govuk-beta-day1/">BETA</a></p>
+        </div>
+      </div>
+      <ol class="group">
+        <li><a href="#">Home</a></li>
+        <li><a href="1.html">Driving</a></li>
+        
+      </ol>
+
+      <ol class="group help-stuff">
+        <li><a href="/help">Help</a></li>
+        <li id="gs-feedback"><a href="/feedback">Feedback</a></li>
+      </ol>
+    </nav>
+    
+    <div id="wrapper" class="{{ page.categories }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
+      <section id="content" role="main" class="group">
+
+        <header class="page-header group">
+          <hgroup>
+            <h1><span>{{ page.categories }}</span> {{ page.title }}</h1>
+          </hgroup>
+        </header>
+        <div class="article-container group">
+          <article role="article" class="group">
+            <div class="inner">
+              
+
+              {{ content }}
+              <div class="contextual-help">
+                <h2><a href="">I need help</a></h2>
+                <div class="contextual-help-content">
+                  <div>
+                    <p>If you need further advice on this topic, you can contact:
+                    <p>Tel: 0256 536423</p>
+                    <p>Something House<br />
+                      Street somewhere<br />
+                      Aplace<br />
+                      WC46 7KF</p>
+
+                  </div>
+                  <form>
+                    <fieldset>
+                      <legend>Report a problem</legend>
+                      <p>If you've found a mistake in this information or something isn't working as you've expected, please let us know:
+                      <textarea></textarea>
+                      <input type="submit" value="send" class="button" />
+                    </fieldset>
+                  </form>
+              </div>
+              </div>
+            </div>
+
+          </article>
+        </div>
+      </section>
+      {% if page.step == null %}
+      <!--start related content-->
+      <div class="related-positioning" style="position: fixed; ">
+        <div class="related-container">
+          <div class="related">
+            <div class="inner group">
+              <h2>Related topics</h2>
+              <nav role="navigation"><ul> 
+               <li class="transaction">
+                  <a href="/calculate-vehicle-tax-rates">Calculate vehicle tax rates</a>
+               </li>
+               <li class="answer">
+                  <a href="/vehicle-exempt-from-car-tax">Vehicles exempt from vehicle tax</a>
+                </li>
+               <li class="transaction">
+                  <a href="/register-sorn-statutory-off-road-notification">Register a SORN</a>
+                </li>
+                <li class="transaction">
+                  <a href="/apply-for-tax-disc-refund-form-v14">Apply for a tax disc refund (form V14)</a>
+                </li>
+                <li class="answer">
+                  <a href="/apply-duplicate-tax-disc">Apply for a duplicate tax disc</a>
+                </li>
+                <li class="answer">
+                  <a href="/exchange-tax-disc">Exchange a tax disc</a>
+                </li>
+                <li class="related-topic">
+                  <a href="/browse/driving">More from the <span>Driving</span> section</a>
+                </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div><!--end related content-->
+      {% endif %}
+     
+    </div><!--end wrapper-->
+    {% include _footer.html %}
+  </body>
+</html>

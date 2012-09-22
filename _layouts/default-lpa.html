@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include _head.html %}
+  </head>
+  <body class="citizen mainstream">
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
+    {% include _header.html %}
+    <nav role="navigation" class="header-context">
+      <div class="beta-notice">
+        <div class="inner">
+          <p><a href="http://digital.cabinetoffice.gov.uk/2012/02/01/govuk-beta-day1/">BETA</a></p>
+        </div>
+      </div>
+      <ol class="group">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Family</a></li>
+      </ol>
+    </nav>
+    <div id="wrapper" class="{{ page.categories }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
+      <section id="content" role="main" class="group">
+        <header class="page-header group">
+          <hgroup>
+              
+            <div class="toolbar">
+              <ul class="account-links">
+                {% if page.signed-in == yes %}<li>Signed in as: <a href="">contact@timpaul.co.uk</a></li>
+                <li style="float: right"><a href="">Sign out</a></li>{% endif %}
+
+                {% if page.signed-in != yes %}
+                <li style="float: right"><a href="">Sign in</a></li>{% endif %}
+              </ul>
+            </div>
+            <h1><span>{{ page.categories }}</span> {{ page.title }}</h1>
+        </hgroup>
+        </header>
+        <div class="{% if page.template == 'wide' %}{% else %}article-container{% endif %} group">
+          <article role="article" class="group">
+            <!--<div class="inner">-->
+              {{ content }}
+            <!--</div>-->
+          </article>
+        </div>
+      </section>
+    </div><!--end wrapper-->
+    {% include _footer.html %}
+  </body>
+</html>

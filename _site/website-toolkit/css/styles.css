@@ -1,0 +1,993 @@
+@charset "UTF-8";
+@import url("coderay.css");
+@font-face {
+  font-family: GDS-Regular;
+  src: local("NTA-Light"), local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+/*
+ * Old green: 28a198
+ * New green: 008270
+ */
+/* buttons! */
+.button,
+.button:visited {
+  display: inline;
+  border: none;
+  text-decoration: none;
+  position: relative;
+  top: -3px;
+  line-height: 1.25;
+  -webkit-box-shadow: 0 2px 0 #000;
+  -moz-box-shadow: 0 2px 0 #000;
+  box-shadow: 0 2px 0 #000; }
+
+.button:active,
+.button:focus {
+  background-color: #28A197; }
+
+.button,
+.button.medium {
+  padding: 0.25em 0.5em; }
+
+.button.medium {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.36842;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none; }
+  @media (max-width: 640px) {
+    .button.medium {
+      font-size: 1.3rem;
+      line-height: 1.53846; } }
+
+.get-started .button .call-to-action,
+.get-started .button.big,
+.button,
+.button:visited {
+  background-color: #008270;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 0 #000;
+  -moz-box-shadow: 0 3px 0 #000;
+  box-shadow: 0 3px 0 #000;
+  font-weight: 300; }
+
+.get-started .button:hover span.call-to-action,
+.get-started .button.big:hover,
+.button:hover {
+  background-color: #3ABAA8;
+  color: #fff; }
+
+.button:active,
+.button.big:active,
+.button:active span.call-to-action {
+  -webkit-transform: translate(0, 3px);
+  -moz-transform: translate(0, 3px);
+  -o-transform: translate(0, 3px);
+  transform: translate(0, 3px);
+  box-shadow: none;
+  outline: none; }
+
+.get-started .button .call-to-action,
+.get-started .button.big,
+#search .button.big {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 0.66667;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  padding: 0.45em 1.7em 0.45em 0.5em;
+  background-image: image-url("icon-pointer.png");
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  display: inline-block; }
+  @media (max-width: 640px) {
+    .get-started .button .call-to-action,
+    .get-started .button.big,
+    #search .button.big {
+      font-size: 1.7rem;
+      line-height: 1.47059; } }
+
+/* get started buttons */
+.get-started {
+  margin: 1.5em 0 0 0;
+  text-align: right; }
+  .get-started .button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    box-shadow: none;
+    text-align: left;
+    /* 
+     * In selectors such as .get-started .button.big the chained .button.big is read as
+     * .big by IE6 (see http://www.maxdesign.com.au/articles/multiple-classes/)
+     * This means it no longer has the precedence given by 2 classes and gets overwritten
+     * by the .get-started .button classes that follow.
+     * Just for IE6, add styles to this block to re-assert the styles after those that overwrite.
+    */ }
+    .get-started .button:active {
+      /* 
+       * this compensates for this style being pushed down twice by keeping 
+       * the inner span still 
+       */
+      /* this compensates for the whole thing being pushed down by pushing back up */ }
+      .get-started .button:active .call-to-action {
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        transform: translate(0, 0); }
+      .get-started .button:active .destination {
+        -webkit-transform: translate(0, -3px);
+        -moz-transform: translate(0, -3px);
+        -o-transform: translate(0, -3px);
+        transform: translate(0, -3px); }
+    .get-started .button span {
+      cursor: pointer; }
+    .get-started .button .destination {
+      font-family: "nta", "GDS-Regular", sans-serif;
+      font-size: 14px;
+      font-size: 1.4rem;
+      line-height: 1.42857;
+      font-weight: 400;
+      -webkit-font-smoothing: subpixel-antialiased;
+      letter-spacing: 0;
+      text-transform: none;
+      color: #333;
+      display: block;
+      margin-top: 0.5em;
+      max-width: 13em; }
+      @media (max-width: 640px) {
+        .get-started .button .destination {
+          font-size: 1.2rem;
+          line-height: 1.25; } }
+
+a.button[rel="external"]:after {
+  content: none;
+  margin-left: 0;
+  margin-right: 0; }
+
+input {
+  /* below fixes a bug where IE puts a nasty black border around these elements */ }
+  input[disabled="disabled"] {
+    opacity: 0.5; }
+  input[type="text"], input[type="search"] {
+    font-family: "nta", "GDS-Regular", sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    letter-spacing: 0;
+    text-transform: none;
+    border: 1px solid #bbb;
+    min-width: 8em;
+    margin: 0 0.5em;
+    padding: 0.25em; }
+    @media (max-width: 640px) {
+      input[type="text"], input[type="search"] {
+        font-size: 1.3rem;
+        line-height: 1.53846; } }
+
+/* Example use:
+    <details>
+      <summary>Wanna know more?</sumary>
+      <p>Of course you do!</p>
+    </details>
+*/
+/* Progress indicator */
+nav.progress-indicator {
+  margin-left: 4em;
+  padding: 0; }
+
+nav.progress-indicator ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0; }
+
+nav.progress-indicator ol li {
+  background-color: #e8f0f0;
+  float: left;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.75;
+  border: solid 1px #c1cacb;
+  margin: 0;
+  padding: 0.25em 0.5em 0.25em 1.75em;
+  position: relative;
+  border-right: none;
+  border-left: none; }
+
+nav.progress-indicator ol li:first-child {
+  border-left: solid 1px #c1cacb;
+  margin-left: 0;
+  padding-left: 1em; }
+
+nav.progress-indicator ol li.active {
+  background-color: white; }
+
+nav.progress-indicator ol li.done {
+  color: #777; }
+
+nav.progress-indicator ol li:last-child {
+  border-right: 1px solid #c1cacb;
+  padding-right: 1em; }
+
+nav.progress-indicator ol li:last-child::before,
+nav.progress-indicator ol li:last-child::after {
+  display: none; }
+
+nav.progress-indicator ol li:before,
+nav.progress-indicator ol li:after {
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 10; }
+
+nav.progress-indicator ol li:after {
+  border-left-color: #e8f0f0;
+  border-width: 18px;
+  top: 29px;
+  right: -36px;
+  margin-top: -29px; }
+
+nav.progress-indicator ol li:before {
+  border-left-color: #c1cacb;
+  border-width: 18px;
+  top: 29px;
+  right: -37px;
+  margin-top: -29px; }
+
+nav.progress-indicator ol li.active:after {
+  border-left-color: white; }
+
+.lte-ie8 nav.progress-indicator ol li {
+  padding: 0.25em 1em; }
+
+.lte-ie8 nav.progress-indicator .step-count {
+  display: block;
+  position: relative;
+  left: 0;
+  font-size: 0.85em;
+  margin-bottom: 0.25em; }
+
+details {
+  display: block;
+  margin: 0 -1em 1em -1em;
+  padding-left: 1em; }
+  details summary {
+    font-family: "nta", "GDS-Regular", sans-serif;
+    font-size: 19px;
+    font-size: 1.9rem;
+    line-height: 1.31579;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    color: #2E3191;
+    cursor: pointer;
+    display: block;
+    text-decoration: underline;
+    margin-bottom: 0.5em; }
+    @media (max-width: 640px) {
+      details summary {
+        font-size: 1.3rem;
+        line-height: 1.53846; } }
+    details summary:hover {
+      color: #1D97FF; }
+    details summary:focus {
+      outline: none; }
+  details[open] {
+    margin-top: -0.7em;
+    padding: 0.7em 1em 1em 1em; }
+
+/* Styles for browsers that don't yet natively support details/summary */
+.no-details details > * {
+  display: none; }
+
+.no-details details > summary:before {
+  float: left;
+  width: 20px;
+  content: '► '; }
+
+.no-details details.open > summary:before {
+  content: '▼ '; }
+
+.no-details details summary {
+  display: block; }
+
+.alt {
+  /* Progress indicator */ }
+  .alt nav.progress-indicator {
+    margin-left: 4em;
+    padding: 0; }
+  .alt nav.progress-indicator ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0; }
+  .alt nav.progress-indicator ol li {
+    background-color: white;
+    float: left;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.75;
+    border: solid 1px #006435;
+    margin: 0;
+    padding: 0.25em 0.5em 0.25em 1.75em;
+    position: relative;
+    border-right: none;
+    border-left: none; }
+  .alt nav.progress-indicator ol li:first-child {
+    border-left: solid 1px #006435;
+    margin-left: 0;
+    padding-left: 1em; }
+  .alt nav.progress-indicator ol li.active {
+    background-color: #006435;
+    color: white; }
+  .alt nav.progress-indicator ol li.done {
+    color: #777; }
+  .alt nav.progress-indicator ol li:last-child {
+    border-right: 1px solid #006435;
+    padding-right: 1em; }
+  .alt nav.progress-indicator ol li:last-child::before,
+  .alt nav.progress-indicator ol li:last-child::after {
+    display: none; }
+  .alt nav.progress-indicator ol li:before,
+  .alt nav.progress-indicator ol li:after {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 10; }
+  .alt nav.progress-indicator ol li:after {
+    border-left-color: white;
+    border-width: 18px;
+    top: 29px;
+    right: -36px;
+    margin-top: -29px; }
+  .alt nav.progress-indicator ol li:before {
+    border-left-color: #006435;
+    border-width: 18px;
+    top: 29px;
+    right: -37px;
+    margin-top: -29px; }
+  .alt nav.progress-indicator ol li.active:after {
+    border-left-color: #006435; }
+  .alt .lte-ie8 nav.progress-indicator ol li {
+    padding: 0.25em 1em; }
+  .alt .lte-ie8 nav.progress-indicator .step-count {
+    display: block;
+    position: relative;
+    left: 0;
+    font-size: 0.85em;
+    margin-bottom: 0.25em; }
+
+/* Pattern library styles */
+header.page-header hgroup {
+  margin-right: 0; }
+
+.pattern-library {
+  width: 50%;
+  float: right;
+  padding: 1em;
+  margin-top: -1em;
+  margin-bottom: 2em;
+  background-color: #e7ebda; }
+  .pattern-library h1 {
+    margin-top: 0; }
+
+.pattern-example {
+  background-color: #f2f2f2;
+  padding: 1em;
+  margin: 0 -1em; }
+  .pattern-example .inner {
+    background-color: white;
+    border: 1px solid #CCC;
+    padding-top: 2em; }
+
+.pattern-status {
+  display: block;
+  float: right;
+  color: white;
+  background-color: #912b88;
+  padding: 0.2em 1.5em 0em 1.5em;
+  text-align: center;
+  text-transform: uppercase; }
+
+pre,
+code {
+  color: black;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre code {
+  border: 0 solid;
+  padding: 0; }
+
+code {
+  padding: 0.5em; }
+
+pre {
+  margin-bottom: 2em; }
+
+/* Update text.scss with these */
+hr {
+  border: 0;
+  background-color: #c1cacb;
+  height: 1px;
+  margin: 2em 0; }
+
+article dd {
+  font-size: 1.16em; }
+
+/* GOV.UK colour palettes */
+.palette {
+  margin: 0;
+  padding: 0; }
+  .palette li {
+    list-style-type: none;
+    list-style-image: none;
+    padding: 0.5em 0.8em;
+    margin: 0;
+    font-size: 15px; }
+
+.department li {
+  margin-bottom: 1em; }
+
+.three.columns {
+  width: 31%;
+  float: left;
+  margin-right: 1em; }
+  .three.columns:last-child {
+    margin-right: 0; }
+
+/* Generate the colour palette CSS */
+/* Palette, colours */
+.purple {
+  background-color: #2e358b; }
+  .purple * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .purple h4 {
+    margin-top: 0; }
+
+.purple-50 {
+  background-color: #9799c4; }
+  .purple-50 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .purple-50 h4 {
+    margin-top: 0; }
+
+.purple-25 {
+  background-color: #d5d6e7; }
+  .purple-25 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .purple-25 h4 {
+    margin-top: 0; }
+
+.mauve {
+  background-color: #6f72af; }
+  .mauve * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .mauve h4 {
+    margin-top: 0; }
+
+.mauve-50 {
+  background-color: #b7b9d7; }
+  .mauve-50 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .mauve-50 h4 {
+    margin-top: 0; }
+
+.mauve-25 {
+  background-color: #e2e2ef; }
+  .mauve-25 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .mauve-25 h4 {
+    margin-top: 0; }
+
+.fuschia {
+  background-color: #912b88; }
+  .fuschia * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .fuschia h4 {
+    margin-top: 0; }
+
+.fuschia-50 {
+  background-color: #c994c3; }
+  .fuschia-50 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .fuschia-50 h4 {
+    margin-top: 0; }
+
+.fuschia-25 {
+  background-color: #e9d4e6; }
+  .fuschia-25 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .fuschia-25 h4 {
+    margin-top: 0; }
+
+.pink {
+  background-color: #d53880; }
+  .pink * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .pink h4 {
+    margin-top: 0; }
+
+.pink-50 {
+  background-color: #eb9bbe; }
+  .pink-50 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .pink-50 h4 {
+    margin-top: 0; }
+
+.pink-25 {
+  background-color: #f6d7e5; }
+  .pink-25 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .pink-25 h4 {
+    margin-top: 0; }
+
+.baby-pink {
+  background-color: #f499be; }
+  .baby-pink * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .baby-pink h4 {
+    margin-top: 0; }
+
+.baby-pink-50 {
+  background-color: #faccdf; }
+  .baby-pink-50 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .baby-pink-50 h4 {
+    margin-top: 0; }
+
+.baby-pink-25 {
+  background-color: #fdebf2; }
+  .baby-pink-25 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .baby-pink-25 h4 {
+    margin-top: 0; }
+
+.red {
+  background-color: #b10e1e; }
+  .red * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .red h4 {
+    margin-top: 0; }
+
+.red-50 {
+  background-color: #d9888c; }
+  .red-50 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .red-50 h4 {
+    margin-top: 0; }
+
+.red-25 {
+  background-color: #efcfd1; }
+  .red-25 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .red-25 h4 {
+    margin-top: 0; }
+
+.mellow-red {
+  background-color: #df3034; }
+  .mellow-red * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .mellow-red h4 {
+    margin-top: 0; }
+
+.mellow-red-50 {
+  background-color: #ef9998; }
+  .mellow-red-50 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .mellow-red-50 h4 {
+    margin-top: 0; }
+
+.mellow-red-25 {
+  background-color: #f9d6d6; }
+  .mellow-red-25 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .mellow-red-25 h4 {
+    margin-top: 0; }
+
+.orange {
+  background-color: #f47738; }
+  .orange * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .orange h4 {
+    margin-top: 0; }
+
+.orange-50 {
+  background-color: #fabb96; }
+  .orange-50 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .orange-50 h4 {
+    margin-top: 0; }
+
+.orange-25 {
+  background-color: #fde4d4; }
+  .orange-25 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .orange-25 h4 {
+    margin-top: 0; }
+
+.brown {
+  background-color: #b58840; }
+  .brown * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .brown h4 {
+    margin-top: 0; }
+
+.brown-50 {
+  background-color: #dac39c; }
+  .brown-50 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .brown-50 h4 {
+    margin-top: 0; }
+
+.brown-25 {
+  background-color: #f0e7d7; }
+  .brown-25 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .brown-25 h4 {
+    margin-top: 0; }
+
+.yellow {
+  background-color: #ffbf47; }
+  .yellow * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .yellow h4 {
+    margin-top: 0; }
+
+.yellow-50 {
+  background-color: #ffdf94; }
+  .yellow-50 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .yellow-50 h4 {
+    margin-top: 0; }
+
+.yellow-25 {
+  background-color: #fff2d3; }
+  .yellow-25 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .yellow-25 h4 {
+    margin-top: 0; }
+
+.grass-green {
+  background-color: #85994b; }
+  .grass-green * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .grass-green h4 {
+    margin-top: 0; }
+
+.grass-green-50 {
+  background-color: #c2cca3; }
+  .grass-green-50 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .grass-green-50 h4 {
+    margin-top: 0; }
+
+.grass-green-25 {
+  background-color: #e7ebda; }
+  .grass-green-25 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .grass-green-25 h4 {
+    margin-top: 0; }
+
+.green {
+  background-color: #006435; }
+  .green * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .green h4 {
+    margin-top: 0; }
+
+.green-50 {
+  background-color: #7fb299; }
+  .green-50 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .green-50 h4 {
+    margin-top: 0; }
+
+.green-25 {
+  background-color: #cce0d6; }
+  .green-25 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .green-25 h4 {
+    margin-top: 0; }
+
+.turquoise {
+  background-color: #28a197; }
+  .turquoise * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .turquoise h4 {
+    margin-top: 0; }
+
+.turquoise-50 {
+  background-color: #95d0cb; }
+  .turquoise-50 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .turquoise-50 h4 {
+    margin-top: 0; }
+
+.turquoise-25 {
+  background-color: #d5ecea; }
+  .turquoise-25 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .turquoise-25 h4 {
+    margin-top: 0; }
+
+.light-blue {
+  background-color: #2b8cc4; }
+  .light-blue * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .light-blue h4 {
+    margin-top: 0; }
+
+.light-blue-50 {
+  background-color: #96c6e2; }
+  .light-blue-50 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .light-blue-50 h4 {
+    margin-top: 0; }
+
+.light-blue-25 {
+  background-color: #d5e8f3; }
+  .light-blue-25 * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .light-blue-25 h4 {
+    margin-top: 0; }
+
+/* Palette, greys */
+.charcoal-grey {
+  background-color: #231f20; }
+  .charcoal-grey * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .charcoal-grey h4 {
+    margin-top: 0; }
+
+.dark-blue-grey {
+  background-color: #083640; }
+  .dark-blue-grey * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .dark-blue-grey h4 {
+    margin-top: 0; }
+
+.light-blue-grey {
+  background-color: #c1cacb; }
+  .light-blue-grey * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .light-blue-grey h4 {
+    margin-top: 0; }
+
+.light-warm-grey {
+  background-color: #e1e8e8; }
+  .light-warm-grey * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .light-warm-grey h4 {
+    margin-top: 0; }
+
+.cool-grey {
+  background-color: #e8f0f0; }
+  .cool-grey * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .cool-grey h4 {
+    margin-top: 0; }
+
+.white {
+  background-color: white; }
+  .white * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .white h4 {
+    margin-top: 0; }
+
+.light-beige {
+  background-color: #f8f7ee; }
+  .light-beige * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .light-beige h4 {
+    margin-top: 0; }
+
+.light-tan {
+  background-color: #f5f0d6; }
+  .light-tan * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .light-tan h4 {
+    margin-top: 0; }
+
+/* Department colours */
+.treasury {
+  background-color: #c03024; }
+  .treasury * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .treasury h4 {
+    margin-top: 0; }
+
+.cabinet-office {
+  background-color: #0078ba; }
+  .cabinet-office * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .cabinet-office h4 {
+    margin-top: 0; }
+
+.department-for-education {
+  background-color: #f6823e; }
+  .department-for-education * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .department-for-education h4 {
+    margin-top: 0; }
+
+.department-of-transport {
+  background-color: #007162; }
+  .department-of-transport * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .department-of-transport h4 {
+    margin-top: 0; }
+
+.home-office {
+  background-color: #804292; }
+  .home-office * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .home-office h4 {
+    margin-top: 0; }
+
+.department-of-health {
+  background-color: #00ae9f; }
+  .department-of-health * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .department-of-health h4 {
+    margin-top: 0; }
+
+.ministry-of-justice {
+  background-color: #231f20; }
+  .ministry-of-justice * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .ministry-of-justice h4 {
+    margin-top: 0; }
+
+.ministry-of-defence {
+  background-color: #5d2a44; }
+  .ministry-of-defence * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .ministry-of-defence h4 {
+    margin-top: 0; }
+
+.foreign-and-commonwealth-office {
+  background-color: #00569e; }
+  .foreign-and-commonwealth-office * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .foreign-and-commonwealth-office h4 {
+    margin-top: 0; }
+
+.department-for-communities-and-local-government {
+  background-color: #4a338c; }
+  .department-for-communities-and-local-government * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .department-for-communities-and-local-government h4 {
+    margin-top: 0; }
+
+.department-for-energy-and-climate-change {
+  background-color: #78c059; }
+  .department-for-energy-and-climate-change * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .department-for-energy-and-climate-change h4 {
+    margin-top: 0; }
+
+.department-for-culture-media-and-sport {
+  background-color: #ee1089; }
+  .department-for-culture-media-and-sport * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .department-for-culture-media-and-sport h4 {
+    margin-top: 0; }
+
+.department-for-environment-food-and-rural-affairs {
+  background-color: #8a8c30; }
+  .department-for-environment-food-and-rural-affairs * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .department-for-environment-food-and-rural-affairs h4 {
+    margin-top: 0; }
+
+.department-for-work-and-pensions {
+  background-color: #16bcb8; }
+  .department-for-work-and-pensions * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .department-for-work-and-pensions h4 {
+    margin-top: 0; }
+
+.department-for-business-innovation-and-skills {
+  background-color: #3a6f8c; }
+  .department-for-business-innovation-and-skills * {
+    /* Set text colour depending on background colour */
+    color: white; }
+  .department-for-business-innovation-and-skills h4 {
+    margin-top: 0; }
+
+.department-for-international-development {
+  background-color: #729ecd; }
+  .department-for-international-development * {
+    /* Set text colour depending on background colour */
+    color: #231f20; }
+  .department-for-international-development h4 {
+    margin-top: 0; }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include _head.html %}
+    <link rel="stylesheet" href="/website-toolkit/css/styles.css" />
+  </head>
+  <body class="citizen mainstream">
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
+    {% include _header.html %}
+    <div class="header-context js-stick-at-top-when-scrolling">
+        <nav role="navigation">
+          <ol class="group">
+            <li><a href="/">Home</a></li>
+            <li><a href="/website-toolkit/">Website toolkit</a></li>
+            <li><a href="/website-toolkit/design-patterns">Design patterns</a></li>
+          </ol>
+        </nav>
+    </div>
+    <div id="wrapper" class="guide">
+
+      <section id="content" role="main" class="group">
+      <div class="pattern-status">{{ page.status }}</div>
+        <header class="page-header group">
+          <hgroup>
+            <h1><span>Design pattern</span> {{ page.title }}</h1>
+          </hgroup>
+        </header>
+        <div class="group">
+          <article role="article" class="group">
+            <div class="inner">
+              {{ content }}
+            </div>
+          </article>
+        </div>
+      </section>
+    </div><!--end wrapper-->
+    {% include _footer.html %}
+  </body>
+</html>

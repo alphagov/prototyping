@@ -1,0 +1,71 @@
+html.no-branding {
+  background-color: #f2f2f2;
+}
+
+.no-branding section#content {
+  max-width: 720px;
+} 
+
+.no-branding header.page-header hgroup {
+  margin: 0;
+  padding: 4em 0 0 0;
+  background: #333;
+}
+
+.no-branding header.page-header hgroup h1 {
+  padding: 0.6em 1.5em 0.35em 1.818181818em;
+  color: #333;
+  background-color: #fff;
+}
+
+.no-branding article {
+  margin: 0;
+  padding: 0 5em 2em 5em;
+  width: auto;
+}
+
+.old-site-logo {
+  float: right;
+  margin: 0 0 20px 20px;
+}
+
+.no-branding header.page-header.businesslink hgroup {
+  background: #0077b6 url(businesslink-logo.png) no-repeat 80px 16px;
+}
+
+.no-branding header.page-header.directgov hgroup {
+  background: #ff5b00 url(directgov-logo.png) no-repeat 80px 18px;
+}
+
+@media screen and (max-width: 720px) {
+  .no-branding body {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .no-branding body {
+    padding: 0;
+  }
+
+  .no-branding section#content {
+    margin: 0;
+  }
+
+  .no-branding header.page-header.directgov hgroup,
+  .no-branding header.page-header.businesslink hgroup {
+    background-position: 10px 18px;
+  }
+
+  .no-branding header.page-header hgroup h1 {
+    padding: 0
+  }
+
+  .no-branding .old-site-logo {
+    width: 50%;
+  }
+
+  .no-branding article {
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,44 @@
+/*
+  Low Literacy/Dyslexic Style
+
+  Same layout, different typeface
+
+*/
+
+#wrapper hgroup h1 span,
+article header h1 span,
+aside .chapters-navigation li a .part-label {
+  font-size: 0.375em;
+  text-transform: none !important;
+}
+
+article header h1 span {
+  font-size: 0.5em;
+}
+
+aside .chapters-navigation li a .part-label {
+  font-size: 0.8em;
+}
+
+article p, article ul, article ol, .ancillary .results li p,
+#popup #global-locator-box p.explanation,
+#popup #global-set-theme p.beta-notice {
+  font-family: "Sassoon Sans W01", "Chalkboard", "Marker Felt", Verdana, sans-serif;
+  font-size: 110%;
+}
+
+#search p.totry, article .intro p {
+  font-family: "Sassoon Sans W01", "Chalkboard", "Marker Felt", Verdana, sans-serif;
+  font-size: 120%;
+}
+
+article ul, article ol {
+  font-size: 100%;
+}
+
+article .summary p,
+article .summary h2,
+.citizen .ancillary .summary p,
+.citizen .ancillary .summary h2 {
+  font-family: "Sassoon Sans W01", "Chalkboard", "Marker Felt", Verdana, sans-serif;
+}

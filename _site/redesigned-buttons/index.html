@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Button styles and uses</title>
+
+<meta charset="utf-8">
+
+</head>
+
+
+
+
+<style type="text/css">
+
+/* FOR SIZING FONTS WITH REMS */
+
+html {
+	font-size: 62.5%;
+}
+
+
+
+
+
+/* BUTTONS —
+
+This CSS was written for prototyping purposes only 
+so likely needs refactoring for use in production
+
+Would be good to refactor without a need for the <span> 
+within the <a>
+
+We also need need to apply these styles to form input/s
+
+*/
+
+
+.button,.button:visited {		
+	display: inline-block;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow:0 4px 0 #ccc,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 4px 0 #ccc, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 4px 0 #ccc, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.button span {	
+	display: inline-block;
+	padding: 10px 20px;
+	padding-right: 27px;
+	font-family: 'NTA', Helvetica, Arial, sans-serif;
+	font-size: 25px;
+	font-size: 2.5rem;
+	font-weight: 200;
+	letter-spacing: 0.1px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.button:active span {	
+	-webkit-transform: translate(0, 4px);
+	-moz-transform: translate(0, 4px);
+	-o-transform: translate(0, 4px);
+	transform: translate(0, 4px);
+}
+
+.small:active span {	
+	-webkit-transform: translate(0, 2px);
+	-moz-transform: translate(0, 2px);
+	-o-transform: translate(0, 2px);
+	transform: translate(0, 2px);
+}
+
+
+
+
+/* BUTTON COLOURS */
+
+.black {
+	-webkit-box-shadow:0 3px 0 #000,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 3px 0 #000, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 3px 0 #000, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.black.small {
+	-webkit-box-shadow:0 2px 0 #000,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 2px 0 #000, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 2px 0 #000, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.black span {
+	background: #555;
+	color: #fff;
+}
+
+.black span:hover {
+	background-color: #888;
+}
+
+
+.grey {
+	-webkit-box-shadow:0 3px 0 #999,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 3px 0 #999, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 3px 0 #999, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.grey.small {
+	-webkit-box-shadow:0 2px 0 #999,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 2px 0 #999, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 2px 0 #999, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.grey span {
+	background: #d5d5d5;
+	color: #333;
+}
+
+.grey span:hover {
+	background-color: #eaeaea;
+}
+
+
+.turquoise {
+	-webkit-box-shadow:0 3px 0 #1C7568,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 3px 0 #1C7568, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 3px 0 #1C7568, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.turquoise.small {
+	-webkit-box-shadow:0 2px 0 #1C7568,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 2px 0 #1C7568, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 2px 0 #1C7568, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.turquoise span {
+	background: #28a197;
+	color:#fff;
+}
+
+.turquoise span:hover {
+	background-color: #3ABAA8;
+}
+
+
+.red {
+	-webkit-box-shadow:0 3px 0 #9B0B20,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 3px 0 #9B0B20, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 3px 0 #9B0B20, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.red.small {
+	-webkit-box-shadow:0 2px 0 #9B0B20,0 8px 10px rgba(0,0,0,.05);
+	-moz-box-shadow:0 2px 0 #9B0B20, 0 8px 10px rgba(0,0,0,.05);
+	box-shadow: 0 2px 0 #9B0B20, 0 8px 10px rgba(0,0,0,.05);
+}
+
+.red span {
+	background: #df3034;
+	color:#fff;
+}
+
+.red span:hover {
+	background-color: #F24455;
+}
+
+
+
+
+
+
+/* BUTTON SIZES/INVERSION */
+
+.invert span {
+	background-image: none;
+	background-image: url(pointer_invert.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.large span {
+	padding: 8px 12px;
+	padding-right:45px;
+	font-family: 'NTA', Helvetica, Arial, sans-serif;
+	font-size: 25px;
+	font-size: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0px;
+	background-image: none;
+	background-image: url(pointer.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.medium span {
+	padding: 5px 13px;
+	font-family: 'NTA', Helvetica, Arial, sans-serif;
+	font-size: 17px;
+	font-size: 1.7rem;
+	font-weight: 200;
+	letter-spacing: 0.1px;
+	background-image: none;
+}
+
+.small span {
+	padding: 4px 9px;
+	padding-top:4px;
+	font-family: 'NTA', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	font-size: 1.5rem;
+	font-weight: 200;
+	letter-spacing: 0.1px;
+	background-image: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS FOR THIS DOC ONLY, NOT NEEDED FOR BUTTONS */
+
+body {
+	margin:30px;
+}
+
+h1, h2 {
+	font-family: "Gill Sans",sans-serif;
+	font-weight: 300;
+	font-size: 35px;
+	font-size: 3.5rem;
+	margin-top: 30px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+.space {
+	display: block;
+	height:30px;
+}
+
+p {
+	font-family: "Helvetica Neue",Helvetica,sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 24px;
+	line-height: 2.4rem;
+	font-weight: 200;
+	max-width:450px;
+	color:#444;
+}
+
+code {
+	display:block;
+	margin-top:20px;
+	padding:10px;
+	background-color: #f5f5f5;
+	max-width: 550px;
+}
+
+hr {
+	background:#bbb;
+	color:#ddd;clear:both;
+	float:none;
+	width:100%;
+	height:1px;
+	margin:0 0 24px;
+	border:none;
+}
+
+</style>
+
+<body>
+
+<h1>Button styles and uses</h1>
+
+
+
+<h2>Large turquoise</h2>
+<hr>
+<p>A primary, positive action. Only to be used at the start of a transaction or when going on to complete a transaction on another affiliated site.</p>
+
+<a href="" class="large button turquoise"><span>Start now</span></a>
+
+<div class="space"></div>
+
+<a href="" class="large button turquoise"><span>Apply online</span></a>
+
+<!-- <code>&lt;a class=&quot;large turquoise button&quot;&gt;&lt;span&gt;Start now&lt;/span&gt;&lt;/a&gt;</code> -->
+
+<div class="space"></div>
+
+
+
+
+
+
+<h2>Medium/small turquoise</h2>
+<hr>
+<p>Continuing through a series of steps in a transaction/service.</p>
+
+<a href="" class="medium button turquoise"><span>Continue</span></a>
+
+<div class="space"></div>
+
+<a href="" class="medium button turquoise"><span>Next</span></a>
+
+<div class="space"></div>
+
+<a href="" class="small button turquoise"><span>Next</span></a>
+
+<!-- <code>&lt;a class=&quot;medium turquoise button&quot;&gt;&lt;span&gt;Start now&lt;/span&gt;&lt;/a&gt;</code> -->
+
+<div class="space"></div>
+
+
+
+
+<h2>Medium/small black</h2>
+<hr>
+<p>A one off positive action as opposed to part of a process/transaction. For example location look up.</p>
+
+<a href="" class="medium button black"><span>Find</span></a>
+
+<!-- <code>&lt;a class=&quot;medium black button&quot;&gt;&lt;span&gt;Start now&lt;/span&gt;&lt;/a&gt;</code> -->
+
+<div class="space"></div>
+
+<p>The same, but with less emphasis/importance.</p>
+
+<a href="" class="small button black"><span>Save</span></a>
+
+<!-- <code>&lt;a class=&quot;small black button&quot;&gt;&lt;span&gt;Start now&lt;/span&gt;&lt;/a&gt;</code> -->
+
+<div class="space"></div>
+
+
+
+
+<h2>Medium/small grey</h2>
+<hr>
+<p>The quietest button style for inline, secondary actions.</p>
+
+<a href="" class="medium button grey invert"><span>Continue</span></a>
+
+<div class="space"></div>
+
+<a href="" class="small button grey invert"><span>Continue</span></a>
+
+<div class="space"></div>
+
+
+
+
+<h2>Medium/small red</h2>
+<hr>
+<p>An action that may not be reversible that requires the user to be alerted to what they are about to do.</p>
+
+<a href="" class="medium button red"><span>Delete account</span></a>
+
+<div class="space"></div>
+
+<a href="" class="small button red"><span>Delete</span></a>
+
+<div class="space"></div>
+
+
+
+
+<h2>Form inputs as yet unstyled</h2>
+<hr>
+
+<input type="submit" value="Search" class="">
+
+<div class="space"></div>
+
+<input type="submit" value="Find" class="">
+
+<div class="space"></div>
+
+
+
+</body>
+</html>
