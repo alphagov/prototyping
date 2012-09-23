@@ -9,7 +9,7 @@ status: draft
   <p>Design patterns are reusable bits of web interface like form controls, navigation and calendars.</p>
   <p>The patterns here are designed specifically for use on the GOV.UK website.</p>
   <p>We've created Sass mixins for patterns wherever possible, which we strongly encourage you to use.</p> 
-  <p>It means you'll only use the CSS you need and you'll be able to configure and update your patterns if you.</p>
+  <p>It means you'll only use the CSS you need and you'll be able to easily configure and update your patterns.</p>
   <p>To get started with Sass, head to:<br> 
   <a href="http://sass-lang.com">sass-lang.com</a>.</p>
 </div>
