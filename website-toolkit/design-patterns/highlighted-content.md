@@ -48,18 +48,6 @@ The following highlight classes are available from any page. Use them sparingly.
       <p>class="contact"</p>
     </div>
 
-    <div class="address vcard">
-      <div class="adr org fn">
-        <p>
-              Office for Judicial Complaints
-          <br>Steel House
-          <br>11 Tothill Street
-          <br>London
-          <br>SW1H 9LJ
-        </p>
-      </div>
-    </div>  
-
   </div>
 </div>
 

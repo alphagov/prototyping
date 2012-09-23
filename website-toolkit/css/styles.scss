@@ -6,8 +6,35 @@
 @include progress-indicator;
 @include details-and-summary;
 
+
 .alt {
   @include progress-indicator($green, $green, $white);
+}
+
+.regular-grid p{
+    background-color: $cool-grey;
+    border: 1px solid $light-blue-grey;
+    text-align: center;
+    padding: 1em;
+}
+
+.example-1{
+  @include regular-grid(4);
+}
+.example-2{
+  @include regular-grid(5);
+}
+.example-3{
+  @include regular-grid(8);
+}
+.example-4{
+  @include regular-grid(2);
+}
+
+
+
+.html-and-sass{
+  @include regular-grid(2);
 }
 
 /* Pattern library styles */
@@ -22,7 +49,7 @@ header.page-header hgroup {
   padding: 1em;
   margin-top: -1em;
   margin-bottom: 2em;
-  background-color: $grass-green-25;
+  background-color: $green-25;
   h1{
     margin-top: 0;
   }
@@ -213,4 +240,138 @@ article dd{
 @include colour("department-for-work-and-pensions", $department-for-work-and-pensions);
 @include colour("department-for-business-innovation-and-skills", $department-for-business-innovation-and-skills);
 @include colour("department-for-international-development", $department-for-international-development);
+
+/* =============================================
+   Contact sheet (ie. a thumbnail gallery)
+   ============================================= */
+
+/*
+ * Based on this one: http://www.brunildo.org/test/img_center.html
+ * Updated to use HTML5 elements and modern IE targeting
+ */
+
+.contact-sheet li {
+  border: 1px solid #e8f0f0;
+  display: -moz-inline-box;
+  display: inline-block;
+  margin: 0 1em 1em 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: top;
+  /*width: 9.3em;*/
+}
+
+.contact-sheet>li .image-container {
+  display: table-cell;
+  height: 10em;
+  vertical-align: middle;
+  width: 10em;
+}
+
+.contact-sheet a {
+  color: #000;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+
+.contact-sheet a:hover {
+  background-color: #d5e8f3;
+}
+
+.contact-sheet li>figure {
+  display: table;
+  margin: 0;
+}
+
+.contact-sheet img {
+  vertical-align: middle;
+  margin: 0.5em;
+}
+
+.contact-sheet figcaption {
+  background: #e8f0f0;
+  display: block;
+  padding: .5em;
+}
+.contact-sheet .description{
+  display: none;
+  border-top: 1px solid #e8f0f0;
+  margin: 0;
+  padding: 0.5em;
+}
+
+/* Hover state 1
+
+ * The icon box 'pops' on mouseover.
+ * It's enlarged and floats over the surrounding content.
+ * The description text becomes visible
+
+.contact-sheet a {
+  margin: 0;
+  width: 10em;
+  height: 10em;
+}
+
+.contact-sheet a:hover .description{
+  display: block;
+}
+
+.contact-sheet a:hover{
+  -webkit-transition: all 0.03s ease-in;
+  background: #F7FFFF;
+  position: absolute;
+  margin-top: -5em;
+  margin-left: -3em;
+  height: 22em;
+  width: 16em;
+  box-shadow: 0.2em 0.2em 0.5em rgba(100, 100, 100, 0.5);
+}
+
+.contact-sheet a:hover .image-container{
+  background: #fff;
+  height: 10em;
+  width: 16em;
+}
+
+*/
+
+
+
+
+/* =============================================
+   Old versions of IE
+   ============================================= */
+
+/*
+   No prefix = IE8 and below
+   *  prefix = IE7 and below
+   _  prefix = IE6 and below
+*/
+
+.lte-ie8 .contact-sheet {
+  *display: inline;
+  *zoom: 1;
+  _height: 0;
+}
+
+.lte-ie8 .contact-sheet li {
+  *display: inline;
+  *width: 201px;
+}
+
+.lte-ie8 .contact-sheet li .image-container {
+  *display: block;
+  *height: auto;
+  *width: auto;
+  _font-size: 1px;
+}
+
+.lte-ie8 .contact-sheet .image-container span {
+  *height: 199px;
+  *vertical-align: middle;
+  *zoom: 1;
+  _display: inline-block;
+  _width: 1px;
+}
 

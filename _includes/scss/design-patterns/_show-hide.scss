@@ -1,0 +1,42 @@
+// =======================================================
+// SHOW/HIDE (USING DETAILS AND SUMMARY TAGS)
+
+// Progressive disclosure, yay!
+
+/* Example use:
+    <details>
+      <summary>Wanna know more?</sumary>
+      <p>Of course you do!</p>
+    </details>
+*/
+
+// You'll need to add and initialize jquery.details.js to
+// your page if you want accessible, cross-browser support
+// for this pattern. 
+
+@mixin details-and-summary {
+  details{
+    display: block;
+    margin:  0 -1em 1em -1em;
+    padding-left: 1em;
+    summary{
+      @include core-19;
+      color: #2E3191;
+      cursor: pointer;
+      display: block;
+      text-decoration: underline;
+      margin-bottom: 0.5em;
+      &:hover{ color: #1D97FF; }
+      &:focus{ outline: none; }
+    }
+    &[open]{
+      margin-top: -0.7em;
+      padding: 0.7em 1em 1em 1em;
+    }
+  }
+  /* Styles for browsers that don't yet natively support details/summary */
+  .no-details details > * { display: none; }
+  .no-details details > summary:before { float: left; width: 20px; content: '► '; }
+  .no-details details.open > summary:before { content: '▼ '; }
+  .no-details details summary { display: block; }
+}

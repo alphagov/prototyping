@@ -67,7 +67,7 @@ Here's an example to illustrate. Imagine the user has just been asked to submit 
 <div class="pattern-example">
   <div class="inner">
 
-    <details>
+    <details class="animated">
       <summary>What if I can't submit these documents electronically?</summary>
       <p>Don't worry, you can send in copies of your documents by post. We'll give you the address
         and reference number to use once you've paid your licence fee.</p>
@@ -90,12 +90,14 @@ The 'arrow' style bullet is the closest thing we've got to a convention here. It
 
 # Discussion
 
-OK, so I opted for details/summary tags. Anyone violently object? The thing is, if we don't use them we're going to
+OK, so I opted for details/summary tags plus a polyfill. Anyone violently object? The thing is, if we don't use them we're going to
 have to create the pattern using JavaScript and divs anyway.
 
 TO DO: Ask Leonie is she could test drive the plugin and see if it really does what it claims to.
 
+
 <script src="../javascripts/jquery.details.js"></script>
+
 <script>
   $(function() {
     // Add conditional classname based on support

@@ -1,0 +1,26 @@
+
+
+@mixin regular-grid($columns:"") {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  *zoom: 1;
+
+  > * {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+    float: left;
+    $margins: $columns - 1;
+    $item-share: 1 - (0.025 * ($columns - 1));
+    $margin-share: 1 - $item-share;
+    width: percentage($item-share/$columns);
+    margin-right: percentage($margin-share/$margins);
+    margin-bottom: 1em;
+    &:nth-child(#{$columns}n){
+      margin-right: 0;
+    }
+  }
+}
