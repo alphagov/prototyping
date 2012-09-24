@@ -1,48 +1,32 @@
 ---
 ---
 
+// ===================================================
+// WEBSITE TOOLKIT STYLES
+//
+
 @import "mixins.scss";
-@import url('coderay.css');
-@include progress-indicator;
-@include details-and-summary;
-
-
-.alt {
-  @include progress-indicator($green, $green, $white);
-}
-
-.regular-grid p{
-    background-color: $cool-grey;
-    border: 1px solid $light-blue-grey;
-    text-align: center;
-    padding: 1em;
-}
-
-.example-1{
-  @include regular-grid(4);
-}
-.example-2{
-  @include regular-grid(5);
-}
-.example-3{
-  @include regular-grid(8);
-}
-.example-4{
-  @include regular-grid(2);
-}
-
-
-
-.html-and-sass{
-  @include regular-grid(2);
-}
-
-/* Pattern library styles */
 
 header.page-header hgroup {
   margin-right: 0 /* Extend page header out to end of search button */
 }
 
+.home-menu{
+  @include regular-grid(3);
+  li{
+    @include thumbnail;
+    a .image-container{
+      width: 14em;
+    }
+  }
+}
+
+
+// ====================================================
+// DESIGN PATTERNS
+//
+
+/* Intro panel on landing page */
 .pattern-library{
   width: 50%;
   float: right;
@@ -54,7 +38,7 @@ header.page-header hgroup {
     margin-top: 0;
   }
 }
-
+/* Container for example patterns */
 .pattern-example{
   background-color: #f2f2f2;
   padding: 1em;
@@ -65,7 +49,7 @@ header.page-header hgroup {
     padding-top: 2em;
   }
 }
-
+/* Pattern status label */
 .pattern-status{
   display: block;
   float: right;
@@ -75,7 +59,37 @@ header.page-header hgroup {
   text-align: center;
   text-transform: uppercase;
 }
+/* Side-by-side code examples */
+.html-and-sass{
+  @include regular-grid(2);
+}
 
+// ====================================================
+// DESIGN PATTERN PAGES
+//
+
+/* Progress indicator */
+@include progress-indicator;
+.alt { @include progress-indicator($green, $green, $white); }
+
+/* Show/hide */
+@include details-and-summary;
+
+/* Regular grid */
+.regular-grid p{
+    background-color: $cool-grey;
+    border: 1px solid $light-blue-grey;
+    text-align: center;
+    padding: 1em;
+}
+.example-1{ @include regular-grid(4); }
+.example-2{ @include regular-grid(5); }
+.example-3{ @include regular-grid(8); }
+.example-4{ @include regular-grid(2); }
+
+
+
+/* Styles for inline and block code examples */
 pre,
 code{
   color: black;
@@ -86,7 +100,6 @@ code{
   overflow: auto;
   padding: 6px 10px;
   border-radius: 3px;
-
 }
 pre code{
   border: 0 solid;
@@ -99,7 +112,6 @@ pre{
   margin-bottom: 2em;
 }
 
-
 /* Update text.scss with these */
 hr{
   border: 0;
@@ -107,271 +119,10 @@ hr{
   height: 1px;
   margin: 2em 0;
 }
-
 article dd{
   font-size: 1.16em;
 }
 
-/* GOV.UK colour palettes */
-
-.palette {
-  margin: 0;
-  padding: 0;
-  li{
-    list-style-type: none;
-    list-style-image: none;
-    padding: 0.5em 0.8em;
-    margin: 0;
-    font-size: 15px;
-  }
-}
-.department li{
-  margin-bottom: 1em;
-}
-.three.columns{
-  width: 31%;
-  float: left;
-  margin-right: 1em;
-  &:last-child{
-    margin-right: 0;
-  }
-}
-
-/* Generate the colour palette CSS */
-@mixin colour($class, $colour){
-    $updated: unquote($class);
-    .#{$class} {
-        background-color: $colour;
-        * {
-          /* Set text colour depending on background colour */
-          @if lightness($colour) < 50% {
-            color: $white;
-          } @else {
-            color: $charcoal-grey;
-          }
-        }
-        h4{
-          margin-top: 0;
-        }
-    }
-}
-
-/* Palette, colours */
-@include colour("purple", $purple);
-@include colour("purple-50", $purple-50);
-@include colour("purple-25", $purple-25);
-
-@include colour("mauve", $mauve);
-@include colour("mauve-50", $mauve-50);
-@include colour("mauve-25", $mauve-25);
-
-@include colour("fuschia", $fuschia);
-@include colour("fuschia-50", $fuschia-50);
-@include colour("fuschia-25", $fuschia-25);
-
-@include colour("pink", $pink);
-@include colour("pink-50", $pink-50);
-@include colour("pink-25", $pink-25);
-
-@include colour("baby-pink", $baby-pink);
-@include colour("baby-pink-50", $baby-pink-50);
-@include colour("baby-pink-25", $baby-pink-25);
-
-@include colour("red", $red);
-@include colour("red-50", $red-50);
-@include colour("red-25", $red-25);
-
-@include colour("mellow-red", $mellow-red);
-@include colour("mellow-red-50", $mellow-red-50);
-@include colour("mellow-red-25", $mellow-red-25);
-
-@include colour("orange", $orange);
-@include colour("orange-50", $orange-50);
-@include colour("orange-25", $orange-25);
-
-@include colour("brown", $brown);
-@include colour("brown-50", $brown-50);
-@include colour("brown-25", $brown-25);
-
-@include colour("yellow", $yellow);
-@include colour("yellow-50", $yellow-50);
-@include colour("yellow-25", $yellow-25);
-
-@include colour("grass-green", $grass-green);
-@include colour("grass-green-50", $grass-green-50);
-@include colour("grass-green-25", $grass-green-25);
-
-@include colour("green", $green);
-@include colour("green-50", $green-50);
-@include colour("green-25", $green-25);
-
-@include colour("turquoise", $turquoise);
-@include colour("turquoise-50", $turquoise-50);
-@include colour("turquoise-25", $turquoise-25);
-
-@include colour("light-blue", $light-blue);
-@include colour("light-blue-50", $light-blue-50);
-@include colour("light-blue-25", $light-blue-25);
-
-/* Palette, greys */
-@include colour("charcoal-grey", $charcoal-grey);
-@include colour("dark-blue-grey", $dark-blue-grey);
-@include colour("light-blue-grey", $light-blue-grey);
-@include colour("light-warm-grey", $light-warm-grey);
-@include colour("cool-grey", $cool-grey);
-@include colour("white", $white);
-@include colour("light-beige", $light-beige);
-@include colour("light-tan", $light-tan);
-
-/* Department colours */
-@include colour("treasury", $treasury);
-@include colour("cabinet-office", $cabinet-office);
-@include colour("department-for-education", $department-for-education);
-@include colour("department-of-transport", $department-of-transport);
-@include colour("home-office", $home-office);
-@include colour("department-of-health", $department-of-health);
-@include colour("ministry-of-justice", $ministry-of-justice);
-@include colour("ministry-of-defence", $ministry-of-defence);
-@include colour("foreign-and-commonwealth-office", $foreign-and-commonwealth-office);
-@include colour("department-for-communities-and-local-government", $department-for-communities-and-local-government);
-@include colour("department-for-energy-and-climate-change", $department-for-energy-and-climate-change);
-@include colour("department-for-culture-media-and-sport", $department-for-culture-media-and-sport);
-@include colour("department-for-environment-food-and-rural-affairs", $department-for-environment-food-and-rural-affairs);
-@include colour("department-for-work-and-pensions", $department-for-work-and-pensions);
-@include colour("department-for-business-innovation-and-skills", $department-for-business-innovation-and-skills);
-@include colour("department-for-international-development", $department-for-international-development);
-
-/* =============================================
-   Contact sheet (ie. a thumbnail gallery)
-   ============================================= */
-
-/*
- * Based on this one: http://www.brunildo.org/test/img_center.html
- * Updated to use HTML5 elements and modern IE targeting
- */
-
-.contact-sheet li {
-  border: 1px solid #e8f0f0;
-  display: -moz-inline-box;
-  display: inline-block;
-  margin: 0 1em 1em 0;
-  padding: 0;
-  text-align: center;
-  vertical-align: top;
-  /*width: 9.3em;*/
-}
-
-.contact-sheet>li .image-container {
-  display: table-cell;
-  height: 10em;
-  vertical-align: middle;
-  width: 10em;
-}
-
-.contact-sheet a {
-  color: #000;
-  cursor: pointer;
-  display: block;
-  text-decoration: none;
-}
-
-.contact-sheet a:hover {
-  background-color: #d5e8f3;
-}
-
-.contact-sheet li>figure {
-  display: table;
-  margin: 0;
-}
-
-.contact-sheet img {
-  vertical-align: middle;
-  margin: 0.5em;
-}
-
-.contact-sheet figcaption {
-  background: #e8f0f0;
-  display: block;
-  padding: .5em;
-}
-.contact-sheet .description{
-  display: none;
-  border-top: 1px solid #e8f0f0;
-  margin: 0;
-  padding: 0.5em;
-}
-
-/* Hover state 1
-
- * The icon box 'pops' on mouseover.
- * It's enlarged and floats over the surrounding content.
- * The description text becomes visible
-
-.contact-sheet a {
-  margin: 0;
-  width: 10em;
-  height: 10em;
-}
-
-.contact-sheet a:hover .description{
-  display: block;
-}
-
-.contact-sheet a:hover{
-  -webkit-transition: all 0.03s ease-in;
-  background: #F7FFFF;
-  position: absolute;
-  margin-top: -5em;
-  margin-left: -3em;
-  height: 22em;
-  width: 16em;
-  box-shadow: 0.2em 0.2em 0.5em rgba(100, 100, 100, 0.5);
-}
-
-.contact-sheet a:hover .image-container{
-  background: #fff;
-  height: 10em;
-  width: 16em;
-}
-
-*/
 
 
-
-
-/* =============================================
-   Old versions of IE
-   ============================================= */
-
-/*
-   No prefix = IE8 and below
-   *  prefix = IE7 and below
-   _  prefix = IE6 and below
-*/
-
-.lte-ie8 .contact-sheet {
-  *display: inline;
-  *zoom: 1;
-  _height: 0;
-}
-
-.lte-ie8 .contact-sheet li {
-  *display: inline;
-  *width: 201px;
-}
-
-.lte-ie8 .contact-sheet li .image-container {
-  *display: block;
-  *height: auto;
-  *width: auto;
-  _font-size: 1px;
-}
-
-.lte-ie8 .contact-sheet .image-container span {
-  *height: 199px;
-  *vertical-align: middle;
-  *zoom: 1;
-  _display: inline-block;
-  _width: 1px;
-}
 

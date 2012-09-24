@@ -1,0 +1,15 @@
+---
+---
+
+// ===================================================
+// ICONS PAGE
+//
+
+@import "mixins.scss";
+
+.contact-sheet{
+  @include regular-grid(4);
+  li{
+    @include thumbnail;
+  } 
+}
