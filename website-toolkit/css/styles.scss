@@ -11,16 +11,6 @@ header.page-header hgroup {
   margin-right: 0 /* Extend page header out to end of search button */
 }
 
-.home-menu{
-  @include regular-grid(3);
-  li{
-    @include thumbnail;
-    a .image-container{
-      width: 14em;
-    }
-  }
-}
-
 
 // ====================================================
 // DESIGN PATTERNS
@@ -60,40 +50,17 @@ header.page-header hgroup {
   text-transform: uppercase;
 }
 /* Side-by-side code examples */
-.html-and-sass{
+.side-by-side{
   @include regular-grid(2);
+  .pattern-example{
+    margin: 0.8em 0 0 0;
+  }
 }
-
-// ====================================================
-// DESIGN PATTERN PAGES
-//
-
-/* Progress indicator */
-@include progress-indicator;
-.alt { @include progress-indicator($green, $green, $white); }
-
-/* Show/hide */
-@include details-and-summary;
-
-/* Regular grid */
-.regular-grid p{
-    background-color: $cool-grey;
-    border: 1px solid $light-blue-grey;
-    text-align: center;
-    padding: 1em;
-}
-.example-1{ @include regular-grid(4); }
-.example-2{ @include regular-grid(5); }
-.example-3{ @include regular-grid(8); }
-.example-4{ @include regular-grid(2); }
-
-
-
 /* Styles for inline and block code examples */
 pre,
 code{
   color: black;
-  background-color: #F8F8F8;
+  background-color: #f9f9f9;
   border: 1px solid #CCC;
   font-size: 13px;
   line-height: 19px;
@@ -122,6 +89,40 @@ hr{
 article dd{
   font-size: 1.16em;
 }
+
+// ====================================================
+// DESIGN PATTERN PAGES
+//
+
+/* Progress indicator */
+@include progress-indicator;
+.alt { @include progress-indicator($green, $green, $white); }
+
+/* Show/hide */
+@include details-and-summary;
+
+/* Regular grid */
+.regular-grid p{
+    background-color: $cool-grey;
+    border: 1px solid $light-blue-grey;
+    text-align: center;
+    padding: 1em;
+}
+.example-1{ @include regular-grid(4); }
+.example-2{ @include regular-grid(5); }
+.example-3{ @include regular-grid(8); }
+.example-4{ @include regular-grid(2); }
+
+/* Forms */
+.form-example-1 {
+  @include form(left, 5.5em);
+}
+
+#form-example-2.top { @include form }
+#form-example-2.left { @include form(left, 7em, #008270) }
+#form-example-2.right { @include form(right, 7em, $mellow-red) }
+
+
 
 
 

@@ -17,6 +17,7 @@ status: draft
 # Full list of patterns
 
 * [Contact details](contact-details.html)
+* [Forms](forms.html)
 * [Highlighted content](highlighted-content.html)
 * [Progress indicator](progress-indicator.html)
 * [Regular grid](regular-grid.html)

@@ -28,7 +28,7 @@ Where 'N' is the number of columns the grid should have.
   <li><p>Item 8</p></li>
 </ul>
 
-<div class="html-and-sass">
+<div class="side-by-side">
   <div>
     <h3>HTML</h3>
 <pre><code>&lt;ul class="regular-grid example-1"&gt;

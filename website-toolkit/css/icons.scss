@@ -7,9 +7,38 @@
 
 @import "mixins.scss";
 
-.contact-sheet{
-  @include regular-grid(4);
-  li{
-    @include thumbnail;
-  } 
+.icons{
+    &.big{
+      @include regular-grid(4);
+      .icon { height: 8em; }
+    }
+    &.small{
+      @include regular-grid(5);
+      .icon { height: 6em; }
+    }
+    .icon{
+      @include wraptocentre;
+    }
+    a{
+      border: 1px solid $light-blue-grey;
+      display: block;
+      text-decoration: none;
+      &:hover{
+        background-color: $light-blue-25;
+      }
+    }
+    img{
+      margin: 1em 0;
+    }
+    p {
+      background: $cool-grey;
+      display: block;
+      padding: .5em;
+      margin: 0;
+      text-align: center;
+      text-decoration: underline;
+    }
 }
+
+
+

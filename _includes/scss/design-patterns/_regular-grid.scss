@@ -1,11 +1,11 @@
-
+// ===================================================
+// REGULAR GRID
+//
 
 @mixin regular-grid($columns:"") {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  *zoom: 1;
-
+  @include clearfix;
   > * {
     display: block;
     margin: 0;

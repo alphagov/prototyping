@@ -23,7 +23,7 @@ Remember to add the relevant [hCard](http://microformats.org/wiki/hcard) classes
           <br>SW1H 9LJ
         </p>
       </div>
-    </div>  
+    </div>
 
   </div>
 </div>
