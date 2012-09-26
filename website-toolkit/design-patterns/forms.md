@@ -6,7 +6,11 @@ status: draft
 
 The 'form' mixin provides a configurable framework for most basic form layouts.
 
-<h1>Example 1</h1>
+Use it in your Sass like this: `.form-example-1 { @include form }`
+
+<div class="side-by-side">
+  <div>
+    <h1>Example 1</h1>
 <div class="pattern-example">
   <div class="inner">
     <form class="form-example-1">
@@ -25,11 +29,11 @@ The 'form' mixin provides a configurable framework for most basic form layouts.
     </form>
   </div>
 </div> 
-
-<div class="side-by-side">
+  </div>
   <div>
-  <h2>HTML</h2>
-<pre><code>&lt;form class="form-example-1"&gt;
+  <h1>HTML</h1>
+<pre><code>
+&lt;form class="form-example-1"&gt;
   &lt;p class="group"&gt;
     &lt;label&gt;Label 1&lt;/label&gt;
     &lt;input type="text"&gt;
@@ -43,26 +47,21 @@ The 'form' mixin provides a configurable framework for most basic form layouts.
     &lt;input type="text"&gt;
   &lt;/p&gt;
 &lt;/form&gt;
+
 </code></pre>
-  </div>
-<div>
-
-  <h2>Sass</h2>
-<pre><code>.form-example-1 {
-  @include form(right, 5.5em);
-}
-</code></pre> 
-<h2>Arguments</h2>
-<p>The mixin accepts the following arguments:</p>
-<p><code>$label-alignment</code> : top (default), left or right</p>
-<p><code>$label-width</code> : in ems only. Default, 8em</p>
-
   </div>
 </div>
 
+
+<h2>Arguments</h2>
+<p>The form mixin accepts the following arguments:</p>
+<p><code>$label-alignment</code> top, left or right. Default is top.</p>
+<p><code>$label-width</code> a value in em. Default is 8em.</p>
+<p><code>$legend-colour</code> a colour value or variable. Default is $charcoal-grey.</p>
+
 # Example 2: Contact form
 
-The following example incorporates most of the basic form elements, including; fieldsets, radios, checkboxes, help text and mandatory fields. Use the links below to toggle through the different label alignment options.
+The following example incorporates most of the basic form elements. Use the links below to toggle through the different label alignment options.
 
 <div class="pattern-example">
 
@@ -85,29 +84,29 @@ The following example incorporates most of the basic form elements, including; f
           </select>
         </p>
         <p class="group">
-          <label>First name</label>
+          <label>First name <abbr title="Mandatory">*</abbr></label>
           <input type="text" class="name">
         </p>
         <p class="group">
-          <label>Last name</label>
+          <label>Last name <abbr title="Mandatory">*</abbr></label>
           <input type="text" class="name">
         </p>
       </fieldset>
       <fieldset>
         <legend>Email address</legend>
         <p class="group">
-          <label>Enter email</label>
+          <label>Enter email <abbr title="Mandatory">*</abbr></label>
           <input type="text" class="email">
         </p>
         <p class="group">
-          <label>Confirm email</label>
+          <label>Confirm email <abbr title="Mandatory">*</abbr></label>
           <input type="text" class="email">
         </p>
       </fieldset>
       <fieldset>
         <legend>Telephone number</legend>
         <p class="group">
-          <label>Telephone <abbr title="Mandatory">*</abbr></label>
+          <label>Telephone</label>
           <input type="text" class="telephone">
           <span class="help">Include your country code</span>
         </p>
