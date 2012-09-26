@@ -10,12 +10,17 @@
   // FORM ELEMENT STYLES
 
   /* Text fields and textareas */
-  input, textarea {
+  input[type="text"], textarea {
       background-color: #f9f9f9;
       border: 2px inset; /* Remove this if we can get the border style removed from core.css */
       font-size: 1.9rem;
       line-height: 1.2;
       padding: 0.3em 0 0.1em 0.4em;
+
+      /* placeholder text */
+      &::-webkit-input-placeholder{
+        color: #BBB ;
+      }
   }
   /* Select boxes */
   select {
@@ -25,7 +30,8 @@
   }
   /* Legends and fieldsets */
   legend {
-    @include heading-24;
+    @include core-24;
+    margin-bottom: 0.5em;
     color: $legend-colour;
   }
   fieldset {
@@ -65,6 +71,8 @@
     padding-top: 1.5em;
   }
 
+
+
   /* Default field widths */
 
   input[type="text"] {min-width: 2em;} /* overwrite core style */
@@ -77,11 +85,14 @@
 
   input.email       {width: $large;}
   input.name        {width: $large;}
+  input.url         {width: $full-width;}
+  input.full-name   {width: $x-large;}
   input.street      {width: $large;}
   input.town        {width: $large;}
   input.postcode    {width: $small;}
   textarea.big      {width: $x-large;
                     height: $medium;}
+  textarea.full-size{width: $full-width; height: $large;}
 
   // LABEL POSITIONING
 
@@ -130,4 +141,5 @@
     label{ display:block; }
     input{ margin-left: 0; }
   }
+
 }
