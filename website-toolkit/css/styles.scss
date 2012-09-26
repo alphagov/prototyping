@@ -73,10 +73,7 @@ pre code{
   padding: 0;
 }
 code{
-  padding: 0.5em;
-}
-pre{
-  margin-bottom: 2em;
+  padding: 0.3em 0.5em;
 }
 
 /* Update text.scss with these */
@@ -115,12 +112,12 @@ article dd{
 
 /* Forms */
 .form-example-1 {
-  @include form(left, 5.5em);
+  @include form(top, 5.5em);
 }
 
 #form-example-2.top { @include form }
-#form-example-2.left { @include form(left, 7em, #008270) }
-#form-example-2.right { @include form(right, 7em, $mellow-red) }
+#form-example-2.left { @include form(left, 7.5em, #008270) }
+#form-example-2.right { @include form(right, 7.5em, $mellow-red) }
 
 
 
