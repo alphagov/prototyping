@@ -76,6 +76,10 @@ code{
   padding: 0.3em 0.5em;
 }
 
+pre:first-child{
+  margin-top: 0;
+}
+
 /* Update text.scss with these */
 hr{
   border: 0;
@@ -85,6 +89,22 @@ hr{
 }
 article dd{
   font-size: 1.16em;
+}
+
+/* Mixin argument toggle styles */
+
+.class-toggle .option:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.class-toggle .selected{
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+  &:hover{
+    cursor: default;
+    text-decoration: none;
+  }
 }
 
 // ====================================================
@@ -115,8 +135,8 @@ article dd{
   @include form(top, 5.5em);
 }
 
-#form-example-2.top { @include form }
-#form-example-2.left { @include form(left, 7.5em, #008270) }
+#form-example-2.top { @include form(top, 7.5em, $mellow-red) }
+#form-example-2.left { @include form(left, 7.5em, $mellow-red) }
 #form-example-2.right { @include form(right, 7.5em, $mellow-red) }
 
 

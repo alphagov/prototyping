@@ -1,0 +1,26 @@
+---
+---
+
+// ===================================================
+// SUPPORT PAGES STYLES
+//
+
+@import "mixins.scss";
+
+@include details-and-summary;
+
+.support-contents{
+  @include regular-grid(2);
+  h2{
+    margin-top: 0;
+  }
+}
+
+header.page-header hgroup {
+  margin-right: 0 /* Extend page header out to end of search button */
+}
+
+.contact-us,
+.top-issues{
+  @include panel;
+}

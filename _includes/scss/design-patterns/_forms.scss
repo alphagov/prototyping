@@ -1,6 +1,9 @@
 // ===================================================
 // FORMS
 //
+// Native form controls vary in size across browser
+// and OS. This can throw out alignments by a few px.
+// The styles are currently optimised for Chrome OS X.
 
 @mixin form($label-alignment: top, $label-width: 8em, $legend-colour: $charcoal-grey) {
 
@@ -27,6 +30,7 @@
   }
   fieldset {
     margin-top: 2em;
+    /*position: relative;*/
   }
   /* Checkboxes and radio buttons */
   .option.group {
@@ -99,7 +103,7 @@
       }
     }
     /* Maintain help text and button alignment with form fields with side-aligned labels */
-    .help{ margin-left: $label-width + 3em; }
+    .help{ margin-left: $label-width + 3.3em; }
     .action.group { padding-left: $label-width; }
 
     input[type=text],
@@ -110,12 +114,14 @@
     }
     select{
       margin-top: 0.5em; /* re-align with horizontal labels (because select boxes aren't as tall as text fields) */
+      margin-left: 0.65em; /* extra margin as select boxes bleed over the left edge slightly */
     }
     legend{
-      margin-left: $label-width - 1.1em; /* Align legend with fields (needs offset). Doesn't work in FF */
+      display: block;
+      padding-left: $label-width - 1.25em; /* Align legend with fields (needs offset) */
     }
     .option.group label{
-      padding-left: $label-width + 0.4em;
+      padding-left: $label-width + 0.5em;
       padding-top: 0;
     }
 

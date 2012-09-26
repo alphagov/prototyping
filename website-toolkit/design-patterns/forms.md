@@ -61,11 +61,12 @@ Use it in your Sass like this: `.form-example-1 { @include form }`
 
 # Example 2: Contact form
 
-The following example incorporates most of the basic form elements. Use the links below to toggle through the different label alignment options.
+The following example incorporates most of the basic form elements. You can toggle through the different label alignment options to see
+the effect it has.
 
 <div class="pattern-example">
 
-<code id="toggle">@include form(<a href="#" class="top">top</a>|<a href="#" class="left">left</a>|<a href="#" class="right">right</a>);</code>
+<pre><code class="class-toggle" data-for="form-example-2" >@include form(<span class="option selected">top</span>|<span class="option">left</span>|<span class="option">right</span>, 7.5em, $mellow-red)</code></pre>
 
   <div class="inner">
 
@@ -162,21 +163,60 @@ The following example incorporates most of the basic form elements. Use the link
     </form>
 
   </div>
-</div> 
+</div>
+
+* * *
+
+# Rationale
+
+## Text input fields
+
+* Light grey background: To make them stand out equally on a white page or coloured panel
+* Inset border style: By convention people type into 'holes' cut into the interface
+
+## Label positioning
+
+The framework provides support for top, left or right alignment because there are valid cases for the use of all three. The table below (from a [great article on form design](http://uxdesign.smashingmagazine.com/2011/11/08/extensive-guide-web-form-usability/) in Smashing Magazine) outlines the relative advantages of each approach:
+
+|-----------------------------------|--------------|-------------------|---------------|
+|                                   | Top          | Right             | Left          |
+|-----------------------------------|--------------|-------------------|---------------|
+| Speed of completion               | Fastest      |                   | Slowest       |
+|-----------------------------------|--------------|-------------------|---------------|
+| Horizontal space                  | Least        |                   | Most          |
+|-----------------------------------|--------------|-------------------|---------------|
+| Vertical space                    | Most         |                   | Least         |
+|-----------------------------------|--------------|-------------------|---------------|
+| Label text space                  | Most         |                   | Least         |
+|-----------------------------------|--------------|-------------------|---------------|
+| Proximity to input                | Closest      |                   | Least close   |
+|-----------------------------------|--------------|-------------------|---------------|
+| User eye movement                 | Down         | Down + right      | Down + right  |
+|-----------------------------------|--------------|-------------------|---------------|
+| Time to move from label to input  | 50ms         | 240ms             | 500ms         |
+|-----------------------------------|--------------|-------------------|---------------|
+| Ideal for                         | Simple forms | Less simple forms | Complex forms |
+|-----------------------------------|--------------|-------------------|---------------|
+
+
+
 
 <script>
   $(function() {
-    $('#toggle .top').click(function() {
-      $("#form-example-2").removeClass('left').removeClass('right').addClass('top');
+
+    // Style toggle for pattern examples
+    // Takes the text of the clicked 'option' and assigns it as
+    // a class to the element named in the 'data-for' attribute
+    $('.class-toggle .option').click(function(){
+      $('.class-toggle .option').removeClass('selected');
+      $(this).addClass('selected');
+      var selectedClass = $(this).text();
+      var selectedElement = "#" + $(this).parents('.class-toggle').data("for");
+      $(selectedElement).removeClass().addClass(selectedClass);
       return false;
     });
-    $('#toggle .left').click(function() {
-      $("#form-example-2").removeClass('top').removeClass('right').addClass('left');
-      return false;
-    });
-    $('#toggle .right').click(function() {
-      $("#form-example-2").removeClass('left').removeClass('top').addClass('right');
-      return false;
-    });
+
+
+
   });
 </script>
