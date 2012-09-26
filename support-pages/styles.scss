@@ -24,3 +24,7 @@ header.page-header hgroup {
 .top-issues{
   @include panel;
 }
+
+.contact-form{
+  @include form(top, 7em ,$orange);
+}
