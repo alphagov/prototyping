@@ -13,9 +13,9 @@ template: wide
 
 <fieldset>
   <legend>Why are you contacting us?</legend>
-  <p class="option group">
+  <p class="option group" id="contact-why">
     <label><input type="radio" name="query-type" checked> I can't find what I'm looking for</label>
-    <label><input type="radio" name="query-type"> I want to report a problem</label>
+    <label><input type="radio" name="query-type" id="report-problem"> I want to report a problem</label>
     <label><input type="radio" name="query-type"> I want to ask a question</label>
     <label><input type="radio" name="query-type"> I want to make a suggestion</label>
   </p>
@@ -67,7 +67,7 @@ template: wide
   </div>
 </fieldset>
 
-<fieldset>
+<fieldset id="contact-details">
   <legend>How can we contact you?</legend>
   <p>If you'd like us to get back to you, please leave your details below.</p>
   <p class="group">
@@ -85,3 +85,17 @@ template: wide
   <input type="submit" value="Send message" class="button">
 </p>
 </form>
+
+
+<script>
+  // Remove contact details fields if user is reporting a problem
+  $(function() {
+    $('#contact-why input').change(function() {
+      if($('#report-problem').is(':checked')) { 
+        $('#contact-details').hide(); 
+      } else {
+        $('#contact-details').show(); 
+      }
+    });
+  });
+</script>
