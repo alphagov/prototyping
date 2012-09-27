@@ -6,7 +6,6 @@
 //
 
 @import "mixins.scss";
-
 @include details-and-summary;
 
 .support-contents{
@@ -15,42 +14,36 @@
     margin-top: 0;
   }
 }
-
 header.page-header hgroup {
   margin-right: 0 /* Extend page header out to end of search button */
 }
-
 .contact-us,
 .top-issues,
 .page-contents{
   @include panel;
 }
-
 .contact-form{
-  @include form(top, 7em);
+  @include form();
 }
-
-
-.report-a-problem-container div{
-  text-align: left; /* overwrite core style */
-}
-
 .report-a-problem-container{
   @include form;
-  /*margin: 0;*/
   p{
     &:first-child{ margin-top: 0.5em};
     &:last-child{ margin-bottom: 0};
   }
+  div{
+    text-align: left; /* overwrite core style */
+  }
 }
-
-.contact-form .option.group .location p{
-  padding-bottom: 0;
-}
-.location input[type="text"]{
-  margin-left: 1.5em;
-  width: 32em;
-}
-.location select{
-  margin-left: 0.5em;
+.contact-form .location {
+  p{
+    padding-bottom: 0;
+  }
+  input[type="text"]{
+    margin-left: 1.5em;
+    width: 32em;
+  }
+  select{
+    margin-left: 0.5em;
+  }
 }
