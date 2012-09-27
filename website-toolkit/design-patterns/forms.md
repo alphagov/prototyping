@@ -173,6 +173,113 @@ the effect it has.
   </div>
 </div>
 
+# HTML
+
+The example above is marked up as follows:
+
+    <div id="form-example-2">
+      <div class="validation-summary">
+        <h1>Please check the form</h1>
+        <ul>
+          <li><a href="#error1">Confirm your email address</a></li>
+          <li><a href="#error2">Select at least one area of interest</a></li>
+        </ul>
+      </div>
+      <form>
+        <fieldset>
+          <legend>Name</legend>
+          <p class="group">
+            <label>Title</label>
+            <select>
+              <option value="Mr">Mr.</option>
+              <option value="Mrs">Mrs.</option>
+              <option value="Miss">Miss</option>
+              <option value="Ms.">Ms.</option>
+              <option value="Dr.">Dr.</option>
+              <option value="Other">Other</option>
+            </select>
+          </p>
+          <p class="group">
+            <label>First name <abbr title="Mandatory">*</abbr></label>
+            <input type="text" class="name">
+          </p>
+          <p class="group">
+            <label>Last name <abbr title="Mandatory">*</abbr></label>
+            <input type="text" class="name">
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Email address</legend>
+          <p class="group">
+            <label>Enter email <abbr title="Mandatory">*</abbr></label>
+            <input type="text" class="email">
+          </p>
+          <p class="group validation">
+            <span class="validation-message" id="error1">Confirm your email address</span>
+            <label>Confirm email <abbr title="Mandatory">*</abbr></label>
+            <input type="text" class="email">
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Telephone number</legend>
+          <p class="group">
+            <label>Telephone</label>
+            <input type="text" class="telephone">
+            <span class="help">Include your country code</span>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Postal address</legend>
+          <p class="group">
+            <label>Street</label>
+            <input type="text" class="street">
+          </p>
+          <p class="group">
+            <label class="visuallyhidden">Street line two</label>
+            <input type="text" class="street">
+          </p>
+          <p class="group">
+            <label>Town/City</label>
+            <input type="text" class="town">
+          </p>
+          <p class="group">
+            <label>Postcode</label>
+            <input type="text" class="postcode">
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Biography</legend>
+          <p class="group">
+            <label for="biography">Write a few short words about yourself</label>
+            <textarea name="biography" class="big"></textarea>
+          </p>
+          <p class="option group">
+            <label><input type="checkbox"> Make this biography public</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>I am interested in</legend>
+          <p class="option group validation">
+            <span class="validation-message" id="error2">Select at least one area of interest</span>
+            <label><input type="checkbox"> Job offers</label>
+            <label><input type="checkbox"> Networking</label>
+            <label><input type="checkbox"> Business opportunities</label>
+          </p>
+        </fieldset>  
+        <fieldset>
+          <legend>I prefer to be contacted by</legend>
+          <ul class="option group">
+            <li><label><input type="radio" name="preferred-contact" checked> Email</label></li>
+            <li><label><input type="radio" name="preferred-contact"> Telephone</label></li>
+            <li><label><input type="radio" name="preferred-contact"> Post</label></li>
+          </ul>
+        </fieldset>
+        <p class="action group">
+          <button class="button" type="submit">Submit form</button>
+        </p>
+      </form>
+    </div>
+
 * * *
 
 # Rationale
@@ -206,7 +313,13 @@ The framework provides support for top, left or right alignment because there ar
 | Ideal for...                      | Simple forms | Less simple forms | Complex forms |
 |-----------------------------------|--------------|-------------------|---------------|
 
+## Validation messages
 
+When a form is submitted, any validation messages are summarised at the top of the page.
+The messages link down to the part of the form they relate to.
+This helps users of assistive technology navigate around the form.
+
+The red bar connects the summary to the messages in the form and aids quick scanning of the form for errors.
 
 
 <script>
