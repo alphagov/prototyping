@@ -15,16 +15,16 @@ Use it in your Sass like this: `.form-example-1 { @include form }`
   <div class="inner">
     <form class="form-example-1">
     <p class="group">
-      <label>Label one</label>
-      <input type="text">
+      <label for="label1">Label one</label>
+      <input id="label1" type="text">
     </p>
     <p class="group">
-      <label>Label two</label>
-      <input type="text">
+      <label for="label2">Label two</label>
+      <input id="label2" type="text">
     </p>
     <p class="group">
-      <label>Label three</label>
-      <input type="text">
+      <label for="label3">Label three</label>
+      <input id="label3" type="text">
     </p>
     </form>
   </div>
@@ -35,16 +35,16 @@ Use it in your Sass like this: `.form-example-1 { @include form }`
 <pre><code>
 &lt;form class="form-example-1"&gt;
   &lt;p class="group"&gt;
-    &lt;label&gt;Label 1&lt;/label&gt;
-    &lt;input type="text"&gt;
+    &lt;label for="label1"&gt;Label 1&lt;/label&gt;
+    &lt;input id="label1" type="text"&gt;
   &lt;/p&gt;
   &lt;p class="group"&gt;
-    &lt;label&gt;Label 2&lt;/label&gt;
-    &lt;input type="text"&gt;
+    &lt;label for="label2"&gt;Label 2&lt;/label&gt;
+    &lt;input id="label2" type="text"&gt;
   &lt;/p&gt;
   &lt;p class="group"&gt;
-    &lt;label&gt;Label 3&lt;/label&gt;
-    &lt;input type="text"&gt;
+    &lt;label for="label3"&gt;Label 3&lt;/label&gt;
+    &lt;input id="label3" type="text"&gt;
   &lt;/p&gt;
 &lt;/form&gt;
 
@@ -80,8 +80,8 @@ the effect it has.
         <fieldset>
           <legend>Name</legend>
           <p class="group">
-            <label>Title</label>
-            <select>
+            <label for="title">Title</label>
+            <select id="title">
               <option value="Mr">Mr.</option>
               <option value="Mrs">Mrs.</option>
               <option value="Miss">Miss</option>
@@ -91,61 +91,61 @@ the effect it has.
             </select>
           </p>
           <p class="group">
-            <label>First name <abbr title="Mandatory">*</abbr></label>
-            <input type="text" class="name">
+            <label for="first-name">First name <abbr title="Mandatory">*</abbr></label>
+            <input id="first-name" type="text" class="name">
           </p>
           <p class="group">
-            <label>Last name <abbr title="Mandatory">*</abbr></label>
-            <input type="text" class="name">
+            <label for="last-name">Last name <abbr title="Mandatory">*</abbr></label>
+            <input id="last-name" type="text" class="name">
           </p>
         </fieldset>
         <fieldset>
           <legend>Email address</legend>
           <p class="group">
-            <label>Enter email <abbr title="Mandatory">*</abbr></label>
-            <input type="text" class="email">
+            <label for="email">Enter email <abbr title="Mandatory">*</abbr></label>
+            <input id="email" type="text" class="email">
           </p>
           <p class="group validation">
             <span class="validation-message" id="error1">Confirm your email address</span>
-            <label>Confirm email <abbr title="Mandatory">*</abbr></label>
-            <input type="text" class="email">
+            <label for="email-confirm">Confirm email <abbr title="Mandatory">*</abbr></label>
+            <input id="email-confirm" type="text" class="email">
           </p>
         </fieldset>
         <fieldset>
           <legend>Telephone number</legend>
           <p class="group">
-            <label>Telephone</label>
-            <input type="text" class="telephone">
+            <label for="telephone">Telephone</label>
+            <input id="telephone" type="text" class="telephone">
             <span class="help">Include your country code</span>
           </p>
         </fieldset>
         <fieldset>
           <legend>Postal address</legend>
           <p class="group">
-            <label>Street</label>
-            <input type="text" class="street">
+            <label for="street1">Street</label>
+            <input id="street1" type="text" class="street">
           </p>
           <p class="group">
-            <label class="visuallyhidden">Street line two</label>
-            <input type="text" class="street">
+            <label for="street2" class="visuallyhidden">Street line two</label>
+            <input id="street2" type="text" class="street">
           </p>
           <p class="group">
-            <label>Town/City</label>
-            <input type="text" class="town">
+            <label for="town">Town/City</label>
+            <input id="town" type="text" class="town">
           </p>
           <p class="group">
-            <label>Postcode</label>
-            <input type="text" class="postcode">
+            <label for="postcode">Postcode</label>
+            <input id="postcode" type="text" class="postcode">
           </p>
         </fieldset>
         <fieldset>
           <legend>Biography</legend>
           <p class="group">
             <label for="biography">Write a few short words about yourself</label>
-            <textarea name="biography" class="big"></textarea>
+            <textarea id="biography" class="big"></textarea>
           </p>
           <p class="option group">
-            <label><input type="checkbox"> Make this biography public</label>
+            <label for="public"><input id="public" type="checkbox"> Make this biography public</label>
           </p>
         </fieldset>
         <fieldset>
@@ -189,8 +189,8 @@ The example above is marked up as follows:
         <fieldset>
           <legend>Name</legend>
           <p class="group">
-            <label>Title</label>
-            <select>
+            <label for="title">Title</label>
+            <select id="title">
               <option value="Mr">Mr.</option>
               <option value="Mrs">Mrs.</option>
               <option value="Miss">Miss</option>
@@ -200,61 +200,61 @@ The example above is marked up as follows:
             </select>
           </p>
           <p class="group">
-            <label>First name <abbr title="Mandatory">*</abbr></label>
-            <input type="text" class="name">
+            <label for="first-name">First name <abbr title="Mandatory">*</abbr></label>
+            <input id="first-name" type="text" class="name">
           </p>
           <p class="group">
-            <label>Last name <abbr title="Mandatory">*</abbr></label>
-            <input type="text" class="name">
+            <label for="last-name">Last name <abbr title="Mandatory">*</abbr></label>
+            <input id="last-name" type="text" class="name">
           </p>
         </fieldset>
         <fieldset>
           <legend>Email address</legend>
           <p class="group">
-            <label>Enter email <abbr title="Mandatory">*</abbr></label>
-            <input type="text" class="email">
+            <label for="email">Enter email <abbr title="Mandatory">*</abbr></label>
+            <input id="email" type="text" class="email">
           </p>
           <p class="group validation">
             <span class="validation-message" id="error1">Confirm your email address</span>
-            <label>Confirm email <abbr title="Mandatory">*</abbr></label>
-            <input type="text" class="email">
+            <label for="email-confirm">Confirm email <abbr title="Mandatory">*</abbr></label>
+            <input id="email-confirm" type="text" class="email">
           </p>
         </fieldset>
         <fieldset>
           <legend>Telephone number</legend>
           <p class="group">
-            <label>Telephone</label>
-            <input type="text" class="telephone">
+            <label for="telephone">Telephone</label>
+            <input id="telephone" type="text" class="telephone">
             <span class="help">Include your country code</span>
           </p>
         </fieldset>
         <fieldset>
           <legend>Postal address</legend>
           <p class="group">
-            <label>Street</label>
-            <input type="text" class="street">
+            <label for="street1">Street</label>
+            <input id="street1" type="text" class="street">
           </p>
           <p class="group">
-            <label class="visuallyhidden">Street line two</label>
-            <input type="text" class="street">
+            <label for="street2" class="visuallyhidden">Street line two</label>
+            <input id="street2" type="text" class="street">
           </p>
           <p class="group">
-            <label>Town/City</label>
-            <input type="text" class="town">
+            <label for="town">Town/City</label>
+            <input id="town" type="text" class="town">
           </p>
           <p class="group">
-            <label>Postcode</label>
-            <input type="text" class="postcode">
+            <label for="postcode">Postcode</label>
+            <input id="postcode" type="text" class="postcode">
           </p>
         </fieldset>
         <fieldset>
           <legend>Biography</legend>
           <p class="group">
             <label for="biography">Write a few short words about yourself</label>
-            <textarea name="biography" class="big"></textarea>
+            <textarea id="biography" class="big"></textarea>
           </p>
           <p class="option group">
-            <label><input type="checkbox"> Make this biography public</label>
+            <label for="public"><input id="public" type="checkbox"> Make this biography public</label>
           </p>
         </fieldset>
         <fieldset>
@@ -279,6 +279,7 @@ The example above is marked up as follows:
         </p>
       </form>
     </div>
+  </div>
 
 * * *
 
