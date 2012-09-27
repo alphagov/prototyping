@@ -27,7 +27,7 @@ header.page-header hgroup {
 }
 
 .contact-form{
-  @include form(top, 7em ,$orange);
+  @include form(top, 7em);
 }
 
 
@@ -42,4 +42,15 @@ header.page-header hgroup {
     &:first-child{ margin-top: 0.5em};
     &:last-child{ margin-bottom: 0};
   }
+}
+
+.contact-form .option.group .location p{
+  padding-bottom: 0;
+}
+.location input[type="text"]{
+  margin-left: 1.5em;
+  width: 32em;
+}
+.location select{
+  margin-left: 0.5em;
 }

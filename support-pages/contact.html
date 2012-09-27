@@ -3,7 +3,6 @@ layout: default
 title: Contact GOV.UK
 css: styles.css
 category: Support
-categories: Support
 template: wide
 ---
 
@@ -12,22 +11,64 @@ template: wide
 
 <form class="contact-form" action="contact-thanks.html">
 
-
 <fieldset>
-  <legend>Your message</legend>
+  <legend>Why are you contacting us?</legend>
+  <p class="option group">
+    <label><input type="radio" name="query-type" checked> I can't find what I'm looking for</label>
+    <label><input type="radio" name="query-type"> I want to report a problem</label>
+    <label><input type="radio" name="query-type"> I want to ask a question</label>
+    <label><input type="radio" name="query-type"> I want to make a suggestion</label>
+  </p>
+</fieldset>
+
+<fieldset class="location">  
+  <legend>Which part of GOV.UK do you want to tell us about?</legend>
+
+  <p>
+    <label>
+      <input type="radio" name="location" checked> The whole site
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="radio" name="location"> This section
+      <select>
+        <option value="">Choose a section</option>
+        <option value="">Business</option>
+        <option value="">Crime and justice</option>
+        <option value="">Driving</option>
+        <option value="">Education</option>
+        <option value="">Family</option>
+        <option value="">Housing</option>
+        <option value="">Education</option>
+        <option value="">Life in the UK</option>
+        <option value="">Money and tax</option>
+        <option value="">Neighbourhoods</option>
+        <option value="">Travel</option>
+        <option value="">Work</option>
+      </select>
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="radio" name="location"> This page
+        <input type="text" placeholder="Enter URL or name of page">
+    </label>
+  </p>
+
+</fieldset>
+
+<fieldset>  
+  <legend>What do you want to tell us about?</legend>
   <p class="group">
-    <label class="visuallyhidden">Enter your message</label>
+    <p>(It will help if you can tell us what you searched for)</p>
     <textarea class="full-size" placeholder="Type here (please don't include any personal or financial information)"></textarea>
   </p>
-  <p class="group">
-    <label>If your message is about a specific page on this website please tell us which one</label>
-    <input type="text" class="url">
-  <p>
 </fieldset>
 
 <fieldset>
-  <legend>Your contact details (optional)</legend>
-  <p>If you'd like us to get back to you, please leave your details below</p>
+  <legend>How can we contact you?</legend>
+  <p>If you'd like us to get back to you, please leave your details below.</p>
   <p class="group">
     <label>Your name</label>
     <input type="text" class="full-name">
@@ -35,6 +76,7 @@ template: wide
   <p class="group">
     <label>Your email address</label>
     <input type="text" class="email">
+    <span class="help">We'll only use this to reply to your message</span>
   </p>
 </fieldset>
 
