@@ -21,10 +21,25 @@ header.page-header hgroup {
 }
 
 .contact-us,
-.top-issues{
+.top-issues,
+.page-contents{
   @include panel;
 }
 
 .contact-form{
   @include form(top, 7em ,$orange);
+}
+
+
+.report-a-problem-container div{
+  text-align: left; /* overwrite core style */
+}
+
+.report-a-problem-container{
+  @include form;
+  /*margin: 0;*/
+  p{
+    &:first-child{ margin-top: 0.5em};
+    &:last-child{ margin-bottom: 0};
+  }
 }
