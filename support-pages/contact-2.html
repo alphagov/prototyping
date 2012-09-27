@@ -13,26 +13,25 @@ template: wide
 
 <fieldset>
   <legend>Why are you contacting us?</legend>
-  <p class="option group">
-    <label><input type="radio" name="query-type"> I can't find what I'm looking for</label>
-    <label><input type="radio" name="query-type" checked> I want to report a problem</label>
-    <label><input type="radio" name="query-type"> I want to ask a question</label>
-    <label><input type="radio" name="query-type"> I want to make a suggestion</label>
+  <p class="option group" id="contact-why">
+    <label><input type="radio" name="query-type" id="cant-find"> I can't find what I'm looking for</label>
+    <label><input type="radio" name="query-type" id="report-problem" checked> I want to report a problem</label>
+    <label><input type="radio" name="query-type" id="ask-question"> I want to ask a question</label>
+    <label><input type="radio" name="query-type" id="make-suggestion"> I want to make a suggestion</label>
   </p>
 </fieldset>
 
-<fieldset class="location">  
-  <legend>Which part of GOV.UK do you want to tell us about?</legend>
-
+<fieldset id="location">  
+  <legend>What's it to do with?</legend>
   <p>
     <label>
       <input type="radio" name="location" checked> The whole site
     </label>
   </p>
   <p>
-    <label>
-      <input type="radio" name="location"> This section
-      <select>
+    <label id="section-label">
+      <input type="radio" name="location" id="section-radio"> A specific section
+      <select id="section-list">
         <option value="">Choose a section</option>
         <option value="">Business</option>
         <option value="">Crime and justice</option>
@@ -44,6 +43,7 @@ template: wide
         <option value="">Life in the UK</option>
         <option value="">Money and tax</option>
         <option value="">Neighbourhoods</option>
+        <option value="">Search</option>
         <option value="">Travel</option>
         <option value="">Work</option>
       </select>
@@ -51,7 +51,7 @@ template: wide
   </p>
   <p>
     <label>
-      <input type="radio" name="location" checked> This page
+      <input type="radio" name="location"> A specific page
         <input type="text" placeholder="Enter URL or name of page" value="http://govuk-prototyping.herokuapp.com/support-pages/employing-staff.html">
     </label>
   </p>
@@ -59,15 +59,60 @@ template: wide
 </fieldset>
 
 <fieldset>  
-  <legend>What do you want to tell us about?</legend>
+  <legend>Can you provide more detail?</legend>
   <div class="group">
-    <p class="help">It will help us fix any issues if you can tell us what you searched for</p>
+    <p class="help">For example if you were searching for something, what did you type into the search box?</p>
     <textarea class="full-size" placeholder="Type here (please don't include any personal or financial information)"></textarea>
     <p class="help">2000 characters remaining</p>
   </div>
+</fieldset>
+
+<fieldset id="contact-details">
+  <legend>Do you want a reply?</legend>
+  <p>If you'd like us to get back to you, please leave your details below.</p>
+  <p class="group">
+    <label>Your name</label>
+    <input type="text" class="full-name">
+  </p>
+  <p class="group">
+    <label>Your email address</label>
+    <input type="text" class="email">
+    <span class="help">We'll only use this to reply to your message</span>
+  </p>
 </fieldset>
 
 <p class="action group">
   <input type="submit" value="Send message" class="button">
 </p>
 </form>
+
+
+<script>
+  $(function() {
+
+    // -----------------------
+    // Minor form enhancements
+
+    // Initialise
+    $('#section-list option:selected').remove();
+    $('#section-list').attr('disabled', 'disabled')
+
+    // Enable / disable section list
+    $('#location input').change(function() {
+      if($('#section-radio').is(':checked')) { 
+        $('#section-list').removeAttr('disabled'); 
+      } else {
+        $('#section-list').attr('disabled', 'disabled') 
+      }
+    });
+
+    // Remove contact details fields if user selects 'report a problem'
+    $('#contact-why input').change(function() {
+      if($('#report-problem').is(':checked')) { 
+        $('#contact-details').hide(); 
+      } else {
+        $('#contact-details').show(); 
+      }
+    });
+  });
+</script>
