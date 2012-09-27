@@ -65,103 +65,111 @@ The following example incorporates most of the basic form elements. You can togg
 the effect it has.
 
 <div class="pattern-example">
-
-<pre><code class="class-toggle" data-for="form-example-2" >@include form(<span class="option selected">top</span>|<span class="option">left</span>|<span class="option">right</span>, 7.5em, $mellow-red)</code></pre>
+  <pre><code class="class-toggle" data-for="form-example-2" >@include form(<span class="option selected">top</span>|<span class="option">left</span>|<span class="option">right</span>, 7.5em, $green)</code></pre>
 
   <div class="inner">
-
-    <form id="form-example-2" class="top">
-      <fieldset>
-        <legend>Name</legend>
-        <p class="group">
-          <label>Title</label>
-          <select>
-            <option value="Mr">Mr.</option>
-            <option value="Mrs">Mrs.</option>
-            <option value="Miss">Miss</option>
-            <option value="Ms.">Ms.</option>
-            <option value="Dr.">Dr.</option>
-            <option value="Other">Other</option>
-          </select>
-        </p>
-        <p class="group">
-          <label>First name <abbr title="Mandatory">*</abbr></label>
-          <input type="text" class="name">
-        </p>
-        <p class="group">
-          <label>Last name <abbr title="Mandatory">*</abbr></label>
-          <input type="text" class="name">
-        </p>
-      </fieldset>
-      <fieldset>
-        <legend>Email address</legend>
-        <p class="group">
-          <label>Enter email <abbr title="Mandatory">*</abbr></label>
-          <input type="text" class="email">
-        </p>
-        <p class="group">
-          <label>Confirm email <abbr title="Mandatory">*</abbr></label>
-          <input type="text" class="email">
-        </p>
-      </fieldset>
-      <fieldset>
-        <legend>Telephone number</legend>
-        <p class="group">
-          <label>Telephone</label>
-          <input type="text" class="telephone">
-          <span class="help">Include your country code</span>
-        </p>
-      </fieldset>
-      <fieldset>
-        <legend>Postal address</legend>
-        <p class="group">
-          <label>Street</label>
-          <input type="text" class="street">
-        </p>
-        <p class="group">
-          <label class="visuallyhidden">Street line two</label>
-          <input type="text" class="street">
-        </p>
-        <p class="group">
-          <label>Town/City</label>
-          <input type="text" class="town">
-        </p>
-        <p class="group">
-          <label>Postcode</label>
-          <input type="text" class="postcode">
-        </p>
-      </fieldset>
-      <fieldset>
-        <legend>Biography</legend>
-        <p class="group">
-          <label for="biography">Write a few short words about yourself</label>
-          <textarea name="biography" class="big"></textarea>
-        </p>
-        <p class="option group">
-          <label><input type="checkbox"> Make this biography public</label>
-        </p>
-      </fieldset>
-      <fieldset>
-        <legend>I am interested in</legend>
-        <ul class="option group">
-          <li><label><input type="checkbox"> Job offers</label></li>
-          <li><label><input type="checkbox"> Networking</label></li>
-          <li><label><input type="checkbox"> Business opportunities</label></li>
+    <div id="form-example-2" class="top">
+      <div class="validation-summary">
+        <h1>Please check the form</h1>
+        <ul>
+          <li><a href="#error1">Confirm your email address</a></li>
+          <li><a href="#error2">Select at least one area of interest</a></li>
         </ul>
-      </fieldset>  
-      <fieldset>
-        <legend>I prefer to be contacted by</legend>
-        <ul class="option group">
-          <li><label><input type="radio" name="preferred-contact" checked> Email</label></li>
-          <li><label><input type="radio" name="preferred-contact"> Telephone</label></li>
-          <li><label><input type="radio" name="preferred-contact"> Post</label></li>
-        </ul>
-      </fieldset>
-      <p class="action group">
-        <button class="button" type="submit">Submit form</button>
-      </p>
-    </form>
-
+      </div>
+      <form>
+        <fieldset>
+          <legend>Name</legend>
+          <p class="group">
+            <label>Title</label>
+            <select>
+              <option value="Mr">Mr.</option>
+              <option value="Mrs">Mrs.</option>
+              <option value="Miss">Miss</option>
+              <option value="Ms.">Ms.</option>
+              <option value="Dr.">Dr.</option>
+              <option value="Other">Other</option>
+            </select>
+          </p>
+          <p class="group">
+            <label>First name <abbr title="Mandatory">*</abbr></label>
+            <input type="text" class="name">
+          </p>
+          <p class="group">
+            <label>Last name <abbr title="Mandatory">*</abbr></label>
+            <input type="text" class="name">
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Email address</legend>
+          <p class="group">
+            <label>Enter email <abbr title="Mandatory">*</abbr></label>
+            <input type="text" class="email">
+          </p>
+          <p class="group validation">
+            <span class="validation-message" id="error1">Confirm your email address</span>
+            <label>Confirm email <abbr title="Mandatory">*</abbr></label>
+            <input type="text" class="email">
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Telephone number</legend>
+          <p class="group">
+            <label>Telephone</label>
+            <input type="text" class="telephone">
+            <span class="help">Include your country code</span>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Postal address</legend>
+          <p class="group">
+            <label>Street</label>
+            <input type="text" class="street">
+          </p>
+          <p class="group">
+            <label class="visuallyhidden">Street line two</label>
+            <input type="text" class="street">
+          </p>
+          <p class="group">
+            <label>Town/City</label>
+            <input type="text" class="town">
+          </p>
+          <p class="group">
+            <label>Postcode</label>
+            <input type="text" class="postcode">
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Biography</legend>
+          <p class="group">
+            <label for="biography">Write a few short words about yourself</label>
+            <textarea name="biography" class="big"></textarea>
+          </p>
+          <p class="option group">
+            <label><input type="checkbox"> Make this biography public</label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>I am interested in</legend>
+          <p class="option group validation">
+            <span class="validation-message" id="error2">Select at least one area of interest</span>
+            <label><input type="checkbox"> Job offers</label>
+            <label><input type="checkbox"> Networking</label>
+            <label><input type="checkbox"> Business opportunities</label>
+          </p>
+        </fieldset>  
+        <fieldset>
+          <legend>I prefer to be contacted by</legend>
+          <ul class="option group">
+            <li><label><input type="radio" name="preferred-contact" checked> Email</label></li>
+            <li><label><input type="radio" name="preferred-contact"> Telephone</label></li>
+            <li><label><input type="radio" name="preferred-contact"> Post</label></li>
+          </ul>
+        </fieldset>
+        <p class="action group">
+          <button class="button" type="submit">Submit form</button>
+        </p>
+      </form>
+    </div>
   </div>
 </div>
 
@@ -183,11 +191,11 @@ The framework provides support for top, left or right alignment because there ar
 |-----------------------------------|--------------|-------------------|---------------|
 | Speed of completion               | Fastest      |                   | Slowest       |
 |-----------------------------------|--------------|-------------------|---------------|
-| Horizontal space                  | Least        |                   | Most          |
+| Horizontal space required         | Least        |                   | Most          |
 |-----------------------------------|--------------|-------------------|---------------|
-| Vertical space                    | Most         |                   | Least         |
+| Vertical space required           | Most         |                   | Least         |
 |-----------------------------------|--------------|-------------------|---------------|
-| Label text space                  | Most         |                   | Least         |
+| Label text space available        | Most         |                   | Least         |
 |-----------------------------------|--------------|-------------------|---------------|
 | Proximity to input                | Closest      |                   | Least close   |
 |-----------------------------------|--------------|-------------------|---------------|
@@ -195,7 +203,7 @@ The framework provides support for top, left or right alignment because there ar
 |-----------------------------------|--------------|-------------------|---------------|
 | Time to move from label to input  | 50ms         | 240ms             | 500ms         |
 |-----------------------------------|--------------|-------------------|---------------|
-| Ideal for                         | Simple forms | Less simple forms | Complex forms |
+| Ideal for...                      | Simple forms | Less simple forms | Complex forms |
 |-----------------------------------|--------------|-------------------|---------------|
 
 

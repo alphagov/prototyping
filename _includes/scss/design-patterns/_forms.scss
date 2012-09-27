@@ -40,16 +40,20 @@
   }
   /* Checkboxes and radio buttons */
   .option.group {
+    padding-bottom: 0.5em;
     label {
       width: auto;
       float: none;
       text-align: left;
+      margin: 0.25em 0;
     }
     li {
       list-style-type: none;
       list-style-image: none;
+      margin: 0;
     }
   }
+
   /* Help text */  
   .help {
     clear: left;
@@ -71,7 +75,44 @@
     padding-top: 1.5em;
   }
 
-
+  /* Validation summary */
+  .validation-summary{
+    color: $mellow-red;
+    border-left: 3px solid $mellow-red;
+    @include panel(lighten($mellow-red, 45%));
+    h1{
+      margin-bottom: 0;
+    }
+    a {
+      color: $mellow-red;
+      text-decoration: none;
+      @include core-14;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    ul{
+      padding-left: 2.1em;
+    }
+    ul,
+    li{
+      list-style-type: none;
+      list-style-image: none;
+    }
+  }
+  /* Inline validation messages */
+  .validation{
+    background-color: lighten($mellow-red, 45%);
+    border-left: 3px solid $mellow-red;
+    margin: 0 0 -0.5em -1em;
+    padding: 0.75em 0 1em 1em;
+    .validation-message{
+      color: $mellow-red;
+      @include core-14;
+      display: block;
+      padding-bottom: 0.5em;
+    }
+  }
 
   /* Default field widths */
 
@@ -131,9 +172,16 @@
       display: block;
       padding-left: $label-width - 1.25em; /* Align legend with fields (needs offset) */
     }
-    .option.group label{
-      padding-left: $label-width + 0.5em;
-      padding-top: 0;
+    .option.group {
+      label{
+        padding-left: $label-width + 0.5em;
+        padding-top: 0;
+      }
+      .validation-message{
+        width: $label-width;
+        display: block;
+        float: left;
+      }
     }
 
   /* Top-aligned labels */  
