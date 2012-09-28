@@ -1,0 +1,53 @@
+---
+---
+
+// ===================================================
+// WEBSITE TOOLKIT STYLES
+//
+
+@import "mixins.scss";
+
+@include details-and-summary;
+
+.get-started{
+  text-align: left;
+  /*@include panel($turquoise-25);*/
+}
+
+.get-started .button{
+  padding: 0;
+}
+
+.footnotes *{
+  font-size: 100%;
+}
+
+.meta-data {
+padding-left: 3em;
+}
+
+#get-started .destination{/*
+margin-top: -2.5em;
+margin-left: 13.5em;
+margin-bottom: 2em;
+min-width: 21em;*/
+min-width: 20em;
+font-size: 16px;
+-webkit-font-smoothing: antialiased;
+}
+
+hr{
+  background: #ebebeb;
+  height: 1px;
+  border: 0 solid;
+  margin: 1em 0;
+}
+
+article h3{
+  margin-top: 0;
+}
+
+details[open]{
+  @include panel;
+  margin-top: -0.75em;
+}
