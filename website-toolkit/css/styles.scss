@@ -76,9 +76,8 @@ code{
   padding: 0.3em 0.5em;
 }
 
-pre:first-child{
-  margin-top: 0;
-}
+pre:first-child { margin-top: 0; }
+pre:last-child { margin-bottom: 0; }
 
 /* Update text.scss with these */
 hr{
@@ -110,6 +109,11 @@ article dd{
 // ====================================================
 // DESIGN PATTERN PAGES
 //
+
+// Page contents
+.page-contents{
+  @include panel;
+}
 
 /* Progress indicator */
 @include progress-indicator;

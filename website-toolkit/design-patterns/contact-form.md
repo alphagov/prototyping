@@ -1,71 +1,18 @@
 ---
 layout: design-pattern
-title: Forms
+title: Form example - Contact form
 status: draft
 ---
 
-The 'form' mixin provides a configurable framework for most basic form layouts.
+This example incorporates most of the basic form elements and lets you play wth different label alignments.
+For a detailed breakdown of each element and how to markup and style it, see our [anatomy of a form](form-anatomy.html).
 
-Use it in your Sass like this: `.form-example-1 { @include form }`
+# Contact form example
 
-<div class="side-by-side">
-  <div>
-    <h1>Example 1</h1>
-<div class="pattern-example">
-  <div class="inner">
-    <form class="form-example-1">
-    <p class="group">
-      <label for="label1">Label one</label>
-      <input id="label1" type="text">
-    </p>
-    <p class="group">
-      <label for="label2">Label two</label>
-      <input id="label2" type="text">
-    </p>
-    <p class="group">
-      <label for="label3">Label three</label>
-      <input id="label3" type="text">
-    </p>
-    </form>
-  </div>
-</div> 
-  </div>
-  <div>
-  <h1>HTML</h1>
-<pre><code>
-&lt;form class="form-example-1"&gt;
-  &lt;p class="group"&gt;
-    &lt;label for="label1"&gt;Label 1&lt;/label&gt;
-    &lt;input id="label1" type="text"&gt;
-  &lt;/p&gt;
-  &lt;p class="group"&gt;
-    &lt;label for="label2"&gt;Label 2&lt;/label&gt;
-    &lt;input id="label2" type="text"&gt;
-  &lt;/p&gt;
-  &lt;p class="group"&gt;
-    &lt;label for="label3"&gt;Label 3&lt;/label&gt;
-    &lt;input id="label3" type="text"&gt;
-  &lt;/p&gt;
-&lt;/form&gt;
-
-</code></pre>
-  </div>
-</div>
-
-
-<h2>Arguments</h2>
-<p>The form mixin accepts the following arguments:</p>
-<p><code>$label-alignment</code> top, left or right. Default is top.</p>
-<p><code>$label-width</code> a value in em. Default is 8em.</p>
-<p><code>$legend-colour</code> a colour value or variable. Default is $charcoal-grey.</p>
-
-# Example 2: Contact form
-
-The following example incorporates most of the basic form elements. You can toggle through the different label alignment options to see
-the effect it has.
+Click the label alignment options in the Sass snippet below to see how they affect the layout.
 
 <div class="pattern-example">
-  <pre><code class="class-toggle" data-for="form-example-2" >@include form(<span class="option selected">top</span>|<span class="option">left</span>|<span class="option">right</span>, 7.5em, $green)</code></pre>
+  <pre><code class="class-toggle" data-for="form-example-2" >.form-example-2 { @include form(<span class="option selected">top</span>|<span class="option">left</span>|<span class="option">right</span>, 7.5em, $green) }</code></pre>
 
   <div class="inner">
     <div id="form-example-2" class="top">
@@ -279,50 +226,6 @@ The example above is marked up as follows:
         </p>
       </form>
     </div>
-  </div>
-
-* * *
-
-# Rationale
-
-## Text input fields
-
-* Light grey background: To make them stand out equally on a white page or coloured panel
-* Inset border style: By convention people type into 'holes' cut into the interface
-
-## Label positioning
-
-The framework provides support for top, left or right alignment because there are valid cases for the use of all three. The table below (from a [great article on form design](http://uxdesign.smashingmagazine.com/2011/11/08/extensive-guide-web-form-usability/) in Smashing Magazine) outlines the relative advantages of each approach:
-
-|-----------------------------------|--------------|-------------------|---------------|
-|                                   | Top          | Right             | Left          |
-|-----------------------------------|--------------|-------------------|---------------|
-| Speed of completion               | Fastest      |                   | Slowest       |
-|-----------------------------------|--------------|-------------------|---------------|
-| Horizontal space required         | Least        |                   | Most          |
-|-----------------------------------|--------------|-------------------|---------------|
-| Vertical space required           | Most         |                   | Least         |
-|-----------------------------------|--------------|-------------------|---------------|
-| Label text space available        | Most         |                   | Least         |
-|-----------------------------------|--------------|-------------------|---------------|
-| Proximity to input                | Closest      |                   | Least close   |
-|-----------------------------------|--------------|-------------------|---------------|
-| User eye movement                 | Down         | Down + right      | Down + right  |
-|-----------------------------------|--------------|-------------------|---------------|
-| Time to move from label to input  | 50ms         | 240ms             | 500ms         |
-|-----------------------------------|--------------|-------------------|---------------|
-| Ideal for...                      | Simple forms | Less simple forms | Complex forms |
-|-----------------------------------|--------------|-------------------|---------------|
-
-## Validation messages
-
-When a form is submitted, any validation messages are summarised at the top of the page.
-The messages link down to the part of the form they relate to.
-This helps users of assistive technology navigate around the form.
-
-The red bar connects the summary to the messages in the form and aids quick scanning of the form for errors.
-
-
 
 <script>
   $(function() {

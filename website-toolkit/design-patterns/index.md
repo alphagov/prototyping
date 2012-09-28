@@ -17,12 +17,15 @@ status: draft
 # Full list of patterns
 
 * [Contact details](contact-details.html)
-* [Forms](forms.html)
 * [Highlighted content](highlighted-content.html)
 * [Progress indicator](progress-indicator.html)
 * [Regular grid](regular-grid.html)
 * [Show/hide link](show-hide.html)
 
+## Forms
+
+* [Anatomy of a form](form-anatomy.html)
+* [Example: Contact form](contact-form.html)
 
 
 
