@@ -8,9 +8,9 @@ A mixin for creating a regular grid of elements. The mixin accepts an argument f
 
 # Dependencies
 
-Include the following in your SCSS to pull in styles for this pattern:
+The [regular grid mixin](https://github.com/alphagov/prototyping/blob/master/_includes/scss/design-patterns/_regular-grid.scss)
+is part of the 'mixins.scss' library. Use it like this:
 
-    @import "mixins.scss";
     @include regular-grid(N);
 
 Where 'N' is the number of columns the grid should have.

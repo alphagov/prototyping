@@ -51,6 +51,42 @@ The following highlight classes are available from any page. Use them sparingly.
   </div>
 </div>
 
+# Panel mixin
+
+If you need to roll your own panel styles there's a [panel mixin](https://github.com/alphagov/prototyping/blob/master/_includes/scss/design-patterns/_panels.scss) available as well.
+
+
+<div class="pattern-example">
+
+  <div class="side-by-side">
+  <div>
+    <h2>HTML</h2>
+<pre><code>&lt;div class="new-panel"&gt;
+  &lt;p&gt;Here's a new panel&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+  </div>
+  <div>
+    <h2>Sass</h2>
+<pre><code>.new-panel {
+  @include panel($grass-green-25) 
+}
+</code></pre>
+  </div>
+</div>
+
+  <div class="inner">
+
+    <div class="new-panel">
+      <p>Here's a new panel</p>
+    </div>
+
+  </div>
+
+</div>
+
+
+
 * * * 
 
 # Discussion

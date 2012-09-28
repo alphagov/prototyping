@@ -24,7 +24,7 @@ Examples, markup and styles for most basic form elements.
 
 # Styling forms
 
-The 'form' mixin provides a configurable framework for styling basic forms.
+The [forms mixin](https://github.com/alphagov/prototyping/blob/master/_includes/scss/design-patterns/_forms.scss) provides a configurable framework for styling basic forms.
 
 Use it in your Sass like this: `.form-example-1 { @include form }`
 

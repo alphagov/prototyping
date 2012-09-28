@@ -22,5 +22,8 @@
     &:nth-child(#{$columns}n){
       margin-right: 0;
     }
+    *:first-child{
+      margin-top: 0;
+    };
   }
 }

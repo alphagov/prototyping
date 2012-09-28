@@ -30,7 +30,7 @@ Is rendered on GOV.UK like this:
 
 # Dependencies
 
-Include the following in your SCSS to pull in styles for this pattern:
+Include the following in your SCSS to gain access to the [show/hide mixin](https://github.com/alphagov/prototyping/blob/master/_includes/scss/design-patterns/_show-hide.scss):
 
     @import "mixins.scss";
     @include details-and-summary;
