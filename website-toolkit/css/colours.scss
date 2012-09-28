@@ -114,6 +114,16 @@
 @include colour("light-beige", $light-beige);
 @include colour("light-tan", $light-tan);
 
+/* Pure greys */
+@include colour("black", $charcoal-grey);
+@include colour("grey-20", $grey-20);
+@include colour("grey-40", $grey-40);
+@include colour("grey-63", $grey-63);
+@include colour("grey-76", $grey-76);
+@include colour("grey-88", $grey-88);
+@include colour("grey-95", $grey-95);
+@include colour("white", $white);
+
 /* Department colours */
 @include colour("treasury", $treasury);
 @include colour("cabinet-office", $cabinet-office);
