@@ -1,0 +1,48 @@
+/* v3.3 */
+@media screen, projection {
+	html {filter:expression(document.execCommand("BackgroundImageCache", false, true));}
+	.iewrapper {width:expression(document.body.clientWidth < 762? "760px" : document.body.clientWidth > 1276? "1274px" : "auto");}
+	.minwidth .iewrapper {width:expression(document.body.clientWidth < 552? "550px" : document.body.clientWidth > 1276? "1274px" : "auto");}
+	#Section, #RHC .download h2, .onecolblock, .providedby, .warningm, .errorm, .innerwrapper, .wrapper, .twocolblock, #RHC .holder, #TopBar .holder, #Footer, #Footer ul, .formblock, .formwrap, .formcon, fieldset div, .submitc, .searchr .searchbox, .rhcpagehelp h2, .online h2, .rhcpagehelp ul li a, .online ul li a, .seealso ul li a, .formtext, .steptrack div, .steptrack ul, .steptrack ul li, .steptrack ul li strong, .steptrack ul li a, .calendar, .download ul li a {width:100%;}
+	.searchr form input, form .formblock div input {height:1.8em;}
+	.warningm p, .errorm p {height:20px;}
+	#Content .holder .completed h2 {height:20px;}
+	.steptrack ul li .topstep {width:100%;}
+	.steptrack ul li span {margin-left:5px;}
+	.steptrack ul li strong {display:inline;width:auto;}
+	/*Forms*/
+
+	form .formblock .vradio input, form .formblock .hradio input {margin-right:0;}
+	.formblock legend span {float:left;width:auto;}
+	.searchr .searchbox div {height:1%;}
+	#RHC .download .tl, #RHC .rhcpagehelp .tl, #RHC .online .tl, #LHC .key .tl {display:block;}
+	.function a:hover {text-decoration:underline;}
+	.images div a:hover {text-decoration:underline;}
+	form .formblock .pagehelp div {width:100%;}	
+	/*Rounded corners*/
+	.formwrap .tr, .function .tr {width:100%;background:none;left:2px;}
+	.formwrap .tr span {height:5px;width:5px;background:url('dg_css/images/formtr.gif') no-repeat;float:right;}
+	.formwrap .bl {position:fixed;float:left;margin-left:-1px;margin-top:-4px;margin-bottom:-12px;}
+	.formwrap .br {position:fixed;float:right;margin-right:-1px;margin-top:-4px;margin-bottom:-12px;}
+	.function .bl {position:absolute;bottom:-1em;float:none;margin:0;}
+	.function .br, .warningm .function .br {position:absolute;bottom:-1em;float:none;margin:0;right:-1px;}
+	.function .tr span {float:right;background:left top url('dg_css/images/buttontr.gif') no-repeat;width:2px;height:2px;}
+	#TopBar .holder .tr {background:none;width:100%;left:1px;}
+	#TopBar .holder .tr span {float:right;background:left top url('dg_css/images/masttr.gif') no-repeat;height:3px;width:3px;}
+	.framenav ul li a {width:100%;}
+	.note {height:50px;}	
+	.framenav h2 .tl {left:-10px;}
+	.framenav h2 .tr {right:-1px;}
+	/*SLC Complex table*/
+	.complex_form table {font-size:1em;}
+	.complex_form table {position:relative;}
+	.slimheader	#TopBar .holder {width:auto;}
+	/*Next Step map App*/
+	#ContentRight .holder {width:100%;}
+	
+	#stepsSimple li.step {width:95px;padding-left:10px;}	
+	#stepsSimple li.stepactive {color:#D83D0C;width:95px;padding-left:10px; }
+}
+@media print {
+	#Content {margin-right:50%;}
+}

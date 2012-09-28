@@ -1,0 +1,26 @@
+@media screen, projection {
+	/*Left nav*/	
+	.framenav {margin:0;padding-top:4em;}
+	body.slimheader .framenav {padding-top:4em;}
+	.framenav h2 .tr {background:left top url('images/orangetr.gif') no-repeat;height:3px;width:3px;}
+	.framenav h2 .tl {background:left top url('images/orangetl.gif') no-repeat;height:3px;width:3px;}
+	.framenav h2 {background:#ff5b00;border-bottom:1px #e0e0e0 solid;color:#fff;font-size:1.3em;font-weight:bold;margin-bottom:1px;padding:0.3em 12px 0.3em 10px;position:relative;}
+	
+	/*1st Level*/
+	.framenav ul {border-bottom:1px #e0e0e0 solid;}
+	.framenav ul li a {background:#f2f1ef 6px 0.7em url('images/orangeicon.gif') no-repeat;border-bottom:1px #fff solid;color:#000;display:block;font-size:1.2em;line-height:1.3em;padding:0.3em 12px 0.366em 16px;text-decoration:none;}
+	.framenav ul li a:hover,.framenav ul li a:focus,.framenav ul li a:active {text-decoration:underline;}
+	.framenav ul li .sublvl,.framenav ul li .activesub {background:#fff 6px 0.8em url('images/chevronsublvl.gif') no-repeat;border-bottom:1px solid #f2f1ef;padding-bottom:0.266em;padding-left:17px;}
+	.framenav ul li .active {background:#fff 6px 0.7em url('images/chevronactive.gif') no-repeat;border-bottom:1px solid #f2f1ef; font-weight:bold;}
+	.framenav ul li .last {border-bottom:none;}
+	
+	/*2nd Level*/
+	.framenav ul ul {border:none;margin-bottom:0;}
+	.framenav ul li ul li a{background-color:#fff;background-position:16px 0.7em;padding-left:26px;border-bottom:1px solid #f2f1ef;}
+	.framenav ul li ul li .active{background-position:16px 0.7em;font-weight:bold;}
+	.framenav ul li ul li .activesub{background-position:16px 0.8em;padding-left:26px;}
+
+	/*3rd level*/
+	.framenav ul li ul li ul li a{background-color:#fff;background-position:28px 0.7em;padding-left:38px;}
+	.framenav ul li ul li ul li .active{background-position:28px 0.7em;font-weight:bold;}
+}

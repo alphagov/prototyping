@@ -1,0 +1,51 @@
+@media screen, projection {
+	acronym {border-bottom:none;}	
+	dl {font-size:1.2em;margin:0 0 1.2em 15px;}
+	dl dt span {display:block;float:left;width:auto;margin-right:5px;}
+	dl dd span {display:block;margin-bottom:0.25em;}
+
+	.letter {list-style-position:inside;list-style:upper-alpha;padding-left:25px;}
+	.letter li {line-height:1.4em;}
+	.introc h2, .subcontent h2 {font-size:1.8em;margin-bottom:0.667em;}
+	.subcontent h3 {font-size:1.3em;margin-bottom:0.714em;}
+	.subcontent h4 {font-size:1em;margin-bottom:0.769em;}
+	.introc ul, .subcontent ul, {font-size: 1.2em;margin:0 0 1em 35px;list-style-position:inside;list-style:disc;padding-left:10px;} 
+	.bullet ul, .bullet li {font-size: 1.2em;margin:0 0 1em 55px;list-style-position:outside;list-style:disc;line-height:1.2em;}
+	.introc ul li, .subcontent ul li {font-size:1.2em;margin-bottom:0.4em;}
+	.introc ol, .subcontent ol {margin:0 0 1em 45px;}
+	.introc ol ol, .subcontent ol ol {list-style:lower-alpha;margin-bottom:0;padding-top:4px;}
+	.introc ol li ol li, .subcontent ol li ol li {font-size:1em;}
+	.introc ol li, .subcontent ol li {font-size:1.2em;line-height:1.3em;margin-bottom:6px;}
+	.sublinks li a:link, .sublinks li a {color:#ff5b00;padding-left:12px;background:left 0.4em url('images/bluechevron.gif') no-repeat;margin-left:3px;text-decoration:none;}	
+	.sublinks li a:visited {color:#bf4400;background:left 0.4em url('images/purplechevron.gif') no-repeat;}
+	.sublinks li a:hover {text-decoration:underline;background:left 0.4em url('images/bluechevron.gif') no-repeat;}
+	.introc .sublinks, .subcontent .sublinks {margin-left:0;margin-bottom:1.2em;padding-left:0;list-style:none; width:100%; overflow:hidden;}
+	.subcontent img {margin-bottom:1.2em;border:1px solid #e0e0e0;}
+	.subcontent .noborder {border:none;}
+	.images {overflow:hidden;width:100%;padding-top:0.5em;margin-bottom:0.5em;}
+	.images h2 {border-top:1px #333 solid;padding-top:0.278em;margin-bottom:1em}
+	.images div {width:200px;float:left;margin:0 17px 0 5px;padding-bottom:1.2em;}
+	.images.small div {width:75px;}
+	.images p {clear:left;}
+	.images div p {margin-bottom:0;}
+	.images div a {text-decoration:none;background:none;overflow:hidden;width:100%;color:#ff5b00;}
+	.images div a img {border:1px solid #e0e0e0;margin-bottom:0;}
+	.images div a span {text-decoration:none;font-size:1.2em;padding:0.5em 5px 0 14px;background:5px 0.8em url('images/bluechevron.gif') no-repeat;display:block;}
+	.images div a:hover span {text-decoration:underline;}
+	
+	/* BREADCRUMBS*/
+	
+	.breadcrumbs{font-size:1.2em;margin-left:10px;margin-top:-20px;margin-bottom:20px;}
+	.breadcrumbs a{color:#000;text-decoration:underline;background:none;padding-left:0px;}
+	.breadcrumbs a:hover{color:#0000FF;text-decoration:underline;background:none;padding-left:0px;}
+	
+	/* A-Z LISTS */
+	
+	.a-z{font-size: 1.2em;margin:0;list-style:none;line-height:1.5em;}
+	.bodyLinksList{font-size: 1.2em;margin:0;list-style:none;line-height:1.5em;}
+		
+	
+
+}
+
+	

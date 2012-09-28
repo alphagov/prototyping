@@ -1,0 +1,181 @@
+@media screen, projection {	
+	/*GENERIC*/
+	.formwrap .tl {background:url('images/formtl.gif') no-repeat;}
+	.formwrap .tr {background:url('images/formtr.gif') no-repeat;}
+	.formwrap .br {background:url('images/formbr.gif') no-repeat;}
+	.formwrap .bl {background:url('images/formbl.gif') no-repeat;}
+	.formwrap {padding:1px;background:#e0e0e0;position:relative;margin-bottom:1em;overflow:hidden;clear:both;}
+	.formwrap h2, .formwrap h3, .formwrap h4 {color:#333;font-size:1.3em;background:#f2f1ef;padding:0.385em 10px;}
+	.formwrap .formblock h4 {color:#333;font-size:1.3em;background:#fff;padding:0;}
+	.formwrap .formblock h3 {background:#fff;padding:0;}
+	.formcon {background:#fff;overflow:hidden;padding:0 10px;}
+	.hidden {display:none;background:#fff;overflow:hidden;padding:0 10px;}
+	.unhidden {display:block;background:#fff;overflow:hidden;padding:0 10px;}
+	form .formblock div a {color:#0000ff;padding-left:9px;background:left 0.3em url('images/bluechevron.gif') no-repeat;text-decoration:none;font-size:1.2em;width:auto;}
+	form .formblock div a:visited { color:#FF0000;}
+	form .formblock .hradio div {float:left;width:auto;margin-bottom:0;padding-bottom:1em;}
+	form .formblock .hradio input, form .formblock .vradio input {width:auto;border:none;position:relative;top:1px;float:left;}
+	form .formblock .hradio input label, form .formblock .vradio label {margin:0 0 0 20px; display:block; padding:1px 0 0;}
+	form .formblock .vradio div {overflow:hidden;}
+	form .formblock .vradio input, form .formblock .hradio input {margin-right:5px;}
+	form .formblock .selectset legend span {font-size:1.2em;}
+	form .formblock .selectset label span {float:left;width:auto;margin:0.25em 3px 0 0;}
+	form .formblock .selectset select {float:left;width:auto;margin-right:7px;}
+	form .formblock.contact label span {margin:0.333em 10px 0 0;float:right;width:auto;}
+	form .formblock.contact .odd {float:left;width:30%;text-align:right;margin:0;}
+	form .formblock.contact .even {text-align:left;margin:0;}
+	form .formblock.contact .dob {width:20px;}
+	
+	.submitc {border-bottom:1px #e0e0e0 solid;border-top:1px #e0e0e0 solid;overflow:hidden;padding:1em 0;margin-bottom:1.2em;}
+	
+	/*MESSAGES*/
+	.label {font-size:1em; }
+	.errorm p {padding:0.166em 0 0 25px;margin-bottom:0.666em;background:left top url('images/erroricon.gif') no-repeat;min-height:20px;color:#B60000;}
+	.formcon .errorm p {background:none;padding-left:0;}
+	.errorm li, .warningm li {margin-bottom:0.25em;}
+	.errorm li a, form .formblock .errorm a {color:#B60000;
+	
+	padding-left:10px;font-size:1.2em;background:0 0.333em url('images/errorchev.gif') no-repeat;text-decoration:none;}
+	#Content .errorm li a:hover, #Content form .formblock .errorm a:hover {color:#B60000;}
+	.warningm .function, .infom .function, .errorm .function {margin-top:1.2em;}
+	.warningm {padding:0.833em 10px 0.833em 10px;border:1px #D83D0C solid;margin-bottom:1.2em;overflow:hidden;}
+	.warningm p {padding:0.166em 0 0 25px;margin-bottom:0.666em;background:left top url('images/warningicon.gif') no-repeat;min-height:20px;color:#D83D0C;}
+	.formcon .warningm p {background:none;padding-left:0;}
+	.warningm li a, .formblock .warningm a {padding-left:10px;font-size:1.2em;color:#ff5b00;background:0 0.333em url('images/orangeicon.gif') no-repeat;text-decoration:none;}
+	.infom {padding:0.833em 10px 0.833em 10px;border:1px #ff5b00 solid;margin-bottom:1.2em;overflow:hidden;}
+	.infom p {
+	padding:0.166em 0 0 25px;
+	margin-bottom:0.666em;
+	background:left top url('images/information_icon.gif') no-repeat;
+	min-height:20px;
+	color:#D83D0C;
+}
+	.formcon .infom p {background:none;padding-left:0;}
+	.infom li a, .formblock .infom a {
+	padding-left:35px;
+	font-size:1.2em;
+	color:#D83D0C;
+	background:25px 0.333em url('images/orangeicon.gif') no-repeat;
+	text-decoration:none;
+}
+
+
+
+
+
+	.errorm a:hover, .warningm a:hover, form .formblock a:hover {text-decoration:underline;}
+	
+	/*HELP*/
+	form .formblock .pagehelp {clear:left;}
+	form .formblock.contact .pagehelp div, form .formblock.contact .pagehelp {float:none;width:auto;text-align:left;}
+	form .formblock .pagehelp div {margin:1em 0 0;padding:0.833em 10px;border:1px #e0e0e0 solid;background:#fff;}
+	form .formblock .pagehelp .show {position:relative;top:0;left:0;}
+	
+	.function {float:left;padding:1px;background:#666666;position:relative;margin-right:15px;}
+	.function a, .function button, .function input {text-align:center;font-size:1.2em;border:0;color:#fff;font-weight:bold;background:#666;padding:0.166em 8px 0.25em 8px;}
+	.function a {text-decoration:none;display:block;padding:0.3em 8px 0.35em 8px;height:auto;}
+	#Content .edit .function a:hover {color:#fff;}
+	#Content .function a:hover {color:#fff;text-decoration:none;}
+	.function button, .button input {width:auto;overflow:visible;cursor:pointer;}
+	.function .tr {background:url('images/greybuttontr.gif') no-repeat;height:2px;width:2px;}
+	.function .tl {background:url('images/greybuttontl.gif') no-repeat;height:2px;width:2px;}
+	.function .br {background:url('images/greybuttonbr.gif') no-repeat;height:2px;width:2px;}
+	.function .bl {background:url('images/greybuttonbl.gif') no-repeat;height:2px;width:2px;}
+	.submitc .right, .formcon .right {float:right;margin-right:0;margin-left:15px;}
+	.next, .link, .submit {background:#006600}
+	.previous a, .previous button, .previous input {background:#666 4px center url('images/arrowleft.gif') no-repeat;padding-left:22px;}
+	.next a, .next button, .next input {background:#006600 right center url('images/arrowright.gif') no-repeat;padding-right:22px;}
+	.link a, .link button, .link input {background:#006600 4px center;padding-left:22px;}
+	.submit a, .submit button, .submit input {background:#006600 right center;padding-right:22px;}
+	.cancel a, .cancel button, .cancel input {background:#666 4px center;padding-left:17px;}
+	.next .tr, .link .tr, .submit .tr {background:url('images/greybuttontr.gif') no-repeat;height:2px;width:2px;}
+	.next .tl, .link .tl, .submit .tl {background:url('images/greybuttontl.gif') no-repeat;height:2px;width:2px;}
+	.next .br, .link .br, .submit .br {background:url('images/greybuttonbr.gif') no-repeat;height:2px;width:2px;}
+	.next .bl, .link .bl, .submit .bl {background:url('images/greybuttonbl.gif') no-repeat;height:2px;width:2px;}
+	.functional a, .functional button, .functional input {text-align:center;font-size:1.2em;border:0;color:#000;font-weight:bold;background:#efefef;padding:0.166em 8px 0.25em 8px;text-decoration:none;}
+	
+	/*STEPS - SIMPLE*/
+	#progressSimple, #bar {background: url("images/progress.png") repeat scroll 0 0 transparent;height: 32px;margin: -20px 0 5px 10px;position: relative;width: 520px;}
+	#bar {background-position: 0 57px;margin:0;}
+	#bar #marker {background: url("images/markers.png") repeat scroll 0 0 transparent;height: 32px;position: absolute;right: -26px;top: 0;width: 26px;}
+	#bar #markerfinal {background: url("images/markers_final.png") repeat scroll 0 0 transparent;height:35px;position: absolute;right:16px;top: 0;width: 26px;}
+	#progressSimple .s1 {width: 19px;}
+	#progressSimple .s2 {width: 111px;}
+	#progressSimple .s3 {width: 203px;}
+	#progressSimple .s4 {width: 295px;}
+	#progressSimple .s5 {width: 386px;}
+	#progressSimple .s6 {width: 478px;}
+	#progressSimple .s2 #marker {background-position: -26px 0}
+	#progressSimple .s3 #marker {background-position: -52px 0;}
+	#progressSimple .s4 #marker {background-position: -78px 0;}
+	#progressSimple .s5 #marker {background-position: -104px 0;}
+	#progressSimple .s6 #marker {background-position: -130px 0;}
+	#progressSimple .sfinal #markerfinal {background-position: 0px 0;height:32px;}
+	
+	#stepsSimple { font-size:1.2em;width:800px;overflow:hidden;margin:0px;padding-bottom:20px;}
+	#stepsSimple li {list-style-type:none;float:left;}
+	#stepsSimple li.step {width:85px;padding-left:10px;}	
+	#stepsSimple li.stepactive {color:#006600;width:85px;padding-left:10px; }
+	
+	/*STEPS - COMPLEX*/
+	
+	#progressComplex {margin: -20px 0 5px 10px;}
+	#progressComplex p.stepsComplex {padding-left:0px; }
+	#taskInstructions {font-size:1.2em;width:800px;overflow:hidden;margin-top:10px;padding-bottom:10px;}
+	#taskInstructions li {list-style-type:none;float:left;}
+	#taskInstructions li.Time {background: url("images/clock_icon.gif") no-repeat;height:35px;padding-left:30px;display:block;width:250px;}
+	#taskInstructions li.OfflineLetter {background: url("images/letter_icon.gif") no-repeat;height:35px;padding-left:30px;display:block;width:250px;}
+	#taskInstructions li.OfflineEmail {background: url("images/email_icon.gif") no-repeat;height:35px;padding-left:35px;display:block;width:250px;}
+	#taskInstructions li.OfflineDownload {background: url("images/download_icon.gif") no-repeat;height:35px;padding-left:35px;display:block;width:250px;}
+	#taskInstructions li.OfflinePhone {background: url("images/phone_icon.gif") no-repeat;height:35px;padding-left:30px;display:block;width:250px;}
+	#taskInstructions li.OfflinePost {background: url("images/post_icon.gif") no-repeat;height:35px;padding-left:35px;display:block;width:250px;}
+	#taskInstructions li.OfflinePrint {background: url("images/printer_icon.gif") no-repeat;height:35px;padding-left:35px;display:block;width:250px;}
+	
+
+}
+@media screen, print {
+	form .formblock .chkbox label {margin:-15px 0 0 20px; display:block;}
+	form .formblock label span {font-size:1.2em;margin-right:12px;}
+	form .formblock div, .formblock div {overflow:hidden;margin-bottom:1em;}
+	form .formblock div.spacefix, .formblock div.spacefix { margin-bottom:0.5em;}	
+	form .formblock .pagehelp p strong {display:block;margin-bottom:0.833em;width:100%;}
+	form .formblock textarea {width:200px;height:100px;padding:2px;border:1px solid #7f9db9;}
+	form .formblock input {width:200px;border:1px #7f9db9 solid;padding:2px 1px 3px 2px;}
+	form .formblock .checkbox {width:auto;border:none;margin:1px 10px 0 0;padding:0;}
+	form .formblock fieldset {border:none;clear:left;overflow:hidden;}
+	form .formblock fieldset legend span {width:297px;display:block;white-space:normal;font-size:1.3em;color:#333;font-weight:bold;display:block;overflow:hidden;padding-bottom:1em;}
+	form .formblock .autowidth {width:auto;}
+	form .formblock .selectset .daymonth {width:4em;}
+	form .formblock .selectset .year {margin-right:0;}
+	.errorm {padding:0.833em 10px 0.833em 10px;border:1px #B60000 solid;margin-bottom:1.2em;overflow:hidden;}
+	form .formblock, .formblock {border-top:1px #f2f1ef solid;overflow:hidden;padding-top:1em;margin-bottom:0.5em;}
+	.formcon .first {border:none;margin-top:1em;padding-top:0;}
+	
+	#Content .function a:visited {color:#fff;}
+	form .formblock input:focus {border:1px solid #FF5B00; }
+	form .formblock textarea:focus {border:1px solid #FF5B00; }
+
+}
+@media print {
+	.formblock {width:100%;overflow:hidden;} 
+	.formtext p a {font-size:1em;color:#333;font-weight:normal;}
+	.formwrap h2, .formwrap h3, .formwrap h4 {font-size:1.3em;}
+	.errorm p, .errorm a {color:#B60000;font-weight:bold;}
+	.formtext {border-top:1px #e0e0e0 solid;border-bottom:1px #e0e0e0 solid;padding-top:10px;margin-bottom:10px;}
+	.formtext.first {border-top:none;padding-top:0;}
+	#Heading h1 {font-size:2em;color:#ff5b00;margin-bottom:15px;}
+	.searchr h2, .steps h2 {font-size:1.5em;margin-bottom:10px;padding:10px 0;border-top:1px #e0e0e0 solid;border-bottom:1px #e0e0e0 solid;}
+	.completed h2 {border-bottom:1px solid #ff5c01;border-top:1px solid #ff5c01;}
+	.seealso h2 {color:#fd5c01;font-size:1.2em;margin-bottom:5px;}
+	.formtext h3 {font-size:1.2em;margin-bottom:10px;}
+	.formcon dl {font-size:1.2em;}
+	.formcon dt {margin-bottom:3px;}
+	.formcon dd {font-weight:bold;margin-bottom:10px;}
+	.pagehelp .access {display:block;}
+	.pagehelp a {display:none;}
+	.pagehelp p {margin-bottom:0;}
+	form .formblock .hradio input, form .formblock .vradio input {width:auto;border:none;}
+	form .formblock fieldset legend .access {display:none;}
+	.errorm ul {list-style-type:none;}
+	.formblock fieldset {overflow:hidden;width:100%;margin-bottom:1.2em;display:block;}
+}

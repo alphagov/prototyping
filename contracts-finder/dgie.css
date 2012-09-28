@@ -1,0 +1,36 @@
+/* v3.3 */
+@media screen, projection {
+	#Banner img {margin-bottom:-2px;}
+	form .formblock.contact .even, #SiteMenu .odd {margin-right:-2px;}
+	#SiteMenu .audience li {margin-bottom:-0.166em;}
+	form .formblock .checkbox {margin-top:-3px;}
+	form .formblock fieldset legend {margin-left:-7px;}
+	form .formblock fieldset legend span {width:auto;}
+	form .formblock textarea {width:202px;}
+	form .formblock .chkbox label {margin:-17px 0 0 24px;}
+
+	#Content .formcon dd {margin-left:50%;float:none;width:auto;}
+	.searchr .searchbox .radio {margin-top:0;}
+	form .formblock .hradio input, form .formblock .vradio input {top:-1px;}
+	.steptrack ul li {margin-top:-2px;}
+	.steptrack ul li a {cursor:pointer;}
+	#LHC .key dl dd {float:none;}
+	/*Rounded corners*/
+	.function a {padding-top:0.266em; padding-bottom: 0.38em;}
+	.function {display:inline;}
+	.introc ul, .subcontent ul {list-style-position:outside;}
+	/*Complex table*/
+	.complex_form .formcon fieldset div {margin-top:0;}
+	.complex_form fieldset {background-position:right 1.8em;}
+	.complex_form .formcon label {position:relative;bottom:1px;padding-top:0.4em;}
+	.complex_form .formcon fieldset label {bottom:0;}
+	.slc-col2 div span, .slc-col3 div span {word-wrap:break-word;}
+	/*Header pixels*/
+	.wrapper {padding-top:9.989em;}
+	#TopBar p {margin-bottom:1.38em;}
+	/*Slim header*/
+	.slimheader	#TopBar .holder {height:3.6em;}
+	/*Map app*/
+	.gridright dl dd a {word-wrap:break-word;}
+	#Results li {position:relative;}
+}

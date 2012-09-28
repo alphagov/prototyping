@@ -1,0 +1,94 @@
+/* Framework/guidance pages */
+@media print {
+	.breadcrumbs  { display:none;}
+	li a { text-decoration:none; color: #000000;}
+
+}
+/* SEARCH RESULTS */
+
+@media print{
+	.searchr table {border-collapse:collapse;font-size:1.2em;width:100%;border-bottom:1px #e0e0e0 solid;}
+	.searchr table caption {font-size:1.3em;text-align:left;font-weight:bold;border-top:1px solid #e0e0e0;padding:0.5em 0 0.6em 8px;}
+	.searchr table .first {border-top:none;}
+	.searchr table th, .searchr table td {border-top:1px #e0e0e0 solid;color:#333;padding:0.334em 12px 0.2em 8px;text-align:left;font-weight:normal;}
+	.searchr table th.header {font-size:1.2em;font-weight:bold;padding-left:8px;border-top:none;}
+	.searchr table th .searchr table td {font-weight:bold;}
+	.searchr h3 {font-size:1.2em;padding:0.615em 5px 0;border-top:1px #e0e0e0 solid;margin-bottom:0.615em;}
+	.searchr dl {border-top:1px #e0e0e0 solid;margin-bottom:3em;}
+	.searchr dt {float:left;width:180px;margin-top:0.231em;clear:left;}
+	.searchr dd {padding:0.231em 0 0.308em 180px;border-bottom:1px #e0e0e0 solid;}
+	.searchr span.left {float:left;width:50%;}
+	.searchr span.right {display:block;margin-left:50%;}
+	.searchr dd .right a {margin-left:20px;}
+}
+
+/* Global */
+@media print {
+	* {margin:0;padding:0;}
+	body {font-family:Verdana, Arial, Helvetica, sans-serif;color:#333;width:100%;font-size:62.5%;}
+	p {font-size:1.2em;margin-bottom:10px;}
+	a {font-size:1.2em;color:#ff5b00;font-weight:bold;}
+	abbr, acronym {border-bottom:none;font-size:1.2em;}
+	.submitc, .ignore, .pagelist, .steps p, .searchbox, .access, #Footer, #RHC, #SecondNav, #LHC, #TextSize, #TopBar {display:none;}
+	.printlogo {padding-bottom:10px;border-bottom:1px #e0e0e0 solid;margin-bottom:10px;}
+	.printlogo p {margin-top:-5px;}
+	.pfooter {margin-top:80px;padding-top:10px;border-top:1px #e0e0e0 solid;}
+	.pfooter .clear {clear:right;display:block;}
+}
+
+
+/* forms */
+
+@media screen, print {
+	form .formblock .chkbox label {margin:-15px 0 0 20px; display:block;}
+	form .formblock label span {font-size:1.2em;margin-right:12px;}
+	form .formblock div, .formblock div {overflow:hidden;margin-bottom:1em;}
+	form .formblock div.spacefix, .formblock div.spacefix { margin-bottom:0.5em;}	
+	form .formblock .pagehelp p strong {display:block;margin-bottom:0.833em;width:100%;}
+	form .formblock textarea {width:200px;height:100px;padding:2px;border:1px solid #7f9db9;}
+	form .formblock input {width:200px;border:1px #7f9db9 solid;padding:2px 1px 3px 2px;}
+	form .formblock .checkbox {width:auto;border:none;margin:1px 10px 0 0;padding:0;}
+	form .formblock fieldset {border:none;clear:left;overflow:hidden;}
+	form .formblock fieldset legend span {width:297px;display:block;white-space:normal;font-size:1.3em;color:#333;font-weight:bold;display:block;overflow:hidden;padding-bottom:1em;}
+	form .formblock .autowidth {width:auto;}
+	form .formblock .selectset .daymonth {width:4em;}
+	form .formblock .selectset .year {margin-right:0;}
+	.errorm {padding:0.833em 10px 0.833em 10px;border:1px #B60000 solid;margin-bottom:1.2em;overflow:hidden;}
+	.warningm {padding:0.833em 10px 0.833em 10px;border:1px #D83D0C solid;margin-bottom:1.2em;overflow:hidden;}
+	form .formblock, .formblock {border-top:1px #f2f1ef solid;overflow:hidden;padding-top:1em;margin-bottom:0.5em;}
+	.formcon .first {border:none;margin-top:1em;padding-top:0;}
+	
+	#Content .function a:visited {color:#fff;}
+
+}
+@media print {
+	.formblock {width:100%;overflow:hidden;} 
+	.formtext p a {font-size:1em;color:#333;font-weight:normal;}
+	.formwrap h2, .formwrap h3, .formwrap h4 {font-size:1.3em;}
+	.errorm p, .errorm a {color:#B60000;font-weight:bold;}
+	.formtext {border-top:1px #e0e0e0 solid;border-bottom:1px #e0e0e0 solid;padding-top:10px;margin-bottom:10px;}
+	.formtext.first {border-top:none;padding-top:0;}
+	#Heading h1 {font-size:2em;color:#ff5b00;margin-bottom:15px;}
+	.searchr h2, .steps h2 {font-size:1.5em;margin-bottom:10px;padding:10px 0;border-top:1px #e0e0e0 solid;border-bottom:1px #e0e0e0 solid;}
+	.completed h2 {border-bottom:1px solid #ff5c01;border-top:1px solid #ff5c01;}
+	.seealso h2 {color:#fd5c01;font-size:1.2em;margin-bottom:5px;}
+	.formtext h3 {font-size:1.2em;margin-bottom:10px;}
+	.formcon dl {font-size:1.2em;}
+	.formcon dt {margin-bottom:3px;}
+	.formcon dd {font-weight:bold;margin-bottom:10px;}
+	.pagehelp .access {display:block;}
+	.pagehelp a {display:none;}
+	.pagehelp p {margin-bottom:0;}
+	form .formblock .hradio input, form .formblock .vradio input {width:auto;border:none;}
+	form .formblock fieldset legend .access {display:none;}
+	.errorm ul {list-style-type:none;}
+	.formblock fieldset {overflow:hidden;width:100%;margin-bottom:1.2em;display:block;}
+
+}
+
+
+
+/* IE6 
+@media print {
+	#Content {margin-right:50%;}
+}*/

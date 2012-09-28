@@ -1,0 +1,25 @@
+@media screen, projection {
+	.bnp {margin:0;}
+	.wrapper {margin-right:3px;min-width:760px;max-width:1210px;position:relative;padding-top:9.9em;}
+	.minwidth .wrapper {min-width:560px;margin-right:3px;}
+	.printlogo, .pfooter {display:none;}
+	.innerwrapper {overflow:hidden;}
+	#Masthead {margin:0 5px 1.2em 0;overflow:hidden;}
+	.twocolfloat {margin-left:-209px;width:100%;float:right;}
+	.onecolfloat {width:100%;float:right;}
+	.twocolblock {margin-left:209px;overflow:hidden;}
+	.onecolblock {margin-left:9px;overflow:hidden;}
+	#LHC {float:left;width:209px;clear:left;}
+	#LHC .holder {overflow:hidden;margin:0 0 2em 9px;border-top:1px #e0e0e0 solid;padding-top:4em;}
+	#Content {float:left;margin-left:-205px;width:100%;}
+	#Content .holder {margin-left:205px;overflow:hidden;padding:0 10px;}
+	#ContentRight {margin-left:0;float:none;}
+	#ContentRight .holder {margin-left:0;padding:0 5px 0 10px;overflow:hidden;}
+	#RHC {float:right;width:205px;}
+	#RHC .holder {margin-right:5px;}
+	.onecolfloat #Content, .onecolfloat #Content .holder {margin-left:0;}
+	.onecolfloat #Content .holder {padding-top:1px;}
+	#Footer {overflow:hidden;}
+	#Loading {margin-top:30px; }
+	#Loading p {text-align:center; }
+}
