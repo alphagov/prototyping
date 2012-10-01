@@ -11,7 +11,7 @@
       <section id="content" role="main" class="group">
         <header class="page-header group">
           <hgroup>
-            <h1><span>{{ page.categories }}</span> {{ page.title }}</h1>
+            <h1><span>{{ page.categories }}</span> {{ page.title }} {% if page.fromdept  %}{% include _from-dept.html %}{% endif %}</h1>
           </hgroup>
         </header>
         <div class="{% if page.template == 'wide' %}{% else %}article-container{% endif %} group">
