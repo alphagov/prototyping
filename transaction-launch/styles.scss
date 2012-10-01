@@ -2,12 +2,12 @@
 ---
 
 // ===================================================
-// WEBSITE TOOLKIT STYLES
+// GET STARTED PAGE STYLES
 //
 
 @import "mixins.scss";
 
-@include details-and-summary;
+@include details-and-summary(highlighted);
 
 .get-started{
   text-align: left;
@@ -40,9 +40,4 @@ hr{
 
 article h3{
   margin-top: 0;
-}
-
-details[open]{
-  @include panel;
-  margin-top: -0.75em;
 }
