@@ -22,20 +22,15 @@
         color: #BBB ;
       }
   }
+  /* Labels */
+  label{
+    color: $charcoal-grey;
+  }
   /* Select boxes */
   select {
     padding: 0.3em 0 0.1em 0.4em;
     font-size: 17px;
     line-height: 1.2;
-  }
-  /* Legends and fieldsets */
-  legend {
-    @include core-24;
-    margin-bottom: 0.5em;
-    color: $legend-colour;
-  }
-  fieldset {
-    margin-top: 2em;
   }
   /* Checkboxes and radio buttons */
   .option.group {
@@ -72,6 +67,36 @@
   .action.group {
     /*border-top: 1px solid $light-blue-grey;*/
     padding-top: 1.5em;
+  }
+
+  /* Inline form controls */
+  .inline .group{
+    float: left;
+    /*margin-right: 0.5em;*/
+    margin-top: 0;
+  }
+
+  /* Legends and fieldsets */
+  legend {
+    @include core-24;
+    margin-bottom: 0.5em;
+    color: $legend-colour;
+  }
+  fieldset {
+    margin: 0;
+    margin-top: 2em;
+    /* Legends in nested fieldsets look like labels */
+    fieldset {
+      margin-top: 0;
+      legend {
+        @include core-19;
+        color: $charcoal-grey;
+      }
+      /* Re-align controls */
+      .inline .group{
+        margin-top: -0.75em;
+      }
+    }
   }
 
   /* Validation summary */
@@ -134,6 +159,10 @@
                     height: $medium;}
   textarea.full-size{width: $full-width; height: $large;}
 
+
+
+
+
   // LABEL POSITIONING
 
   /* Left or right aligned labels */
@@ -165,12 +194,31 @@
     }
     select{
       margin-top: 0.5em; /* re-align with horizontal labels (because select boxes aren't as tall as text fields) */
-      margin-left: 0.65em; /* extra margin as select boxes bleed over the left edge slightly */
+      /*margin-left: 0.65em;  extra margin as select boxes bleed over the left edge slightly */
     }
-    legend{
-      display: block;
-      padding-left: $label-width - 1.25em; /* Align legend with fields (needs offset) */
+
+    fieldset{
+      legend{
+        display: block;
+        padding-left: $label-width - 1.25em; /* Align legend with fields (needs offset) */    
+      }
+      /* Nested fieldsets */
+      fieldset{
+        legend {
+          padding-left: 0;
+          /* Left/right aligned nested fieldset legends need a span inside them */
+          span{
+            width: $label-width;
+            text-align: #{$label-alignment};
+            position: relative;
+            float: left;
+          }
+        }
+      }
     }
+
+
+
     .option.group {
       label{
         padding-left: $label-width + 0.5em;
@@ -183,10 +231,34 @@
       }
     }
 
+    /* Inline form controls */
+    .inline{
+      padding-left: $label-width + 1.5em;
+      label{
+        width: auto;
+        float: none;
+        margin-left: 0.5em;
+        /* Reset left margins assigned above */
+        &.visuallyhidden {
+          + input,
+          + select,
+          + textarea {
+            margin-left: 0.5em;
+          }
+        }
+      }
+    }
+
   /* Top-aligned labels */  
   } @else { 
     label{ display:block; }
     input{ margin-left: 0; }
+    .inline{    
+      input[type=text],
+      select,
+      textarea{
+        margin-right: 0.5em;
+      }
+    }
   }
-
 }

@@ -14,7 +14,7 @@
 // your page if you want accessible, cross-browser support
 // for this pattern. 
 
-@mixin details-and-summary {
+@mixin details-and-summary($background-colour: "") {
   details{
     display: block;
     margin:  0 -1em 1em -1em;
@@ -26,13 +26,26 @@
       display: block;
       text-decoration: underline;
       margin-bottom: 0.5em;
+      margin-top: 0.15em;
       &:hover{ color: #1D97FF; }
       &:focus{ outline: none; }
     }
     &[open]{
-      margin-top: -0.7em;
       padding: 0.7em 1em 1em 1em;
+      @if ($background-colour != ""){
+        @if ($background-colour == "highlighted"){
+          // Default panel colour
+          @include panel($grey-95);
+        } @else {
+          // Custom panel colour
+          @include panel($background-colour);
+        }
+      }
+      margin-top: -0.7em;
     }
+
+
+
   }
   /* Styles for browsers that don't yet natively support details/summary */
   .no-details details > * { display: none; }
