@@ -11,8 +11,10 @@ Examples, markup and styles for most basic form elements.
   <ul>
     <li><a href="#styling-forms">Styling forms</a></li>
     <li><a href="#basic-structure">Basic structure</a></li>
-    <li><a href="#fieldsets-and-legends">Fieldsets and legends</a></li>
     <li><a href="#radio-buttons-and-checkboxes">Radio buttons and checkboxes</a></li>
+    <li><a href="#aligning-controls-in-a-row">Aligning controls in a row</a></li>
+    <li><a href="#fieldsets-and-legends">Fieldsets and legends</a></li>
+    <li><a href="#nested-fieldsets">Nested fieldsets</a></li>
     <li><a href="#help-text">Help text</a></li>
     <li><a href="#hidden-labels">Hidden labels</a></li>
     <li><a href="#buttons">Buttons</a></li>
@@ -36,7 +38,11 @@ The mixin accepts the following arguments:
 
 `$legend-colour` a colour value or variable. Default is $charcoal-grey.
 
-To see these in action, check out the [contact form example](contact-form.html)
+To see these in action, check out the [registration form example](registration-form.html)
+
+<div class="application-notice info-notice">
+<p>Note - the forms CSS is pretty large. You don't really want to be including it more than once in the same file.</p>
+</div>
 
 
 # Basic structure
@@ -60,6 +66,69 @@ Wrap each control in an element with a class of 'group'.
   &lt;/p&gt;
 </code></pre>
 </div> 
+
+# Radio buttons and checkboxes
+
+Wrap the radio or checkbox in its label and wrap the whole thing in an 'option group' element.
+
+<div class="pattern-example">
+  <div class="inner">
+    <div class="form-example-1">
+
+      <p class="option group">
+        <label><input type="checkbox"> Job offers</label>
+        <label><input type="checkbox"> Networking</label>
+        <label><input type="checkbox"> Business opportunities</label>
+      </p>
+
+    </div>
+  </div>
+  <pre><code>      &lt;p class="option group"&gt;
+        &lt;label&gt;&lt;input type="checkbox"&gt; Job offers&lt;/label&gt;
+        &lt;label&gt;&lt;input type="checkbox"&gt; Networking&lt;/label&gt;
+        &lt;label&gt;&lt;input type="checkbox"&gt; Business opportunities&lt;/label&gt;
+      &lt;/p&gt;
+</code></pre>
+
+<p>or use a list&hellip;</p>
+
+<pre><code>      &lt;ul class="option group"&gt;
+        &lt;li&gt;&lt;label&gt;&lt;input type="checkbox"&gt; Job offers&lt;/label&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;label&gt;&lt;input type="checkbox"&gt; Networking&lt;/label&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;label&gt;&lt;input type="checkbox"&gt; Business opportunities&lt;/label&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+</code></pre>
+</div> 
+
+# Aligning controls in a row
+
+You might occasionally need to arrange form controls in a row. To do this, wrap the controls in an
+'inline group' element. For example:
+
+<div class="pattern-example">
+  <div class="inner">
+    <div class="form-example-1">
+
+        <fieldset>
+          <legend><span>Gender</span></legend>
+          <p class="inline option group">
+            <label><input type="radio" name="gender"> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+          </p>
+        </fieldset>
+
+    </div>
+  </div>
+<pre><code>    &lt;fieldset&gt;
+      &lt;legend&gt;&lt;span&gt;Gender&lt;/span&gt;&lt;/legend&gt;
+      &lt;p class="inline option group"&gt;
+        &lt;label&gt;&lt;input type="radio" name="gender"&gt; Male&lt;/label&gt;
+        &lt;label&gt;&lt;input type="radio" name="gender"&gt; Female&lt;/label&gt;
+      &lt;/p&gt;
+    &lt;/fieldset&gt;
+</code></pre>
+</div>
+
 
 
 # Fieldsets and legends
@@ -100,39 +169,97 @@ Use these to break up forms into logical sections
 </code></pre>
 </div>
 
+# Nested fieldsets
 
-# Radio buttons and checkboxes
+There are times when you might want to treat a set of form controls like they were a single, compound control 
+(a date-of-birth selector for example). One way to do this is with a nested fieldset. On GOV.UK, when you
+nest a fieldset inside another, the legend is styled like a label.
 
-Wrap the radio or checkbox in its label and wrap the whole thing in an 'option group' element.
+<div class="application-notice info-notice">
+<p>Note - if you're planning on doing this with left or right aligned form labels you'll need to wrap your
+legend text in a span. Blame inconsistent and generally poor support for legend positioning in browsers.</p>
+</div>
+
+Here's an example:
 
 <div class="pattern-example">
   <div class="inner">
-    <div class="form-example-1">
 
-      <p class="option group">
-        <label><input type="checkbox"> Job offers</label>
-        <label><input type="checkbox"> Networking</label>
-        <label><input type="checkbox"> Business opportunities</label>
-      </p>
+    <div id="form-example-2" class="left">
+
+      <fieldset>
+        <legend>Your details</legend>
+        <p class="group">
+          <label for="full-name">Full name</label>
+          <input id="full-name" type="text" class="full-name">
+        </p>
+        <fieldset>
+          <legend><span>Date of birth</span></legend>
+          <div class="inline group">
+            <p class="group">
+              <label for="day" class="visuallyhidden">Day</label>
+              <select id="day" type="text">
+                <option value="Day">Day</option>
+                <!-- Other options go here -->
+              </select>
+            </p>
+            <p class="group">
+              <label for="month" class="visuallyhidden">Month</label>
+              <select id="month" type="text">
+                <option value="Month">Month</option>
+                <!-- Other options go here -->
+              </select>
+            </p>
+            <p class="group">
+              <label for="year" class="visuallyhidden">Year</label>
+              <select id="year" type="text">
+                <option value="Year">Year</option>
+                <!-- Other options go here -->
+              </select>
+            </p>
+          </div>
+        </fieldset>
+      </fieldset>
 
     </div>
+
   </div>
-  <pre><code>      &lt;p class="option group"&gt;
-        &lt;label&gt;&lt;input type="checkbox"&gt; Job offers&lt;/label&gt;
-        &lt;label&gt;&lt;input type="checkbox"&gt; Networking&lt;/label&gt;
-        &lt;label&gt;&lt;input type="checkbox"&gt; Business opportunities&lt;/label&gt;
-      &lt;/p&gt;
+  <pre><code>  &lt;fieldset&gt;
+    &lt;legend&gt;Your details&lt;/legend&gt;
+    &lt;p class="group"&gt;
+      &lt;label for="full-name"&gt;Full name&lt;/label&gt;
+      &lt;input id="full-name" type="text" class="full-name"&gt;
+    &lt;/p&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;&lt;span&gt;Date of birth&lt;/span&gt;&lt;/legend&gt;
+      &lt;div class="inline group"&gt;
+        &lt;p class="group"&gt;
+          &lt;label for="day" class="visuallyhidden"&gt;Day&lt;/label&gt;
+          &lt;select id="day" type="text"&gt;
+            &lt;option value="Day"&gt;Day&lt;/option&gt;
+            &lt;!-- Other options go here --&gt;
+          &lt;/select&gt;
+        &lt;/p&gt;
+        &lt;p class="group"&gt;
+          &lt;label for="month" class="visuallyhidden"&gt;Month&lt;/label&gt;
+          &lt;select id="month" type="text"&gt;
+            &lt;option value="Month"&gt;Month&lt;/option&gt;
+            &lt;!-- Other options go here --&gt;
+          &lt;/select&gt;
+        &lt;/p&gt;
+        &lt;p class="group"&gt;
+          &lt;label for="year" class="visuallyhidden"&gt;Year&lt;/label&gt;
+          &lt;select id="year" type="text"&gt;
+            &lt;option value="Year"&gt;Year&lt;/option&gt;
+            &lt;!-- Other options go here --&gt;
+          &lt;/select&gt;
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/fieldset&gt;
+  &lt;/fieldset&gt;
 </code></pre>
+</div>
 
-<p>or use a list&hellip;</p>
-
-<pre><code>      &lt;ul class="option group"&gt;
-        &lt;li&gt;&lt;label&gt;&lt;input type="checkbox"&gt; Job offers&lt;/label&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;label&gt;&lt;input type="checkbox"&gt; Networking&lt;/label&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;label&gt;&lt;input type="checkbox"&gt; Business opportunities&lt;/label&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-</code></pre>
-</div> 
 
 
 # Help text
@@ -257,7 +384,7 @@ Summarise any validation errors at the top of your page like this:
 </div> 
 
 
-Each link should jump the user down to the corresponding form control. Add a 'validation' class to the control and insert a 'validation-message' element.
+Each link should jump the user down to the corresponding form control. Add a 'validation' class to the control group and insert a 'validation-message' element.
 
 <div class="pattern-example">
   <div class="inner">

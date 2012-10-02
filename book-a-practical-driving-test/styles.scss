@@ -1,0 +1,12 @@
+---
+---
+
+@import "mixins.scss";
+
+header.page-header hgroup {
+  margin-right: 0 /* Extend page header out to end of search button */
+}
+
+
+@include from-dept;
+@include progress-indicator($purple, $green, $white);

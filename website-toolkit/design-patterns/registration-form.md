@@ -1,6 +1,6 @@
 ---
 layout: design-pattern
-title: Form example - Contact form
+title: Form example - Registration
 status: draft
 ---
 
@@ -25,7 +25,7 @@ Click the label alignment options in the Sass snippet below to see how they affe
       </div>
       <form>
         <fieldset>
-          <legend>Name</legend>
+          <legend>Your details</legend>
           <p class="group">
             <label for="title">Title</label>
             <select id="title">
@@ -45,7 +45,93 @@ Click the label alignment options in the Sass snippet below to see how they affe
             <label for="last-name">Last name <abbr title="Mandatory">*</abbr></label>
             <input id="last-name" type="text" class="name">
           </p>
+
+          <fieldset>
+            <legend><span>Date of birth</span></legend>
+            <div class="inline group">
+              <p class="group">
+                <label for="day" class="visuallyhidden">Day</label>
+                <select id="day" type="text">
+                  <option value="Day">Day</option>
+                  <!-- Other options go here -->
+                </select>
+              </p>
+              <p class="group">
+                <label for="month" class="visuallyhidden">Month</label>
+                <select id="month" type="text">
+                  <option value="Month">Month</option>
+                  <!-- Other options go here -->
+                </select>
+              </p>
+              <p class="group">
+                <label for="year" class="visuallyhidden">Year</label>
+                <select id="year" type="text">
+                  <option value="Year">Year</option>
+                  <!-- Other options go here -->
+                </select>
+              </p>
+            </div>
+          </fieldset>
+
+
+        <fieldset>
+          <legend><span>Gender</span></legend>
+          <p class="inline option group">
+            <label><input type="radio" name="gender"> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+          </p>
         </fieldset>
+
+        </fieldset>
+
+        <!--
+        <fieldset>
+          <legend>Date of birth</legend>
+          <div class="inline">
+            <p class="group">
+              <label for="day" class="visuallyhidden">Day</label>
+              <select id="day" type="text">
+                <option value="01">01</option>
+              </select>
+            </p>
+            <p class="group">
+              <label for="month" class="visuallyhidden">Month</label>
+              <select id="month" type="text">
+                <option value="Jan">January</option>
+              </select>
+            </p>
+            <p class="group">
+              <label for="year" class="visuallyhidden">Year</label>
+              <select id="year" type="text">
+                <option value="2000">2000</option>
+              </select>
+            </p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Date of birth</legend>
+          <div class="inline">
+            <p class="group">
+              <label for="day">Day</label>
+              <select id="day" type="text">
+                <option value="01">01</option>
+              </select>
+            </p>
+            <p class="group">
+              <label for="month">Month</label>
+              <select id="month" type="text">
+                <option value="Jan">January</option>
+              </select>
+            </p>
+            <p class="group">
+              <label for="year">Year</label>
+              <select id="year" type="text">
+                <option value="2000">2000</option>
+              </select>
+            </p>
+          </div>
+        </fieldset>
+      -->
         <fieldset>
           <legend>Email address</legend>
           <p class="group">
@@ -154,6 +240,33 @@ The example above is marked up as follows:
             <label for="last-name">Last name <abbr title="Mandatory">*</abbr></label>
             <input id="last-name" type="text" class="name">
           </p>
+
+          <fieldset>
+            <legend><span>Date of birth</span></legend>
+            <div class="inline group">
+              <p class="group">
+                <label for="day" class="visuallyhidden">Day</label>
+                <select id="day" type="text">
+                  <option value="Day">Day</option>
+                  <!-- Other options go here -->
+                </select>
+              </p>
+              <p class="group">
+                <label for="month" class="visuallyhidden">Month</label>
+                <select id="month" type="text">
+                  <option value="Month">Month</option>
+                  <!-- Other options go here -->
+                </select>
+              </p>
+              <p class="group">
+                <label for="year" class="visuallyhidden">Year</label>
+                <select id="year" type="text">
+                  <option value="Year">Year</option>
+                  <!-- Other options go here -->
+                </select>
+              </p>
+            </div>
+          </fieldset>
         </fieldset>
         <fieldset>
           <legend>Email address</legend>

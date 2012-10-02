@@ -30,10 +30,33 @@ Is rendered on GOV.UK like this:
 
 # Dependencies
 
-Include the following in your SCSS to gain access to the [show/hide mixin](https://github.com/alphagov/prototyping/blob/master/_includes/scss/design-patterns/_show-hide.scss):
+Include the following in your SCSS to activate the [show/hide mixin](https://github.com/alphagov/prototyping/blob/master/_includes/scss/design-patterns/_show-hide.scss):
 
     @import "mixins.scss";
     @include details-and-summary;
+
+The optional argument; `highlighted`, creates a highlight effect on the open state 
+(you can also pass a colour variable or value if you don't want the default grey background).
+
+So, for example:
+
+    @include details-and-summary(highlighted);
+
+gives you:
+
+<div class="pattern-example show-hide-version-2">
+  <div class="inner">
+
+    <details>
+      <summary>What happens if I click on this summary tag?</summary>
+      <p>The remaining contents of the details tag are revealed inside a highlighted panel</p>
+    </details>
+
+  </div>
+</div>
+
+
+# Cross browser support
 
 Cross browser support for these tags is [patchy right now](http://caniuse.com/details). However, there's a [JQuery plugin](https://github.com/mathiasbynens/jquery-details) to bridge the gap,
  which has the added bonus of adding appropriate ARIA roles to the elements. You'll need to add the following to
