@@ -40,6 +40,10 @@ The mixin accepts the following arguments:
 
 To see these in action, check out the [registration form example](registration-form.html)
 
+<div class="application-notice info-notice">
+<p>Note - the forms CSS is pretty large. You don't really want to be including it more than once in the same file.</p>
+</div>
+
 
 # Basic structure
 
