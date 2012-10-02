@@ -22,26 +22,50 @@
 <script type="text/javascript" src="dg_scripts/dg.popup.js"></script>
 <script type="text/javascript" src="dg_scripts/dg.js"></script>
 <style>
+
+/* Styles to add Contracts Finder header */
 	#textarea{
 		width: 30em;
 		height: 15em;
 
+	}
+	.slimheader{
+		margin-top: 0;
+	}
+	.slimheader .wrapper{
+		padding-top: 0;
+	}
+	#header-wrapper {
+	background: white url(http://www.contractsfinder.businesslink.gov.uk/images/1000/bg-header.gif) 0 0 repeat-x;
+	width: 100%;
+	height: 125px;
+	display: block;
+	overflow: hidden;
+	}
+	.logo-contractfinder {
+	width: 174px;
+	height: 112px;
+	background: transparent url(http://www.contractsfinder.businesslink.gov.uk/images/1000/logo_contractfinder.gif) 0 0 no-repeat !important;
+	top: 0;
+	left: 83px;
+	display: block;
+	overflow: hidden;
+	text-indent: -9999px;
+	position: absolute;
 	}
 </style>
 </head>
 <body class="slimheader">
 <div class="iewrapper">
 	<div class="wrapper">
-	<div id="TopBar">
-		<div class="holder allcorners">		<img src="Images/bl_logo.gif" alt="Business Link" width="100" height="27" />
-<ul>
-		<li><a href="#Content" tabindex="1" class="skip first" accesskey="s" title="Go to the main content">Go to main content</a></li>
-    		<!-- Link to department or service accessibility help -->
-<li><a href="http://www.businesslink.gov.uk/bdotg/action/staticpage?site=1000&page=Accessibility&lang=en" title="View accessibility help" tabindex="2" class="newwindowheader first" rel="window800">Accessibility</a></li>
-    		<!--<li><a href="#" lang="cy" hreflang="cy" tabindex="3" title="View the Welsh version">Cymraeg</a></li>-->
-		</ul>
-		</div>
-	</div>
+
+<div id="header-wrapper">
+    <div id="header">
+        <a id="ctl03_hypPortal" class="logo-contractfinder" href="http://www.contractsfinder.businesslink.gov.uk:80/?site=1000&amp;lang=en">Contracts Finder</a>
+    </div>
+</div>
+
+
 		<div class="innerwrapper">
 			<div class="twocolfloat">
 				<div class="onecolblock">
