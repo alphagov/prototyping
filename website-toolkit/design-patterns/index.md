@@ -25,7 +25,7 @@ status: draft
 ## Forms
 
 * [Anatomy of a form](form-anatomy.html)
-* [Example: Contact form](contact-form.html)
+* [Example: Registration form](registration-form.html)
 
 
 

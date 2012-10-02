@@ -65,14 +65,17 @@
 
   /* Action buttons */
   .action.group {
-    /*border-top: 1px solid $light-blue-grey;*/
     padding-top: 1.5em;
   }
 
-  /* Inline form controls */
-  .inline .group{
+  .inline.option label{
     float: left;
-    /*margin-right: 0.5em;*/
+    margin-right: 1em;
+  }
+
+  /* Inline form controls */
+  .inline .group {
+    float: left;
     margin-top: 0;
   }
 
@@ -92,9 +95,11 @@
         @include core-19;
         color: $charcoal-grey;
       }
-      /* Re-align controls */
-      .inline .group{
+      /* Shift controls up */
+      .inline .group,
+      .inline.option label{
         margin-top: -0.75em;
+        /* margin-top: -2.25em; this is what FF would need */
       }
     }
   }
@@ -194,7 +199,6 @@
     }
     select{
       margin-top: 0.5em; /* re-align with horizontal labels (because select boxes aren't as tall as text fields) */
-      /*margin-left: 0.65em;  extra margin as select boxes bleed over the left edge slightly */
     }
 
     fieldset{
@@ -204,8 +208,10 @@
       }
       /* Nested fieldsets */
       fieldset{
+        margin-top: 2em;
         legend {
           padding-left: 0;
+          line-height: 0;
           /* Left/right aligned nested fieldset legends need a span inside them */
           span{
             width: $label-width;
@@ -214,6 +220,17 @@
             float: left;
           }
         }
+        /* Shift controls up */
+          .inline {
+            .group,
+            &.inline.option label{
+              margin-top: -1.5em;
+            }        
+            .group{
+              margin-bottom: 0.5em;
+            }
+          }
+
       }
     }
 
@@ -238,21 +255,36 @@
         width: auto;
         float: none;
         margin-left: 0.5em;
+        text-align: left;
         /* Reset left margins assigned above */
         &.visuallyhidden {
           + input,
           + select,
           + textarea {
             margin-left: 0.5em;
+            margin-right: 0;
           }
         }
       }
+      /* Inline option groups */
+      &.option.group {
+        padding-left: $label-width + 0.5em;
+        padding-top: 0.25em;
+        label{
+          padding-left: 0;
+        }
+      }
     }
+
 
   /* Top-aligned labels */  
   } @else { 
     label{ display:block; }
     input{ margin-left: 0; }
+    legend span {
+      padding-bottom: 0.3em;
+      display: block;
+    }
     .inline{    
       input[type=text],
       select,
