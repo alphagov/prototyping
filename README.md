@@ -104,13 +104,14 @@ We might want to think about putting on a password at some point.
 
 ## Using Sass
 
-'.scss' files will be converted to their '.css' counterparts in the generated site. If you import 'mixins.scss' to your .scss file you'll also have access to all the GOV.UK mixins from the Static and Toolkit repos.
+'.scss' files will be converted to their '.css' counterparts in the generated site. If you import 'frontend_toolkit.scss' to your .scss file you'll also have access to all the mixins from GOV.UK Frontend Toolkit repo. If you want access to the mixins from the draft design patterns library you'll need to import 'design_patterns.scss' as well.
 
 Finally, in order for .scss conversion to work with Jekyll you'll need to start each '.scss' file with empty YAML front matter. Put this all together and you get a .scss file that starts like this:
 
     ---
     ---
-    @import "_mixins.scss";
+    @import "frontend_toolkit";
+    @import "design_patterns";
 
 ## Sharing CSS code
 
