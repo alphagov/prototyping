@@ -32,7 +32,9 @@ Is rendered on GOV.UK like this:
 
 Include the following in your SCSS to activate the [show/hide mixin](https://github.com/alphagov/prototyping/blob/master/_includes/scss/design-patterns/_show-hide.scss):
 
-    @import "mixins.scss";
+    @import "frontend_toolkit";
+    @import "design_patterns";
+    
     @include details-and-summary;
 
 The optional argument; `highlighted`, creates a highlight effect on the open state 

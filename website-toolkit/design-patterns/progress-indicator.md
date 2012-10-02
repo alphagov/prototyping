@@ -44,7 +44,9 @@ many steps there are, which step they are on and what's involved in each step.
 
 Include the following in your SCSS to pull in styles for this pattern:
 
-    @import "mixins.scss";
+    @import "frontend_toolkit";
+    @import "design_patterns";
+    
     @include progress-indicator;
 
 The [progress-indicator mixin](https://github.com/alphagov/prototyping/blob/master/_includes/scss/design-patterns/_progress-indicator.scss) accepts three optional arguments:
