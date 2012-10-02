@@ -5,7 +5,8 @@
 // COLOUR PALETTE PAGE
 //
 
-@import "mixins.scss";
+@import "frontend_toolkit";
+@import "design_patterns";
 
 .swatches{
   @include regular-grid(3);

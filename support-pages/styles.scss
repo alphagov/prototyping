@@ -5,7 +5,9 @@
 // SUPPORT PAGES STYLES
 //
 
-@import "mixins.scss";
+@import "frontend_toolkit";
+@import "design_patterns";
+
 @include details-and-summary;
 
 .support-contents{

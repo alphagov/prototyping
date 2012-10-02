@@ -5,6 +5,9 @@
 // and OS. This can throw out alignments by a few px.
 // The styles are currently optimised for Chrome OS X.
 
+@import '_typography';
+@import "_colours";
+
 @mixin form($label-alignment: top, $label-width: 8em, $legend-colour: $charcoal-grey) {
 
   // FORM ELEMENT STYLES

@@ -1,6 +1,8 @@
 ---
 ---
-@import "_mixins.scss";
+@import "frontend_toolkit";
+@import "design_patterns";
+
 @include progress-indicator;
 @include details-and-summary;
 
