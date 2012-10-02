@@ -138,6 +138,10 @@ article dd{
 .example-3{ @include regular-grid(8); }
 .example-4{ @include regular-grid(2); }
 
+.browse-grid{
+  @include regular-grid(3, 10em);
+}
+
 /* Forms */
 .form-example-1 {
   @include form(top, 5.5em);

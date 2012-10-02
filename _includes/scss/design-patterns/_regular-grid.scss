@@ -2,7 +2,7 @@
 // REGULAR GRID
 //
 
-@mixin regular-grid($columns:"") {
+@mixin regular-grid($columns: 1, $min-height:"") {
   margin: 0;
   padding: 0;
   @include clearfix;
@@ -25,5 +25,8 @@
     *:first-child{
       margin-top: 0;
     };
+    @if ($min-height != ""){
+      min-height: $min-height;
+    }
   }
 }

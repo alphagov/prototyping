@@ -4,16 +4,18 @@ title: Regular grid
 status: draft
 ---
 
-A mixin for creating a regular grid of elements. The mixin accepts an argument for the number of columns in the grid. All widths are expressed as percentages of the parent element.
+A mixin for creating a regular grid of elements. All widths are expressed as percentages of the parent element.
 
-# Dependencies
+# Arguments
 
-The [regular grid mixin](https://github.com/alphagov/prototyping/blob/master/_includes/scss/design-patterns/_regular-grid.scss)
-is part of the 'mixins.scss' library. Use it like this:
+The [mixin](https://github.com/alphagov/prototyping/blob/master/_includes/scss/design-patterns/_regular-grid.scss) accepts two arguments:
 
-    @include regular-grid(N);
+`$columns` : The number of columns in the grid
 
-Where 'N' is the number of columns the grid should have.
+`$min-height` : An optional minimum height for grid elements
+
+This second argument is useful when your grid elements contain varied amounts of content.
+
 
 ## Four column example
 
