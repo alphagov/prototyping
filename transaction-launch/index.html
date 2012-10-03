@@ -91,7 +91,7 @@ GOVUK.Analytics.Format = "transaction";</script><script src="https://d17tffe05zd
 <section id="content" role="main" class="group">
   <header class="page-header group">
     <hgroup>
-      <h1><!--<span>Service</span>--> Change the date or location of your practical driving test</h1>
+      <h1><span>Service</span>Change the date or location of your practical driving test</h1>
     </hgroup>
   </header>
   <div class="article-container group">
@@ -112,9 +112,9 @@ GOVUK.Analytics.Format = "transaction";</script><script src="https://d17tffe05zd
           <summary>What you need to know before you start</summary>
           <p>You’ll need 2 of the following: </p>
           <ul>
-            <li><strong>application reference number</strong></li>
-            <li><strong>theory test pass certificate number</strong> (<a href="/find-your-lost-theory-test-pass-certificate-number">find this online</a>)</li>
-            <li><strong>Great Britain or Northern Ireland driving licence number</strong></li>
+            <li>application reference number</li>
+            <li>theory test pass certificate number (<a href="/find-your-lost-theory-test-pass-certificate-number">find this online</a>)</li>
+            <li>Great Britain or Northern Ireland driving licence number</li>
           </ul>
           <p>Remember to check that your driving instructor is available on the new time and date.</p>
 
@@ -123,6 +123,9 @@ GOVUK.Analytics.Format = "transaction";</script><script src="https://d17tffe05zd
           <p>You can change your appointment 3 times - after that you’ll have to cancel your test and book a new one.</p>
 
         </details>
+
+
+        
 
         <p id="get-started" class="get-started group">
            <a href="https://driverpracticaltest.direct.gov.uk/logincheck.aspx" rel="external" class="button">
@@ -248,6 +251,22 @@ GOVUK.Analytics.Format = "transaction";</script><script src="https://d17tffe05zd
         </div>
       </div>
     </footer><!--end footer--><div id="global-app-error" class="app-error hidden"></div>
+
+
+
+<script src="jquery.details.js"></script>
+<script>
+  $(function() {
+    // Add conditional classname based on support
+    $('html').addClass($.fn.details.support ? 'details' : 'no-details');
+    // Emulate <details> where necessary and enable open/close event handlers
+    $('details').details();
+  });
+</script>
+
+
+
+
 
   </body>
 </html>
