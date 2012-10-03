@@ -80,6 +80,14 @@
 							<div class="text first">
 								</div>
 
+								<div class="errorm">
+								<p><strong>There were 2 errors found in the information you submitted.</strong></p>
+								<ul>
+									<li><a href="#error1">Error 1: Error message</a></li>
+									<li><a href="#error2">Error 2: Error message</a></li>
+								</ul>
+							</div>
+
 								<form>
 									<div class="formwrap allcorners">
 
@@ -87,12 +95,19 @@
 										<div class="formcon">
 
 											<div class="formblock first">
+												<div class="errorm" id="error1">
+													<p><strong>Error 1: Error message</strong></p>
 												<div class="spacefix">
 													<label for="name"><span>Name</span></label>
 												</div>
 												<div>
 													<input id="name" type="text" />
 												</div>
+												<a href="#error2" class="skip first">Go to error 2</a> 
+
+												</div>
+
+
 											</div>
 
 											<div class="formblock">
