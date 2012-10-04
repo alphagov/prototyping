@@ -2,6 +2,8 @@
 // REGULAR GRID
 //
 
+@import "design-patterns/utils.scss";
+
 @mixin regular-grid($columns: 1, $min-height:"") {
   margin: 0;
   padding: 0;
