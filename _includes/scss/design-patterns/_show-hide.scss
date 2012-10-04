@@ -14,9 +14,9 @@
 // your page if you want accessible, cross-browser support
 // for this pattern. 
 
+@import "_colours";
 @import '_typography';
 @import 'design-patterns/_panels';
-@import "_colours";
 
 @mixin details-and-summary($background-colour: "") {
   details{
@@ -40,10 +40,10 @@
     &[open]{
       @if ($background-colour != ""){
         @if ($background-colour == "highlighted"){
-          // Default panel colour
+          // Default highlight colour
           @include panel($grey-95);
         } @else {
-          // Custom panel colour
+          // Custom highlight colour
           @include panel($background-colour);
         }
       }
