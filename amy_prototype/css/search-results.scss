@@ -1,0 +1,12 @@
+---
+---
+@import "_mixins.scss";
+.search .results-wrapper {
+margin-left: 0.67em;
+}
+.top-issues{
+  @include panel($cool-grey);
+  ;
+
+
+
