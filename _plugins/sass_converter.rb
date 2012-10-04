@@ -19,9 +19,7 @@ module Jekyll
     def convert(content)
       begin
         puts "Performing Sass Conversion."
-        # engine = Sass::Engine.new(content, :syntax => :scss, :load_paths => ["./_includes/scss/", Gem::Specification.find_by_name("govuk_frontend_toolkit").gem_dir + "/app/assets/stylesheets/"])
-        engine = Sass::Engine.new(content, :syntax => :scss, :load_paths => ["./_includes/scss/"])
-
+        engine = Sass::Engine.new(content, :syntax => :scss, :load_paths => ["./_includes/scss/", Gem::Specification.find_by_name("govuk_frontend_toolkit").gem_dir + "/app/assets/stylesheets/"])
         engine.render
       rescue StandardError => e
         puts "!!! SASS Error: " + e.message
