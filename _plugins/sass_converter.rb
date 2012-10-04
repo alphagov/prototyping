@@ -1,9 +1,9 @@
 module Jekyll
   # Sass plugin to convert .scss to .css
-  # 
+  #
   # Note: This is configured to use the new css like syntax available in sass.
   require 'sass'
-  require 'rubygems'
+  require 'bundler'
   class SassConverter < Converter
     safe true
     priority :low
@@ -19,7 +19,8 @@ module Jekyll
     def convert(content)
       begin
         puts "Performing Sass Conversion."
-        engine = Sass::Engine.new(content, :syntax => :scss, :load_paths => ["./_includes/scss/", Gem::Specification.find_by_name("govuk_frontend_toolkit").gem_dir + "/app/assets/stylesheets/"])
+        gem_dir = Bundler.load.specs.find{|s| s.name == 'govuk_frontend_toolkit' }.full_gem_path
+        engine = Sass::Engine.new(content, :syntax => :scss, :load_paths => ["./_includes/scss/", gem_dir + "/app/assets/stylesheets/"])
         engine.render
       rescue StandardError => e
         puts "!!! SASS Error: " + e.message
