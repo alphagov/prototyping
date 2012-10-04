@@ -1,0 +1,15 @@
+---
+---
+
+.browse{
+	float: right;
+	width: 10em;
+	padding: 0;
+	margin: 0 0 0 4em;
+	
+	// Reset top-margin for elements that appear at the top of panels
+	 h2{
+	   margin-top: 0em;
+	 }
+}
+

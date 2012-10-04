@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include _head.html %}
+  </head>
+  <body class="mainstream">
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
+    <header role="banner" class="group" id="global-header">
+      <div class="header-global group">
+        <h1><span>GOV.UK</span></h1>
+      </div>
+    </header>
+    <div id="wrapper" class="{{ page.categories }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
+      <section id="content" role="main" class="group">
+        <header class="page-header group">
+          <hgroup>
+            <h1><span>{{ page.categories }}</span> {{ page.title }} {% if page.fromdept  %}{% include _from-dept.html %}{% endif %}</h1>
+          </hgroup>
+        </header>
+        <div class="{% if page.template == 'wide' %}{% else %}article-container{% endif %} group">
+          <article role="article" class="group">
+            <div class="inner">
+              {{ content }}
+            </div>
+          </article>
+          {% if page.template != 'wide' %}{% include _report-problem.html %}{% endif %}
+
+
+        </div>
+      </section>
+    </div><!--end wrapper-->
+    {% include _footer.html %}
+  </body>
+</html>
