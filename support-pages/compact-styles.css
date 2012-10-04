@@ -1,186 +1,143 @@
+/* CONTACT FORM STYLES */
+
+/* Extend width of header to full width of page */
+header.page-header hgroup { margin-right: 0; }
 
 
-header.page-header hgroup {
-  margin-right: 0; }
-
+/* Text field styles */
 .contact-form input[type="text"], 
-.contact-form textarea {
-  background-color: #f9f9f9;
-  border: 2px inset;
-  font-size: 1.9rem;
-  line-height: 1.2;
-  padding: 0.3em 0 0.1em 0.4em; 
-}
+.contact-form textarea { border: 2px inset; padding: 0.3em 0 0.1em 0.4em;
 
+  font-size: 1.9rem; line-height: 1.2;
 
+  background-color: #f9f9f9; }
+
+/* Make placeholder text slightly darker in Webkit */
 .contact-form input[type="text"]::-webkit-input-placeholder,
-.contact-form textarea::-webkit-input-placeholder {
-      color: #BBB; }
-.contact-form label {
-    color: #231f20; }
-.contact-form select {
-    padding: 0.3em 0 0.1em 0.4em;
-    font-size: 17px;
-    line-height: 1.2; }
-.contact-form .option.group {
-    padding-bottom: 0.5em; }
-.contact-form .option.group label {
-      width: auto;
-      float: none;
-      text-align: left;
-      margin: 0.25em 0; }
-.contact-form .option.group li {
-      list-style-type: none;
-      list-style-image: none;
-      margin: 0; }
-.contact-form .help {
-    clear: left;
-    display: block;
-    font-family: "nta", "GDS-Regular", sans-serif;
-    font-size: 14px;
-    font-size: 1.4rem;
-    line-height: 1.42857;
-    font-weight: 400;
-    -webkit-font-smoothing: subpixel-antialiased;
-    letter-spacing: 0;
-    text-transform: none;
+.contact-form textarea::-webkit-input-placeholder { color: #BBB; }
+
+/* Label style */
+.contact-form label { display: block;
+
+  color: #231f20; }
+
+/* Select box styles */
+.contact-form select { padding: 0.3em 0 0.1em 0.4em;
+
+  font-size: 17px; line-height: 1.2; }
+
+/* Option groups (ie. radios and checkboxes) */
+.contact-form .option.group { padding-bottom: 0.5em; }
+.contact-form .option.group label { float: none;
+  
+  margin: 0.25em 0; width: auto;
+
+  text-align: left; }
+
+/* Strip lists in option groups of their styling */
+.contact-form .option.group li { margin: 0;
+
+  list-style-type: none; list-style-image: none; }
+
+/* Help text style */
+.contact-form .help { clear: left; display: block;
+  
+  /* Core-14 mixin */
+  font-family: "nta", "GDS-Regular", sans-serif; font-size: 14px; font-size: 1.4rem; line-height: 1.42857; font-weight: 400; -webkit-font-smoothing: subpixel-antialiased; letter-spacing: 0; text-transform: none;
 }
 
+/* Core-14 mixin */
 @media (max-width: 640px) {
   .contact-form .help {
     font-size: 1.2rem;
     line-height: 1.25; } }
 
-.contact-form .help:last-child {
-  padding-top: 0.25em; }
-.contact-form .help:first-child {
-  padding-bottom: 0.25em; }
-.contact-form label abbr {
-  border-bottom: none;
-  color: #231f20; }
-.contact-form .action.group {
-  padding-top: 1.5em; }
-.contact-form .inline.option label {
-  float: left;
-  margin-right: 1em; }
-.contact-form .inline .group {
-  float: left;
-  margin-top: 0; }
-.contact-form legend {
-  font-family: "nta", "GDS-Regular", sans-serif;
-  font-size: 24px;
-  font-size: 2.4rem;
-  line-height: 1.25;
-  font-weight: 400;
-  letter-spacing: 0;
-  text-transform: none;
-  margin-bottom: 0.5em;
+/* Adjust padding, depending on whether help text
+   appears above or below the form control */
+.contact-form .help:last-child { padding-top: 0.25em; }
+.contact-form .help:first-child { padding-bottom: 0.25em; }
+
+/* Submit button */
+.contact-form .action.group { padding-top: 1.5em; }
+
+/* Legend style (core-24 mixin) */
+.contact-form legend {  margin-bottom: 0.5em;
+  
+  font-family: "nta", "GDS-Regular", sans-serif; font-size: 24px; font-size: 2.4rem; line-height: 1.25; font-weight: 400; letter-spacing: 0; text-transform: none;
+
   color: #231f20; }
 
-    @media (max-width: 640px) {
-      .contact-form legend {
-        font-size: 1.6rem;
-        line-height: 1.25; } }
+/* core-24 mixin */
+@media (max-width: 640px) {
+  .contact-form legend {
+    font-size: 1.6rem;
+    line-height: 1.25; } }
 
-    .contact-form fieldset {
-    margin: 0;
-    margin-top: 2em;
-    }
-
-  .contact-form .validation-summary {
-    color: #df3034;
-    border-left: 3px solid #df3034;
-    background-color: #fef7f7;
-    margin: 1em -1em 1.5em -1em;
-    padding: 0.25em 1em 0.25em 1em;
-    /* Reset top-margin for elements that appear at the top of panels */
-    /* Bring in bulleted lists, so the bullets get sufficient space */ }
-    .contact-form .validation-summary *:first-child {
-      margin-top: 0.5em; }
-    .contact-form .validation-summary ul, .contact-form .validation-summary ol {
-      padding-left: 3.5em; }
-    .contact-form .validation-summary h1 {
-      margin-bottom: 0; }
-    .contact-form .validation-summary a {
-      color: #df3034;
-      text-decoration: none;
-      font-family: "nta", "GDS-Regular", sans-serif;
-      font-size: 14px;
-      font-size: 1.4rem;
-      line-height: 1.42857;
-      font-weight: 400;
-      -webkit-font-smoothing: subpixel-antialiased;
-      letter-spacing: 0;
-      text-transform: none; }
-      @media (max-width: 640px) {
-        .contact-form .validation-summary a {
-          font-size: 1.2rem;
-          line-height: 1.25; } }
-      .contact-form .validation-summary a:hover {
-        text-decoration: underline; }
-    .contact-form .validation-summary ul {
-      padding-left: 2.1em; }
-    .contact-form .validation-summary ul,
-    .contact-form .validation-summary li {
-      list-style-type: none;
-      list-style-image: none; }
-  .contact-form .validation {
-    background-color: #fef7f7;
-    border-left: 3px solid #df3034;
-    margin: 0 0 -0.5em -1em;
-    padding: 0.75em 0 1em 1em; }
-    .contact-form .validation .validation-message {
-      color: #df3034;
-      font-family: "nta", "GDS-Regular", sans-serif;
-      font-size: 14px;
-      font-size: 1.4rem;
-      line-height: 1.42857;
-      font-weight: 400;
-      -webkit-font-smoothing: subpixel-antialiased;
-      letter-spacing: 0;
-      text-transform: none;
-      display: block;
-      padding-bottom: 0.5em; }
-      @media (max-width: 640px) {
-        .contact-form .validation .validation-message {
-          font-size: 1.2rem;
-          line-height: 1.25; }
-        }
+/* fieldset style */
+.contact-form fieldset { margin: 2em 0 0 0; }
 
 
-  .contact-form input.email {
-    width: 15em; }
-  .contact-form input.url {
-    width: 100%; }
-  .contact-form input.full-name {
-    width: 20em; }
-  .contact-form textarea.full-size {
-    width: 100%;
-    height: 15em; }
+/* FORM VALIDATION STYLES */
 
-  .contact-form label {
-    display: block; }
-  .contact-form input {
-    margin-left: 0; }
-  .contact-form legend span {
-    padding-bottom: 0.3em;
-    display: block; }
-  .contact-form .inline input[type=text],
-  .contact-form .inline select,
-  .contact-form .inline textarea {
-    margin-right: 0.5em; }
+/* Form validation summary style */
+.contact-form .validation-summary { border-left: 3px solid #df3034; margin: 1em -1em 1.5em -1em; padding: 0.25em 1em 0.25em 1em;
+    
+  background-color: #fef7f7; color: #df3034; }
 
-.report-a-problem-container p:first-child {
-  margin-top: 0.5em
-};
-.report-a-problem-container p:last-child {
-  margin-bottom: 0.5em
-};
+.contact-form .validation-summary h1 { margin: 0.5em 0 0 0; }
+.contact-form .validation-summary a {
+  /* core-14 mixin */
+  text-decoration: none; font-family: "nta", "GDS-Regular", sans-serif; font-size: 14px; font-size: 1.4rem; line-height: 1.42857; font-weight: 400; -webkit-font-smoothing: subpixel-antialiased; letter-spacing: 0; text-transform: none; 
+      
+  color: #df3034; }
 
-#location p {
-  padding-bottom: 0; }
-#location input[type="text"] {
-  margin-left: 1.5em;
-  width: 31em; }
-#location select {
-  margin-left: 0.5em; }
+/* core-14 mixin */
+@media (max-width: 640px) {
+  .contact-form .validation-summary a {
+    font-size: 1.2rem;
+    line-height: 1.25; } }
+
+.contact-form .validation-summary a:hover { text-decoration: underline; }
+.contact-form .validation-summary ul { padding-left: 2.1em; }
+.contact-form .validation-summary ul,
+.contact-form .validation-summary li { list-style-type: none; list-style-image: none; }
+
+/* Validation message styles */
+.contact-form .validation { border-left: 3px solid #df3034; margin: 0 0 -0.5em -1em; padding: 0.75em 0 1em 1em;
+  
+  background-color: #fef7f7; }
+
+.contact-form .validation .validation-message { display: block;
+      
+  padding-bottom: 0.5em;
+
+  /* core-14 mixin */
+  font-family: "nta", "GDS-Regular", sans-serif; font-size: 14px; font-size: 1.4rem; line-height: 1.42857; font-weight: 400; -webkit-font-smoothing: subpixel-antialiased; letter-spacing: 0; text-transform: none;
+           
+  color: #df3034; }
+
+@media (max-width: 640px) {
+  .contact-form .validation .validation-message {
+    font-size: 1.2rem;
+    line-height: 1.25; }
+  }
+
+.contact-form input.email { width: 15em; }
+.contact-form input.url { width: 100%; }
+.contact-form input.full-name { width: 20em; }
+.contact-form textarea.full-size { width: 100%; height: 15em; }
+
+/* Input styles */
+.contact-form input { margin-left: 0; }
+.contact-form .inline input[type=text],
+.contact-form .inline select,
+.contact-form .inline textarea { margin-right: 0.5em; }
+
+/* Styles for the 'report a problem' panel at the bottom of every page */
+.report-a-problem-container p:first-child { margin-top: 0.5em };
+.report-a-problem-container p:last-child { margin-bottom: 0.5em };
+
+/* Inline alignment for the 'What's it to do with?' fieldset */
+#location p { padding-bottom: 0; }
+#location input[type="text"] { margin-left: 1.5em; width: 31em; }
+#location select { margin-left: 0.5em; }
