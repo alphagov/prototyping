@@ -2,40 +2,17 @@
 ---
 
 // ===================================================
-// SUPPORT PAGES STYLES
+// CONTACT FORM
 //
 
-@import "frontend_toolkit";
-@import "design_patterns";
+//@import "frontend_toolkit";
+@import "design-patterns/forms.scss";
 
-@include details-and-summary;
+/* Extend page header for wide format page */
+header.page-header hgroup { margin-right: 0 }
 
-.support-contents{
-  @include regular-grid(2);
-  h2{
-    margin-top: 0;
-  }
-}
-header.page-header hgroup {
-  margin-right: 0 /* Extend page header out to end of search button */
-}
-.contact-us,
-.top-issues,
-.page-contents{
-  @include panel;
-}
 .contact-form{
   @include form();
-}
-.report-a-problem-container{
-  @include form;
-  p{
-    &:first-child{ margin-top: 0.5em};
-    &:last-child{ margin-bottom: 0};
-  }
-  div{
-    text-align: left; /* overwrite core style */
-  }
 }
 #location {
   p{

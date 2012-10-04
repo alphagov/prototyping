@@ -1,0 +1,36 @@
+---
+---
+
+// ===================================================
+// SUPPORT PAGES STYLES
+//
+
+@import "frontend_toolkit";
+@import "design-patterns/regular-grid.scss";
+@import "design-patterns/panels.scss";
+
+/* Extend page header for wide format page */
+header.page-header hgroup { margin-right: 0 }
+
+
+
+// ===================================================
+// SUPPORT PAGES
+//
+
+.support-contents{
+  @include regular-grid(2);
+  h2{
+    margin-top: 0;
+  }
+}
+.contact-us,
+.top-issues,
+.page-contents{
+  @include panel;
+}
+
+// ===================================================
+// 'REPORT A PROBLEM' PANEL AT BOTTOM OF PAGES
+//
+.report-a-problem-container div{ text-align: left; /* overwrite core style */ }
