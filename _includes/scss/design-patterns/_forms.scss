@@ -7,35 +7,36 @@
 
 @import '_typography';
 @import "_colours";
+@import "_panels";
 
 @mixin form($label-alignment: top, $label-width: 8em, $legend-colour: $charcoal-grey) {
 
   // FORM ELEMENT STYLES
 
-  /* Text fields and textareas */
+  // Text fields and textareas
   input[type="text"], textarea {
       background-color: #f9f9f9;
-      border: 2px inset; /* Remove this if we can get the border style removed from core.css */
-      font-size: 1.9rem;
+      border: 2px inset; // Remove this if we can get the border style removed from core.css
+      font-size: 1em;
       line-height: 1.2;
       padding: 0.3em 0 0.1em 0.4em;
 
-      /* placeholder text */
+      // placeholder text
       &::-webkit-input-placeholder{
         color: #BBB ;
       }
   }
-  /* Labels */
+  // Labels
   label{
     color: $charcoal-grey;
   }
-  /* Select boxes */
+  // Select boxes
   select {
     padding: 0.3em 0 0.1em 0.4em;
     font-size: 17px;
     line-height: 1.2;
   }
-  /* Checkboxes and radio buttons */
+  // Checkboxes and radio buttons
   .option.group {
     padding-bottom: 0.5em;
     label {
@@ -51,22 +52,22 @@
     }
   }
 
-  /* Help text */  
+  // Help text  
   .help {
     clear: left;
     display: block;
     @include core-14;
-    /* Adjust padding depending on whether it appears above or below the form control */
+    // Adjust padding depending on whether it appears above or below the form control
     &:last-child{ padding-top: 0.25em; }
     &:first-child{ padding-bottom: 0.25em; }
   }
-  /* Mandatory '*' message */
+  // Mandatory '*' message
   label abbr {
     border-bottom: none;
     color: $legend-colour;
   }
 
-  /* Action buttons */
+  // Action buttons
   .action.group {
     padding-top: 1.5em;
   }
@@ -76,13 +77,13 @@
     margin-right: 1em;
   }
 
-  /* Inline form controls */
+  // Inline form controls
   .inline .group {
     float: left;
     margin-top: 0;
   }
 
-  /* Legends and fieldsets */
+  // Legends and fieldsets
   legend {
     @include core-24;
     margin-bottom: 0.5em;
@@ -91,23 +92,23 @@
   fieldset {
     margin: 0;
     margin-top: 2em;
-    /* Legends in nested fieldsets look like labels */
+    // Make legends in nested fieldsets look like labels
     fieldset {
       margin-top: 0;
       legend {
         @include core-19;
         color: $charcoal-grey;
       }
-      /* Shift controls up */
+      // Shift controls up
       .inline .group,
       .inline.option label{
         margin-top: -0.75em;
-        /* margin-top: -2.25em; this is what FF would need */
+        // margin-top: -2.25em; this is what FF would need
       }
     }
   }
 
-  /* Validation summary */
+  // Validation summary
   .validation-summary{
     color: $mellow-red;
     border-left: 3px solid $mellow-red;
@@ -132,7 +133,7 @@
       list-style-image: none;
     }
   }
-  /* Inline validation messages */
+  // Inline validation messages
   .validation{
     background-color: lighten($mellow-red, 45%);
     border-left: 3px solid $mellow-red;
@@ -146,9 +147,8 @@
     }
   }
 
-  /* Default field widths */
-
-  input[type="text"] {min-width: 2em;} /* overwrite core style */
+  // Default field widths
+  input[type="text"] {min-width: 2em;} // overwrite core style
 
   $full-width: 100%;
   $x-large: 20em;
@@ -167,21 +167,17 @@
                     height: $medium;}
   textarea.full-size{width: $full-width; height: $large;}
 
-
-
-
-
   // LABEL POSITIONING
 
-  /* Left or right aligned labels */
+  // Left or right aligned labels
   @if ($label-alignment == left or $label-alignment == right) {
     label{
       display: block;
       float: left;
       text-align: #{$label-alignment};
-      padding-top: 0.25em; /* vertically align labels with middle of text fields */
+      padding-top: 0.25em; // vertically align labels with middle of text fields
       width: $label-width;
-      /* Maintain field alignment if label is hidden */
+      // Maintain field alignment if label is hidden
       &.visuallyhidden {
         + input,
         + select,
@@ -190,7 +186,7 @@
         }
       }
     }
-    /* Maintain help text and button alignment with form fields with side-aligned labels */
+    // Maintain help text and button alignment with form fields with side-aligned labels
     .help{ margin-left: $label-width + 3.3em; }
     .action.group { padding-left: $label-width; }
 
@@ -201,21 +197,21 @@
       margin-left: 0.5em;
     }
     select{
-      margin-top: 0.5em; /* re-align with horizontal labels (because select boxes aren't as tall as text fields) */
+      margin-top: 0.5em; // re-align with horizontal labels (because select boxes aren't as tall as text fields)
     }
 
     fieldset{
       legend{
         display: block;
-        padding-left: $label-width - 1.25em; /* Align legend with fields (needs offset) */    
+        padding-left: $label-width - 1.25em; // Align legend with fields (needs offset)    
       }
-      /* Nested fieldsets */
+      // Nested fieldsets
       fieldset{
         margin-top: 2em;
         legend {
           padding-left: 0;
           line-height: 0;
-          /* Left/right aligned nested fieldset legends need a span inside them */
+          // Left/right aligned nested fieldset legends need a span inside them
           span{
             width: $label-width;
             text-align: #{$label-alignment};
@@ -223,7 +219,7 @@
             float: left;
           }
         }
-        /* Shift controls up */
+        // Shift controls up
           .inline {
             .group,
             &.inline.option label{
@@ -237,8 +233,7 @@
       }
     }
 
-
-
+    // Option groups
     .option.group {
       label{
         padding-left: $label-width + 0.5em;
@@ -251,7 +246,7 @@
       }
     }
 
-    /* Inline form controls */
+    // Inline form controls
     .inline{
       padding-left: $label-width + 1.5em;
       label{
@@ -259,7 +254,7 @@
         float: none;
         margin-left: 0.5em;
         text-align: left;
-        /* Reset left margins assigned above */
+        // Reset left margins assigned above
         &.visuallyhidden {
           + input,
           + select,
@@ -269,7 +264,7 @@
           }
         }
       }
-      /* Inline option groups */
+      // Inline option groups
       &.option.group {
         padding-left: $label-width + 0.5em;
         padding-top: 0.25em;
@@ -280,7 +275,7 @@
     }
 
 
-  /* Top-aligned labels */  
+  // Top-aligned labels
   } @else { 
     label{ display:block; }
     input{ margin-left: 0; }

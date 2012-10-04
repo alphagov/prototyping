@@ -8,12 +8,12 @@
   margin: 1em -1em 1.5em -1em;
   padding: 1em 1em 0.25em 1em;
 
-  /* Reset top-margin for elements that appear at the top of panels */
+  // Reset top-margin for elements that appear at the top of panels
   *:first-child{
     margin-top: 0em;
   }
 
-  /* Bring in bulleted lists, so the bullets get sufficient space */
+  // Bring in bulleted lists, so the bullets get sufficient space
   ul, ol{
       padding-left: 3.5em;
   }
