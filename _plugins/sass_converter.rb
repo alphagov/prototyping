@@ -23,7 +23,8 @@ module Jekyll
         engine = Sass::Engine.new(content, :syntax => :scss, :load_paths => ["./_includes/scss/", gem_dir + "/app/assets/stylesheets/"])
         engine.render
       rescue StandardError => e
-        puts "!!! SASS Error: " + e.message
+        puts "!!! SASS Error - [Line #{e.sass_line}] -- #{e.to_s}"
+        puts e.sass_template
       end
     end
   end
