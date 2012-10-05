@@ -129,11 +129,6 @@ input[type="text"]{
 }
 
 
-
-
-
-
-
 /* ==========================
    text.scss
 */
@@ -152,11 +147,6 @@ $i: 6;
   .application-notice h#{$i}:first-child { margin-top: 0.5em }
   $i: $i - 1;
 }
-/* More compact nested lists in notices */
-article .info-notice li ul,
-article .info-notice li ol {
-  padding-left: 1em;
-}
 /* Shrink right-padding in notices down to 2em */
 article .help-notice p, article .info-notice p, article .subscribe p {
 padding-right: 2em; /* overwrite text.css */
@@ -167,6 +157,8 @@ padding-right: 2em; /* overwrite text.css */
 /* ==========================
    _buttons.scss
 */
+
+
 .button.big {
   @include core-24($line-height: (16 / 24)); 
   padding: 0.45em 1.7em 0.45em 0.5em;
