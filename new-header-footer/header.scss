@@ -1,0 +1,211 @@
+---
+---
+@import "_colours";
+@import "_conditionals";
+@import "_css3";
+@import "_typography";
+@import "_buttons.scss";
+
+/* 15px em unit */
+html { font-size: 10px; }
+body { font-size: 150%; margin: 0; background-color: yellow; }
+
+/* New Greys */
+$grey-0: #0b0c0c;
+$grey-1: #171819;
+$grey-2: #2e3133;
+$grey-3: #454a4c;
+$grey-4: #5c6366;
+$grey-5: #8a9499;
+$grey-6: #a1acb2;
+$grey-7: #b8c6cc;
+$grey-8: #DEE0E2;
+$grey-9: #eaedef;
+
+#global-header {
+  background-color: $grey-0;
+  width: 100%;
+
+  .header-wrapper {
+    max-width: 62em;
+    margin: 0 auto;
+    height: 2em;
+    line-height: 2em;
+    padding: 0.5em 1em;
+
+    @include media($max-width: 499px) {
+      height: auto;
+    }
+  }
+
+  #logo {
+    position: relative;
+    float: left;
+    width: 195px;
+    height: 28px;
+
+    overflow: hidden;
+  
+    img {
+      position: absolute;
+      left: 0; top: 0;
+    }
+
+    &:hover img {
+      top: -44px;
+    }
+  }
+
+  nav {
+    ul {
+      @include core-16($line-height: (30 / 16));
+      margin: 0 0 0 1em;
+      padding: 0;
+      
+      float: left;
+      list-style: none;
+
+      li {
+        float: left;
+        margin: 0 1.5em 0 0;
+
+        a {
+          @include core-16($line-height: (30/16), $line-height-640: (30/13));
+          color: #fff;
+          text-decoration: none;
+
+          &:hover {
+            color: #fff
+          }
+        }
+      }
+    }
+  }
+
+  .search-toggle {
+    display: none;
+
+    @include media($max-width: 499px) {
+      display: block;
+      float: right;
+
+      @include core-16;
+
+      overflow: hidden;
+      text-indent: -5000px;
+
+      width: 2em;
+      padding: 0.5em;
+
+      background-image: url(icon-search.png);
+      background-repeat: no-repeat;
+      background-position: 75% 50%;
+    }
+  }
+
+  form#search {
+    float: right;
+    max-width: 18em;
+    margin: 0;
+
+    button {
+      @include core-16($line-height: 1, $line-height-640: (20/13));
+      /* this inherits from the basic button styles */
+      display:inline;
+      padding: 0.25em 0.5em 0.2em;
+      margin: 0;
+      position: relative;
+      top: 0;
+      border-radius: 0;
+      @include box-shadow(none);
+
+      &:hover {
+        background-color: #3ABAA8;
+      }
+
+      &:active {
+        @include translate(0, 0);
+      }
+    }
+
+      /* search input */
+    #site-search-text {
+      @include core-16($line-height: 1, $line-height-640: (20/13));
+
+      border: none;
+      border-bottom: solid 1px #fff;
+      border-top: solid 1px #fff;
+      padding: 0.2em 0.25em;
+      min-width: 8em;
+      margin: 0 0.5em 0 0;
+
+      /* this is handled in normalize.scss */
+      -webkit-appearance: textfield;
+      -moz-box-sizing: content-box;
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box;
+
+      &::-webkit-search-cancel-button,
+      &::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+    }
+
+    @include media($max-width: 499px) {
+      display: none;
+      width: 100%;
+      max-width: none;
+
+      &.js-visible {
+        display: block;
+      }
+
+      button {
+        display: none;
+      }
+
+      #site-search-text {
+        float: none;
+        display: block;
+        width: 98%;
+        padding: 0.2em 1%;
+        margin: 0.5em 0;
+      }
+    }
+  }
+}
+
+// self clearing floats
+.group:before,
+.group:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+ }
+
+.group:after {
+    clear: both;
+}
+.group {
+    zoom: 1;
+}
+
+.visuallyhidden {
+  position: absolute;
+  left: -9999em;
+
+  /*
+   * Extends the .visuallyhidden class to allow the element to be
+   * focusable when navigated to via the keyboard
+   */
+  &.focusable:active,
+  &.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+}

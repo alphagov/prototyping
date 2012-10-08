@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>New Header</title>
+
+  <link rel="stylesheet" href="header.css">
+
+ <script src="http://static.preview.alphagov.co.uk/static/libs/jquery/jquery-1.7.2.min.js?body=1" type="text/javascript"></script>
+  <script src="header.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+
+<body>
+  <header role="banner" class="group" id="global-header">
+    <div class="header-wrapper group">
+      <a href="/" title="Go to the gov.uk homepage" id="logo"><img src="gov.uk_logotype_beta.png" alt="GOV.UK Logo"></a>
+
+      <nav role="navigation">
+        <ul>
+          <li><a href="/help">Help</a></li>
+        </ul>
+      </nav>
+
+      <a href="#search" class="button search-toggle">Search</a>
+
+      <form id="search" class="site-search" action="/search" method="get" role="search">
+        <label for="site-search-text" class="visuallyhidden">Search</label>
+        <input type="search" name="q" id="site-search-text" title="Search">
+        <button class="button" type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+</body>
+</html>

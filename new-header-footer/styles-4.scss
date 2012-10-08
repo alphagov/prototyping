@@ -39,6 +39,7 @@ html { background-color: $grey-9; }
 aside .page-navigation { 
   li { border-color: $grey-6; }
   li.active { background-color: $grey-8; }
+  li a:hover { background-color: $grey-9; }
 }
 
 article {
@@ -129,7 +130,7 @@ article {
   }
 
   h2 {
-    color: $grey-4;
+    color: $grey-3;
     margin: 0;
   }
 
@@ -157,16 +158,16 @@ article {
     }
 
     a {
-      color: $grey-4;
+      color: $grey-3;
     }
 
     a:hover {
-      text-decoration: underline;
+      color: $grey-1;
     }
   }
 
   .copyright {
-    @include core-14;
+    @include core-16;
 
     display: inline-block;
     float: none;
@@ -188,15 +189,19 @@ article {
       background: transparent url(crest-5.png) no-repeat 50% 0;
       text-align: center;
     }
+
+    a:hover {
+      color: $grey-1;
+    }
   }
 
   .footer-meta {
     font-size: 0;
-    color: $grey-4;
+    color: $grey-3;
     padding: 3rem 0 6rem;
 
     ul {
-      @include core-14;
+      @include core-16;
       display: inline-block;
       list-style: none;
       margin: 0 3rem 3rem 0;
@@ -211,19 +216,23 @@ article {
     }
 
     .colophon {
-      @include core-14;
+      @include core-16;
       display: inline-block;
       margin: 0 0 3rem 0;
     }
 
     p {
-      @include core-14;
+      @include core-16;
       display: block;
       clear: left;
     }
 
     a {
-      color: $grey-4;
+      color: $grey-3;
+    }
+
+    a:hover {
+      color: $grey-1;
     }
   }
 }
