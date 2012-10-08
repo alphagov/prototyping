@@ -42,6 +42,17 @@
       <section id="content" role="main" class="group">
         <header class="page-header group">
           <hgroup>
+            {% if page.signed-in != none %}
+              <div class="account-management-tools">
+              <ul>
+                {% if page.signed-in == yes %}<li class="user">Signed in as: <a href="">contact@timpaul.co.uk</a></li>
+                <li><a href="">Sign out</a></li>{% endif %}
+
+                {% if page.signed-in != yes %}
+                <li><a href="sign-in.html">Sign in</a></li>{% endif %}
+              </ul>
+            </div>
+            {% endif %}
             <h1><span>{{ page.categories }}</span> {{ page.title }} {% if page.fromdept  %}{% include _from-dept.html %}{% endif %}</h1>
           </hgroup>
         </header>

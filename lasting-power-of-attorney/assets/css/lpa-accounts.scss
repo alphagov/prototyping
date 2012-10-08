@@ -6,6 +6,10 @@
 @import "design-patterns/_show-hide";
 @import "design-patterns/_forms";
 @import "design-patterns/regular-grid";
+@import "design-patterns/account-management-tools";
+
+
+@include account-management-tools;
 
 header.page-header hgroup {
   margin-right: 0 /* Extend page header out to end of search button */

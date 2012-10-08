@@ -1,0 +1,32 @@
+// =======================================================
+// ACCOUNT MANAGEMENT TOOLS
+
+// Standard account management toolbar that runs across the top of your application
+// 
+
+@import "_colours";
+
+@mixin account-management-tools{
+  .account-management-tools{
+    margin: -0.2em -1em 0 -0.5em;
+    padding: 0.5em 1em;
+    color: $white;
+    background: $dark-blue-grey;
+    ul{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; 
+      li{
+        float: right;
+        margin: 0;
+        padding: 0 1em 0 0;
+        &.user {float: left;}
+      }
+      a{
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+}
