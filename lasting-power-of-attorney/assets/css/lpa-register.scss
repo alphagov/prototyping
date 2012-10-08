@@ -1,0 +1,30 @@
+---
+---
+
+@import "colours";
+@import "typography";
+@import "design-patterns/_show-hide";
+@import "design-patterns/_forms";
+@import "design-patterns/regular-grid";
+@import "design-patterns/account-management-tools";
+
+
+@include account-management-tools;
+@include details-and-summary;
+
+header.page-header hgroup {
+  margin-right: 0 /* Extend page header out to end of search button */
+}
+
+/* ================================================================
+ * FORMS
+ * ================================================================
+ */
+
+.form{
+  @include form(left);
+  form{
+    @include panel;
+  }
+}
+

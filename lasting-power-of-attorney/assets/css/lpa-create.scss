@@ -8,6 +8,10 @@
 @import "design-patterns/_popups";
 @import "design-patterns/_forms";
 @import "design-patterns/progress-indicator";
+@import "design-patterns/account-management-tools";
+
+
+@include account-management-tools;
 
 
 header.page-header hgroup {

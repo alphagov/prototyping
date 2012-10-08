@@ -42,13 +42,16 @@
       <section id="content" role="main" class="group">
         <header class="page-header group">
           <hgroup>
-            {% if page.signed-in != none %}
+            {% if page.signed-in != 'none' %}
               <div class="account-management-tools">
               <ul>
-                {% if page.signed-in == yes %}<li class="user">Signed in as: <a href="">contact@timpaul.co.uk</a></li>
-                <li><a href="">Sign out</a></li>{% endif %}
+                {% if page.signed-in == 'yes' %}<li class="user">Welcome <a href="">Tim Paul</a></li>
+                <li><a href="sign-out.html">Sign out</a></li>
+                <li><a href="dashboard.html">Your LPAs</a></li>
 
-                {% if page.signed-in != yes %}
+                {% endif %}
+
+                {% if page.signed-in != 'yes' %}
                 <li><a href="sign-in.html">Sign in</a></li>{% endif %}
               </ul>
             </div>
