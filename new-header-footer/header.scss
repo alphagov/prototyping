@@ -85,38 +85,50 @@ $grey-9: #eaedef;
   .search-toggle {
     display: none;
 
-    @include media($max-width: 499px) {
+    @include media($max-width: 379px) {
       display: block;
       float: right;
+      top: 0;
 
-      @include core-16;
+      @include core-16($line-height: 1, $line-height-640: (20/13));
 
       overflow: hidden;
       text-indent: -5000px;
 
-      width: 2em;
-      padding: 0.5em;
+      width: 1.8em;
+      padding: 0.35em 0.5em;
 
       background-image: url(icon-search.png);
       background-repeat: no-repeat;
-      background-position: 175% 50%;
+      background-position: 75% 50%;
+
+      position: relative;
+      top: 0;
+      @include border-radius(0);
+      @include box-shadow(none);
+
+      &:active {
+        @include translate(0, 0);
+      }
     }
+
+    &.js-hidden { display: none; }
   }
 
   form#search {
     float: right;
-    max-width: 18em;
+    // max-width: 18em;
     margin: 0;
 
-    button {
-      @include core-16($line-height: 1, $line-height-640: (20/13));
+    input.button {
+      @include core-16($line-height: (20/16), $line-height-640: (20/13));
       /* this inherits from the basic button styles */
       display:inline;
       padding: 0.25em 0.5em 0.2em;
       margin: 0;
       position: relative;
       top: 0;
-      border-radius: 0;
+      @include border-radius(0);
       @include box-shadow(none);
 
       &:hover {
@@ -125,6 +137,30 @@ $grey-9: #eaedef;
 
       &:active {
         @include translate(0, 0);
+      }
+
+      @include media($max-width: 499px) {
+        overflow: hidden;
+        text-indent: -5000px;
+
+        width: 1.8em;
+        // margin: 0.2em 0;
+        padding: 0.4em 0.5em;
+
+        background-image: url(icon-search.png);
+        background-repeat: no-repeat;
+        background-position: 75% 50%;
+
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+
+        @include border-radius(0);
+      }
+
+      @include media($max-width: 379px) {
+        float: right;
+        margin: 0.3em 0;
       }
     }
 
@@ -140,7 +176,7 @@ $grey-9: #eaedef;
       margin: 0 0.5em 0 0;
 
       /* this is handled in normalize.scss */
-      -webkit-appearance: textfield;
+      -webkit-appearance: none;
       -moz-box-sizing: content-box;
       -webkit-box-sizing: content-box;
       box-sizing: content-box;
@@ -151,27 +187,18 @@ $grey-9: #eaedef;
       }
     }
 
-    @include media($max-width: 499px) {
+    @include media($max-width: 379px) {
       display: none;
       width: 100%;
       max-width: none;
 
-      &.js-visible {
-        display: block;
-      }
-
-      button {
-        display: none;
-      }
-
       #site-search-text {
-        float: none;
-        display: block;
-        width: 98%;
+        width: 80%;
         padding: 0.2em 1%;
         margin: 0.5em 0;
       }
     }
+    &.js-visible { display: block; }
   }
 }
 
