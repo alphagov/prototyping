@@ -1,5 +1,7 @@
 $(function() {
-  $('.search-toggle').on('click', function() {
-    var $form = $('#search').toggleClass('js-visible');
+  $('.search-toggle').on('click', function(e) {
+    e.preventDefault();
+    $('#search').toggleClass('js-visible');
+    $(this).addClass('js-hidden');
   });
 });
