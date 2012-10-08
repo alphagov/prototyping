@@ -1,0 +1,72 @@
+---
+---
+
+@import "colours";
+@import "typography";
+@import "design-patterns/_show-hide";
+@import "design-patterns/_forms";
+@import "design-patterns/regular-grid";
+@import "design-patterns/account-management-tools";
+
+
+@include account-management-tools;
+
+header.page-header hgroup {
+  margin-right: 0 /* Extend page header out to end of search button */
+}
+
+/* ================================================================
+ * FORMS
+ * ================================================================
+ */
+
+.form{
+  @include form(left);
+  form{
+    @include panel;
+  }
+}
+
+/* ================================================================
+ * PROCESS OVERVIEW
+ * ================================================================
+ *
+ * The three-panelled diagrams that explain the LPA process 
+ */
+
+.process.overview{
+  @include regular-grid(3, 16em);
+}
+
+.process.overview > li{
+  background-color: $grey-95;
+  display: table-cell;
+}
+
+.process img{
+  margin: 1em;
+  max-width: 9em;
+  width: 100%;
+  margin: 1em;
+}
+.process li h3{
+  background-color: $green-25;
+  margin: 0 0 1em 0;
+  padding: 0.5em 1em;
+}
+
+.process.overview figure{
+  text-align: center;
+  padding: 0 0.5em;
+}
+
+.process figcaption a{
+  display: block;
+}
+.process .button{
+  display: block;
+  width: 75%;
+  margin: 1em auto;
+  text-align: center;
+}
+

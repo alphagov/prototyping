@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include _head.html %}
+  </head>
+  <body class="mainstream">
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
+    <header role="banner" class="group" id="global-header">
+      <div class="header-global group">
+        <h1><a href="/" title="Go to the gov.uk homepage">GOV.UK</a></h1>
+        <!--
+        <nav role="navigation">
+          <ul>
+            <li><a href="/settings" class="customisation-settings">Settings</a></li>
+            <li><a href="/help">Help</a></li>
+            <li id="gs-feedback"><a href="/feedback">Feedback</a></li>
+          </ul>
+        </nav>
+      -->
+        <!--
+        <div class="search-help">
+          <form id="search" class="site-search" action="/search" method="get" role="search">
+            <label for="site-search-text" class="visuallyhidden">
+              <span>Search</span>
+            </label>
+            <input type="search" name="q" id="site-search-text" title="Search"><input type="submit" value="Search" class="button">
+          </form>
+        </div>
+      -->
+      </div>
+    </header>
+    <!--
+    <div id="global-breadcrumb" class="header-context">
+        <nav role="navigation"><ol class="group">
+<li><a href="/">Home</a></li>
+          <li><a href="/browse/births-deaths-marriages">Births, deaths, marriages, parenting and care</a></li>
+<li><strong><a href="/browse/births-deaths-marriages/lasting-power-attorney">Lasting power of attorney, being in care and your financial affairs</a></strong></li>
+</ol></nav>
+</div>
+-->
+    <div id="wrapper" class="{{ page.categories | downcase }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
+      <section id="content" role="main" class="group">
+        <header class="page-header group">
+          <hgroup>
+            {% if page.signed-in != 'none' %}
+              <div class="account-management-tools">
+              <ul>
+                {% if page.signed-in == 'yes' %}<li class="user">Welcome <a href="">Tim Paul</a></li>
+                <li><a href="sign-out.html">Sign out</a></li>
+                <li><a href="dashboard.html">Your LPAs</a></li>
+
+                {% endif %}
+
+                {% if page.signed-in != 'yes' %}
+                <li><a href="sign-in.html">Sign in</a></li>{% endif %}
+              </ul>
+            </div>
+            {% endif %}
+            <h1><span>{{ page.categories }}</span> {{ page.title }} {% if page.fromdept  %}{% include _from-dept.html %}{% endif %}</h1>
+          </hgroup>
+        </header>
+        <div class="{% if page.template == 'wide' %}{% else %}article-container{% endif %} group">
+          <article role="article" class="group">
+            <div class="inner">
+              {{ content }}
+            </div>
+          </article>
+          {% if page.template != 'wide' %}{% include _report-problem.html %}{% endif %}
+
+
+        </div>
+      </section>
+    </div><!--end wrapper-->
+    {% include _footer.html %}
+  </body>
+</html>

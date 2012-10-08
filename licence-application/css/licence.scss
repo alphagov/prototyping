@@ -148,7 +148,9 @@ $i: 6;
   $i: $i - 1;
 }
 /* Shrink right-padding in notices down to 2em */
-article .help-notice p, article .info-notice p, article .subscribe p {
+.help-notice p,
+.info-notice p,
+.subscribe p {
 padding-right: 2em; /* overwrite text.css */
 }
 

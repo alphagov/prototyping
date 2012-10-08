@@ -17,4 +17,25 @@
   ul, ol{
       padding-left: 3.5em;
   }
+
+  // Make form fields in coloured panels white, not light grey
+  @if ($background-colour != transparent){
+    input[type="text"],
+    textarea{
+      background-color: $white;
+    }
+  }
+
+  // Panels with an 'inner' div get
+  .inner{
+    background-color: white;
+    border: 1px solid #CCC;
+    /*padding: 2em 0 0 0;*/
+    padding: 1em 3em;
+    margin-bottom: 0.75em;    
+    input[type="text"],
+    textarea{
+      background-color: #f9f9f9;
+    }
+  }
 }
