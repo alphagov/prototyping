@@ -1,3 +1,21 @@
+---
+---
+
+@import "colours";
+@import "typography";
+@import "design-patterns/_show-hide";
+@import "design-patterns/_regular-grid";
+@import "design-patterns/_popups";
+@import "design-patterns/_forms";
+@import "design-patterns/progress-indicator";
+
+
+header.page-header hgroup {
+  margin-right: 0 /* Extend page header out to end of search button */
+}
+
+@include progress-indicator;
+
 
 
 /* ===========================================================
@@ -6,22 +24,22 @@
  *
  * For doing 'stacked' forms */
 
+
+ .step-intro{
+  @include panel;
+ }
+
 .accordion{
   margin-bottom: 2em;
 }
 
 .accordion-header {
   background-color: #e3e3e3;
-  padding:0.5em 2em 0.5em 6em;
-  text-transform: uppercase;
-  font-size: 0.8em;
-  font-weight: normal;
+  padding:0.5em 2em;
   margin: 0;
   color: #333;
-  line-height: 1.5em;
 }
 .accordion-item {
-  padding-bottom:2px;
   background-color: white;
 }
 
@@ -50,6 +68,9 @@
 .js-enabled .accordion.no-future .accordion-header{
   display: none;
 }
+.accordion.no-future .complete  .accordion-header{
+  display: none;
+}
 .accordion.no-future .complete .accordion-header,
 .accordion.no-future .current .accordion-header{
   display: block;
@@ -60,24 +81,24 @@
   margin-left: -3em;  /* Override if necessary  */
   text-align: right;
   margin-right: 0.5em;
-  font-weight: normal;
 }
 .complete .accordion-header{
   background-color: #d5ecea;
   background-image:url('../img/completed-icon.png');
   background-repeat:no-repeat;
-  background-position:50px 50%;
+  background-position:15px 50%;
+  @include core-19;
+  padding-left: 2.5em;
 }
 .current .accordion-header{
   background-color: #28a197;
   color: #fff;
-  font-weight: bold;
-  margin-bottom: 1em;
 }
 .accordion-content,
 .accordion-confirm{
   background-color: white;
-  padding: 0 5em;
+  /*padding: 0 5em;*/
+  padding: 0 2em;
 }
 
 .complete .accordion-confirm{
@@ -85,15 +106,15 @@
 }
 .accordion-confirm .edit{
 float: right;
-margin: 0em -4.8em 0;
+margin: 0em -1.7em 0;
 padding: 0 0.7em;
 }
 .accordion-content {
   position: relative;
 }
 .confirm-text {
+  @include core-19;
 padding-right: 2em;
-font-weight: bold;
 }
 
 .accordion .form-actions{
@@ -115,7 +136,6 @@ padding: 1em;
   margin-left: -3em;
   text-align: right;
   margin-right: 0.5em;
-  font-weight: normal;
 }
 
 .secondary-action .button{
@@ -173,19 +193,9 @@ padding: 1em;
  * ================================
  */
 
-#popup.form{
-  background-color: white;
-  padding: 1em 1.5em 1em 1.5em;
-  min-height: 26em;
-  position: absolute;
-  width: 60%;
-  position: absolute; /* popup scrolls with page, so we can have long popups */
-}
 
-#popup.form h2{
-  font-size: 1.75em;
-  font-weight:normal;
-  margin:0 0 1em 0;
+#popup.form{
+  @include popup();
 }
 
 #popup.form .content ul{
@@ -201,111 +211,11 @@ input.small-number{
   min-width: 2em;
 }
 
-fieldset legend{
-  font-weight: bold;
-  text-transform: uppercase;
-  padding-right: 0.5em;
-  position: relative;
-  top: 1.5em;
-}
 
-/*
-fieldset{
-  margin-top: 1em;
-}
-fieldset.vertically-aligned label{
-  margin-top: 1em;
-  display: block;
-}
-fieldset.vertically-aligned input,
-fieldset.left-aligned input{
-  margin-left: 0;
-  vertical-align: text-bottom;
-}
-
-fieldset.left-aligned{
-  overflow: auto;
-}
-fieldset.left-aligned label,
-fieldset.left-aligned input{
-  float: left;
-  margin-top: 0.2em;
-}
-fieldset.left-aligned label{
-  width: 7em;
-  margin-left: -7em;
-  clear: both;
-}
-form .row{
-  overflow: hidden;
-  padding-top: 1em;
-  padding-left: 7em;
-}
-input.postcode{
-  width: 5em;
-  min-width: 5em;
-}
-input.small-number{
-  width: 2em;
-  min-width: 2em;
-}
-
-fieldset legend{
-  font-weight: bold;
-  text-transform: uppercase;
-  padding-right: 0.5em;
-}
-*/
-
-/* ==================================================
- * Simple Inline Expansion
- * ================================================== */
-
- /* A styled-up version of the details/summary HTML5 elements
-  * For the benefits or otherwise of details/summary, see:
-  * http://html5doctor.com/the-details-and-summary-elements/
-  * http://mathiasbynens.be/notes/html5-details-jquery
-  */
-
-details{
-  margin:  0 -1em 1em -1em;
-  padding: 0.7em 1em 1em 1em;
-}
-details summary{
-  color: #2E3191;
-  cursor: pointer;
-  font-size: 112.5%;
-  display: inline;
-  text-decoration: underline;
-}
-details summary:hover{
-  color: #1D97FF;
-}
-
-/* Open state */
-details[open]{
-  background-color: #f2f2f2;
-}
-details[open] > summary{
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-}
-details summary:focus{
-  outline: none;
-}
-
-
-#popup.form details summary{
-  /*color: #2E3191;
-  cursor: pointer;
-  display: inline;
-  text-decoration: underline;
-  margin: 0 0 0 7em;
-  padding: 0;*/
-}
-
-
+/* ================================================================
+ * ADDRESS LIST
+ * ================================================================
+ */
 
 .address-list ul{
   background: #fff;
@@ -329,327 +239,27 @@ background-color:#ccc !important
 background-color:rgba(0,0,0,.5) !important;
 }
 
-
 /* ================================================================
- * PROGRESS BAR
+ * FORMS
  * ================================================================
- * 
- * Based on ERTP design, but this one scales and doesn't use images
  */
 
- .progress-bar{
-  counter-reset:li;       /* Initiate a counter */
-  list-style-type: none;  /* Remove default numerals */
-  margin-bottom: 2em;
-  text-align: center;
+
+.form{
+  @include form;
 }
-.progress-bar li{
-  background: #ebebeb;
-  border-radius: 20px;
-  color: #666;
-  display: inline-block;
-  padding: 7px 33px;
-  position: relative;
+.form form{
+  @include panel;
 }
-.progress-bar li:before,  /* Grey circle */
-.progress-bar li:after{   /* White border around grey circle */
-  position: absolute;
-  float: left;
-  width: 27px;
-  height: 27px;
-  top: -3px;
-}
-.progress-bar li:before {
-  background-color: #ebebeb;
-  border: 10px solid #ebebeb;
-  border-radius: 30px;
-  color: #666;
-  content:counter(li);  /* Use the counter as content */
-  counter-increment:li; /* Increment the counter by 1 */
-  left: -18px;
-  z-index: 99999;
-}
-.progress-bar li.current:before,
-.progress-bar li.current {
-  background: #666;
-  border-color: #666;
-  color: #fff;
-}
-.progress-bar li:after {
-  background-color: #fff;
-  border: 10px solid #fff;
-  border-radius: 32px;
-  content: " ";
-  left: -21px;
+
+.accordion-form{
+  margin-top: 2em;
+  border: 1px solid #28A197;
 }
 
 
-
-/* ===============================
- * FORMS FRAMEWORK
- * ===============================
- *
- * Stripped down subset of Twitter Bootstrap classes.
- * The idea being that you can mark up your forms HTML as per Bootstrap
- * and it'll behave broadly as expected.
- */
-
-label {
-  display: block;
-  margin-bottom: 0.5em;
-  font-size: 1.1875em
-}
-select,
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-.uneditable-input {
-  display: inline-block;
-  /*height: 18px;
-  padding: 4px;
-  margin-bottom: 9px;
-  font-size: 13px;
-  line-height: 18px;
-  color: #555555;*/
-}
-textarea {
-  min-height: 10em;
-  height: auto;
-  padding: 0.25em 0.5em;
-}
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-input[type="radio"],
-input[type="checkbox"] {
-  width: auto;
-}
-select[multiple],
-select[size] {
-  height: auto;
-}
-.radio,
-.checkbox {
-  min-height: 1em;
-  padding-left: 1em;
-  line-height: 0.8em;
-  margin-bottom:  1em;
-}
-
-label.radio:hover,
-label.checkbox:hover{
-  cursor: pointer;
-  /*text-decoration: underline;*/
-}
-label.radio.checked:hover{
-  cursor: default;
-  text-decoration: none;
-}
-
-.radio input[type="radio"],
-.checkbox input[type="checkbox"] {
-  float: left;
-  margin-left: -18px;
-  margin-right: 0.5em;
-}
-.controls > .radio:first-child,
-.controls > .checkbox:first-child {
-  /*padding-top: 5px;*/
-}
-.radio.inline,
-.checkbox.inline {
-  display: inline-block;
-  padding-top: 5px;
-  margin-bottom: 0;
-  vertical-align: middle;
-}
-.radio.inline + .radio.inline,
-.checkbox.inline + .checkbox.inline {
-  margin-left: 10px;
-}
-.input-mini {
-  width: 60px;
-}
-.input-small {
-  width: 90px;
-}
-.input-medium {
-  width: 150px;
-}
-.input-large {
-  width: 210px;
-}
-.input-xlarge {
-  width: 270px;
-}
-.input-xxlarge {
-  /*width: 530px;*/
-  width: 28.3em;
-}
-
-input,
-textarea,
-.uneditable-input {
-  margin-left: 0;
-  margin-bottom: 0.5em;
-}
-
-input[disabled],
-select[disabled],
-textarea[disabled],
-input[readonly],
-select[readonly],
-textarea[readonly] {
-  cursor: not-allowed;
-  background-color: #eeeeee;
-  border-color: #ddd;
-}
-input[type="radio"][disabled],
-input[type="checkbox"][disabled],
-input[type="radio"][readonly],
-input[type="checkbox"][readonly] {
-  background-color: transparent;
-}
-
-.help-block,
-.help-inline {
-  color: #555555;
-}
-.help-block {
-  display: block;
-  margin-bottom: 9px;
-}
-.help-inline {
-  display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-
-  *zoom: 1;
-  vertical-align: middle;
-  padding-left: 5px;
-}
-
-.form-search input,
-.form-inline input,
-.form-horizontal input,
-.form-search textarea,
-.form-inline textarea,
-.form-horizontal textarea,
-.form-search select,
-.form-inline select,
-.form-horizontal select,
-.form-search .help-inline,
-.form-inline .help-inline,
-.form-horizontal .help-inline,
-.form-search .uneditable-input,
-.form-inline .uneditable-input,
-.form-horizontal .uneditable-input,
-.form-search .input-prepend,
-.form-inline .input-prepend,
-.form-horizontal .input-prepend,
-.form-search .input-append,
-.form-inline .input-append,
-.form-horizontal .input-append {
-  display: inline-block;
-  *display: inline;
-  /* IE7 inline-block hack */
-
-  *zoom: 1;
-  margin-bottom: 0;
-}
-
-.form-search .hide,
-.form-inline .hide,
-.form-horizontal .hide {
-  display: none;
-}
-.form-search label,
-.form-inline label {
-  display: inline-block;
-}
-.form-search .input-append,
-.form-inline .input-append,
-.form-search .input-prepend,
-.form-inline .input-prepend {
-  margin-bottom: 0;
-}
-.form-search .radio,
-.form-search .checkbox,
-.form-inline .radio,
-.form-inline .checkbox {
-  padding-left: 0;
-  margin-bottom: 0;
-  vertical-align: middle;
-}
-.form-search .radio input[type="radio"],
-.form-search .checkbox input[type="checkbox"],
-.form-inline .radio input[type="radio"],
-.form-inline .checkbox input[type="checkbox"] {
-  float: left;
-  margin-right: 3px;
-  margin-left: 0;
-}
-.control-group {
-  margin-bottom: 9px;
-}
-legend + .control-group {
-  margin-top: 1em;
-  -webkit-margin-top-collapse: separate;
-}
-.form-horizontal .control-group {
-  /*margin-bottom: 1em;*/
-  *zoom: 1;
-}
-.form-horizontal .control-group:before,
-.form-horizontal .control-group:after {
-  display: table;
-  content: "";
-}
-.form-horizontal .control-group:after {
-  clear: both;
-}
-.form-horizontal .control-label {
-  float: left;
-  width: 140px;
-  /*padding-top: 5px;*/
-  margin-bottom: 0;
-  text-align: right;
-
-}
-.form-horizontal .controls {
-  *display: inline-block;
-  *padding-left: 20px;
-  margin-left: 160px;
-  *margin-left: 0;
-}
-.form-horizontal .controls:first-child {
-  *padding-left: 160px;
-}
-.form-horizontal .help-block {
-  margin-top: 9px;
-  margin-bottom: 0;
-}
-.form-horizontal .form-actions {
-  padding-left: 160px;
-}
-
-.form-horizontal input[type="text"], 
-.form-horizontal input[type="search"]{
-  margin: 0;
-}
-
+/* SHOW / HIDE */
+@include details-and-summary(highlighted);
 
 /* ===============================
  * Progressive disclosure in forms
@@ -719,22 +329,13 @@ margin: 0.2em -1em 0 -1em;
   text-decoration: none;
 }
 
-/* Replicate intro style for pages without 'inner' tag */
-article.group > .intro {
-margin: 0 5em;
-}
+
 
 /* Adjust label width on Sign in popup */
 #sign-in .form-horizontal .control-label{
   width: 146px;
 }
 
-.intro p:first-child { /* Need to remove those 'article' specifiers */
-margin-top: 0;
-}
-.intro p:last-child { /* Need to remove those 'article' specifiers */
-margin-bottom: 0;
-}
 
 fieldset.intro{
   margin-bottom: 1em;
@@ -999,123 +600,38 @@ BAD: You may need to style left margin and width of individual tooltips
   margin: 0;
 }
 
-/* ==================================================
- * Simple Inline Expansion
- * ================================================== */
 
- /* A styled-up version of the details/summary HTML5 elements
-  * For the benefits or otherwise of details/summary, see:
-  * http://html5doctor.com/the-details-and-summary-elements/
-  * http://mathiasbynens.be/notes/html5-details-jquery
-  */
-
-details{
-  margin:  0 -1em 0.5em -1em;
-  padding: 0.5em 1em 0em 1em;
-}
-details summary{
-  color: #2E3191;
-  cursor: pointer;
-  /*font-size: 112.5%;*/
-  display: inline;
-  text-decoration: underline;
-}
-details summary:hover{
-  color: #1D97FF;
-}
-
-/* Open state */
-details[open]{
-  background-color: #e8f0f0;
-  margin: 0 -1em 1em -1em;
-  padding: 0.5em 1em 0.5em 1em;
-}
-details[open] > summary{
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-}
-details summary:focus{
-  outline: none;
-}
-details li{
-  margin-left: 1em;
-}
+/* PROCESS OVERVIEW */
 
 .process.overview{
-  display: table;
-  padding: 1em;
-  margin: 0 -6em; /* extend panel to edges of wrapper */
-  border-collapse: separate;
-  border-spacing: 1em;
+  @include regular-grid(3, 16em);
 }
-.process{
-  counter-reset:li; /* Initiate a counter */
-  list-style-type: none;
-}
+
 .process.overview > li{
-  background-color: #e8f0f0;
+  background-color: $grey-95;
   display: table-cell;
 }
-.process > li:before {
-  /* Replace standard numerals with styled ones*/
 
-  content:counter(li); /* Use the counter as content */
-  counter-increment:li; /* Increment the counter by 1 */
-  float: left;
-  font-size: 1em;
-  font-weight: bold;
-  padding: 0.4em 0.7em;
-  margin-top: -0.16em;
-}
 .process img{
   margin: 1em;
   max-width: 9em;
   width: 100%;
   margin: 1em;
 }
-.process.overview > li:last-child{
-  border-right: 0;
+.process li h3{
+background-color: $green-25;
+margin: 0 0 1em 0;
+padding: 0.5em 1em;
 }
-.process > li h3{
-font-size: 0.8em;
-background-color: #95D0CB;
-margin: 0 0 0 -0.4em;
-padding: 0.8em 0.5em 0.8em 2.7em;
-font-weight: bold;
-text-transform: uppercase;
-}
-.process.overview h3 em{
-  display: block;
-}
-.process ul {
-  padding-left: 0;
-}
-.process ul li{
-  list-style-image: none;
-  list-style-type: none;
-  padding-left: 0;
-}
-.process.overview ul li, 
+
 .process.overview figure{
   text-align: center;
+  padding: 0 0.5em;
 }
 
-.process > li.disabled h3{
-  background-color: #FFF;
-  color: #083640;
-}
-.process > li.disabled:before {
-  background-color: #083640;
-}
-
-.process figcaption{
-  font-size: 0.9em
-}
 .process figcaption a{
   display: block;
 }
-
 .process .button{
   display: block;
   width: 75%;
@@ -1144,4 +660,13 @@ text-transform: uppercase;
 .form-download a {
   color: #000;
   display: block;
+}
+
+
+
+
+
+
+#sign-in-reminder{
+  padding-left: 0;
 }

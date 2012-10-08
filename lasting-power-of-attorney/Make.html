@@ -1,121 +1,65 @@
 ---
-layout: default-lpa-2
+layout: lpa-alpha
 title: Make a lasting power of attorney
-categories: service
+categories: Service
 signed-in: no
+template: wide
+css: assets/css/register-account.css
+js: assets/js/behaviours.js
 ---
-<link media="screen" type="text/css" rel="stylesheet" href="assets/css/styles.css" />
-<script src="assets/js/behaviours.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(function() {
-  // Trigger sign-in popup
-  $("#sign-in-action").click(function() {
-   BetaPopup.popup($("#sign-in").removeClass('hidden'), "form", $(this));
-   return false;
-  });
 
-  $('#registration-button').click(function() {
-    $("#message").addClass("hidden");
-    $("#confirmation").removeClass("hidden");
-    return false;
-  });
-});
-</script>
-
-<p>Making an LPA is a three step process&hellip;</p>
+<p>Making a lasting power of attorney (LPA) is a three step process.</p>
 
 <ol class="process overview">
   <li>
-    <h3>Create your <abbr>LPA</abbr></h3>
+    <h3>1. Create your <abbr>LPA</abbr></h3>
     <figure>
       <img src="images/Print-out.png" />
       <figcaption>
-        Create and print your <abbr>LPA</abbr> with the online tool
-        <a href="how-details.html">Find out more</a>
+        Create your <abbr>LPA</abbr> with the online tool and print it out
+        <a href="how-details.html" title="Find out more about creating an LPA">Find out more</a>
       </figcaption>
     </figure>
-    <a id="sign-in-action" class="button" href="2.choose-LPA-type.html">Create your <abbr>LPA</abbr></a>
+    <!--<a id="sign-in-action" class="button" href="2.choose-LPA-type.html">Create your <abbr>LPA</abbr></a>-->
+    <a class="button" href="register-account.html">Create your <abbr>LPA</abbr></a>
   </li>
   <li>
-    <h3>Sign your <abbr>LPA</abbr></h3>
+    <h3>2. Sign your <abbr>LPA</abbr></h3>
     <figure>
       <img src="images/Get-signatures.png" />
-      <figcaption>Collect signatures from the required people</figcaption>
+      <figcaption>Collect signatures from the required people
+    <a href="Guide.html" title="Find out more about signing an LPA">Find out more</a></figcaption>
     </figure>
-    <ul>
-      <li><a href="Guide.html">Find out more</a></li>
-    </ul>
   </li>
   <li>
-    <h3>Register your <abbr>LPA</abbr></h3>
+    <h3>3. Register your <abbr>LPA</abbr></h3>
     <figure>
       <img src="images/Post-and-pay.png" />
-      <figcaption>Post the <abbr>LPA</abbr> and pay the registration fee online</figcaption>
+      <figcaption>Post the signed <abbr>LPA</abbr> and register it online<a href="Guide.html" title="Find out more about registering an LPA">Find out more</a></figcaption>
     </figure>
-    <ul>
-      <li><a href="Guide.html">Find out more</a></li>
-      <li><a class="button" href="Register.enter-details.html">Register your <abbr>LPA</abbr></a></li>
-    </ul>
+    <a class="button" href="Register.enter-details.html">Register your <abbr>LPA</abbr></a>
   </li>
 </ol>
 
 <h2>What happens next?</h2>
-<p>After a six week waiting period your LPA will be returned to you registered. It's then ready for use.</p>
+<p>There is a minimum six week waiting period before your LPA can be registered and returned to you. It will then be ready for use.</p>
 
 <h3>Why the wait?</h3>
-<p>The six weeks is to give people an opportunity to raise any concerns about the LPA (for example, if they think you're being coerced into it, or that a fraud is being committed). You'll be asked when you create your LPA who you'd like to tell about it.</p>
-<!-- START OF SIGN-IN POP-UP -->
-<div id="sign-in" class="hidden" >
-  <p class="close"><a href="#" title="Click or press escape to close">Close</a></p>
-  <div class="inner">
-    <div id="message" class="content">
-      <h2>Before you start...</h2>
-        <div class="intro">
-      <p>Before you can use this service we need an email address and password from you.
-        You'll be able to use these details to save your progress part-way through and return later if you need to.</p>
-        
-        <p>(If you've already done this, please <strong><a href="#">Sign in here</a></strong>)</p>
-      </div>
+<p>
+The minimum six week waiting period is to give people an opportunity to raise any
+concerns about the LPA (for example, if they think you're being forced into making
+it, or that a fraud has been committed). You will be asked when you create your LPA
+who you would like to tell about it.
+</p>
+<p>It also gives the Office of the Public Guardian time to check that the LPA has been made correctly and that there is nothing that would make it invalid, or that should be corrected before it can be registered.</p>
 
-      <br />
-        <form class="form-horizontal">
-          <fieldset>
-            <div class="control-group">
-              <label class="control-label" type="email">Email address</label>
-              <div class="controls">
-                <input type="text" />
-              </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label" type="email">Create password</label>
-              <div class="controls">
-                <input type="text" />
-              </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label" type="email">Repeat password</label>
-              <div class="controls">
-                <input type="text" />
-              </div>
-            </div>
-          </fieldset>
-          <div class="form-actions">
-            <button class="medium button" id="registration-button">Submit</button>
-          </div>
-        </form>
+<h3>How much does it cost?</h3>
+<p>The fee to process and register an LPA is &pound;130 for each LPA. People on very low incomes and people who receive certain benefits may be able to pay a lower fee (the online tool will take you through steps to work out if you qualify).</p>
 
-  <p>Please note, a lasting power of attorney is governed by the laws of England and Wales and can only be made for someone who is over 18 and who currently has mental capacity.</p>
-    <p>If you're making one on behalf of someone else then you must also be over 18.</p>
-
-    </div>
-    <div class="hidden content" id="confirmation">
-      <h2>Thank you</h2>
-      <p>We've sent you a confirmation email. Please follow the link in it to continue.</p>
-      <a class="medium button">Close</a>
-
-      <p>[the link in the email will <a href="Create.enter-details.html">take the user here</a>]</p>
-    </div>
-  </div>
-</div>
+<h3>Help and guidance</h3>
+<p>
+You can read it in-depth guidance to help you make your LPA at any time while using
+this tool.
+</p>
 
 

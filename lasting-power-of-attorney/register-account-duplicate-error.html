@@ -1,0 +1,72 @@
+---
+layout: lpa-alpha
+title: Create a lasting power of attorney
+categories: Service
+signed-in: no
+template: wide
+css: assets/css/register-account.css
+js: assets/js/behaviours.js
+---
+
+<section class="form">
+  <div class="validation-summary">
+    <h1>This email address has already been used to sign up</h1>
+    <p>Please use another email address, or sign-in</p>
+  </div>
+
+<p class="group"><a class="button" href="sign-in.html">Sign in</a> &nbsp; <a href="forgot-password.html">Forgotten your password?</a></p>
+
+  <form action="register-account-confirm.html">  
+  <div class="inner">
+    <fieldset>
+      <legend>About you</legend>
+      <p class="group">
+        <label for="title">Title</label>
+        <select id="title">
+          <option value="Mr">Mr.</option>
+          <option value="Mrs">Mrs.</option>
+          <option value="Miss">Miss</option>
+          <option value="Ms.">Ms.</option>
+          <option value="Dr.">Dr.</option>
+          <option value="Other">Other</option>
+        </select>
+      </p>
+      <p class="group">
+        <label for="first-name">First names</label>
+        <input id="first-name" type="text" class="name">
+      </p>
+      <p class="group">
+        <label for="last-name">Last name</label>
+        <input id="last-name" type="text" class="name">
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Your account details</legend>
+      <p class="group">
+        <label for="email">Email address</label>
+        <input type="text" id="email" class="email" />
+      </p>
+      <p class="group">
+        <label for="password1">Create password</label>
+        <input type="text" id="password1" class="password" />
+      </p>
+      <p class="group">
+        <label for="password2" >Repeat password</label>
+        <input type="text" id="password2" class="password" />
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Terms</legend>
+      <p class="option group">
+        <label for="terms"><input id="terms" type="checkbox"> I understand that Lasting Powers of Attorney are governed by the laws of England and Wales and can only be made by people aged 18 years or older</label>
+      </p>
+    </fieldset>
+    <p class="action group">
+      <input type="submit" class="button" id="registration-button" value="Sign up">
+    </p>
+</div>
+  </form>
+</section>
+
+
+

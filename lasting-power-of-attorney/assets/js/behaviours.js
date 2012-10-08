@@ -17,10 +17,8 @@ $(function() {
 	// Move to next part
 	$(".next-part").click(function() {
       $(this).closest(".accordion-item").removeClass('current').addClass('complete')
-      .next(".accordion-item").slideDown().addClass('current');
-      return false;
+      .next(".accordion-item").addClass('current');
+
     });
-
-
 
 });

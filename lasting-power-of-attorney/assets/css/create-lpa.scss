@@ -1,0 +1,494 @@
+---
+---
+
+@import "colours";
+@import "typography";
+@import "design-patterns/_show-hide";
+@import "design-patterns/_regular-grid";
+@import "design-patterns/_popups";
+@import "design-patterns/_forms";
+@import "design-patterns/progress-indicator";
+
+
+header.page-header hgroup {
+  margin-right: 0 /* Extend page header out to end of search button */
+}
+
+@include progress-indicator;
+
+
+
+/* ===========================================================
+ * ACCORDION
+ * ===========================================================
+ *
+ * For doing 'stacked' forms */
+
+
+ .step-intro{
+  @include panel;
+ }
+
+.accordion{
+  margin-bottom: 2em;
+}
+
+.accordion-header {
+  background-color: #e3e3e3;
+  padding:0.5em 1em;
+  margin: 0;
+  color: #333;
+}
+.accordion-item {
+  background-color: white;
+  &.current{
+    border: 1px solid #28A197;
+  }
+}
+
+.accordion-item .accordion-content{
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* Hide all accordion content by default */
+
+.js-enabled .accordion-item .accordion-confirm{
+  display: none;
+  background-color: $grey-95;
+  background-image:url('../img/progress-tick.png');
+  background-repeat:no-repeat;
+  background-position:10px 50%;
+  padding: 0.5em 2.5em 0.5em 2em;
+}
+
+.accordion-item.complete{
+  display: block;
+}
+/* Specify which content gets show for each accordion state */
+.accordion-item.complete .accordion-confirm,
+.accordion-item.current .accordion-content{
+  /*-webkit-transition: max-height 1s ease-in-out;*/
+  display: block;
+  visibility: visible;
+
+  max-height: 600em;
+}
+/* As above, but for the 'no-future' variant (hides future parts) */
+.js-enabled .accordion.no-future .accordion-header{
+  display: none;
+}
+.accordion.no-future .complete  .accordion-header{
+  display: none;
+}
+.accordion.no-future .current .accordion-header{
+  display: block;
+}
+.complete .accordion-header{
+  background-color: #d5ecea;
+  background-image:url('../img/completed-icon.png');
+  background-repeat:no-repeat;
+  background-position:15px 50%;
+  @include core-19;
+  padding-left: 2.5em;
+}
+.current .accordion-header{
+  background-color: #28a197;
+  color: #fff;
+}
+.accordion-content,
+.accordion-confirm{
+  background-color: white;
+  /*padding: 0 5em;*/
+  padding: 0 2em;
+}
+
+.complete .accordion-confirm{
+  margin-bottom: 0.5em;
+}
+.accordion-confirm .edit{
+float: right;
+margin: 0em -1.7em 0;
+padding: 0 0.7em;
+}
+.accordion-content {
+  position: relative;
+}
+.confirm-text {
+  @include core-19;
+padding-right: 2em;
+}
+
+.added-attorney{
+background-color: #E8F0F0;
+margin: 0 -1.2em 1em -1.2em;
+padding: 1em;
+}
+.added-attorney .edit{
+  float: right;
+  margin-left: 0.5em;
+}
+.added-attorney .label{
+  display: inline-block;
+  width: 10em;
+  margin-left: -3em;
+  text-align: right;
+  margin-right: 0.5em;
+}
+
+.secondary-action .button{
+  background-color: #E1E8E8;
+  color: #083640;
+  -webkit-box-shadow: 0 4px 0 #AAA, 0 8px 10px rgba(0, 0, 0, .05);
+  -moz-box-shadow: 0 4px 0 #AAA, 0 8px 10px rgba(0,0,0,.05);
+  box-shadow: 0 3px 0 #AAA, 0 8px 10px rgba(0, 0, 0, 0.05);
+}
+.secondary-action .button:hover{
+  background-color: #e3e3e3;
+}
+
+.form-actions{
+  list-style-image: none;
+  padding: 1.4em 1em 1.7em 1em;
+  margin: 0 -2em;
+  background-color: #f9f9f9;
+}
+.form-actions li{
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 -0.5em 0;
+}
+.form-actions li.secondary-action{
+  float: right;
+  margin: -1em 0 0 0.5em;
+}
+
+
+/* ===============================
+ * BULLETS
+ * ===============================
+ */
+
+/* '+' symbol */
+.add:before{
+  background-color: #28a197;
+  color: #FFF;
+  content:"+";
+  float: left;
+  font-weight: bold;
+  line-height: 0.9em;
+  padding: 0 0.3em 0.3em 0.3em;
+  margin: 0.1em 0.5em 0 0;
+}
+
+.help-block.examples{
+  float: right;
+  margin: -1.3em -0.5em 0 0;
+}
+
+/* ================================
+ * POP-UP FORM STYLES
+ * ================================
+ */
+
+
+#popup.form{
+  @include popup();
+}
+
+#popup.form .content ul{
+  margin: 0;
+}
+
+input.postcode{
+  width: 5em;
+  min-width: 5em;
+}
+input.small-number{
+  width: 2em;
+  min-width: 2em;
+}
+
+
+/* ================================================================
+ * ADDRESS LIST
+ * ================================================================
+ */
+
+.address-list ul{
+  background: #fff;
+  max-height: 10em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border: 1px solid #BBB;
+}
+.address-list li{
+  padding: 0 0 0 0.5em;
+}
+
+.address-list ul::-webkit-scrollbar {
+-webkit-appearance:none !important;
+width:10px !important
+}
+.address-list ul::-webkit-scrollbar {
+background-color:#ccc !important
+}
+.address-list ul::-webkit-scrollbar-thumb {
+background-color:rgba(0,0,0,.5) !important;
+}
+
+/* ================================================================
+ * FORMS
+ * ================================================================
+ */
+
+
+.form{
+  @include form(left);
+}
+
+.accordion-form{
+  margin-top: 2em;
+}
+
+
+/* SHOW / HIDE */
+@include details-and-summary(highlighted);
+
+/* ===============================
+ * Progressive disclosure in forms
+ * ===============================
+ *
+ * On occasion you may want form elements to appear if the users selects
+ * a particular radio button or checkbox. 
+ */
+
+label details{
+  padding: 0;
+  margin: 0;
+}
+label details summary{
+  text-decoration: none;
+  color: #333;
+  padding: 0;
+  margin:0;
+  font-weight: 300;
+  font-size: 1em;
+  display: block;
+ }
+label details summary:hover{
+  color: #333;
+  font-weight: 300;
+}
+ label details summary::-webkit-details-marker { 
+  display:none; 
+}
+label details[open]{
+  background-color: transparent;
+  padding-top: 0;
+  margin-right: -1.5em;
+  margin-bottom: 0;
+ }
+label details[open] summary{
+  margin-bottom: 0.5em;
+  font-weight: 300;
+ }
+
+
+details textarea {
+margin: 0.2em -1em 0 -1em;
+}
+
+
+
+
+
+fieldset.intro{
+  margin-bottom: 1em;
+}
+
+detail[open] > summary.button{
+  color: white;
+  font-weight: normal;
+}
+summary.button::-webkit-details-marker { display:none; }
+
+.link-style{
+  color: #2E3191;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.link-style:hover{
+  color: #2E8ACA;
+}
+
+.example {
+background: none repeat scroll 0 0 #E7EBDA;
+margin: 0.75em -1em;
+padding: 0.5em 1em;
+}
+
+
+
+
+/* REGISTRATION STYLES */
+
+.capture-dates .controls label{
+  margin-top: -2em;
+}
+.capture-dates h3{
+  font-size: 1.1875em;
+}
+.capture-dates .controls label,
+.capture-dates h3{
+  font-weight: bold;
+}
+.capture-dates .control-label{
+  text-align: left;
+}
+.card-images{
+  display: inline-block;
+  line-height: 4em;
+  height: 2em;
+  margin: -1em 0 0 0.5em;
+}
+.card-images img{
+  width: 2em;
+  margin-top: 0.5em;
+}
+
+
+
+/* EMPHASISED RADIOS & CHECKBOXES
+---------------------------------
+
+*/
+
+.emphasised input[type="checkbox"], .emphasised input[type="radio"] {
+  margin-right: 0.5em;
+  position: relative;
+}
+.emphasised.option.group label{
+  display: block;
+  padding: 0.5em 0 0.5em 1em;
+  margin: 0 -0.8em 0.25em -0.8em;
+}
+.emphasised label.radio:hover,
+.emphasised label.checkbox:hover{
+  background-color: #f2f2f2;
+}
+.checked{
+  background-color: #f2f2f2;
+}
+.radio-action{
+  float: right;
+  font-size: 1rem;
+  margin-top: -2.7em;
+  padding-right: 1em;
+}
+
+
+
+/* HELP SYSTEM */
+
+#popup.help-system{
+  background-color: #fff;
+  padding: 1em 0 1em 1.5em;
+  /*width:60%;*/
+  min-height: 26em;
+  position: absolute; /* popup scrolls with page, so we can have long popups */
+}
+
+#popup.help-system h2{
+  font-size: 1.75em;
+  font-weight:normal;
+  margin:0;
+}
+#popup.help-system .content{
+  float: left;
+  width: 70%;
+  padding-right: 0em;
+}
+#popup.help-system nav{
+  float: left;
+  margin: 0 -1em 0 1em;
+  width: 30%;
+}
+#popup.help-system nav{
+  margin-top:-1em;
+  /*font-size: 0.8em;*/
+}
+
+#popup.help-system nav ul{
+  margin: 0;
+  list-style-type: none;
+}
+
+#popup.help-system nav > *{
+  padding-left: 2em;
+}
+
+#popup.help-system nav li{
+  margin: 0;
+  padding: 0.5em 0;
+  font-weight: bold;
+}
+#popup.help-system nav .current{
+  background: #e8f0f0;
+  position: relative;
+}
+#popup.help-system nav .current:before {
+  width: 0;
+  height: 0;
+  content: " ";
+  border: 1.25em solid transparent;
+  border-right-color: #e8f0f0;
+  position: absolute;
+  left: -2.5em;
+  top: 0;
+
+}
+#popup.help-system nav a{
+  text-decoration: none;
+}
+#popup.help-system nav a:hover{
+  text-decoration: underline;
+}
+#popup.help-system nav .current a{
+  color: #333;
+}
+
+#popup.help-system .content ul{
+  margin: 0;
+}
+
+
+
+
+/* FORM DOWNLOAD */
+
+/* Need to change the styles in application.css so they apply to elements outside of the 
+   application div (eg. popups) */
+
+.form-download {
+  background-color:#d5e8f3;
+  margin: 1em -1em 1.5em -1em;
+  padding: 0.25em 1em 0.25em 1em;
+}
+.form-download{
+  background: url(https://d17tffe05zdvwj.cloudfront.net/static/icon-file-download-00b5dbb3ea8a18c444a08497b3d03d56.png) no-repeat scroll 98% 1em #D5E8F3;
+}
+
+.form-download p {
+  /*margin: 0 0;*/
+  padding-right:3em;
+}
+.form-download a {
+  color: #000;
+  display: block;
+}
+
+#sign-in-reminder{
+  padding-left: 0;
+}
