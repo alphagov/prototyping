@@ -26,6 +26,12 @@
         color: #BBB ;
       }
   }
+
+  textarea{  
+    min-height: 10em;
+    height: auto;
+  }
+
   // Labels
   label{
     color: $charcoal-grey;
@@ -68,8 +74,8 @@
   }
 
   // Action buttons
-  .action.group {
-    padding-top: 1.5em;
+  .action.group .button {
+    margin-right: 0.5em;
   }
 
   .inline.option label{
@@ -137,7 +143,7 @@
   .validation{
     background-color: lighten($mellow-red, 45%);
     border-left: 3px solid $mellow-red;
-    margin: 0 0 -0.5em -1em;
+    margin: 0 -1em;
     padding: 0.75em 0 1em 1em;
     .validation-message{
       color: $mellow-red;
@@ -156,7 +162,8 @@
   $medium:  8em;
   $small:   5em;
 
-  input.email       {width: $large;}
+  input.password    {width: $large;}
+  input.email       {width: $x-large;}
   input.name        {width: $large;}
   input.url         {width: $full-width;}
   input.full-name   {width: $x-large;}
@@ -188,7 +195,7 @@
     }
     // Maintain help text and button alignment with form fields with side-aligned labels
     .help{ margin-left: $label-width + 3.3em; }
-    .action.group { padding-left: $label-width; }
+    .action.group { padding-left: $label-width + 0.5em; }
 
     input[type=text],
     select,
@@ -220,9 +227,10 @@
           }
         }
         // Shift controls up
+        // To do: Make this work properly for non-inline option groups
           .inline {
             .group,
-            &.inline.option label{
+            &.option label{
               margin-top: -1.5em;
             }        
             .group{
