@@ -4,10 +4,39 @@
 @import "frontend_toolkit";
 @import "design_patterns";
 
+@include from-dept;
+@include progress-indicator;
+@include details-and-summary(highlighted);
+
+
 header.page-header hgroup {
   margin-right: 0 /* Extend page header out to end of search button */
 }
 
+nav.progress-indicator{
+	margin:0 0 2.5em 0;
+}
 
-@include from-dept;
-@include progress-indicator($purple, $green, $white);
+.get-started{
+	text-align:left;
+}
+
+.get-started .button .call-to-action, .get-started .button.big, #search .button.big{
+	background-image:url(https://d17tffe05zdvwj.cloudfront.net/static/icon-pointer-b8238d34ea8adcdca7f1963a9a19a5a0.png);
+}
+
+details summary {
+font-family: "nta", "GDS-Regular", sans-serif;
+font-size: 19px;
+font-size: 1.9rem;
+line-height: 1.31579;
+font-weight: 400;
+letter-spacing: 0;
+text-transform: none;
+color: #2E3191;
+cursor: pointer;
+display: block;
+text-decoration: underline;
+margin-bottom: 0.5em;
+margin-top: 0.15em;
+}
