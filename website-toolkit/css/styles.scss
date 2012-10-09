@@ -152,7 +152,15 @@ article dd{
 #form-example-2.left { @include form(left, 7.5em, $green) }
 #form-example-2.right { @include form(right, 7.5em, $green) }
 
+/* Accordion form */
 
+
+@include accordion-form;
+
+// Section intro panels
+.accordion .section .intro{
+  @include panel;
+}
 
 
 
