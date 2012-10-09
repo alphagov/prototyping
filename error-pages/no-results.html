@@ -1,17 +1,20 @@
 ---
-layout: search
-css: css/search-results.css
+layout: default
+title: Sorry, but there are no results for [search term]
+css: error.css
 ---
 
+<p>Please try changing the words you are searching for, or visit the support pages if you need more assistance.</p>
 
-    <article>
-      <p>Sorry, your search for - <strong>csdahjglhjgclh</strong> returned no results.</p>
+<h2>Search GOV.UK</h2>
+<form class="search-box" action="/search" method="get" role="search">
+  <p>
+    <label for="main_autocomplete2" class="visuallyhidden">Try searching</label>
+    <input type="text" id="main_autocomplete2" value="" placeholder="Enter search text">
+    <input type="submit" value="Search" class="button">
+  </p>
+</form>
 
-      <p>Please try another search in the search box above or try one of the popular searches.</p>
-      <div class="top-issues">
-  <h2>Popular searches</h2>
-  <ul>
-    <li><a href="">What is GOV.UK?</a></li>
-    <li><a href="">What has happened to Directgov and Business Link?</a></li>
-    <li><a href="">Have you got printed brochures with the information on your site?</a></li>
-  </ul>
+<h2>Browse GOV.UK</h2>
+
+<p><a href="http://gov.uk">Go to the GOV.UK home page</a>
