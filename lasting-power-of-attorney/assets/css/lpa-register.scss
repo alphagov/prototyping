@@ -7,6 +7,7 @@
 @import "design-patterns/_forms";
 @import "design-patterns/regular-grid";
 @import "design-patterns/account-management-tools";
+@import "design-patterns/popups";
 
 
 @include account-management-tools;
@@ -26,5 +27,49 @@ header.page-header hgroup {
   form{
     @include panel;
   }
+}
+
+.secondary-action .button{
+  background-color: #E1E8E8;
+  color: #083640;
+  -webkit-box-shadow: 0 4px 0 #AAA, 0 8px 10px rgba(0, 0, 0, .05);
+  -moz-box-shadow: 0 4px 0 #AAA, 0 8px 10px rgba(0,0,0,.05);
+  box-shadow: 0 3px 0 #AAA, 0 8px 10px rgba(0, 0, 0, 0.05);
+}
+.secondary-action .button:hover{
+  background-color: #e3e3e3;
+}
+
+.form-actions{
+  list-style-image: none;
+  padding: 0;
+  margin: 0;
+}
+.form-actions li{
+  float: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0.5em 0 0;
+}
+
+.document-list{
+  @include panel;
+  margin-top: 2em;
+}
+
+
+// Modal alert
+
+#popup.modal-alert{
+  @include popup(40%, 8em);
+}
+
+#popup p,
+#popup li{
+  @include core-19;
+}
+
+article table{
+  width: 103.95%;
 }
 

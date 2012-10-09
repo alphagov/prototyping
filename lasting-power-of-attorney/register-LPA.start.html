@@ -8,7 +8,15 @@ css: assets/css/lpa-register.css
 js: assets/js/behaviours.js
 ---
 
-<p>You are about to register the following lasting power of attorney.</p>
+
+<script type="text/javascript">
+$(function() {
+  // Trigger help system popup
+  $(".delete.button").click(function() {
+   BetaPopup.popup($("#confirm-delete").removeClass('hidden'), "modal-alert", $(this));
+  });
+});
+</script>
 
 <table>
   <tr>
@@ -25,11 +33,35 @@ js: assets/js/behaviours.js
   </tr>
 </table>
 
-<a href="Register.enter-details.html" class="medium button">Register this LPA</a>
+<ul class="form-actions group">
+  <li><a href="register-LPA.enter-details.html" class="button">Register this LPA</a></li>
+  <li class="secondary-action"><a href="create.enter-details.html" class="button">Edit this LPA</a></li>
+  <li class="secondary-action"><a href="#" class="delete button">Delete this LPA</a></li>
+</ul>
 
-<details>
-  <summary>I still need to print or change this LPA</summary>
-</details>
+<div class="document-list">
+  <h2>Remember...</h2>
+  <p>You need to have printed and signed the following documents before registering your LPA.</p>
+  <ul>
+    <li><a href="LPA.pdf">Lasting power of attorney (PDF, 123k)</a></li>
+    <li><a href="LPA-continuation-sheet.pdf">Continuation sheets for LPA (PDF, 123k)</a></li>
+    <li><a href="LPA-notification-letter.pdf">Notification letters (PDF, 123k)</a></li>
+  </ul>
+</div>
+
+<!-- MODAL ALERT -->
+<div id="confirm-delete" class="hidden" >
+  <p class="close"><a href="#" title="Click or press escape to close this help">Close</a></p>
+  <div class="inner">
+      <h2>Are you sure you want to delete this LPA?</h2>
+      <p>If you do you won't be able to complete the online registration</p>
+      <ul class="form-actions group">
+  <li><a href="" class="button">Delete</a></li>
+  <li class="secondary-action"><a href="" class="button">Cancel</a></li>
+</ul>
+  </div>
+</div>
+
 
 
 
