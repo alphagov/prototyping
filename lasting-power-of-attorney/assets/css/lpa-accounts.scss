@@ -70,3 +70,39 @@ header.page-header hgroup {
   text-align: center;
 }
 
+/* ================================================================
+ * DASHBOARD
+ * ================================================================
+ *
+ */
+
+.dashboard-intro{
+  @include panel;
+}
+
+.ref{
+  display: block;
+}
+
+.status{
+  width: 8em;
+}
+
+.LPA-list .button{
+  top: 0.5em;
+}
+
+
+.document-list{
+  @include panel;
+  margin-top: 2em;
+}
+
+article table{
+  width: 103.95%;
+}
+
+.address.vcard{
+  width: 30%;
+  margin-left: -1em;
+}

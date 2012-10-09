@@ -8,112 +8,64 @@ css: assets/css/lpa-accounts.css
 js: assets/js/behaviours.js
 ---
 
+<div class="dashboard-intro">
+  <h1>Your LPAs</h1>
+  <p>These are all the LPAs that you have created and registered online. <a href="">Create a new LPA</a>.</p>
+</div>
 
-<h2>Partially created</h2>
+<!--<h2>Unregistered LPAs</h2>-->
 
-<p>These LPAs have been started but haven't yet been signed and registered.</p>
-
-<table>
+<table class="LPA-list">
   <tr>
     <th>Donor name</th>
-    <th>LPA type</th>
-    <th>Reference</th>
+    <th>LPA reference</th>
     <th>Last saved</th>
+    <th>Status</th>
     <th></th>
   </tr>
   <tr>
     <td>John Smith</td>
-    <td>Finance and property</td>
-    <td>1056258554</td>
+    <td>
+      <span class="ref">1056258554 </span>
+      Property and financial affairs
+    </td>
     <td>10 Aug 2012</td>
+    <td class="status">LPA started</td>
     <td><a href="create.enter-details.html" class="button">Continue</a></td>
   </tr>
   <tr>
     <td>John Smith</td>
-    <td>Health and welfare</td>
-    <td>1056258554</td>
+    <td>
+      <span class="ref">1833553454 </span>
+      Health and welfare
+    </td>
     <td>10 Aug 2012</td>
-    <td><a href="create.enter-details.html" class="button">Continue</a></td>
-  </tr>
-</table>
-
-<h2>Created but not registered</h2>
-
-<p>These LPAs still need to be printed, signed and registered.</p>
-
-<table>
-  <tr>
-    <th>Donor name</th>
-    <th>LPA type</th>
-    <th>Reference</th>
-    <th>Created on</th>
-    <th></th>
-  </tr>
-  <tr>
-    <td>John Smith</td>
-    <td>Finance and property</td>
-    <td>1056258554</td>
-    <td>10 Aug 2012</td>
+    <td class="status">LPA created</td>
     <td><a href="register-LPA.start.html" class="button">Continue</a></td>
   </tr>
   <tr>
-    <td>John Smith</td>
-    <td>Health and welfare</td>
-    <td>1056258554</td>
+    <td>Mary Smith</td>
+    <td>    
+      <span class="ref">1938347554 </span>
+      Property and financial affairs
+    </td>
     <td>10 Aug 2012</td>
+    <td class="status">LPA created</td>
     <td><a href="register-LPA.start.html" class="button">Continue</a></td>
   </tr>
-</table>
-
-<h2>Awaiting registration</h2>
-
-<p>Registration has been applied for but not yet confirmed</p>
-
-<table>
   <tr>
-    <th>Donor name</th>
-    <th>LPA type</th>
-    <th>Reference</th>
-    <th>Created on</th>
-    <th></th>
-  </tr>
-  <tr>
-    <td>John Smith</td>
-    <td>Health and welfare</td>
-    <td>1056258554</td>
+    <td>Mary Smith</td>
+    <td>    
+      <span class="ref">1094583463 </span>
+      Health and welfare
+    </td>
     <td>10 Aug 2012</td>
-    <td><a href="register-LPA.start.html" class="button">View docs</a></td>
-  </tr>
-</table>
-
-
-<h2>Registered</h2>
-
-<p>These LPAs have now been registered with the Office of the Public Guardian.</p>
-
-<table>
-  <tr>
-    <th>Donor name</th>
-    <th>LPA type</th>
-    <th>Reference</th>
-    <th>Registered on</th>
-    <th></th>
-  </tr>
-  <tr>
-    <td>John Smith</td>
-    <td>Finance and property</td>
-    <td>1056258554</td>
-    <td>10 Aug 2012</td>
-    <td><a href="registered-LPA.html" class="button">View docs</a></td>
-  </tr>
-  <tr>
-    <td>John Smith</td>
-    <td>Health and welfare</td>
-    <td>1056258554</td>
-    <td>10 Aug 2012</td>
+    <td class="status">LPA signed</td>
     <td><a href="registered-LPA.html" class="button">View docs</a></td>
   </tr>
 </table>
+
+
 
 
 
