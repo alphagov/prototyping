@@ -12,7 +12,7 @@ For a detailed breakdown of each element and how to markup and style it, see our
 Click the label alignment options in the Sass snippet below to see how they affect the layout.
 
 <div class="pattern-example">
-  <pre><code class="class-toggle" data-for="form-example-2" >.form-example-2 { @include form(<span class="option selected">top</span>|<span class="option">left</span>|<span class="option">right</span>, 7.5em, $green) }</code></pre>
+  <pre><code class="class-toggle" data-for="form-example-2" >.form-example-2 { @include form(<span class="option selected">top</span>|<span class="option">left</span>|<span class="option">right</span>, 7.5em) }</code></pre>
 
   <div class="inner">
     <div id="form-example-2" class="top">
