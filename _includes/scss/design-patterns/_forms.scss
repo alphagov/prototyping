@@ -14,17 +14,25 @@
   // FORM ELEMENT STYLES
 
   // Text fields and textareas
-  input[type="text"], textarea {
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"]
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  textarea {
       background-color: #f9f9f9;
       border: 2px inset; // Remove this if we can get the border style removed from core.css
       font-size: 1em;
       line-height: 1.2;
       padding: 0.3em 0 0.1em 0.4em;
-
-      // placeholder text
-      &::-webkit-input-placeholder{
-        color: #BBB ;
-      }
   }
 
   textarea{  
@@ -153,14 +161,17 @@
     }
   }
 
-  // Default field widths
-  input[type="text"] {min-width: 2em;} // overwrite core style
+  // Default text field widths
 
   $full-width: 100%;
   $x-large: 20em;
   $large:   15em;
   $medium:  8em;
   $small:   5em;
+
+  input[type="text"] {min-width: 2em;} // overwrite core style
+  input[type="email"] {width: $x-large;}
+  input[type="url"] {width: $full-width;}
 
   input.password    {width: $large;}
   input.email       {width: $x-large;}

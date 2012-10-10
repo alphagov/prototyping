@@ -136,12 +136,12 @@ Click the label alignment options in the Sass snippet below to see how they affe
           <legend>Email address</legend>
           <p class="group">
             <label for="email">Enter email <abbr title="Mandatory">*</abbr></label>
-            <input id="email" type="text" class="email">
+            <input id="email" type="email" class="email">
           </p>
           <p class="group validation">
             <span class="validation-message" id="error1">Confirm your email address</span>
             <label for="email-confirm">Confirm email <abbr title="Mandatory">*</abbr></label>
-            <input id="email-confirm" type="text" class="email">
+            <input id="email-confirm" type="email" class="email">
           </p>
         </fieldset>
         <fieldset>
@@ -175,7 +175,7 @@ Click the label alignment options in the Sass snippet below to see how they affe
           <legend>Biography</legend>
           <p class="group">
             <label for="biography">Write a few short words about yourself</label>
-            <textarea id="biography" class="big"></textarea>
+            <textarea id="biography" class="big" placeholder="Enter text here"></textarea>
           </p>
           <p class="option group">
             <label for="public"><input id="public" type="checkbox"> Make this biography public</label>
