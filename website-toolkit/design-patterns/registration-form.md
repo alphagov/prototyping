@@ -17,11 +17,14 @@ Click the label alignment options in the Sass snippet below to see how they affe
   <div class="inner">
     <div id="form-example-2" class="top">
       <div class="validation-summary">
-        <h1>Please check the form</h1>
-        <ul>
-          <li><a href="#error1">Confirm your email address</a></li>
-          <li><a href="#error2">Select at least one area of interest</a></li>
-        </ul>
+        <h1>There was a problem submitting the form</h1>
+        <p>Please try the following:</p>
+        <ol>
+          <li><a href="#error1">Enter your first name</a></li>
+          <li><a href="#error2">Enter your last name</a></li>
+          <li><a href="#error3">Confirm your email address</a></li>
+          <li><a href="#error4">Select at least one area of interest</a></li>
+        </ol>
       </div>
       <form>
         <fieldset>
@@ -38,12 +41,12 @@ Click the label alignment options in the Sass snippet below to see how they affe
             </select>
           </p>
           <p class="group validation">
-            <span class="validation-message" id="error1">Please enter your first name</span>
+            <span class="validation-message" id="error1">1. Enter your first name</span>
             <label for="first-name">First name <abbr title="Mandatory">*</abbr></label>
             <input id="first-name" type="text" class="name">
           </p>
           <p class="group validation">        
-            <span class="validation-message" id="error1">Please enter your last name</span>
+            <span class="validation-message" id="error2">2. Enter your last name</span>
             <label for="last-name">Last name <abbr title="Mandatory">*</abbr></label>
             <input id="last-name" type="text" class="name">
           </p>
@@ -141,7 +144,7 @@ Click the label alignment options in the Sass snippet below to see how they affe
             <input id="email" type="email" class="email">
           </p>
           <p class="group validation">
-            <span class="validation-message" id="error1">Confirm your email address</span>
+            <span class="validation-message" id="error3">3. Confirm your email address</span>
             <label for="email-confirm">Confirm email <abbr title="Mandatory">*</abbr></label>
             <input id="email-confirm" type="email" class="email">
           </p>
@@ -186,7 +189,7 @@ Click the label alignment options in the Sass snippet below to see how they affe
         <fieldset>
           <legend>I am interested in</legend>
           <p class="option group validation">
-            <span class="validation-message" id="error2">Select at least one area of interest</span>
+            <span class="validation-message" id="error4">4. Select at least one area of interest</span>
             <label><input type="checkbox"> Job offers</label>
             <label><input type="checkbox"> Networking</label>
             <label><input type="checkbox"> Business opportunities</label>

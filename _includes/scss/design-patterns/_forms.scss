@@ -124,8 +124,7 @@
 
   // Validation summary
   .validation-summary{
-    color: $mellow-red;
-    border-left: 3px solid $mellow-red;
+    border: 3px solid $mellow-red;
     @include panel(lighten($mellow-red, 45%));
     h1{
       margin-bottom: 0;
@@ -133,19 +132,27 @@
     a {
       color: $mellow-red;
       text-decoration: none;
-      @include core-14;
       &:hover{
         text-decoration: underline;
       }
     }
+    ul, ol {
+      color: $mellow-red;
+    }
     ul{
-      padding-left: 2.1em;
-    }
-    ul,
-    li{
+      padding-left: 2.2em;
+      li{
       list-style-type: none;
-      list-style-image: none;
+      list-style-image: none; 
+      }
     }
+    ol{
+      margin-left: -2.2em;
+    }
+    li{
+      @include core-16;
+    }
+
   }
   // Inline validation messages
   .validation{
@@ -155,7 +162,7 @@
     padding: 0.75em 0 1em 1em;
     .validation-message{
       color: $mellow-red;
-      @include core-14;
+      @include core-16;
       display: block;
       padding-bottom: 0.5em;
     }
