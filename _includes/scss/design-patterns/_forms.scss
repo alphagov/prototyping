@@ -151,7 +151,7 @@
   .validation{
     background-color: lighten($mellow-red, 45%);
     border-left: 3px solid $mellow-red;
-    margin: 0 -1em;
+    margin: 0 -1em 0.5em -1em;
     padding: 0.75em 0 1em 1em;
     .validation-message{
       color: $mellow-red;

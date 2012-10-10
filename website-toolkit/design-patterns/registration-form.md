@@ -37,11 +37,13 @@ Click the label alignment options in the Sass snippet below to see how they affe
               <option value="Other">Other</option>
             </select>
           </p>
-          <p class="group">
+          <p class="group validation">
+            <span class="validation-message" id="error1">Please enter your first name</span>
             <label for="first-name">First name <abbr title="Mandatory">*</abbr></label>
             <input id="first-name" type="text" class="name">
           </p>
-          <p class="group">
+          <p class="group validation">        
+            <span class="validation-message" id="error1">Please enter your last name</span>
             <label for="last-name">Last name <abbr title="Mandatory">*</abbr></label>
             <input id="last-name" type="text" class="name">
           </p>
