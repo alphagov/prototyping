@@ -1,0 +1,27 @@
+section#content {
+	max-width: 1020px;
+}
+header.page-header hgroup {
+	margin-right:0px;
+}
+
+header.page-header hgroup h1 {
+	padding:0;
+	padding:0.5em 8em 0 0.5em;
+}
+
+header.page-header hgroup {
+	padding:0;
+}
+
+header.page-header {
+		
+}
+
+#global-header nav ul {
+	display:none;
+}
+
+#global-header h1 a {
+	width: 91px;
+}
