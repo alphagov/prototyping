@@ -40,14 +40,14 @@ article .inner {
 /* TOUR PAGE */
 .tour-video {
 	width: 62%; 
-	height:380px; 
+	height:350px; 
 	background-color: #007FAF; 
 	display:block; 
 	float:left;
 }
 
 .tour-video figure {
-	height:380px;
+	height:350px;
 }
 
 .tour-intro {
@@ -55,7 +55,7 @@ article .inner {
 	width: 31%; 
 	margin-right: 3%;
 	margin-top:-1.2em; 
-	height:380px; 
+	height:350px; 
 	display:block; 
 	float:right; 
 	padding:0;
