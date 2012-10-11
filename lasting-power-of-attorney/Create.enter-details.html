@@ -4,6 +4,7 @@ title: Create a lasting power of attorney
 categories: Service
 signed-in: 'yes'
 template: wide
+assets: local
 css: assets/css/lpa-create.css
 js: assets/js/behaviours.js
 ---
@@ -24,16 +25,25 @@ $(function() {
    BetaPopup.popup($("#attorney-form").removeClass('hidden'), "form", $(this));
   });
 
-  // Postcode lookup behaviours
+// POSTCODE LOOKUP
+
+  // Trigger postcode lookup
   $(".postcode-lookup").click(function() {
-   $(this).closest('.form-actions').siblings('.address-list').removeClass('hidden');
+   $(this).closest('fieldset').find('.address-list').removeClass('hidden');
    return false;
   });
-  $(".address-fields-link a, .address-list li a").click(function() {
+
+  // When address is selected...
+  $('.manual-address-link, .address-list').change(function() {
+   // Hide the address list and link 
    $('.address-list, .address-fields-link').addClass('hidden');
-   $('.address-fields, .save-details').removeClass('hidden');
+   // Show the address fields
+   $('.address-fields').removeClass('hidden');
+   // Enable the save button
+   $('.save-details .button').removeClass('disabled');
    return false;
   });
+
 
   $("#other-name-link").click(function() {
    $('#other-name').toggleClass('hidden');
@@ -63,11 +73,9 @@ $(function() {
 
 <p>By answering the ten questions below you'll be able to create a printable lasting power of attorney (LPA) document, ready to sign and register with the Office of the Public Guardian.</p>
 
-<div class="accordion-form">
-  <div id="accordion" class="accordion form no-future">
-
+<div class="accordion-form form">
 <!-- STEP 1 -->
-    <div id="step1" class="accordion-item">
+    <section id="step1" class="section">
       <h2 class="accordion-header"> 
         Q1. What kind of LPA would you like to create?
       </h2>
@@ -94,18 +102,17 @@ $(function() {
             <summary>What if I want to create both types?</summary>
             <p>Don't worry, once you've created the first LPA you'll be able to use the information you entered to quickly create another one.</p>
           </details>
-        <ul class="form-actions">
+        <ul class="accordion-actions">
           <li><a href="#step2" class="next-part button">Go to question 2 of 10</a></li>
           <li class="secondary-action"><a href="" class="button">Quit</a></li>
         </ul> 
       </div>
-      <div class="accordion-confirm">
-          <p class="edit"><a href="#">edit</a></p>
-          <span class="confirm-text">1. Create an LPA for property and financial affairs</span>
+      <div class="accordion-summary">
+        <p>1. Create an LPA for property and financial affairs <a href="#" class="edit">edit</a></p>
       </div>
-    </div>
+    </section>
 <!-- STEP 2 -->
-      <div id="step2" class="accordion-item">
+      <section id="step2" class="section">
         <h2 class="accordion-header"> 
           Q2. Who is the LPA for?
         </h2>
@@ -119,13 +126,10 @@ $(function() {
 <!-- START OF DONOR FORM -->
 <article id="donor-form" class="hidden" >
   <p class="close"><a href="#" title="Click or press escape to close this help">Close</a></p>
-  <div class="inner">
-
     <div class="content">
-      <h2>About the donor</h2>
+      <h1>Enter the donor's details</h1>
       <form>
         <fieldset>
-          <legend>Their details</legend>
           <p class="group">
             <label for="title">Title</label>
             <select id="title">
@@ -146,7 +150,7 @@ $(function() {
             <input id="last-name" type="text" class="name">
           </p>
           <p class="action group">
-            <span class="link-style" id="other-name-link">Use another name for your business affairs?</span>
+            <span class="link-style" id="other-name-link">Does the donor go by any other name?</span>
           </p>
           <p id="other-name" class="hidden group">
             <label for="input02">Enter other name</label>
@@ -178,124 +182,97 @@ $(function() {
               </p>
             </div>
           </fieldset>
-
-
-            <div class="control-group">
-              <label class="control-label">Email (optional)</label>
-              <div class="controls">
-                <input type="text" class="input-xlarge" type="email" />
-              </div>
-            </div>
-            </fieldset>
-
-
-
-            <fieldset class="intro">
-              <legend class="">Their address</legend>
-              <div class="control-group">
-                <label class="control-label">Enter postcode</label>
-                <div class="controls">
-                  <input type="text" class="postcode" />
-                </div>
-              </div>
-
-              <div class="form-actions">
-                <p><a href="#" class="postcode-lookup button">Find UK address</a></p>
-              </div>
-
-            <div class="hidden control-group address-list">
-              <label class="control-label">Pick an address</label>
-              <div class="controls">
-                  <ul>
-                    <li><a href="">01 Culver Road, St Albans</a></li>
-                    <li><a href="">02 Culver Road, St Albans</a></li>
-                    <li><a href="">03 Culver Road, St Albans</a></li>
-                    <li><a href="">04 Culver Road, St Albans</a></li>
-                    <li><a href="">05 Culver Road, St Albans</a></li>
-                    <li><a href="">06 Culver Road, St Albans</a></li>
-                    <li><a href="">07 Culver Road, St Albans</a></li>
-                    <li><a href="">08 Culver Road, St Albans</a></li>
-                    <li><a href="">09 Culver Road, St Albans</a></li>
-                    <li><a href="">10 Culver Road, St Albans</a></li>
-                    <li><a href="">11 Culver Road, St Albans</a></li>
-                    <li><a href="">12 Culver Road, St Albans</a></li>
-                    <li><a href="">13 Culver Road, St Albans</a></li>
-                    <li><a href="">14 Culver Road, St Albans</a></li>
-                    <li><a href="">15 Culver Road, St Albans</a></li>
-                    <li><a href="">16 Culver Road, St Albans</a></li>
-                    <li><a href="">17 Culver Road, St Albans</a></li>
-                    <li><a href="">18 Culver Road, St Albans</a></li>
-                    <li><a href="">19 Culver Road, St Albans</a></li>
-                    <li><a href="">20 Culver Road, St Albans</a></li>
-                    <li><a href="">21 Culver Road, St Albans</a></li>
-                    <li><a href="">22 Culver Road, St Albans</a></li>
-                    <li><a href="">23 Culver Road, St Albans</a></li>
-                    <li><a href="">24 Culver Road, St Albans</a></li>
-                    <li><a href="">25 Culver Road, St Albans</a></li>
-                    <li><a href="">26 Culver Road, St Albans</a></li>
-                    <li><a href="">27 Culver Road, St Albans</a></li>
-                    <li><a href="">28 Culver Road, St Albans</a></li>
-                    <li><a href="">29 Culver Road, St Albans</a></li>
-                    <li><a href="">30 Culver Road, St Albans</a></li>
-                    <li><a href="">31 Culver Road, St Albans</a></li>
-                  <ul>
-              </div>
-            </div>
-
-            <div class="address-fields-link form-actions">
-              <p><a href="#">Enter address manually</a></p>
-            </div> 
-            
-            <div class="address-fields hidden">
-            <div class="control-group">
-              <label class="control-label">Address line 1</label>
-              <div class="controls">
-                <input type="text" class="input-xlarge" />
-              </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label">Address line 2</label>
-              <div class="controls">
-                <input type="text" class="input-xlarge" />
-              </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label">Town / City</label>
-              <div class="controls">
-                <input type="text" />
-              </div>
-            </div>
-            <div class="control-group">
-              <label class="control-label">Postcode</label>
-              <div class="controls">
-                <input type="text" class="postcode" />
-              </div>
-            </div>
-
+          <p class="group">
+            <label for="email">Email (optional)</label>
+            <input type="text" class="email" type="email" />
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Current address</legend>
+          <p class="group">
+            <label for="postcode">Enter postcode</label>
+            <input type="text" class="postcode" /> 
+            <a href="#" class="postcode-lookup button">Find UK address</a>
+          </p>
+          <p class="hidden group address-list">
+            <label>Pick an address</label>
+            <select size="5" class="street">
+              <option value="">01 Culver Road, St Albans</option>
+              <option value="">02 Culver Road, St Albans</option>
+              <option value="">03 Culver Road, St Albans</option>
+              <option value="">04 Culver Road, St Albans</option>
+              <option value="">05 Culver Road, St Albans</option>
+              <option value="">06 Culver Road, St Albans</option>
+              <option value="">07 Culver Road, St Albans</option>
+              <option value="">08 Culver Road, St Albans</option>
+              <option value="">09 Culver Road, St Albans</option>
+              <option value="">10 Culver Road, St Albans</option>
+              <option value="">11 Culver Road, St Albans</option>
+              <option value="">12 Culver Road, St Albans</option>
+              <option value="">13 Culver Road, St Albans</option>
+              <option value="">14 Culver Road, St Albans</option>
+              <option value="">15 Culver Road, St Albans</option>
+              <option value="">16 Culver Road, St Albans</option>
+              <option value="">17 Culver Road, St Albans</option>
+              <option value="">18 Culver Road, St Albans</option>
+              <option value="">19 Culver Road, St Albans</option>
+              <option value="">20 Culver Road, St Albans</option>
+              <option value="">21 Culver Road, St Albans</option>
+              <option value="">22 Culver Road, St Albans</option>
+              <option value="">23 Culver Road, St Albans</option>
+              <option value="">24 Culver Road, St Albans</option>
+              <option value="">25 Culver Road, St Albans</option>
+              <option value="">26 Culver Road, St Albans</option>
+              <option value="">27 Culver Road, St Albans</option>
+              <option value="">28 Culver Road, St Albans</option>
+              <option value="">29 Culver Road, St Albans</option>
+              <option value="">30 Culver Road, St Albans</option>
+              <option value="">31 Culver Road, St Albans</option>
+            </select>
+          </p>
+          <p class="address-fields-link action group">
+            <span class="link-style" id="manual-address-link">Enter address manually</span>
+          </p>
+          <div class="address-fields hidden">
+            <p class="group">
+              <label class="control-label">Street</label>
+              <input type="text" class="street" value="14 Culver Road" />
+            </p>
+            <p class="group">
+              <label class="visuallyhidden">Street 2</label>
+              <input type="text" class="street" />
+            </p>
+            <p class="group">
+              <label>Town / City</label>
+              <input type="text" class="town" value="St Albans"  />
+            </p>
+            <p class="group">
+              <label>Postcode</label>
+              <input type="text" class="postcode" value="AL1 4ED" />
+            </p>
           </div>
-          </fieldset>
-         
-          <div class="save-details hidden form-actions"><a class="medium button" href="#">Save details</a></div>
+        </fieldset>         
+        <p class="save-details action group">
+          <a class="disabled medium button" href="#">Save Donor's details</a>
+        </p>
 
-        </form>  
-      </div>
+        </form>
   </div>
 </article>
-          <ul class="form-actions">
-            <li><a href="#step3" class="next-part button">Go to question 3 of 10</a></li>
+          <ul class="accordion-actions">
+            <li><a href="#step3" class="disabled next-part button">Go to question 3 of 10</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
             <li class="secondary-action"><a href="" class="button">Print preview</a></li>
           </ul>       
         </div>
-        <div class="accordion-confirm">
-            <p class="edit"><a href="#">edit</a></p>
-            <span class="confirm-text">2. The donor is Tim Paul</span>
+        <div class="accordion-summary">
+          <p>2. The donor is Tim Paul <a href="#" class="edit">edit</a></p>
         </div>
-      </div>
+      </section>
 
       <!-- Step 3 -->
-      <div id="step3" class="accordion-item">
+      <section id="step3" class="section">
         <h2 class="accordion-header"> 
           Q3. When should this LPA take effect?
         </h2>
@@ -333,7 +310,7 @@ $(function() {
 
                 </div>
               </fieldset>
-          <ul class="form-actions">
+          <ul class="accordion-actions">
             <li><a href="#step4" class="next-part button">Go to question 4 of 10</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
@@ -341,13 +318,12 @@ $(function() {
           </ul> 
 
         </div>
-        <div class="accordion-confirm">
-            <p class="edit"><a href="#">edit</a></p>
-            <span class="confirm-text">3. The LPA will take effect when the donor has lost mental capacity</span>
+        <div class="accordion-summary">
+          <p>3. The LPA will take effect when the donor has lost mental capacity <a href="#" class="edit">edit</a></p>
         </div>
-      </div>
+      </section>
 <!-- Step 4 -->
-      <div id="step4" class="accordion-item">
+      <section id="step4" class="section">
         <h2 class="accordion-header"> 
           Q4. Who are the attorneys?
         </h2>
@@ -574,7 +550,7 @@ $(function() {
                 </div>
               </div>
 
-              <div class="form-actions">
+              <div class="accordion-actions">
                 <p><a href="#" class="postcode-lookup button">Find UK address</a></p>
               </div>
 
@@ -582,37 +558,37 @@ $(function() {
               <label class="control-label">Pick an address</label>
               <div class="controls">
                   <ul>
-                    <li><a href="">01 Culver Road, St Albans</a></li>
-                    <li><a href="">02 Culver Road, St Albans</a></li>
-                    <li><a href="">03 Culver Road, St Albans</a></li>
-                    <li><a href="">04 Culver Road, St Albans</a></li>
-                    <li><a href="">05 Culver Road, St Albans</a></li>
-                    <li><a href="">06 Culver Road, St Albans</a></li>
-                    <li><a href="">07 Culver Road, St Albans</a></li>
-                    <li><a href="">08 Culver Road, St Albans</a></li>
-                    <li><a href="">09 Culver Road, St Albans</a></li>
-                    <li><a href="">10 Culver Road, St Albans</a></li>
-                    <li><a href="">11 Culver Road, St Albans</a></li>
-                    <li><a href="">12 Culver Road, St Albans</a></li>
-                    <li><a href="">13 Culver Road, St Albans</a></li>
-                    <li><a href="">14 Culver Road, St Albans</a></li>
-                    <li><a href="">15 Culver Road, St Albans</a></li>
-                    <li><a href="">16 Culver Road, St Albans</a></li>
-                    <li><a href="">17 Culver Road, St Albans</a></li>
-                    <li><a href="">18 Culver Road, St Albans</a></li>
-                    <li><a href="">19 Culver Road, St Albans</a></li>
-                    <li><a href="">20 Culver Road, St Albans</a></li>
-                    <li><a href="">21 Culver Road, St Albans</a></li>
-                    <li><a href="">22 Culver Road, St Albans</a></li>
-                    <li><a href="">23 Culver Road, St Albans</a></li>
-                    <li><a href="">24 Culver Road, St Albans</a></li>
-                    <li><a href="">25 Culver Road, St Albans</a></li>
-                    <li><a href="">26 Culver Road, St Albans</a></li>
-                    <li><a href="">27 Culver Road, St Albans</a></li>
-                    <li><a href="">28 Culver Road, St Albans</a></li>
-                    <li><a href="">29 Culver Road, St Albans</a></li>
-                    <li><a href="">30 Culver Road, St Albans</a></li>
-                    <li><a href="">31 Culver Road, St Albans</a></li>
+                    <option value="">01 Culver Road, St Albans</option>
+                    <option value="">02 Culver Road, St Albans</option>
+                    <option value="">03 Culver Road, St Albans</option>
+                    <option value="">04 Culver Road, St Albans</option>
+                    <option value="">05 Culver Road, St Albans</option>
+                    <option value="">06 Culver Road, St Albans</option>
+                    <option value="">07 Culver Road, St Albans</option>
+                    <option value="">08 Culver Road, St Albans</option>
+                    <option value="">09 Culver Road, St Albans</option>
+                    <option value="">10 Culver Road, St Albans</option>
+                    <option value="">11 Culver Road, St Albans</option>
+                    <option value="">12 Culver Road, St Albans</option>
+                    <option value="">13 Culver Road, St Albans</option>
+                    <option value="">14 Culver Road, St Albans</option>
+                    <option value="">15 Culver Road, St Albans</option>
+                    <option value="">16 Culver Road, St Albans</option>
+                    <option value="">17 Culver Road, St Albans</option>
+                    <option value="">18 Culver Road, St Albans</option>
+                    <option value="">19 Culver Road, St Albans</option>
+                    <option value="">20 Culver Road, St Albans</option>
+                    <option value="">21 Culver Road, St Albans</option>
+                    <option value="">22 Culver Road, St Albans</option>
+                    <option value="">23 Culver Road, St Albans</option>
+                    <option value="">24 Culver Road, St Albans</option>
+                    <option value="">25 Culver Road, St Albans</option>
+                    <option value="">26 Culver Road, St Albans</option>
+                    <option value="">27 Culver Road, St Albans</option>
+                    <option value="">28 Culver Road, St Albans</option>
+                    <option value="">29 Culver Road, St Albans</option>
+                    <option value="">30 Culver Road, St Albans</option>
+                    <option value="">31 Culver Road, St Albans</option>
                   <ul>
               </div>
             </div>
@@ -658,21 +634,20 @@ $(function() {
 </div>
 
 
-          <ul class="form-actions">
+          <ul class="accordion-actions">
             <li><a href="#step5" class="next-part button">Go to question 5 of 10</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
             <li class="secondary-action"><a href="" class="button">Print preview</a></li>
           </ul>     
         </div>
-        <div class="accordion-confirm">
-            <p class="edit"><a href="#">edit</a></p>
-          <span class="confirm-text">4. The attorneys are Jane Smith and Fred Bloggs</span>
+        <div class="accordion-summary">
+          <p>4. The attorneys are Jane Smith and Fred Bloggs <a href="#" class="edit">edit</a></p>
         </div>
-      </div>
+      </section>
 
 <!-- Step 5 -->
-      <div id="step5" class="accordion-item">
+      <section id="step5" class="section">
         <h2 class="accordion-header"> 
           Q5. Do you want to appoint any replacement attorneys?
         </h2>
@@ -685,23 +660,22 @@ $(function() {
 
         <p class="add"><a href="#" id="open-attorney-form">Add a replacement attorney?</a></p>
 
-        <ul class="form-actions">
+        <ul class="accordion-actions">
             <li><a href="#step6" class="next-part button">Go to question 6 of 10</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
             <li class="secondary-action"><a href="" class="button">Print preview</a></li>
           </ul>     
         </div>
-        <div class="accordion-confirm">
-            <p class="edit"><a href="#">edit</a></p>
-          <span class="confirm-text">5. The replacement attorney is Fred Smith</span>
+        <div class="accordion-summary">
+          <p>5. The replacement attorney is Fred Smith<a href="#" class="edit">edit</a></p>
         </div>
-      </div>
+      </section>
 
 
 
 <!-- Step 6 -->
-      <div id="step6" class="accordion-item">
+      <section id="step6" class="section">
         <h2 class="accordion-header"> 
           Q6. How should any decisions be made?
         </h2>
@@ -764,20 +738,19 @@ $(function() {
                 </div>
               </fieldset>
 
-          <ul class="form-actions">
+          <ul class="accordion-actions">
             <li><a href="#step7" class="next-part button">Go to question 7 of 10</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
             <li class="secondary-action"><a href="" class="button">Print preview</a></li>
           </ul>  
         </div>
-        <div class="accordion-confirm">
-            <p class="edit"><a href="#">edit</a></p>
-          <span class="confirm-text">6. The attorneys must make all decisions as a group</span>
+        <div class="accordion-summary">
+          <p>6. The attorneys must make all decisions as a group<a href="#" class="edit">edit</a></p>
         </div>
-      </div>
+      </section>
 <!-- Step 7 -->
-      <div id="step7" class="accordion-item">
+      <section id="step7" class="section">
         <h2 class="accordion-header"> 
           Q7. Are there any extra restrictions or guidance that should be followed?
         </h2>
@@ -814,19 +787,18 @@ $(function() {
                 </div>
               </fieldset>
 
-          <ul class="form-actions">
+          <ul class="accordion-actions">
             <li><a href="#step8" class="next-part button">Go to question 8 of 10</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
             <li class="secondary-action"><a href="" class="button">Print preview</a></li>
           </ul> 
         </div>
-        <div class="accordion-confirm">
-          <p class="edit"><a href="#">edit</a></p>
-          <span class="confirm-text">7. The donor has provided additional guidance for the attorneys</span>
+        <div class="accordion-summary">
+          <p>7. The donor has provided additional guidance for the attorneys <a href="#" class="edit">edit</a></p>
         </div>
-      </div>
+      </section>
 <!-- Step 8 -->
-<div id="step8" class="accordion-item">
+<section id="step8" class="section">
         <h2 class="accordion-header"> 
           Q8. Are the attorneys to be paid for their services?
         </h2>
@@ -856,7 +828,7 @@ $(function() {
 
                 </div>
               </fieldset>
-          <ul class="form-actions">
+          <ul class="accordion-actions">
             <li><a href="#step9" class="next-part button">Go to question 9 of 10</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
@@ -864,12 +836,11 @@ $(function() {
           </ul> 
 
         </div>
-        <div class="accordion-confirm">
-            <p class="edit"><a href="#">edit</a></p>
-            <span class="confirm-text">8. The attorneys are to be paid for their services</span>
+        <div class="accordion-summary">
+          <p>8. The attorneys are to be paid for their services <a href="#" class="edit">edit</a></p>
         </div>
       </div>
-      <div id="step9" class="accordion-item">
+      <section id="step9" class="section">
         <h2 class="accordion-header"> 
           Q9. Will the donor notify anyone when the LPA is registered?
         </h2>
@@ -881,7 +852,7 @@ $(function() {
 
           <p class="add"><a href="2b.html">Add details of a person to be notified</a></p>
 
-          <ul class="form-actions">
+          <ul class="accordion-actions">
             <li><a href="#step10" class="next-part button">Go to question 10 of 10</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
@@ -889,12 +860,11 @@ $(function() {
           </ul> 
 
         </div>
-        <div class="accordion-confirm">
-            <p class="edit"><a href="#">edit</a></p>
-            <span class="confirm-text">9. John Bloggs to be notified when LPA is registered</span>
+        <div class="accordion-summary">
+          <p>9. John Bloggs to be notified when LPA is registered <a href="#" class="edit">edit</a></p>
         </div>
       </div>
-      <div id="step10" class="accordion-item">
+      <section id="step10" class="section">
         <h2 class="accordion-header"> 
           Q10. Is the donor doing this of their own free will?
         </h2>
@@ -906,7 +876,7 @@ $(function() {
 
           <p class="add"><a href="2b.html">Add details of a certificate provider</a></p>
 
-          <ul class="form-actions">
+          <ul class="accordion-actions">
             <li><a href="#step11" class="next-part button">Continue to final step</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
@@ -914,12 +884,11 @@ $(function() {
           </ul> 
 
         </div>
-        <div class="accordion-confirm">
-            <p class="edit"><a href="#">edit</a></p>
-            <span class="confirm-text">10. Jeremy Smith and Brian James to act as certificate providers</span>
+        <div class="accordion-summary">
+          <p>10. Jeremy Smith and Brian James to act as certificate providers<a href="#" class="edit">edit</a></p>
         </div>
       </div>
-      <div id="step11" class="accordion-item">
+      <section id="step11" class="section">
         <h2 class="accordion-header"> 
           Review the details
         </h2>
@@ -928,7 +897,7 @@ $(function() {
             <p>You are now ready to print your LPA. Please review the information you provided above before pressing 'Continue'.</p>
           </div>
 
-          <ul class="form-actions">
+          <ul class="accordion-actions">
             <li><a href="Create.print.html" class="button">Continue</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
@@ -936,11 +905,9 @@ $(function() {
           </ul> 
 
         </div>
-      </div>
+      </section>
 
     </div>
-
-</div>
 
 <!-- START OF HELP SYSTEM -->
 <div id="help-system" class="hidden" >

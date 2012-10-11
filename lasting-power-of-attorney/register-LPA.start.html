@@ -4,6 +4,7 @@ title: Register a lasting power of attorney
 categories: Service
 signed-in: 'yes'
 template: wide
+assets: local
 css: assets/css/lpa-register.css
 js: assets/js/behaviours.js
 ---
@@ -11,27 +12,40 @@ js: assets/js/behaviours.js
 
 <script type="text/javascript">
 $(function() {
-  // Trigger help system popup
+  // Trigger alert
   $(".delete.button").click(function() {
    BetaPopup.popup($("#confirm-delete").removeClass('hidden'), "modal-alert", $(this));
   });
 });
 </script>
 
-<table>
+
+<h1>This LPA has been created</h1>
+
+<table class="LPA-list">
   <tr>
     <th>Donor name</th>
+    <th>LPA reference</th>
     <th>LPA type</th>
-    <th>Reference</th>
     <th>Created on</th>
   </tr>
   <tr>
-    <td>John Smith</td>
-    <td>Finance and property</td>
-    <td>1056258554</td>
+    <td>Mary Smith</td>
+    <td>1094583463</td>
+    <td>Health and welfare</td>
     <td>10 Aug 2012</td>
   </tr>
 </table>
+
+<div class="document-list">
+  <h2>LPA documents</h2>
+  <p>Please print and sign these documents before registering the LPA.</p>
+  <ul>
+    <li><a href="LPA.pdf">Lasting power of attorney (PDF, 123k)</a></li>
+    <li><a href="LPA-continuation-sheet.pdf">Continuation sheets for LPA (PDF, 123k)</a></li>
+    <li><a href="LPA-notification-letter.pdf">Notification letters (PDF, 123k)</a></li>
+  </ul>
+</div>
 
 <ul class="form-actions group">
   <li><a href="register-LPA.enter-details.html" class="button">Register this LPA</a></li>
@@ -39,15 +53,7 @@ $(function() {
   <li class="secondary-action"><a href="#" class="delete button">Delete this LPA</a></li>
 </ul>
 
-<div class="document-list">
-  <h2>Remember...</h2>
-  <p>You need to have printed and signed the following documents before registering your LPA.</p>
-  <ul>
-    <li><a href="LPA.pdf">Lasting power of attorney (PDF, 123k)</a></li>
-    <li><a href="LPA-continuation-sheet.pdf">Continuation sheets for LPA (PDF, 123k)</a></li>
-    <li><a href="LPA-notification-letter.pdf">Notification letters (PDF, 123k)</a></li>
-  </ul>
-</div>
+<br>
 
 <!-- MODAL ALERT -->
 <div id="confirm-delete" class="hidden" >

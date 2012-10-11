@@ -9,6 +9,7 @@
 @import "design-patterns/_forms";
 @import "design-patterns/progress-indicator";
 @import "design-patterns/account-management-tools";
+@import "design-patterns/accordion-form";
 
 
 @include account-management-tools;
@@ -26,102 +27,24 @@ header.page-header hgroup {
  * ACCORDION
  * ===========================================================
  *
- * For doing 'stacked' forms */
+ */
 
 
- .step-intro{
-  @include panel;
- }
+@include accordion-form;
 
-.accordion{
-  margin-bottom: 2em;
-}
 
-.accordion-header {
-  background-color: #e3e3e3;
-  padding:0.5em 1em;
-  margin: 0;
-  color: #333;
-}
-.accordion-item {
-  background-color: white;
-  &.current{
-    border: 1px solid #28A197;
+.accordion-form{
+  .section.current{
+    // Right-align secondary actions
+    .accordion-actions .secondary-action{
+      float: right;
+      margin: -0.8em 0 0 0.5em;
+    }
   }
 }
 
-.accordion-item .accordion-content{
-  max-height: 0;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-/* Hide all accordion content by default */
-
-.js-enabled .accordion-item .accordion-confirm{
-  display: none;
-  background-color: $grey-95;
-  background-image:url('../img/progress-tick.png');
-  background-repeat:no-repeat;
-  background-position:10px 50%;
-  padding: 0.5em 2.5em 0.5em 2em;
-}
-
-.accordion-item.complete{
-  display: block;
-}
-/* Specify which content gets show for each accordion state */
-.accordion-item.complete .accordion-confirm,
-.accordion-item.current .accordion-content{
-  /*-webkit-transition: max-height 1s ease-in-out;*/
-  display: block;
-  visibility: visible;
-
-  max-height: 600em;
-}
-/* As above, but for the 'no-future' variant (hides future parts) */
-.js-enabled .accordion.no-future .accordion-header{
-  display: none;
-}
-.accordion.no-future .complete  .accordion-header{
-  display: none;
-}
-.accordion.no-future .current .accordion-header{
-  display: block;
-}
-.complete .accordion-header{
-  background-color: #d5ecea;
-  background-image:url('../img/completed-icon.png');
-  background-repeat:no-repeat;
-  background-position:15px 50%;
-  @include core-19;
-  padding-left: 2.5em;
-}
-.current .accordion-header{
-  background-color: #28a197;
-  color: #fff;
-}
-.accordion-content,
-.accordion-confirm{
-  background-color: white;
-  /*padding: 0 5em;*/
-  padding: 0 2em;
-}
-
-.complete .accordion-confirm{
-  margin-bottom: 0.5em;
-}
-.accordion-confirm .edit{
-float: right;
-margin: 0em -1.7em 0;
-padding: 0 0.7em;
-}
-.accordion-content {
-  position: relative;
-}
-.confirm-text {
-  @include core-19;
-padding-right: 2em;
+.step-intro{
+  @include panel;
 }
 
 .added-attorney{
@@ -141,6 +64,18 @@ padding: 1em;
   margin-right: 0.5em;
 }
 
+
+// Disabled state for link-style buttons
+.button.disabled{
+  opacity: 0.5;
+  &:hover{
+    cursor: default;
+    background-color: #008270;
+  }
+}
+
+// Secondary actions
+
 .secondary-action .button{
   background-color: #E1E8E8;
   color: #083640;
@@ -152,21 +87,7 @@ padding: 1em;
   background-color: #e3e3e3;
 }
 
-.form-actions{
-  list-style-image: none;
-  padding: 1.4em 1em 1.7em 1em;
-  margin: 0 -2em;
-  background-color: #f9f9f9;
-}
-.form-actions li{
-  list-style-type: none;
-  padding: 0;
-  margin: 0 0 -0.5em 0;
-}
-.form-actions li.secondary-action{
-  float: right;
-  margin: -1em 0 0 0.5em;
-}
+
 
 
 /* ===============================
@@ -175,6 +96,9 @@ padding: 1em;
  */
 
 /* '+' symbol */
+.add{
+  padding: 1em 0;
+}
 .add:before{
   background-color: #28a197;
   color: #FFF;
@@ -182,7 +106,7 @@ padding: 1em;
   float: left;
   font-weight: bold;
   line-height: 0.9em;
-  padding: 0 0.3em 0.3em 0.3em;
+  padding: 0.1em 0.3em;
   margin: 0.1em 0.5em 0 0;
 }
 
@@ -197,12 +121,21 @@ padding: 1em;
  */
 
 
-#popup.form{
-  @include popup();
-}
-
-#popup.form .content ul{
-  margin: 0;
+#popup{
+  @include popup(38em);
+  .content{
+    margin-top: -2.5em;
+    h1{
+      padding: 0.8em 1em;
+      background-color: $grey-95;
+      margin: 1em -1em;
+    }
+    .save-details{
+      background-color: $grey-95;
+      padding: 1.25em 1.25em 1em 9.5em;
+      margin: 1em -1.25em -2em;
+    }
+  }
 }
 
 input.postcode{
@@ -220,26 +153,24 @@ input.small-number{
  * ================================================================
  */
 
-.address-list ul{
-  background: #fff;
-  max-height: 10em;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  border: 1px solid #BBB;
+select.street{
+  width: 20em;
+  border: 1px inset;
 }
-.address-list li{
-  padding: 0 0 0 0.5em;
-}
-
-.address-list ul::-webkit-scrollbar {
+select.street::-webkit-scrollbar {
 -webkit-appearance:none !important;
-width:10px !important
-}
-.address-list ul::-webkit-scrollbar {
+width: 1em !important;
+height: 2em;
 background-color:#ccc !important
 }
-.address-list ul::-webkit-scrollbar-thumb {
+select.street::-webkit-scrollbar-thumb {
 background-color:rgba(0,0,0,.5) !important;
+}
+
+.postcode-lookup{
+  display: block;
+  float: left;
+  margin-top: 0.15em;
 }
 
 /* ================================================================
@@ -255,6 +186,8 @@ background-color:rgba(0,0,0,.5) !important;
 .accordion-form{
   margin-top: 2em;
 }
+
+
 
 
 /* SHOW / HIDE */

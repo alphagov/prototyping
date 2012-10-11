@@ -8,16 +8,15 @@ $(function() {
    		$radios.filter(':checked').parent().addClass('checked');
 	});
 
-// ACCORDION
+  // ACCORDION FORM
 
-	// Initialise: open first part
-	$(".accordion .accordion-item:first").addClass('current');
+  // Initialise: open first part
+  $(".accordion-form .section:first").addClass('current');
 
-
-	// Move to next part
-	$(".next-part").click(function() {
-      $(this).closest(".accordion-item").removeClass('current').addClass('complete')
-      .next(".accordion-item").addClass('current');
+  // Move to next part
+  $(".next-part").click(function() {
+      $(this).closest(".section").removeClass('current').addClass('complete')
+      .next(".section").addClass('current');
 
     });
 

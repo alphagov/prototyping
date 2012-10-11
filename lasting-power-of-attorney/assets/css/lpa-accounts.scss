@@ -21,7 +21,7 @@ header.page-header hgroup {
  */
 
 .form{
-  @include form(left);
+  @include form(top);
   form{
     @include panel;
   }

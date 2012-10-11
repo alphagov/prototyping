@@ -68,3 +68,8 @@ article table{
   width: 103.95%;
 }
 
+.document-list{
+  @include panel;
+  margin-top: 2em;
+}
+
