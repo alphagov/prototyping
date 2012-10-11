@@ -27,6 +27,7 @@
   input[type="time"],
   input[type="url"],
   input[type="week"],
+  select[size],
   textarea {
       background-color: #f9f9f9;
       border: 2px inset; // Remove this if we can get the border style removed from core.css
@@ -43,6 +44,7 @@
   // Labels
   label{
     color: $charcoal-grey;
+    @include core-19;
   }
   // Select boxes
   select {
