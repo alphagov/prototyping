@@ -48,8 +48,8 @@ header.page-header hgroup {
 }
 
 .added-attorney{
-background-color: #E8F0F0;
-margin: 0 -1.2em 1em -1.2em;
+background-color: $grey-95;
+margin: 0 -0.9em 1em -0.8em;
 padding: 1em;
 }
 .added-attorney .edit{
@@ -59,7 +59,7 @@ padding: 1em;
 .added-attorney .label{
   display: inline-block;
   width: 10em;
-  margin-left: -3em;
+  margin-left: -4em;
   text-align: right;
   margin-right: 0.5em;
 }
@@ -110,9 +110,9 @@ padding: 1em;
   margin: 0.1em 0.5em 0 0;
 }
 
-.help-block.examples{
+.examples{
   float: right;
-  margin: -1.3em -0.5em 0 0;
+  margin: -2.25em 0.5em 0 0;
 }
 
 /* ================================
@@ -133,7 +133,7 @@ padding: 1em;
     .save-details{
       background-color: $grey-95;
       padding: 1.25em 1.25em 1em 9.5em;
-      margin: 1em -1.25em -2em;
+      margin: 1em -1.3em -0.85em;
     }
   }
 }
@@ -180,7 +180,7 @@ background-color:rgba(0,0,0,.5) !important;
 
 
 .form{
-  @include form(left);
+  @include form(right);
 }
 
 .accordion-form{
@@ -201,40 +201,26 @@ background-color:rgba(0,0,0,.5) !important;
  * a particular radio button or checkbox. 
  */
 
-label details{
-  padding: 0;
-  margin: 0;
-}
-label details summary{
-  text-decoration: none;
-  color: #333;
-  padding: 0;
-  margin:0;
-  font-weight: 300;
-  font-size: 1em;
-  display: block;
- }
-label details summary:hover{
-  color: #333;
-  font-weight: 300;
-}
- label details summary::-webkit-details-marker { 
-  display:none; 
-}
-label details[open]{
-  background-color: transparent;
+
+.hidden-controls {
   padding-top: 0;
-  margin-right: -1.5em;
-  margin-bottom: 0;
- }
-label details[open] summary{
-  margin-bottom: 0.5em;
-  font-weight: 300;
- }
-
-
-details textarea {
-margin: 0.2em -1em 0 -1em;
+  summary{
+    text-decoration: none;
+    margin-bottom: 0;
+    &:hover{
+      color: #333;
+      font-weight: 300;
+    }
+    &::-webkit-details-marker { 
+      display:none; 
+    }
+  }
+  &[open]{
+    padding-top: 0;
+  }
+  textarea {
+    margin: 0 0 0.75em 0;
+  }
 }
 
 
@@ -303,7 +289,6 @@ padding: 0.5em 1em;
 */
 
 .emphasised input[type="checkbox"], .emphasised input[type="radio"] {
-  margin-right: 0.5em;
   position: relative;
 }
 .emphasised.option.group label{
@@ -400,7 +385,9 @@ padding: 0.5em 1em;
   margin: 0;
 }
 
-
+#donor-signature{
+  padding-left: 0;
+}
 
 
 /* FORM DOWNLOAD */
@@ -428,4 +415,10 @@ padding: 0.5em 1em;
 
 #sign-in-reminder{
   padding-left: 0;
+}
+
+// Prototype-only styles
+
+#later-attorney-example{
+  display: none;
 }
