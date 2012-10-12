@@ -989,3 +989,14 @@ advice.</p>
   </nav>
 </div>
 <!-- END OF HELP SYSTEM -->
+
+
+<script src="assets/js/jquery.details.js"></script>
+<script>
+  $(function() {
+    // Add conditional classname based on support
+    $('html').addClass($.fn.details.support ? 'details' : 'no-details');
+    // Emulate <details> where necessary and enable open/close event handlers
+    $('details').details();
+  });
+</script>

@@ -115,7 +115,10 @@ article dd{
 
 /* Show/hide */
 @include details-and-summary;
-.show-hide-version-2 {@include details-and-summary(highlighted);}
+.show-hide-version-2,
+.test {
+  @include details-and-summary(highlighted);
+}
 
 /* Panels */
 .new-panel { @include panel($grass-green-25); }
@@ -145,12 +148,14 @@ article dd{
 #form-example-2.left { @include form(left, 7.5em) }
 #form-example-2.right { @include form(right, 7.5em) }
 
-/* Accordion form */
-
+// Accordion form
 @include accordion-form;
 
+// Emphasised form controls
+@include emphasised-form-controls;
 
-
+// Hidden form controls
+@include hidden-controls;
 
 
 

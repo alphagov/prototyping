@@ -363,7 +363,7 @@
 // Or to associate hidden controls with their parent control
 
 
-@mixin emphasised-labels{
+@mixin emphasised-form-controls{
   .emphasised input[type="checkbox"],
   .emphasised input[type="radio"] {
     position: relative;
