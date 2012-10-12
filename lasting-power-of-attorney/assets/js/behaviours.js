@@ -1,11 +1,11 @@
 $(function() {
 
-	// Radio button label styles		
-	var $radios = $('.emphasised input');
-  $radios.filter(':checked').parent().addClass('checked');
-	$radios.change(function() {
-   		$radios.parent().removeClass('checked');
-   		$radios.filter(':checked').parent().addClass('checked');
+	// Emphasised checkbox and radio button label styles		
+	var $emphasised = $('.emphasised input');
+  $emphasised.filter(':checked').parent().addClass('checked');
+	$emphasised.change(function() {
+   		$emphasised.parent().removeClass('checked');
+   		$emphasised.filter(':checked').parent().addClass('checked');
 	});
 
   // ACCORDION FORM
@@ -15,9 +15,9 @@ $(function() {
 
   // Move to next part
   $(".next-part").click(function() {
-      $(this).closest(".section").removeClass('current').addClass('complete')
-      .next(".section").addClass('current');
+    $(this).closest(".section").removeClass('current').addClass('complete')
+    .next(".section").addClass('current');
 
-    });
+  });
 
 });

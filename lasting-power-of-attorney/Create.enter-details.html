@@ -24,6 +24,8 @@ $(function() {
    BetaPopup.popup($("#attorney-form").removeClass('hidden'), "form", $(this));
   });
 
+
+
 // POSTCODE LOOKUP
 
   // Trigger postcode lookup
@@ -56,13 +58,17 @@ $(function() {
   });
 
 
-  // Other name toggle
+// TOGGLE ALTERNATE DONOR NAME
+
   $("#other-name-link").click(function() {
    $('#other-name').toggleClass('hidden');
    return false;
   });
 
-  // Illustrate saved attorney
+
+
+// DEMONSTRATE A SAVED ATTORNEY
+// This is for prototyping purposes only
   $("#save-attorney-details").click(function() {
     $('#add-attorney-1-link').addClass('hidden');
     $('#later-attorney-example').show();
@@ -71,17 +77,6 @@ $(function() {
   });
 });
 </script>
-
-<!--
-<nav role="navigation" class="progress-indicator group">
-  <span class="visuallyhidden step-count">Step 2 of 3</span>
-  <ol class="group">
-    <li>Create an account</li>
-    <li class="active">Enter LPA details</li>
-    <li>Print LPA documents</li>
-  </ol>
-</nav>
--->
 
 <p>By answering the ten questions below you'll be able to create a printable lasting power of attorney (LPA) document, ready to sign and register with the Office of the Public Guardian.</p>
 
@@ -92,7 +87,7 @@ $(function() {
         Q1. What kind of LPA would you like to create?
       </h2>
       <div class="accordion-content">
-        <div class="step-intro">
+        <div class="section-intro">
           <p>[ intro text goes here ]</p>
           <p><a class="open-help" href="#/help/LPAtype">Learn more&hellip;</a></p>
         </div>
@@ -114,10 +109,12 @@ $(function() {
             <summary>What if I want to create both types?</summary>
             <p>Don't worry, once you've created the first LPA you'll be able to use the information you entered to quickly create another one.</p>
           </details>
-        <ul class="accordion-actions">
-          <li><a href="#step2" class="next-part button">Go to question 2 of 10</a></li>
-          <li class="secondary-action"><a href="" class="button">Quit</a></li>
-        </ul> 
+          <div class="accordion-actions group">
+            <p><a href="#step2" class="disabled next-part button">Go to question 2 of 10</a></p>
+            <ul class="secondary-actions">
+              <li><a href="" class="button">Quit</a></li>
+            </ul>
+          </div> 
       </div>
       <div class="accordion-summary">
         <p>1. Create an LPA for property and financial affairs <a href="#" class="edit">edit</a></p>
@@ -126,11 +123,12 @@ $(function() {
 <!-- STEP 2 -->
       <section id="step2" class="section">
         <h2 class="accordion-header"> 
-          Q2. Who is the donor?
+          Q2. Who is the donor for this LPA?
         </h2>
         <div class="accordion-content">
-          <div class="step-intro">
-            <p>[ intro text goes here ]</p>
+          <div class="section-intro">
+            <p>[ intro text goes here ]
+            </p>
             <p><a class="open-help" href="#/help/donor">Learn more&hellip;</a></p>
           </div>
           <p class="add"><a id="open-donor-form" href="#/form/donor">Enter the donor's details</a></p>
@@ -200,9 +198,8 @@ $(function() {
           </p>
         </fieldset>
         <fieldset>
-          <legend>Current address</legend>
           <p class="group">
-            <label for="postcode">Enter postcode</label>
+            <label for="postcode">Postcode</label>
             <input type="text" class="postcode" /> 
             <a href="#" class="postcode-lookup button">Find UK address</a>
           </p>
@@ -219,27 +216,7 @@ $(function() {
               <option value="">08 Culver Road, St Albans</option>
               <option value="">09 Culver Road, St Albans</option>
               <option value="">10 Culver Road, St Albans</option>
-              <option value="">11 Culver Road, St Albans</option>
-              <option value="">12 Culver Road, St Albans</option>
-              <option value="">13 Culver Road, St Albans</option>
-              <option value="">14 Culver Road, St Albans</option>
-              <option value="">15 Culver Road, St Albans</option>
-              <option value="">16 Culver Road, St Albans</option>
-              <option value="">17 Culver Road, St Albans</option>
-              <option value="">18 Culver Road, St Albans</option>
-              <option value="">19 Culver Road, St Albans</option>
-              <option value="">20 Culver Road, St Albans</option>
-              <option value="">21 Culver Road, St Albans</option>
-              <option value="">22 Culver Road, St Albans</option>
-              <option value="">23 Culver Road, St Albans</option>
-              <option value="">24 Culver Road, St Albans</option>
-              <option value="">25 Culver Road, St Albans</option>
-              <option value="">26 Culver Road, St Albans</option>
-              <option value="">27 Culver Road, St Albans</option>
-              <option value="">28 Culver Road, St Albans</option>
-              <option value="">29 Culver Road, St Albans</option>
-              <option value="">30 Culver Road, St Albans</option>
-              <option value="">31 Culver Road, St Albans</option>
+              <option value="">The list continues...</option>
             </select>
           </p>
           <p class="address-fields-link action group">
@@ -293,12 +270,14 @@ $(function() {
         </form>
   </div>
 </article>
-          <ul class="accordion-actions">
-            <li><a href="#step3" class="disabled next-part button">Go to question 3 of 10</a></li>
-            <li class="secondary-action"><a href="" class="button">Quit</a></li>
-            <li class="secondary-action"><a href="" class="button">Save for later</a></li>
-            <li class="secondary-action"><a href="" class="button">Print preview</a></li>
-          </ul>       
+          <div class="accordion-actions group">
+            <p><a href="#step3" class="disabled next-part button">Go to question 3 of 10</a></p>
+            <ul class="secondary-actions">
+              <li><a href="" class="button">Quit</a></li>
+              <li><a href="" class="button">Save for later</a></li>
+              <li><a href="" class="button">Print preview</a></li>
+            </ul>
+          </div>       
         </div>
         <div class="accordion-summary">
           <p>2. The donor is Tim Paul <a href="#" class="edit">edit</a></p>
@@ -311,7 +290,7 @@ $(function() {
           Q3. When should this LPA take effect?
         </h2>
         <div class="accordion-content">
-          <div class="step-intro">
+          <div class="section-intro">
             <p>[ intro text goes here ]</p>
             <p><a class="open-help" href="">Learn more&hellip;</a></p>
           </div>
@@ -330,12 +309,14 @@ $(function() {
                 </label>
               </li>
             </ul>
-          <ul class="accordion-actions">
-            <li><a href="#step4" class="next-part button">Go to question 4 of 10</a></li>
-            <li class="secondary-action"><a href="" class="button">Quit</a></li>
-            <li class="secondary-action"><a href="" class="button">Save for later</a></li>
-            <li class="secondary-action"><a href="" class="button">Print preview</a></li>
-          </ul> 
+          <div class="accordion-actions group">
+            <p><a href="#step4" class="disabled next-part button">Go to question 4 of 10</a></p>
+            <ul class="secondary-actions">
+              <li><a href="" class="button">Quit</a></li>
+              <li><a href="" class="button">Save for later</a></li>
+              <li><a href="" class="button">Print preview</a></li>
+            </ul>
+          </div> 
 
         </div>
         <div class="accordion-summary">
@@ -348,23 +329,27 @@ $(function() {
           Q4. Who are the attorneys?
         </h2>
         <div class="accordion-content">
-            <div class="step-intro">
-              <p>[ intro text goes here ]</p>
-            <p> <a class="open-help" href="">Learn more&hellip;</a></p>
+          <div class="section-intro">
+            <p>[ intro text goes here ]</p>
+            <p><a class="open-help" href="">Learn more&hellip;</a></p>
           </div>
 
-        <p id="add-attorney-1-link" class="add"><a href="#" id="open-attorney-form">Add an attorney</a></p>
+          <p id="add-attorney-1-link" class="add"><a href="#" id="open-attorney-form">Add an attorney</a></p>
+
+          <div id="later-attorney-example">
 
 
+            <div class="person-summary group">
+              <p>Attorney 1: Jane Smith</p>
+              <ul class="actions">
+                <li><a href="#" class="edit">delete</a></li>
+                <li><a href="#" class="edit">edit</a></li>
+              </ul>
+            </div>
 
-      <div id="later-attorney-example">
-        <p class="added-attorney">
-            <a href="#" class="edit">delete</a>
-            <a href="#" class="edit">edit</a>
-          <span class="confirm-text"><span class="label">Attorney 1:</span> Jane Smith</span>
-        </p>
-        <p class="add"><a href="#" id="open-attorney-form">Add another attorney?</a></p>
-      </div>
+
+            <p class="add"><a href="#" id="open-attorney-form">Add another attorney?</a></p>
+          </div>
 
 <!-- START OF ATTORNEY FORM -->
 <article id="attorney-form" class="hidden" >
@@ -427,7 +412,6 @@ $(function() {
           </p>
         </fieldset>
         <fieldset>
-          <legend>Current address</legend>
           <p class="group">
             <label for="postcode">Enter postcode</label>
             <input type="text" class="postcode" /> 
@@ -446,27 +430,7 @@ $(function() {
               <option value="">08 Culver Road, St Albans</option>
               <option value="">09 Culver Road, St Albans</option>
               <option value="">10 Culver Road, St Albans</option>
-              <option value="">11 Culver Road, St Albans</option>
-              <option value="">12 Culver Road, St Albans</option>
-              <option value="">13 Culver Road, St Albans</option>
-              <option value="">14 Culver Road, St Albans</option>
-              <option value="">15 Culver Road, St Albans</option>
-              <option value="">16 Culver Road, St Albans</option>
-              <option value="">17 Culver Road, St Albans</option>
-              <option value="">18 Culver Road, St Albans</option>
-              <option value="">19 Culver Road, St Albans</option>
-              <option value="">20 Culver Road, St Albans</option>
-              <option value="">21 Culver Road, St Albans</option>
-              <option value="">22 Culver Road, St Albans</option>
-              <option value="">23 Culver Road, St Albans</option>
-              <option value="">24 Culver Road, St Albans</option>
-              <option value="">25 Culver Road, St Albans</option>
-              <option value="">26 Culver Road, St Albans</option>
-              <option value="">27 Culver Road, St Albans</option>
-              <option value="">28 Culver Road, St Albans</option>
-              <option value="">29 Culver Road, St Albans</option>
-              <option value="">30 Culver Road, St Albans</option>
-              <option value="">31 Culver Road, St Albans</option>
+              <option value="">This list continues...</option>
             </select>
           </p>
           <p class="address-fields-link action group">
@@ -522,12 +486,14 @@ $(function() {
 </article>
 
 
-          <ul class="accordion-actions">
-            <li><a href="#step5" class="next-part button">Go to question 5 of 10</a></li>
-            <li class="secondary-action"><a href="" class="button">Quit</a></li>
-            <li class="secondary-action"><a href="" class="button">Save for later</a></li>
-            <li class="secondary-action"><a href="" class="button">Print preview</a></li>
-          </ul>     
+          <div class="accordion-actions group">
+            <p><a href="#step5" class="disabled next-part button">Go to question 5 of 10</a></p>
+            <ul class="secondary-actions">
+              <li><a href="" class="button">Quit</a></li>
+              <li><a href="" class="button">Save for later</a></li>
+              <li><a href="" class="button">Print preview</a></li>
+            </ul>
+          </div>      
         </div>
         <div class="accordion-summary">
           <p>4. The attorneys are Jane Smith and Fred Bloggs <a href="#" class="edit">edit</a></p>
@@ -540,19 +506,21 @@ $(function() {
           Q5. Do you want to appoint any replacement attorneys?
         </h2>
         <div class="accordion-content">
-            <div class="step-intro">
+            <div class="section-intro">
               <p>[ intro text ]</p>
               <p><a class="open-help" href="">Learn more&hellip;</a></p>
             </div>
 
         <p class="add"><a href="#" id="open-attorney-form">Add a replacement attorney?</a></p>
 
-        <ul class="accordion-actions">
-            <li><a href="#step6" class="next-part button">Go to question 6 of 10</a></li>
-            <li class="secondary-action"><a href="" class="button">Quit</a></li>
-            <li class="secondary-action"><a href="" class="button">Save for later</a></li>
-            <li class="secondary-action"><a href="" class="button">Print preview</a></li>
-          </ul>     
+          <div class="accordion-actions group">
+            <p><a href="#step6" class="disabled next-part button">Go to question 6 of 10</a></p>
+            <ul class="secondary-actions">
+              <li><a href="" class="button">Quit</a></li>
+              <li><a href="" class="button">Save for later</a></li>
+              <li><a href="" class="button">Print preview</a></li>
+            </ul>
+          </div>     
         </div>
         <div class="accordion-summary">
           <p>5. The replacement attorney is Fred Smith<a href="#" class="edit">edit</a></p>
@@ -564,10 +532,10 @@ $(function() {
 <!-- Step 6 -->
       <section id="step6" class="section">
         <h2 class="accordion-header"> 
-          Q6. How should any decisions be made?
+          Q6. How do you want your attorneys to make decisions?
         </h2>
         <div class="accordion-content">
-            <div class="step-intro">
+            <div class="section-intro">
               <p>[ intro text ]</p>
               <p><a class="open-help" href="#/help/Decisions">Learn more&hellip;</a></p>
             </div>
@@ -592,19 +560,21 @@ $(function() {
                       <label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3"> It depends on the decision&hellip;</label>
                     </summary>
                     <label class="visuallyhidden">Please provide details</label>
-                    <span class="examples"><a href="">Not sure what to put?&hellip;</a></span>
+                    <span class="not-sure"><a href="">Not sure what to put?&hellip;</a></span>
                     <textarea class="full-size" placeholder="Please provide details"></textarea>
                   </details>
                 </li>
               </ul>
             </fieldset>
 
-          <ul class="accordion-actions">
-            <li><a href="#step7" class="next-part button">Go to question 7 of 10</a></li>
-            <li class="secondary-action"><a href="" class="button">Quit</a></li>
-            <li class="secondary-action"><a href="" class="button">Save for later</a></li>
-            <li class="secondary-action"><a href="" class="button">Print preview</a></li>
-          </ul>  
+          <div class="accordion-actions group">
+            <p><a href="#step7" class="disabled next-part button">Go to question 7 of 10</a></p>
+            <ul class="secondary-actions">
+              <li><a href="" class="button">Quit</a></li>
+              <li><a href="" class="button">Save for later</a></li>
+              <li><a href="" class="button">Print preview</a></li>
+            </ul>
+          </div>  
         </div>
         <div class="accordion-summary">
           <p>6. The attorneys must make all decisions as a group<a href="#" class="edit">edit</a></p>
@@ -616,7 +586,7 @@ $(function() {
           Q7. Are there any extra restrictions or guidance that should be followed?
         </h2>
         <div class="accordion-content">
-              <div class="step-intro">
+              <div class="section-intro">
                 <p>The donor can specify restrictions that the attorneys MUST follow. They can also give more general guidance for the attorneys.</p>
                 <p><a class="open-help" href="">Learn more&hellip;</a></p>
               </div>
@@ -630,7 +600,7 @@ $(function() {
                           <label><input type="checkbox" id="extras2" value="option2"> Specify restrictions for the attorneys</label>
                         </summary>
                         <label class="visuallyhidden">Please provide details</label>
-                        <span class="examples"><a href="">Not sure what to put?&hellip;</a></span>
+                        <span class="not-sure"><a href="">Not sure what to put?&hellip;</a></span>
                         <textarea class="full-size" placeholder="Please provide details"></textarea>
                       </details>
                     </label>
@@ -642,7 +612,7 @@ $(function() {
                           <label><input type="checkbox" id="extras3" value="option3"> Specify guidance for the attorneys</label>
                         </summary>
                         <label class="visuallyhidden">Please provide details</label>
-                        <span class="examples"><a href="">Not sure what to put?&hellip;</a></span>
+                        <span class="not-sure"><a href="">Not sure what to put?&hellip;</a></span>
                         <textarea class="full-size" placeholder="Please provide details"></textarea>
                       </details>
                     </label>
@@ -651,11 +621,14 @@ $(function() {
 
               </fieldset>
 
-          <ul class="accordion-actions">
-            <li><a href="#step8" class="next-part button">Go to question 8 of 10</a></li>
-            <li class="secondary-action"><a href="" class="button">Save for later</a></li>
-            <li class="secondary-action"><a href="" class="button">Print preview</a></li>
-          </ul> 
+          <div class="accordion-actions group">
+            <p><a href="#step8" class="disabled next-part button">Go to question 8 of 10</a></p>
+            <ul class="secondary-actions">
+              <li><a href="" class="button">Quit</a></li>
+              <li><a href="" class="button">Save for later</a></li>
+              <li><a href="" class="button">Print preview</a></li>
+            </ul>
+          </div> 
         </div>
         <div class="accordion-summary">
           <p>7. The donor has provided additional guidance for the attorneys <a href="#" class="edit">edit</a></p>
@@ -664,10 +637,10 @@ $(function() {
 <!-- Step 8 -->
 <section id="step8" class="section">
         <h2 class="accordion-header"> 
-          Q8. Are the attorneys to be paid for their services?
+          Q8. Do you want to pay your attorneys for their services?
         </h2>
         <div class="accordion-content">
-          <div class="step-intro">
+          <div class="section-intro">
               <p>All attorneys can claim reasonable expenses from the donor's funds. However, professional attorneys (eg solicitors) often make additional charges for their services.</p>
               <p><a class="open-help" href="">Learn more&hellip;</a></p>
             </div>
@@ -686,19 +659,21 @@ $(function() {
                       <label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3"> Yes, the attorneys should be paid as follows...</label>
                     </summary>
                     <label class="visuallyhidden">Please provide details</label>
-                    <span class="examples"><a href="">Not sure what to put?&hellip;</a></span>
+                    <span class="not-sure"><a href="">Not sure what to put?&hellip;</a></span>
                     <textarea class="full-size" placeholder="Please provide details"></textarea>
                   </details>
                 </li>
               </ul>
             </fieldset>
 
-          <ul class="accordion-actions">
-            <li><a href="#step9" class="next-part button">Go to question 9 of 10</a></li>
-            <li class="secondary-action"><a href="" class="button">Quit</a></li>
-            <li class="secondary-action"><a href="" class="button">Save for later</a></li>
-            <li class="secondary-action"><a href="" class="button">Print preview</a></li>
-          </ul> 
+          <div class="accordion-actions group">
+            <p><a href="#step9" class="disabled next-part button">Go to question 9 of 10</a></p>
+            <ul class="secondary-actions">
+              <li><a href="" class="button">Quit</a></li>
+              <li><a href="" class="button">Save for later</a></li>
+              <li><a href="" class="button">Print preview</a></li>
+            </ul>
+          </div> 
 
         </div>
         <div class="accordion-summary">
@@ -711,19 +686,21 @@ $(function() {
           Q9. Do you want to let anyone know when the LPA is registered?
         </h2>
         <div class="accordion-content">
-          <div class="step-intro">
+          <div class="section-intro">
             <p>[ intro text ]</p>
             <p><a class="open-help" href="">Learn more&hellip;</a></p>
           </div>
 
           <p class="add"><a href="2b.html">Add details of a person to be told</a></p>
 
-          <ul class="accordion-actions">
-            <li><a href="#step10" class="next-part button">Go to question 10 of 10</a></li>
-            <li class="secondary-action"><a href="" class="button">Quit</a></li>
-            <li class="secondary-action"><a href="" class="button">Save for later</a></li>
-            <li class="secondary-action"><a href="" class="button">Print preview</a></li>
-          </ul> 
+          <div class="accordion-actions group">
+            <p><a href="#step10" class="disabled next-part button">Go to question 10 of 10</a></p>
+            <ul class="secondary-actions">
+              <li><a href="" class="button">Quit</a></li>
+              <li><a href="" class="button">Save for later</a></li>
+              <li><a href="" class="button">Print preview</a></li>
+            </ul>
+          </div> 
 
         </div>
         <div class="accordion-summary">
@@ -736,14 +713,14 @@ $(function() {
           Q10. Who will confirm that you're doing this of your own free will?
         </h2>
         <div class="accordion-content">
-          <div class="step-intro">
+          <div class="section-intro">
             <p>You must name at least one independent person (called a "certificate provider") who can confirm that the donor understands the significance of the LPA, that they have not been put under pressure to make it and there has been no fraud involved. Not everyone is allowed to act in this capacity.</p>
             <p><a class="open-help" href="">Learn more&hellip;</a></p>
           </div>
 
           <p class="add"><a href="2b.html">Add details of a certificate provider</a></p>
 
-          <ul class="accordion-actions">
+          <ul class="accordion-actions group">
             <li><a href="#step11" class="next-part button">Continue to final step</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>
@@ -761,11 +738,11 @@ $(function() {
           Review the details
         </h2>
         <div class="accordion-content">
-          <div class="step-intro">
+          <div class="section-intro">
             <p>You are now ready to print your LPA. Please review the information you provided above before pressing 'Continue'.</p>
           </div>
 
-          <ul class="accordion-actions">
+          <ul class="accordion-actions group">
             <li><a href="Create.print.html" class="button">Continue</a></li>
             <li class="secondary-action"><a href="" class="button">Quit</a></li>
             <li class="secondary-action"><a href="" class="button">Save for later</a></li>

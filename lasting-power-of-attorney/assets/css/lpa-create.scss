@@ -3,133 +3,131 @@
 
 @import "colours";
 @import "typography";
-@import "design-patterns/_show-hide";
-@import "design-patterns/_regular-grid";
-@import "design-patterns/_popups";
-@import "design-patterns/_forms";
-@import "design-patterns/progress-indicator";
+@import "design-patterns/show-hide";
+@import "design-patterns/regular-grid";
+@import "design-patterns/popups";
+@import "design-patterns/forms";
+@import "design-patterns/buttons-extra";
 @import "design-patterns/account-management-tools";
 @import "design-patterns/accordion-form";
-
-
-@include account-management-tools;
 
 
 header.page-header hgroup {
   margin-right: 0 /* Extend page header out to end of search button */
 }
 
-@include progress-indicator;
+
+// ===========================================================
+// ACCOUNT MANAGEMENT BAR
+// ===========================================================
+@include account-management-tools;
 
 
+// ===========================================================
+// ACCORDION
+// ===========================================================
 
-/* ===========================================================
- * ACCORDION
- * ===========================================================
- *
- */
-
-
+// Generic accordion form styles
 @include accordion-form;
 
-
+// Bespoke accordion form styles
 .accordion-form{
   .section.current{
-    // Right-align secondary actions
-    .accordion-actions .secondary-action{
-      float: right;
-      margin: -0.8em 0 0 0.5em;
+    .accordion-actions{
+      p{
+        width: 50%;
+        float: left;
+      }
+      .secondary-actions{
+        float: left;
+        margin: 0;
+        padding: 0;
+        width: 50%;
+        li{
+          float: right;
+          list-style-type: none;
+          list-style-image: none;
+          padding: 0;
+          margin: 0.8em 0 0 0.5em;
+        }
+        .button{
+          @include secondary-action;
+        }
+      } 
     }
   }
 }
 
-.step-intro{
+// Intro panels for each question
+.section-intro{
+  @include panel($turquoise-25);
+}
+
+// Person summary
+.person-summary{
   @include panel;
-}
-
-.added-attorney{
-background-color: $grey-95;
-margin: 0 -0.9em 1em -0.8em;
-padding: 1em;
-}
-.added-attorney .edit{
-  float: right;
-  margin-left: 0.5em;
-}
-.added-attorney .label{
-  display: inline-block;
-  width: 10em;
-  margin-left: -4em;
-  text-align: right;
-  margin-right: 0.5em;
-}
-
-
-// Disabled state for link-style buttons
-.button.disabled{
-  opacity: 0.5;
-  &:hover{
-    cursor: default;
-    background-color: #008270;
+  p{
+    float: left;
+    width: 50%;
+  }
+  .actions{
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    li {
+      float: right;
+      list-style-type: none;
+      list-style-image: none;
+      padding: 0;
+      margin: 0 0 0 1em;
+    }
   }
 }
 
-// Secondary actions
-
-.secondary-action .button{
-  background-color: #E1E8E8;
-  color: #083640;
-  -webkit-box-shadow: 0 4px 0 #AAA, 0 8px 10px rgba(0, 0, 0, .05);
-  -moz-box-shadow: 0 4px 0 #AAA, 0 8px 10px rgba(0,0,0,.05);
-  box-shadow: 0 3px 0 #AAA, 0 8px 10px rgba(0, 0, 0, 0.05);
-}
-.secondary-action .button:hover{
-  background-color: #e3e3e3;
-}
-
-
-
-
 /* ===============================
- * BULLETS
+ * BULLETS AND BUTTONS
  * ===============================
  */
+
+@include buttons-extra;
 
 /* '+' symbol */
 .add{
   padding: 1em 0;
-}
-.add:before{
-  background-color: #28a197;
-  color: #FFF;
-  content:"+";
-  float: left;
-  font-weight: bold;
-  line-height: 0.9em;
-  padding: 0.1em 0.3em;
-  margin: 0.1em 0.5em 0 0;
+  &:before{
+    background-color: #28a197;
+    color: #FFF;
+    content:"+";
+    float: left;
+    font-weight: bold;
+    line-height: 0.9em;
+    padding: 0.1em 0.3em;
+    margin: 0.1em 0.5em 0 0;  
+  }
 }
 
-.examples{
+.hidden-controls .not-sure{
   float: right;
   margin: -2.25em 0.5em 0 0;
 }
 
-/* ================================
- * POP-UP FORM STYLES
- * ================================
- */
 
+// ================================
+// POP-UP WINDOW STYLES
+// ================================
 
 #popup{
   @include popup(38em);
   .content{
     margin-top: -2.5em;
+    // Popup header style
     h1{
       padding: 0.8em 1em;
       background-color: $grey-95;
       margin: 1em -1em;
     }
+    // Popup footer style
     .save-details{
       background-color: $grey-95;
       padding: 1.25em 1.25em 1em 9.5em;
@@ -138,21 +136,26 @@ padding: 1em;
   }
 }
 
-input.postcode{
-  width: 5em;
-  min-width: 5em;
+
+
+
+// ================================================================
+// FORMS
+// ================================================================
+
+// Basic form styles
+.form{
+  @include form(right);
 }
-input.small-number{
-  width: 2em;
-  min-width: 2em;
+
+// Postcode lookup button
+.postcode-lookup{
+  display: block;
+  float: left;
+  margin-top: 0.15em;
 }
 
-
-/* ================================================================
- * ADDRESS LIST
- * ================================================================
- */
-
+// Address list
 select.street{
   width: 20em;
   border: 1px inset;
@@ -167,95 +170,28 @@ select.street::-webkit-scrollbar-thumb {
 background-color:rgba(0,0,0,.5) !important;
 }
 
-.postcode-lookup{
-  display: block;
-  float: left;
-  margin-top: 0.15em;
-}
-
-/* ================================================================
- * FORMS
- * ================================================================
- */
-
-
-.form{
-  @include form(right);
-}
-
-.accordion-form{
-  margin-top: 2em;
-}
-
-
-
-
-/* SHOW / HIDE */
+// Show/Hide panel
 @include details-and-summary(highlighted);
 
-/* ===============================
- * Progressive disclosure in forms
- * ===============================
- *
- * On occasion you may want form elements to appear if the users selects
- * a particular radio button or checkbox. 
- */
+// Hidden form controls
+@include hidden-controls;
+
+// Emphasised labels
+@include emphasised-labels;
 
 
-.hidden-controls {
-  padding-top: 0;
-  summary{
-    text-decoration: none;
-    margin-bottom: 0;
-    &:hover{
-      color: #333;
-      font-weight: 300;
-    }
-    &::-webkit-details-marker { 
-      display:none; 
-    }
-  }
-  &[open]{
-    padding-top: 0;
-  }
-  textarea {
-    margin: 0 0 0.75em 0;
-  }
-}
-
-
-
-
-
-fieldset.intro{
-  margin-bottom: 1em;
-}
-
-detail[open] > summary.button{
-  color: white;
-  font-weight: normal;
-}
-summary.button::-webkit-details-marker { display:none; }
-
+// Make standard body text look like a link
 .link-style{
   color: #2E3191;
   text-decoration: underline;
   cursor: pointer;
-}
-.link-style:hover{
-  color: #2E8ACA;
-}
-
-.example {
-background: none repeat scroll 0 0 #E7EBDA;
-margin: 0.75em -1em;
-padding: 0.5em 1em;
+  &:hover{
+    color: #2E8ACA;
+  }
 }
 
-
-
-
-/* REGISTRATION STYLES */
+// ==========================================
+// LPA REGISTRATION STYLES
 
 .capture-dates .controls label{
   margin-top: -2em;
@@ -280,120 +216,93 @@ padding: 0.5em 1em;
   width: 2em;
   margin-top: 0.5em;
 }
-
-
-
-/* EMPHASISED RADIOS & CHECKBOXES
----------------------------------
-
-*/
-
-.emphasised input[type="checkbox"], .emphasised input[type="radio"] {
-  position: relative;
-}
-.emphasised.option.group label{
-  display: block;
-  padding: 0.5em 0 0.5em 1em;
-  margin: 0 -0.8em 0.25em -0.8em;
-}
-.emphasised label.radio:hover,
-.emphasised label.checkbox:hover{
-  background-color: #f2f2f2;
-}
-.checked{
-  background-color: #f2f2f2;
-}
-.radio-action{
-  float: right;
-  font-size: 1rem;
-  margin-top: -2.7em;
-  padding-right: 1em;
-}
-
-
-
-/* HELP SYSTEM */
-
-#popup.help-system{
-  background-color: #fff;
-  padding: 1em 0 1em 1.5em;
-  /*width:60%;*/
-  min-height: 26em;
-  position: absolute; /* popup scrolls with page, so we can have long popups */
-}
-
-#popup.help-system h2{
-  font-size: 1.75em;
-  font-weight:normal;
-  margin:0;
-}
-#popup.help-system .content{
-  float: left;
-  width: 70%;
-  padding-right: 0em;
-}
-#popup.help-system nav{
-  float: left;
-  margin: 0 -1em 0 1em;
-  width: 30%;
-}
-#popup.help-system nav{
-  margin-top:-1em;
-  /*font-size: 0.8em;*/
-}
-
-#popup.help-system nav ul{
-  margin: 0;
-  list-style-type: none;
-}
-
-#popup.help-system nav > *{
-  padding-left: 2em;
-}
-
-#popup.help-system nav li{
-  margin: 0;
-  padding: 0.5em 0;
-  font-weight: bold;
-}
-#popup.help-system nav .current{
-  background: #e8f0f0;
-  position: relative;
-}
-#popup.help-system nav .current:before {
-  width: 0;
-  height: 0;
-  content: " ";
-  border: 1.25em solid transparent;
-  border-right-color: #e8f0f0;
-  position: absolute;
-  left: -2.5em;
-  top: 0;
-
-}
-#popup.help-system nav a{
-  text-decoration: none;
-}
-#popup.help-system nav a:hover{
-  text-decoration: underline;
-}
-#popup.help-system nav .current a{
-  color: #333;
-}
-
-#popup.help-system .content ul{
-  margin: 0;
-}
-
 #donor-signature{
   padding-left: 0;
 }
 
 
-/* FORM DOWNLOAD */
 
-/* Need to change the styles in application.css so they apply to elements outside of the 
-   application div (eg. popups) */
+// ==========================================
+// HELP SYSTEM STYLES
+
+// Intro panel for help topics
+fieldset.intro{
+  margin-bottom: 1em;
+}
+
+// Examples
+.example {
+background: none repeat scroll 0 0 #E7EBDA;
+margin: 0.75em -1em;
+padding: 0.5em 1em;
+}
+
+#popup.help-system{
+  background-color: #fff;
+  padding: 1em 0 1em 1.5em;
+  min-height: 26em;
+  position: absolute; /* popup scrolls with page, so we can have long popups */
+  h2{
+    font-size: 1.75em;
+    font-weight:normal;
+    margin:0;
+  }
+  .content{
+    float: left;
+    width: 70%;
+    padding-right: 0em;
+    ul{
+      margin: 0;
+    }
+  }
+  nav{
+    float: left;
+    margin: -1em -1em 0 1em;
+    width: 30%;
+    ul{
+      margin: 0;
+      list-style-type: none;
+    }
+    li{
+      margin: 0;
+      padding: 0.5em 0;
+      font-weight: bold;
+    }
+    > *{
+      padding-left: 2em;
+    }
+    a{
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    .current{
+      background: #e8f0f0;
+      position: relative;
+      &:before {
+        width: 0;
+        height: 0;
+        content: " ";
+        border: 1.25em solid transparent;
+        border-right-color: #e8f0f0;
+        position: absolute;
+        left: -2.5em;
+        top: 0;
+      }
+      a{
+        color: #333;
+      }
+    }
+  }
+}
+
+
+
+// FORM DOWNLOAD PANEL
+
+// We need to change the styles in application.css so they apply to elements  
+// outside of the application div (eg. popups)
 
 .form-download {
   background-color:#d5e8f3;
@@ -403,16 +312,13 @@ padding: 0.5em 1em;
 .form-download{
   background: url(https://d17tffe05zdvwj.cloudfront.net/static/icon-file-download-00b5dbb3ea8a18c444a08497b3d03d56.png) no-repeat scroll 98% 1em #D5E8F3;
 }
-
 .form-download p {
-  /*margin: 0 0;*/
   padding-right:3em;
 }
 .form-download a {
   color: #000;
   display: block;
 }
-
 #sign-in-reminder{
   padding-left: 0;
 }
