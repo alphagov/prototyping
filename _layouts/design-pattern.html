@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    {% include _head.html %}
+<!--[if lt IE 9]><html class="lte-ie8 " lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en" class="">
+<!--<![endif]--><head>
+{% include _head.new.html %}
     <link rel="stylesheet" href="/website-toolkit/css/styles.css" />
   </head>
-  <body class="mainstream">
+
+
+  <body class="mainstream full-width">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
-    {% include _header.html %}
+    {% include _header.new.html %}
     <div id="global-breadcrumb" class="header-context">
         <nav role="navigation">
           <ol class="group">
@@ -16,24 +18,14 @@
           </ol>
         </nav>
     </div>
+
     <div id="wrapper" class="guide">
 
-      <section id="content" role="main" class="group">
-      <div class="pattern-status">{{ page.status }}</div>
-        <header class="page-header group">
-          <hgroup>
-            <h1><span>Design pattern</span> {{ page.title }}</h1>
-          </hgroup>
-        </header>
-        <div class="group">
-          <article role="article" class="group">
-            <div class="inner">
+      <section id="content" role="main" class="group category-page"><!--<div class="pattern-status">{{ page.status }}</div>--><header class="page-header group"><hgroup class="full-width"><h1><span>Design pattern</span> {{ page.title }}</h1></hgroup></header><div class="browse-container full-width group">
               {{ content }}
-            </div>
-          </article>
-        </div>
+          </div>
       </section>
     </div><!--end wrapper-->
-    {% include _footer.html %}
+    {% include _footer.new.html %}
   </body>
 </html>

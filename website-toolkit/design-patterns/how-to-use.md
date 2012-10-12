@@ -4,7 +4,7 @@ title: Design pattern library
 status: draft
 ---
 
-# How to use the patterns in this library
+## How to use the patterns in this library
 
 
 First, you'll need to be using the GOV.UK [Prototyping app](https://github.com/alphagov/prototyping).

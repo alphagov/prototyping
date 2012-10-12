@@ -5,7 +5,7 @@ status: draft
 ---
 
 <div class="pattern-library">
-  <h1>What is this?...</h1>
+  <h2>What is this?...</h2>
   <p>Design patterns are reusable bits of web interface like form controls, navigation and calendars.</p>
   <p>The patterns here are experimental and are currently only available via the GOV.UK Prototyping app.</p>
 
@@ -13,7 +13,7 @@ status: draft
 
 </div>
 
-# Full list of patterns
+## Full list of patterns
 
 * [Contact details](contact-details.html)
 * [Highlighted content](highlighted-content.html)

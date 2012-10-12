@@ -31,14 +31,7 @@ header.page-header hgroup {
 }
 /* Container for example patterns */
 .pattern-example{
-  background-color: #f2f2f2;
-  padding: 1em;
-  margin: 0 -1em;
-  .inner{
-    background-color: white;
-    border: 1px solid #CCC;
-    padding-top: 2em;
-  }
+  @include panel;
 }
 /* Pattern status label */
 .pattern-status{

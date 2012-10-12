@@ -1,12 +1,9 @@
+---
+---
+
 $(function() {
 
-	// Emphasised checkbox and radio button label styles		
-	var $emphasised = $('.emphasised input');
-  $emphasised.filter(':checked').parent().addClass('checked');
-	$emphasised.change(function() {
-   		$emphasised.parent().removeClass('checked');
-   		$emphasised.filter(':checked').parent().addClass('checked');
-	});
+  {% include javascripts/design-patterns/_emphasised_form_controls.js %}
 
   // ACCORDION FORM
 
