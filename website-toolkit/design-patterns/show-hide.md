@@ -2,6 +2,7 @@
 layout: design-pattern
 title: Show/hide link
 status: draft
+css: ../css/design-patterns/show-hide.css
 ---
 
 When you click on the link it toggles some content immediately below it. The details and summary tags in HTML5 are specifically intended for this kind of thing.

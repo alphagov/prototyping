@@ -2,30 +2,67 @@
 layout: design-pattern
 title: Hidden form controls
 status: draft
+css: ../css/design-patterns/hidden-form-controls.css
 ---
 
 This pattern uses the details and summary tags to reveal content when a form label is clicked.
 Use it to ask the user for additional input if they select a particular option.
 
+## Example 1: Checkboxes
+
 <div class="pattern-example">
   <div class="inner">
     <div class="form-example-1">
 
-      <ul class="option group">
+      <ul class="hidden-controls option group">
+        <li>                                      
+          <details>
+            <summary>
+              <label><input type="checkbox"  value="value"> I'd like to provide a detailed report...</label>
+            </summary>
+            <label class="visuallyhidden">Enter text here</label>
+            <textarea class="full-size" placeholder="Enter text here"></textarea>
+          </details>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+      <pre><code>  &lt;ul class="hidden-controls option group"&gt;
+    &lt;li&gt;                                      
+      &lt;details&gt;
+        &lt;summary&gt;
+          &lt;label&gt;&lt;input type="checkbox"  value="value"&gt; I'd like to provide a detailed report...&lt;/label&gt;
+        &lt;/summary&gt;
+        &lt;label class="visuallyhidden"&gt;Please provide details&lt;/label&gt;
+        &lt;textarea class="full-size" placeholder="Enter text here"&gt;&lt;/textarea&gt;
+      &lt;/details&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+</code></pre>
+</div>
+
+## Example 2: Radio buttons
+
+<div class="pattern-example">
+  <div class="inner">
+    <div class="form-example-1">
+
+      <ul class="hidden-controls option group">
         <li>
             <label>
               <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-              Attorneys must make all decisions jointly
+              All decisions must be made jointly
             </label>
         </li>
         <li>
             <label>
               <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-              Attorneys can make decisions jointly or severally
+              All decisions can be made jointly or severally
             </label>
         </li>
         <li>                                      
-          <details class="hidden-controls group">
+          <details>
             <summary>
               <label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3"> It depends on the decision…</label>
             </summary>
@@ -34,37 +71,20 @@ Use it to ask the user for additional input if they select a particular option.
           </details>
         </li>
       </ul>
-
     </div>
   </div>
 </div>
 
+## Dependencies
 
-<div class="pattern-example">
-  <div class="inner">
-    <div class="form-example-1">
+You'll need to import 'forms.scss' and 'show-hide.scss' and include the 'hidden-form-controls' and 'details-and-summary' mixins.
 
-      <ul class="option group">
-        <li>                                      
-          <details class="hidden-controls group">
-            <summary>
-              <label><input type="checkbox"  value="value"> I want the following...</label>
-            </summary>
-            <label class="visuallyhidden">Please provide details</label>
-            <textarea class="full-size" placeholder="Please provide details"></textarea>
-          </details>
-        </li>
-      </ul>
+You'll also need the relevant javascripts on your page.
 
-    </div>
-  </div>
-</div>
 
 ## Still to do
 
-Needs cross-browser testing. There's a known issue with radio buttons - if you select the radio that
-reveals the content, then select one of the other radios, it doesn't hide the content again and the
-toggle becomes inverted.
+Needs cross-browser testing. There's also a known issue with radio buttons - if you have more than one hidden control in a set it gets confused.
 
 <script src="../javascripts/jquery.details.js"></script>
 <script>
@@ -73,6 +93,10 @@ toggle becomes inverted.
     $('html').addClass($.fn.details.support ? 'details' : 'no-details');
     // Emulate <details> where necessary and enable open/close event handlers
     $('details').details();
+
+
+    {% include javascripts/design-patterns/_hidden_form_controls.js %}
+
 
   });
 </script>

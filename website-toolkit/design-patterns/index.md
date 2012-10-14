@@ -13,15 +13,24 @@ status: draft
 
 </div>
 
-## Full list of patterns
+## Forms
 
-* [Contact details](contact-details.html)
+* [Anatomy of a form](form-anatomy.html)
+* [Buttons](buttons.html)
+* [Emphasised form controls](emphasised-form-controls.html)
+* [Hidden form controls](hidden-form-controls.html)
+* [Example: Registration form](registration-form.html)
+
+## Content
+
 * [Highlighted content](highlighted-content.html)
-* [Progress indicator](progress-indicator.html)
 * [Regular grid](regular-grid.html)
 * [Show/hide link](show-hide.html)
-* [Anatomy of a form](form-anatomy.html)
-* [Example: Registration form](registration-form.html)
+
+## Other
+
+* [Contact details](contact-details.html)
+* [Progress indicator](progress-indicator.html)
 
 
 

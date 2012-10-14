@@ -2,6 +2,7 @@
 layout: design-pattern
 title: Accordion form
 status: draft
+css: ../css/design-patterns/accordion-form.css
 ---
 
 One of a number of ways of breaking a long form up into a series of manageable steps.

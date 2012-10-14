@@ -5,17 +5,22 @@
 // WEBSITE TOOLKIT STYLES
 //
 
-@import "frontend_toolkit";
-@import "design_patterns";
-
-header.page-header hgroup {
-  margin-right: 0 /* Extend page header out to end of search button */
-}
+@import "colours";
+@import "typography";
+@import "conditionals";
+@import "design-patterns/panels";
+@import "design-patterns/regular-grid";
 
 
 // ====================================================
 // DESIGN PATTERNS
 //
+
+
+// Page contents
+.page-contents{
+  @include panel;
+}
 
 /* Intro panel on landing page */
 .pattern-library{
@@ -71,7 +76,6 @@ code{
 }
 
 pre:first-child { margin-top: 0; }
-pre:last-child { margin-bottom: 0; }
 
 /* Update text.scss with these */
 hr{
@@ -99,63 +103,3 @@ article dd{
     text-decoration: none;
   }
 }
-
-// ====================================================
-// DESIGN PATTERN PAGES
-//
-
-// Page contents
-.page-contents{
-  @include panel;
-}
-
-/* Progress indicator */
-@include progress-indicator;
-.alt { @include progress-indicator($green, $green, $white); }
-
-/* Show/hide */
-@include details-and-summary;
-.show-hide-version-2,
-.test {
-  @include details-and-summary(highlighted);
-}
-
-/* Panels */
-.new-panel { @include panel($grass-green-25); }
-
-/* Regular grid */
-.regular-grid p{
-    background-color: $cool-grey;
-    border: 1px solid $light-blue-grey;
-    text-align: center;
-    padding: 1em;
-}
-.example-1{ @include regular-grid(4); }
-.example-2{ @include regular-grid(5); }
-.example-3{ @include regular-grid(8); }
-.example-4{ @include regular-grid(2); }
-
-.browse-grid{
-  @include regular-grid(3, 10em);
-}
-
-/* Forms */
-.form-example-1 {
-  @include form(top, 5.5em);
-}
-
-#form-example-2.top { @include form(top, 7.5em) }
-#form-example-2.left { @include form(left, 7.5em) }
-#form-example-2.right { @include form(right, 7.5em) }
-
-// Accordion form
-@include accordion-form;
-
-// Emphasised form controls
-@include emphasised-form-controls;
-
-// Hidden form controls
-@include hidden-controls;
-
-
-

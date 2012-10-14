@@ -2,6 +2,7 @@
 layout: design-pattern
 title: Regular grid
 status: draft
+css: ../css/design-patterns/regular-grid.css
 ---
 
 A mixin for creating a regular grid of elements. All widths are expressed as percentages of the parent element.

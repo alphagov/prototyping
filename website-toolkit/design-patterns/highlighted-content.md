@@ -2,6 +2,7 @@
 layout: design-pattern
 title: Highlighted content
 status: draft
+css: ../css/design-patterns/panels.css
 ---
 
 There are various options for highlighting different kinds of content.

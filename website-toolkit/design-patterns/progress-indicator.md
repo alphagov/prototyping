@@ -2,6 +2,7 @@
 layout: design-pattern
 title: Progress indicator
 status: draft
+css: ../css/design-patterns/progress-indicator.css
 ---
 
 Use this near the top of multi-page transactions to help users understand how

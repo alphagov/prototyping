@@ -2,6 +2,7 @@
 layout: design-pattern
 title: Emphasised form controls
 status: draft
+css: ../css/design-patterns/emphasised-form-controls.css
 ---
 
 The pattern below gives selected radio buttons and checkboxes a highlight colour and makes their clickable area larger. Use this to emphasise important decisions.

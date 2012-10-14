@@ -2,6 +2,7 @@
 layout: design-pattern
 title: Anatomy of a form
 status: draft
+css: ../css/design-patterns/forms.css
 ---
 
 Examples, markup and styles for most basic form elements.
@@ -276,6 +277,12 @@ Help text goes in a 'help' element above or below the relevant control
         <span class="help">Include your country code</span>
       </p>
 
+      <p class="group">
+        <label for="telephone">Code</label>
+        <input id="telephone" type="text" class="telephone">
+        <span class="inline help">The three numbers on the back of the card</span>
+      </p>
+
     </div>
   </div>
   <pre><code>  &lt;p class="group"&gt;
@@ -343,17 +350,18 @@ Nest rows of buttons in an 'action group' element.
     <div class="form-example-1">
 
         <p class="action group">
-          <button class="button" type="submit">Submit form</button>
+          <input class="btn" type="submit" value="Submit">
+          <input class="btn-secondary" type="submit" value="Cancel">
         </p>
 
     </div>
   </div>
-  <pre><code>    &lt;p class="action group"&gt;
-      &lt;button class="button" type="submit"&gt;Submit form&lt;/button&gt;
+<pre><code>    &lt;p class="action group"&gt;
+      &lt;input class="btn" type="submit" value="Submit"&gt;
+      &lt;input class="btn-secondary" type="submit" value="Cancel"&gt;
     &lt;/p&gt;
 </code></pre>
 </div> 
-
 
 # Validation messages
 

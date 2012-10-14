@@ -2,12 +2,11 @@
 layout: design-pattern
 title: Form example - Registration
 status: draft
+css: ../css/design-patterns/forms.css
 ---
 
 This example incorporates most of the basic form elements and lets you play wth different label alignments.
 For a detailed breakdown of each element and how to markup and style it, see our [anatomy of a form](form-anatomy.html).
-
-# Contact form example
 
 Click the label alignment options in the Sass snippet below to see how they affect the layout.
 
@@ -204,7 +203,7 @@ Click the label alignment options in the Sass snippet below to see how they affe
           </ul>
         </fieldset>
         <p class="action group">
-          <button class="button" type="submit">Submit form</button>
+          <input class="btn" type="submit" value="Submit form">
         </p>
       </form>
     </div>
@@ -340,7 +339,7 @@ The example above is marked up as follows:
           </ul>
         </fieldset>
         <p class="action group">
-          <button class="button" type="submit">Submit form</button>
+          <button class="btn" type="submit">Submit form</button>
         </p>
       </form>
     </div>
