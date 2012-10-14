@@ -5,8 +5,8 @@
 // COLOUR PALETTE PAGE
 //
 
-@import "frontend_toolkit";
-@import "design_patterns";
+@import "colours";
+@import "design-patterns/regular-grid";
 
 .swatches{
   @include regular-grid(3);
@@ -129,7 +129,7 @@
 @include colour("treasury", $treasury);
 @include colour("cabinet-office", $cabinet-office);
 @include colour("department-for-education", $department-for-education);
-@include colour("department-of-transport", $department-of-transport);
+@include colour("department-for-transport", $department-for-transport);
 @include colour("home-office", $home-office);
 @include colour("department-of-health", $department-of-health);
 @include colour("ministry-of-justice", $ministry-of-justice);
