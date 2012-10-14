@@ -74,10 +74,10 @@
   }
 
   // Help text  
-  .help {
+  .hint {
     clear: left;
     display: block;
-    @include core-14;
+    @include core-16;
     // Adjust padding depending on whether it appears above or below the form control
     &:last-child{ padding-top: 0.25em; }
     &:first-child{ padding-bottom: 0.25em; }

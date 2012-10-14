@@ -153,7 +153,7 @@ Click the label alignment options in the Sass snippet below to see how they affe
           <p class="group">
             <label for="telephone">Telephone</label>
             <input id="telephone" type="text" class="telephone">
-            <span class="help">Include your country code</span>
+            <span class="hint">Include your country code</span>
           </p>
         </fieldset>
         <fieldset>
@@ -289,7 +289,7 @@ The example above is marked up as follows:
           <p class="group">
             <label for="telephone">Telephone</label>
             <input id="telephone" type="text" class="telephone">
-            <span class="help">Include your country code</span>
+            <span class="hint">Include your country code</span>
           </p>
         </fieldset>
         <fieldset>

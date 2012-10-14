@@ -263,9 +263,9 @@ Here's an example:
 
 
 
-# Help text
+# Hints
 
-Help text goes in a 'help' element above or below the relevant control
+Hints can be placed above above or below the relevant control as follows
 
 <div class="pattern-example">
   <div class="inner">
@@ -274,13 +274,13 @@ Help text goes in a 'help' element above or below the relevant control
       <p class="group">
         <label for="telephone">Telephone</label>
         <input id="telephone" type="text" class="telephone">
-        <span class="help">Include your country code</span>
+        <span class="hint">Include your country code</span>
       </p>
 
       <p class="group">
         <label for="telephone">Code</label>
         <input id="telephone" type="text" class="telephone">
-        <span class="inline help">The three numbers on the back of the card</span>
+        <span class="inline hint">The three numbers on the back of the card</span>
       </p>
 
     </div>
@@ -288,7 +288,7 @@ Help text goes in a 'help' element above or below the relevant control
   <pre><code>  &lt;p class="group"&gt;
     &lt;label for="telephone"&gt;Telephone&lt;/label&gt;
     &lt;input id="telephone" type="text" class="telephone"&gt;
-    &lt;span class="help"&gt;Include your country code&lt;/span&gt;
+    &lt;span class="hint"&gt;Include your country code&lt;/span&gt;
   &lt;/p&gt;
 </code></pre>
 </div> 
