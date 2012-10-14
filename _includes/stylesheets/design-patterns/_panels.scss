@@ -3,6 +3,8 @@
 
 // A mixin for rolling your own GOV.UK panel styles
 
+@import "colours";
+
 @mixin panel($background-colour: $grey-95){
   background-color: $background-colour;
   margin: 1em -1em 1.5em -1em;
@@ -30,8 +32,7 @@
   .inner{
     background-color: white;
     border: 1px solid #CCC;
-    /*padding: 2em 0 0 0;*/
-    padding: 1em 3em;
+    padding: 2em;
     margin-bottom: 0.75em;    
     input[type="text"],
     textarea{

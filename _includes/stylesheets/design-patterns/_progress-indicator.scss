@@ -3,6 +3,8 @@
 
 // http://govuk-prototyping.herokuapp.com/design-patterns/progress-indicator/
 
+@import "colours";
+
 @mixin progress-indicator($active-colour: white, $border-colour: $light-blue-grey, $background-colour: $cool-grey, $steps: "") {
 
   /* Progress indicator */
