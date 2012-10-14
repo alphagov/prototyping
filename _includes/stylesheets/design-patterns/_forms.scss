@@ -5,9 +5,12 @@
 // and OS. This can throw out alignments by a few px.
 // The styles are currently optimised for Chrome OS X.
 
-@import '_typography';
-@import "_colours";
-@import "_panels";
+@import 'typography';
+@import "colours";
+@import "panels";
+@import "buttons";
+@import "shims";
+@import "design-patterns/show-hide";
 
 @mixin form($label-alignment: top, $label-width: 8em, $legend-colour: $charcoal-grey) {
 
@@ -55,6 +58,8 @@
   // Checkboxes and radio buttons
   .option.group {
     padding-bottom: 0.5em;
+    padding-left: 1em;
+    margin-left: -1em;
     label {
       width: auto;
       float: none;
@@ -77,6 +82,11 @@
     &:last-child{ padding-top: 0.25em; }
     &:first-child{ padding-bottom: 0.25em; }
   }
+
+  .inline .help {
+    float: left;
+  }
+
   // Mandatory '*' message
   label abbr {
     border-bottom: none;
@@ -84,7 +94,8 @@
   }
 
   // Action buttons
-  .action.group .button {
+  .action.group .button,
+  .action.group .btn {
     margin-right: 0.5em;
   }
 
@@ -199,8 +210,8 @@
   // Left or right aligned labels
   @if ($label-alignment == left or $label-alignment == right) {
     label{
-      display: block;
-      float: left;
+      @include inline-block;
+
       text-align: #{$label-alignment};
       padding-top: 0.25em; // vertically align labels with middle of text fields
       width: $label-width;
@@ -220,7 +231,7 @@
     input[type=text],
     select,
     textarea{
-      float: left;
+      @include inline-block;
       margin-left: 0.5em;
     }
     select{
@@ -264,6 +275,7 @@
     // Option groups
     .option.group {
       label{
+        display: block;
         padding-left: $label-width + 0.5em;
         padding-top: 0;
       }
@@ -321,19 +333,17 @@
   }
 }
 
-// ===================================================
-// BONUS FORM STYLES
-//
-// These aren't included in the basic forms framework as they're less common
-
 
 // HIDDEN CONTROLS
 //
 // So, for example, you click on a checkbox and it reveals a free-text field
 // Use in combination with the show/hide pattern
 
-@mixin hidden-controls{
-  .hidden-controls {
+@mixin hidden-form-controls{
+
+  @include details-and-summary;
+
+  .hidden-controls details{
     padding-top: 0;
     summary{
       text-decoration: none;
@@ -355,7 +365,7 @@
   }
 }
 
-// EMPHASISED RADIOS & CHECKBOXES
+// EMPHASISED FORM CONTROLS
 //
 // Adds a background colour to selected radios and checkboxs
 // Makes the clickable area larger
@@ -381,4 +391,12 @@
     background-color: $grey-95;
   }
 
+}
+
+// BUTTONS
+.btn{
+  @include button($green);
+}
+.btn-secondary{
+  @include button($grey-88);
 }
