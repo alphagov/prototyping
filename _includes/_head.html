@@ -1,15 +1,12 @@
-    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>{{ page.title }}</title>
 
     {% if page.assets == 'local' %}
         {% comment %} References local assets, for working temporarily offline {% endcomment %}
         {% include _head.local.html %}
-    {% else if page.assets == 'merged' %}
-        {% comment %} References merged assets on static.preview {% endcomment %}
-        {% include _head.static.preview.html %}
     {% else %}
-        {% comment %} References individual assets on static.preview, for easy debugging {% endcomment %}
-        {% include _head.unmerged-preview.html %}
+        {% comment %} References assets on static.preview, {% endcomment %}
+        {% include _head.static.preview.html %}
     {% endif %}
 
     {% if page.css  %}
