@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    {% include _head.html %}
+<!--[if lt IE 9]><html class="lte-ie8 " lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en" class="">
+<!--<![endif]--><head>
+{% include _head.html %}
   </head>
-  <body class="mainstream">
+
+
+  <body class="mainstream {{ page.template }}">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
-    <header role="banner" class="group" id="global-header">
-      <div class="header-global group">
-        <h1><a href="/" title="Go to the gov.uk homepage">GOV.UK</a></h1>
+    <header role="banner" class="group" id="global-header"><div class="header-wrapper group">
+        <a href="/" title="Go to the gov.uk homepage" id="logo"><img src="http://static.preview.alphagov.co.uk/static/gov.uk_logotype_beta.png" alt="GOV.UK Logo"></a>
+
+        <a href="#footer" class="visuallyhidden">Skip to footer navigation</a>
+
       </div>
-    </header>
-    <div id="wrapper" class="{{ page.categories | downcase }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
-      <section id="content" role="main" class="group">
-        <header class="page-header group">
-          <hgroup>
-            {% if page.signed-in != 'none' %}
+    </header><!--end header-->
+
+    <div id="wrapper" class="{{ page.categories }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
+
+      <section id="content" role="main" class="group"><!--<div class="pattern-status">{{ page.status }}</div>--><header class="page-header group"><hgroup>
+          {% if page.signed-in != 'none' %}
               <div class="account-management-tools">
               <ul>
-                {% if page.signed-in == 'yes' %}<li class="user">Welcome Tim Paul</li>
+                {% if page.signed-in == 'yes' %}<li class="user">Signed in as Tim Paul</li>
                 <li><a href="sign-out.html">Sign out</a></li>
                 <li><a href="account.html">Your account</a></li>
                 <li><a href="dashboard.html">Your LPAs</a></li>
@@ -29,19 +33,14 @@
               </ul>
             </div>
             {% endif %}
-            <h1><span>{{ page.categories }}</span> {{ page.title }} {% if page.fromdept  %}{% include _from-dept.html %}{% endif %}</h1>
-          </hgroup>
-        </header>
-        <div class="{% if page.template == 'wide' %}{% else %}article-container{% endif %} group">
-          <article role="article" class="group">
-            <div class="inner">
+
+        <h1>{{ page.title }}</h1></hgroup></header><div class="article-container group">
+        <article role="article" class="group">
+          <div class="inner">
               {{ content }}
             </div>
-          </article>
-          {% if page.template != 'wide' %}{% include _report-problem.html %}{% endif %}
-
-
-        </div>
+            </article>
+          </div>
       </section>
     </div><!--end wrapper-->
     {% include _footer.html %}

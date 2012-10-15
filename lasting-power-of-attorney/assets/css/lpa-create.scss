@@ -7,7 +7,7 @@
 @import "design-patterns/regular-grid";
 @import "design-patterns/popups";
 @import "design-patterns/forms";
-@import "design-patterns/buttons-extra";
+@import "design-patterns/buttons";
 @import "design-patterns/account-management-tools";
 @import "design-patterns/accordion-form";
 
@@ -50,9 +50,6 @@ article .inner{
           padding: 0;
           margin: 0.8em 0 0 0.5em;
         }
-        .button{
-          @include secondary-action;
-        }
       } 
     }
   }
@@ -85,12 +82,23 @@ article .inner{
   }
 }
 
+// Signatures
+
+.form .capture-dates{
+  width: 103.5%;
+  td, th {
+    @include core-19;
+    vertical-align: middle;
+  }
+  label{
+    width: 6em;
+  }
+}
+
 /* ===============================
  * BULLETS AND BUTTONS
  * ===============================
  */
-
-@include buttons-extra;
 
 /* '+' symbol */
 .add{
@@ -131,7 +139,7 @@ article .inner{
     .save-details{
       background-color: $grey-95;
       padding: 1.25em 1.25em 1em 9.5em;
-      margin: 1em -1.3em -0.85em;
+      margin: 1em -1.25em -0.85em -1.25em;
     }
   }
 }
@@ -150,9 +158,7 @@ article .inner{
 
 // Postcode lookup button
 .postcode-lookup{
-  display: block;
-  float: left;
-  margin-top: 0.15em;
+  vertical-align: top;
 }
 
 // Address list
@@ -174,7 +180,7 @@ background-color:rgba(0,0,0,.5) !important;
 @include details-and-summary(highlighted);
 
 // Hidden form controls
-@include hidden-controls;
+@include hidden-form-controls;
 
 // Emphasised form controls
 @include emphasised-form-controls;

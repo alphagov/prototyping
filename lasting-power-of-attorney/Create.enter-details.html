@@ -3,8 +3,7 @@ layout: lpa-alpha
 title: Create a lasting power of attorney
 categories: Service
 signed-in: 'yes'
-template: wide
-assets: local
+template: full-width
 css: assets/css/lpa-create.css
 js: assets/js/behaviours.js
 ---
@@ -42,7 +41,7 @@ $(function() {
    // Show the address fields
    $('.address-fields').removeClass('hidden');
    // Enable the save button
-   $('.save-details .button').removeClass('disabled');
+   $('.save-details .btn').removeClass('disabled');
    return false;
   });
 
@@ -53,7 +52,7 @@ $(function() {
    // Show the address fields
    $('.address-fields').removeClass('hidden');
    // Enable the save button
-   $('.save-details .button').removeClass('disabled');
+   $('.save-details .btn').removeClass('disabled');
    return false;
   });
 
@@ -110,9 +109,9 @@ $(function() {
             <p>Don't worry, once you've created the first LPA you'll be able to use the information you entered to quickly create another one.</p>
           </details>
           <div class="accordion-actions group">
-            <p><a href="#step2" class="disabled next-part button">Go to question 2 of 10</a></p>
+            <p><a href="#step2" class="disabled next-part btn">Go to question 2 of 10</a></p>
             <ul class="secondary-actions">
-              <li><a href="" class="button">Quit</a></li>
+              <li><a href="" class="btn-secondary">Quit</a></li>
             </ul>
           </div> 
       </div>
@@ -201,7 +200,7 @@ $(function() {
           <p class="group">
             <label for="postcode">Postcode</label>
             <input type="text" class="postcode" /> 
-            <a href="#" class="postcode-lookup button">Find UK address</a>
+            <a href="#" class="postcode-lookup btn-secondary">Find UK address</a>
           </p>
           <p class="hidden group address-list">
             <label>Pick an address</label>
@@ -264,18 +263,18 @@ $(function() {
           </p>
         </fieldset>       
         <p class="save-details action group">
-          <a class="disabled medium button" href="#">Save the donor's details</a>
+          <a class="disabled medium btn" href="#">Save the donor's details</a>
         </p>
 
         </form>
   </div>
 </article>
           <div class="accordion-actions group">
-            <p><a href="#step3" class="disabled next-part button">Go to question 3 of 10</a></p>
+            <p><a href="#step3" class="disabled next-part btn">Go to question 3 of 10</a></p>
             <ul class="secondary-actions">
-              <li><a href="" class="button">Quit</a></li>
-              <li><a href="" class="button">Save for later</a></li>
-              <li><a href="" class="button">Print preview</a></li>
+              <li><a href="" class="btn-secondary">Quit</a></li>
+              <li><a href="" class="btn-secondary">Save for later</a></li>
+              <li><a href="" class="btn-secondary">Print preview</a></li>
             </ul>
           </div>       
         </div>
@@ -310,11 +309,11 @@ $(function() {
               </li>
             </ul>
           <div class="accordion-actions group">
-            <p><a href="#step4" class="disabled next-part button">Go to question 4 of 10</a></p>
+            <p><a href="#step4" class="disabled next-part btn">Go to question 4 of 10</a></p>
             <ul class="secondary-actions">
-              <li><a href="" class="button">Quit</a></li>
-              <li><a href="" class="button">Save for later</a></li>
-              <li><a href="" class="button">Print preview</a></li>
+              <li><a href="" class="btn-secondary">Quit</a></li>
+              <li><a href="" class="btn-secondary">Save for later</a></li>
+              <li><a href="" class="btn-secondary">Print preview</a></li>
             </ul>
           </div> 
 
@@ -415,7 +414,7 @@ $(function() {
           <p class="group">
             <label for="postcode">Enter postcode</label>
             <input type="text" class="postcode" /> 
-            <a href="#" class="postcode-lookup button">Find UK address</a>
+            <a href="#" class="postcode-lookup btn-secondary">Find UK address</a>
           </p>
           <p class="hidden group address-list">
             <label>Pick an address</label>
@@ -478,7 +477,7 @@ $(function() {
         </fieldset>      
 
         <p class="save-details action group">
-          <a class="disabled medium button" id="save-attorney-details" href="#">Save the attorney's details</a>
+          <a class="disabled medium btn" id="save-attorney-details" href="#">Save the attorney's details</a>
         </p>
 
         </form>  
@@ -487,11 +486,11 @@ $(function() {
 
 
           <div class="accordion-actions group">
-            <p><a href="#step5" class="disabled next-part button">Go to question 5 of 10</a></p>
+            <p><a href="#step5" class="disabled next-part btn">Go to question 5 of 10</a></p>
             <ul class="secondary-actions">
-              <li><a href="" class="button">Quit</a></li>
-              <li><a href="" class="button">Save for later</a></li>
-              <li><a href="" class="button">Print preview</a></li>
+              <li><a href="" class="btn-secondary">Quit</a></li>
+              <li><a href="" class="btn-secondary">Save for later</a></li>
+              <li><a href="" class="btn-secondary">Print preview</a></li>
             </ul>
           </div>      
         </div>
@@ -514,11 +513,11 @@ $(function() {
         <p class="add"><a href="#" id="open-attorney-form">Add a replacement attorney?</a></p>
 
           <div class="accordion-actions group">
-            <p><a href="#step6" class="disabled next-part button">Go to question 6 of 10</a></p>
+            <p><a href="#step6" class="disabled next-part btn">Go to question 6 of 10</a></p>
             <ul class="secondary-actions">
-              <li><a href="" class="button">Quit</a></li>
-              <li><a href="" class="button">Save for later</a></li>
-              <li><a href="" class="button">Print preview</a></li>
+              <li><a href="" class="btn-secondary">Quit</a></li>
+              <li><a href="" class="btn-secondary">Save for later</a></li>
+              <li><a href="" class="btn-secondary">Print preview</a></li>
             </ul>
           </div>     
         </div>
@@ -541,7 +540,7 @@ $(function() {
             </div>
 
             <fieldset>
-              <ul class="emphasised option group">
+              <ul class="emphasised hidden-controls option group">
                 <li>
                     <label>
                       <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
@@ -555,7 +554,7 @@ $(function() {
                     </label>
                 </li>
                 <li>                                      
-                  <details class="hidden-controls group">
+                  <details>
                     <summary>
                       <label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3"> It depends on the decision&hellip;</label>
                     </summary>
@@ -568,11 +567,11 @@ $(function() {
             </fieldset>
 
           <div class="accordion-actions group">
-            <p><a href="#step7" class="disabled next-part button">Go to question 7 of 10</a></p>
+            <p><a href="#step7" class="disabled next-part btn">Go to question 7 of 10</a></p>
             <ul class="secondary-actions">
-              <li><a href="" class="button">Quit</a></li>
-              <li><a href="" class="button">Save for later</a></li>
-              <li><a href="" class="button">Print preview</a></li>
+              <li><a href="" class="btn-secondary">Quit</a></li>
+              <li><a href="" class="btn-secondary">Save for later</a></li>
+              <li><a href="" class="btn-secondary">Print preview</a></li>
             </ul>
           </div>  
         </div>
@@ -592,10 +591,10 @@ $(function() {
               </div>
 
               <fieldset>
-                <ul class="emphasised option group">
+                <ul class="emphasised hidden-controls option group">
                   <li>
                     <label>
-                      <details class="hidden-controls group">
+                      <details>
                         <summary>
                           <label><input type="checkbox" id="extras2" value="option2"> Specify restrictions for the attorneys</label>
                         </summary>
@@ -607,7 +606,7 @@ $(function() {
                   </li>
                   <li>
                     <label>
-                      <details class="hidden-controls group">
+                      <details>
                         <summary>
                           <label><input type="checkbox" id="extras3" value="option3"> Specify guidance for the attorneys</label>
                         </summary>
@@ -622,11 +621,11 @@ $(function() {
               </fieldset>
 
           <div class="accordion-actions group">
-            <p><a href="#step8" class="disabled next-part button">Go to question 8 of 10</a></p>
+            <p><a href="#step8" class="disabled next-part btn">Go to question 8 of 10</a></p>
             <ul class="secondary-actions">
-              <li><a href="" class="button">Quit</a></li>
-              <li><a href="" class="button">Save for later</a></li>
-              <li><a href="" class="button">Print preview</a></li>
+              <li><a href="" class="btn-secondary">Quit</a></li>
+              <li><a href="" class="btn-secondary">Save for later</a></li>
+              <li><a href="" class="btn-secondary">Print preview</a></li>
             </ul>
           </div> 
         </div>
@@ -646,7 +645,7 @@ $(function() {
             </div>
 
             <fieldset>
-              <ul class="emphasised option group">
+              <ul class="emphasised hidden-controls option group">
                 <li>
                     <label>
                       <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
@@ -654,7 +653,7 @@ $(function() {
                     </label>
                 </li>
                 <li>                                      
-                  <details class="hidden-controls group">
+                  <details>
                     <summary>
                       <label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3"> Yes, the attorneys should be paid as follows...</label>
                     </summary>
@@ -667,11 +666,11 @@ $(function() {
             </fieldset>
 
           <div class="accordion-actions group">
-            <p><a href="#step9" class="disabled next-part button">Go to question 9 of 10</a></p>
+            <p><a href="#step9" class="disabled next-part btn">Go to question 9 of 10</a></p>
             <ul class="secondary-actions">
-              <li><a href="" class="button">Quit</a></li>
-              <li><a href="" class="button">Save for later</a></li>
-              <li><a href="" class="button">Print preview</a></li>
+              <li><a href="" class="btn-secondary">Quit</a></li>
+              <li><a href="" class="btn-secondary">Save for later</a></li>
+              <li><a href="" class="btn-secondary">Print preview</a></li>
             </ul>
           </div> 
 
@@ -694,11 +693,11 @@ $(function() {
           <p class="add"><a href="2b.html">Add details of a person to be told</a></p>
 
           <div class="accordion-actions group">
-            <p><a href="#step10" class="disabled next-part button">Go to question 10 of 10</a></p>
+            <p><a href="#step10" class="disabled next-part btn">Go to question 10 of 10</a></p>
             <ul class="secondary-actions">
-              <li><a href="" class="button">Quit</a></li>
-              <li><a href="" class="button">Save for later</a></li>
-              <li><a href="" class="button">Print preview</a></li>
+              <li><a href="" class="btn-secondary">Quit</a></li>
+              <li><a href="" class="btn-secondary">Save for later</a></li>
+              <li><a href="" class="btn-secondary">Print preview</a></li>
             </ul>
           </div> 
 
@@ -721,10 +720,10 @@ $(function() {
           <p class="add"><a href="2b.html">Add details of a certificate provider</a></p>
 
           <ul class="accordion-actions group">
-            <li><a href="#step11" class="next-part button">Continue to final step</a></li>
-            <li class="secondary-action"><a href="" class="button">Quit</a></li>
-            <li class="secondary-action"><a href="" class="button">Save for later</a></li>
-            <li class="secondary-action"><a href="" class="button">Print preview</a></li>
+            <li><a href="#step11" class="next-part btn">Continue to final step</a></li>
+            <li class="secondary-action"><a href="" class="btn-secondary">Quit</a></li>
+            <li class="secondary-action"><a href="" class="btn-secondary">Save for later</a></li>
+            <li class="secondary-action"><a href="" class="btn-secondary">Print preview</a></li>
           </ul> 
 
         </div>
@@ -742,12 +741,14 @@ $(function() {
             <p>You are now ready to print your LPA. Please review the information you provided above before pressing 'Continue'.</p>
           </div>
 
-          <ul class="accordion-actions group">
-            <li><a href="Create.print.html" class="button">Continue</a></li>
-            <li class="secondary-action"><a href="" class="button">Quit</a></li>
-            <li class="secondary-action"><a href="" class="button">Save for later</a></li>
-            <li class="secondary-action"><a href="" class="button">Print preview</a></li>
-          </ul> 
+         <div class="accordion-actions group">
+            <p><a href="create.print.html" class="next-part btn">Continue</a></p>
+            <ul class="secondary-actions">
+              <li><a href="" class="btn-secondary">Quit</a></li>
+              <li><a href="" class="btn-secondary">Save for later</a></li>
+              <li class="secondary-action"><a href="" class="btn-secondary">Print preview</a></li>
+            </ul>
+          </div> 
 
         </div>
       </section>
