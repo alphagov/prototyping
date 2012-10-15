@@ -1,293 +1,360 @@
 ---
-layout: default-lpa
+layout: lpa-alpha
 title: Register a lasting power of attorney
-categories: service
-signed-in: yes
+categories: Service
+signed-in: 'yes'
+template: full-width
+css: assets/css/lpa-create.css
+js: assets/js/behaviours.js
 ---
 
-<link media="screen" type="text/css" rel="stylesheet" href="assets/css/styles.css" />
-<script src="assets/js/behaviours.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(function() {
   // Trigger help system popup
   $(".open-help").click(function() {
    BetaPopup.popup($("#help-system").removeClass('hidden'), "help-system", $(this));
   });
+
+
+
+// POSTCODE LOOKUP
+
+  // Trigger postcode lookup
+  $(".postcode-lookup").click(function() {
+   $('.address-list').addClass('hidden');
+   $(this).closest('fieldset').find('.address-list').removeClass('hidden');
+   return false;
+  });
+
+  // When address is selected...
+  $('.address-list').change(function() {
+   // Hide the address list and link 
+   $('.address-list, .address-fields-link').addClass('hidden');
+   // Show the address fields
+   $('.address-fields').removeClass('hidden');
+   // Enable the save button
+   $('.save-details .btn').removeClass('disabled');
+   return false;
+  });
+
+  // When the 'manual address' link is clicked...
+  $('#manual-address-link').click(function() {
+   // Hide the address list and link 
+   $('.address-list, .address-fields-link').addClass('hidden');
+   // Show the address fields
+   $('.address-fields').removeClass('hidden');
+   // Enable the save button
+   $('.save-details .btn').removeClass('disabled');
+   return false;
+  });
+
 });
 </script>
 
-<div class="progress-bar">
-    <ol>
-        <li class="current">Check LPA</li>
-        <li>Pay fee</li>
-        <li>Finished</li>
-    </ol>
-</div>
+<p>[TEXT]</p>
 
-
-
-<div id="accordion" class="accordion no-future">
-  <!-- Step 0 -->
-      <div id="step0" class="accordion-item">
-        <div class="accordion-content">
-          <div class="intro"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et lectus ut erat feugiat laoreet quis in tortor. Maecenas at metus et diam sollicitudin semper at nec turpis. Vivamus malesuada turpis vel lacus blandit vitae dictum erat pharetra. Maecenas cursus, elit tempus mollis suscipit, eros justo consectetur enim, quis eleifend nisi eros vitae neque. Praesent sagittis cursus enim non varius.</p>       
-          <p><a href=""><strong>Find out more&hellip;</strong></a></p></div>
-          <ul class="form-actions">
-            <li><a href="#step2" class="next-part button">Continue to step 1 of</a></li>
-          </ul> 
-
+<div class="accordion-form form">
+<!-- STEP 1 -->
+    <section id="step1" class="section">
+      <h2 class="accordion-header"> 
+        Q1. Who is making this application?
+      </h2>
+      <div class="accordion-content">
+        <div class="section-intro">
+          <p>[ intro text goes here ]</p>
+          <p><a class="open-help" href="#/help/">Learn more&hellip;</a></p>
         </div>
-      </div>
-<!-- Step 1 -->
-      <div id="step1" class="accordion-item">
-        <h2 class="accordion-header"> 
-          1. WHEN WAS THE LPA SIGNED?
-        </h2>
-        <div class="accordion-content">
-          <p class="intro">
-            Please confirm when the donor and attorneys signed the lasting power of attorney.
-          </p>
-
-
-            <form>
-              <fieldset class="form-horizontal capture-dates">
-                <h3>Donor</h3>
-                <div class="control-group">
-                  <label class="control-label" for="donor-date">John Smith</label>
-                  <div class="controls">
-                    <label for="donor-date">Date</label>
-                    <input type="text" name="donor-date" type="date" class="input-small" placeholder="DD/MM/YYYY" />
-                  </div>
-                </div>
-
-                <h3>Attorneys</h3>
-                <div class="control-group">
-                  <label class="control-label" for="donor-date">Fred Bloggs</label>
-                  <div class="controls">
-                    <label for="donor-date">Date</label>
-                    <input type="text" name="donor-date" type="date" class="input-small" placeholder="DD/MM/YYYY" />
-                  </div>
-                </div>
-                <div class="control-group">
-                  <label class="control-label" for="donor-date">Margery Doors</label>
-                  <div class="controls">
-                    <label class="visuallyhidden" for="donor-date">Date</label>
-                    <input type="text" name="donor-date" type="date" class="input-small" placeholder="DD/MM/YYYY" />
-                  </div>
-                </div>
-              </fieldset>
-            </form>
-
-        <ul class="form-actions">
-          <li><a href="#step9" class="next-part button">Continue to step 2 of X</a></li>
-          <li class="secondary-action"><a href="" class="button">Quit</a></li>
-          <li class="secondary-action"><a href="" class="button">Save for later</a></li>
-        </ul> 
-        </div>
-        <div class="accordion-confirm">
-            <a href="#" class="edit">change this</a>
-            <span class="confirm-text"><strong class="label">John Smith:</strong> 06/07/2012</span>
-        </div>
-        <div class="accordion-confirm">
-            <span class="confirm-text"><strong class="label">Fred Bloggs:</strong> 06/07/2012</span>
-        </div>
-        <div class="accordion-confirm">
-            <span class="confirm-text"><strong class="label">Margery Doors:</strong> 06/07/2012</span>
-        </div>
-      </div>
-      <!-- Step 2 -->
-      <div id="step2" class="accordion-item">
-        <h2 class="accordion-header"> 
-          2. When did you notify people of your intention to register this LPA?
-        </h2>
-        <div class="accordion-content">
-          <p class="intro">
-            If you haven't notified these people yet you must do so. The instructions are in the email you received when you created the LPA.</p>
-
-            <form>
-              <fieldset class="form-horizontal capture-dates">
-                <h3>Name</h3>
-                <div class="control-group">
-                  <label class="control-label" for="donor-date">Harry Smith</label>
-                  <div class="controls">
-                    <label for="donor-date">Date notified</label>
-                    <input type="text" name="donor-date" type="date" class="input-small" placeholder="DD/MM/YYYY" />
-                  </div>
-                </div>
-                <div class="control-group">
-                  <label class="control-label" for="donor-date">Jane Smith</label>
-                  <div class="controls">
-                    <label class="visuallyhidden" for="donor-date">Date notified</label>
-                    <input type="text" name="donor-date" type="date" class="input-small" placeholder="DD/MM/YYYY" />
-                  </div>
-                </div>
-              </fieldset>
-            </form>
-            
-        <ul class="form-actions">
-          <li><a href="#step9" class="next-part button">Continue to step 9 of X</a></li>
-          <li class="secondary-action"><a href="" class="button">Quit</a></li>
-          <li class="secondary-action"><a href="" class="button">Save for later</a></li>
-        </ul> 
-        </div>
-        <div class="accordion-confirm">
-            <a href="#" class="edit">change this</a>
-            <span class="confirm-text"><strong class="label">Harry Smith:</strong> 06/07/2012</span>
-        </div>
-        <div class="accordion-confirm">
-            <span class="confirm-text"><strong class="label">Jane Smith:</strong> 06/07/2012</span>
-        </div>
-      </div>
-      <!-- Step 3 -->
-      <div id="step3" class="accordion-item">
-        <h2 class="accordion-header"> 
-          3. Has the donor made any other LPAs?
-        </h2>
-        <div class="accordion-content">
-          <p class="intro">
-            Lorem ipsum EPA etc...</p>
-
-              <fieldset>
-                <div class="control-group">
-                  <label class="control-label" for="optionsCheckbox"><strong>Has the donor previously made any other lasting or enduring powers of attorney?</strong></label>
-                  <div class="emphasised controls">
-                    <label class="radio">
-                      <input type="radio" name="LPAwhenRadios" id="optionsRadios2" value="option2">
-                      No
-                    </label>
-                    <label class="radio">
-                      <input type="radio" name="LPAwhenRadios" id="optionsRadios3" value="option3">
-                      <details>
-                        <summary>Yes</summary>
-                        <label class="visuallyhidden">Please provide details</label>                        
-                        <span class="help-block examples"><a href="">Not sure what to put?&hellip;</a></span>
-                        <textarea class="input-xxlarge" placeholder="Please provide details"></textarea>
-                      </details>
-                    </label>
-                  </div>
-
-                </div>
-              </fieldset>
-            
-        <ul class="form-actions">
-          <li><a href="#step9" class="next-part button">Continue to step 9 of X</a></li>
-          <li class="secondary-action"><a href="" class="button">Quit</a></li>
-          <li class="secondary-action"><a href="" class="button">Save for later</a></li>
-        </ul> 
-        </div>
-        <div class="accordion-confirm">
-            <a href="#" class="edit">change this</a>
-            <p>No, the donor has not made any other LPAs</p>
-        </div>
-      </div>
-      <!-- Step 4 -->
-      <div id="step4" class="accordion-item">
-        <h2 class="accordion-header"> 
-          4. Does the donor want to apply for a full or partial fee remission?
-        </h2>
-        <div class="accordion-content">
-          <p class="intro">If the donor has an income of under £12,000 or is currently claiming benefits they <em>may</em> qualify for a half or full fee reimbursement. The full amount must still be paid initially and supporting evidence must be provided in order to qualify. <a href="">Learn more&hellip;</a></p>
-
-              <fieldset>
-                <div class="control-group">
-                  <label class="control-label" for="optionsCheckbox"><strong>Does the donor want to apply for fee remission?</strong></label>
-                  <div class="emphasised controls">
-                    <label class="radio">
-                      <input type="radio" name="LPAwhenRadios" id="optionsRadios2" value="option2">
-                      No
-                    </label>
-                    <label class="radio">
-                      <input type="radio" name="LPAwhenRadios" id="optionsRadios3" value="option3">
-                      Yes
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
-
-              [More conditional form fields to go here]
-            
-        <ul class="form-actions">
-          <li><a href="#step9" class="next-part button">Continue to step 9 of X</a></li>
-          <li class="secondary-action"><a href="" class="button">Quit</a></li>
-          <li class="secondary-action"><a href="" class="button">Save for later</a></li>
-        </ul> 
-        </div>
-        <div class="accordion-confirm">
-            <a href="#" class="edit">change this</a>
-          <p>No, the donor does not qualify for a fee remission</p>
-        </div>
-      </div>
-      <!-- Step 3 -->
-      <div id="step3" class="accordion-item">
-        <h2 class="accordion-header"> 
-          3. Confirm understanding
-        </h2>
-        <div class="accordion-content">
-          <p class="intro">
-            By clicking 'Continue' I certify that the above information is correct and that to the best of my knowledge and belief, I have completed the application in accordance with the provisions of the Mental Capacity Act 2005 and all statutory instruments made under it.</p>
-            
-        <ul class="form-actions">
-          <li><a href="Register.payment.html" class="button">Continue to payment</a></li>
-          <li class="secondary-action"><a href="" class="button">Quit</a></li>
-          <li class="secondary-action"><a href="" class="button">Save for later</a></li>
-        </ul> 
-        </div>
-      </div>
-
-    </div>
-
-<!-- START OF HELP SYSTEM -->
-<div id="help-system" class="hidden" >
-  <p class="close"><a href="#" title="Click or press escape to close this help">Close</a></p>
-  <div class="inner">
-    <div class="content section-page">
-    <div class="hidden" id="s1">
-      <h2>Section one</h2>
-    </div>
-    <div class="hidden" id="s2">
-      <h2>Section two</h2>
-    </div>
-    <div class="hidden" id="s3">
-      <h2>Section three</h2>
-    </div>
-    <div class="hidden" id="s4">
-      <h2>Section four</h2>
-    </div>
-    <div class="hidden" id="s5">
-      <h2>Section five</h2>
-    </div>
-    <div class="hidden" id="s6">
-      <h2>Section six</h2>
-    </div>
-  </div>
-  <nav class="filters">
-    <div class="group">
-      <h3>Help topics</h3>
-      <ul>
-        <li class="open">
-          <ul class="subsections">
-            <li data-filter="section-s1">
-              <a href="#">Section 1</a>
+          <ul class="emphasised option group">
+            <li>
+              <label>
+                <input type="radio" name="LPAtypeRadios" id="optionsRadios1" value="option1">
+                The donor is making this application
+              </label>
             </li>
-            <li data-filter="section-s2">
-              <a href="#">Section 2</a>
-            </li>
-            <li data-filter="section-s3" >
-              <a href="#">Section 3</a>
-            </li>
-            <li data-filter="section-s4" >
-              <a href="#">Section 4</a>
-            </li>
-            <li data-filter="section-s5" >
-              <a href="#">Section 5</a>
-            </li>
-            <li data-filter="section-s6" >
-              <a href="#">Section 6</a>
+            <li>
+              <label>
+                <input type="radio" name="LPAtypeRadios" id="optionsRadios2" value="option2">
+                The attorney is making this application
+              </label>
             </li>
           </ul>
-        </li>
-      </ul>
+          <div class="accordion-actions group">
+            <p><a href="#step2" class="disabled next-part btn">Go to question 2 of 6</a></p>
+            <ul class="secondary-actions">
+              <li><a href="" class="btn-secondary">Quit</a></li>
+            </ul>
+          </div> 
+      </div>
+      <div class="accordion-summary">
+        <p>1. The donor is making this application <a href="#" class="edit">edit</a></p>
+      </div>
+    </section>
+<!-- STEP 2 -->
+      <section id="step2" class="section">
+        <h2 class="accordion-header"> 
+          Q2. Has the LPA been signed by all parties in the right order?
+        </h2>
+        <div class="accordion-content">
+          <div class="section-intro">
+            <p>[ intro text goes here ]
+            </p>
+            <p><a class="open-help" href="#/help/">Learn more&hellip;</a></p>
+          </div>
+
+          <table class="capture-dates">
+            <tr class="visuallyhidden">
+              <th>Role</th>
+              <th>Name</th>
+              <th>Date signed</th>
+            </tr>
+            <tr>
+              <th>Donor</th>
+              <td>Harry Smith</td>
+              <td>
+                <label for="donor-date">Date signed</label>
+                <input type="date" name="donor-date" type="date" class="input-small" placeholder="DD/MM/YYYY" />
+              </td>
+            </tr>
+            <tr>
+              <th>Attorney 1</th>
+              <td>Deborah Rubble</td>
+              <td>
+                <label for="donor-date">Date signed</label>
+                <input type="date" name="donor-date" type="date" class="input-small" placeholder="DD/MM/YYYY" />
+              </td>
+            </tr>
+            <tr>
+              <th>Attorney 2</th>
+              <td>Jennifer Smith</td>
+              <td>
+                <label for="donor-date">Date signed</label>
+                <input type="date" name="donor-date" type="date" class="input-small" placeholder="DD/MM/YYYY" />
+              </td>
+            </tr>
+            <tr>
+              <th>Certificate provider</th>
+              <td>Arnold Smith</td>
+              <td>
+                <label for="donor-date">Date signed</label>
+                <input type="date" name="donor-date" type="date" class="input-small" placeholder="DD/MM/YYYY" />
+              </td>
+            </tr>
+          </table>
+          <div class="accordion-actions group">
+            <p><a href="#step3" class="disabled next-part btn">Go to question 3 of 6</a></p>
+            <ul class="secondary-actions">
+              <li><a href="" class="btn-secondary">Quit</a></li>
+              <li><a href="" class="btn-secondary">Save for later</a></li>
+            </ul>
+          </div>       
+        </div>
+        <div class="accordion-summary">
+          <p>2. The LPA has been signed by all parties <a href="#" class="edit">edit</a></p>
+        </div>
+      </section>
+
+      <!-- Step 3 -->
+      <section id="step3" class="section">
+        <h2 class="accordion-header"> 
+          Q3. Have you let people know that you plan to register this LPA?
+        </h2>
+        <div class="accordion-content">
+          <div class="section-intro">
+            <p>[ intro text goes here ]</p>
+            <p><a class="open-help" href="">Learn more&hellip;</a></p>
+          </div>
+
+          <table class="capture-dates">
+            <tr class="visuallyhidden">
+              <th>Name</th>
+              <th>Date notified</th>
+            </tr>
+            <tr>
+              <td>Harry Smith</td>
+              <td>
+                <label for="notifee-1-date">Date notified</label>
+                <input type="date" name="notifee-1-date" type="date" class="input-small" placeholder="DD/MM/YYYY" />
+              </td>
+            </tr>
+            <tr>
+              <td>Deborah Rubble</td>
+              <td>
+                <label for="notifee-2-date">Date notified</label>
+                <input type="date" name="notifee-2-date" type="date" class="input-small" placeholder="DD/MM/YYYY" />
+              </td>
+            </tr>
+          </table>
+          <div class="accordion-actions group">
+            <p><a href="#step4" class="disabled next-part btn">Go to question 4 of 6</a></p>
+            <ul class="secondary-actions">
+              <li><a href="" class="btn-secondary">Quit</a></li>
+              <li><a href="" class="btn-secondary">Save for later</a></li>
+            </ul>
+          </div> 
+
+        </div>
+        <div class="accordion-summary">
+          <p>3. Harry Smith and Deborah Rubble have been notified <a href="#" class="edit">edit</a></p>
+        </div>
+      </section>
+<!-- Step 4 -->
+      <section id="step4" class="section">
+        <h2 class="accordion-header"> 
+          Q4. Has the donor made any other LPAs?
+        </h2>
+        <div class="accordion-content">
+          <div class="section-intro">
+            <p>[ intro text goes here (don't forget to mention EPAs) ]</p>
+            <p><a class="open-help" href="">Learn more&hellip;</a></p>
+          </div>
+
+            <fieldset>
+              <ul class="emphasised hidden-controls option group">
+                <li>
+                    <label>
+                      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                      The donor HAS NOT made any other LPAs
+                    </label>
+                </li>
+                <li>                                      
+                  <details>
+                    <summary>
+                      <label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option3"> The donor HAS made another LPA&hellip;</label>
+                    </summary>
+                    <label>Please provide details (for example, registration numbers etc.)</label>
+                    <textarea class="full-size" placeholder="Type here"></textarea>
+                  </details>
+                </li>
+              </ul>
+            </fieldset>
+
+
+          <div class="accordion-actions group">
+            <p><a href="#step5" class="disabled next-part btn">Go to question 5 of 6</a></p>
+            <ul class="secondary-actions">
+              <li><a href="" class="btn-secondary">Quit</a></li>
+              <li><a href="" class="btn-secondary">Save for later</a></li>
+            </ul>
+          </div>      
+        </div>
+        <div class="accordion-summary">
+          <p>4. No other LPAs or EPAs have been made <a href="#" class="edit">edit</a></p>
+        </div>
+      </section>
+
+<!-- Step 5 -->
+      <section id="step5" class="section">
+        <h2 class="accordion-header"> 
+          Q5. Who should we contact with any queries about this application?
+        </h2>
+        <div class="accordion-content">
+            <div class="section-intro">
+              <p>[ intro text ]</p>
+              <p><a class="open-help" href="">Learn more&hellip;</a></p>
+            </div>
+
+            <fieldset>
+              <p class="group">
+                <label>Choose a person</label>
+                <select>
+                  <option value="">Harry Smith</option>
+                  <option value="">Deborah Rubble</option>
+                  <option value="">Deborah Smith</option>
+                  <option value="">Arnold Smith</option>
+                  <option value="">Someone else...</option>
+                </select>
+              </p>
+            </fieldset>
+
+
+          <div class="accordion-actions group">
+            <p><a href="#step6" class="disabled next-part btn">Go to question 6 of 6</a></p>
+            <ul class="secondary-actions">
+              <li><a href="" class="btn-secondary">Quit</a></li>
+              <li><a href="" class="btn-secondary">Save for later</a></li>
+            </ul>
+          </div>     
+        </div>
+        <div class="accordion-summary">
+          <p>5. All correspondence to go to Harry Smith<a href="#" class="edit">edit</a></p>
+        </div>
+      </section>
+
+<!-- Step 6 -->
+      <section id="step6" class="section">
+        <h2 class="accordion-header"> 
+          Q6. Is there any additional information you'd like to provide?
+        </h2>
+        <div class="accordion-content">
+            <div class="section-intro">
+              <p>[ intro text ]</p>
+              <p><a class="open-help" href="">Learn more&hellip;</a></p>
+            </div>
+
+            <fieldset>
+              <ul class="emphasised hidden-controls option group">
+                <li>
+                    <label>
+                      <input type="radio" name="moreInfoRadios" id="optionsRadios1" value="option1" checked>
+                      No
+                    </label>
+                </li>
+                <li>                                      
+                  <details>
+                    <summary>
+                      <label><input type="radio" name="moreInfoRadios" id="optionsRadios2" value="option3"> Yes&hellip;</label>
+                    </summary>
+                    <label>Please provide any more information below</label>
+                    <textarea class="full-size" placeholder="Type here"></textarea>
+                  </details>
+                </li>
+              </ul>
+            </fieldset>
+
+
+          <div class="accordion-actions group">
+            <p><a href="#step7" class="next-part btn">Review details</a></p>
+            <ul class="secondary-actions">
+              <li><a href="" class="btn-secondary">Quit</a></li>
+              <li><a href="" class="btn-secondary">Save for later</a></li>
+            </ul>
+          </div>     
+        </div>
+        <div class="accordion-summary">
+          <p>6. No additional information provided<a href="#" class="edit">edit</a></p>
+        </div>
+      </section>
+
+    <!-- Step 7 -->
+      <section id="step7" class="section">
+        <h2 class="accordion-header"> 
+          Review the details
+        </h2>
+        <div class="accordion-content">
+          <div class="section-intro">
+            <p>You are now ready to print your application documents. Please review the details above before pressing 'Continue'.</p>
+          </div>
+
+          <div class="accordion-actions group">
+          <p><a href="registered-LPA.html" class="next-part btn">Continue</a></p>
+            <ul class="secondary-actions">
+              <li><a href="" class="btn-secondary">Quit</a></li>
+              <li><a href="" class="btn-secondary">Save for later</a></li>
+            </ul>
+          </div> 
+
+        </div>
+      </section>
+
     </div>
-  </nav>
-</div>
-<!-- END OF HELP SYSTEM -->
+
+
+<script src="assets/js/jquery.details.js"></script>
+<script>
+  $(function() {
+    // Add conditional classname based on support
+    $('html').addClass($.fn.details.support ? 'details' : 'no-details');
+    // Emulate <details> where necessary and enable open/close event handlers
+    $('details').details();
+  });
+</script>
