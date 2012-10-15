@@ -1,10 +1,5 @@
 
 
-/* Extend page header for wide format page */
-header.page-header hgroup { 
-  margin-right: 0; 
-}
-
 .support-contents { 
   overflow: hidden;
   *zoom: 1;
