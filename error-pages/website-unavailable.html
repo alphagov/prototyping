@@ -16,17 +16,15 @@
       }  
       a, a:visited { color: #2E3191; }
       a:hover { color: #2E8ACA; }
-      a:active { color: #c11; }
+      a:active { color: #2E8ACA; }
 
       section#content {
         margin: 1em auto 0 auto;
         max-width: 960px;
         position: relative;
       }
-      .group {
-      zoom: 1;
-      }
-      .group::before, .group::after {
+      .group::before,
+      .group::after {
       content: " 0020";
       display: block;
       height: 0;
@@ -34,6 +32,9 @@
       }
       .group::after {
       clear: both;
+      }
+      .group {
+      zoom: 1;
       }
 
       #wrapper {
@@ -117,12 +118,32 @@
         background-color: white;
         margin-right: 15em;
       }
+
       </style>
+
+      <!--[if lt IE 7]>
+      <style>
+      #wrapper{
+          zoom: 1;
+      }
+      </style>
+      <![endif]-->
+
+      <!--[if lt IE 8]>
+      <style>
+      header hgroup h1{
+        height: 1%;
+      }
+      </style>
+      <![endif]-->
+
+
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
    <body class="mainstream">
 
-    <div id="wrapper" class="">
+    <div id="wrapper">
       <section id="content" role="main" class="group">
         <header class="page-header group">
           <hgroup>
