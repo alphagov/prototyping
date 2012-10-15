@@ -143,7 +143,7 @@ Click the label alignment options in the Sass snippet below to see how they affe
             <input id="email" type="email" class="email">
           </p>
           <p class="group validation">
-            <span class="validation-message" id="error3">3. Confirm your email address</span>
+            <!--<span class="validation-message" id="error3">3. Confirm your email address</span>-->
             <label for="email-confirm">Confirm email <abbr title="Mandatory">*</abbr></label>
             <input id="email-confirm" type="email" class="email">
           </p>

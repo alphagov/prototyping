@@ -129,8 +129,7 @@
       // Shift controls up
       .inline .group,
       .inline.option label{
-        margin-top: -0.75em;
-        // margin-top: -2.25em; this is what FF would need
+        margin-top: -1.25em;
       }
     }
   }
@@ -220,28 +219,36 @@
         + input,
         + select,
         + textarea {
-          margin-left: $label-width + 0.7em; 
+          margin-left: $label-width + 0.75em; 
         }
       }
     }
     // Maintain help text and button alignment with form fields with side-aligned labels
-    .help{ margin-left: $label-width + 3.3em; }
+    .hint{ margin-left: $label-width + 2.25em; }
     .action.group { padding-left: $label-width + 0.5em; }
 
-    input[type=text],
+    input,
     select,
-    textarea{
+    textarea,
+    .uneditable-field{
       @include inline-block;
+      vertical-align: middle;
       margin-left: 0.5em;
     }
+    input[type="checkbox"]{
+      margin-left: 0.25em;
+    }
+    input[type="radio"]{
+      margin-left: 0.25em;
+    }
     select{
-      margin-top: 0.5em; // re-align with horizontal labels (because select boxes aren't as tall as text fields)
+      //margin-top: 0.5em; // re-align with horizontal labels (because select boxes aren't as tall as text fields)
     }
 
     fieldset{
       legend{
         display: block;
-        padding-left: $label-width - 1.25em; // Align legend with fields (needs offset)    
+        padding-left: $label-width - 1em; // Align legend with fields (needs offset)    
       }
       // Nested fieldsets
       fieldset{
@@ -262,7 +269,7 @@
           .inline {
             .group,
             &.option label{
-              margin-top: -1.5em;
+              //margin-top: -1.5em;
             }        
             .group{
               margin-bottom: 0.5em;
@@ -288,7 +295,7 @@
 
     // Inline form controls
     .inline{
-      padding-left: $label-width + 1.5em;
+      padding-left: $label-width + 1.75em;
       label{
         width: auto;
         float: none;
@@ -306,7 +313,7 @@
       }
       // Inline option groups
       &.option.group {
-        padding-left: $label-width + 0.5em;
+        padding-left: $label-width + 1.25em;
         padding-top: 0.25em;
         label{
           padding-left: 0;
@@ -399,4 +406,8 @@
 }
 .btn-secondary{
   @include button($grey-88);
+}
+
+.btn-warning{
+  @include button($red);
 }

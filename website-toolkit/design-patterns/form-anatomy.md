@@ -16,7 +16,7 @@ Examples, markup and styles for most basic form elements.
     <li><a href="#aligning-controls-in-a-row">Aligning controls in a row</a></li>
     <li><a href="#fieldsets-and-legends">Fieldsets and legends</a></li>
     <li><a href="#nested-fieldsets">Nested fieldsets</a></li>
-    <li><a href="#help-text">Help text</a></li>
+    <li><a href="#hints">Hints</a></li>
     <li><a href="#hidden-labels">Hidden labels</a></li>
     <li><a href="#buttons">Buttons</a></li>
     <li><a href="#validation-messages">Validation messages</a></li>
@@ -265,7 +265,7 @@ Here's an example:
 
 # Hints
 
-Hints can be placed above above or below the relevant control as follows
+Hints can be placed above above or below the relevant control as follows:
 
 <div class="pattern-example">
   <div class="inner">
