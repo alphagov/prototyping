@@ -1,6 +1,12 @@
 ---
 ---
 
+// BASE STYLESHEET FOR IE 6 COMPILER
+
+$is-ie: true;
+$ie-version: 6;
+
+
 @import "colours";
 @import "typography";
 @import "design-patterns/_show-hide";

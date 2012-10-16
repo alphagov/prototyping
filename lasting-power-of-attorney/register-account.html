@@ -11,18 +11,14 @@ js: assets/js/behaviours.js
 
 <p>This service will guide you through the process of creating a lasting power of attorney (LPA). When you've finished you'll be able to print out the completed LPA and get it signed and registered.</p>
 
-<h2>Create an account</h2>
-
 <p>If you've not used this service before you'll need to create an account first. This is so we can confirm your email address and you can save your progress.</p>
 
-<p><a href="sign-in.html">Already created an account? Sign in here</a>.</p>
-
-<section class="form">
+<section class="two-column form">
+  <div>
   <form action="register-account-error.html">
     
-  <div class="inner">
     <fieldset>
-      <legend>About you</legend>
+      <legend>Create an account</legend>
       <p class="group">
         <label for="title">Title</label>
         <select id="title">
@@ -42,9 +38,6 @@ js: assets/js/behaviours.js
         <label for="last-name">Last name</label>
         <input id="last-name" type="text" class="name">
       </p>
-    </fieldset>
-    <fieldset>
-      <legend>Your account details</legend>
       <p class="group">
         <label for="email">Email address</label>
         <input type="text" id="email" class="email" />
@@ -57,18 +50,36 @@ js: assets/js/behaviours.js
         <label for="password2" >Repeat password</label>
         <input type="text" id="password2" class="password" />
       </p>
-    </fieldset>
-    <fieldset>
-      <legend>Terms</legend>
       <p class="option group">
         <label for="terms"><input id="terms" type="checkbox"> I understand that Lasting Powers of Attorney are governed by the laws of England and Wales and can only be made by people aged 18 years or older</label>
       </p>
     </fieldset>
     <p class="action group">
-      <input type="submit" class="button" id="registration-button" value="Create an account">
+      <input type="submit" class="btn" id="registration-button" value="Create an account">
     </p>
-</div>
   </form>
+</div>
+<div>
+
+
+  <form action="sign-in-error.html">
+  <fieldset>
+      <legend>Sign in</legend>
+    <p class="group">
+      <label for="email">Email address</label>
+      <input type="text" id="email" class="email" />
+    </p>
+    <p class="group">
+      <label for="password1">Password</label>
+      <input type="text" id="password1" class="password" />
+    </p>
+    <p class="inline action group">
+      <input type="submit" class="btn" id="registration-button" value="Sign in">
+      <span><a href="forgot-password.html">Forgot your password?</a></span>
+    </p>
+  </fieldset>
+  </form>
+</div>
 </section>
 
 
