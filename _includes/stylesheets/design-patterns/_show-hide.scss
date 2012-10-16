@@ -56,7 +56,7 @@
   }
   /* Styles for browsers that don't yet natively support details/summary */
   .no-details details > * { display: none; }
-  .no-details details > summary:before { float: left; width: 20px; content: '► '; }
-  .no-details details.open > summary:before { content: '▼ '; }
+  .no-details details > summary:before { float: left; margin-top: 1px; margin-right: -1px; width: 20px; content: '► ';}
+  .no-details details.open > summary:before { content: '▼ ';  }
   .no-details details summary { display: block; }
 }
