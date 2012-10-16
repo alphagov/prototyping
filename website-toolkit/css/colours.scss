@@ -127,6 +127,7 @@
 @include colour("white", $white);
 
 /* Department colours */
+@include colour("hm-government", $hm-government);
 @include colour("treasury", $treasury);
 @include colour("cabinet-office", $cabinet-office);
 @include colour("department-for-education", $department-for-education);
