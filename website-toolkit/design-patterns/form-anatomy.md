@@ -414,6 +414,17 @@ Each link should jump the user down to the corresponding form control. Add a 'va
 </code></pre>
 </div> 
 
+
+# Cross browser support
+
+* Chrome: No problems
+* IE 8: V-aligned - all good
+* IE 8: H-aligned - slightly ragged alignment
+* IE 7: Nested fieldsets - legends are hidden in H-aligned forms
+* IE 7: Validated option groups - lots of extra left padding
+* IE 6: Option groups are aligning horizontally in vertically-aligned forms
+* IE 6: Nested fieldsets layout is broken and legends are hidden
+
 # Putting it all together
 
 To see all the examples above in a single form, check out the [contact form example](contact-form.html).

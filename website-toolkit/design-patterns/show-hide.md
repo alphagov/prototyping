@@ -76,6 +76,13 @@ Cross browser support for these tags is [patchy right now](http://caniuse.com/de
       });
     </script>
 
+This pattern has been tested in IE6-8, FF and Chrome. It's functional in all, and no content is obscured (except intentionally).
+However, the following minor issues were observed:
+
+* IE 8: Underline extends below bullet
+* IE 7: No bullet
+* IE 6: No bullet or highlighted colour
+
 * * *
 
 # Guidance

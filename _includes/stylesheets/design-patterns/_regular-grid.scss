@@ -7,6 +7,9 @@
 
 @mixin regular-grid($columns: 1, $min-height:"") {
   margin: 0;
+  @include ie-lte(7){
+    margin-bottom: 1em;
+  }
   padding: 0;
   @include clearfix;
   > * { 
@@ -24,6 +27,9 @@
     // To accomodate this, all margins are slightly reduced
     @include ie-lte(8){
       $margins: $columns;
+    }
+    @include ie-lte(7){
+      $margins: $columns + 0.025; // Account for rounding bug in IE7
     }
     margin-right: percentage($margin-share/$margins);
     margin-bottom: 1em;

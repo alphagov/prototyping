@@ -97,6 +97,14 @@ As you can see below, you can vary the number of columns and the margin widths w
   <li><p>Item 8</p></li>
 </ul>
 
+# Cross browser support
+
+* Chrome: All good
+* IE 8: Far-right element retains right-margin, so all margins are reduced accordingly
+* IE 7: Margins slightly reduced even more to account for IE7 percentage rounding bug
+* IE 6: Pattern uses unsupported child selector, so all elements get 100% width
+* IE 6: Bullets are showing
+
 # Guidance
 
 The mixin is tag-agnostic, so the elements can be list items, divs, paragraphs etc.
