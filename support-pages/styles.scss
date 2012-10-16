@@ -7,11 +7,19 @@
 
 //@import "frontend_toolkit";
 @import "design-patterns/forms.scss";
+@import "_conditionals";
 
+.article-container {
+  padding-right: 15em;
+
+  @include media(mobile) {
+    padding-right: 0;
+  }
+
+}
 .contact-form{
   @include form();
 }
-
 #location p {
   padding-bottom: 0;
   label{
@@ -19,8 +27,11 @@
     display: inline-block;
     margin-right: 0;
   }
-  .location-page{
-    width: 70%;
-    margin-left: -0.25em;
-  }
+}
+#link{
+  width: 64%;
+  margin-left: -0.25em;
+}
+.contact-form textarea.full-size {
+  height: 15em;
 }
