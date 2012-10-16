@@ -10,7 +10,14 @@
     {% endif %}
 
     {% if page.css  %}
+
+    <!--[if gt IE 8]><!-->
     <link rel="stylesheet" href="{{ page.css }}" />
+    <!--<![endif]-->
+    <!--[if IE 6]><link href="assets/css/ie6.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if IE 7]><link href="assets/css/ie7.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if IE 8]><link href="assets/css/ie8.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+
     {% endif %}
 
     {% if page.js  %}
