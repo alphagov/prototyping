@@ -10,6 +10,7 @@
 @import "panels";
 @import "buttons";
 @import "shims";
+@import "conditionals";
 @import "design-patterns/show-hide";
 
 @mixin form($label-alignment: top, $label-width: 8em, $legend-colour: $charcoal-grey) {
@@ -33,7 +34,10 @@
   select[size],
   textarea {
       background-color: #f9f9f9;
-      border: 1px inset $grey-88; // Remove this if we can get the border style removed from core.css
+      border: 2px inset;
+      @include ie-lte(8){
+        border: 1px inset $grey-88; // Otherwise IE gets a black border
+      }
       font-size: 1em;
       line-height: 1.2;
       padding: 0.3em 0 0.1em 0.4em;
@@ -165,7 +169,7 @@
     background-color: lighten($mellow-red, 45%);
     border-left: 3px solid $mellow-red;
     margin: 0 -1em 0.5em -1em;
-    padding: 0.75em 0 1em 1em;
+    padding: 0.75em 1em 1em 1em;
     .validation-message{
       color: $mellow-red;
       @include core-16;
@@ -364,6 +368,11 @@
       margin: 0 0 0.75em 0;
     }
   }
+
+  /* Styles for browsers that don't yet natively support details/summary */
+  .no-details .hidden-controls details > summary:before { display: none;}
+  .no-details .hidden-controls details.open > summary:before { display: none;}
+
 }
 
 // EMPHASISED FORM CONTROLS
