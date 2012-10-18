@@ -18,7 +18,7 @@ Use it to ask the user for additional input if they select a particular option.
         <li>                                      
           <details>
             <summary>
-              <label><input type="checkbox"  value="value"> I'd like to provide a detailed report...</label>
+              <label for="details"><input id="details" type="checkbox"  value="value"> I'd like to provide a detailed report...</label>
             </summary>
             <label class="visuallyhidden">Enter text here</label>
             <textarea class="full-size" placeholder="Enter text here"></textarea>
@@ -50,13 +50,13 @@ Use it to ask the user for additional input if they select a particular option.
 
       <ul class="hidden-controls option group">
         <li>
-            <label>
+            <label for="optionsRadios1">
               <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
               All decisions must be made jointly
             </label>
         </li>
         <li>
-            <label>
+            <label for="optionsRadios2">
               <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
               All decisions can be made jointly or severally
             </label>
@@ -64,7 +64,7 @@ Use it to ask the user for additional input if they select a particular option.
         <li>                                      
           <details>
             <summary>
-              <label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3"> It depends on the decision…</label>
+              <label for="optionsRadios3"><input type="radio" name="optionsRadios" id="optionsRadios3" value="option3"> It depends on the decision…</label>
             </summary>
             <label class="visuallyhidden">Please provide details</label>
             <textarea class="full-size" placeholder="Please provide details"></textarea>
@@ -82,9 +82,12 @@ You'll need to import 'forms.scss' and 'show-hide.scss' and include the 'hidden-
 You'll also need the relevant javascripts on your page.
 
 
-## Still to do
+## Cross browser
 
-Needs cross-browser testing. There's also a known issue with radio buttons - if you have more than one hidden control in a set it gets confused.
+* FF, Safari, IE 6-8: With radios, once a hidden control has been opened it stays open,
+even if another radio is subsequently checked
+
+* All browsers: If you have more than one hidden control in a set of radio buttons it gets confused.
 
 <script src="../javascripts/jquery.details.js"></script>
 <script>
