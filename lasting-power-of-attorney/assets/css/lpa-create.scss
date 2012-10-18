@@ -10,6 +10,7 @@
 @import "design-patterns/buttons";
 @import "design-patterns/account-management-tools";
 @import "design-patterns/accordion-form";
+@import "design-patterns/help-popup";
 
 
 article .inner{
@@ -83,7 +84,6 @@ article .inner{
 }
 
 // Signatures
-
 .form .capture-dates{
   width: 103.5%;
   td, th {
@@ -95,12 +95,7 @@ article .inner{
   }
 }
 
-/* ===============================
- * BULLETS AND BUTTONS
- * ===============================
- */
-
-/* '+' symbol */
+// Add a person action 
 .add{
   padding: 1em 0;
   &:before{
@@ -115,6 +110,7 @@ article .inner{
   }
 }
 
+// 'Not sure what to put?' links
 .hidden-controls .not-sure{
   float: right;
   margin: -2.25em 0.5em 0 0;
@@ -125,7 +121,7 @@ article .inner{
 // POP-UP WINDOW STYLES
 // ================================
 
-#popup{
+#popup.form{
   @include popup(38em);
   .content{
     margin-top: -2.5em;
@@ -224,83 +220,6 @@ background-color:rgba(0,0,0,.5) !important;
 }
 #donor-signature{
   padding-left: 0;
-}
-
-
-
-// ==========================================
-// HELP SYSTEM STYLES
-
-// Intro panel for help topics
-fieldset.intro{
-  margin-bottom: 1em;
-}
-
-// Examples
-.example {
-background: none repeat scroll 0 0 #E7EBDA;
-margin: 0.75em -1em;
-padding: 0.5em 1em;
-}
-
-#popup.help-system{
-  background-color: #fff;
-  padding: 1em 0 1em 1.5em;
-  min-height: 26em;
-  position: absolute; /* popup scrolls with page, so we can have long popups */
-  h2{
-    font-size: 1.75em;
-    font-weight:normal;
-    margin:0;
-  }
-  .content{
-    float: left;
-    width: 70%;
-    padding-right: 0em;
-    ul{
-      margin: 0;
-    }
-  }
-  nav{
-    float: left;
-    margin: -1em -1em 0 1em;
-    width: 30%;
-    ul{
-      margin: 0;
-      list-style-type: none;
-    }
-    li{
-      margin: 0;
-      padding: 0.5em 0;
-      font-weight: bold;
-    }
-    > *{
-      padding-left: 2em;
-    }
-    a{
-      text-decoration: none;
-      &:hover{
-        text-decoration: underline;
-      }
-    }
-    .current{
-      background: #e8f0f0;
-      position: relative;
-      &:before {
-        width: 0;
-        height: 0;
-        content: " ";
-        border: 1.25em solid transparent;
-        border-right-color: #e8f0f0;
-        position: absolute;
-        left: -2.5em;
-        top: 0;
-      }
-      a{
-        color: #333;
-      }
-    }
-  }
 }
 
 
