@@ -1,28 +1,32 @@
 ---
 layout: design-pattern
-title: Show/hide link
+title: Show/hide link, animated
 status: draft
-css: ../css/design-patterns/show-hide.css
 ---
 
-When you click on the link it toggles some content immediately below it. The details and summary tags in HTML5 are specifically intended for this kind of thing.
+When you click on the link it toggles some content immediately below it. The details and summary tags in HTML5 are specifically intended for this kind of thing, but the current browser behaviour is a little clunky.
+
+This page instead shows the type of animation which could work well.
 
 For example, the following code: 
+ 
+    <section>
+     <p class="showhide-trigger">More information about this show/hide design pattern</p>
+     <p class="showhide-description">This show/hide implementation reveals the additional information as if masked by a sheet in front. The transition DOES NOT re-flow any text, squash lines together, or reposition the content being revealed.</p>
+    </section>
 
-    <details>
-      <summary>What happens if I click on a summary tag?</summary>
-      <p>The remaining contents of the details tag are revealed</p>
-    </details>
+    <p>This is content after the show/hide design pattern. It moves up and down rather than being obscured by the description when it is shown.</p>
+
 
 Is rendered on GOV.UK like this:
 
 <div class="pattern-example">
   <div class="inner">
 
-    <details>
-      <summary>What happens if I click on a summary tag?</summary>
-      <p>The remaining contents of the details tag are revealed</p>
-    </details>
+    <section>
+      <p class="showhide-trigger">More information about this show/hide design pattern</p>
+      <p class="showhide-description">This show/hide implementation reveals the additional information as if masked by a sheet in front. The transition DOES NOT re-flow any text, squash lines together, or reposition the content being revealed.</p>
+    </section>
 
   </div>
 </div>
@@ -76,13 +80,6 @@ Cross browser support for these tags is [patchy right now](http://caniuse.com/de
       });
     </script>
 
-This pattern has been tested in IE6-8, FF and Chrome. It's functional in all, and no content is obscured (except intentionally).
-However, the following minor issues were observed:
-
-* IE 8: Underline extends below bullet
-* IE 7: No bullet
-* IE 6: No bullet or highlighted colour
-
 * * *
 
 # Guidance
@@ -90,13 +87,12 @@ However, the following minor issues were observed:
 Use this pattern carefully. The objective is to declutter your interface by hiding information
 that's only relevant to a small proportion of users. If a majority of users need that information, *don't hide it*.
 
-The wording of the summary tag is critical:
+The wording of the summary tag is critical. It must directly and unambiguously address the audience for whom the hidden information is intended.
 
-1.) It must directly and unambiguously address the audience for whom the hidden information is intended.
-One way we've found that's quite effective is to write the summary in the users own voice, as a question.  
-This forces you to try and pre-empt what it is the user will be asking themselves at that point.  
-Here's an example to illustrate. Imagine the user has just been asked to submit some documents via a web form:  
-It goes without saying that if you string a whole bunch of these together you've got yourself an FAQ page.
+One way we've found that's quite effective is to write the summary in the users own voice, as a question.
+This forces you to try and pre-empt what it is the user will be asking themselves at that point.
+
+Here's an example to illustrate. Imagine the user has just been asked to submit some documents via a web form:
 
 <div class="pattern-example">
   <div class="inner">
@@ -110,24 +106,7 @@ It goes without saying that if you string a whole bunch of these together you've
   </div>
 </div>
 
-2.) The first few times it is used in a transaction, it should reassure users that clicking it will not take them away from the page (and lose the data they've input so far). Once users are familiar with this pattern it becomes less important to reassure them.   
-One way of doing this is to start with the word 'Show'. 
-
-Here's an example to illustrate:  
-
-<div class="pattern-example">
-  <div class="inner">
-
-    <details class="animated">
-      <summary>Show me where to find my driving licence number.</summary>
-      <p>Something</p>
-    </details>
-
-  </div>
-</div>
-
-There's also an animated version of this pattern which additionally swaps the word 'show' for 'hide' when the description is open.
-
+It goes without saying that if you string a whole bunch of these together you've got yourself an FAQ page.
 
 * * * 
 
