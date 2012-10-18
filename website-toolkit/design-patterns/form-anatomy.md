@@ -77,17 +77,17 @@ Wrap the radio or checkbox in its label and wrap the whole thing in an 'option g
     <div class="form-example-1">
 
       <p class="option group">
-        <label><input type="checkbox"> Job offers</label>
-        <label><input type="checkbox"> Networking</label>
-        <label><input type="checkbox"> Business opportunities</label>
+        <label for="checkbox1"><input id="checkbox1" type="checkbox"> Job offers</label>
+        <label for="checkbox2"><input id="checkbox2" type="checkbox"> Networking</label>
+        <label for="checkbox3"><input id="checkbox3" type="checkbox"> Business opportunities</label>
       </p>
 
     </div>
   </div>
   <pre><code>      &lt;p class="option group"&gt;
-        &lt;label&gt;&lt;input type="checkbox"&gt; Job offers&lt;/label&gt;
-        &lt;label&gt;&lt;input type="checkbox"&gt; Networking&lt;/label&gt;
-        &lt;label&gt;&lt;input type="checkbox"&gt; Business opportunities&lt;/label&gt;
+        &lt;label for="checkbox1"&gt;&lt;input  id="checkbox1"type="checkbox"&gt; Job offers&lt;/label&gt;
+        &lt;label for="checkbox2"&gt;&lt;input  id="checkbox2"type="checkbox"&gt; Networking&lt;/label&gt;
+        &lt;label for="checkbox2"&gt;&lt;input  id="checkbox3"type="checkbox"&gt; Business opportunities&lt;/label&gt;
       &lt;/p&gt;
 </code></pre>
 
@@ -113,8 +113,8 @@ You might occasionally need to arrange form controls in a row. To do this, wrap 
         <fieldset>
           <legend><span>Gender</span></legend>
           <p class="inline option group">
-            <label><input type="radio" name="gender"> Male</label>
-            <label><input type="radio" name="gender"> Female</label>
+            <label for="male"><input id="male" type="radio" name="gender"> Male</label>
+            <label for="female"><input id="female" type="radio" name="gender"> Female</label>
           </p>
         </fieldset>
 
@@ -123,8 +123,8 @@ You might occasionally need to arrange form controls in a row. To do this, wrap 
 <pre><code>    &lt;fieldset&gt;
       &lt;legend&gt;&lt;span&gt;Gender&lt;/span&gt;&lt;/legend&gt;
       &lt;p class="inline option group"&gt;
-        &lt;label&gt;&lt;input type="radio" name="gender"&gt; Male&lt;/label&gt;
-        &lt;label&gt;&lt;input type="radio" name="gender"&gt; Female&lt;/label&gt;
+        &lt;label for="male"&gt;&lt;input  id="male" type="radio" name="gender"&gt; Male&lt;/label&gt;
+        &lt;label for="female"&gt;&lt;input  id="female" type="radio" name="gender"&gt; Female&lt;/label&gt;
       &lt;/p&gt;
     &lt;/fieldset&gt;
 </code></pre>
@@ -424,6 +424,7 @@ Each link should jump the user down to the corresponding form control. Add a 'va
 * IE 7: Validated option groups - lots of extra left padding
 * IE 6: Option groups are aligning horizontally in vertically-aligned forms
 * IE 6: Nested fieldsets layout is broken and legends are hidden
+* IE 6: Labels with nested controls need 'for' attributes to work
 
 # Putting it all together
 

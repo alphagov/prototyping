@@ -13,13 +13,13 @@ The pattern below gives selected radio buttons and checkboxes a highlight colour
 
       <ul class="emphasised option group">
         <li>
-          <label>
+          <label for="optionsRadios1">
             <input type="radio" name="LPAtypeRadios" id="optionsRadios1" value="option1">
             Create an LPA for property and financial affairs
           </label>
         </li>
         <li>
-          <label>
+          <label for="optionsRadios2">
             <input type="radio" name="LPAtypeRadios" id="optionsRadios2" value="option2">
             Create an LPA for health and welfare
           </label>
@@ -32,13 +32,13 @@ The pattern below gives selected radio buttons and checkboxes a highlight colour
 
       <ul class="emphasised option group">
         <li>
-          <label>
+          <label id="optionsRadios1">
             <input type="radio" name="LPAtypeRadios" id="optionsRadios1" value="option1">
             Create an LPA for property and financial affairs
           </label>
         </li>
         <li>
-          <label>
+          <label id="optionsRadios2">
             <input type="radio" name="LPAtypeRadios" id="optionsRadios2" value="option2">
             Create an LPA for health and welfare
           </label>
