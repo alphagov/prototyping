@@ -153,8 +153,12 @@ $(function() {
             </select>
           </p>
           <p class="group">
-            <label for="first-name">First names</label>
+            <label for="first-name">First name</label>
             <input id="first-name" type="text" class="name">
+          </p>
+          <p class="group">
+            <label for="middle-names">Middle names</label>
+            <input id="middle-names" type="text" class="name">
           </p>
           <p class="group">
             <label for="last-name">Last name</label>
@@ -362,6 +366,7 @@ $(function() {
 
         <form class="form-horizontal">
           <fieldset>
+            <legend>Personal details</legend>
           <p class="group">
             <label for="title">Title</label>
             <select id="title">
@@ -374,8 +379,12 @@ $(function() {
             </select>
           </p>
           <p class="group">
-            <label for="first-name">First names</label>
+            <label for="first-name">First name</label>
             <input id="first-name" type="text" class="name">
+          </p>
+          <p class="group">
+            <label for="middle-names">Middle names</label>
+            <input id="middle-names" type="text" class="name">
           </p>
           <p class="group">
             <label for="last-name">Last name</label>
@@ -408,11 +417,30 @@ $(function() {
             </div>
           </fieldset>
           <p class="group">
-            <label for="email">Email (optional)</label>
-            <input type="text" class="email" type="email" />
+            <label for="relationship">Relationship</label>
+            <select id="relationship">
+              <option value="">Child of donor</option>
+              <option value="">Spouse or civil partner of donor</option>
+              <option value="">Donor's solicitor</option>
+              <option value="">Other (please specify below)</option>
+            </select>
+            <label for="relationship-other" class="visuallyhidden">Please specify the nature of the relationship</label>
+            <input id="relationship-other" type="text" placeholder="Specify relationship" />
           </p>
         </fieldset>
         <fieldset>
+          <legend>Contact details</legend>      
+          <p class="group">
+            <label for="email">Email (optional)</label>
+            <input id="email" class="email" type="email" />
+          </p>
+          <p class="group">
+            <label for="tel">Tel (optional)</label>
+            <input id="tel" class="tel" type="tel" />
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Address</legend>
           <p class="group">
             <label for="postcode">Enter postcode</label>
             <input type="text" class="postcode" /> 
@@ -439,15 +467,15 @@ $(function() {
           </p>
           <div class="address-fields hidden">
             <p class="group">
-              <label class="control-label">Street</label>
+              <label>Address</label>
               <input type="text" class="street" value="14 Culver Road" />
             </p>
             <p class="group">
-              <label class="visuallyhidden">Street 2</label>
+              <label class="visuallyhidden">Address line 2</label>
               <input type="text" class="street" />
             </p>
             <p class="group">
-              <label class="visuallyhidden">Street 3</label>
+              <label class="visuallyhidden">Address line 3</label>
               <input type="text" class="street" />
             </p>
             <p class="group">
@@ -468,7 +496,28 @@ $(function() {
                 <option value="">Select a country</option>
               </select>
             </p>
+            <p>
+              <details>
+                <summary class="action group">Add a DX address</summary>
+                <p class="group">
+                  <label>Company</label>
+                  <input type="text" class="fullname" />
+                </p>
+                <p class="group">
+                  <label>DX Number</label>
+                  <input type="text" class="" />
+                </p>
+                <p class="group">
+                  <label>DX Exchange</label>
+                  <input type="text" class="" />
+                </p>
+              </details>
+            </p>
           </div>
+
+
+
+
         </fieldset>
         <fieldset class="application-notice info-notice">
           <p class="option group">
