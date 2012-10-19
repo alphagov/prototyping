@@ -11,10 +11,6 @@ margin: 0.75em -1em;
 padding: 0.5em 1em;
 }
 
-#global-header{
-  position: fixed;
-}
-
 #popup.help-system{
   @include popup(55em);
   // Popup header style
