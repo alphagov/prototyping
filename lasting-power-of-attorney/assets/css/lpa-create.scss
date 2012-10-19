@@ -149,7 +149,7 @@ article .inner{
 
 // Basic form styles
 .form{
-  @include form(right);
+  @include form(right, 9em);
 }
 
 // Postcode lookup button
