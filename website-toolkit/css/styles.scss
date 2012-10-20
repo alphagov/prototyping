@@ -8,6 +8,7 @@
 @import "colours";
 @import "typography";
 @import "conditionals";
+@import "shims";
 @import "design-patterns/panels";
 @import "design-patterns/regular-grid";
 
@@ -24,19 +25,15 @@
 
 /* Intro panel on landing page */
 .pattern-library{
-  width: 50%;
-  float: right;
-  padding: 1em;
-  margin-top: -1em;
-  margin-bottom: 2em;
-  background-color: $green-25;
-  h1{
-    margin-top: 0;
-  }
+  @include panel($green-25, 50%, right);
 }
+
 /* Container for example patterns */
 .pattern-example{
   @include panel;
+  .inner{
+    @extend %contain-floats;
+  }
 }
 /* Pattern status label */
 .pattern-status{

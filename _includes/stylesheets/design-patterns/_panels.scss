@@ -5,10 +5,26 @@
 
 @import "colours";
 
-@mixin panel($background-colour: $grey-95){
+@mixin panel($background-colour: $grey-95, $width: "", $float: ""){
+
+  // Set width if specified
+  @if ($width != ""){
+    width: $width;
+  }
+
   background-color: $background-colour;
   margin: 1em -1em 1.5em -1em;
   padding: 1em 1em 0.25em 1em;
+
+  // Set float if specified
+  @if ($float == "left"){
+    float: left;
+    margin-right: 1em;
+  }
+  @if ($float == "right"){
+    float: right;
+    margin-left: 1em;
+  }
 
   // Reset top-margin for elements that appear at the top of panels
   *:first-child{

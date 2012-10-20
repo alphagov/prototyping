@@ -59,6 +59,14 @@ If you need to roll your own panel styles there's a [panel mixin](https://github
 
 <div class="pattern-example">
 
+  <div class="inner">
+
+    <div class="new-panel">
+      <p>Here's a new panel</p>
+    </div>
+
+  </div>
+
   <div class="side-by-side">
   <div>
     <h2>HTML</h2>
@@ -76,17 +84,38 @@ If you need to roll your own panel styles there's a [panel mixin](https://github
   </div>
 </div>
 
+</div>
+
+The mixin also lets you specify width and float properties for the panel:
+
+<div class="pattern-example">
+
   <div class="inner">
-
-    <div class="new-panel">
-      <p>Here's a new panel</p>
+    <div class="floated-panel">
+      <p>50% wide, floated right.</p>
     </div>
-
+    <p>Eyes right --></p>
+  </div>
+  <div class="side-by-side">
+    <div>
+      <h2>HTML</h2>
+  <pre><code>&lt;div class="inner"&gt;
+    &lt;div class="floated-panel"&gt;
+      &lt;p&gt;50% wide, floated right.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Eyes right --&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  </code></pre>
+    </div>
+    <div>
+      <h2>Sass</h2>
+  <pre><code>.floated-panel {
+    @include panel($light-blue-25, 50%, right);
+  }</code></pre>
+    </div>
   </div>
 
 </div>
-
-
 
 * * * 
 
