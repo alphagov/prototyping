@@ -8,16 +8,41 @@ $(function() {
     });
   });
 
-  //$(window).on("scroll", function() {
-  //  var current_header = $("h2:in-viewport, h3:in-viewport, h4:in-viewport").first();
-     // alert(current_header[0].id)
-  //  });
-
-  // Set heights of rows in a breakdown table based on their share
-  $('.breakdown-table tbody tr td:first-child').css('height', function(index) {
-        var height = +($(this).text().replace('%', '')) * 4;
-        return height;
+  $(window).on("scroll", function() {
+    // var current_header = $("h2:in-viewport, h3:in-viewport, h4:in-viewport").first();
+    // alert(current_header[0].id)
     });
+  
+  // Set heights of rows in a breakdown table based on their percentage share
+  $('.breakdown-table tbody tr td:first-child').css('height', function(index) {
+    var height = +($(this).text().replace('%', '')) * 4;
+    return height;
+  });
+
+  // Duplicate section titles under section index
+  $('.section-title .title-text').each(function(index) {
+    var sectionIndex = $(this).parent().children('.title-index');
+    $(this).clone().appendTo(sectionIndex);
+  });
+
+  // Make section indexes sticky
+  $("#contents").sticky();
+  $(".section-title .title-index").sticky();
+
+  // Scroll back up to contents page
+  $("#contents").click(function() {
+    scrollToAnchor('#markdown-toc');
+  });
+
+  // Visibly scroll to an anchor tag
+  function scrollToAnchor(aid){
+   var aTag = $(aid);
+   $('html,body').animate({scrollTop: aTag.offset().top},50);
+  }
+  $("#markdown-toc a").click(function() {
+    var anchor= $(this).attr('href');
+    scrollToAnchor(anchor);
+  });
 
 });
 
@@ -145,22 +170,5 @@ $(document).ready(function(){
     $("#contents").sticky();
     // Make section indexes sticky
     $(".section-title .title-index").sticky();
-
-
-    // SCROLL TO ANCHOR
-    function scrollToAnchor(aid){
-      var aTag = $(aid);
-      $('html,body').animate({scrollTop: aTag.offset().top},50);
-    }
-
-    // Scroll back up to contents page
-    $("#contents").click(function() {
-        scrollToAnchor('#markdown-toc');
-    });
-
-    $("#markdown-toc a").click(function() {
-        var anchor= $(this).attr('href');
-        scrollToAnchor(anchor);
-    });
 
 });
