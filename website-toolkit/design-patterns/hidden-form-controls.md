@@ -5,10 +5,31 @@ status: draft
 css: ../css/design-patterns/hidden-form-controls.css
 ---
 
-This pattern uses the details and summary tags to reveal content when a form label is clicked.
-Use it to ask the user for additional input if they select a particular option.
+This pattern uses the details and summary tags to reveal content when a link or form label is clicked.
 
-## Example 1: Checkboxes
+## Example 1: Links
+
+<div class="pattern-example">
+  <div class="inner">
+    <div class="form-example-1">
+
+        <p class="group">
+          <label for="label">Label</label>
+          <input id="label" type="text">
+        </p>                                      
+        <details>
+          <summary class="action group">Extra options</summary>
+          <p class="group">
+            <label for="label2">Label</label>
+            <input id="label2" type="text">
+          </p>
+        </details>
+
+    </div>
+  </div>
+</div>
+
+## Example 2: Checkboxes
 
 <div class="pattern-example">
   <div class="inner">
@@ -42,7 +63,7 @@ Use it to ask the user for additional input if they select a particular option.
 </code></pre>
 </div>
 
-## Example 2: Radio buttons
+## Example 3: Radio buttons
 
 <div class="pattern-example">
   <div class="inner">

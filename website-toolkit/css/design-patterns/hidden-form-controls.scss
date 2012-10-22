@@ -11,7 +11,7 @@
 @include hidden-form-controls;
 
 .form-example-1 {
-  @include form(top, 5.5em);
+  @include form(left, 5.5em);
 }
 
 

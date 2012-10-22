@@ -48,6 +48,10 @@
     height: auto;
   }
 
+  details{
+    padding: 0 1em 0 1em;
+  }
+
   // Labels
   label{
     color: $charcoal-grey;
@@ -344,6 +348,8 @@
 // So, for example, you click on a checkbox and it reveals a free-text field
 // Use in combination with the show/hide pattern
 
+
+
 @mixin hidden-form-controls{
 
   @include details-and-summary;
@@ -410,7 +416,6 @@
 .btn-secondary{
   @include button($grey-88);
 }
-
 .btn-warning{
   @include button($red);
 }
