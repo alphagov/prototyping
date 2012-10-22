@@ -1,6 +1,8 @@
 ---
 ---
 
+@import "colours";
+
 body{
   margin: 0;
 }
@@ -439,8 +441,6 @@ th {
     padding: 0;
   }
 
-
-  $green = #006435;
 
   tr:nth-child(10n+1){background-color: $green;}
   tr:nth-child(10n+2){background-color: lighten($green, 10%);}
