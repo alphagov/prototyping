@@ -21,7 +21,10 @@
 <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --><link rel="apple-touch-icon-precomposed" href="http://static.preview.alphagov.co.uk/static/apple-touch-icon-57x57.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script src="http://static.preview.alphagov.co.uk/frontend/frontend.js" type="text/javascript"></script><link title="Search" rel="search" type="application/opensearchdescription+xml" href="/search/opensearch.xml">
+{% if whitehall != true %}
+<script src="http://static.preview.alphagov.co.uk/frontend/frontend.js" type="text/javascript"></script>
+{% endif %}
+<link title="Search" rel="search" type="application/opensearchdescription+xml" href="/search/opensearch.xml">
 <!--[if gt IE 8]><!--><link href="http://static.preview.alphagov.co.uk/frontend/application.css" media="screen" rel="stylesheet" type="text/css">
 <!--<![endif]--><link rel="alternate" type="application/json" href="/api/with_tag.json?tag=find-course">
 <!--[if IE 6]><link href="http://static.preview.alphagov.co.uk/frontend/application-ie6.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 7]><link href="http://static.preview.alphagov.co.uk/frontend/application-ie7.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 8]><link href="http://static.preview.alphagov.co.uk/frontend/application-ie8.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
