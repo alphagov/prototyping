@@ -1,0 +1,28 @@
+{% assign whitehall = true %}
+
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lte-ie8 " lang="en"><![endif]--><!--[if gt IE 8]><!--><html lang="en" class="">
+<!--<![endif]--><head>
+{% include _head.html %}
+
+    <link href="http://whitehall-frontend.preview.alphagov.co.uk/government/assets/frontend/base.css" media="screen" rel="stylesheet" type="text/css">
+    <script defer src="http://whitehall-frontend.preview.alphagov.co.uk/government/assets/application.js" type="text/javascript"></script>
+
+  </head>
+
+
+  <body class="website government {{ page.template }}">
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
+
+    {% include _header.html %}
+
+    <div class="header-context group"><!-- deliberately empty --></div>
+    <div id="whitehall-wrapper">
+      {% include _whitehall-navigation.html %}
+
+      {{ content }}
+    </div>
+
+    {% include _footer.html %}
+  </body>
+</html>
