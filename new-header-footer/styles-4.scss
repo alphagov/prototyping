@@ -95,6 +95,7 @@ article {
     color: $grey-4;
     display: inline-block;
     margin: 4.5rem 3rem 4.5rem 0;
+    margin: 45px 3px 45px 0;
   }
 
   a {
@@ -103,6 +104,7 @@ article {
 
   .report-a-problem-toggle {
     margin: 1em 1.5rem 1em 0;
+    margin: 1em 15px 1em 0;
     clear: none;
   }
 
@@ -143,12 +145,16 @@ article {
     list-style: none;
     
     padding: 2rem 0 1.5rem 0;
+    padding: 20px 0 15px 0;
     margin: 3rem 3rem 3rem 0;
+    margin: 30px 30px 30px 0;
     border: 1px solid $grey-6;
     border-width: 1px 0;
 
     display: inline-block;
+    width: 29rem;
     width: 290px;
+    min-height: 21rem;
     min-height: 210px;
 
     vertical-align: top;
@@ -172,18 +178,23 @@ article {
     display: inline-block;
     float: none;
     text-align: inherit;
+    width: 29rem;
     width: 290px;
+    min-height: 21rem;
     min-height: 210px;
 
     color: #434343;
 
-    padding: 2rem 0 1.5rem 0;
     margin: 3rem 0 3rem 0;
+    margin: 30px 0 30px 0;
+    padding: 20px 0 15px 0;
     border: 1px solid $grey-6;
     border-width: 1px 0;
 
     a {
+      margin: 3.5rem 0 0 0;
       margin: 35px 0 0 0;
+      padding: 11.5rem 0 0 0;
       padding: 115px 0 0 0;
 
       background: transparent url(crest-5.png) no-repeat 50% 0;
@@ -199,14 +210,17 @@ article {
     font-size: 0;
     color: $grey-3;
     padding: 3rem 0 6rem;
+    padding: 30px 0 60px;
 
     ul {
       @include core-16;
       display: inline-block;
       list-style: none;
       margin: 0 3rem 3rem 0;
+      margin: 0 30px 30px 0;
       padding: 0;
 
+      width: 29rem;
       width: 290px;
 
        li {

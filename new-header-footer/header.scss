@@ -36,6 +36,11 @@ $grey-9: #eaedef;
     @include media($max-width: 499px) {
       height: auto;
     }
+
+    @include ie-lte(7) {
+      width: 62em;
+      height: auto;
+    }
   }
 
   #logo {
@@ -90,7 +95,7 @@ $grey-9: #eaedef;
       float: right;
       top: 0;
 
-      @include core-16($line-height: 1, $line-height-640: (20/13));
+      @include core-16($line-height: (20/16), $line-height-640: (20/13));
 
       overflow: hidden;
       text-indent: -5000px;
@@ -102,8 +107,6 @@ $grey-9: #eaedef;
       background-repeat: no-repeat;
       background-position: 75% 50%;
 
-      position: relative;
-      top: 0;
       @include border-radius(0);
       @include box-shadow(none);
 
@@ -123,13 +126,17 @@ $grey-9: #eaedef;
     input.button {
       @include core-16($line-height: (20/16), $line-height-640: (20/13));
       /* this inherits from the basic button styles */
-      display:inline;
-      padding: 0.25em 0.5em 0.2em;
+      display: inline;
       margin: 0;
-      position: relative;
-      top: 0;
+      padding: 0.25em 0.5em;
+
+      position: static;
+ 
+      
       @include border-radius(0);
       @include box-shadow(none);
+      
+      -webkit-appearance: none;
 
       &:hover {
         background-color: #3ABAA8;
@@ -144,8 +151,7 @@ $grey-9: #eaedef;
         text-indent: -5000px;
 
         width: 1.8em;
-        // margin: 0.2em 0;
-        padding: 0.4em 0.5em;
+        padding: 0.25em 0.5em;
 
         background-image: url(icon-search.png);
         background-repeat: no-repeat;
@@ -166,14 +172,8 @@ $grey-9: #eaedef;
 
       /* search input */
     #site-search-text {
-      @include core-16($line-height: 1, $line-height-640: (20/13));
-
-      border: none;
-      border-bottom: solid 1px #fff;
-      border-top: solid 1px #fff;
-      padding: 0.2em 0.25em;
-      min-width: 8em;
-      margin: 0 0.5em 0 0;
+      @include core-16($line-height: (18/16), $line-height-640: (18/13));
+      margin: 0;
 
       /* this is handled in normalize.scss */
       -webkit-appearance: none;
@@ -190,12 +190,10 @@ $grey-9: #eaedef;
     @include media($max-width: 379px) {
       display: none;
       width: 100%;
-      max-width: none;
 
       #site-search-text {
+        margin: 0.3em 0;
         width: 80%;
-        padding: 0.2em 1%;
-        margin: 0.5em 0;
       }
     }
     &.js-visible { display: block; }
