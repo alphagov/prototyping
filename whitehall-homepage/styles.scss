@@ -1,0 +1,116 @@
+---
+---
+@import "colours";
+@import "typography";
+@import "whitehall/_dimensions";
+@import "whitehall/_colours";
+
+#whitehall-wrapper {
+
+  .homepage {
+    .block-1 {
+      width: 33%;
+
+      clear: both;
+      float: left;
+      display: inline;
+    }
+
+    .block-2 {
+      width: 66%;
+
+      clear: both;
+      float: left;
+      display: inline;
+    }
+
+    .block-3 {
+      width: 100%;
+
+      clear: both;
+      float: left;
+      display: inline;
+    }
+
+    h1 {
+      margin-bottom: $gutter;
+    }
+
+    h2 {
+      @include core-24;
+      margin: $gutter-half 0 $gutter 0;
+    }
+
+    h3 {
+      @include core-24;
+      color: lighten($body-text, 20%);
+      margin: $gutter-half 0 $gutter 0;
+    }
+
+    p {
+      @include core-19;
+      margin-bottom: $gutter-half;
+      &:nth-child(2) {
+        margin-bottom: $gutter;
+      }
+    }
+
+    p.intro {
+      @include core-27;
+    }
+
+
+    .synopsis {
+      clear: both;
+      margin-bottom: ($gutter);
+    }
+
+    .departments {
+      clear: both;
+      margin-bottom: ($gutter);
+
+      ul.organisation-list {
+        list-style: none;
+        clear: both;
+
+        margin-bottom: ($gutter-half);
+
+        li {
+          width: 33%;
+          float: left;
+          display: inline;
+        }
+
+        .organisation {
+          margin: 0 $gutter 0 0;
+        }
+      }
+    }
+
+    .topics-block {
+      clear: both;
+      margin-bottom: ($gutter);
+
+      h2 {
+        margin-bottom: 0;
+      }
+
+      h3 {
+        margin-top: 0;
+      }
+
+      .block-1 {
+        clear: none;
+      }
+
+      ul.index-list {
+        li {
+          list-style: none;
+          border-bottom: 1px solid $light-keyline;
+          @include core-19;
+        }
+      }
+    }
+
+  }
+}
