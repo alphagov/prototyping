@@ -8,10 +8,10 @@
 #whitehall-wrapper {
 
   .homepage {
+
     .block-1 {
       width: 33%;
 
-      clear: both;
       float: left;
       display: inline;
     }
@@ -19,7 +19,6 @@
     .block-2 {
       width: 66%;
 
-      clear: both;
       float: left;
       display: inline;
     }
@@ -27,7 +26,6 @@
     .block-3 {
       width: 100%;
 
-      clear: both;
       float: left;
       display: inline;
     }
@@ -37,7 +35,7 @@
     }
 
     h2 {
-      @include core-24;
+      @include core-48;
       margin: $gutter-half 0 $gutter 0;
     }
 
@@ -59,37 +57,33 @@
       @include core-27;
     }
 
-
-    .synopsis {
-      clear: both;
-      margin-bottom: ($gutter);
-    }
-
-    .departments {
-      clear: both;
-      margin-bottom: ($gutter);
-
-      ul.organisation-list {
+    ul.index-list {
+      li {
         list-style: none;
-        clear: both;
+        border-bottom: 1px solid $light-keyline;
+        @include core-19;
 
-        margin-bottom: ($gutter-half);
-
-        li {
-          width: 33%;
-          float: left;
-          display: inline;
-        }
-
-        .organisation {
-          margin: 0 $gutter 0 0;
-        }
+        // this is padding is from the whitehall core-19 mixin 
+        // the toolkit version does not include this padding
+        // hence having to add it here
+        padding-top: 7px;
+        padding-top: 0.7rem;
+        padding-bottom: 3px;
+        padding-bottom: 0.3rem;
       }
     }
 
-    .topics-block {
+    .intro-section {
       clear: both;
-      margin-bottom: ($gutter);
+      margin-bottom: ($gutter*2);
+
+      padding-right: 33%;
+      background: transparent url(inside-gov.png) no-repeat 90% 100%;
+    }
+
+    .topics-section {
+      clear: both;
+      margin-bottom: ($gutter*2);
 
       h2 {
         margin-bottom: 0;
@@ -99,15 +93,51 @@
         margin-top: 0;
       }
 
-      .block-1 {
-        clear: none;
+      .topics.inner-block {
+        padding: 0 $gutter-half;
       }
 
+
       ul.index-list {
+        padding: 0 $gutter-half;          
+      }
+    }
+
+    .organisations-section {
+      clear: both;
+      margin-bottom: ($gutter*2);
+
+      .departments, .agencies {
+        padding: 0 $gutter-half;
+        clear: both;
+  
+        .inner-block {
+          padding: 0 $gutter-half;
+        }
+      }
+
+
+      .organisation-count {
+        @include core-48;
+        color: $inside-gov-brand;
+        display: block;
+      }
+
+      ul.organisation-list {
+        list-style: none;
+        float: left;
+
+        margin-bottom: ($gutter-half);
+        width: 100%;
+
         li {
-          list-style: none;
-          border-bottom: 1px solid $light-keyline;
-          @include core-19;
+          width: 50%;
+          float: left;
+          display: inline;
+        }
+
+        .organisation div {
+          margin: 0 $gutter-half;
         }
       }
     }
