@@ -9,25 +9,31 @@
 
   .homepage {
 
-    .block-1 {
-      width: 33%;
-
-      float: left;
-      display: inline;
-    }
-
-    .block-2 {
-      width: 66%;
-
-      float: left;
-      display: inline;
-    }
-
-    .block-3 {
+    .block-1, .block-2, .block-3 {
       width: 100%;
+    }
 
-      float: left;
-      display: inline;
+    @include media(desktop) {
+      .block-1 {
+        width: 33%;
+
+        float: left;
+        display: inline;
+      }
+
+      .block-2 {
+        width: 66%;
+
+        float: left;
+        display: inline;
+      }
+
+      .block-3 {
+        width: 100%;
+
+        float: left;
+        display: inline;
+      }
     }
 
     h1 {
@@ -35,13 +41,12 @@
     }
 
     h2 {
-      @include core-48;
+      @include core-36;
       margin: $gutter-half 0 $gutter 0;
     }
 
     h3 {
       @include core-24;
-      color: lighten($body-text, 20%);
       margin: $gutter-half 0 $gutter 0;
     }
 
@@ -75,10 +80,14 @@
 
     .intro-section {
       clear: both;
-      margin-bottom: ($gutter*2);
+      margin: $gutter 0 ($gutter*2) 0;
 
       padding-right: 33%;
-      background: transparent url(inside-gov.png) no-repeat 90% 100%;
+
+      @include media(desktop) {
+        margin: ($gutter*2) 0;
+        background: transparent url(inside-gov.png) no-repeat 90% 100%;
+      }
     }
 
     .topics-section {
@@ -97,9 +106,10 @@
         padding: 0 $gutter-half;
       }
 
-
-      ul.index-list {
-        padding: 0 $gutter-half;          
+      @include media(desktop) {
+        ul.index-list {
+          padding: 0 $gutter-half;          
+        }
       }
     }
 
@@ -112,15 +122,23 @@
         clear: both;
   
         .inner-block {
-          padding: 0 $gutter-half;
+          padding: 0;
+
+          @include media(desktop) {
+            padding: 0 $gutter-half;
+          }
         }
       }
 
-
       .organisation-count {
-        @include core-48;
-        color: $inside-gov-brand;
-        display: block;
+
+        @include core-24;
+
+        @include media(desktop) {
+          @include core-48;
+          color: $inside-gov-brand;
+          display: block;
+        }
       }
 
       ul.organisation-list {
@@ -137,7 +155,9 @@
         }
 
         .organisation div {
-          margin: 0 $gutter-half;
+          @include media(desktop) {
+            margin: 0 $gutter-half;
+          }
         }
       }
     }
