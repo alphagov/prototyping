@@ -2,7 +2,7 @@
 // UTILITY MIXINS
 //
 
-
+@import "conditionals";
 
 // =================================================
 // WRAP TO CENTRE
@@ -49,4 +49,21 @@
 
   overflow: hidden;
   *zoom: 1;
+}
+
+// =================================================
+// CONTAIN FLOATS
+// 
+
+%contain-floats {
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  @include ie-lte(7) {
+    zoom: 1;
+  }
 }

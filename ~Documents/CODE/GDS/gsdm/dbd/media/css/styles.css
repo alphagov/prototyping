@@ -1,0 +1,47 @@
+/*
+Syntax error: Invalid CSS after "-": expected number or function, was "--"
+        on line 1 of /Users/timpaul/Documents/CODE/GDS/prototyping/gsdm/css/styles.scss
+
+1: ---
+2: ---
+3: 
+4: // ===================================================
+5: // WEBSITE TOOLKIT STYLES
+6: //
+
+Backtrace:
+/Users/timpaul/Documents/CODE/GDS/prototyping/gsdm/css/styles.scss:1
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/scss/parser.rb:1130:in `expected'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/scss/parser.rb:1066:in `expected'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/scss/parser.rb:1048:in `expr!'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/scss/parser.rb:905:in `term'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/scss/parser.rb:880:in `expr'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/scss/parser.rb:654:in `simple_selector_sequence'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/scss/parser.rb:623:in `_selector'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/scss/parser.rb:602:in `selector'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/scss/parser.rb:586:in `selector_sequence'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/scss/parser.rb:511:in `ruleset'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/scss/parser.rb:536:in `block_child'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/scss/parser.rb:526:in `block_contents'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/scss/parser.rb:70:in `stylesheet'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/scss/parser.rb:27:in `parse'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/engine.rb:342:in `_to_tree'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/engine.rb:315:in `_render'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/engine.rb:262:in `render'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:340:in `update_stylesheet'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:202:in `block in update_stylesheets'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:200:in `each'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:200:in `update_stylesheets'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/sass-3.2.1/lib/sass/plugin/compiler.rb:298:in `block in watch'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/listen-0.5.3/lib/listen/multi_listener.rb:86:in `call'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/listen-0.5.3/lib/listen/multi_listener.rb:86:in `on_change'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/listen-0.5.3/lib/listen/multi_listener.rb:95:in `block in initialize_adapter'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/listen-0.5.3/lib/listen/adapter.rb:196:in `call'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/listen-0.5.3/lib/listen/adapter.rb:196:in `report_changes'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/listen-0.5.3/lib/listen/adapter.rb:208:in `poll_changed_dirs'
+/Users/timpaul/.rvm/gems/ruby-1.9.2-p320/gems/listen-0.5.3/lib/listen/adapters/darwin.rb:38:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"-\": expected number or function, was \"--\"\A         on line 1 of /Users/timpaul/Documents/CODE/GDS/prototyping/gsdm/css/styles.scss\A \A 1: ---\A 2: ---\A 3: \A 4: // ===================================================\A 5: // WEBSITE TOOLKIT STYLES\A 6: //"; }

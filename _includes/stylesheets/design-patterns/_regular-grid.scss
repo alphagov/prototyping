@@ -2,6 +2,7 @@
 // REGULAR GRID
 //
 
+
 @import "design-patterns/utils";
 @import "conditionals";
 
@@ -25,6 +26,7 @@
     width: percentage($item-share/$columns);
     // IE8- Doesn't understand nth-child, so we're stuck with a margin on the far-right item
     // To accomodate this, all margins are slightly reduced
+    
     @include ie-lte(8){
       $margins: $columns;
     }
@@ -47,3 +49,6 @@
 
 // NOTE: IE6 doesn't understand the child selector, so the grid elements become full-width
 // and arranged vertically down the page.
+
+
+
