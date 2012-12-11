@@ -7,6 +7,8 @@ css: /gsdm/css/design-patterns/buttons.css
 
 Here's how to create buttons in the GOV.UK style.
 
+[The Sass mixin for making these is available here](https://github.com/alphagov/prototyping/blob/master/_includes/stylesheets/design-patterns/_buttons.scss).
+
 ## Default examples
 <div class="pattern-example">
   <div class="inner">
