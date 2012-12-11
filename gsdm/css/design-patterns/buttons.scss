@@ -10,14 +10,14 @@
 
 // Buttons
 .btn{
-  @include button($green);
+ // @include button($green);
 }
 .btn-secondary{
-  @include button($grey-88);
+  //@include button($grey-88);
 }
 
 .btn-warning{
-  @include button($red);
+ // @include button($red);
 }
 
 .small{ @include core-16; }
