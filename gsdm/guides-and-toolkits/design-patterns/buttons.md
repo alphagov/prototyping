@@ -113,10 +113,10 @@ Use the default size wherever possible. More complex interfaces may occasionally
       <input class="btn" type="submit" value="Input button" /> 
     </p>
   </div>
-  <pre><code>&lt;p&gt;
-  &lt;a href="#" class="btn"&gt;Primary action&lt;/a&gt; 
-  &lt;a href="#" class="btn-secondary"&gt;Secondary action&lt;/a&gt; 
-  &lt;a href="#" class="btn-warning"&gt;Warning action&lt;/a&gt;
+<pre><code>&lt;p&gt;
+  &lt;button class="btn"&gt;Button tag&lt;/button&gt;
+  &lt;a class="btn"&gt;Link tag&lt;/a&gt;
+  &lt;input class="btn" type="submit" value="Input button" /&gt; 
 &lt;/p&gt;
 </code></pre>
 </div>

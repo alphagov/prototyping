@@ -6,7 +6,7 @@
 @mixin button($colour){
   background: $colour ;
   @include border-radius(0.250em);
-  @include box-shadow(0 0.2em 0 darken($colour, 15%));
+  @include box-shadow(0 2px 0 darken($colour, 15%));
   color: $white;
   border: 0;
   cursor: pointer;
@@ -20,7 +20,7 @@
     background: darken($colour, 5%);
   }
   &:active {
-    top: 0.2em;
+    top: 2px;
     @include box-shadow(0 0 0 $colour);
   }
   &.disabled {
