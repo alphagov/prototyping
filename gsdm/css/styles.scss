@@ -353,9 +353,38 @@ padding: 1em 1em 0.25em 1em;
   }
 }
 
+// ====================================================
+// Header links
+.article h2 {
+  .headerlink{
+    display: inline-block;
+    text-indent: -9999px;
+    width: 20px;
+    margin-left: -20px;
+  }
+  &:hover .headerlink{
+    visibility: visible;
+    text-indent: 0;
+  }
+}
 
-
-
+// ====================================================
+// Alpha sticker
+.home {
+  a {
+  position: relative;
+    small{
+      position: absolute;
+      top: 0.8em;
+      text-transform: uppercase;
+      color: white;
+      -webkit-font-smoothing: subpixel-antialiased;
+      background: #d53880;
+      padding: 2px 5px 0;
+      margin-left: 10px;
+    }
+  }
+}
 
 // ====================================================
 // DESIGN PATTERNS
