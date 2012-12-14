@@ -1,0 +1,115 @@
+---
+---
+
+@import "colours";
+@import "typography";
+@import "whitehall/_dimensions";
+@import "whitehall/_colours";
+@import "whitehall/_float-fix";
+@import "whitehall/_typography";
+
+#whitehall-wrapper {
+  .locations-index {
+
+    .page-header {
+      padding: $gutter-half 0;
+      @extend %contain-floats;
+
+      @include media(tablet){
+        width: 75%;
+        padding: $gutter*1.5 0 ($gutter + $gutter-one-third);
+      }
+
+      .page_title {
+        display: block;
+        @include bold;
+      }
+
+      .filter-list-form {
+        label {
+          @include core-19;
+          color: $low-contrast;
+          display: inline-block;
+        }
+        input {
+          display: inline-block;
+          margin: 7px $gutter-one-third 3px;
+          width: 30%;
+        }
+      }
+    }
+
+    h2 {
+      @include core-27;
+    }
+
+    .location-list-block {
+      width: 33%;
+      float: left;
+    }
+
+    .index-list {
+      li {
+        list-style: none;
+        border-bottom: 1px solid $light-keyline;
+        @include core-19;
+      }
+    }
+
+    .simple-alphabetical-list {
+     .alphabetical-row {
+        margin-bottom: $gutter;
+
+        ul { 
+          li {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .heading-block {
+      h2 {
+        // @include core-27;
+
+        @include media(tablet) {
+          float: left;
+          clear: both;
+          width: 25%;
+          margin-top: $gutter-half;
+        }
+      }
+
+      .content {
+        width: 75%;
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          @include core-19;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    .location-section {
+      @extend %contain-floats;
+
+      margin: $gutter $gutter-half;
+
+      .inner-block {
+        padding: 0 $gutter-half;
+      }
+
+      h2 {
+        @include core-27;
+        margin: ($gutter * 2) 0 $gutter;
+      }
+
+    }
+
+
+  }
+}

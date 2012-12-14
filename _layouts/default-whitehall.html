@@ -18,9 +18,11 @@
 
     <div class="header-context group"><!-- deliberately empty --></div>
     <div id="whitehall-wrapper">
-      {% include _whitehall-navigation.html %}
+      <div id="whitehall-inner">
+        {% include _whitehall-navigation.html %}
 
-      {{ content }}
+        {{ content }}
+      </div>
     </div>
 
     {% include _footer.html %}

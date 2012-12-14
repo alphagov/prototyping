@@ -350,3 +350,7 @@
   padding-bottom: 5px;
   padding-bottom: 0.5rem;
 }
+
+ @mixin bold {
+    //  font-weight: 800;
+  }
