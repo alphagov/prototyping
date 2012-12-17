@@ -326,8 +326,8 @@ a.tooltip {
   }
 }
 
-.guides-intro{
-  @include regular-grid(2);
+.recently-updated{
+  @include panel($light-blue-25, 33%, right);
 }
 
 // Search guides panel
@@ -514,100 +514,44 @@ article dd{
   }
 }
 
-.list{
-  @include regular-grid(4, 120px);
-  li{
-    padding-top: 0.5em;
-    border-top: 1px solid #BFC1C3;
+.topic {
+  border-bottom: 1px solid #BFC1C3;
+  padding-bottom: 5px;
+  h3{
+    font-size: 32px;
+    margin-top: 1.4em;
   }
-  a{
-    display: block;
-  }
-}
-
-.list-2{
-  list-style-type: none;
-    list-style-image: none;
-  margin: 0;
-  padding: 0;
-  li{
+  ul{
     list-style-type: none;
     list-style-image: none;
-    overflow: hidden;
-    margin-top: 0.5em;
-    padding-top: 0.5em;
-    padding-left: 0;
-    border-top: 1px solid #BFC1C3;
-    a, span{
-      display: block;
-      float: left;
-    }
-    a {
-      margin-right: 0.5em;
-    }
-    span{
-      color: #6F777B;
-    }
-  }
-}
-
-.list-3{
-  list-style-type: none;
-    list-style-image: none;
-  margin: 0;
-  padding: 0;
-  li{
-    list-style-type: none;
-    list-style-image: none;
-    overflow: hidden;
-    margin-top: 0.5em;
-    padding-top: 0.5em;
-    padding-left: 0;
-    border-top: 1px solid #BFC1C3;
-    a, span{
-      display: block;
-      float: left;
-    }
-    a {
-      width: 30%;
-    }
-    span{
-      width: 68%;
-      color: #6F777B;
-    }
-  }
-}
-
-.list-4{
-  list-style-type: none;
-  list-style-image: none;
-  margin: 0;
-  padding: 0;
-  li{
-    list-style-type: none;
-    list-style-image: none;
-    overflow: hidden;
-    margin-top: 0.5em;
-    padding-top: 0.5em;
-    padding-left: 0;
-    border-top: 1px solid #BFC1C3;
-    a{
-      display: block;
+    margin: 0;
+    padding: 0;
+    li{
+      list-style-type: none;
+      list-style-image: none;
       overflow: hidden;
-      span{
+      margin-top: 0.5em;
+      padding-top: 0.5em;
+      padding-left: 0;
+      border-top: 1px solid #BFC1C3;
+      a{
         display: block;
-        float: left;
-      }
-      .title {
-        width: 30%;
-        text-decoration: underline;
-      }
-      .description{
-        width: 68%;
-        color: #6F777B;
-      }
-      &:hover .description{
-        text-decoration: underline;
+        overflow: hidden;
+        span{
+          display: block;
+          float: left;
+        }
+        .title {
+          width: 30%;
+          text-decoration: underline;
+        }
+        .description{
+          width: 68%;
+          color: #6F777B;
+        }
+        &:hover .description{
+          text-decoration: underline;
+        }
       }
     }
   }
