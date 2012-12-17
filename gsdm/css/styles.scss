@@ -304,6 +304,46 @@ a.tooltip {
   }
 }
 
+// Guidance list
+
+.guidance-list{
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  column-count: 2;
+  column-gap: 20px;
+  .topic{
+    -webkit-column-break-inside:avoid;
+    -moz-column-break-inside:avoid;
+    -o-column-break-inside:avoid;
+    -ms-column-break-inside:avoid;
+    column-break-inside:avoid;
+    margin-bottom: 2.4em;
+    h3{
+      margin-top: 0;
+    }
+  }
+}
+
+.guides-intro{
+  @include regular-grid(2);
+}
+
+// Search guides panel
+
+.search-guides{ 
+  @include panel;
+  @include form(left);
+  input[type="search"]{
+    background-color: white;
+    width: 24em;
+  }
+  label{
+    font-size: 2.4rem;
+  }
+}
+
 .page-contents {
 background-color: #F2F2F2;
 margin: 1em -1em 1.5em -1em;
@@ -471,5 +511,104 @@ article dd{
   &:hover{
     cursor: default;
     text-decoration: none;
+  }
+}
+
+.list{
+  @include regular-grid(4, 120px);
+  li{
+    padding-top: 0.5em;
+    border-top: 1px solid #BFC1C3;
+  }
+  a{
+    display: block;
+  }
+}
+
+.list-2{
+  list-style-type: none;
+    list-style-image: none;
+  margin: 0;
+  padding: 0;
+  li{
+    list-style-type: none;
+    list-style-image: none;
+    overflow: hidden;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    padding-left: 0;
+    border-top: 1px solid #BFC1C3;
+    a, span{
+      display: block;
+      float: left;
+    }
+    a {
+      margin-right: 0.5em;
+    }
+    span{
+      color: #6F777B;
+    }
+  }
+}
+
+.list-3{
+  list-style-type: none;
+    list-style-image: none;
+  margin: 0;
+  padding: 0;
+  li{
+    list-style-type: none;
+    list-style-image: none;
+    overflow: hidden;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    padding-left: 0;
+    border-top: 1px solid #BFC1C3;
+    a, span{
+      display: block;
+      float: left;
+    }
+    a {
+      width: 30%;
+    }
+    span{
+      width: 68%;
+      color: #6F777B;
+    }
+  }
+}
+
+.list-4{
+  list-style-type: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+  li{
+    list-style-type: none;
+    list-style-image: none;
+    overflow: hidden;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    padding-left: 0;
+    border-top: 1px solid #BFC1C3;
+    a{
+      display: block;
+      overflow: hidden;
+      span{
+        display: block;
+        float: left;
+      }
+      .title {
+        width: 30%;
+        text-decoration: underline;
+      }
+      .description{
+        width: 68%;
+        color: #6F777B;
+      }
+      &:hover .description{
+        text-decoration: underline;
+      }
+    }
   }
 }
