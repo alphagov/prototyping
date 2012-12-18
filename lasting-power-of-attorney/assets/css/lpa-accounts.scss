@@ -34,7 +34,7 @@ article .inner{
 .two-column{
   @include regular-grid(2);
   form{
-    background-color: $grey-95;
+    background-color: $highlight-colour;
     padding: 1em;
     padding-top: 1px;
   }
@@ -52,7 +52,7 @@ article .inner{
 }
 
 .process.overview > li{
-  background-color: $grey-95;
+  background-color: $highlight-colour;
   display: table-cell;
 }
 

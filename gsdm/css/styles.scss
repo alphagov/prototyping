@@ -15,7 +15,7 @@
 @import "design-patterns/show-hide";
 @import "design-patterns/forms";
 
-@include global-nav($black, $light-blue-grey);
+@include global-nav($black, $border-colour);
 
 
 
@@ -379,7 +379,7 @@ padding: 1em 1em 0.25em 1em;
   li{
     padding: 0;
     display: inline-block;
-    background-color: $light-warm-grey;
+    background-color: $panel-colour;
     width: 20%;
     .badge{
       font-size: 16px;
@@ -444,7 +444,7 @@ padding: 1em 1em 0.25em 1em;
 
 /* Container for example patterns */
 .pattern-example{
-  @include panel;
+  @include panel($highlight-colour);
   .inner{
     @extend %contain-floats;
   }
@@ -491,7 +491,7 @@ pre:first-child { margin-top: 0; }
 /* Update text.scss with these */
 hr{
   border: 0;
-  background-color: $light-blue-grey;
+  background-color: $border-colour;
   height: 1px;
   margin: 2em 0;
 }

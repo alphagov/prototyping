@@ -5,7 +5,7 @@
 
 @import "colours";
 
-@mixin progress-indicator($active-colour: white, $border-colour: $light-blue-grey, $background-colour: $cool-grey, $steps: "") {
+@mixin progress-indicator($active-colour: white, $border-colour: $border-colour, $background-colour: $highlight-colour, $steps: "") {
 
   /* Progress indicator */
 

@@ -37,7 +37,7 @@ The mixin accepts the following arguments:
 
 `$label-width` a value in em. Default is 8em.
 
-`$legend-colour` a colour value or variable. Default is $charcoal-grey.
+`$legend-colour` a colour value or variable. Default is $text-colour.
 
 To see these in action, check out the [registration form example](registration-form.html)
 

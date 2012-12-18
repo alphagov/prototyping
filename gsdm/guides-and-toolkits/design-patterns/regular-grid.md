@@ -49,8 +49,8 @@ This second argument is useful when your grid elements contain varied amounts of
   <div>
     <h3>Sass</h3>
     <pre><code>.regular-grid p{
-    background-color: $cool-grey;
-    border: 1px solid $light-blue-grey;
+    background-color: $highlight-colour;
+    border: 1px solid $border-colour;
     text-align: center;
     padding: 1em;
 }

@@ -12,8 +12,8 @@
     margin: 0 -1em 0 0;
     padding: 1em 0em;
     color: white;
-    //background: $grey-95;
-    color: $charcoal-grey;
+    //background: $highlight-colour;
+    color: $text-colour;
     ul{
       list-style-type: none;
       margin: 0;
@@ -26,7 +26,7 @@
         &.user {float: left;}
       }
       a{
-        color: $charcoal-grey;
+        color: $text-colour;
       }
     }
   }

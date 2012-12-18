@@ -13,7 +13,7 @@
 @import "conditionals";
 @import "design-patterns/show-hide";
 
-@mixin form($label-alignment: top, $label-width: 8em, $legend-colour: $charcoal-grey) {
+@mixin form($label-alignment: top, $label-width: 8em, $legend-colour: $text-colour) {
 
   // FORM ELEMENT STYLES
 
@@ -36,7 +36,7 @@
       background-color: #f9f9f9;
       border: 2px inset;
       @include ie-lte(8){
-        border: 1px inset $grey-88; // Otherwise IE gets a black border
+        border: 1px inset $border-colour; // Otherwise IE gets a black border
       }
       font-size: 1em;
       line-height: 1.2;
@@ -54,7 +54,7 @@
 
   // Labels
   label{
-    color: $charcoal-grey;
+    color: $text-colour;
     @include core-19;
   }
   // Checkboxes and radio buttons
@@ -126,7 +126,7 @@
       margin-top: 0;
       legend {
         @include core-19;
-        color: $charcoal-grey;
+        color: $text-colour;
       }
       // Shift controls up
       .inline .group,
@@ -402,10 +402,10 @@
   }
   .emphasised label.radio:hover,
   .emphasised label.checkbox:hover{
-    background-color: $grey-95;
+    background-color: $highlight-colour;
   }
   .checked{
-    background-color: $grey-95;
+    background-color: $highlight-colour;
   }
 
 }
@@ -415,7 +415,7 @@
   @include button($green);
 }
 .btn-secondary{
-  @include button($grey-88);
+  @include button($panel-colour);
 }
 .btn-warning{
   @include button($red);

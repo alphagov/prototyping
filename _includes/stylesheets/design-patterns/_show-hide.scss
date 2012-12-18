@@ -41,7 +41,7 @@
       @if ($background-colour != ""){
         @if ($background-colour == "highlighted"){
           // Default highlight colour
-          @include panel($grey-95);
+          @include panel($highlight-colour);
         } @else {
           // Custom highlight colour
           @include panel($background-colour);

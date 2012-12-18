@@ -69,7 +69,7 @@ $true-black: #000; // you should have a really good reason for using this
           @if lightness($colour) < 50% {
             color: $white;
           } @else {
-            color: $charcoal-grey;
+            color: $text-colour;
           }
         }
         h4{
@@ -135,37 +135,6 @@ $true-black: #000; // you should have a really good reason for using this
 @include colour("light-blue-50", $light-blue-50);
 @include colour("light-blue-25", $light-blue-25);
 
-// Palette, greys
-@include colour("charcoal-grey", $charcoal-grey);
-@include colour("dark-blue-grey", $dark-blue-grey);
-@include colour("light-blue-grey", $light-blue-grey);
-@include colour("light-warm-grey", $light-warm-grey);
-@include colour("cool-grey", $cool-grey);
-@include colour("white", $white);
-@include colour("light-beige", $light-beige);
-@include colour("light-tan", $light-tan);
-
-// Pure greys
-@include colour("black", $charcoal-grey);
-@include colour("grey-20", $grey-20);
-@include colour("grey-40", $grey-40);
-@include colour("grey-63", $grey-63);
-@include colour("grey-76", $grey-76);
-@include colour("grey-88", $grey-88);
-@include colour("grey-95", $grey-95);
-@include colour("white", $white);
-
-// New Greys
-@include colour("grey-0", $grey-0);
-@include colour("grey-1", $grey-1);
-@include colour("grey-2", $grey-2);
-@include colour("grey-3", $grey-3);
-@include colour("grey-4", $grey-4);
-@include colour("grey-5", $grey-5);
-@include colour("grey-6", $grey-6);
-@include colour("grey-7", $grey-7);
-@include colour("grey-8", $grey-8);
-@include colour("grey-9", $grey-9);
 
 // Semantic colour names
 .text-colour { color: $text-colour; }

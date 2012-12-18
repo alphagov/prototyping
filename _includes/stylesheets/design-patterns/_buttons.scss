@@ -44,11 +44,11 @@
       color: $white;
     }
   } @else {
-    color: $charcoal-grey;
+    color: $text-colour;
     &:hover,
     &:focus,
     &:visited{
-      color: $charcoal-grey;
+      color: $text-colour;
     }
   }
 }

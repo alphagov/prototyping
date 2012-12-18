@@ -85,12 +85,12 @@
   // Panels with an 'inner' div get
   .inner{
     background-color: white;
-    border: 1px solid #CCC;
+    border: 1px solid $border-colour;
     padding: 2em;
     margin-bottom: 0.75em;    
     input[type="text"],
     textarea{
-      background-color: #f9f9f9;
+      background-color: $canvas-colour;
     }
   }
 }

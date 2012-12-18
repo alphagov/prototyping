@@ -16,7 +16,7 @@ padding: 0.5em 1em;
   // Popup header style
   h2{
     padding: 0.8em 1em 0.8em 1.65em;
-    background-color: $grey-95;
+    background-color: $highlight-colour;
     margin: 1em -1em 1em -1.65em;
   }
   .content{
@@ -49,7 +49,7 @@ padding: 0.5em 1em;
       padding: 0;
       list-style-type: none;
       .active{
-        background-color: $grey-95;
+        background-color: $highlight-colour;
       }
     }
     > *{

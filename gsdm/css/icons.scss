@@ -21,7 +21,7 @@
       @include wraptocentre;
     }
     a{
-      border: 1px solid $light-blue-grey;
+      border: 1px solid $border-colour;
       display: block;
       text-decoration: none;
       &:hover{
@@ -32,7 +32,7 @@
       margin: 1em 0;
     }
     p {
-      background: $cool-grey;
+      background: $highlight-colour;
       display: block;
       padding: .5em;
       margin: 0;
