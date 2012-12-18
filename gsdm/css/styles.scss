@@ -327,13 +327,14 @@ a.tooltip {
 }
 
 .recently-updated{
-  @include panel($light-blue-25, 33%, right);
+  @include panel($light-blue-25, 33%, right, $outdent: false);
 }
 
 // Search guides panel
 
 .search-guides{ 
-  @include panel;
+  @include panel($outdent: false);
+  margin-top: 3em;
   @include form(left);
   input[type="search"]{
     background-color: white;
