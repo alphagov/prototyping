@@ -2,7 +2,7 @@ GEM
   remote: http://rubygems.org/
   remote: https://gems.gemfury.com/vo6ZrmjBQu5szyywDszE/
   specs:
-    RedCloth (4.2.7)
+    RedCloth (4.2.9)
     actionmailer (3.2.9)
       actionpack (= 3.2.9)
       mail (~> 2.4.4)
@@ -109,7 +109,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  RedCloth
+  RedCloth (= 4.2.9)
   coderay
   govuk_frontend_toolkit
   jekyll
