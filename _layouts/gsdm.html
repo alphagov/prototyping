@@ -17,16 +17,16 @@
 
         <div class="js-toggle-nav" id="global-nav">
           <div class="inner">
-            <span class="home"><a href="/">Government Service Design Manual</a></span>
+            <span class="home"><a href="/gsdm">Government Service Design Manual</a></span>
             <nav role="navigation" class="content">
               <ul id="navigation">
-                <li><a href="http://gsdm.herokuapp.com/standard/" {% if page.section == 'dbd' %}class="current"{% endif %}>Digital by Default</a></li>
-                <li><a href="http://gsdm.herokuapp.com/handbook/" {% if page.section == 'guidance' %}class="current"{% endif %}>Guides &amp; toolkits</a></li>
+                <li><a href="/gsdm/digitalbydefault" {% if page.section == 'dbd' %}class="current"{% endif %}>Digital by Default</a></li>
+                <li><a href="gsdm/guides-and-toolkits" {% if page.section == 'guidance' %}class="current"{% endif %}>Guides &amp; toolkits</a></li>
               </ul>
             </nav>
           </div>
         </div>
-        
+
         <header class="page-header group">
         <hgroup><h1>{{ page.title }}</h1></hgroup></header><div class="article-container group">
         <article role="article" class="group">
