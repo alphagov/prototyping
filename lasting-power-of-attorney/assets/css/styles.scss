@@ -12,16 +12,73 @@
 @import "design-patterns/accordion-form";
 @import "design-patterns/help-popup";
 
+// ===========================================================
+// GLOBAL STYLES
+// ===========================================================
 
+header.page-header hgroup {
+  margin-right: 0 /* Extend page header out to end of search button */
+}
 article .inner{
   padding-right: 2em;
 }
-
+article table{
+  width: 103.95%;
+}
+.document-list{
+  @include panel;
+  margin-top: 2em;
+}
 
 // ===========================================================
 // ACCOUNT MANAGEMENT BAR
 // ===========================================================
 @include account-management-tools;
+
+// ===========================================================
+// SHOW / HIDE
+// ===========================================================
+@include details-and-summary;
+
+
+// ===========================================================
+// FORMS
+// ===========================================================
+
+.secondary-action .button{
+  background-color: #E1E8E8;
+  color: #083640;
+  -webkit-box-shadow: 0 4px 0 #AAA, 0 8px 10px rgba(0, 0, 0, .05);
+  -moz-box-shadow: 0 4px 0 #AAA, 0 8px 10px rgba(0,0,0,.05);
+  box-shadow: 0 3px 0 #AAA, 0 8px 10px rgba(0, 0, 0, 0.05);
+}
+.secondary-action .button:hover{
+  background-color: #e3e3e3;
+}
+.form-actions{
+  list-style-image: none;
+  padding: 0;
+  margin: 0;
+}
+.form-actions li{
+  float: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0.5em 0 0;
+}
+
+
+// ===========================================================
+// MODAL ALERT
+// ===========================================================
+
+#popup.modal-alert{
+  @include popup(40%, 8em);
+}
+#popup p,
+#popup li{
+  @include core-19;
+}
 
 
 // ===========================================================
@@ -291,4 +348,125 @@ background-color:rgba(0,0,0,.5) !important;
 
 #later-attorney-example{
   display: none;
+}
+
+article .inner{
+  padding-right: 2em;
+  & > *:first-child{
+    margin-top: 0;
+  }
+}
+
+/* ================================================================
+ * ACCOUNT FORMS
+ * ================================================================
+ */
+
+
+.accounts-form{
+  @include form(top);
+  input[type='text'],
+  input[type='email'] {
+    background: $white;
+  }
+}
+
+
+.two-column{
+  @include regular-grid(2);
+  form{
+    background-color: $highlight-colour;
+    padding: 1em;
+    padding-top: 1px;
+  }
+}
+
+/* ================================================================
+ * PROCESS OVERVIEW
+ * ================================================================
+ *
+ * The three-panelled diagrams that explain the LPA process 
+ */
+
+.process.overview{
+  @include regular-grid(3, 16em);
+}
+
+.process.overview > li{
+  background-color: $highlight-colour;
+  display: table-cell;
+}
+
+.process img{
+  margin: 1em;
+  max-width: 9em;
+  width: 100%;
+  margin: 1em;
+}
+.process li h3{
+  background-color: $green-25;
+  margin: 0 0 1em 0;
+  padding: 0.5em 1em;
+}
+
+.process.overview figure{
+  text-align: center;
+  padding: 0 0.5em;
+}
+
+.process figcaption a{
+  display: block;
+}
+.process .btn{
+  display: block;
+  width: 75%;
+  margin: 1em auto;
+  text-align: center;
+}
+
+/* ================================================================
+ * DASHBOARD
+ * ================================================================
+ *
+ */
+
+.dashboard-intro{
+  @include panel;
+}
+
+.ref{
+  display: block;
+}
+
+.status{
+  width: 8em;
+}
+
+.LPA-list .button{
+  top: 0.5em;
+}
+
+
+.document-list{
+  @include panel;
+  margin-top: 2em;
+}
+
+article table{
+  width: 103.95%;
+}
+
+.address.vcard{
+  width: 30%;
+  margin-left: -1em;
+}
+
+
+
+// ================================================================
+// HELP SYSTEM
+// ================================================================
+
+#opg-help-system {
+  display:none;
 }
