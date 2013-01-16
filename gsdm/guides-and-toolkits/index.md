@@ -17,6 +17,11 @@ status: draft
       <li><a href="http://gsdm.herokuapp.com/handbook/179/">Running retrospectives</a></li>
     </ul>
   </div>
+  <div class="phases">
+    <ul>
+      <li><a href="/phases/alpha.html">Alpha</a></li>
+    </ul>
+  </div>
   <div class="getting-started">
 
     <p>Whether you're a service manager, designer, developer or researcher, there'll be something here to help you make a world class digital service.</p>
