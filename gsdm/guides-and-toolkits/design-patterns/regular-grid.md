@@ -1,6 +1,8 @@
 ---
-layout: gsdm-design-patterns
+layout: gsdm
 title: Regular grid
+section: guidance
+subsection: Design patterns
 status: draft
 css: /gsdm/css/design-patterns/regular-grid.css
 ---

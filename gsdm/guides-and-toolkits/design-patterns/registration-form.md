@@ -1,6 +1,8 @@
 ---
-layout: gsdm-design-patterns
+layout: gsdm
 title: Form example - Registration
+section: guidance
+subsection: Design patterns
 status: draft
 css: /gsdm/css/design-patterns/forms.css
 ---

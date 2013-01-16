@@ -1,6 +1,8 @@
 ---
-layout: gsdm-design-patterns
+layout: gsdm
 title: Contact details
+section: guidance
+subsection: Design patterns
 status: draft
 ---
 

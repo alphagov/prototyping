@@ -1,12 +1,10 @@
 ---
 layout: gsdm
 title: Guides and toolkits
+subtitle: Things to help you make great services
 section: guidance
 status: draft
 ---
-              
-
-<p class="subtitle">Things to help you make great services</p>
 
 <div class="guides-intro">
   <div class="recently-updated">

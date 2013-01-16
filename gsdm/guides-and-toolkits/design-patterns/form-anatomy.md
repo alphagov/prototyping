@@ -1,6 +1,8 @@
 ---
-layout: gsdm-design-patterns
+layout: gsdm
 title: Anatomy of a form
+section: guidance
+subsection: Design patterns
 status: draft
 css: /gsdm/css/design-patterns/forms.css
 ---

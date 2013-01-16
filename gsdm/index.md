@@ -1,10 +1,9 @@
 ---
 layout: gsdm
 title: Government service design manual
+subtitle: Everything you need to build services to the Digital by Default standard
 status: draft
 ---
-
-<p class="subtitle">Everything you need to build services to the Digital by Default standard</p>
 
 <div class="home-page-hero"> 
   <a href="/standard">
