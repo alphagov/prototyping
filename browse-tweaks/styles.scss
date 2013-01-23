@@ -1,0 +1,78 @@
+---
+---
+
+@import "frontend_toolkit";
+
+.category-page {
+  .filter-list-form {
+    display: block;
+    padding: 0.5em 2em;
+    background-color: $white;
+  }
+
+  .browse-container {
+    ul.sub-categories {
+      li {
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+
+          text-decoration: none;
+
+          h2 {
+            text-decoration: underline;
+          }
+
+          p {
+            color: $text-colour;
+          }
+        }
+      }
+    }
+
+    ul.content-list {
+      width: 100%;
+
+      li {
+        margin: 0 -2em;
+        padding: 0.5em 2em 1em;
+
+        h3, p {
+          width: 65.5%;
+        }
+
+        &:nth-child(odd) {
+          background-color: $highlight-colour;
+        }
+
+        &:hover {
+          background-color: darken($highlight-colour, 5%);
+        }
+      }
+    }
+  }
+
+  .version-2 {
+    ul.content-list {
+      li {
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+
+          text-decoration: none;
+
+          h3 {
+            text-decoration: underline;
+          }
+
+          p {
+            text-decoration: none;
+            color: $text-colour;
+          }
+        }
+      }
+    }
+  }
+}
