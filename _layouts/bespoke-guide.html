@@ -9,6 +9,11 @@
         width: device-width;
       }
     </style>
+    <!--[if IE 10]>
+    <script type="text/javascript">
+      (function(){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})(); 
+    </script>
+    <![endif]-->
     {% if page.assets == 'local' %}
         {% comment %} References local assets, for working temporarily offline {% endcomment %}
         {% include _head.local.html %}
