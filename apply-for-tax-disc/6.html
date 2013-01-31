@@ -1,0 +1,182 @@
+---
+layout: buy-a-tax-disc
+title: Apply for a tax disc
+categories: service
+step: 2
+---
+
+<div id="cartax_payment">
+  <h2>Pay for your tax disc</h2>
+
+  <h3>First, choose a tax disc</h3>
+
+  <form action="6.html" method="post" accept-charset="utf-8">
+    <fieldset class="group">  
+      <div class="tax-option">
+        <input id="twelve_months" class="visuallyhidden" type="radio" name="tax_type" value="twelve_months" track="data_time_period" />
+        <label for="twelve_months"> 12 Months
+          <div class="car_tax">&pound;125.00</div>
+          <div class="note">
+            1 Jul 2012 &mdash; 30 Jun 2013<br />
+          </div>
+        </label>
+      </div>
+      <div class="tax-option">
+        <input id="six_months" class="visuallyhidden" type="radio" name="tax_type" value="six_months" track="data_time_period" />
+        <label for="six_months"> 6 Months
+          <div class="car_tax">&pound;68.75</div>
+          <div class="note">1 Jul 2012 &mdash; 31 Dec 2012</div>
+        </label>
+      </div>
+    </fieldset>
+  
+    <fieldset class="form-horizontal">
+      <h3>Next, enter your payment details</h3>
+
+
+            <div class="control-group">
+              <label class="control-label">Card type</label>
+              <div class="controls">
+                <select name="card_type" id="card_type" track="data_card_type">
+                    <option value="">Select a card type</option>  
+                    <optgroup label="Credit cards (inc. Prepaid cards)">
+                      <option value="credit_card_visa">Visa</option>
+                      <option value="credit_card_mastercard">Mastercard</option>
+                    </optgroup>       
+                    <optgroup label="Debit cards">
+                      <option value="debit_card_delta">Delta</option>
+                      <option value="debit_card_visa">Visa</option>
+                      <option value="debit_card_maestro">Maestro</option>
+                      <option value="debit_card_visa_electron">Visa Electron</option>
+                      <option value="debit_card_solo">Solo</option>
+                    </optgroup> 
+                </select>
+                <div class="card-images"> 
+                  <img src="assets/img/payment-icon-set/icons/delta-straight-32px.png" alt="Delta" />
+                  <img src="assets/img/payment-icon-set/icons/visa-straight-32px.png" alt="Visa" />
+                  <img src="assets/img/payment-icon-set/icons/maestro-straight-32px.png" alt="Maestro" />
+                  <img src="assets/img/payment-icon-set/icons/visa-electron-straight-32px.png" alt="Visa Electron" />
+                  <img src="assets/img/payment-icon-set/icons/solo-straight-32px.png" alt="Solo" />
+                  <img src="assets/img/payment-icon-set/icons/mastercard-straight-32px.png" alt="Mastercard" />
+                </div>
+              </div>
+
+          <div class="application-notice hidden" id="credit_warning">
+            A &pound;2.50 surcharge is applied to credit card payments (to cover charges made by credit card companies). Please note, credit cards can only be used online or over the phone.
+          </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label">Card number</label>
+              <div class="controls">
+                <input id="card_number" type="text" name="card_number" class="input-large" />
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label for="expiry_date_month" class="control-label">Expiry date</label>
+              <div class="controls">
+                <select name="expiry_date_month" id="expiry_date_month" class="month-select">
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+              
+                <select name="expiry_date_year" id="expiry_date_year" class="year-select">
+                  <option value="2017">2017</option>
+                  <option value="2016">2016</option>
+                  <option value="2015">2015</option>
+                  <option value="2014">2014</option>
+                  <option value="2013">2013</option>
+                  <option value="2012">2012</option>
+                </select>
+              </div>
+            </div>
+            <div class="hidden" id="solo_maestro_only">
+              <div class="control-group">
+                <label class="control-label" for="start_date_month">Start date</label>
+                <div class="controls">
+                  <select name="start_date_month" id="start_date_month" class="month-select">
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                  <select name="start_date_year" id="start_date_year" class="year-select">
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                  </select>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="issue_no">Issue number</label>
+                <div class="controls">
+                  <input id="issue_no" type="text" name="issue_no" value="" class="card-codes" />
+                </div>
+              </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="security_code">Security code</label>
+            <div class="controls">
+              <input id="security_code" type="text" name="security_code" class="input-mini"><img title="It's the three digit number on the back of your card" src="assets/img/security-code.png" />
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="email_address">Email address</label>
+            <div class="controls">
+              <input id="email_address" type="email" name="email_address" value="" />
+              <p class="help-block">Optional (we'll use it to send you a confirmation)</p>
+            </div>
+          </div>
+    <div class="form-actions">
+      <a class="buttonV2 large turquoise" href="6b.html"><span>Pay now</span></a>
+      <a class="back" href="2a.html#back"><span>Back</span></a>
+    </div>
+
+    </fieldset>
+  </form>
+</div>
+
+<script charset="utf-8">
+
+	$('#card_type').change(function() 
+	{
+		var cardType = $(this).attr('value');
+
+		// Show/hide Credit card warning
+	   if (cardType == 'credit_card_visa' || cardType == 'credit_card_mastercard'){
+	   		$('#credit_warning').removeClass('hidden');
+	   } else {
+	   	  $('#credit_warning').addClass('hidden');
+	   }
+
+	  // Show/hide start date for Solo/Maestro cards
+	   if (cardType == 'debit_card_solo' || cardType == 'debit_card_maestro'){
+	   		$('#solo_maestro_only').removeClass('hidden');
+	   } else {
+	   	  $('#solo_maestro_only').addClass('hidden');
+	   }
+	});
+
+</script>
