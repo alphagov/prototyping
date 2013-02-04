@@ -1,0 +1,38 @@
+---
+---
+@import "_colours";
+@import "_typography";
+
+.print-link {
+  text-align: left;
+  padding-left: 1em;
+
+  a, a:link, a:visited {
+    background-image: url('icon-printer-s.png');
+    padding-left: 0;
+  }
+}
+
+.version-2 {
+  .print-link {
+    border-top: 1px solid $border-colour;
+    padding: 0.5em 0 0;
+    margin: 0 1em;
+
+    a, a:link, a:visited {
+      background-position: 0 50%;
+      padding: 0.5em 0 0.5em 28px;
+    }
+  }
+}
+
+.version-3 {
+  .print-link {
+    padding-left: 2em;
+
+    a, a:link, a:visited {
+      background-position: 0 50%;
+      padding: 0.5em 0 0.5em 28px;
+    }
+  }
+}
