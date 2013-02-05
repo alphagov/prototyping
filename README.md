@@ -36,6 +36,8 @@ Then in your browser navigate to http://localhost:4000/[app-name]/index.html
 
 Bosh!
 
+(PS If it isn't working or can't find the files, try bundling - at the command line just type "bundle" and let it run)
+
 ## Prerequisites & installation
 
 Needs Ruby 1.9.x (not installed by default on OS X 10.7, but GDS dev build includes it)
