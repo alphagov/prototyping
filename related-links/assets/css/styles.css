@@ -1,0 +1,24 @@
+a[rel="external"], .external-link,
+.related li a[rel="external"], .related li .external-link {
+	background: url(../img/ext-link-icon.png) center right no-repeat;
+	padding-right: 1em;
+}
+
+a[rel="external"]:after, .external-link:after {
+	content: "";
+	background: none;
+	display: none;
+	width: auto;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*#related a[rel="external"]:after, .external-link:after {
+	background: url(../img/ext-link-icon.png) no-repeat right 10%;
+}*/
+
+.related li a {
+	background-position: inherit;
+	display: inline;
+}
