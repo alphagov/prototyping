@@ -3,7 +3,7 @@
   <head>
     {% include _head.html %} 
   </head>
-  <body class="mainstream">
+  <body class="mainstream{% if page.body_class  %} {{ page.body_class }}{% endif %}">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
     {% include _header.html %}
     {% include _navigation.html %}

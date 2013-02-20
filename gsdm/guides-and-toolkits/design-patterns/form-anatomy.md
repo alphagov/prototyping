@@ -1,10 +1,10 @@
 ---
 layout: gsdm
-title: Anatomy of a form
 section: guidance
 subsection: Design patterns
 status: draft
 css: /gsdm/css/design-patterns/forms.css
+title: Anatomy of a form
 ---
 
 Examples, markup and styles for most basic form elements.

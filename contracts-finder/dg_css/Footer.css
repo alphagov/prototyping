@@ -1,8 +1,0 @@
-@media screen, projection {
-	#Footer .holder {margin:1em 10px;overflow:hidden;}
-	#Footer ul {overflow:hidden;width:100%;}
-	#Footer ul li {display:inline;font-size:1.1em;color:#666;}
-	#Footer ul li a {float:left;display:block;color:#666;text-decoration:none;background:left center url('images/greyline.gif') no-repeat;padding:0.416em 10px 0.416em 9px;}
-	#Footer ul li a:hover {text-decoration:underline;}
-	#Footer ul .first {background:none;}
-}

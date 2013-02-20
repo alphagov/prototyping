@@ -1,0 +1,5620 @@
+/* govuk_frontend_toolkit includes */
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+@font-face {
+  font-family: GDS-Regular;
+  src: local("NTA-Light"), local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica");
+}
+
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica");
+}
+
+/* local styleguide includes */
+/* New Greys */
+/*
+ * Old green: 28a198
+ * New green: 008270
+ */
+/* buttons! */
+/* line 10, ../../app/assets/stylesheets/_buttons.scss */
+.button,
+.button:visited {
+  display: inline;
+  border: none;
+  text-decoration: none;
+  position: relative;
+  top: -3px;
+  line-height: 1.25;
+  cursor: pointer;
+  top: 0;
+  border-bottom: solid 3px #000;
+  margin-bottom: -3px;
+}
+
+/* inputs do not display single borders properly in IE6 & 7*/
+/* line 51, ../../app/assets/stylesheets/_buttons.scss */
+.button,
+.button.medium {
+  padding: 0.25em 0.5em;
+}
+
+/* line 55, ../../app/assets/stylesheets/_buttons.scss */
+.button.medium {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.36842;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 55, ../../app/assets/stylesheets/_buttons.scss */
+  .button.medium {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+
+/* line 61, ../../app/assets/stylesheets/_buttons.scss */
+.get-started .button,
+.button,
+.button:visited {
+  background-color: #008270;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 0 #000;
+  -moz-box-shadow: 0 3px 0 #000;
+  box-shadow: 0 3px 0 #000;
+  font-weight: 400;
+  overflow: visible;
+}
+
+/* line 79, ../../app/assets/stylesheets/_buttons.scss */
+.get-started .button:focus,
+.get-started .button:active,
+.get-started .button-active,
+.button:active,
+.button:focus,
+.button-active {
+  background-color: #28A197;
+  /* IE6 & 7 ignore the :focus psuedo-class so we need to overwrite the default */
+}
+
+/* line 91, ../../app/assets/stylesheets/_buttons.scss */
+.get-started .button:hover,
+.get-started .button-hover,
+.button:hover,
+.button-hover {
+  background-color: #3ABAA8;
+  color: #fff;
+}
+
+/* line 97, ../../app/assets/stylesheets/_buttons.scss */
+.button:active,
+.button-active {
+  top: 0px;
+  box-shadow: none;
+  outline: none;
+}
+
+/* 
+ * making a click target which is bigger than the button 
+ * (and fills the space made when the button moves) 
+ */
+/* line 107, ../../app/assets/stylesheets/_buttons.scss */
+.button:before {
+  content: "";
+  height: 110%;
+  width: 100%;
+  display: block;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 118, ../../app/assets/stylesheets/_buttons.scss */
+.button:active:before {
+  top: -10%;
+  height: 120%;
+  /* 
+   * IE6 ignores the :before psuedo-class but applies the block to :active
+   * It therefore needs to be reset
+   */
+}
+
+/* line 132, ../../app/assets/stylesheets/_buttons.scss */
+.get-started .button {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 0.66667;
+  font-weight: 400;
+  text-transform: none;
+  padding: 0.45em 0.5em 0.45em 0.5em;
+  display: inline-block;
+  /* IE6 adds its own side padding so requires no extra */
+}
+@media (max-width: 640px) {
+  /* line 132, ../../app/assets/stylesheets/_buttons.scss */
+  .get-started .button {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+/* line 146, ../../app/assets/stylesheets/_buttons.scss */
+.transaction .get-started .button,
+.local_transaction .get-started .button,
+.business_support .get-started .button,
+.licence .get-started .button {
+  padding: 0.45em 1.7em 0.45em 0.67em;
+  background-image: url(icon-pointer.png);
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 146, ../../app/assets/stylesheets/_buttons.scss */
+  .transaction .get-started .button,
+  .local_transaction .get-started .button,
+  .business_support .get-started .button,
+  .licence .get-started .button {
+    background-image: url(icon-pointer-2x.png);
+    background-size: 30px 19px;
+  }
+}
+
+/* IE6 adds its own side padding so requires no extra */
+/* get started buttons */
+/* line 181, ../../app/assets/stylesheets/_buttons.scss */
+.get-started {
+  margin: 1.5em 0 0 0;
+}
+/* line 184, ../../app/assets/stylesheets/_buttons.scss */
+.get-started .destination {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.42857;
+  font-weight: 400;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-transform: none;
+  color: #2e3133;
+  display: block;
+  margin-top: 0.5em;
+  max-width: 13em;
+}
+@media (max-width: 640px) {
+  /* line 184, ../../app/assets/stylesheets/_buttons.scss */
+  .get-started .destination {
+    font-size: 1.2rem;
+    line-height: 1.25;
+  }
+}
+
+/* line 193, ../../app/assets/stylesheets/_buttons.scss */
+a.button[rel="external"]:after {
+  display: none;
+  content: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 200, ../../app/assets/stylesheets/_buttons.scss */
+input {
+  /* below fixes a bug where IE puts a nasty black border around these elements */
+}
+/* line 201, ../../app/assets/stylesheets/_buttons.scss */
+input[disabled="disabled"] {
+  opacity: 0.5;
+}
+/* line 206, ../../app/assets/stylesheets/_buttons.scss */
+input[type="text"], input[type="search"] {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  border: 1px solid #bbb;
+  min-width: 8em;
+  margin: 0 0.5em;
+  padding: 0.25em;
+}
+@media (max-width: 640px) {
+  /* line 206, ../../app/assets/stylesheets/_buttons.scss */
+  input[type="text"], input[type="search"] {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 222, ../../app/assets/stylesheets/_buttons.scss */
+input[type="submit"], input[type="reset"], input[type="button"] {
+  filter: chroma(color=black);
+}
+/* line 226, ../../app/assets/stylesheets/_buttons.scss */
+input[type=submit].button {
+  filter: none;
+}
+
+/* styles */
+/* normalize.css v1.0.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 22, ../../vendor/assets/stylesheets/normalize.css */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 32, ../../vendor/assets/stylesheets/normalize.css */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 43, ../../vendor/assets/stylesheets/normalize.css */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 7/8/9, Firefox 3,
+ * and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+/* line 54, ../../vendor/assets/stylesheets/normalize.css */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 69, ../../vendor/assets/stylesheets/normalize.css */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+/* line 84, ../../vendor/assets/stylesheets/normalize.css */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/*
+ * Addresses margins handled incorrectly in IE 6/7.
+ */
+/* line 92, ../../vendor/assets/stylesheets/normalize.css */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 104, ../../vendor/assets/stylesheets/normalize.css */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+/* line 113, ../../vendor/assets/stylesheets/normalize.css */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE 6/7.
+ * Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+/* line 127, ../../vendor/assets/stylesheets/normalize.css */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 132, ../../vendor/assets/stylesheets/normalize.css */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 137, ../../vendor/assets/stylesheets/normalize.css */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 142, ../../vendor/assets/stylesheets/normalize.css */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 147, ../../vendor/assets/stylesheets/normalize.css */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 152, ../../vendor/assets/stylesheets/normalize.css */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+/*
+ * Make abbr consistent across browsers. There is no border as users found it confusing as to whether it was a link or not.
+ */
+/* line 161, ../../vendor/assets/stylesheets/normalize.css */
+abbr[title] {
+  border-bottom: none;
+}
+
+/*
+ * Addresses style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+/* line 170, ../../vendor/assets/stylesheets/normalize.css */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 174, ../../vendor/assets/stylesheets/normalize.css */
+blockquote {
+  margin: 1em 40px;
+}
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+/* line 182, ../../vendor/assets/stylesheets/normalize.css */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE 6/7/8/9.
+ */
+/* line 190, ../../vendor/assets/stylesheets/normalize.css */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+/* line 200, ../../vendor/assets/stylesheets/normalize.css */
+p,
+pre {
+  margin: 1em 0;
+}
+
+/*
+ * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+/* line 211, ../../vendor/assets/stylesheets/normalize.css */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+/* line 221, ../../vendor/assets/stylesheets/normalize.css */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/*
+ * Addresses CSS quotes not supported in IE 6/7.
+ */
+/* line 231, ../../vendor/assets/stylesheets/normalize.css */
+q {
+  quotes: none;
+}
+
+/*
+ * Addresses `quotes` property not supported in Safari 4.
+ */
+/* line 240, ../../vendor/assets/stylesheets/normalize.css */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* line 245, ../../vendor/assets/stylesheets/normalize.css */
+small {
+  font-size: 75%;
+}
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 254, ../../vendor/assets/stylesheets/normalize.css */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 261, ../../vendor/assets/stylesheets/normalize.css */
+sup {
+  top: -0.5em;
+}
+
+/* line 265, ../../vendor/assets/stylesheets/normalize.css */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+/* line 280, ../../vendor/assets/stylesheets/normalize.css */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+/* line 284, ../../vendor/assets/stylesheets/normalize.css */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/*
+ * Addresses paddings set differently in IE 6/7.
+ */
+/* line 294, ../../vendor/assets/stylesheets/normalize.css */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/*
+ * Corrects list images handled incorrectly in IE 7.
+ */
+/* line 303, ../../vendor/assets/stylesheets/normalize.css */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improves image quality when scaled in IE 7.
+ */
+/* line 317, ../../vendor/assets/stylesheets/normalize.css */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+/* line 326, ../../vendor/assets/stylesheets/normalize.css */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+/* line 338, ../../vendor/assets/stylesheets/normalize.css */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE 6/7.
+ */
+/* line 350, ../../vendor/assets/stylesheets/normalize.css */
+form {
+  margin: 0;
+}
+
+/*
+ * Define consistent border, margin, and padding.
+ */
+/* line 358, ../../vendor/assets/stylesheets/normalize.css */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE 6/7/8/9.
+ * 2. Corrects text not wrapping in Firefox 3.
+ * 3. Corrects alignment displayed oddly in IE 6/7.
+ */
+/* line 370, ../../vendor/assets/stylesheets/normalize.css */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers.
+ * 2. Addresses margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improves appearance and consistency in all browsers.
+ */
+/* line 387, ../../vendor/assets/stylesheets/normalize.css */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/*
+ * Addresses Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 400, ../../vendor/assets/stylesheets/normalize.css */
+button,
+input {
+  line-height: normal;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+/* line 417, ../../vendor/assets/stylesheets/normalize.css */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+/* line 428, ../../vendor/assets/stylesheets/normalize.css */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ * 3. Removes excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+/* line 440, ../../vendor/assets/stylesheets/normalize.css */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 453, ../../vendor/assets/stylesheets/normalize.css */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 466, ../../vendor/assets/stylesheets/normalize.css */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in Firefox 3+.
+ */
+/* line 475, ../../vendor/assets/stylesheets/normalize.css */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+/* line 485, ../../vendor/assets/stylesheets/normalize.css */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+/* line 498, ../../vendor/assets/stylesheets/normalize.css */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, ../../app/assets/stylesheets/basic.scss */
+html, body, button, input, table, td, th {
+  font-family: "nta", "GDS-Regular", sans-serif;
+}
+
+/* line 4, ../../app/assets/stylesheets/basic.scss */
+html, body, div, h1, h2, h3, h4, h5, h6, article, aside, footer, header, hgroup, nav, section {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* line 12, ../../app/assets/stylesheets/basic.scss */
+.group:before,
+.group:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 19, ../../app/assets/stylesheets/basic.scss */
+.group:after {
+  clear: both;
+}
+
+/* line 22, ../../app/assets/stylesheets/basic.scss */
+.group {
+  zoom: 1;
+}
+
+/* line 27, ../../app/assets/stylesheets/basic.scss */
+.content-fixed {
+  top: 0;
+  position: fixed;
+}
+
+/* line 31, ../../app/assets/stylesheets/basic.scss */
+.shim {
+  display: block;
+}
+
+/* line 35, ../../app/assets/stylesheets/basic.scss */
+html {
+  background: #eaedef;
+}
+
+/* line 39, ../../app/assets/stylesheets/basic.scss */
+body {
+  color: #0b0c0c;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 46, ../../app/assets/stylesheets/basic.scss */
+ol, ul, nav ol, nav ul {
+  list-style: inherit;
+}
+
+/* line 50, ../../app/assets/stylesheets/basic.scss */
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+/* line 56, ../../app/assets/stylesheets/basic.scss */
+a,
+a:visited {
+  color: #2e3191;
+}
+
+/* line 60, ../../app/assets/stylesheets/basic.scss */
+a:hover {
+  color: #2e8aca;
+}
+
+/* line 64, ../../app/assets/stylesheets/basic.scss */
+a:active {
+  color: #2e8aca;
+}
+
+/* line 69, ../../app/assets/stylesheets/basic.scss */
+a[rel="external"]:after,
+.external-link:after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+  margin-right: 0.2em;
+  margin-left: -0.2em;
+  background: url(external-link.png) no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 69, ../../app/assets/stylesheets/basic.scss */
+  a[rel="external"]:after,
+  .external-link:after {
+    background-image: url(external-link-2x.png);
+    background-size: 20px 12px;
+  }
+}
+
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ *    note - font-size reduced to 62.5% to allow simple rem/px font-sizing and fallback
+ *    http://snook.ca/archives/html_and_css/font-size-with-rem
+ * 2. Keeps page centred in all browsers regardless of content height
+ * 3. Removes Android and iOS tap highlight color to prevent entire container being highlighted
+ *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
+ */
+/* line 99, ../../app/assets/stylesheets/basic.scss */
+html {
+  font-size: 62.5%;
+  /* 1 */
+  overflow-y: scroll;
+  /* 2 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* 3 */
+}
+
+/*
+ * 1. Font-size increased to compensate for change to html element font-size in
+ *    order to support beta typography which was set in ems
+ *    (62.5% * 160% = 100%)
+ * 2. Addresses margins handled incorrectly in IE6/7
+ */
+/* line 112, ../../app/assets/stylesheets/basic.scss */
+body {
+  font-size: 160%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/* line 118, ../../app/assets/stylesheets/basic.scss */
+b,
+strong {
+  font-weight: 600;
+}
+
+/* line 122, ../../app/assets/stylesheets/basic.scss */
+button {
+  *overflow: visible;
+}
+
+/* line 126, ../../app/assets/stylesheets/basic.scss */
+abbr[title] {
+  cursor: help;
+}
+
+/*
+ * Text styles for articles.
+ * It's kind of like typography innit.
+*/
+/* line 6, ../../app/assets/stylesheets/text.scss */
+article h1 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+@media (max-width: 640px) {
+  /* line 6, ../../app/assets/stylesheets/text.scss */
+  article h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+/* line 12, ../../app/assets/stylesheets/text.scss */
+article header h1 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 27px;
+  font-size: 2.7rem;
+  line-height: 1.11111;
+  font-weight: 400;
+  text-transform: none;
+  padding-top: 8px;
+  padding-top: 0.8rem;
+  padding-bottom: 7px;
+  padding-bottom: 0.7rem;
+  font-weight: 700;
+  color: #0b0c0c;
+  margin-top: 0;
+  margin-bottom: 0;
+  zoom: 1;
+}
+@media (max-width: 640px) {
+  /* line 12, ../../app/assets/stylesheets/text.scss */
+  article header h1 {
+    font-size: 1.8rem;
+    line-height: 1.11111;
+  }
+}
+/* line 23, ../../app/assets/stylesheets/text.scss */
+article header h1 span {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  display: block;
+  margin-bottom: 0.4em;
+}
+@media (max-width: 640px) {
+  /* line 23, ../../app/assets/stylesheets/text.scss */
+  article header h1 span {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+
+/* line 30, ../../app/assets/stylesheets/text.scss */
+.wf-nta-n4-active article header h1 span {
+  font-family: "NTA", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+/* line 34, ../../app/assets/stylesheets/text.scss */
+article h1 + h2 {
+  margin-top: 0.75em;
+}
+
+/* line 38, ../../app/assets/stylesheets/text.scss */
+article h2 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 27px;
+  font-size: 2.7rem;
+  line-height: 1.11111;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+  margin: 1.2em 0 0.4em 0;
+}
+@media (max-width: 640px) {
+  /* line 38, ../../app/assets/stylesheets/text.scss */
+  article h2 {
+    font-size: 1.8rem;
+    line-height: 1.11111;
+  }
+}
+
+/* line 43, ../../app/assets/stylesheets/text.scss */
+article h2 + h3 {
+  margin-top: 0.75em;
+}
+
+/* line 47, ../../app/assets/stylesheets/text.scss */
+article h3 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+  margin-top: 1em;
+  margin-bottom: 0.75em;
+}
+@media (max-width: 640px) {
+  /* line 47, ../../app/assets/stylesheets/text.scss */
+  article h3 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+/* line 53, ../../app/assets/stylesheets/text.scss */
+article h3 + h4 {
+  margin-top: 0.75em;
+}
+
+/* line 57, ../../app/assets/stylesheets/text.scss */
+article h4 {
+  margin-top: 1.5em;
+  margin-bottom: 0;
+}
+
+/* line 62, ../../app/assets/stylesheets/text.scss */
+article h3 + table {
+  margin-top: 0.652em;
+}
+
+/* line 66, ../../app/assets/stylesheets/text.scss */
+article h4 + table {
+  margin-top: 0.75em;
+}
+
+/* line 72, ../../app/assets/stylesheets/text.scss */
+article h2 + p, article h3 + p, article h4 + p,
+article h2 + ol, article h3 + ol, article h4 + ol,
+article h2 + ul, article h3 + ul, article h4 + ul {
+  margin-top: 0.2em;
+}
+
+/* line 79, ../../app/assets/stylesheets/text.scss */
+article h1,
+article h2,
+article h3,
+article h4 {
+  color: #0b0c0c;
+}
+
+/* line 83, ../../app/assets/stylesheets/text.scss */
+article p, article ul, article ol {
+  margin: 0.75em 0;
+}
+
+/* line 87, ../../app/assets/stylesheets/text.scss */
+article p {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 87, ../../app/assets/stylesheets/text.scss */
+  article p {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+
+/* line 91, ../../app/assets/stylesheets/text.scss */
+article p + .help-notice {
+  margin-top: 2em;
+}
+
+/* line 95, ../../app/assets/stylesheets/text.scss */
+article li {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0.25em 0;
+  padding-left: 0.3em;
+}
+@media (max-width: 640px) {
+  /* line 95, ../../app/assets/stylesheets/text.scss */
+  article li {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+/* line 107, ../../app/assets/stylesheets/text.scss */
+article li ul,
+article li ol {
+  margin: 0;
+  list-style-position: inside;
+}
+/* line 112, ../../app/assets/stylesheets/text.scss */
+article li li {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  list-style-type: circle;
+}
+@media (max-width: 640px) {
+  /* line 112, ../../app/assets/stylesheets/text.scss */
+  article li li {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+/* line 117, ../../app/assets/stylesheets/text.scss */
+article li p {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0;
+}
+@media (max-width: 640px) {
+  /* line 117, ../../app/assets/stylesheets/text.scss */
+  article li p {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+
+/* line 123, ../../app/assets/stylesheets/text.scss */
+article ul, article ol {
+  padding-left: 1em;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+/*
+ * Example has a green background, so we need an additional indent to
+ * avoid the bullets hanging on the edge of the colour.
+*/
+/* line 139, ../../app/assets/stylesheets/text.scss */
+article .example ul,
+article .example ol {
+  margin-left: -1.2em;
+}
+
+/* line 143, ../../app/assets/stylesheets/text.scss */
+article ul {
+  list-style-type: circle;
+  list-style-image: url(bullet-disc-5px.gif);
+}
+
+/* line 148, ../../app/assets/stylesheets/text.scss */
+article ol {
+  list-style-type: decimal;
+}
+
+/* line 152, ../../app/assets/stylesheets/text.scss */
+article table ul {
+  padding-left: 0.75em;
+  margin: 0;
+}
+
+/* line 157, ../../app/assets/stylesheets/text.scss */
+article table ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* line 161, ../../app/assets/stylesheets/text.scss */
+article dl {
+  margin-top: 1.5em;
+  margin-bottom: 1.88em;
+}
+
+/* line 166, ../../app/assets/stylesheets/text.scss */
+article dt {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin-bottom: 0.25em;
+}
+@media (max-width: 640px) {
+  /* line 166, ../../app/assets/stylesheets/text.scss */
+  article dt {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+
+/* line 171, ../../app/assets/stylesheets/text.scss */
+article dd {
+  margin-bottom: 0.75em;
+}
+
+/* line 175, ../../app/assets/stylesheets/text.scss */
+article table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 1em -1em 2em -1em;
+  width: 105.95%;
+}
+/* line 181, ../../app/assets/stylesheets/text.scss */
+article table caption {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  text-align: left;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+}
+@media (max-width: 640px) {
+  /* line 181, ../../app/assets/stylesheets/text.scss */
+  article table caption {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+
+/* line 198, ../../app/assets/stylesheets/text.scss */
+article th, article td {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  vertical-align: top;
+  padding: 0.7em 0.5em 0.7em 1em;
+}
+@media (max-width: 640px) {
+  /* line 198, ../../app/assets/stylesheets/text.scss */
+  article th, article td {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+
+/* line 204, ../../app/assets/stylesheets/text.scss */
+article tr:nth-child(even) td {
+  background-color: #fff;
+}
+
+/* line 208, ../../app/assets/stylesheets/text.scss */
+article td {
+  background: #eaedef;
+  border: dotted 1px #b8c6cc;
+}
+/* line 212, ../../app/assets/stylesheets/text.scss */
+article td small {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 212, ../../app/assets/stylesheets/text.scss */
+  article td small {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+
+/* reduce table font size on very small screens */
+@media screen and (max-width: 320px) {
+  /* line 219, ../../app/assets/stylesheets/text.scss */
+  article th, article td, article td small {
+    font-size: 1rem;
+  }
+}
+/* line 224, ../../app/assets/stylesheets/text.scss */
+article th {
+  line-height: 1.25em;
+  text-align: left;
+  color: #0b0c0c;
+  font-weight: 700;
+  background-color: #dee0e2;
+  border: solid 1px #a1acb2;
+}
+
+/*
+ * More article formatting including markdown styles.
+ */
+/* line 237, ../../app/assets/stylesheets/text.scss */
+.mainstream article .summary {
+  margin: 0 0 2em 0;
+  padding: 0;
+  color: #0b0c0c;
+  zoom: 1;
+}
+/* line 246, ../../app/assets/stylesheets/text.scss */
+.mainstream article .summary p {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 246, ../../app/assets/stylesheets/text.scss */
+  .mainstream article .summary p {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+/* line 256, ../../app/assets/stylesheets/text.scss */
+.mainstream .answer article .summary {
+  border-bottom: solid 1px #a1acb2;
+  padding-bottom: 3em;
+}
+
+/* line 261, ../../app/assets/stylesheets/text.scss */
+.mainstream .ancillary .summary {
+  margin-bottom: 2em;
+}
+
+/* line 268, ../../app/assets/stylesheets/text.scss */
+article .summary p,
+article .summary h2,
+.mainstream .ancillary .summary p,
+.mainstream .ancillary .summary h2 {
+  border: none;
+  margin: 0 0.75em 0 0;
+}
+
+/* line 274, ../../app/assets/stylesheets/text.scss */
+article .summary h2,
+.mainstream .ancillary .summary h2 {
+  line-height: 1.35em;
+}
+
+/* line 281, ../../app/assets/stylesheets/text.scss */
+.licence-finder article.outcome ul {
+  padding: 1em 1em;
+  margin: 0 -1em;
+}
+/* line 285, ../../app/assets/stylesheets/text.scss */
+.licence-finder article.outcome ul li {
+  list-style-type: none;
+  list-style-image: none;
+  margin: 0 0 0.75em 0;
+  padding: 0;
+}
+
+/* line 293, ../../app/assets/stylesheets/text.scss */
+article .advisory {
+  background: url(icon-information.png) no-repeat scroll 98% 1em #d5e8f3;
+  line-height: 1.3em;
+  margin: 0 -1em 1em -1em;
+  padding: 1em;
+  text-align: left;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 293, ../../app/assets/stylesheets/text.scss */
+  article .advisory {
+    background-image: url(icon-information-2x.png);
+    background-size: 27px 27px;
+  }
+}
+/* line 305, ../../app/assets/stylesheets/text.scss */
+article .advisory p {
+  margin: 0 0.75em 0 0;
+  min-height: 1.75em;
+  padding-right: 3em;
+}
+/* line 315, ../../app/assets/stylesheets/text.scss */
+article .advisory strong {
+  font-weight: 400;
+}
+/* line 319, ../../app/assets/stylesheets/text.scss */
+article .advisory.high-alert {
+  background-color: #eaedef;
+  border-color: #C00;
+}
+
+/* line 329, ../../app/assets/stylesheets/text.scss */
+article .intro {
+  background-color: transparent;
+  margin: 0 -1em 1.5em -1em;
+  padding: 1em 1em 1em 1em;
+}
+/* line 334, ../../app/assets/stylesheets/text.scss */
+article .intro p:first-child {
+  margin-top: 0;
+}
+
+/* line 344, ../../app/assets/stylesheets/text.scss */
+#wrapper.place article .intro {
+  margin-bottom: 0;
+}
+
+/* line 348, ../../app/assets/stylesheets/text.scss */
+article .example {
+  background: #eaedef;
+  margin: 0.75em -1em;
+  padding: 0.5em 1em;
+}
+/* line 353, ../../app/assets/stylesheets/text.scss */
+article .example strong {
+  display: block;
+}
+
+/* line 365, ../../app/assets/stylesheets/text.scss */
+article .application-notice,
+article .advisory.minor,
+article .form-download,
+article .subscribe {
+  background-color: #d5e8f3;
+  margin: 1em -1em 1.5em -1em;
+  padding: 0.25em 1em 0.25em 1em;
+}
+
+/* line 375, ../../app/assets/stylesheets/text.scss */
+article .advisory.minor {
+  background-image: none;
+  padding: 0.75em 1em;
+}
+
+/* line 380, ../../app/assets/stylesheets/text.scss */
+article .help-notice {
+  background: url(icon-important.png) no-repeat scroll 98% 1em #eaedef;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 380, ../../app/assets/stylesheets/text.scss */
+  article .help-notice {
+    background-image: url(icon-important-2x.png);
+    background-size: 29px 24px;
+  }
+}
+
+/* line 389, ../../app/assets/stylesheets/text.scss */
+article a.important {
+  background: url(icon-important.png) no-repeat scroll 100% 0 white;
+}
+
+/* line 393, ../../app/assets/stylesheets/text.scss */
+article .subscribe {
+  background: url(icon-calendar.png) no-repeat scroll 98% 1em #d5e8f3;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 393, ../../app/assets/stylesheets/text.scss */
+  article .subscribe {
+    background-image: url(icon-calendar-2x.png);
+    background-size: 27px 27px;
+  }
+}
+
+/* line 403, ../../app/assets/stylesheets/text.scss */
+article .info-notice {
+  background: url(icon-information.png) no-repeat scroll 98% 1em #d5e8f3;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 403, ../../app/assets/stylesheets/text.scss */
+  article .info-notice {
+    background-image: url(icon-information-2x.png);
+    background-size: 27px 27px;
+  }
+}
+
+/* line 414, ../../app/assets/stylesheets/text.scss */
+article .help-notice p,
+article .info-notice p,
+article .subscribe p {
+  padding-right: 4em;
+}
+
+/* line 420, ../../app/assets/stylesheets/text.scss */
+article p + .help-notice,
+article p + .info-notice,
+article p + .contact {
+  margin-top: 2em;
+}
+
+/* line 424, ../../app/assets/stylesheets/text.scss */
+article .info-notice a[rel="external"] {
+  display: inline;
+}
+
+/* line 428, ../../app/assets/stylesheets/text.scss */
+article .form-download {
+  background: url(icon-file-download.png) no-repeat scroll 98% 1em #d5e8f3;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 428, ../../app/assets/stylesheets/text.scss */
+  article .form-download {
+    background-image: url(icon-file-download-2x.png);
+    background-size: 25px 25px;
+  }
+}
+/* line 436, ../../app/assets/stylesheets/text.scss */
+article .form-download p {
+  padding-right: 3em;
+}
+/* line 440, ../../app/assets/stylesheets/text.scss */
+article .form-download a {
+  display: block;
+}
+
+/* line 446, ../../app/assets/stylesheets/text.scss */
+.contact {
+  background-color: #d5e8f3;
+  margin: 1em -1em;
+  padding: 0.25em 1em;
+  min-width: 60%;
+}
+/* line 453, ../../app/assets/stylesheets/text.scss */
+.contact dl dt {
+  font-weight: bold;
+  margin: 0 0 0.25em 0;
+}
+/* line 458, ../../app/assets/stylesheets/text.scss */
+.contact dl dd {
+  margin: 0 0 0.5em 0;
+}
+
+/* line 468, ../../app/assets/stylesheets/text.scss */
+.meta-data .contact {
+  width: auto;
+}
+
+/* line 473, ../../app/assets/stylesheets/text.scss */
+.contact dl dt,
+.meta-data .contact dt {
+  float: left;
+  clear: left;
+}
+
+/* line 479, ../../app/assets/stylesheets/text.scss */
+.contact dl dd,
+.meta-data .contact dd {
+  margin-left: 8.5em;
+}
+
+/* line 483, ../../app/assets/stylesheets/text.scss */
+article .address {
+  background: #eaedef url(stamp.png) 95% 1em no-repeat;
+  border: solid 1px #a1acb2;
+  margin: 0.75em 0;
+  padding: 2em 16% 2em 15%;
+  min-width: 35%;
+}
+
+/* line 491, ../../app/assets/stylesheets/text.scss */
+article ol.places {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+/* line 496, ../../app/assets/stylesheets/text.scss */
+article ol.places.answer_locations .information {
+  min-height: 3em;
+}
+/* line 500, ../../app/assets/stylesheets/text.scss */
+article ol.places li {
+  margin: 0;
+  padding-left: 0;
+}
+
+/* line 506, ../../app/assets/stylesheets/text.scss */
+section.places h3 {
+  margin-top: 0;
+}
+
+/* line 510, ../../app/assets/stylesheets/text.scss */
+article .place {
+  margin: 1.5em 0;
+  border-bottom: solid 1px #a1acb2;
+  padding-bottom: 1.5em;
+}
+/* line 515, ../../app/assets/stylesheets/text.scss */
+article .place .address {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  display: block;
+}
+/* line 524, ../../app/assets/stylesheets/text.scss */
+article .place .url {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 529, ../../app/assets/stylesheets/text.scss */
+article .place .additional-information {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 529, ../../app/assets/stylesheets/text.scss */
+  article .place .additional-information {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 532, ../../app/assets/stylesheets/text.scss */
+article .place .additional-information a {
+  display: block;
+}
+
+/* line 542, ../../app/assets/stylesheets/text.scss */
+article ul.view-maps {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+}
+/* line 547, ../../app/assets/stylesheets/text.scss */
+article ul.view-maps li {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  display: inline-block;
+  margin-right: 1em;
+}
+@media (max-width: 640px) {
+  /* line 547, ../../app/assets/stylesheets/text.scss */
+  article ul.view-maps li {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+
+/* line 560, ../../app/assets/stylesheets/text.scss */
+article ol.steps {
+  padding-left: 0;
+  margin-left: 0;
+}
+/* line 564, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li {
+  background-position: 0 0.87em;
+  background-repeat: no-repeat;
+  list-style-type: none;
+  margin-left: 0;
+  padding: 0.75em 0 0.75em 2.2em;
+  list-style-type: decimal;
+  margin-left: 1.5em;
+  padding-left: 0;
+}
+/* line 572, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(1) {
+  background-image: url(icon-step-1.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 572, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(1) {
+    background-image: url(icon-step-1-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 572, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(2) {
+  background-image: url(icon-step-2.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 572, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(2) {
+    background-image: url(icon-step-2-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 572, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(3) {
+  background-image: url(icon-step-3.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 572, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(3) {
+    background-image: url(icon-step-3-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 572, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(4) {
+  background-image: url(icon-step-4.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 572, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(4) {
+    background-image: url(icon-step-4-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 572, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(5) {
+  background-image: url(icon-step-5.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 572, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(5) {
+    background-image: url(icon-step-5-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 572, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(6) {
+  background-image: url(icon-step-6.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 572, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(6) {
+    background-image: url(icon-step-6-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 572, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(7) {
+  background-image: url(icon-step-7.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 572, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(7) {
+    background-image: url(icon-step-7-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 572, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(8) {
+  background-image: url(icon-step-8.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 572, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(8) {
+    background-image: url(icon-step-8-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 572, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(9) {
+  background-image: url(icon-step-9.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 572, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(9) {
+    background-image: url(icon-step-9-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 572, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(10) {
+  background-image: url(icon-step-10.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 572, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(10) {
+    background-image: url(icon-step-10-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 572, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(11) {
+  background-image: url(icon-step-11.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 572, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(11) {
+    background-image: url(icon-step-11-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 572, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(12) {
+  background-image: url(icon-step-12.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 572, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(12) {
+    background-image: url(icon-step-12-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 572, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(13) {
+  background-image: url(icon-step-13.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 572, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(13) {
+    background-image: url(icon-step-13-2x.png);
+    background-size: 24px 24px;
+  }
+}
+/* line 572, ../../app/assets/stylesheets/text.scss */
+article ol.steps > li:nth-child(14) {
+  background-image: url(icon-step-14.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 572, ../../app/assets/stylesheets/text.scss */
+  article ol.steps > li:nth-child(14) {
+    background-image: url(icon-step-14-2x.png);
+    background-size: 24px 24px;
+  }
+}
+
+/* line 591, ../../app/assets/stylesheets/text.scss */
+.highlight-answer,
+.highlighted-event {
+  background-color: #28a197;
+  color: #fff;
+  text-align: center;
+  padding: 0.1em 2em 0.2em 2em;
+  margin: 0 -1em 1em -1em;
+}
+/* line 598, ../../app/assets/stylesheets/text.scss */
+.highlight-answer p,
+.highlighted-event p {
+  line-height: 2.3em;
+  color: #fff;
+}
+/* line 602, ../../app/assets/stylesheets/text.scss */
+.highlight-answer p em,
+.highlighted-event p em {
+  font-size: 2.45em;
+  font-style: normal;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5em;
+  color: #fff;
+}
+
+/* line 629, ../../app/assets/stylesheets/text.scss */
+.clocks-calendar .equal-width {
+  width: 50%;
+}
+
+/*
+ * Core global styles
+ */
+/* line 5, ../../app/assets/stylesheets/core.scss */
+#wrapper {
+  background-color: #eaedef;
+}
+
+/* line 13, ../../app/assets/stylesheets/core.scss */
+.inner {
+  margin: 0 auto;
+  padding: 1em;
+  position: relative;
+}
+
+/* line 19, ../../app/assets/stylesheets/core.scss */
+section#content {
+  margin: 0 auto;
+  max-width: 1020px;
+  position: relative;
+}
+
+/* line 33, ../../app/assets/stylesheets/core.scss */
+p {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 33, ../../app/assets/stylesheets/core.scss */
+  p {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+
+/* line 37, ../../app/assets/stylesheets/core.scss */
+h2, h3, h4 {
+  font-weight: 400;
+}
+
+/* line 41, ../../app/assets/stylesheets/core.scss */
+h2 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+}
+@media (max-width: 640px) {
+  /* line 41, ../../app/assets/stylesheets/core.scss */
+  h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+/* line 47, ../../app/assets/stylesheets/core.scss */
+h3 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+}
+@media (max-width: 640px) {
+  /* line 47, ../../app/assets/stylesheets/core.scss */
+  h3 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+
+/* line 53, ../../app/assets/stylesheets/core.scss */
+h4 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+}
+@media (max-width: 640px) {
+  /* line 53, ../../app/assets/stylesheets/core.scss */
+  h4 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+
+/*
+ * Locate me styles
+ */
+/* line 65, ../../app/assets/stylesheets/core.scss */
+#global-locator-form label,
+#global-locator-form .ask_location {
+  display: inline;
+}
+/* line 68, ../../app/assets/stylesheets/core.scss */
+#global-locator-form label.hidden,
+#global-locator-form .ask_location.hidden {
+  display: none;
+}
+/* line 72, ../../app/assets/stylesheets/core.scss */
+#global-locator-form .found_location p,
+#global-locator-form .finding_location p {
+  margin: 0em;
+}
+
+/*
+ * Related box
+ * this related stuff needs re-examining - might be a bit over the top
+ */
+/* line 81, ../../app/assets/stylesheets/core.scss */
+.related-positioning {
+  height: 0;
+  left: 0;
+  position: fixed;
+  top: 7em;
+  width: 100%;
+  z-index: 0;
+  z-index: 0;
+}
+
+/* line 104, ../../app/assets/stylesheets/core.scss */
+.related-with-cookie {
+  top: 9.5em;
+}
+
+/* line 108, ../../app/assets/stylesheets/core.scss */
+.related-container {
+  position: relative;
+  height: 0;
+  margin: 0 auto;
+  max-width: 1020px;
+  position: relative;
+  z-index: 50;
+}
+
+/* line 130, ../../app/assets/stylesheets/core.scss */
+.related {
+  position: absolute;
+  right: 0;
+  width: 15em;
+}
+/* line 141, ../../app/assets/stylesheets/core.scss */
+.related .inner {
+  background-color: #dee0e2;
+  padding: 0.5em 1em 0 1.2em;
+  width: auto;
+}
+/* line 155, ../../app/assets/stylesheets/core.scss */
+.related h2 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  color: #0b0c0c;
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+@media (max-width: 640px) {
+  /* line 155, ../../app/assets/stylesheets/core.scss */
+  .related h2 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+/* line 169, ../../app/assets/stylesheets/core.scss */
+.related ul {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 640px) {
+  /* line 169, ../../app/assets/stylesheets/core.scss */
+  .related ul {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 176, ../../app/assets/stylesheets/core.scss */
+.related li {
+  margin-bottom: 1em;
+  padding-left: 0;
+}
+/* line 180, ../../app/assets/stylesheets/core.scss */
+.related li.related-topic {
+  border-top: 1px solid #a1acb2;
+  list-style: none outside none;
+  margin: 0.25em 0 0;
+  padding: 0.75em 0;
+}
+/* line 186, ../../app/assets/stylesheets/core.scss */
+.related li.related-topic a {
+  padding: 0;
+}
+/* line 191, ../../app/assets/stylesheets/core.scss */
+.related li a {
+  background-position: 0 -287px;
+  background-repeat: no-repeat;
+  display: block;
+  line-height: 1.25em;
+  orphans: 2;
+  height: 1%;
+}
+/* line 198, ../../app/assets/stylesheets/core.scss */
+.related li a:hover {
+  background-position: 0 0;
+}
+/* line 207, ../../app/assets/stylesheets/core.scss */
+.related li a[href*="#"] {
+  /* grey out stub links */
+  background: none;
+  color: #888;
+  cursor: default;
+  text-decoration: none;
+}
+/* line 216, ../../app/assets/stylesheets/core.scss */
+.related .return-to-top {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  margin-bottom: 0.5em;
+  position: absolute;
+  left: -9999em;
+}
+@media (max-width: 640px) {
+  /* line 216, ../../app/assets/stylesheets/core.scss */
+  .related .return-to-top {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+
+/* line 231, ../../app/assets/stylesheets/core.scss */
+#wrapper .related.sections-list li a {
+  padding: 0.1em 0em;
+}
+
+/*
+ * Legacy sources thang
+ */
+/* line 239, ../../app/assets/stylesheets/core.scss */
+#legacy-sources {
+  margin-left: 1.2em;
+  margin-top: 1em;
+  display: none;
+}
+/* line 244, ../../app/assets/stylesheets/core.scss */
+#legacy-sources p {
+  font-size: 1em;
+  margin-bottom: 0;
+  padding: 0;
+  color: black;
+}
+/* line 251, ../../app/assets/stylesheets/core.scss */
+#legacy-sources ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+/* line 257, ../../app/assets/stylesheets/core.scss */
+#legacy-sources li {
+  text-indent: -5000px;
+  float: left;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+/* line 266, ../../app/assets/stylesheets/core.scss */
+#wrapper.businesslink #legacy-sources,
+#wrapper.directgov #legacy-sources {
+  display: block;
+}
+
+/* line 270, ../../app/assets/stylesheets/core.scss */
+#wrapper.businesslink #legacy-sources li.businesslink {
+  background-image: url(businesslink-logo.png);
+  width: 84px;
+  height: 33px;
+  margin-top: 0.5em;
+  display: block;
+}
+
+/* line 278, ../../app/assets/stylesheets/core.scss */
+#wrapper.directgov #legacy-sources li.directgov {
+  background-image: url(directgov-logo.png);
+  width: 74px;
+  height: 14px;
+  margin-right: 1em;
+  margin-top: 0.8em;
+  display: block;
+}
+
+/*
+ * Page headers
+ */
+/* line 292, ../../app/assets/stylesheets/core.scss */
+header.page-header .skip-to-related {
+  position: absolute;
+  left: -9999em;
+}
+/* line 297, ../../app/assets/stylesheets/core.scss */
+header.page-header hgroup {
+  background-color: #fff;
+  display: block;
+  margin: 0 15em 0 0;
+  padding: 1em 2em 2em 2em;
+}
+/* line 307, ../../app/assets/stylesheets/core.scss */
+header.page-header hgroup h1 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 48px;
+  font-size: 4.8rem;
+  line-height: 1.04167;
+  font-weight: 400;
+  text-transform: none;
+  padding-top: 10px;
+  padding-top: 1rem;
+  padding-bottom: 10px;
+  padding-bottom: 1rem;
+  background-repeat: no-repeat;
+  color: #0b0c0c;
+  font-weight: 400;
+}
+@media (max-width: 640px) {
+  /* line 307, ../../app/assets/stylesheets/core.scss */
+  header.page-header hgroup h1 {
+    font-size: 3.2rem;
+    line-height: 1.09375;
+  }
+}
+/* line 313, ../../app/assets/stylesheets/core.scss */
+header.page-header hgroup h1 span {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.25em;
+  text-shadow: none;
+  height: 1%;
+}
+@media (max-width: 640px) {
+  /* line 313, ../../app/assets/stylesheets/core.scss */
+  header.page-header hgroup h1 span {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+
+/* line 328, ../../app/assets/stylesheets/core.scss */
+body.full-width header.page-header hgroup {
+  margin-right: 0;
+}
+/* line 332, ../../app/assets/stylesheets/core.scss */
+body.full-width .article-container {
+  margin-right: 0;
+}
+
+/* line 342, ../../app/assets/stylesheets/core.scss */
+#wrapper.programme header.page-header hgroup,
+#wrapper.service header.page-header hgroup,
+#wrapper.answer header.page-header hgroup,
+#wrapper.licence header.page-header hgroup,
+#wrapper.guide header.page-header hgroup,
+#wrapper.video header.page-header hgroup {
+  padding-left: 2em;
+}
+/* line 345, ../../app/assets/stylesheets/core.scss */
+#wrapper.programme header.page-header hgroup h1,
+#wrapper.service header.page-header hgroup h1,
+#wrapper.answer header.page-header hgroup h1,
+#wrapper.licence header.page-header hgroup h1,
+#wrapper.guide header.page-header hgroup h1,
+#wrapper.video header.page-header hgroup h1 {
+  margin-left: 0;
+  padding-left: 68px;
+}
+
+/* Programmes */
+/* line 376, ../../app/assets/stylesheets/core.scss */
+#wrapper.programme header.page-header hgroup h1 {
+  background-image: url(icon-programme-l.png);
+  background-position: 0 5px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 376, ../../app/assets/stylesheets/core.scss */
+  #wrapper.programme header.page-header hgroup h1 {
+    background-image: url(icon-programme-l-2x.png);
+    background-size: 65px 65px;
+  }
+}
+
+/* Services */
+/* line 391, ../../app/assets/stylesheets/core.scss */
+#wrapper.service header.page-header hgroup h1 {
+  background-image: url(icon-service-l.png);
+  background-position: 0 12px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 391, ../../app/assets/stylesheets/core.scss */
+  #wrapper.service header.page-header hgroup h1 {
+    background-image: url(icon-service-l-2x.png);
+    background-size: 67px 52px;
+  }
+}
+
+/* Quick answers */
+/* line 406, ../../app/assets/stylesheets/core.scss */
+#wrapper.answer header.page-header hgroup h1 {
+  background-image: url(icon-answer-l.png);
+  background-position: 0 14px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 406, ../../app/assets/stylesheets/core.scss */
+  #wrapper.answer header.page-header hgroup h1 {
+    background-image: url(icon-answer-l-2x.png);
+    background-size: 42px 61px;
+  }
+}
+
+/* Licence guidance */
+/* line 421, ../../app/assets/stylesheets/core.scss */
+#wrapper.licence header.page-header hgroup h1 {
+  background-image: url(icon-licence-l.png);
+  background-position: 0 14px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 421, ../../app/assets/stylesheets/core.scss */
+  #wrapper.licence header.page-header hgroup h1 {
+    background-image: url(icon-licence-l-2x.png);
+    background-size: 38px 65px;
+  }
+}
+
+/* Guides */
+/* line 437, ../../app/assets/stylesheets/core.scss */
+#wrapper.guide header.page-header hgroup h1,
+#wrapper.video header.page-header hgroup h1 {
+  background-image: url(icon-guide-l.png);
+  background-position: 0 14px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 437, ../../app/assets/stylesheets/core.scss */
+  #wrapper.guide header.page-header hgroup h1,
+  #wrapper.video header.page-header hgroup h1 {
+    background-image: url(icon-guide-l-2x.png);
+    background-size: 40px 61px;
+  }
+}
+
+/* Business support format */
+/* line 452, ../../app/assets/stylesheets/core.scss */
+.business_support article.tab-pane {
+  width: auto;
+}
+
+/* line 455, ../../app/assets/stylesheets/core.scss */
+.business_support .support-info {
+  background: #E1E8E8;
+  border-left: 1px solid #BBB;
+}
+
+/* line 459, ../../app/assets/stylesheets/core.scss */
+.business_support section.support-info:last-child {
+  border-bottom: 1px dotted #BBB;
+}
+
+/* line 462, ../../app/assets/stylesheets/core.scss */
+.business_support .support-info h2 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  margin: 0;
+  text-align: left;
+  color: black;
+  background-color: #E1E8E8;
+  border-top: solid 1px #BBB;
+  float: left;
+  width: 30%;
+  padding: 0.25em;
+}
+@media (max-width: 640px) {
+  /* line 462, ../../app/assets/stylesheets/core.scss */
+  .business_support .support-info h2 {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+
+/* line 477, ../../app/assets/stylesheets/core.scss */
+.business_support .faux-cell,
+.business_support .faux-cell p,
+.business_support .faux-cell li,
+.business_support .long-description p,
+.business_support .long-description li {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 477, ../../app/assets/stylesheets/core.scss */
+  .business_support .faux-cell,
+  .business_support .faux-cell p,
+  .business_support .faux-cell li,
+  .business_support .long-description p,
+  .business_support .long-description li {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+
+/* line 480, ../../app/assets/stylesheets/core.scss */
+.business_support .faux-cell {
+  background: #FFF;
+  overflow: hidden;
+  border-left: 1px solid #BBB;
+  border-top: 1px dotted #BBB;
+  border-right: 1px dotted #BBB;
+  margin: 0;
+  padding: 0.25em;
+}
+
+/* Licence Application */
+/* line 492, ../../app/assets/stylesheets/core.scss */
+.relevant-authority {
+  margin: 0 0 20px 84px;
+  margin: 0 0 2rem 8.4rem;
+}
+/* line 496, ../../app/assets/stylesheets/core.scss */
+.relevant-authority h2 {
+  margin: 0;
+}
+
+/* line 502, ../../app/assets/stylesheets/core.scss */
+.licence .intro form ul {
+  padding-left: 12px;
+  padding-left: 1.2rem;
+}
+/* line 506, ../../app/assets/stylesheets/core.scss */
+.licence .intro form li {
+  list-style: none;
+}
+/* line 507, ../../app/assets/stylesheets/core.scss */
+.licence .intro form li label {
+  padding-left: 5px;
+  padding-left: 0.5rem;
+}
+
+/*
+  ============================== Stuff (mainly) used in publications =============================
+*/
+/* articles */
+/* line 519, ../../app/assets/stylesheets/core.scss */
+article {
+  float: left;
+  margin-right: 12em;
+  min-height: 30em;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  float: none;
+}
+/* line 540, ../../app/assets/stylesheets/core.scss */
+article .inner {
+  padding: 0 10em 2em 2em;
+  width: auto;
+}
+
+/* line 564, ../../app/assets/stylesheets/core.scss */
+#wrapper.answer article .inner,
+#wrapper.transaction article .inner,
+#wrapper.local_transaction article .inner {
+  padding-right: 10em;
+}
+
+/* line 577, ../../app/assets/stylesheets/core.scss */
+#wrapper.guide
+#wrapper.programme article .inner {
+  padding-right: 3em;
+}
+
+/* line 587, ../../app/assets/stylesheets/core.scss */
+.article-container {
+  background-color: #fff;
+  margin-right: 15em;
+  min-height: 35em;
+}
+/* line 592, ../../app/assets/stylesheets/core.scss */
+.article-container article {
+  margin-right: 0;
+}
+
+/* Meta-data */
+/* line 603, ../../app/assets/stylesheets/core.scss */
+.meta-data {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  color: #454a4c;
+  float: right;
+  width: 62%;
+  margin-left: 2em;
+  background-color: transparent;
+  display: inline;
+  margin-top: -2.7em;
+  text-align: right;
+}
+@media (max-width: 640px) {
+  /* line 603, ../../app/assets/stylesheets/core.scss */
+  .meta-data {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 614, ../../app/assets/stylesheets/core.scss */
+.meta-data .inner {
+  padding: 0 2em 0 0;
+}
+/* line 627, ../../app/assets/stylesheets/core.scss */
+.meta-data p {
+  display: inline-block;
+  text-align: left;
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+}
+/* line 636, ../../app/assets/stylesheets/core.scss */
+.meta-data p a {
+  color: #454a4c;
+}
+@media (max-width: 640px) {
+  /* line 627, ../../app/assets/stylesheets/core.scss */
+  .meta-data p {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+
+/* line 664, ../../app/assets/stylesheets/core.scss */
+.print-link {
+  text-align: right;
+  margin: 0.5em 0;
+  padding-left: 1.4em;
+}
+/* line 673, ../../app/assets/stylesheets/core.scss */
+.print-link a, .print-link a:link, .print-link a:visited {
+  background: url(icon-print.png) no-repeat 100% 50%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 30px;
+  padding-right: 32px;
+  zoom: 1;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 673, ../../app/assets/stylesheets/core.scss */
+  .print-link a, .print-link a:link, .print-link a:visited {
+    background-image: url(icon-print-2x.png);
+    background-size: 25px 25px;
+  }
+}
+
+/* Error messages */
+/* line 705, ../../app/assets/stylesheets/core.scss */
+.error-notification,
+.error-area {
+  border: 1px solid #ffc946;
+  background-color: #fbedcd;
+  padding: 0 1em;
+  margin-bottom: 1em;
+}
+/* line 711, ../../app/assets/stylesheets/core.scss */
+.error-notification p,
+.error-area p {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 711, ../../app/assets/stylesheets/core.scss */
+  .error-notification p,
+  .error-area p {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+
+/* line 716, ../../app/assets/stylesheets/core.scss */
+.error-area span {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.42857;
+  font-weight: 400;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-transform: none;
+  font-weight: bold;
+  display: block;
+}
+@media (max-width: 640px) {
+  /* line 716, ../../app/assets/stylesheets/core.scss */
+  .error-area span {
+    font-size: 1.2rem;
+    line-height: 1.25;
+  }
+}
+
+/* Feedback mechanism styles */
+/* line 723, ../../app/assets/stylesheets/core.scss */
+.popover-mask {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 60;
+}
+
+/* line 744, ../../app/assets/stylesheets/core.scss */
+#popup {
+  display: none;
+  overflow: visible;
+  clear: both;
+  position: absolute;
+  top: 2em;
+  left: 0;
+  width: 60%;
+  z-index: 999999;
+  padding: 0;
+  padding-bottom: 0.5em;
+}
+/* line 761, ../../app/assets/stylesheets/core.scss */
+#popup h2 {
+  outline: none;
+}
+/* line 765, ../../app/assets/stylesheets/core.scss */
+#popup h3 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  margin: 0.75em 0;
+}
+@media (max-width: 640px) {
+  /* line 765, ../../app/assets/stylesheets/core.scss */
+  #popup h3 {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 770, ../../app/assets/stylesheets/core.scss */
+#popup ul {
+  margin: 0 0 0 5em;
+  padding: 0;
+}
+/* line 775, ../../app/assets/stylesheets/core.scss */
+#popup .error-notification {
+  margin-bottom: 0.8em;
+  padding: 0 0.5em;
+}
+/* line 780, ../../app/assets/stylesheets/core.scss */
+#popup .inner {
+  background-color: #fff;
+}
+
+/* line 785, ../../app/assets/stylesheets/core.scss */
+.close {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 791, ../../app/assets/stylesheets/core.scss */
+.close a {
+  background-color: transparent;
+  background-image: url(close.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 0;
+  height: 2em;
+  width: 2em;
+  text-indent: -9999px;
+}
+/* line 802, ../../app/assets/stylesheets/core.scss */
+.close a:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* line 808, ../../app/assets/stylesheets/core.scss */
+.sets-cookie {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.42857;
+  font-weight: 400;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 808, ../../app/assets/stylesheets/core.scss */
+  .sets-cookie {
+    font-size: 1.2rem;
+    line-height: 1.25;
+  }
+}
+
+/* line 812, ../../app/assets/stylesheets/core.scss */
+.cookie-container {
+  margin: 0;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  bottom: auto;
+  right: auto;
+  margin-top: 1em;
+  position: relative;
+}
+
+/* line 826, ../../app/assets/stylesheets/core.scss */
+.find-location-for-service .cookie-container {
+  bottom: 1em;
+  right: 0.75em;
+}
+
+/*  ============================================================================
+    Tabs
+    ========================================================================  */
+/* line 842, ../../app/assets/stylesheets/core.scss */
+.nav-tabs {
+  zoom: 1;
+  background: #fff;
+  padding: 0;
+  position: relative;
+}
+/* line 848, ../../app/assets/stylesheets/core.scss */
+.nav-tabs:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* line 857, ../../app/assets/stylesheets/core.scss */
+.nav-tabs ol,
+.nav-tabs ul {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 5;
+}
+/* line 877, ../../app/assets/stylesheets/core.scss */
+.nav-tabs li {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+@media (max-width: 640px) {
+  /* line 877, ../../app/assets/stylesheets/core.scss */
+  .nav-tabs li {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 887, ../../app/assets/stylesheets/core.scss */
+.nav-tabs li a {
+  border: solid 1px #fff;
+  border-bottom: none;
+  float: left;
+  height: 2.25em;
+  line-height: 2.25em;
+  margin-bottom: -1px;
+  padding: 0 1em 0 1em;
+  position: relative;
+  text-align: center;
+  top: 0;
+}
+/* line 917, ../../app/assets/stylesheets/core.scss */
+.nav-tabs li a:hover {
+  background-color: #eaedef;
+}
+/* line 922, ../../app/assets/stylesheets/core.scss */
+.nav-tabs li.active a {
+  background-color: #fff;
+  border: solid 1px #a1acb2;
+  border-bottom: solid 1px #fff;
+  color: #0b0c0c;
+  position: relative;
+  text-decoration: none;
+  z-index: 5;
+}
+/* line 940, ../../app/assets/stylesheets/core.scss */
+.nav-tabs li.active a:hover {
+  color: inherit;
+}
+/* line 945, ../../app/assets/stylesheets/core.scss */
+.nav-tabs li:first-child a {
+  margin-left: 0;
+}
+
+/* give tabs the whole width of the central column in 2-column grids */
+/* line 959, ../../app/assets/stylesheets/core.scss */
+#wrapper.answer article .inner .nav-tabs,
+#wrapper.transaction article .inner .nav-tabs,
+#wrapper.local_transaction article .inner .nav-tabs {
+  margin-right: -10em;
+}
+
+/* line 963, ../../app/assets/stylesheets/core.scss */
+.tab-content {
+  margin: 0 -10em 0 -2em;
+}
+/* line 970, ../../app/assets/stylesheets/core.scss */
+.tab-content .tab-pane {
+  padding: 1em 10em 0 2em;
+  border-top: solid 1px #a1acb2;
+  clear: both;
+  width: auto;
+}
+/* line 982, ../../app/assets/stylesheets/core.scss */
+.tab-content .inner {
+  padding: 0em 2.5em 1em;
+}
+/* line 991, ../../app/assets/stylesheets/core.scss */
+.tab-content h1.visuallyhidden + h2 {
+  margin-top: 2em;
+}
+/* line 995, ../../app/assets/stylesheets/core.scss */
+.tab-content p {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 1001, ../../app/assets/stylesheets/core.scss */
+.tab-content em {
+  font-style: normal;
+  font-weight: bold;
+}
+/* line 1006, ../../app/assets/stylesheets/core.scss */
+.tab-content nav {
+  margin: 1em -1.375em 0;
+}
+
+/* line 1013, ../../app/assets/stylesheets/core.scss */
+.js-tab-content .programme-progression li,
+.js-tab-content .js-heading-tab {
+  border-bottom: solid 1px #a1acb2;
+  list-style: none;
+}
+/* line 1018, ../../app/assets/stylesheets/core.scss */
+.js-tab-content .programme-progression li a,
+.js-tab-content .programme-progression li h1,
+.js-tab-content .js-heading-tab a,
+.js-tab-content .js-heading-tab h1 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.875;
+  font-weight: 400;
+  text-transform: none;
+  background: white url(accordian-arrow.png) no-repeat 100% -2px;
+  display: block;
+  padding: 0 1.6rem;
+  position: relative;
+  text-align: left;
+  text-decoration: underline;
+  top: 0;
+}
+@media (max-width: 640px) {
+  /* line 1018, ../../app/assets/stylesheets/core.scss */
+  .js-tab-content .programme-progression li a,
+  .js-tab-content .programme-progression li h1,
+  .js-tab-content .js-heading-tab a,
+  .js-tab-content .js-heading-tab h1 {
+    font-size: 2rem;
+    line-height: 2.64706;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 1018, ../../app/assets/stylesheets/core.scss */
+  .js-tab-content .programme-progression li a,
+  .js-tab-content .programme-progression li h1,
+  .js-tab-content .js-heading-tab a,
+  .js-tab-content .js-heading-tab h1 {
+    background-image: url(accordian-arrow-2x.png);
+    background-size: 45px 90px;
+  }
+}
+/* line 1033, ../../app/assets/stylesheets/core.scss */
+.js-tab-content .programme-progression li a:hover,
+.js-tab-content .programme-progression li h1:hover,
+.js-tab-content .js-heading-tab a:hover,
+.js-tab-content .js-heading-tab h1:hover {
+  background-color: #eaedef;
+}
+/* line 1038, ../../app/assets/stylesheets/core.scss */
+.js-tab-content .programme-progression li.active,
+.js-tab-content .js-heading-tab.active {
+  text-decoration: none;
+}
+/* line 1041, ../../app/assets/stylesheets/core.scss */
+.js-tab-content .programme-progression li.active a, .js-tab-content .programme-progression li.active h1,
+.js-tab-content .js-heading-tab.active a,
+.js-tab-content .js-heading-tab.active h1 {
+  background-position: 100% -48px;
+  background-color: #eaedef;
+  color: #0b0c0c;
+  text-decoration: none;
+}
+/* line 1050, ../../app/assets/stylesheets/core.scss */
+.js-tab-content .js-heading-tab {
+  margin: 0;
+  clear: both;
+}
+/* line 1054, ../../app/assets/stylesheets/core.scss */
+.js-tab-content .js-heading-tab h1 {
+  padding: 0;
+}
+/* line 1060, ../../app/assets/stylesheets/core.scss */
+.js-tab-content .tab-shiftlink {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  position: absolute;
+  left: -9999em;
+}
+@media (max-width: 640px) {
+  /* line 1060, ../../app/assets/stylesheets/core.scss */
+  .js-tab-content .tab-shiftlink {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+
+/* line 1086, ../../app/assets/stylesheets/core.scss */
+.transaction .js-tab-content {
+  overflow: hidden;
+}
+
+/* report a problem */
+/* line 1092, ../../app/assets/stylesheets/core.scss */
+.report-a-problem-toggle {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  float: left;
+  width: 35%;
+  margin: 6em 0 0.5em 2em;
+  clear: both;
+}
+@media (max-width: 640px) {
+  /* line 1092, ../../app/assets/stylesheets/core.scss */
+  .report-a-problem-toggle {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 1098, ../../app/assets/stylesheets/core.scss */
+.report-a-problem-toggle a {
+  color: #454a4c;
+}
+
+/* line 1121, ../../app/assets/stylesheets/core.scss */
+.js-enabled .report-a-problem-container {
+  display: none;
+}
+
+/* line 1125, ../../app/assets/stylesheets/core.scss */
+.report-a-problem-container {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  clear: both;
+  background-color: #D5E8F3;
+  margin: 0 3.5em 2em 3.5em;
+  padding: 0.5em 1em 1em 1em;
+}
+@media (max-width: 640px) {
+  /* line 1125, ../../app/assets/stylesheets/core.scss */
+  .report-a-problem-container {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+/* line 1132, ../../app/assets/stylesheets/core.scss */
+.report-a-problem-container div {
+  width: 98%;
+  padding-top: 0.5em;
+  text-align: right;
+}
+/* line 1137, ../../app/assets/stylesheets/core.scss */
+.report-a-problem-container div .button {
+  margin-right: -0.5em;
+}
+/* line 1141, ../../app/assets/stylesheets/core.scss */
+.report-a-problem-container label {
+  padding: 0 0 0.5em 0;
+  display: block;
+}
+/* line 1144, ../../app/assets/stylesheets/core.scss */
+.report-a-problem-container label input {
+  margin: 0;
+  display: block;
+  width: 98%;
+}
+
+/* bunting lol */
+/* line 1157, ../../app/assets/stylesheets/core.scss */
+.epic-bunting {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 14em;
+  overflow: visible;
+}
+/* line 1164, ../../app/assets/stylesheets/core.scss */
+.epic-bunting span {
+  background-image: url(bunting.png);
+  background-color: transparent;
+  background-repeat: repeat-x;
+  width: 99.9%;
+  position: absolute;
+  height: 60px;
+}
+
+/* For image replacement */
+/* line 2, ../../app/assets/stylesheets/accessibility.scss */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+/* line 10, ../../app/assets/stylesheets/accessibility.scss */
+.ir br {
+  display: none;
+}
+
+/* Hide for both screenreaders and browsers */
+/* line 16, ../../app/assets/stylesheets/accessibility.scss */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders */
+/* line 22, ../../app/assets/stylesheets/accessibility.scss */
+.visuallyhidden {
+  position: absolute;
+  left: -9999em;
+  /*
+   * Extends the .visuallyhidden class to allow the element to be
+   * focusable when navigated to via the keyboard
+   */
+}
+/* line 31, ../../app/assets/stylesheets/accessibility.scss */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+/* line 42, ../../app/assets/stylesheets/accessibility.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* Give a strong clear visual idea as to what is currently in focus */
+/* line 47, ../../app/assets/stylesheets/accessibility.scss */
+a:focus {
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47;
+}
+
+/* line 55, ../../app/assets/stylesheets/accessibility.scss */
+input:focus,
+textarea:focus,
+select:focus,
+#global-header input:focus {
+  outline: 3px solid #ffbf47;
+}
+
+/* line 60, ../../app/assets/stylesheets/accessibility.scss */
+#global-header h1 a:focus {
+  background-color: transparent;
+  outline: none;
+}
+/* line 65, ../../app/assets/stylesheets/accessibility.scss */
+#global-header a:focus {
+  color: #0b0c0c;
+}
+
+/* line 3, ../../app/assets/stylesheets/ancillary-pages.scss */
+#wrapper .ancillary header hgroup h1 {
+  padding: 0;
+}
+/* line 7, ../../app/assets/stylesheets/ancillary-pages.scss */
+#wrapper .ancillary header.page-header hgroup {
+  background-color: transparent;
+  margin: 0;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 3em;
+}
+/* line 25, ../../app/assets/stylesheets/ancillary-pages.scss */
+#wrapper .ancillary.section-page header {
+  margin: 0;
+}
+/* line 28, ../../app/assets/stylesheets/ancillary-pages.scss */
+#wrapper .ancillary.section-page header.page-header hgroup {
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+}
+/* line 34, ../../app/assets/stylesheets/ancillary-pages.scss */
+#wrapper .ancillary.section-page h2 {
+  clear: both;
+}
+
+/* static pages like platform and help */
+/* line 44, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary .menu {
+  background-color: #E5E5E5;
+  position: absolute;
+  right: 0;
+  margin: -3em 0 0 0;
+  padding: 1em;
+  width: 13em;
+}
+/* line 58, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary .menu ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 63, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary .menu li {
+  list-style: none;
+  margin: 0 0 0.5em 0;
+}
+/* line 67, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary .menu li.active {
+  font-weight: bold;
+}
+
+/* line 77, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary article section {
+  margin: 0 0 2.5em 0;
+}
+/* line 82, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary article h1:first-child,
+.ancillary article h2:first-child {
+  margin-top: 0;
+}
+/* line 86, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary article dt {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 86, ../../app/assets/stylesheets/ancillary-pages.scss */
+  .ancillary article dt {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+/* line 90, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary article dd {
+  margin-left: 0;
+}
+
+/* feedback page */
+/* line 98, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary.feedback .pullout {
+  background-color: #D9E0E0;
+  margin: 1.5em 0;
+  padding: 1em;
+}
+/* line 104, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary.feedback .image-in-text {
+  float: right;
+  margin-left: 2em;
+}
+/* line 108, ../../app/assets/stylesheets/ancillary-pages.scss */
+.ancillary.feedback .image-in-text a[rel="external"]:after {
+  content: none;
+  margin: 0;
+}
+
+/* line 1, ../../app/assets/stylesheets/_header.scss */
+#global-header {
+  background-color: #0b0c0c;
+  width: 100%;
+}
+/* line 5, ../../app/assets/stylesheets/_header.scss */
+#global-header .header-wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  height: 2em;
+  line-height: 2em;
+  padding: 0.5em 0;
+}
+/* line 23, ../../app/assets/stylesheets/_header.scss */
+#global-header #logo {
+  position: relative;
+  float: left;
+  width: 166px;
+  height: 30px;
+  margin-left: 2em;
+  overflow: hidden;
+}
+/* line 36, ../../app/assets/stylesheets/_header.scss */
+#global-header #logo img {
+  position: absolute;
+  left: -166px;
+  top: 0;
+  border: none;
+  /* scale oversized image to container bounds */
+  width: 200%;
+  height: 200%;
+}
+/* line 49, ../../app/assets/stylesheets/_header.scss */
+#global-header #logo:hover img {
+  top: -30px;
+}
+/* line 56, ../../app/assets/stylesheets/_header.scss */
+#global-header nav ul {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.875;
+  font-weight: 300;
+  text-transform: none;
+  margin: 0 0 0 1em;
+  padding: 0;
+  float: left;
+  list-style: none;
+}
+@media (max-width: 640px) {
+  /* line 56, ../../app/assets/stylesheets/_header.scss */
+  #global-header nav ul {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 64, ../../app/assets/stylesheets/_header.scss */
+#global-header nav ul li {
+  float: left;
+  margin: 0 1.5em 0 0;
+}
+/* line 68, ../../app/assets/stylesheets/_header.scss */
+#global-header nav ul li a {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.875;
+  font-weight: 300;
+  text-transform: none;
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 640px) {
+  /* line 68, ../../app/assets/stylesheets/_header.scss */
+  #global-header nav ul li a {
+    font-size: 1.4rem;
+    line-height: 2.30769;
+  }
+}
+/* line 73, ../../app/assets/stylesheets/_header.scss */
+#global-header nav ul li a:hover {
+  color: white;
+}
+/* line 81, ../../app/assets/stylesheets/_header.scss */
+#global-header .search-toggle {
+  display: none;
+}
+@media screen and (max-width: 379px) {
+  /* line 81, ../../app/assets/stylesheets/_header.scss */
+  #global-header .search-toggle {
+    display: block;
+    float: right;
+    top: 0;
+    font-family: "nta", "GDS-Regular", sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none;
+    overflow: hidden;
+    text-indent: -5000px;
+    width: 1.8em;
+    padding: 0.35em 0.5em;
+    background-image: url("icon-search.png");
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 109, ../../app/assets/stylesheets/_header.scss */
+  #global-header .search-toggle:active {
+    top: 0;
+  }
+}
+@media screen and (max-width: 379px) and (max-width: 640px) {
+  /* line 81, ../../app/assets/stylesheets/_header.scss */
+  #global-header .search-toggle {
+    font-size: 1.4rem;
+    line-height: 1.53846;
+  }
+}
+@media only screen and (max-width: 379px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 379px) and (min--moz-device-pixel-ratio: 2), only screen and (max-width: 379px) and (-o-min-device-pixel-ratio: 20 / 10), only screen and (max-width: 379px) and (min-device-pixel-ratio: 2), only screen and (max-width: 379px) and (min-resolution: 192dpi), only screen and (max-width: 379px) and (min-resolution: 2dppx) {
+  /* line 81, ../../app/assets/stylesheets/_header.scss */
+  #global-header .search-toggle {
+    background-image: url(icon-search-2x.png);
+    background-size: 30px 22px;
+  }
+}
+/* line 114, ../../app/assets/stylesheets/_header.scss */
+#global-header .search-toggle.js-hidden {
+  display: none;
+}
+/* line 117, ../../app/assets/stylesheets/_header.scss */
+#global-header form#search {
+  float: right;
+  margin: 0;
+  /* search input */
+}
+/* line 121, ../../app/assets/stylesheets/_header.scss */
+#global-header form#search input.button {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  /* this inherits from the basic button styles */
+  display: inline;
+  margin: 0;
+  padding: 0.25em 0.5em;
+  border-bottom: none;
+  margin-bottom: 0;
+  position: static;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+@media (max-width: 640px) {
+  /* line 121, ../../app/assets/stylesheets/_header.scss */
+  #global-header form#search input.button {
+    font-size: 1.4rem;
+    line-height: 1.53846;
+  }
+}
+/* line 144, ../../app/assets/stylesheets/_header.scss */
+#global-header form#search input.button:hover {
+  background-color: #3ABAA8;
+}
+/* line 148, ../../app/assets/stylesheets/_header.scss */
+#global-header form#search input.button:active {
+  top: 0;
+}
+@media screen and (max-width: 379px) {
+  /* line 121, ../../app/assets/stylesheets/_header.scss */
+  #global-header form#search input.button {
+    float: right;
+    margin: 0.3em 0;
+  }
+}
+/* line 190, ../../app/assets/stylesheets/_header.scss */
+#global-header form#search #site-search-text {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.125;
+  font-weight: 300;
+  text-transform: none;
+  margin: 0 0.25em 0 0;
+  -webkit-appearance: none;
+}
+@media (max-width: 640px) {
+  /* line 190, ../../app/assets/stylesheets/_header.scss */
+  #global-header form#search #site-search-text {
+    font-size: 1.4rem;
+    line-height: 1.38462;
+  }
+}
+@media screen and (max-width: 379px) {
+  /* line 117, ../../app/assets/stylesheets/_header.scss */
+  #global-header form#search {
+    display: none;
+    width: 100%;
+  }
+  /* line 201, ../../app/assets/stylesheets/_header.scss */
+  #global-header form#search #site-search-text {
+    margin: 0.3em 0;
+    width: 80%;
+  }
+}
+/* line 206, ../../app/assets/stylesheets/_header.scss */
+#global-header form#search.js-visible {
+  display: block;
+}
+
+/* Inside government styles */
+/* line 211, ../../app/assets/stylesheets/_header.scss */
+body.government #global-header .header-context {
+  border-color: #cdce00;
+  border-bottom-color: #9a9b00;
+  /* Search form in global header */
+}
+/* line 215, ../../app/assets/stylesheets/_header.scss */
+body.government #global-header .header-context nav {
+  font-weight: bold;
+  text-decoration: none;
+  width: 79.5%;
+}
+/* line 220, ../../app/assets/stylesheets/_header.scss */
+body.government #global-header .header-context nav a {
+  color: #777;
+}
+/* line 223, ../../app/assets/stylesheets/_header.scss */
+body.government #global-header .header-context nav a:hover {
+  color: #9a9b00;
+}
+/* line 230, ../../app/assets/stylesheets/_header.scss */
+body.government #global-header .header-context .search-help {
+  border-color: #cdce00;
+}
+
+/* Global cookie message */
+/* line 237, ../../app/assets/stylesheets/_header.scss */
+.js-enabled #global-cookie-message {
+  display: none;
+  /* shown with JS */
+}
+
+/* line 241, ../../app/assets/stylesheets/_header.scss */
+#global-cookie-message {
+  background-color: #D5E8F3;
+  padding: 0.5em 0;
+}
+/* line 245, ../../app/assets/stylesheets/_header.scss */
+#global-cookie-message p {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0 auto;
+  max-width: 960px;
+}
+@media (max-width: 640px) {
+  /* line 245, ../../app/assets/stylesheets/_header.scss */
+  #global-cookie-message p {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+
+/* line 260, ../../app/assets/stylesheets/_header.scss */
+#global-breadcrumb {
+  background-color: #fff;
+  border-bottom: 1px solid #dee0e2;
+  padding: 0.75em 2em;
+  z-index: 50;
+}
+/* line 274, ../../app/assets/stylesheets/_header.scss */
+#global-breadcrumb nav {
+  max-width: 960px;
+  margin: 0 auto;
+}
+/* line 283, ../../app/assets/stylesheets/_header.scss */
+#global-breadcrumb nav ol {
+  margin: 0;
+  padding: 0;
+}
+/* line 287, ../../app/assets/stylesheets/_header.scss */
+#global-breadcrumb nav ol li {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  background-image: url(separator.png);
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  float: left;
+  list-style: none;
+  margin-left: 0;
+  margin-right: 0.5em;
+  padding-right: 1em;
+}
+@media (max-width: 640px) {
+  /* line 287, ../../app/assets/stylesheets/_header.scss */
+  #global-breadcrumb nav ol li {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 287, ../../app/assets/stylesheets/_header.scss */
+  #global-breadcrumb nav ol li {
+    background-image: url(separator-2x.png);
+    background-size: 6px 11px;
+  }
+}
+/* line 303, ../../app/assets/stylesheets/_header.scss */
+#global-breadcrumb nav ol li a {
+  color: #0b0c0c;
+}
+/* line 307, ../../app/assets/stylesheets/_header.scss */
+#global-breadcrumb nav ol li strong {
+  font-weight: normal;
+}
+/* line 311, ../../app/assets/stylesheets/_header.scss */
+#global-breadcrumb nav ol li:last-child {
+  background-image: none;
+  margin-right: 0;
+}
+
+/* Global footer */
+/* line 3, ../../app/assets/stylesheets/_footer.scss */
+#footer {
+  background-color: #dee0e2;
+  border-top: 1px solid #a1acb2;
+}
+/* line 7, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-wrapper {
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 60px 1em 0 1em;
+  padding: 6rem 1em 0 1em;
+}
+/* line 23, ../../app/assets/stylesheets/_footer.scss */
+#footer a {
+  color: #454a4c;
+}
+/* line 26, ../../app/assets/stylesheets/_footer.scss */
+#footer a:hover {
+  color: #171819;
+}
+/* line 31, ../../app/assets/stylesheets/_footer.scss */
+#footer h2 {
+  color: #454a4c;
+  margin: 0;
+}
+/* line 36, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories {
+  font-size: 0;
+  float: left;
+  padding: 0 0 60px 0;
+  padding: 0 0 6rem 0;
+  width: 100%;
+}
+/* line 50, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories .footer-explore {
+  float: left;
+  margin-right: 7%;
+  width: 62%;
+}
+/* line 66, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories ul {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  list-style: none;
+  border: 1px solid #a1acb2;
+  border-width: 1px 0 0 0;
+  margin: 20px 0 0 0;
+  margin: 2rem 0 0 0;
+  padding: 20px 0 0 0;
+  padding: 2rem 0 0 0;
+  min-height: 210px;
+  min-height: 21rem;
+  vertical-align: top;
+}
+@media (max-width: 640px) {
+  /* line 66, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-categories ul {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 89, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories ul li {
+  display: block;
+  float: left;
+  clear: left;
+  margin: 0 0 15px 0;
+  margin: 0 0 1.5rem 0;
+  width: 45.5%;
+  display: inline;
+  min-height: 1.5em;
+  clear: none;
+}
+/* line 100, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories ul li:nth-child(even) {
+  float: right;
+  clear: none;
+}
+/* line 138, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories .footer-inside-government {
+  float: left;
+  width: 31%;
+}
+/* line 142, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories .footer-inside-government ul {
+  margin-right: 0;
+}
+/* line 152, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories .footer-inside-government ul li {
+  margin-right: 0;
+  width: 100%;
+}
+/* line 156, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-categories .footer-inside-government ul li:nth-child(even) {
+  float: none;
+  clear: none;
+}
+/* line 174, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta {
+  clear: both;
+  font-size: 0;
+  color: #454a4c;
+  border: 1px solid #a1acb2;
+  border-width: 1px 0 0 0;
+  margin: 60px 0 0 0;
+  margin: 6rem 0 0 0;
+  padding: 30px 0 60px;
+  padding: 3rem 0 6rem;
+}
+/* line 192, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta nav {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 69%;
+}
+/* line 202, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta nav ul {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 300;
+  text-transform: none;
+  display: inline-block;
+  list-style: none;
+  margin-top: 0;
+  padding: 0;
+}
+@media (max-width: 640px) {
+  /* line 202, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-meta nav ul {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+}
+/* line 213, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta nav ul li {
+  display: inline-block;
+  margin: 0 1.5rem 0 0;
+}
+/* line 230, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta nav p {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  display: block;
+  clear: left;
+}
+@media (max-width: 640px) {
+  /* line 230, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-meta nav p {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 243, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta .copyright {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  display: inline-block;
+  float: none;
+  text-align: inherit;
+  width: 30%;
+  min-height: 150px;
+  min-height: 15rem;
+}
+@media (max-width: 640px) {
+  /* line 243, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-meta .copyright {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 260, ../../app/assets/stylesheets/_footer.scss */
+#footer .footer-meta .copyright a {
+  display: block;
+  padding: 115px 0 0 0;
+  padding: 11.5rem 0 0 0;
+  background: transparent url(govuk-crest.png) no-repeat 50% 0;
+  text-align: center;
+  text-decoration: none;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 260, ../../app/assets/stylesheets/_footer.scss */
+  #footer .footer-meta .copyright a {
+    background-image: url(govuk-crest-2x.png);
+    background-size: 125px 102px;
+  }
+}
+
+/* line 1, ../../app/assets/stylesheets/notifications.scss */
+#banner-notification {
+  background-color: #a1acb2;
+  border-top: 2px solid white;
+}
+/* line 5, ../../app/assets/stylesheets/notifications.scss */
+#banner-notification div {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  color: #fff;
+  margin: 0 auto;
+  padding: 0.5em 0;
+  max-width: 1020px;
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  /* line 5, ../../app/assets/stylesheets/notifications.scss */
+  #banner-notification div {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+/* line 18, ../../app/assets/stylesheets/notifications.scss */
+#banner-notification p {
+  padding: 0 22% 0 1.68421em;
+  margin: 0;
+}
+/* line 23, ../../app/assets/stylesheets/notifications.scss */
+#banner-notification a {
+  color: #fff;
+}
+/* line 26, ../../app/assets/stylesheets/notifications.scss */
+#banner-notification a.right {
+  display: block;
+  padding: 0 0 0 80%;
+  margin-top: -1.31579em;
+  text-align: right;
+}
+/* line 38, ../../app/assets/stylesheets/notifications.scss */
+#banner-notification.green {
+  background: #28a197;
+}
+/* line 42, ../../app/assets/stylesheets/notifications.scss */
+#banner-notification.red {
+  background: #b10e1e;
+}
+
+/* line 47, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification {
+  clear: both;
+  background-color: #a1acb2;
+  color: #fff;
+  padding: 2em;
+}
+/* line 53, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification h1 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 80px;
+  font-size: 8rem;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 53, ../../app/assets/stylesheets/notifications.scss */
+  #campaign-notification h1 {
+    font-size: 5.3rem;
+    line-height: 1.03774;
+  }
+}
+/* line 57, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification p {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  padding-right: 25%;
+  margin-bottom: 0;
+}
+@media (max-width: 640px) {
+  /* line 57, ../../app/assets/stylesheets/notifications.scss */
+  #campaign-notification p {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+/* line 63, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification a {
+  color: #fff;
+}
+/* line 66, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification a.right {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  text-align: right;
+  padding: 0 0 0 75%;
+  margin-top: -1.31579em;
+  display: block;
+}
+@media (max-width: 640px) {
+  /* line 66, ../../app/assets/stylesheets/notifications.scss */
+  #campaign-notification a.right {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+/* line 79, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification.green {
+  background: #fff;
+  border: 10px solid #28a197;
+  color: #28a197;
+}
+/* line 84, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification.green a {
+  color: #28a197;
+}
+/* line 89, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification.red {
+  background: #b10e1e;
+}
+/* line 93, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification.black {
+  background: #fff;
+  border: 10px solid #0b0c0c;
+  color: #0b0c0c;
+}
+/* line 98, ../../app/assets/stylesheets/notifications.scss */
+#campaign-notification.black a {
+  color: #0b0c0c;
+}
+
+/* line 56, ../../app/assets/stylesheets/organisations.scss */
+.organisation-logo {
+  font-family: "GDS-Logo", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.05263;
+  /* 20px */
+  font-weight: 400;
+  text-transform: none;
+  text-decoration: none;
+  color: #0b0c0c;
+  display: block;
+  border-left: 2px solid #bbb;
+  background: url(coa-default-24.gif) no-repeat 8px 0;
+  height: auto;
+  width: auto;
+}
+/* line 22, ../../app/assets/stylesheets/organisations.scss */
+.organisation-logo span {
+  padding-top: 30px;
+  padding-top: 3rem;
+  margin-left: 10px;
+  margin-left: 1rem;
+  display: block;
+}
+/* line 35, ../../app/assets/stylesheets/organisations.scss */
+.organisation-logo.single-line {
+  padding: 5px 0 5px 45px;
+  padding: 0.5rem 0 0.5rem 4.5rem;
+  background-position: 8px 50%;
+}
+/* line 40, ../../app/assets/stylesheets/organisations.scss */
+.organisation-logo.single-line span {
+  top: 0;
+  position: static;
+}
+/* line 51, ../../app/assets/stylesheets/organisations.scss */
+.organisation-logo:visited {
+  color: #0b0c0c;
+}
+
+/* line 64, ../../app/assets/stylesheets/organisations.scss */
+.cabinet-office {
+  border-color: #005abb;
+}
+
+/* line 68, ../../app/assets/stylesheets/organisations.scss */
+.department-for-business-innovation-and-skills {
+  border-color: #003479;
+}
+
+/* line 72, ../../app/assets/stylesheets/organisations.scss */
+.department-for-communities-and-local-government {
+  border-color: #00857e;
+}
+
+/* line 76, ../../app/assets/stylesheets/organisations.scss */
+.department-for-culture-media-and-sport {
+  border-color: #d40072;
+}
+
+/* line 80, ../../app/assets/stylesheets/organisations.scss */
+.department-for-education {
+  border-color: #003a69;
+}
+
+/* line 84, ../../app/assets/stylesheets/organisations.scss */
+.department-for-energy-and-climate-change {
+  border-color: #009ddb;
+}
+
+/* line 88, ../../app/assets/stylesheets/organisations.scss */
+.department-for-environment-food-and-rural-affairs {
+  border-color: #898700;
+}
+
+/* line 92, ../../app/assets/stylesheets/organisations.scss */
+.department-of-health {
+  border-color: #00ad93;
+}
+
+/* line 96, ../../app/assets/stylesheets/organisations.scss */
+.department-for-international-development {
+  border-color: #002878;
+}
+
+/* line 100, ../../app/assets/stylesheets/organisations.scss */
+.department-for-work-and-pensions {
+  border-color: #00beb7;
+}
+
+/* line 104, ../../app/assets/stylesheets/organisations.scss */
+.department-for-transport {
+  border-color: #006c56;
+}
+
+/* line 108, ../../app/assets/stylesheets/organisations.scss */
+.home-office {
+  border-color: #9325b2;
+}
+
+/* line 112, ../../app/assets/stylesheets/organisations.scss */
+.foreign-and-commonwealth-office {
+  border-color: #003e74;
+}
+
+/* line 116, ../../app/assets/stylesheets/organisations.scss */
+.ministry-of-defence {
+  border-color: #4d2942;
+}
+
+/* line 120, ../../app/assets/stylesheets/organisations.scss */
+.ministry-of-justice {
+  border-color: #231f20;
+}
+
+/* line 124, ../../app/assets/stylesheets/organisations.scss */
+.treasury {
+  border-color: #af292e;
+}
+
+/* visited link colour overrides */
+/* line 4, ../../app/assets/stylesheets/publisher.scss */
+#content.multi-page li a:visited,
+#content.multi-page .pagination li a:visited,
+#wrapper.programme .article-container nav a:visited {
+  color: #2E3191;
+}
+
+/* line 9, ../../app/assets/stylesheets/publisher.scss */
+#content.multi-page header {
+  position: relative;
+}
+/* line 13, ../../app/assets/stylesheets/publisher.scss */
+#content.multi-page article {
+  float: left;
+  margin-left: -13em;
+  min-height: 40em;
+  width: 100%;
+}
+/* line 23, ../../app/assets/stylesheets/publisher.scss */
+#content.multi-page article .inner {
+  margin-left: 13em;
+}
+/* line 33, ../../app/assets/stylesheets/publisher.scss */
+#content.multi-page aside {
+  float: left;
+  margin-bottom: 1em;
+  position: relative;
+  width: 13em;
+  z-index: 10;
+}
+/* line 40, ../../app/assets/stylesheets/publisher.scss */
+#content.multi-page aside .inner {
+  padding: 0;
+  width: 100%;
+}
+
+/* line 53, ../../app/assets/stylesheets/publisher.scss */
+.alternative-guide {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  margin: 0 auto 0.5em;
+  overflow: hidden;
+  width: 9.5em;
+}
+@media (max-width: 640px) {
+  /* line 53, ../../app/assets/stylesheets/publisher.scss */
+  .alternative-guide {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 66, ../../app/assets/stylesheets/publisher.scss */
+.alternative-guide.video .video-wrapper {
+  background: url(play-video-cta.png) no-repeat scroll 0 -80px #eaedef;
+  height: 5em;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+  width: 8.5em;
+}
+/* line 74, ../../app/assets/stylesheets/publisher.scss */
+.alternative-guide.video .video-wrapper:hover {
+  background: url(play-video-cta.png) no-repeat scroll 0 0 #eaedef;
+}
+/* line 78, ../../app/assets/stylesheets/publisher.scss */
+.alternative-guide.video .video-wrapper a span {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 2;
+  font-weight: 300;
+  text-transform: none;
+  display: block;
+  padding-left: 0.5em;
+}
+@media (max-width: 640px) {
+  /* line 78, ../../app/assets/stylesheets/publisher.scss */
+  .alternative-guide.video .video-wrapper a span {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 96, ../../app/assets/stylesheets/publisher.scss */
+.alternative-guide.video .video-wrapper img {
+  display: none;
+  margin-top: -0.5em;
+}
+
+/* line 112, ../../app/assets/stylesheets/publisher.scss */
+.video-guide article .inner {
+  padding-bottom: 2em;
+}
+/* line 116, ../../app/assets/stylesheets/publisher.scss */
+.video-guide .meta-data {
+  border-top: none;
+  margin: 1em 0 2em 2em;
+}
+
+/* line 122, ../../app/assets/stylesheets/publisher.scss */
+#wrapper.video-guide article {
+  /* get rid of border on video guide pages */
+  border-left: none;
+  margin-left: 0;
+  width: 100%;
+}
+
+/* line 129, ../../app/assets/stylesheets/publisher.scss */
+.multi-page article .inner {
+  padding: 0 3em 1em 3em;
+}
+
+/* line 136, ../../app/assets/stylesheets/publisher.scss */
+.licence article .inner {
+  padding-top: 0;
+}
+
+/* line 140, ../../app/assets/stylesheets/publisher.scss */
+aside .show-all-parts {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 2.36842;
+  font-weight: 400;
+  text-transform: none;
+  border: solid 1px #a1acb2;
+  border-width: 1px 0;
+  padding: 0 16px;
+  padding: 0 1.6rem;
+  display: none;
+}
+@media (max-width: 640px) {
+  /* line 140, ../../app/assets/stylesheets/publisher.scss */
+  aside .show-all-parts {
+    font-size: 1.6rem;
+    line-height: 3.46154;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 140, ../../app/assets/stylesheets/publisher.scss */
+  aside .show-all-parts {
+    background-image: url(accordian-arrow-2x.png);
+    background-size: 45px 90px;
+  }
+}
+/* line 162, ../../app/assets/stylesheets/publisher.scss */
+aside .show-all-parts, aside .show-all-parts:hover, aside .show-all-parts:focus {
+  text-decoration: none;
+}
+/* line 166, ../../app/assets/stylesheets/publisher.scss */
+aside .show-all-parts.show-all-parts-open {
+  background-position: 100% -40px;
+  background-position: 100% -4rem;
+  border-bottom: none;
+}
+
+/* line 179, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation ol {
+  margin: 0;
+  padding: 0;
+}
+/* line 188, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li {
+  border-bottom: solid 1px #a1acb2;
+  list-style: none;
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 188, ../../app/assets/stylesheets/publisher.scss */
+  aside .page-navigation li {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 203, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li a {
+  display: block;
+  padding: 0.75em 2em;
+  text-decoration: none;
+  zoom: 1;
+}
+/* line 209, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li a:hover {
+  background-color: #eaedef;
+}
+/* line 212, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li a:hover span.part-title {
+  color: #2E3191;
+}
+/* line 218, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li span {
+  display: block;
+}
+/* line 221, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li span.part-label {
+  color: #0b0c0c;
+  line-height: 1.5;
+}
+/* line 226, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li span.part-title {
+  color: #2E3191;
+  text-decoration: underline;
+  line-height: 1.25;
+}
+/* line 233, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li.active {
+  background-color: #dee0e2;
+  padding: 0.75em 2em;
+  margin: 0;
+}
+/* line 246, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li.active span.part-title {
+  color: #0b0c0c;
+  text-decoration: none;
+  font-weight: 400;
+}
+/* line 253, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation li:first-child {
+  border-top: solid 1px #a1acb2;
+}
+
+/* line 281, ../../app/assets/stylesheets/publisher.scss */
+aside .page-navigation-open ol {
+  position: static;
+  left: auto;
+}
+
+/* guides pagination */
+/* line 294, ../../app/assets/stylesheets/publisher.scss */
+.pagination {
+  display: block;
+  margin: 2em -1em 0 -1em;
+}
+/* line 302, ../../app/assets/stylesheets/publisher.scss */
+.pagination ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 307, ../../app/assets/stylesheets/publisher.scss */
+.pagination li {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 300;
+  text-transform: none;
+  float: left;
+  list-style: none;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  width: 48.5%;
+  background-color: #dee0e2;
+}
+@media (max-width: 640px) {
+  /* line 307, ../../app/assets/stylesheets/publisher.scss */
+  .pagination li {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 317, ../../app/assets/stylesheets/publisher.scss */
+.pagination li:first-child {
+  margin-right: 3%;
+  text-align: left;
+}
+/* line 322, ../../app/assets/stylesheets/publisher.scss */
+.pagination li a {
+  background-color: transparent;
+  display: block;
+  min-height: 4.5em;
+  text-decoration: none;
+}
+/* line 332, ../../app/assets/stylesheets/publisher.scss */
+.pagination li a:hover {
+  background-color: #97C5E5;
+  color: #fff;
+}
+/* line 337, ../../app/assets/stylesheets/publisher.scss */
+.pagination li a .pagination-label {
+  color: #0b0c0c;
+  display: block;
+}
+/* line 342, ../../app/assets/stylesheets/publisher.scss */
+.pagination li a .pagination-part-title {
+  text-decoration: underline;
+}
+/* line 347, ../../app/assets/stylesheets/publisher.scss */
+.pagination li.previous a {
+  padding: 0.75em 5% 0.75em 1em;
+}
+/* line 351, ../../app/assets/stylesheets/publisher.scss */
+.pagination li.next a {
+  padding: 0.75em 1em 0.75em 5%;
+}
+/* line 367, ../../app/assets/stylesheets/publisher.scss */
+.pagination .first,
+.pagination .last {
+  min-height: 4.5em;
+}
+/* line 374, ../../app/assets/stylesheets/publisher.scss */
+.pagination .first span,
+.pagination .last span {
+  display: block;
+  min-height: 4.5em;
+  padding: 0.75em 5%;
+  width: 90%;
+}
+/* line 385, ../../app/assets/stylesheets/publisher.scss */
+.pagination .first .pagination-label,
+.pagination .last .pagination-label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+/*
+ * Transactions and local transactions styles
+ */
+/* line 406, ../../app/assets/stylesheets/publisher.scss */
+.local_transaction .contact-container .contact {
+  margin: 0 -1em;
+}
+/* line 409, ../../app/assets/stylesheets/publisher.scss */
+.local_transaction .contact-container .contact p:first-child {
+  margin-top: 0;
+}
+
+/* line 416, ../../app/assets/stylesheets/publisher.scss */
+.find-location-for-service, .find-location-for-licence {
+  background: #eaedef url(http://static.dev.gov.uk/static/locator-icon.png) no-repeat 1em 1em;
+  min-height: 2em;
+  line-height: 2;
+  margin: 2em -1em 0 -1em;
+  padding: 1em 0.75em 1em 3.5em;
+  position: relative;
+}
+/* line 429, ../../app/assets/stylesheets/publisher.scss */
+.find-location-for-service p.geolocate-me, .find-location-for-licence p.geolocate-me {
+  border-top: 1px solid #a1acb2;
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  margin-bottom: 0;
+  padding-top: 1em;
+}
+@media (max-width: 640px) {
+  /* line 429, ../../app/assets/stylesheets/publisher.scss */
+  .find-location-for-service p.geolocate-me, .find-location-for-licence p.geolocate-me {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 443, ../../app/assets/stylesheets/publisher.scss */
+.find-location-for-service input[type="submit"], .find-location-for-licence input[type="submit"] {
+  border-color: #eaedef;
+}
+
+/* once we have added a class to external links generated by govspeak we can ditch this */
+/* line 449, ../../app/assets/stylesheets/publisher.scss */
+#wrapper .get-started a[rel="external"]:after {
+  content: "";
+}
+
+/* line 453, ../../app/assets/stylesheets/publisher.scss */
+#wrapper.transaction .get-started .button .indicator:after {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 27px;
+  font-size: 2.7rem;
+  line-height: 1.11111;
+  font-weight: 400;
+  text-transform: none;
+  margin-top: -0.5em;
+  position: absolute;
+  right: 0.5em;
+  top: 50%;
+}
+@media (max-width: 640px) {
+  /* line 453, ../../app/assets/stylesheets/publisher.scss */
+  #wrapper.transaction .get-started .button .indicator:after {
+    font-size: 1.8rem;
+    line-height: 1.11111;
+  }
+}
+
+/* line 461, ../../app/assets/stylesheets/publisher.scss */
+h1#what-you-need-to-know {
+  font-weight: 400;
+}
+
+/*
+ * Helper icons
+ */
+/* line 470, ../../app/assets/stylesheets/publisher.scss */
+ul.helpers li.active,
+ul.helpers li.active h3 a {
+  color: #fff;
+}
+
+/* line 477, ../../app/assets/stylesheets/publisher.scss */
+.js-enabled #wrapper.programme .part-pagination.return-to-top,
+.js-enabled #wrapper.programme article.tabs-panel {
+  display: none;
+}
+/* line 481, ../../app/assets/stylesheets/publisher.scss */
+.js-enabled #wrapper.programme article {
+  min-height: 20em;
+}
+
+/* line 495, ../../app/assets/stylesheets/publisher.scss */
+#wrapper.programme article.tabs-panel-selected,
+.js-enabled #wrapper.programme article.tabs-panel-selected {
+  display: block;
+}
+
+/* line 499, ../../app/assets/stylesheets/publisher.scss */
+div.further-information {
+  margin: 0;
+  clear: both;
+  padding-top: 2em;
+}
+/* line 508, ../../app/assets/stylesheets/publisher.scss */
+div.further-information a {
+  padding: 0 0 0 0.8em;
+}
+
+/* contacts popup */
+/* line 514, ../../app/assets/stylesheets/publisher.scss */
+#popup.contact-popup {
+  background-color: #F4F4F4;
+  padding: 1em 2em;
+  width: 50%;
+}
+
+/* line 520, ../../app/assets/stylesheets/publisher.scss */
+.contact-popup .contact {
+  width: auto;
+}
+
+/* ----- search results page ----- */
+/* Header
+============================================================================ */
+/* line 6, ../../app/assets/stylesheets/search.scss */
+#wrapper .ancillary.search header {
+  background-color: #fff;
+  color: inherit;
+  margin: 0;
+  padding-bottom: 0;
+}
+/* line 12, ../../app/assets/stylesheets/search.scss */
+#wrapper .ancillary.search header hgroup {
+  padding: 2.1875em 2.5em;
+}
+/* line 15, ../../app/assets/stylesheets/search.scss */
+#wrapper .ancillary.search header hgroup h1 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 48px;
+  font-size: 4.8rem;
+  line-height: 1.04167;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 15, ../../app/assets/stylesheets/search.scss */
+  #wrapper .ancillary.search header hgroup h1 {
+    font-size: 3.2rem;
+    line-height: 1.09375;
+  }
+}
+/* line 18, ../../app/assets/stylesheets/search.scss */
+#wrapper .ancillary.search header hgroup h1 em {
+  color: #2E3191;
+}
+
+/* line 25, ../../app/assets/stylesheets/search.scss */
+#wrapper .ancillary.section-page header h1 {
+  margin: 0 0 0 6.66667em;
+}
+
+/* line 29, ../../app/assets/stylesheets/search.scss */
+.search .nav-tabs {
+  padding: 0 2em;
+}
+
+/* line 43, ../../app/assets/stylesheets/search.scss */
+.search-container {
+  background: #fff;
+  margin: 0;
+}
+/* line 47, ../../app/assets/stylesheets/search.scss */
+.search-container .js-heading-tab h1 a {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+@media (max-width: 640px) {
+  /* line 47, ../../app/assets/stylesheets/search.scss */
+  .search-container .js-heading-tab h1 a {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+/* line 53, ../../app/assets/stylesheets/search.scss */
+.search-container .tab-pane {
+  padding: 1em 2em 0;
+  border-top: solid 1px #A1ACB2;
+  border-bottom: none;
+}
+/* line 63, ../../app/assets/stylesheets/search.scss */
+.search-container .single-item-pane {
+  border-top: none;
+}
+/* line 73, ../../app/assets/stylesheets/search.scss */
+.search-container ul {
+  padding-left: 0;
+  list-style: none;
+}
+/* line 78, ../../app/assets/stylesheets/search.scss */
+.search-container .internal-links {
+  float: left;
+  width: 55%;
+}
+/* line 88, ../../app/assets/stylesheets/search.scss */
+.search-container .recommended-links {
+  float: right;
+  width: 36%;
+  padding-top: 1em;
+}
+/* line 99, ../../app/assets/stylesheets/search.scss */
+.search-container .recommended-links h2 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0 0 1em 0;
+}
+@media (max-width: 640px) {
+  /* line 99, ../../app/assets/stylesheets/search.scss */
+  .search-container .recommended-links h2 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+
+/* line 112, ../../app/assets/stylesheets/search.scss */
+.search .js-tab-container:last-child .js-heading-tab,
+.search .js-tab-container:last-child .tabs-panel-selected {
+  border-bottom: none;
+}
+
+/* line 116, ../../app/assets/stylesheets/search.scss */
+.search .js-tab-container:last-child header.active {
+  border-bottom: solid 1px #A1ACB2;
+}
+
+/* Search results [this needs merging with "Results" section below!]
+============================================================================ */
+/* line 123, ../../app/assets/stylesheets/search.scss */
+.search .search-not-found {
+  background: #FDF6E5;
+  border: solid 2px #FFCD17;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  margin: 2em 2em 1em 2em;
+  text-align: center;
+}
+
+/* Search Form
+============================================================================ */
+/* line 136, ../../app/assets/stylesheets/search.scss */
+form.search-header {
+  background: #fff;
+  display: block;
+  padding: 1em 10.5em 1em 2em;
+}
+/* line 145, ../../app/assets/stylesheets/search.scss */
+form.search-header fieldset {
+  margin: 0;
+}
+/* line 149, ../../app/assets/stylesheets/search.scss */
+form.search-header label h1 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+@media (max-width: 640px) {
+  /* line 149, ../../app/assets/stylesheets/search.scss */
+  form.search-header label h1 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+/* line 161, ../../app/assets/stylesheets/search.scss */
+form.search-header #search-main {
+  font-size: 1em;
+  width: 12.63158em;
+  -webkit-appearance: none;
+}
+
+/* reset pesky webkit search styles */
+/* line 176, ../../app/assets/stylesheets/search.scss */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/* Results
+============================================================================ */
+/* line 182, ../../app/assets/stylesheets/search.scss */
+.search .results {
+  padding: 0;
+}
+/* line 185, ../../app/assets/stylesheets/search.scss */
+.search .results li.filtered {
+  display: none;
+}
+
+/* line 190, ../../app/assets/stylesheets/search.scss */
+.search .results-wrapper {
+  padding: 0;
+  margin-left: 20em;
+}
+/* line 194, ../../app/assets/stylesheets/search.scss */
+.search .results-wrapper h2 {
+  margin-top: 0;
+  margin-bottom: .5em;
+}
+/* line 199, ../../app/assets/stylesheets/search.scss */
+.search .results-wrapper .more-results {
+  text-align: right;
+}
+
+/* line 204, ../../app/assets/stylesheets/search.scss */
+.search .js-tab-pane {
+  overflow: hidden;
+}
+/* line 207, ../../app/assets/stylesheets/search.scss */
+.search .js-tab-pane li {
+  display: block;
+  list-style: none;
+  max-width: 32.5em;
+  padding: 0;
+  margin-bottom: 1.5em;
+  overflow: hidden;
+}
+/* line 223, ../../app/assets/stylesheets/search.scss */
+.search .js-tab-pane li li {
+  margin: 0;
+}
+/* line 227, ../../app/assets/stylesheets/search.scss */
+.search .js-tab-pane li a {
+  margin: 0;
+  padding: 0;
+}
+/* line 231, ../../app/assets/stylesheets/search.scss */
+.search .js-tab-pane li p {
+  margin: 0;
+  width: auto;
+}
+/* line 235, ../../app/assets/stylesheets/search.scss */
+.search .js-tab-pane li p.search-result-title {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 235, ../../app/assets/stylesheets/search.scss */
+  .search .js-tab-pane li p.search-result-title {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+/* line 240, ../../app/assets/stylesheets/search.scss */
+.search .js-tab-pane li ul.result-meta {
+  padding: 0;
+  margin: 0.3em 0 0;
+  line-height: 1.3;
+}
+/* line 249, ../../app/assets/stylesheets/search.scss */
+.search .js-tab-pane li ul.result-meta li {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  width: auto;
+  color: #6f777b;
+}
+@media (max-width: 640px) {
+  /* line 249, ../../app/assets/stylesheets/search.scss */
+  .search .js-tab-pane li ul.result-meta li {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 257, ../../app/assets/stylesheets/search.scss */
+.search .js-tab-pane li ul.result-meta li a,
+.search .js-tab-pane li ul.result-meta li a:focus,
+.search .js-tab-pane li ul.result-meta li a:hover,
+.search .js-tab-pane li ul.result-meta li a:active {
+  color: #A2A2A2;
+}
+/* line 261, ../../app/assets/stylesheets/search.scss */
+.search .js-tab-pane li ul.result-meta li a {
+  text-decoration: none;
+}
+/* line 265, ../../app/assets/stylesheets/search.scss */
+.search .js-tab-pane li ul.result-meta li a:hover {
+  text-decoration: underline;
+}
+/* line 271, ../../app/assets/stylesheets/search.scss */
+.search .js-tab-pane li ul.result-sections li {
+  display: inline;
+}
+/* line 274, ../../app/assets/stylesheets/search.scss */
+.search .js-tab-pane li ul.result-sections li.result-subsection, .search .js-tab-pane li ul.result-sections li.result-subsubsection {
+  background: transparent url("separator.png") 0 50% no-repeat;
+  padding-left: 1em;
+  margin-left: 0.5em;
+}
+
+/* Filters
+============================================================================ */
+/* line 285, ../../app/assets/stylesheets/search.scss */
+.filters {
+  float: left;
+  background-color: transparent;
+  margin-left: 2em;
+  width: 14em;
+}
+/* line 291, ../../app/assets/stylesheets/search.scss */
+.filters .group {
+  margin-bottom: 1.5em;
+}
+/* line 295, ../../app/assets/stylesheets/search.scss */
+.filters .inner {
+  padding-top: 0;
+}
+/* line 299, ../../app/assets/stylesheets/search.scss */
+.filters ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 304, ../../app/assets/stylesheets/search.scss */
+.filters ul li {
+  display: block;
+  margin: 0 -2px 0 -6px;
+}
+/* line 308, ../../app/assets/stylesheets/search.scss */
+.filters ul li.active a {
+  background-color: #999;
+  color: #fff;
+}
+/* line 315, ../../app/assets/stylesheets/search.scss */
+.filters ul li.transaction a, .filters ul li.smart_answer a, .filters ul li.guide a {
+  background-position: 0.1em 0.15em;
+  text-indent: 26px;
+}
+/* line 322, ../../app/assets/stylesheets/search.scss */
+.filters ul li.transaction a span, .filters ul li.smart_answer a span, .filters ul li.guide a span {
+  text-indent: 0;
+}
+/* line 326, ../../app/assets/stylesheets/search.scss */
+.filters ul li a {
+  border-radius: 2px;
+  display: block;
+  line-height: 1.55em;
+  padding: 4px 2px 2px 6px;
+  text-decoration: none;
+}
+/* line 333, ../../app/assets/stylesheets/search.scss */
+.filters ul li a:hover {
+  background-color: #eee;
+}
+/* line 337, ../../app/assets/stylesheets/search.scss */
+.filters ul li a span {
+  background-color: #fff;
+  border-radius: 1px;
+  color: #999;
+  display: block;
+  float: right;
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.375;
+  font-weight: 300;
+  text-transform: none;
+  margin-top: -2px;
+  min-width: 1.35em;
+  padding: 3px 4px 1px 4px;
+  text-align: center;
+  text-decoration: none;
+}
+@media (max-width: 640px) {
+  /* line 337, ../../app/assets/stylesheets/search.scss */
+  .filters ul li a span {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+
+/* No search results
+============================================================================ */
+/* line 358, ../../app/assets/stylesheets/search.scss */
+.no-results article {
+  margin: 0;
+  padding: 0 2em;
+  width: auto;
+}
+/* line 367, ../../app/assets/stylesheets/search.scss */
+.no-results article p {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 367, ../../app/assets/stylesheets/search.scss */
+  .no-results article p {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+
+/* line 2, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+section.campaign#content {
+  background-color: #fff;
+  padding-bottom: 3em;
+}
+/* line 7, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+section.campaign #extra-links {
+  float: left;
+  margin-left: 1em;
+  max-width: 960px;
+}
+/* line 16, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+section.campaign #extra-links p.introduction {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+/* line 21, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+section.campaign #extra-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 28, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+section.campaign #landing {
+  position: relative;
+  display: block;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 2.5em;
+  background-color: #fff;
+}
+/* line 41, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+section.campaign #landing h1,
+section.campaign #landing h2 {
+  color: #0b0c0c;
+}
+/* line 45, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+section.campaign #landing h1 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 48px;
+  font-size: 4.8rem;
+  line-height: 1.04167;
+  font-weight: 400;
+  text-transform: none;
+  padding-top: 10px;
+  padding-top: 1rem;
+  padding-bottom: 10px;
+  padding-bottom: 1rem;
+  float: left;
+  padding: 0.65em 0 0.4em 0.4em;
+  margin-left: -3px;
+  max-width: 700px;
+}
+@media (max-width: 640px) {
+  /* line 45, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+  section.campaign #landing h1 {
+    font-size: 3.2rem;
+    line-height: 1.09375;
+  }
+}
+/* line 67, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+section.campaign #landing p {
+  max-width: 662px;
+}
+
+/* line 74, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+.campaign-image {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 300px;
+}
+/* line 85, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+.campaign-image #banner {
+  display: block;
+  text-indent: -9999px;
+  width: 100%;
+  height: 300px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+/* line 110, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+.campaign-image .campaign-links {
+  position: absolute;
+  right: 2em;
+  bottom: 2em;
+  width: 240px;
+  background-color: #fff;
+}
+/* line 124, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+.campaign-image .campaign-links h2 {
+  margin: 0;
+  padding-bottom: 0.5em;
+}
+/* line 129, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+.campaign-image .campaign-links nav {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 136, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+.organisation {
+  float: right;
+  padding: 2.5em 2em 0 0;
+}
+
+/* line 161, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+article.campaign {
+  height: auto;
+  min-height: 0;
+  width: auto;
+  max-width: 95%;
+  margin: 0 1em;
+  padding: 0 2em 1em 0;
+  border-bottom: solid 1px #a1acb2;
+}
+/* line 170, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+article.campaign h2:first-of-type {
+  margin-top: 1.5em;
+}
+
+/* line 175, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+ul.links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 180, ../../app/assets/stylesheets/static-pages/campaigns.scss */
+ul.links li {
+  margin: 0;
+  padding: 0;
+}
+
+/* All error pages */
+/* line 5, ../../app/assets/stylesheets/static-pages/error-pages.scss */
+.error .intro {
+  background-color: #D5E8F3;
+  color: #0b0c0c;
+}
+/* line 11, ../../app/assets/stylesheets/static-pages/error-pages.scss */
+.error .search-box label {
+  display: block;
+}
+/* line 15, ../../app/assets/stylesheets/static-pages/error-pages.scss */
+.error .search-box input[type="text"], .error .search-box input[type="search"] {
+  background-color: #eaedef;
+  border: 2px inset;
+  font-size: 1em;
+  line-height: 1.2;
+  padding: 0.3em 0 0.1em 0.4em;
+  margin-left: 0;
+  width: 22em;
+}
+
+/* line 2, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour input[type="search"] {
+  width: 10em;
+}
+/* line 7, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour header.page-header hgroup {
+  padding-bottom: 0;
+  padding-left: 0;
+}
+/* line 11, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour header.page-header hgroup h1 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 48px;
+  font-size: 4.8rem;
+  line-height: 1.04167;
+  font-weight: 400;
+  text-transform: none;
+  width: 90%;
+  margin-bottom: 0.5em;
+}
+@media (max-width: 640px) {
+  /* line 11, ../../app/assets/stylesheets/static-pages/tour.scss */
+  .tour header.page-header hgroup h1 {
+    font-size: 3.2rem;
+    line-height: 1.09375;
+  }
+}
+/* line 21, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour header.page-header hgroup h2 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  color: inherit;
+  margin: 0;
+}
+@media (max-width: 640px) {
+  /* line 21, ../../app/assets/stylesheets/static-pages/tour.scss */
+  .tour header.page-header hgroup h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+/* line 29, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container {
+  background-color: #fff;
+  min-height: 35em;
+  padding: 0 2em 2em 2em;
+}
+/* line 33, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container #inside-government {
+  border-top: 1px solid #a1acb2;
+  margin-top: 2em;
+}
+/* line 37, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container .tour-video {
+  width: 625px;
+  float: left;
+  margin-bottom: 1.5em;
+}
+/* line 46, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container .tour-video #govuk-tour-video {
+  width: 625px;
+}
+/* line 52, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container .tour-video figure {
+  margin-bottom: 1em;
+}
+/* line 56, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container .tour-video figcaption {
+  clear: both;
+}
+/* line 58, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container .tour-video figcaption .video-transcript {
+  margin-top: 1em;
+}
+/* line 60, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container .tour-video figcaption .video-transcript p {
+  margin-bottom: 0.5em;
+}
+/* line 64, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container .tour-video figcaption p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* line 68, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container .tour-video figcaption a {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 68, ../../app/assets/stylesheets/static-pages/tour.scss */
+  .tour .tour-container .tour-video figcaption a {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 75, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container form {
+  margin-left: -0.5em;
+}
+/* line 79, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container .tour-intro {
+  float: right;
+  width: 31%;
+  margin-top: -1.3em;
+}
+/* line 94, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container .category-description {
+  margin-bottom: 2em;
+  width: 65.5%;
+}
+/* line 103, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container .category-description p {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  margin: 0;
+}
+@media (max-width: 640px) {
+  /* line 103, ../../app/assets/stylesheets/static-pages/tour.scss */
+  .tour .tour-container .category-description p {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 112, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 116, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container ul li {
+  list-style: none;
+  margin-bottom: 1em;
+  padding-left: 0;
+}
+/* line 120, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container ul li h2 {
+  margin-bottom: 0.55em;
+  margin-top: 0.5em;
+}
+/* line 124, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container ul li p {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  margin: 0 0 1em 0;
+  word-wrap: break-word;
+  padding-right: 1em;
+}
+@media (max-width: 640px) {
+  /* line 124, ../../app/assets/stylesheets/static-pages/tour.scss */
+  .tour .tour-container ul li p {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 130, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container ul li form {
+  padding-top: 1em;
+}
+/* line 139, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container ul.tour-topics {
+  padding: 0;
+  clear: both;
+}
+/* line 143, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container ul.tour-topics li {
+  border-top: solid 1px #a1acb2;
+  float: left;
+  margin-right: 3.5%;
+  margin-bottom: 1.5em;
+  width: 30%;
+  padding-bottom: 1.5em;
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  width: 30.5%;
+}
+/* line 151, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container ul.tour-topics li:nth-child(3n) {
+  margin-right: 0;
+}
+/* line 155, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container ul.tour-topics li:nth-child(3n+1) {
+  clear: left;
+}
+/* line 171, ../../app/assets/stylesheets/static-pages/tour.scss */
+.tour .tour-container ul.tour-topics li.last {
+  width: 30%;
+  margin-right: 0;
+}
+
+/* line 193, ../../app/assets/stylesheets/static-pages/tour.scss */
+.js-enabled .video-transcript {
+  display: none;
+}
+
+/* This is basically Smart Answers & Licence Finder & Finance Finder */
+/*
+ * questions
+ */
+/* line 6, ../../app/assets/stylesheets/multi-step.scss */
+.hint {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  display: block;
+}
+@media (max-width: 640px) {
+  /* line 6, ../../app/assets/stylesheets/multi-step.scss */
+  .hint {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+
+/* line 11, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions {
+  position: relative;
+}
+
+/* line 15, ../../app/assets/stylesheets/multi-step.scss */
+.start-again {
+  background: #fff;
+  position: absolute;
+  right: 0;
+  top: -2.5em;
+  height: 2.5em;
+  width: 11em;
+}
+/* line 23, ../../app/assets/stylesheets/multi-step.scss */
+.start-again a {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 2.10526;
+  font-weight: 400;
+  text-transform: none;
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+}
+@media (max-width: 640px) {
+  /* line 23, ../../app/assets/stylesheets/multi-step.scss */
+  .start-again a {
+    font-size: 1.6rem;
+    line-height: 3.07692;
+  }
+}
+/* line 29, ../../app/assets/stylesheets/multi-step.scss */
+.start-again a:hover {
+  text-decoration: none;
+}
+
+/* line 45, ../../app/assets/stylesheets/multi-step.scss */
+.question-number {
+  padding-right: 0.5em;
+}
+
+/* line 50, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions ol,
+.upcoming-questions ol {
+  background-color: #fff;
+  margin: 0;
+  padding: 0 0 0 1em;
+  position: relative;
+  z-index: 1;
+}
+/* line 57, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions ol li,
+.upcoming-questions ol li {
+  list-style: none;
+  position: relative;
+  padding: 0.75em 1.5em 0.75em 1em;
+}
+/* line 66, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions ol li h3,
+.upcoming-questions ol li h3 {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+}
+@media (max-width: 640px) {
+  /* line 66, ../../app/assets/stylesheets/multi-step.scss */
+  .done-questions ol li h3,
+  .upcoming-questions ol li h3 {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 70, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions ol li.done,
+.upcoming-questions ol li.done {
+  background: #D5ECEA;
+  border-bottom: solid 1px #b6d6d2;
+  overflow: hidden;
+  padding-right: 9.5em;
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+}
+/* line 76, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions ol li.done .answer,
+.upcoming-questions ol li.done .answer {
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  font-weight: 700;
+  color: #315843;
+  display: block;
+  margin: 0 0.5em 0 1em;
+}
+@media (max-width: 640px) {
+  /* line 76, ../../app/assets/stylesheets/multi-step.scss */
+  .done-questions ol li.done .answer,
+  .upcoming-questions ol li.done .answer {
+    font-size: 1.4rem;
+    line-height: 1.14286;
+  }
+}
+/* line 82, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions ol li.done .answer.multiple,
+.upcoming-questions ol li.done .answer.multiple {
+  display: block;
+}
+/* line 85, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions ol li.done .answer.multiple ul,
+.upcoming-questions ol li.done .answer.multiple ul {
+  margin-top: 0;
+}
+/* line 88, ../../app/assets/stylesheets/multi-step.scss */
+.done-questions ol li.done .answer.multiple ul li,
+.upcoming-questions ol li.done .answer.multiple ul li {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 107, ../../app/assets/stylesheets/multi-step.scss */
+.upcoming-questions ol li {
+  background-color: #f0e7d7;
+  border-bottom: solid 1px #dac39c;
+}
+
+/* line 113, ../../app/assets/stylesheets/multi-step.scss */
+.question .question-number {
+  font-weight: normal;
+}
+
+/* line 117, ../../app/assets/stylesheets/multi-step.scss */
+li.done .undo {
+  position: absolute;
+  top: 0.83333em;
+  right: 1.66667em;
+  margin: 0;
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.42857;
+  font-weight: 400;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-transform: none;
+  margin: 0;
+}
+@media (max-width: 640px) {
+  /* line 117, ../../app/assets/stylesheets/multi-step.scss */
+  li.done .undo {
+    font-size: 1.2rem;
+    line-height: 1.25;
+  }
+}
+/* line 133, ../../app/assets/stylesheets/multi-step.scss */
+li.done .undo a {
+  color: #2e3133;
+  display: block;
+}
+
+/* line 139, ../../app/assets/stylesheets/multi-step.scss */
+li.done .answer ul {
+  margin: 0.5em 0 0 -2.1em;
+  padding-left: 2.1em;
+}
+
+/* line 144, ../../app/assets/stylesheets/multi-step.scss */
+li.done:hover .undo a {
+  color: inherit;
+}
+
+/* line 148, ../../app/assets/stylesheets/multi-step.scss */
+.step.current {
+  background-color: #fff;
+  margin-right: 15em;
+  padding: 0 10em 1em 2em;
+  position: relative;
+}
+
+/* line 170, ../../app/assets/stylesheets/multi-step.scss */
+.question-body + p input.button {
+  margin-top: 0.5em;
+}
+
+/* line 174, ../../app/assets/stylesheets/multi-step.scss */
+.current-question {
+  padding: 1.5em 0 1em 0;
+}
+/* line 177, ../../app/assets/stylesheets/multi-step.scss */
+.current-question h2 {
+  border: none;
+  font-family: "nta", "GDS-Regular", sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1em;
+  position: relative;
+  line-height: 1.2em;
+}
+@media (max-width: 640px) {
+  /* line 177, ../../app/assets/stylesheets/multi-step.scss */
+  .current-question h2 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+}
+/* line 184, ../../app/assets/stylesheets/multi-step.scss */
+.current-question h2 .question-number {
+  padding-right: 0.25em;
+  font-weight: 400;
+}
+/* line 194, ../../app/assets/stylesheets/multi-step.scss */
+.current-question ul {
+  padding: 0;
+  /* this is so the bullets hang */
+  /* this is the multiple choice selector */
+}
+/* line 197, ../../app/assets/stylesheets/multi-step.scss */
+.current-question ul label {
+  margin-left: 0.25em;
+}
+/* line 201, ../../app/assets/stylesheets/multi-step.scss */
+.current-question ul select {
+  margin-right: 0.25em;
+}
+/* line 206, ../../app/assets/stylesheets/multi-step.scss */
+.current-question ul.options {
+  list-style: none;
+}
+/* line 209, ../../app/assets/stylesheets/multi-step.scss */
+.current-question ul.options li {
+  line-height: 1.5em;
+  margin: 0.5em 0;
+}
+/* line 217, ../../app/assets/stylesheets/multi-step.scss */
+.current-question ul.optional-date li fieldset {
+  display: inline;
+}
+
+/* line 223, ../../app/assets/stylesheets/multi-step.scss */
+.next-question {
+  margin: 1.5em 0 0.5em 0;
+}
+
+/*
+ * results / outcome
+ */
+/* line 231, ../../app/assets/stylesheets/multi-step.scss */
+.outcome {
+  background-color: #fff;
+  float: none;
+  margin-right: 0;
+  min-height: 480px;
+}
+/* line 237, ../../app/assets/stylesheets/multi-step.scss */
+.outcome .inner {
+  padding-top: 2em;
+}
+
+/* line 243, ../../app/assets/stylesheets/multi-step.scss */
+#wrapper.smart_answer .next-steps {
+  right: -15em;
+  top: 2em;
+}
+/* line 247, ../../app/assets/stylesheets/multi-step.scss */
+#wrapper.smart_answer .next-steps .inner {
+  padding-top: 0.5em;
+  padding-bottom: 1em;
+  padding-right: 1em;
+}
+/* line 252, ../../app/assets/stylesheets/multi-step.scss */
+#wrapper.smart_answer .next-steps .inner ul {
+  padding: 0;
+  list-style: none;
+  list-style-image: none;
+}
+/* line 257, ../../app/assets/stylesheets/multi-step.scss */
+#wrapper.smart_answer .next-steps .inner ul li {
+  font-size: 1em;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+/* line 273, ../../app/assets/stylesheets/multi-step.scss */
+.smart_answer .meta-data {
+  background: #fff;
+}
+
+/*
+ * errors messages
+ */
+/* line 280, ../../app/assets/stylesheets/multi-step.scss */
+article .error {
+  border: 1px solid #B01117;
+  background-color: #FFF3CF;
+  color: #B01117;
+  margin: 0 0 -0.5em -0.5em;
+  padding: 0.5em;
+}
+/* line 287, ../../app/assets/stylesheets/multi-step.scss */
+article .error ul {
+  margin-bottom: 0;
+}
+
+/* line 292, ../../app/assets/stylesheets/multi-step.scss */
+.error-message {
+  margin-top: 0;
+  color: #B01117;
+}
+
+/*
+ * calculators
+ */
+/* line 300, ../../app/assets/stylesheets/multi-step.scss */
+.calculator article {
+  min-height: 0;
+}
