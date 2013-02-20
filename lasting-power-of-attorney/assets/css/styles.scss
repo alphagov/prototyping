@@ -115,27 +115,52 @@ article table{
 
 // Intro panels for each question
 .section-intro{
-  @include panel($turquoise-25);
+  margin: 2em 0;
+  background: url(https://assets.digital.cabinet-office.gov.uk/static/icon-information-f78d8c1b10b141b5a9a8c7a40220c4a4.png) no-repeat scroll  97% 0.8em;
+  padding: 1em 3em 1em 1em;
+  border: 4px solid $light-blue-25;
+
+  //float: right;
+  //width: 38%;
+
+  :first-child{
+    margin-top: 0;
+  }
+}
+
+#create-donor .section-intro{
+  //float: right;
+  //width: 40%;
 }
 
 // Person summary
 .person-summary{
-  @include panel;
-  p{
-    float: left;
-    width: 50%;
+  background: url("/images/icon/person.png") no-repeat 0px 3px;
+  background-size: Auto 90%;
+  padding-left: 4em;
+  margin-bottom: 2em;
+  min-height: 4em;
+  h3, p{
+    margin: 0;
+  }
+  .person{
+    //display: inline-block;
+    //width: 70%;
   }
   .actions{
-    float: left;
+    display: inline-block;
+    width: 29%;
     margin: 0;
     padding: 0;
-    width: 50%;
+    .btn{
+      margin-top: 1.2em;
+    }
     li {
-      float: right;
+      //float: right;
       list-style-type: none;
       list-style-image: none;
       padding: 0;
-      margin: 0 0 0 1em;
+      margin: 0
     }
   }
 }
@@ -154,16 +179,14 @@ article table{
 
 // Add a person action 
 .add{
-  padding: 1em 0;
   &:before{
-    background-color: #28a197;
-    color: #FFF;
-    content:"+";
+    content: "+";
     float: left;
+    font-size: 24px;
     font-weight: bold;
     line-height: 0.9em;
-    padding: 0.1em 0.3em;
-    margin: 0.1em 0.5em 0 0;  
+    margin: 0.1em 0.5em 0 0;
+    margin-right: 0.5em; 
   }
 }
 
@@ -206,7 +229,11 @@ article table{
 
 // Basic form styles
 .form{
-  @include form(right, 9em);
+  @include form(right, 7em);
+  //@include form;
+  summary::-webkit-details-marker {
+    display: none
+  }
 }
 
 // Postcode lookup button
@@ -214,23 +241,8 @@ article table{
   vertical-align: top;
 }
 
-// Address list
-select.street{
-  width: 20em;
-  border: 1px inset;
-}
-select.street::-webkit-scrollbar {
--webkit-appearance:none !important;
-width: 1em !important;
-height: 2em;
-background-color:#ccc !important
-}
-select.street::-webkit-scrollbar-thumb {
-background-color:rgba(0,0,0,.5) !important;
-}
-
 // Show/Hide panel
-@include details-and-summary(highlighted);
+@include details-and-summary;
 
 // Hidden form controls
 @include hidden-form-controls;
@@ -366,7 +378,8 @@ article .inner{
 .accounts-form{
   @include form(top);
   input[type='text'],
-  input[type='email'] {
+  input[type='email'],
+  input[type='password'] {
     background: $white;
   }
 }
@@ -374,10 +387,13 @@ article .inner{
 
 .two-column{
   @include regular-grid(2);
-  form{
+  > div{
     background-color: $highlight-colour;
-    padding: 1em;
-    padding-top: 1px;
+    /*padding: 1em;*/
+    padding-top: 1em;
+  }
+  form{
+    padding: 0 1em;
   }
 }
 
@@ -461,12 +477,64 @@ article table{
   margin-left: -1em;
 }
 
-
-
-// ================================================================
-// HELP SYSTEM
-// ================================================================
-
-#opg-help-system {
-  display:none;
+#help-system{
+  display: none;
 }
+
+// LIST OF LPAs
+.lpa-list td{
+  vertical-align: middle;
+}
+.delete-lpa{
+  float: right;
+}
+
+
+
+// FORM POPUP STYLES
+
+#popup.form-popup{
+  @include popup(40%);
+  // Popup header style
+  .header{
+    padding: 1em 0 0.8em 2em;
+    margin: 0 0 0 -2em;
+    font-size: 19px;
+    font-weight: bold;
+    //border-bottom: 2px solid $border-colour;
+    background-color: $highlight-colour;
+    &.hidden{
+      display: block;
+      visibility: visible;
+    }
+  }
+  .close{
+    top: 0.5em;
+    right: 0.5em;
+  }
+  .popup-actions{
+    clear: both;
+    border-top: 2px solid $light-blue-25;
+    margin: 0 0 0 -2em;
+    padding: 1em 2em;
+  }
+}
+
+.accordion-content .person-form{
+  padding: 0em;
+  box-sizing: border-box;
+  margin: 2em 0;
+  width: 52.5%;
+}
+
+.pre-populate{
+  padding: 0 0 1em 8.5em;
+  border-bottom: 1px solid #EBEBEB;
+  margin: 1em 0 0 -2em;
+}
+
+
+.title select{
+  display: none;
+}
+

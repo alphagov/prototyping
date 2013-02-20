@@ -1,0 +1,69 @@
+---
+---
+
+// -----------------------------------------------------
+// Ubertable CSS
+//
+
+@import "colours";
+
+// A mixin to reset the current styles
+@mixin reset {
+  article table{
+    margin: 0;
+    width: auto;
+    td, th{
+      border: 0 solid;
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+
+// -----------------------------------------------------
+// OPTION 1: Just horizontal rules
+// 
+.option-1 {
+  @include reset;
+  article table{
+    margin-bottom: 2em;
+    width: 100%;
+    th{
+      border-bottom: 2px solid $border-colour;
+    }
+    td{
+      border-bottom: 1px solid $border-colour;
+    }
+    th, td{
+      padding: 0.5em 0;
+    }
+  }
+}
+
+// -----------------------------------------------------
+// OPTION 2: Horizontal rules + background
+// 
+.option-2 {
+  @include reset;
+  article h3 + table{
+    margin-top: 2em;
+  }
+  article table{
+    width: 100%;
+    margin: 1.5em 0 2.5em 0;
+    background-color: $highlight-colour;
+    outline: 1em solid $highlight-colour;
+    th, td{
+      padding: 0.5em 0;
+    }
+    th{
+      padding-top: 0;
+      border-bottom: 2px solid $border-colour;
+    }
+    td{
+      border-bottom: 1px solid $border-colour;
+    }
+  }
+}

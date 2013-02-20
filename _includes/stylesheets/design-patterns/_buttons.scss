@@ -23,7 +23,8 @@
     top: 2px;
     @include box-shadow(0 0 0 $colour);
   }
-  &.disabled {
+  &.disabled,
+  &[disabled] {
     opacity: 0.5;
     &:hover{
       cursor: default;
