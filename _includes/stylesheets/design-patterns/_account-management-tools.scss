@@ -4,7 +4,8 @@
 // Standard account management toolbar that runs across the top of your application
 // 
 
-@import "_colours";
+// From the toolkit
+@import "colours";
 
 @mixin account-management-tools{
   .account-management-tools{

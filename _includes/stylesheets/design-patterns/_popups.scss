@@ -1,6 +1,10 @@
 // =======================================================
 // POPUPS
 
+// From the toolkit
+@import "colours";
+
+
 @mixin popup($width: 70%, $height: 26em){
   width: $width;
   margin: 2em auto 20em auto;

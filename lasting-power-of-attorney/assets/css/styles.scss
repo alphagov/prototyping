@@ -1,8 +1,14 @@
 ---
 ---
 
+// From the toolkit
 @import "colours";
+@import "css3";
 @import "typography";
+@import "conditionals";
+@import "shims";
+
+// Design patterns
 @import "design-patterns/show-hide";
 @import "design-patterns/regular-grid";
 @import "design-patterns/popups";

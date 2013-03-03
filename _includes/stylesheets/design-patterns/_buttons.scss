@@ -1,7 +1,8 @@
 // Shamelessly 'inspired' by Whitehall
 
-@import "css3";
+// From the toolkit
 @import "colours";
+@import "css3";
 
 @mixin button($colour){
   background: $colour ;

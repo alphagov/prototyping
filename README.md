@@ -1,9 +1,9 @@
 Prototyping
 ===========
 
-Use this app to make your protype static apps in!
+Quickly create static prototypes for GOV.UK.
 
-It uses jekyll - https://github.com/mojombo/jekyll - to generate static files generated from templates.
+Built using [Jekyll](https://github.com/mojombo/jekyll).
 
 ## How to make a new prototype and configuration
 
@@ -41,7 +41,7 @@ Bosh!
 ## Prerequisites & installation
 
 Needs Ruby 1.9.x (not installed by default on OS X 10.7, but GDS dev build includes it)
-& jekyll
+& Jekyll
 
 Follow this process to get up to speed:
 
@@ -106,14 +106,16 @@ We might want to think about putting on a password at some point.
 
 ## Using Sass
 
-'.scss' files will be converted to their '.css' counterparts in the generated site. If you import 'frontend_toolkit.scss' to your .scss file you'll also have access to all the mixins from GOV.UK Frontend Toolkit repo. If you want access to the mixins from the draft design patterns library you'll need to import 'design_patterns.scss' as well.
+'.scss' files will be converted to their '.css' counterparts in the generated site. By default the Sass converter looks in `/_includes/stylesheets` and `/assets/toolkit/stylesheets` to resolve @import requests.
 
-Finally, in order for .scss conversion to work with Jekyll you'll need to start each '.scss' file with empty YAML front matter. Put this all together and you get a .scss file that starts like this:
+If you want to use the [GOV.UK Frontend Toolkit](https://github.com/alphagov/govuk_frontend_toolkit) Sass, then add the repo as a submodule to `/assets/toolkit` like this:
 
-    ---
-    ---
-    @import "frontend_toolkit";
-    @import "design_patterns";
+    git submodule add git@github.com:alphagov/govuk_frontend_toolkit.git assets/toolkit
+    git submodule init
+    git submodule update
+
+
+Finally, in order for .scss conversion to work with Jekyll you'll need to start each '.scss' file with empty YAML front matter. 
 
 ## Sharing CSS code
 

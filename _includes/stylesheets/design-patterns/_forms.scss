@@ -5,7 +5,16 @@
 // and OS. This can throw out alignments by a few px.
 // The styles are currently optimised for Chrome OS X.
 
+// From the toolkit
+@import "colours";
+@import "css3";
+@import "typography";
+@import "conditionals";
+@import "shims";
+
 @import "design-patterns/buttons";
+@import "design-patterns/panels";
+@import "design-patterns/show-hide";
 
 @mixin form($label-alignment: top, $label-width: 8em, $legend-colour: $text-colour) {
 
