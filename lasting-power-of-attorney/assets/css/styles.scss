@@ -230,11 +230,12 @@ article table{
 .duplicate-role-alert {
   border: 3px solid #DF3034;
   box-sizing: border-box;
-  padding: 1em 1em 0.25em 1em;
+  padding: 1em;
   margin: 1em 1.5em 1.5em 0em;
   background-color: #FEF7F7;
   label{
     width: auto;
+    display: inline;
   }
 }
 
@@ -248,6 +249,21 @@ article table{
 }
 .address-list{
   width: 16em;
+}
+#popup .address-fields-link {
+  margin-left: 10.3em;
+  overflow: hidden;
+  list-style-type: none;
+  list-style-image: none;
+  li{
+    float: left;
+    line-height: 1em;
+    &:nth-child(2){
+      padding-left: 0.5em;
+      border-left: 1px solid $border-colour;
+      margin-left: 0.5em;
+    }
+  }
 }
 
 

@@ -5,13 +5,7 @@
 // and OS. This can throw out alignments by a few px.
 // The styles are currently optimised for Chrome OS X.
 
-@import 'typography';
-@import "colours";
-@import "panels";
-@import "buttons";
-@import "shims";
-@import "conditionals";
-@import "design-patterns/show-hide";
+@import "design-patterns/buttons";
 
 @mixin form($label-alignment: top, $label-width: 8em, $legend-colour: $text-colour) {
 
@@ -117,6 +111,7 @@
   .inline .group {
     float: left;
     margin-top: 0;
+    width: auto;
   }
 
   // Legends and fieldsets
@@ -273,11 +268,7 @@
         }
         // Shift controls up
         // To do: Make this work properly for non-inline option groups
-          .inline {
-            .group,
-            &.option label{
-              //margin-top: -1.5em;
-            }        
+          .inline {       
             .group{
               margin-bottom: 0.5em;
             }
