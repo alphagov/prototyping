@@ -3,9 +3,7 @@
 <!--<![endif]--><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>The National Scholarship Programme - Widening participation in higher education - Policies  - Inside Government - GOV.UK</title>
-<script type="text/javascript">
-      (function(){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();
-    </script><!--[if gt IE 8]><!--><link href="https://assets.digital.cabinet-office.gov.uk/static/header-footer-only-c5343a59747378b1e6a3ce409d5c797b.css" media="screen" rel="stylesheet" type="text/css">
+<!--[if gt IE 8]><!--><link href="https://assets.digital.cabinet-office.gov.uk/static/header-footer-only-c5343a59747378b1e6a3ce409d5c797b.css" media="screen" rel="stylesheet" type="text/css">
 <!--<![endif]--><!--[if IE 6]><link href="https://assets.digital.cabinet-office.gov.uk/static/header-footer-only-c5343a59747378b1e6a3ce409d5c797b.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 7]><link href="https://assets.digital.cabinet-office.gov.uk/static/header-footer-only-c5343a59747378b1e6a3ce409d5c797b.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 8]><link href="https://assets.digital.cabinet-office.gov.uk/static/header-footer-only-c5343a59747378b1e6a3ce409d5c797b.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><link href="https://assets.digital.cabinet-office.gov.uk/static/print-a250641f33ac06dba78975b0c65f8ac9.css" media="print" rel="stylesheet" type="text/css">
 <!--[if IE 8]>
 <script type="text/javascript">
@@ -136,7 +134,7 @@
       -webkit-transition: 0.3s ease;
     }
     
-    #test-nav-govuk #site-search-text:focus {
+    #test-nav-govuk .clicked #site-search-text {
       background: rgba(255,255,255,1);
       outline: none;
     }
@@ -187,7 +185,13 @@
       display: inline;
       font-size: 16px;
       line-height: 25px;
-      color: white;
+      color: #eee;
+    }
+    
+    @media (max-width: 850px) {
+      #test-nav-whitehall li {
+        font-size: 14px;
+      }
     }
     
   
@@ -202,9 +206,9 @@
 
         <a href="#search" class="button search-toggle">Search</a>
 
-        <form id="search" class="site-search" action="/search" method="get" role="search">
-          <label for="site-search-text" class="visuallyhidden">Search</label>
-          <input type="search" name="q" id="site-search-text" title="Search"><button type="submit" value="Search"><input type="hidden" name="tab" value="government-results">
+        <form id="xsearch" class="site-search" action="/search" method="get" role="search">
+          <label for="xsite-search-text" class="visuallyhidden">Search</label>
+          <input type="search" name="q" id="xsite-search-text" title="Search"><button type="submit" value="Search"><input type="hidden" name="tab" value="government-results">
 </form>
       </div>
     </header><!--end header--><div id="global-cookie-message">
@@ -218,8 +222,6 @@
     
 
       <div class="header-context group"><!-- deliberately empty --></div>
-        
-        
         
         
         
@@ -453,32 +455,27 @@ The National Scholarship Programme is open only to English higher education inst
       </div>
     </footer><!--end footer--><div id="global-app-error" class="app-error hidden"></div>
 
-    <script src="https://assets.digital.cabinet-office.gov.uk/static/libs/jquery/jquery-1.7.2-2ce4706f8f7193defaa9e7df2b641e9a.js" type="text/javascript"></script><script defer src="https://assets.digital.cabinet-office.gov.uk/static/header-footer-only-a9764c803973383a7e6bf81690b9eef0.js" type="text/javascript"></script><script id="ga-params" type="text/javascript">
-  var GOVUK = GOVUK || {};
-  GOVUK.Analytics = GOVUK.Analytics || {};
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-26179049-1']);
-  if(document.domain=='www.gov.uk') {
-    _gaq.push(['_setDomainName', '.www.gov.uk']);
-  } else {
-    _gaq.push(['_setDomainName', document.domain]);
-  }
-  _gaq.push(['_setAllowLinker', true]);
-    // track pixel density ratio
-  if (window.devicePixelRatio) {
-    _gaq.push(['_setCustomVar', 11, 'Pixel Ratio', String(window.devicePixelRatio), 2 ]);
-  }
-_gaq.push(["_setCustomVar",9,"Organisations","<D3>",3]);
-GOVUK.Analytics.Organisations = "<D3>";
-_gaq.push(["_setCustomVar",2,"Format","policy",3]);
-GOVUK.Analytics.Format = "policy";</script><script type="text/javascript">
-  _gaq.push(['_gat._anonymizeIp']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script><script src="https://assets.digital.cabinet-office.gov.uk/government/assets/application-c28769f74ab5df16f0a8100fe5f99a08.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    
+    searchClick();
+    
+    function searchClick(){
+    //  alert('onload');
+      
+      document.getElementById('site-search-text').onclick=searchModify;
+    }
+    
+    function searchModify(){
+      //alert('clicked');
+       
+      document.getElementById('search').className="site-search clicked";
+    }
+      
+ 
+    </script>
+
+
+
 </body>
 </html>
