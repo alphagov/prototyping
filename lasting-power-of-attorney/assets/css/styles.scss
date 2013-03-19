@@ -1,8 +1,14 @@
 ---
 ---
 
+// From the toolkit
 @import "colours";
+@import "css3";
 @import "typography";
+@import "conditionals";
+@import "shims";
+
+// Design patterns
 @import "design-patterns/show-hide";
 @import "design-patterns/regular-grid";
 @import "design-patterns/popups";
@@ -11,23 +17,45 @@
 @import "design-patterns/account-management-tools";
 @import "design-patterns/accordion-form";
 @import "design-patterns/help-popup";
+@import "design-patterns/tooltip";
 
 // ===========================================================
-// GLOBAL STYLES
+// TEMPLATE ADJUSTMENTS
 // ===========================================================
 
 header.page-header hgroup {
   margin-right: 0 /* Extend page header out to end of search button */
 }
-article .inner{
-  padding-right: 2em;
-}
+
+// Better table style
 article table{
-  width: 103.95%;
+  // Reset mainstream table styles
+  margin: 0;
+  width: auto;
+  td, th{
+    border: 0 solid;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+  }
+
+  // New table styles
+  margin-bottom: 2em;
+  width: 100%;
+  th{
+    border-bottom: 2px solid $border-colour;
+  }
+  td{
+    border-bottom: 1px solid $border-colour;
+  }
+  th, td{
+    padding: 0.5em 0;
+  }
 }
-.document-list{
-  @include panel;
-  margin-top: 2em;
+
+// Adjust header logo. Should be able to remove this at some point.
+#global-header #logo img {
+  height: 200%;
 }
 
 // ===========================================================
@@ -42,47 +70,7 @@ article table{
 
 
 // ===========================================================
-// FORMS
-// ===========================================================
-
-.secondary-action .button{
-  background-color: #E1E8E8;
-  color: #083640;
-  -webkit-box-shadow: 0 4px 0 #AAA, 0 8px 10px rgba(0, 0, 0, .05);
-  -moz-box-shadow: 0 4px 0 #AAA, 0 8px 10px rgba(0,0,0,.05);
-  box-shadow: 0 3px 0 #AAA, 0 8px 10px rgba(0, 0, 0, 0.05);
-}
-.secondary-action .button:hover{
-  background-color: #e3e3e3;
-}
-.form-actions{
-  list-style-image: none;
-  padding: 0;
-  margin: 0;
-}
-.form-actions li{
-  float: left;
-  list-style-type: none;
-  padding: 0;
-  margin: 0 0.5em 0 0;
-}
-
-
-// ===========================================================
-// MODAL ALERT
-// ===========================================================
-
-#popup.modal-alert{
-  @include popup(40%, 8em);
-}
-#popup p,
-#popup li{
-  @include core-19;
-}
-
-
-// ===========================================================
-// ACCORDION
+// ACCORDION FORM
 // ===========================================================
 
 // Generic accordion form styles
@@ -115,56 +103,43 @@ article table{
 
 // Intro panels for each question
 .section-intro{
-  @include panel($turquoise-25);
+  margin: 2em 0;
+  background: url(https://assets.digital.cabinet-office.gov.uk/static/icon-information-f78d8c1b10b141b5a9a8c7a40220c4a4.png) no-repeat scroll  97% 0.8em;
+  padding: 0 3em 0.5em 1em;
+  border: 4px solid $light-blue-25;
 }
 
 // Person summary
 .person-summary{
-  @include panel;
-  p{
-    float: left;
-    width: 50%;
+  background: url("/images/icon/person.png") no-repeat 0px 3px;
+  background-size: Auto 4.2em;
+  padding-left: 4em;
+  margin-bottom: 2em;
+  min-height: 4em;
+  border-bottom: 1px solid $border-colour;
+  padding-bottom: 1em;
+  h3, p{
+    margin: 0;
   }
+}
   .actions{
-    float: left;
+    display: inline-block;
     margin: 0;
     padding: 0;
-    width: 50%;
+    .btn{
+      margin-top: 1.2em;
+    }
     li {
-      float: right;
       list-style-type: none;
       list-style-image: none;
       padding: 0;
-      margin: 0 0 0 1em;
+      margin: 0 1em 0 0;
+      display: inline-block;
     }
   }
-}
-
-// Signatures
-.form .capture-dates{
-  width: 103.5%;
-  td, th {
-    @include core-19;
-    vertical-align: middle;
-  }
-  label{
-    width: 6em;
-  }
-}
-
-// Add a person action 
-.add{
-  padding: 1em 0;
-  &:before{
-    background-color: #28a197;
-    color: #FFF;
-    content:"+";
-    float: left;
-    font-weight: bold;
-    line-height: 0.9em;
-    padding: 0.1em 0.3em;
-    margin: 0.1em 0.5em 0 0;  
-  }
+.add-another{
+    //padding-left: 4em;
+    margin-bottom: 2em;
 }
 
 // 'Not sure what to put?' links
@@ -174,286 +149,21 @@ article table{
 }
 
 
-// ================================
-// POP-UP WINDOW STYLES
-// ================================
-
-#popup.form{
-  @include popup(38em);
-  .content{
-    margin-top: -2.5em;
-    // Popup header style
-    h1{
-      padding: 0.8em 1em;
-      background-color: $highlight-colour;
-      margin: 1em -1em;
-    }
-    // Popup footer style
-    .save-details{
-      background-color: $highlight-colour;
-      padding: 1.25em 1.25em 1em 9.5em;
-      margin: 1em -1.25em -0.85em -1.25em;
-    }
-  }
-}
 
 
 
+// ===========================================================
+// CONFIRMATION SCREEN
+// ===========================================================
 
-// ================================================================
-// FORMS
-// ================================================================
-
-// Basic form styles
-.form{
-  @include form(right, 9em);
-}
-
-// Postcode lookup button
-.postcode-lookup{
-  vertical-align: top;
-}
-
-// Address list
-select.street{
-  width: 20em;
-  border: 1px inset;
-}
-select.street::-webkit-scrollbar {
--webkit-appearance:none !important;
-width: 1em !important;
-height: 2em;
-background-color:#ccc !important
-}
-select.street::-webkit-scrollbar-thumb {
-background-color:rgba(0,0,0,.5) !important;
-}
-
-// Show/Hide panel
-@include details-and-summary(highlighted);
-
-// Hidden form controls
-@include hidden-form-controls;
-
-// Emphasised form controls
-@include emphasised-form-controls;
-
-
-// Make standard body text look like a link
-.link-style{
-  color: #2E3191;
-  text-decoration: underline;
-  cursor: pointer;
-  &:hover{
-    color: #2E8ACA;
-  }
-}
-
-// ==========================================
-// LPA REGISTRATION STYLES
-
-.capture-dates .controls label{
-  margin-top: -2em;
-}
-.capture-dates h3{
-  font-size: 1.1875em;
-}
-.capture-dates .controls label,
-.capture-dates h3{
-  font-weight: bold;
-}
-.capture-dates .control-label{
-  text-align: left;
-}
-.card-images{
-  display: inline-block;
-  line-height: 4em;
-  height: 2em;
-  margin: -1em 0 0 0.5em;
-}
-.card-images img{
-  width: 2em;
-  margin-top: 0.5em;
-}
-#donor-signature{
-  padding-left: 0;
-}
-
-
-
-// FORM DOWNLOAD PANEL
-
-// We need to change the styles in application.css so they apply to elements  
-// outside of the application div (eg. popups)
-
-.form-download {
-  background-color:#d5e8f3;
-  margin: 1em -1em 1.5em -1em;
-  padding: 0.25em 1em 0.25em 1em;
-}
-.form-download{
-  background: url(https://d17tffe05zdvwj.cloudfront.net/static/icon-file-download-00b5dbb3ea8a18c444a08497b3d03d56.png) no-repeat scroll 98% 1em #D5E8F3;
-}
-.form-download p {
-  padding-right:3em;
-}
-.form-download a {
-  color: #000;
-  display: block;
-}
-#sign-in-reminder{
-  padding-left: 0;
-}
-
-
-// Tooltip
-
-.tooltip {
-  outline: none;
-  color: $black;
-  text-decoration: none;
-  border-bottom: 1px dashed;
-  &:hover{
-    text-decoration: none;
-    border-bottom: none;
-    cursor: pointer;
-    &:after{
-      content: "\25C0";
-      display: block;
-      text-decoration: none;
-      color: black;
-      z-index: 11;
-      margin-left: 10px;
-    }
-    span{
-      display: inline;
-      position: absolute;
-      color: #EEE;
-      background: #0B0C0C;
-    }
-  }
-  span {
-    z-index: 10;
-    display: none;
-    padding: 1em;
-    margin-top: -50px;
-    margin-left: 22px;
-    width:240px;    
-    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.3);
-  }
-}
-
-
-// Prototype-only styles
-
-#later-attorney-example{
-  display: none;
-}
-
-article .inner{
-  padding-right: 2em;
-  & > *:first-child{
-    margin-top: 0;
-  }
-}
-
-/* ================================================================
- * ACCOUNT FORMS
- * ================================================================
- */
-
-
-.accounts-form{
-  @include form(top);
-  input[type='text'],
-  input[type='email'] {
-    background: $white;
-  }
-}
-
-
-.two-column{
-  @include regular-grid(2);
-  form{
-    background-color: $highlight-colour;
-    padding: 1em;
-    padding-top: 1px;
-  }
-}
-
-/* ================================================================
- * PROCESS OVERVIEW
- * ================================================================
- *
- * The three-panelled diagrams that explain the LPA process 
- */
-
-.process.overview{
-  @include regular-grid(3, 16em);
-}
-
-.process.overview > li{
-  background-color: $highlight-colour;
-  display: table-cell;
-}
-
-.process img{
-  margin: 1em;
-  max-width: 9em;
-  width: 100%;
-  margin: 1em;
-}
-.process li h3{
-  background-color: $green-25;
-  margin: 0 0 1em 0;
-  padding: 0.5em 1em;
-}
-
-.process.overview figure{
-  text-align: center;
-  padding: 0 0.5em;
-}
-
-.process figcaption a{
-  display: block;
-}
-.process .btn{
-  display: block;
-  width: 75%;
-  margin: 1em auto;
-  text-align: center;
-}
-
-/* ================================================================
- * DASHBOARD
- * ================================================================
- *
- */
-
-.dashboard-intro{
-  @include panel;
-}
-
-.ref{
-  display: block;
-}
-
-.status{
-  width: 8em;
-}
-
-.LPA-list .button{
-  top: 0.5em;
-}
-
-
+// Document list
 .document-list{
   @include panel;
   margin-top: 2em;
 }
 
-article table{
-  width: 103.95%;
+.LPA-list .button{
+  top: 0.5em;
 }
 
 .address.vcard{
@@ -464,9 +174,304 @@ article table{
 
 
 // ================================================================
-// HELP SYSTEM
+// FORMS
 // ================================================================
 
-#opg-help-system {
-  display:none;
+// Basic form styles
+.form{
+  @include form(left, 8em);
 }
+
+// Show/Hide panel
+@include details-and-summary;
+
+// Hidden form controls
+@include hidden-form-controls;
+
+// Emphasised form controls
+@include emphasised-form-controls;
+
+// Link-style text
+.link-style{
+  color: $link-colour;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover{
+    color: $link-hover-colour;
+  }
+}
+
+// '+' icons style for 'Add' buttons
+.add:before {
+  content: "+";
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 0.9em;
+  margin: 0.1em 0.25em 0 0;
+}
+
+
+// Title dropdown ('Mr', Mrs. etc.)
+.title select{
+  display: none;
+}
+
+.role-select{
+  overflow: auto;
+  border-bottom: 1px solid $border-colour;
+  margin: 0 0 0 -1.25em;
+  padding: 1em 0 1em 1.25em;
+  background: $highlight-colour;
+  a{
+    @include core-16;
+  }
+  select{
+    min-width: 11.5em;
+  }
+}
+
+// Duplicate role alert
+
+.duplicate-role-alert {
+  border: 3px solid #DF3034;
+  box-sizing: border-box;
+  padding: 1em;
+  margin: 1em 1.5em 1.5em 0em;
+  background-color: #FEF7F7;
+  label{
+    width: auto;
+    display: inline;
+  }
+}
+
+// Address and postcode-lookup
+#address-postcode,
+#postcode-lookup{
+  width: 6.3em;
+}
+.postcode-lookup{
+  vertical-align: top;
+}
+.address-list{
+  width: 16em;
+}
+#popup .address-fields-link {
+  margin-left: 10.3em;
+  overflow: hidden;
+  list-style-type: none;
+  list-style-image: none;
+  li{
+    float: left;
+    line-height: 1em;
+    &:nth-child(2){
+      padding-left: 0.5em;
+      border-left: 1px solid $border-colour;
+      margin-left: 0.5em;
+    }
+  }
+}
+
+
+// Make hints the same width as text fields
+#popup.form-popup .hint{
+  width: 19em;
+}
+
+#attorneyActDecisions,
+.details-textbox textarea{
+  background-color: #F9F9F9;
+  padding: 0.1em 0 0.1em 0.4em;
+  width: 98.5%;
+  height: 20em;
+  margin-bottom: 1em;
+}
+
+
+.relationship-other{
+  margin: -2em 0 1em 8.5em;
+  label{
+    display: block;
+    font-size: 16px;
+  }
+  input{
+    margin-left: 0;
+  }
+}
+
+// ===========================================================
+// PERSON FORM POP-UP 
+// ===========================================================
+
+// Pre-populate form link - not required for live version
+#form-populate{
+  float: right;
+  padding: 1em 4em;
+}
+
+// Person form popup
+#popup.form-popup{
+  @include popup(38em);
+  // Header
+  .header{
+    background: url("/images/icon/person.png") no-repeat 27px 17px;
+    background-size: 2.5%;
+    padding-left: 3em;
+    font-weight: bold;
+  }
+  // Action buttons at bottom of popup
+  .action.group{
+    padding-left: 10em;
+    .btn{
+      margin-right: 4.5em;
+    }
+  }
+}
+
+.person-form{
+  position: relative;
+  input[type="text"]{
+    width: 15em;
+  }
+}
+
+
+// ===========================================================
+// REGISTER LPA
+// ===========================================================
+
+// Capture signature dates
+.form .capture-dates{
+  width: 103.5%;
+  td, th {
+    @include core-19;
+    vertical-align: middle;
+  }
+  label{
+    width: 6em;
+  }
+  .controls label{
+    margin-top: -2em;
+  }
+  h3{
+    font-size: 1.1875em;
+  }
+  .controls label,
+  h3{
+    font-weight: bold;
+  }
+  .control-label{
+    text-align: left;
+  }
+}
+.card-images{
+  display: inline-block;
+  line-height: 4em;
+  height: 2em;
+  margin: -1em 0 0 0.5em;
+  img{
+    width: 2em;
+    margin-top: 0.5em;
+  }
+}
+#donor-signature{
+  padding-left: 0;
+}
+
+// FORM DOWNLOAD PANEL
+
+// We need to change the styles in application.css so they apply to elements  
+// outside of the application div (eg. popups)
+
+.form-download {
+  background: url(https://d17tffe05zdvwj.cloudfront.net/static/icon-file-download-00b5dbb3ea8a18c444a08497b3d03d56.png) no-repeat scroll 98% 1em #D5E8F3;
+  margin: 1em -1em 1.5em -1em;
+  padding: 0.25em 1em 0.25em 1em;
+  p {
+    padding-right:3em;
+  }
+  a {
+    color: #000;
+    display: block;
+  }
+}
+#sign-in-reminder{
+  padding-left: 0;
+}
+
+
+/* ================================================================
+ * PROCESS OVERVIEW
+ * ================================================================
+ *
+ * The three-panelled diagrams that explain the LPA process 
+ */
+
+.process.overview{
+  @include regular-grid(3, 16em);
+  > li{
+    background-color: $highlight-colour;
+    display: table-cell;
+  }
+  figure{
+    text-align: center;
+    padding: 0 0.5em;
+  }
+}
+
+.process{
+  img{
+    margin: 1em;
+    max-width: 9em;
+    width: 100%;
+    margin: 1em;
+  }
+  li h3{
+    background-color: $green-25;
+    margin: 0 0 1em 0;
+    padding: 0.5em 1em;
+  }
+  figcaption a{
+    display: block;
+  }
+  .btn{
+    display: block;
+    width: 75%;
+    margin: 1em auto;
+    text-align: center;
+  }
+}
+
+
+/* ================================================================
+ * ACCOUNT MANAGEMENT AND DASHBOARD
+ * ================================================================
+ */
+
+
+.accounts-form{
+  @include form(top);
+  input[type='text'],
+  input[type='email'],
+  input[type='password'] {
+    background: $white;
+  }
+}
+
+.two-column{
+  @include regular-grid(2);
+  > div{
+    background-color: $highlight-colour;
+    padding-top: 1em;
+  }
+  form{
+    padding: 0 1em;
+  }
+}
+
+.delete-lpa{
+  float: right;
+}
+
+
+

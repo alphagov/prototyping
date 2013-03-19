@@ -4,7 +4,12 @@
 
 
 @import "design-patterns/utils";
+
+// From the toolkit
+
 @import "conditionals";
+@import "shims";
+
 
 @mixin regular-grid($columns: 1, $min-height:"") {
   margin: 0;

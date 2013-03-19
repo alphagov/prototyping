@@ -5,6 +5,7 @@
 // arranged steps. The user progresses through each
 // step in turn, but can return to earlier steps.
 
+// From the toolkit
 @import "colours";
 
 @mixin accordion-form{
@@ -23,6 +24,8 @@
           padding: 0.5em 1em;
           background-color: $turquoise;
           color: $white;
+          -webkit-font-smoothing: subpixel-antialiased;
+          font-weight: normal;
         }
         // Content
         .accordion-content{
@@ -35,9 +38,12 @@
         // Actions
         .accordion-actions{
           list-style-image: none;
+          list-style-type: none;
           padding: 0.6em 1em 0.4em 1em;
           margin: 1em -2em 0 -2em;
           background-color: #f9f9f9;
+          clear: both;
+          overflow: hidden;
         }
       }
       // COMPLETED SECTIONS
@@ -53,7 +59,7 @@
           margin-bottom: 0.5em;
           padding: 0.5em 2.5em 0.5em 2em;
           background-color: $highlight-colour;
-          background-image: url('../images/progress-tick.png');
+          background-image: url('/images/icon/progress-tick.png');
           background-repeat: no-repeat;
           background-position: 10px 50%;
           p {
