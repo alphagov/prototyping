@@ -22,6 +22,7 @@
 
   // Text fields and textareas
   input[type="text"],
+  input[type="password"],
   input[type="email"],
   input[type="date"],
   input[type="datetime"],
@@ -429,12 +430,12 @@ input:-moz-placeholder {  padding-top: 0.15em; color: $grey-1; }
 }
 
 // BUTTONS
-.btn{
+.button{
   @include button($green);
 }
-.btn-secondary{
+.button-secondary{
   @include button($panel-colour);
 }
-.btn-warning{
+.button-warning{
   @include button($red);
 }

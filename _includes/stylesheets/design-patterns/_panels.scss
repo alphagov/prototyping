@@ -68,7 +68,7 @@
   // PANEL CONTENTS
 
   // Reset top-margin for elements that appear at the top of panels
-  *:first-child{
+  > *:first-child{
     margin-top: 0em;
   }
 

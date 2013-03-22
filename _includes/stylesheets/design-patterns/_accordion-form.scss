@@ -17,6 +17,7 @@
       // CURRENT SECTION
       &.current {
         border: 1px solid $turquoise;
+        margin-bottom: 0.6em;
         // Header
         .accordion-header {
           display: block;
@@ -39,7 +40,7 @@
         .accordion-actions{
           list-style-image: none;
           list-style-type: none;
-          padding: 0.6em 1em 0.4em 1em;
+          padding: 0.5em 2em 0.5em 2em;
           margin: 1em -2em 0 -2em;
           background-color: #f9f9f9;
           clear: both;
@@ -56,17 +57,32 @@
         // Summary
         .accordion-summary {
           display: block;
-          margin-bottom: 0.5em;
-          padding: 0.5em 2.5em 0.5em 2em;
-          background-color: $highlight-colour;
-          background-image: url('/images/icon/progress-tick.png');
-          background-repeat: no-repeat;
-          background-position: 10px 50%;
-          p {
-            margin: 0;
+          margin: 0;
+          a{
+            display: block;
+            margin-bottom: 0.5em;
+            padding: 0.5em 2.5em 0.5em 2em;
+            background-color: $highlight-colour;
+            background-image: url('/images/icon/progress-tick.png');
+            background-repeat: no-repeat;
+            background-position: 10px 50%;
+            color: $text-colour;
+            text-decoration: none;
             .edit{
+              @include core-16;
               float: right;
-              margin-right: -1em;
+              margin-right: -2em;
+              margin-top: 0.25em;
+              color: $grey-2;
+            }
+            &:hover{
+              background-color: darken($highlight-colour, 3%);            
+              .edit{
+                color: $link-colour;
+                &:hover{
+                  text-decoration: underline;
+                }
+              }
             }
           }
         }

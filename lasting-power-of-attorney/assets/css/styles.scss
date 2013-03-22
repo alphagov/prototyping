@@ -11,13 +11,16 @@
 // Design patterns
 @import "design-patterns/show-hide";
 @import "design-patterns/regular-grid";
+@import "design-patterns/grid";
 @import "design-patterns/popups";
 @import "design-patterns/forms";
 @import "design-patterns/buttons";
 @import "design-patterns/account-management-tools";
+@import "design-patterns/global-nav";
 @import "design-patterns/accordion-form";
 @import "design-patterns/help-popup";
 @import "design-patterns/tooltip";
+@import "design-patterns/progress-indicator";
 
 // ===========================================================
 // TEMPLATE ADJUSTMENTS
@@ -25,6 +28,11 @@
 
 header.page-header hgroup {
   margin-right: 0 /* Extend page header out to end of search button */
+}
+
+// Hide site search
+#search{
+  display: none;
 }
 
 // Better table style
@@ -63,11 +71,57 @@ article table{
 // ===========================================================
 @include account-management-tools;
 
+@include global-nav($black, $turquoise);
+
 // ===========================================================
 // SHOW / HIDE
 // ===========================================================
 @include details-and-summary;
 
+// ===========================================================
+// PROGRESS INDICATOR
+// ===========================================================
+//@include progress-indicator($turquoise, $white, $white);
+
+nav.progress-indicator {
+  padding-left: 1em;
+  border-bottom: 3px solid #EBEBEB;
+  margin: -1em -2em 1em;
+  ol{
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+    margin-bottom: -3px;
+    @include media(mobile) {
+      margin: 0.5em 0;
+    }
+  }
+  li{
+    float: left;
+    margin: 0 1em;
+    padding: 0.75em 0;
+    &.active{
+      border-bottom: 3px solid $turquoise;    
+      @include media(mobile) {
+        border: 0;
+        font-weight: bold;
+        color: $turquoise;
+      }
+    }
+    @include media(mobile) {
+      width: 100%;
+      margin-left: 0.5em;
+      padding: 0.25em;
+    }
+  }
+}
+
+
+.button.big{
+  @include core-24;
+  margin: 2em 0;
+}
 
 // ===========================================================
 // ACCORDION FORM
@@ -103,10 +157,14 @@ article table{
 
 // Intro panels for each question
 .section-intro{
-  margin: 2em 0;
-  background: url(https://assets.digital.cabinet-office.gov.uk/static/icon-information-f78d8c1b10b141b5a9a8c7a40220c4a4.png) no-repeat scroll  97% 0.8em;
-  padding: 0 3em 0.5em 1em;
-  border: 4px solid $light-blue-25;
+  margin: 2em 0 1em 0;
+  //background: url(https://assets.digital.cabinet-office.gov.uk/static/icon-information-f78d8c1b10b141b5a9a8c7a40220c4a4.png) no-repeat scroll  97% 0.8em;
+  //padding: 0 3em 0.5em 1em;
+  //border: 4px solid $light-blue-25;
+
+  padding-right: 17%;
+  padding-bottom: 1em;
+  border-bottom: 1px solid $border-colour;
 }
 
 // Person summary
@@ -114,7 +172,7 @@ article table{
   background: url("/images/icon/person.png") no-repeat 0px 3px;
   background-size: Auto 4.2em;
   padding-left: 4em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   min-height: 4em;
   border-bottom: 1px solid $border-colour;
   padding-bottom: 1em;
@@ -126,7 +184,7 @@ article table{
     display: inline-block;
     margin: 0;
     padding: 0;
-    .btn{
+    .button{
       margin-top: 1.2em;
     }
     li {
@@ -138,8 +196,7 @@ article table{
     }
   }
 .add-another{
-    //padding-left: 4em;
-    margin-bottom: 2em;
+    margin: 2em 0;
 }
 
 // 'Not sure what to put?' links
@@ -196,12 +253,14 @@ article table{
   color: $link-colour;
   text-decoration: underline;
   cursor: pointer;
+  padding: 0.5em;
   &:hover{
     color: $link-hover-colour;
   }
 }
 
 // '+' icons style for 'Add' buttons
+/*
 .add:before {
   content: "+";
   float: left;
@@ -209,6 +268,95 @@ article table{
   font-weight: bold;
   line-height: 0.9em;
   margin: 0.1em 0.25em 0 0;
+}*/
+
+hr {
+  height: 1px;
+  border: 0;
+  background-color: $border-colour;
+  margin: 2em 0;
+}
+
+.finished-LPA{
+  overflow: hidden;
+  margin: 1em 0;
+  img{
+    width: 4.9em;
+    float: left;
+    margin: 0.1em 1em 0 0;
+  }
+  h3{
+    //margin: 0;
+  }
+}
+
+.LPA-details{
+  min-width: 17em;
+  h3, li{
+    @include core-16;
+  }
+  h3{
+    font-weight: bold;
+    margin: 0;
+  }
+  ul{
+    margin: 0;
+  }
+  ul, li{
+    padding: 0;
+    list-style-image: none;
+    list-style-type: none;
+  }
+  overflow: hidden;
+  margin: 1em 0;
+  &.right{
+    float: right;
+    margin: 1.25em -5em 0 2em;
+  }
+  border: 1px solid $border-colour;
+  padding: 1em;
+  .LPA-actions{
+    margin-top: 0.5em;
+  }
+}
+
+article .next.steps {
+  h3{
+    margin-top: 0.15em;
+  }
+  p{
+    margin: 0.75em 0;
+  }
+  .form-download{
+    width: 55%;
+  }
+}
+
+article .make-LPA.steps {
+  border-top: 2px solid $border-colour;
+  border-bottom: 2px solid $border-colour;
+  @include grid(4);
+  margin-top: 2em;
+  margin-right: -9em;
+  li{
+    margin-bottom: 0;
+  }
+  //width: 64%;
+  strong{
+    margin: 0.9em 0 0 1.5em;
+    display: block;
+  }
+  p{
+    margin: 0.75em 0;
+  }
+  img{
+    width: 75%;
+  }
+  .button{
+    width: 86%;
+    display: block;
+    text-align: center;
+  }
 }
 
 
@@ -264,6 +412,7 @@ article table{
   li{
     float: left;
     line-height: 1em;
+    padding: 0;
     &:nth-child(2){
       padding-left: 0.5em;
       border-left: 1px solid $border-colour;
@@ -314,15 +463,15 @@ article table{
   @include popup(38em);
   // Header
   .header{
-    background: url("/images/icon/person.png") no-repeat 27px 17px;
+    background: url("/images/icon/person.png") no-repeat 1em 17px;
     background-size: 2.5%;
-    padding-left: 3em;
+    padding-left: 2.5em;
     font-weight: bold;
   }
   // Action buttons at bottom of popup
   .action.group{
     padding-left: 10em;
-    .btn{
+    .button{
       margin-right: 4.5em;
     }
   }
@@ -330,6 +479,7 @@ article table{
 
 .person-form{
   position: relative;
+  padding-left: 1em;
   input[type="text"]{
     width: 15em;
   }
@@ -391,7 +541,7 @@ article table{
     padding-right:3em;
   }
   a {
-    color: #000;
+    //color: #000;
     display: block;
   }
 }
@@ -408,14 +558,15 @@ article table{
  */
 
 .process.overview{
-  @include regular-grid(3, 16em);
+  //@include regular-grid(3, 16em);
   > li{
-    background-color: $highlight-colour;
-    display: table-cell;
+    //background-color: $highlight-colour;
+    //display: table-cell;
   }
   figure{
-    text-align: center;
-    padding: 0 0.5em;
+    //text-align: center;
+    //padding: 0 0.5em;
+    @include core-16;
   }
 }
 
@@ -427,18 +578,19 @@ article table{
     margin: 1em;
   }
   li h3{
-    background-color: $green-25;
+    //background-color: $green-25;
     margin: 0 0 1em 0;
-    padding: 0.5em 1em;
+    padding: 0.5em 0;
+    border-bottom: 3px solid #28A197;
   }
   figcaption a{
     display: block;
   }
-  .btn{
-    display: block;
-    width: 75%;
+  .button{
+    //display: block;
+    //width: 75%;
     margin: 1em auto;
-    text-align: center;
+    //text-align: center;
   }
 }
 
@@ -454,7 +606,7 @@ article table{
   input[type='text'],
   input[type='email'],
   input[type='password'] {
-    background: $white;
+    //background: $white;
   }
 }
 
@@ -473,5 +625,65 @@ article table{
   float: right;
 }
 
+#populatetestdates{
+  float: right;
+}
 
 
+#checklist{
+  .person-summary {
+    background: none;
+    padding-left: 0;
+    h3{
+      padding: 0.25em 0;
+      span{
+        font-weight: normal;
+      }
+    }
+    label{
+      width: auto;
+    }
+  }
+}
+
+.date-field {
+  input[type="text"]{
+    width: 6.5em;
+  }
+}
+
+
+#donor-sign{
+  border-top: 1px solid $border-colour;
+  margin: 0 -1em -1.25em;
+  padding: 1em 4em 0.5em 3em;
+  background: $highlight-colour;
+  h4{
+    font-weight: bold;
+  }
+  p{
+    font-size: 16px;
+  }
+  label{
+    padding-left: 0;
+  }
+}
+
+#cp-statement{
+  h4{
+    font-weight: bold;
+  }
+  textarea{
+    width: 92%;
+  }
+  .hint{
+    margin-left: 0.25em;
+  }
+}
+
+#damages-toggle{
+  padding: 0.5em 0em 0 1em;
+  label{
+    padding-right: 11em;
+  }
+}
