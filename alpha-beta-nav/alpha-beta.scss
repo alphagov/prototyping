@@ -55,11 +55,12 @@ $beta-colour: $orange;
 
     .header-proposition {
       .proposition-name {
-        color: $alpha-colour;
+        color: #fff;
       }
       .proposition-links {
         li {
           a {
+            @include core-19;
             &.active {
               color: $alpha-colour;
             }
@@ -109,11 +110,12 @@ $beta-colour: $orange;
 
     .header-proposition {
       .proposition-name {
-        color: $beta-colour;
+        color: #fff;
       }
       .proposition-links {
         li {
           a {
+            @include core-19;
             &.active {
               color: $beta-colour;
             }
