@@ -12,236 +12,35 @@
 
   <h2>Alpha standard</h2>
 
-  <header role="banner" id="global-header-1" class="global-header alpha">
-    <div class="header-wrapper">
-      <div class="header-global">
-        <div class="header-logo">
-          <div class="content">
-            <div class="phase-tag">Alpha</div>
-
-            <a href="/" title="Go to the gov.uk homepage" id="logo">
-              <img src="gov.uk_logotype-no_crown-2x.png" alt="GOV.UK">
-            </a>
-          </div>
-          <a href="#search" class="search-toggle js-header-toggle">Search</a>
-        </div>
-
-        <form id="search" class="site-search" action="/search" method="get" role="search">
-          <div class="content">
-            <label for="site-search-text">Search</label>
-            <input type="search" name="q" id="site-search-text" title="Search" class="js-search-focus">
-            <input class="submit" type="submit" value="Search" />
-          </div>
-        </form>
-      </div>
-    </div>
-  </header>
-  <!--end header-->
+  {% include alpha-beta-header/_alpha-standard-header.html %}
 
   <h2>Beta standard</h2>
 
-  <header role="banner" id="global-header-2" class="global-header beta">
-    <div class="header-wrapper">
-      <div class="header-global">
-        <div class="header-logo">
-          <div class="content">
-            <div class="phase-tag">Beta</div>
-
-            <a href="/" title="Go to the gov.uk homepage" id="logo">
-              <img src="gov.uk_logotype-no_crown-2x.png" alt="GOV.UK">
-            </a>
-          </div>
-          <a href="#search" class="search-toggle js-header-toggle">Search</a>
-        </div>
-
-        <form id="search" class="site-search" action="/search" method="get" role="search">
-          <div class="content">
-            <label for="site-search-text">Search</label>
-            <input type="search" name="q" id="site-search-text" title="Search" class="js-search-focus">
-            <input class="submit" type="submit" value="Search" />
-          </div>
-        </form>
-      </div>
-    </div>
-  </header>
-  <!--end header-->
+  {% include alpha-beta-header/_beta-standard-header.html %}
 
   <h2>Alpha with proposition</h2>
 
-  <header role="banner" id="global-header-3" class="global-header alpha with-proposition">
-    <div class="header-wrapper">
-      <div class="header-global">
-        <div class="header-logo">
-          <div class="content">
-            <div class="phase-tag">Alpha</div>
-
-            <a href="/" title="Go to the gov.uk homepage" id="logo">
-              <img src="gov.uk_logotype-no_crown-2x.png" alt="GOV.UK">
-            </a>
-          </div>
-          <a href="#search" class="search-toggle js-header-toggle">Search</a>
-        </div>
-
-        <form id="search" class="site-search" action="/search" method="get" role="search">
-          <div class="content">
-            <label for="site-search-text">Search</label>
-            <input type="search" name="q" id="site-search-text" title="Search" class="js-search-focus">
-            <input class="submit" type="submit" value="Search" />
-          </div>
-        </form>
-      </div>
-
-      <div class="header-proposition">
-        <div class="content">
-          <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
-          <nav class="proposition-menu"><a href="/service-manual" class="proposition-name">My awesome service</a>
-            <ul class="proposition-links">
-              <li><a href="" class="">Lorem ipsum</a></li>
-              <li><a href="" class="">Dolor sit amet</a></li>
-              <li><a href="" class="">Consectetur adipisicing elit</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
+  {% include alpha-beta-header/_alpha-with-prop-header.html %}
 
   <h2>Beta with proposition</h2>
 
-  <header role="banner" id="global-header-3" class="global-header beta with-proposition">
-    <div class="header-wrapper">
-      <div class="header-global">
-        <div class="header-logo">
-          <div class="content">
-            <div class="phase-tag">Beta</div>
-
-            <a href="/" title="Go to the gov.uk homepage" id="logo">
-              <img src="gov.uk_logotype-no_crown-2x.png" alt="GOV.UK">
-            </a>
-          </div>
-          <a href="#search" class="search-toggle js-header-toggle">Search</a>
-        </div>
-
-        <form id="search" class="site-search" action="/search" method="get" role="search">
-          <div class="content">
-            <label for="site-search-text">Search</label>
-            <input type="search" name="q" id="site-search-text" title="Search" class="js-search-focus">
-            <input class="submit" type="submit" value="Search" />
-          </div>
-        </form>
-      </div>
-
-      <div class="header-proposition">
-        <div class="content">
-          <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
-          <nav class="proposition-menu"><a href="/service-manual" class="proposition-name">My awesome service</a>
-            <ul class="proposition-links">
-              <li><a href="" class="">Lorem ipsum</a></li>
-              <li><a href="" class="">Dolor sit amet</a></li>
-              <li><a href="" class="">Consectetur adipisicing elit</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
+  {% include alpha-beta-header/_beta-with-prop-header.html %}
 
   <h2>Alpha no search</h2>
 
-  <header role="banner" id="global-header-1" class="global-header alpha">
-    <div class="header-wrapper">
-      <div class="header-global">
-        <div class="header-logo">
-          <div class="content">
-            <div class="phase-tag">Alpha</div>
-
-            <a href="/" title="Go to the gov.uk homepage" id="logo">
-              <img src="gov.uk_logotype-no_crown-2x.png" alt="GOV.UK">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  {% include alpha-beta-header/_alpha-no-search-header.html %}
 
   <h2>Beta no search</h2>
 
-  <header role="banner" id="global-header-1" class="global-header beta">
-    <div class="header-wrapper">
-      <div class="header-global">
-        <div class="header-logo">
-          <div class="content">
-            <div class="phase-tag">Beta</div>
-
-            <a href="/" title="Go to the gov.uk homepage" id="logo">
-              <img src="gov.uk_logotype-no_crown-2x.png" alt="GOV.UK">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  {% include alpha-beta-header/_beta-no-search-header.html %}
 
   <h2>Alpha no search with proposition</h2>
 
-  <header role="banner" id="global-header-3" class="global-header alpha with-proposition">
-    <div class="header-wrapper">
-      <div class="header-global">
-        <div class="header-logo">
-          <div class="content">
-            <div class="phase-tag">Alpha</div>
-
-            <a href="/" title="Go to the gov.uk homepage" id="logo">
-              <img src="gov.uk_logotype-no_crown-2x.png" alt="GOV.UK">
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="header-proposition">
-        <div class="content">
-          <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
-          <nav class="proposition-menu"><a href="/service-manual" class="proposition-name">My awesome service</a>
-            <ul class="proposition-links">
-              <li><a href="" class="">Lorem ipsum</a></li>
-              <li><a href="" class="">Dolor sit amet</a></li>
-              <li><a href="" class="">Consectetur adipisicing elit</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
+  {% include alpha-beta-header/_alpha-with-prop-no-search-header.html %}
 
   <h2>Beta no search with proposition</h2>
 
-  <header role="banner" id="global-header-3" class="global-header beta with-proposition">
-    <div class="header-wrapper">
-      <div class="header-global">
-        <div class="header-logo">
-          <div class="content">
-            <div class="phase-tag">Beta</div>
+  {% include alpha-beta-header/_alpha-with-prop-no-search-header.html %}
 
-            <a href="/" title="Go to the gov.uk homepage" id="logo">
-              <img src="gov.uk_logotype-no_crown-2x.png" alt="GOV.UK">
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="header-proposition">
-        <div class="content">
-          <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
-          <nav class="proposition-menu"><a href="/service-manual" class="proposition-name">My awesome service</a>
-            <ul class="proposition-links">
-              <li><a href="" class="">Lorem ipsum</a></li>
-              <li><a href="" class="">Dolor sit amet</a></li>
-              <li><a href="" class="">Consectetur adipisicing elit</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
 </body>
 </html>
