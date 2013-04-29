@@ -54,6 +54,7 @@
       }
     }
   }
+
   &.with-proposition {
     .header-wrapper {
       .header-global {
@@ -79,6 +80,10 @@
           margin: 0 15px;
         }
       }
+    }
+
+    #search {
+      margin-top: 6px;
     }
   }
 
