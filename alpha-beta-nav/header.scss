@@ -308,10 +308,13 @@
         content: " \25B2";
       }
     }
+    .proposition-menu {
+      margin-top: 6px;
+    }
     .proposition-links {
       clear: both;
       @extend %contain-floats;
-      margin: 0;
+      margin: 1px 0 0 0;
       padding: 0;
 
       .js-enabled & {
@@ -345,6 +348,10 @@
           color: $white;
           text-decoration: none;
           @include core-14;
+
+          @include media(desktop) {
+            @include core-16;
+          }
 
           &:hover {
             text-decoration: underline;
