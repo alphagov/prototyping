@@ -47,7 +47,7 @@
         }
       }
       .header-logo {
-        margin: 3px 0 2px;
+        margin: 5px 0 2px;
       }
       .site-search {
         float: right;
@@ -80,7 +80,7 @@
     }
 
     #search {
-      margin-top: 6px;
+      margin-top: 4px;
     }
   }
 
@@ -309,12 +309,12 @@
       }
     }
     .proposition-menu {
-      margin-top: 6px;
+      margin-top: 10px;
     }
     .proposition-links {
       clear: both;
       @extend %contain-floats;
-      margin: 1px 0 0 0;
+      margin: -3px 0 0 0;
       padding: 0;
 
       .js-enabled & {
@@ -351,6 +351,7 @@
 
           @include media(desktop) {
             @include core-16;
+            line-height: 23px;
           }
 
           &:hover {
