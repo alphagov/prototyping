@@ -347,10 +347,10 @@
         a {
           color: $white;
           text-decoration: none;
-          @include core-14;
+          @include bold-14;
 
           @include media(desktop) {
-            @include core-16;
+            @include bold-16;
             line-height: 23px;
           }
 
