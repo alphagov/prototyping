@@ -17,13 +17,13 @@ $beta-colour: $orange;
     .phase-tag {
       color: #fff;
       @include bold-16;
-      line-height: 24px;
+      line-height: 20px;
       text-transform: uppercase;
       letter-spacing: 1px;
       text-decoration: none;
 
       display: block;
-      margin: 1px 10px 0 0;
+      margin: 3px 10px 0 0;
       padding: 2px 5px 0;
       float: left;
     }
@@ -60,7 +60,6 @@ $beta-colour: $orange;
       .proposition-links {
         li {
           a {
-            @include core-19;
             &.active {
               color: $alpha-colour;
             }
@@ -115,7 +114,6 @@ $beta-colour: $orange;
       .proposition-links {
         li {
           a {
-            @include core-19;
             &.active {
               color: $beta-colour;
             }
