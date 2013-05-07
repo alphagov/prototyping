@@ -1,0 +1,241 @@
+---
+title: "Welcome to GOV.UK"
+layout: default-no-wrapper
+css: styles.css
+body_class: full-width
+---
+
+<header class="homepage">
+  <div class="wrapper">
+    <div class="inner">
+      <h1>GOV.UK</h1>
+      <p>The official website of HM Government</p>
+      <form id="search" class="site-search" action="/search" method="get" role="search">
+        <label for="site-search-text" class="">Search</label>
+        <input type="search" name="q" placeholder="Search GOV.UK" id="site-search-text" title="Search"><input class="button" type="submit" value="Search">
+      </form>
+      <div class="wrap">
+        <div class="inner">
+        <div class="jump-links">
+          <h2>Contents</h2>
+          <ul>
+            <li><a href="#services-and-information">Services and information</a></li>
+            <li><a href="#inside-government">Inside Government</a></li>
+            <li><a href="#how-government-works">How government works</a></li>
+            <li><a href="#what-people-are-viewing">What people are viewing on GOV.UK</a></li>
+            <li><a href="#more-on-govuk">More on GOV.UK</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div id="wrapper" class="{{ page.categories }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
+  <section id="content">
+    <div id="homepage">
+
+      <div class="floated-children">
+        <div class="replaces-jumplinks">
+          <div class="inner">
+            <!--
+            <p class="replaces">This website replaces</p>
+            <ul>
+              <li><img alt="Directgov" height="20" src="https://assets.digital.cabinet-office.gov.uk/frontend/homepage/directgov-logo-2x-8098ab7d8e7c7ef1e23d6afa6897c4c2.png" width="105"></li>
+              <li><img alt="Businesslink" height="30" src="https://assets.digital.cabinet-office.gov.uk/frontend/homepage/businesslink-logo-2x-ae48d98df8de4b5a0b0c8932179eb813.png" width="75"></li>
+            </ul>
+            -->
+          </div>
+        </div>
+
+        <div class="homepage-section homepage-categories group">
+          <h2 id="services-and-information">Services and information</h2>
+          <ul class="categories-list group">
+            <li>
+              <p><a href="https://www.gov.uk/browse/driving">Driving and transport</a> Includes Car tax, MOT and driving licences</p>
+            </li>
+            <li>
+              <p><a href="https://www.gov.uk/browse/benefits">Benefits</a> Includes tax credits, eligibility and appeals</p>
+            </li>
+            <li>
+              <p><a href="https://www.gov.uk/browse/business">Businesses and self-employed</a> Tools and guidance for businesses</p>
+            </li>
+            <li class="clear-category">
+              <p><a href="https://www.gov.uk/browse/employing-people">Employing people</a> Includes pay, contracts and hiring</p>
+            </li>
+            <li>
+              <p><a href="https://www.gov.uk/browse/education">Education and learning</a> Includes student loans and admissions</p>
+            </li>
+            <li>
+              <p><a href="https://www.gov.uk/browse/working">Working, jobs and pensions</a> Includes holidays and finding a job</p>
+            </li>
+            <li class="clear-category">
+              <p><a href="https://www.gov.uk/browse/housing">Housing and local services</a> Owning or renting and council services</p>
+            </li>
+            <li>
+              <p><a href="https://www.gov.uk/browse/justice">Crime, justice and the law</a> Legal processes, courts and the police</p>
+            </li>
+            <li>
+              <p><a href="https://www.gov.uk/browse/tax">Money and tax</a> Includes debt and Self Assessment</p>
+            </li>
+            <li class="clear-category">
+              <p><a href="https://www.gov.uk/browse/births-deaths-marriages">Births, deaths, marriages and care</a> Parenting, civil partnerships, divorce and Lasting Power of Attorney</p>
+            </li>
+            <li>
+              <p><a href="https://www.gov.uk/browse/disabilities">Disabled people</a> Includes carers, your rights, benefits and the Equality Act</p>
+            </li>
+            <li>
+              <p><a href="https://www.gov.uk/browse/abroad">Passports, travel and living abroad</a> Includes renewing passports and travel advice by country</p>
+            </li>
+            <li class="clear-category">
+              <p><a href="https://www.gov.uk/browse/citizenship">Citizenship and living in the UK</a> Voting, how government works, moving to the UK</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="keyline"/>
+      <div class="inside-government">
+        <div class="floated-children">
+          <section class="intro">
+            <div class="head-section">
+              <div class="inner">
+                <h2 id="inside-government">Inside Government</h2>
+              </div>
+            </div>
+            <div class="column">
+              <div class="inner">
+                <p>The websites of all government <a href="https://www.gov.uk/government/organisations">departments</a> and many other <a href="https://www.gov.uk/government/organisations#agencies-and-public-bodies">public bodies</a> will soon be merged into the Inside Government section of GOV.UK. Here you can see all their <a href="https://www.gov.uk/government/announcements">announcements</a>, <a href="https://www.gov.uk/government/policies">policies</a>, <a href="https://www.gov.uk/government/publications">publications</a> and more.</p>
+              </div>
+            </div>
+          </section>
+          <section class="government">
+            <div class="head-section">
+              <div class="inner">
+                <dl class="values">
+                  <dt><a href="https://www.gov.uk/government/organisations#departments">24</a></dt>
+                  <dd><a href="https://www.gov.uk/government/organisations#departments">Ministerial departments</a></dd>
+                  <dt><a href="https://www.gov.uk/government/organisations#agencies-and-public-bodies">315</a></dt>
+                  <dd><a href="https://www.gov.uk/government/organisations#agencies-and-public-bodies">Agencies &amp; public bodies</a></dd>
+                  <dt><a href="https://www.gov.uk/government/topics">72</a></dt>
+                  <dd><a href="https://www.gov.uk/government/topics">Topics</a></dd>
+                  <dt><a href="https://www.gov.uk/government/policies">214</a></dt>
+                  <dd><a href="https://www.gov.uk/government/policies">Policies</a></dd>
+                </dl>
+              </div>
+            </div>
+            <div class="column">
+              <h3>What is the government doing about&hellip;</h3>
+              <ul class="government-activity">
+                <li>
+                  <div class="inner">
+                    <h4><a href="https://www.gov.uk/government/topics/foreign-affairs">Foreign affairs</a></h4>
+                    <a href="https://www.gov.uk/government/news/somalia-conference-2013-opening-speech"><img src="https://assets.digital.cabinet-office.gov.uk/government/uploads/system/uploads/image_data/file/10339/s300_8445416726_93d857e95e_o.jpg"></a>
+                    <p class="meta-data">7 May 2013 - Press release</p>
+                    <h5><a href="https://www.gov.uk/government/news/somalia-conference-2013-opening-speech">Somalia Conference 2013: Opening Speech</a></h5>
+                    <p>The President of the Federal Republic of Somalia, H.E. Hassan Sheikh Mohamud gave the opening address at the Somalia Conference today.</p>
+                    <p><a href="https://www.gov.uk/government/news/somalia-conference-2013-opening-speech">Read more</a></p>
+                  </div>
+                </li>
+                <li>
+                  <div class="inner">
+                    <h4><a href="https://www.gov.uk/government/topics/energy">Energy</a></h4>
+                    <a href="https://www.gov.uk/government/news/policies-are-putting-a-cushion-between-energy-prices-and-household-bills-davey"><img src="https://assets.digital.cabinet-office.gov.uk/government/uploads/system/uploads/feature/image/1745/s300_DECC_Infographic2_banner_v3.jpg"></a>
+                    <p class="meta-data">27 March 2013 - Press release</p>
+                    <h5><a href="https://www.gov.uk/government/news/policies-are-putting-a-cushion-between-energy-prices-and-household-bills-davey">Policies are putting a cushion between energy prices and household bills - Davey</a></h5>
+                    <p>New analysis highlights the extent to which energy and climate change policies are tempering the impact on household energy bills of global gas&hellip;</p>
+                    <p><a href="https://www.gov.uk/government/news/policies-are-putting-a-cushion-between-energy-prices-and-household-bills-davey">Read more</a></p>
+                  </div>
+                </li>
+                <li class="clear-activity">
+                  <div class="inner">
+                    <h4><a href="https://www.gov.uk/government/topics/higher-education">Higher education</a></h4>
+                    <a href="https://www.gov.uk/government/news/new-advice-to-help-schools-set-performance-related-pay"><img src="https://assets.digital.cabinet-office.gov.uk/government/uploads/system/uploads/feature/image/1715/s300_TSAA039562_-_Teacher_portrait.jpg"></a>
+                    <p class="meta-data">29 April 2013 - Press release</p>
+                    <h5><a href="https://www.gov.uk/government/news/new-advice-to-help-schools-set-performance-related-pay">New advice to help schools set performance-related pay</a></h5>
+                    <p>The Department for Education has published advice helping schools decide how to pay their teachers.</p>
+                    <p><a href="https://www.gov.uk/government/news/new-advice-to-help-schools-set-performance-related-pay">Read more</a></p>
+                  </div>
+                </li>
+                <li>
+                  <div class="inner">
+                    <h4><a href="https://www.gov.uk/government/topics/transport">Transport</a></h4>
+                    <a href="https://www.gov.uk/government/news/dft-statistics-on-walking-and-cycling-16-april-2013"><img src="https://assets.digital.cabinet-office.gov.uk/government/uploads/system/uploads/feature/image/1733/s300_statistics-cycle-walk.jpg"></a>
+                    <p class="meta-data">16 April 2013 — Press release</p>
+                    <h5><a href="https://www.gov.uk/government/news/dft-statistics-on-walking-and-cycling-16-april-2013">DfT statistics on walking and cycling 16 April 2013</a></h5>
+                    <p>Statistical release about local area walking and cycling in England.</p>
+                    <p><a href="https://www.gov.uk/government/news/dft-statistics-on-walking-and-cycling-16-april-2013">Read more</a></p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <hr class="keyline"/>
+          <section class="how-government-works">
+            <div class="image">
+              <div class="inner">
+                <a href="#"><img src="images/how-gov-works.jpg"></a>
+              </div>
+            </div>
+            <div class="column">
+              <div class="inner">
+                <h2 id="how-government-works">How government works</h2>
+                <p>The Prime Minister leads the government with the support of the cabinet and ministers. In this section you can find out <a href="https://www.gov.uk/government/how-government-works#who-runs-government">who runs government</a> and <a href="https://www.gov.uk/government/how-government-works#how-governement-is-run">how government is run</a>, as well as learning about the <a href="https://www.gov.uk/government/how-government-works#history-uk-government">history of government</a>.</p>
+                <p class="read-more"><a href="https://www.gov.uk/government/how-government-works">Read more</a></p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="activity-car-tax">
+        <h2 id="what-people-are-viewing">What people are viewing on GOV.UK</h2>
+        <div class="car-tax">
+          <h3>New car tax transaction launched</h3>
+          <p>Pay for your car tax online. You must be the vehicle's registered keeper. You can renew your tax any day from the 5th day of the month it’s about to expire.</p>
+          <p class="get-started">
+            <a href="https://www.gov.uk/tax-disc" class="button">Get started</a>
+          </p>
+        </div>
+        <div class="browsing-tracker">
+          <h3>Most active</h3>
+          <ol>
+            <li><a href="https://www.gov.uk/jobsearch">Universal Jobmatch job search</a></li>
+            <li><a href="https://www.gov.uk/student-finance-register-login">Log in to student finance</a></li>
+            <li><a href="https://www.gov.uk/passport-fees">Passport fees</a></li>
+            <li><a href="https://www.gov.uk/jobseekers-allowance">Jobseeker's Allowance</a></li>
+            <li><a href="https://www.gov.uk/council-tax-bands">Council Tax bands</a></li>
+            <li><a href="https://www.gov.uk/running-a-limited-company">Running a limited company</a></li>
+            <li><a href="https://www.gov.uk/book-a-driving-theory-test">Driving theory test</a></li>
+            <li><a href="https://www.gov.uk/calculate-vehicle-tax-rates">Car tax rates</a></li>
+            <li><a href="https://www.gov.uk/tax-disc">Get a car tax disc</a></li>
+            <li><a href="https://www.gov.uk/vat-rates">VAT rates</a></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="more-on-govuk floated-children">
+        <div class="image">
+          <div class="inner">
+            <img src="images/more-on-govuk.jpg"> 
+          </div>
+        </div>
+        <div class="column">
+          <div class="inner">
+            <h2 id="more-on-govuk">More on GOV.UK</h2>
+            <h3><a href="https://www.gov.uk/service-manual">Service Design Manual</a></h3>
+            <p>From April 2014, digital services from the government must meet the new Digital by Default Service Standard.</p>
+            <h3><a href="http://publications.cabinetoffice.gov.uk/digital/strategy/">Government Digital Strategy</a></h3>
+            <p>The Government Digital Strategy sets out how government will redesign its digital services to make them so straightforward and convenient that all those who can use them prefer to do so.</p>
+            <h3><a href="https://www.gov.uk/performance">Performance Platform</a></h3>
+            <p>Government handles over one and a half billion transactions every year, allowing the exchange of information, money, permission, goods and services. We’re using data to improve them.</p>
+            <h3><a href="http://transactionsexplorer.cabinetoffice.gov.uk/">Transaction Explorer</a></h3>
+            <p>This is an 'alpha' release of data about the government's transactional services. The data is intended as an overview, showing the breadth of services that departments, agencies and other public bodies provide.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div><!--end wrapper-->
