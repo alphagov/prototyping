@@ -73,15 +73,17 @@
               float: right;
               margin-right: -2em;
               margin-top: 0.25em;
-              color: $grey-2;
+              color: $link-colour;
+              //display: none;
+              
             }
             &:hover{
-              background-color: darken($highlight-colour, 3%);            
+              background-color: darken($highlight-colour, 3%);  
+              text-decoration: underline;          
               .edit{
+                //display: block;
                 color: $link-colour;
-                &:hover{
-                  text-decoration: underline;
-                }
+                text-decoration: underline;
               }
             }
           }

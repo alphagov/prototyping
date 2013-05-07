@@ -20,14 +20,14 @@
 @import "design-patterns/accordion-form";
 @import "design-patterns/help-popup";
 @import "design-patterns/tooltip";
-@import "design-patterns/progress-indicator";
+@import "design-patterns/date-picker";
 
 // ===========================================================
 // TEMPLATE ADJUSTMENTS
 // ===========================================================
 
 header.page-header hgroup {
-  margin-right: 0 /* Extend page header out to end of search button */
+  margin-right: 0 /* Extend page header out to end of search button. */
 }
 
 // Hide site search
@@ -81,7 +81,6 @@ article table{
 // ===========================================================
 // PROGRESS INDICATOR
 // ===========================================================
-//@include progress-indicator($turquoise, $white, $white);
 
 nav.progress-indicator {
   padding-left: 1em;
@@ -117,11 +116,6 @@ nav.progress-indicator {
   }
 }
 
-
-.button.big{
-  @include core-24;
-  margin: 2em 0;
-}
 
 // ===========================================================
 // ACCORDION FORM
@@ -200,9 +194,9 @@ nav.progress-indicator {
 }
 
 // 'Not sure what to put?' links
-.hidden-controls .not-sure{
+.not-sure{
   float: right;
-  margin: -2.25em 0.5em 0 0;
+  //margin: -2.25em 0.5em 0 0;
 }
 
 
@@ -236,8 +230,23 @@ nav.progress-indicator {
 
 // Basic form styles
 .form{
-  @include form(left, 8em);
+  @include form;
+
+  // Customise validation message style to support Zend framework
+  .validation {
+    margin: 0.5em 0;
+    padding: 0.25em 1em 0 0.5em;
+    li{
+      @extend .validation-message;
+      padding-left: 0;
+    }
+  }
 }
+
+.person-form .form{
+  @include form-horizontal;
+}
+
 
 // Show/Hide panel
 @include details-and-summary;
@@ -258,17 +267,6 @@ nav.progress-indicator {
     color: $link-hover-colour;
   }
 }
-
-// '+' icons style for 'Add' buttons
-/*
-.add:before {
-  content: "+";
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 0.9em;
-  margin: 0.1em 0.25em 0 0;
-}*/
 
 hr {
   height: 1px;
@@ -311,7 +309,7 @@ hr {
   margin: 1em 0;
   &.right{
     float: right;
-    margin: 1.25em -5em 0 2em;
+    margin: 0.25em -5em 0 2em;
   }
   border: 1px solid $border-colour;
   padding: 1em;
@@ -328,7 +326,7 @@ article .next.steps {
     margin: 0.75em 0;
   }
   .form-download{
-    width: 55%;
+    width: 80%;
   }
 }
 
@@ -365,7 +363,7 @@ article .make-LPA.steps {
   display: none;
 }
 
-.role-select{
+.form .role-select{
   overflow: auto;
   border-bottom: 1px solid $border-colour;
   margin: 0 0 0 -1.25em;
@@ -438,7 +436,7 @@ article .make-LPA.steps {
 
 
 .relationship-other{
-  margin: -2em 0 1em 8.5em;
+  margin: -1em 0 1em 8em;
   label{
     display: block;
     font-size: 16px;
@@ -480,7 +478,8 @@ article .make-LPA.steps {
 .person-form{
   position: relative;
   padding-left: 1em;
-  input[type="text"]{
+  input[type="text"],
+  input[type="email"]{
     width: 15em;
   }
 }
@@ -600,21 +599,18 @@ article .make-LPA.steps {
  * ================================================================
  */
 
-
-.accounts-form{
-  @include form(top);
-  input[type='text'],
-  input[type='email'],
-  input[type='password'] {
-    //background: $white;
-  }
-}
-
 .two-column{
   @include regular-grid(2);
   > div{
     background-color: $highlight-colour;
     padding-top: 1em;
+    .accounts-form{
+      input[type='text'],
+      input[type='email'],
+      input[type='password'] {
+        background: $white;
+      }
+    }
   }
   form{
     padding: 0 1em;
@@ -655,7 +651,7 @@ article .make-LPA.steps {
 
 #donor-sign{
   border-top: 1px solid $border-colour;
-  margin: 0 -1em -1.25em;
+  margin: 1em -1em -1.25em;
   padding: 1em 4em 0.5em 3em;
   background: $highlight-colour;
   h4{
@@ -682,8 +678,69 @@ article .make-LPA.steps {
 }
 
 #damages-toggle{
-  padding: 0.5em 0em 0 1em;
+  //padding: 0.5em 0em 0 1em;
   label{
-    padding-right: 11em;
+    //padding-right: 11em;
   }
 }
+
+.attorney-applicant{
+  padding-left: 8em;
+  margin-top: -1.8em;
+}
+
+.date-field label{
+  margin-top: 0.5em;
+}
+input.hasDatepicker{
+  margin: -0.5em 0 0 0.5em;
+}
+
+/*
+.accordion-form{
+  counter-reset: question;
+}
+.accordion-summary a:before, .accordion-header:before {  
+    counter-increment: question;  
+    content: counter(question) ". ";  
+}
+*/
+
+
+#decisions-form{
+  label{
+    overflow: hidden;
+    padding-right: 67%;
+    position: relative;
+    padding-left: 1.6em;
+    padding-bottom: 3em;
+    margin-bottom: 1em;
+    &:first-child{padding-bottom: 5em;}
+    &:last-child{padding-bottom: 1.5em;}
+    input{
+      margin-left: -1em;
+      margin-top: 0.15em;
+      position: absolute;
+    }
+  }
+  .option-help{
+    display: block;
+    padding: 0.25em 1em 1em 1em;
+    float: left;
+    width: 63%;
+    margin-top: -0.5em;
+    font-size: 16px;
+    position: absolute;
+    top: 1em;
+    right: 0;
+  }
+  .subtitle{
+    display: block;
+    padding: 1em;
+    float: left;
+    width: 35%;
+  }
+}
+
+
+
