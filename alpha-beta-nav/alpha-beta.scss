@@ -1,0 +1,125 @@
+---
+---
+
+@import "_colours";
+@import "_css3";
+@import "_device-pixels";
+@import "_typography";
+@import "_conditionals";
+@import "_shims";
+@import "_conditionals2";
+
+$alpha-colour: $pink;
+$beta-colour: $orange;
+
+.global-header {
+  .header-logo {
+    .phase-tag {
+      color: #fff;
+      @include bold-16;
+      line-height: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+
+      display: block;
+      margin: 3px 10px 0 0;
+      padding: 2px 5px 0;
+      float: left;
+    }
+  }
+}
+
+// ALPHA
+.global-header.alpha {
+  form#search {
+    input.submit {
+      border: 1px solid $alpha-colour;
+      border-left-color: #222;
+      background-color: $alpha-colour;
+    }
+  }
+
+  .header-logo {
+    .phase-tag {
+      background-color: $alpha-colour;
+    }
+  }
+
+  &.with-proposition {
+    .search-toggle {
+      @media screen and (max-width: 379px) {
+        background-color: $alpha-colour;
+      }
+    }
+
+    .header-proposition {
+      .proposition-name {
+        color: #fff;
+      }
+      .proposition-links {
+        li {
+          a {
+            &.active {
+              color: $alpha-colour;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#content {
+  border-top: 10px solid $turquoise;
+  max-width: 960px;
+  margin: 0 auto;
+
+  &.alpha {
+    border-color: $alpha-colour;
+  }
+
+  &.beta {
+    border-color: $beta-colour;
+  }
+}
+
+// BETA
+.global-header.beta {
+  form#search {
+    input.submit {
+      border: 1px solid $beta-colour;
+      border-left-color: #222;
+      background-color: $beta-colour;
+    }
+  }
+
+  .header-logo {
+    .phase-tag {
+      background-color: $beta-colour;
+    }
+  }
+
+  &.with-proposition {
+    .search-toggle {
+      @media screen and (max-width: 379px) {
+        background-color: $beta-colour;
+      }
+    }
+
+    .header-proposition {
+      .proposition-name {
+        color: #fff;
+      }
+      .proposition-links {
+        li {
+          a {
+            &.active {
+              color: $beta-colour;
+            }
+          }
+        }
+      }
+    }
+  }
+}

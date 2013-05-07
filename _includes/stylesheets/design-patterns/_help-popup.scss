@@ -17,6 +17,7 @@ padding: 0.5em 1em;
 
 #popup.help-system{
   @include popup(80%);
+  margin-top: 0;
   article{
     padding: 0 0 0 1em;
     @include media(mobile) {

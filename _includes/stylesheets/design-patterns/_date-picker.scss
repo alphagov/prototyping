@@ -1,0 +1,132 @@
+.ui-datepicker {
+  z-index: 2000 !important;
+  display: none;
+  width: 350px;
+  padding: 1em;
+  background: #fff;
+  border: 3px solid $yellow;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  %month-navigation {
+    @extend .button-secondary;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    padding-top: .2em;
+    padding-bottom: .2em;
+  }
+  .ui-datepicker-header {
+    position: relative;
+    height: 2.5em;
+    margin: 0 0 0.35em 0;
+    padding: 0 0 0.25em 0;
+    text-align: center;
+    border-bottom: 1px solid $border-colour;
+    font-size: 19px;
+    .ui-datepicker-title {
+      display: inline-block;
+      margin: 0 auto;
+      padding: 0.2em 0 0 0;
+    }
+    .ui-datepicker-month {
+      margin: 0 1em 0 0;
+    }
+    .ui-datepicker-prev, .ui-datepicker-next {
+      @extend %month-navigation;
+    }
+    .ui-datepicker-prev {
+      left: 0;
+      text-align: left;
+    }    
+    .ui-datepicker-next {
+      right: 0;
+      text-align: right;
+    }    
+  }
+  table.ui-datepicker-calendar {
+    width: 100%;
+  }
+  thead, tbody {
+    td, th {
+      width: 40px;
+      padding: 0.35em 0.15em;
+    }
+    a, span {
+
+    }
+  }
+  thead {
+    th {
+      font-weight: bold;
+    }
+  }
+  tbody {
+    td {
+      text-align: center;
+      &:hover {
+        cursor: pointer;
+        background: lighten($yellow,20);
+        color: #fff;
+      }
+      &.ui-state-disabled:hover {
+        cursor: default;
+        background: none;
+      }
+      &.ui-datepicker-current-day {
+        background: $yellow;
+        a, span {
+          color: $text-colour;
+        }
+      }
+      &.ui-datepicker-today {
+        background: $panel-colour;
+      }
+      a {
+        text-decoration: none;
+        //color: $border-colour;
+      }
+    }
+  }
+  a.ui-state-disabled {
+    opacity: 0.5;
+    box-shadow: none !important;
+    &:hover, & {
+      opacity: 0.5;
+      cursor: default;
+      background-color: $highlight-colour !important;
+    }
+  }
+  td.ui-state-disabled {
+    span {
+      text-decoration: line-through;
+    }
+    &:hover, & {
+      color: lighten($border-colour,50);
+    }
+  }
+  .ui-datepicker-current-day {
+    background: lighten($border-colour,80);
+  }
+  .ui-datepicker-buttonpane {
+    background: #F9F9F9;
+    padding: .25em 0 0 0;
+    button {
+      margin: 0 .5em 0 0;
+    }
+    .ui-priority-secondary {
+      @extend .button-secondary;
+    }
+    .ui-priority-primary {
+      @extend .button;
+    }
+  }
+}
+
+.js-enabled .hasDatepicker:focus{
+  outline: none;
+}
+
+.ui-datepicker-append{
+  @extend .hint;
+  padding-top: 0.5em;
+  color: $secondary-text-colour;
+}
