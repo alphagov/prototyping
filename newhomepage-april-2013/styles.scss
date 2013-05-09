@@ -1,0 +1,439 @@
+---
+---
+
+@import "frontend_toolkit";
+
+// template resets - quicker than building a new layout
+header#global-header {
+  form{
+   display: none;
+  }
+}
+
+#footer {
+  .footer-categories ul {
+    border: none;
+    padding: 10px 0 0 0;
+  }
+  h2 {
+  @include core-24;
+  color: $black;
+  font-weight: bold;
+  line-height: 1.25;
+  font-weight: bold;
+  text-transform: none;
+  color: black;
+  margin: 0;
+  }
+}
+
+#global-breadcrumb {
+  display: none;
+}
+
+// Styles
+header.homepage {
+  background-color: $light-blue;
+  color: #fff;
+  .wrapper {
+    //background: url(images/white-crest.png) right 30px no-repeat;
+    margin: 0 auto;
+    max-width: 1020px;
+    position: relative;
+    .inner {
+      padding: 30px;
+      h1 {
+        @include core-80;
+        font-weight: bold;
+        line-height: 1;
+      }
+      p {
+        margin: 10px 0 15px;
+      }
+      form#search {
+        position: relative;
+        width: 66.66%;
+        label {
+          float: none;
+          position: absolute;
+          left: 0;
+          top: 1px;
+          z-index: 1;
+          width: 100%;
+          margin-right: 0;
+          text-indent: -9999px;
+        }
+
+        input {
+          margin-left: 0;
+          padding: 10px;
+          width: 90%;
+          &.button {
+            color: $white;
+            background-color: $black;
+            background-image: url(images/magnifiying-glass.jpg);
+            background-repeat: no-repeat;
+            background-position: 0 50%;
+            @include border-radius(0);
+            height: 40px;
+            border: 1px solid $turquoise;
+            border-width: 0 0 0 1px;
+            border-left-color: #222;
+            overflow: hidden;
+            text-indent: -5000px;
+            position: absolute;
+            z-index: 4;
+            right: 0;
+            top: 0;
+            width: 7%;
+          }
+        }
+      }
+
+      .wrap {
+          width: 33.7%;
+          position: absolute;
+          top: 30px;
+          right: 0;
+          z-index: 10;
+          .inner {
+            padding: 0 15px;
+          .jump-links {
+            @include core-19;
+            background-color: $black;
+            color: #fff;
+            padding: 5px 15px;
+            h2 {
+              @include core-19;
+            }
+            ul {
+              padding-left: 0;
+              li {
+                display: block;
+                margin-bottom: 10px;
+                a {
+                  color: #fff;
+                  font-weight: bold;
+                  display: block;
+                  text-decoration: none;
+                  &:hover, &:focus {
+                    text-decoration: underline;
+                  }
+                //  &:before {
+                //    content: "-";
+                //    margin-right: 5px;
+                //  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+}
+
+#wrapper {
+  @extend %contain-floats;
+  background-color: #fff;
+
+  h2 {
+    @include core-36;
+    font-weight: bold;
+  }
+
+  #content {
+    margin: 0 auto;
+    max-width: 1020px;
+    padding-top: 40px;
+    position: relative;
+
+    #homepage {
+      .keyline {
+        margin: 30px;
+      }
+
+      .floated-children {
+        @extend %contain-floats;
+        padding: 0 15px;
+        .inner {
+          padding: 0 15px;
+        }
+        .head-section {
+          float: left;
+          width: 33.33%;
+        }
+        .column {
+          float: left;
+        }
+        .keyline {
+          margin: 30px 15px;
+        }
+      }
+
+      .replaces-jumplinks {
+        float: left;
+        width: 33.33%;
+        ul {
+          padding-left: 0;
+          li {
+            display: inline;
+            padding-right: 1em;
+          }
+        }
+
+        .jump-links {
+          @include core-19;
+          background-color: $light-blue;
+          color: #fff;
+          padding: 5px 15px;
+          h2 {
+            @include core-19;
+          }
+          ul {
+            li {
+              display: block;
+              a {
+                color: #fff;
+                font-weight: bold;
+                display: block;
+                text-decoration: none;
+                &:hover, &:focus {
+                  text-decoration: underline;
+                }
+                &:before {
+                  content: "-";
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+      .homepage-categories {
+        float: left;
+        @include core-19;
+        width: auto;
+
+        h2 {
+          margin: 0 0 30px 0;
+          padding: 0 15px;
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+          li {
+            float: left;
+            list-style: none;
+            width: 33.33%;
+            p {
+              padding: 0 15px;
+              margin: 10px 0;
+              a {
+                color: $light-blue;
+                display: block;
+                font-weight: bold;
+                margin-right: 10px;
+                text-decoration: none;
+                &:hover, &:focus {
+                  text-decoration: underline;
+                }
+              }
+            }
+            &.clear-category {
+              clear: both;
+            }
+          }
+        }
+      }
+
+      .activity-car-tax {
+        border-color: $border-colour;
+        border-style: solid;
+        border-width: 1px 0;
+        margin: 0 30px;
+        padding-bottom: 30px;
+
+        h2 {
+          margin-bottom: 30px;
+        }
+
+        .browsing-tracker {
+          background: $light-blue url(images/browser-tracker.jpg) left 30px no-repeat;
+          color: $white;
+          padding: 30px 0 50px 69%;
+          h3 {
+            @include core-24;
+            font-weight: bold;
+            margin-top: 0;
+          }
+          ol {
+            counter-reset: li 0;
+            padding-left: 30px;
+            li {
+              list-style: none;
+              position: relative;
+              a {
+                color: $white;
+                font-weight: bold;
+              }
+              &:before {
+                counter-increment: li 1;
+                content: counter(li, decimal-leading-zero);
+                font-weight: bold;
+                position: absolute;
+                left: -30px;
+              }
+            }
+          }
+        }
+
+        .car-tax {
+          background: $turquoise url(images/car-tax.jpg) center left no-repeat;
+          color: $white;
+          padding: 30px 30px 30px 34.5%;
+          margin-bottom: 30px;
+          h3 {
+            @include core-24;
+            font-weight: bold;
+            margin-top: 0;
+          }
+          .get-started {
+            .button {
+              background-color: $white;
+              color: $turquoise;
+            }
+          }
+        }
+      }
+
+      .inside-government {
+        margin-bottom: 30px;
+
+        a {
+          color: $fuschia;
+          text-decoration: none;
+          &:hover, &:focus {
+            text-decoration: underline;
+          }
+        }
+        .intro {
+          .column {
+            width: 66.66%;
+          }
+        }
+
+        .government {
+          h3 {
+            @include core-24;
+            font-weight: bold;
+            padding: 0 15px;
+          }
+          .head-section {
+            dt, dd {
+              @include core-16;
+              display: block;
+              margin-left: 0;
+            }
+            dd {
+              margin-bottom: 30px;
+            }
+            dt{
+              @include heading-80;
+              font-weight: bold;
+              margin: 0 0 -5px 0;
+              @include media(tablet) {
+                padding: 0;
+              }
+            }
+          }
+          .column {
+            padding-bottom: 30px;
+            width: 66.66%;
+
+            .government-activity {
+              @extend %contain-floats;
+              margin: 0;
+              padding-left: 0;
+              li {
+                float: left;
+                list-style: none;
+                width: 50%;
+                &.clear-activity {
+                  clear: both;
+                }
+                h4, h5 {
+                  @include core-19;
+                  font-weight: bold;
+                }
+                p {
+                  @include core-16;
+                  margin: 10px 0;
+                  &.meta-data {
+                    color: $secondary-text-colour;
+                    display: block;
+                    float: none;
+                    margin: 6px 0 0 0;
+                    text-align: left;
+                    width: auto;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .how-government-works {
+          .image, .column {
+            float: left;
+            width: 33.33%;
+          }
+          .column {
+            width: 66.66%;
+            h2 {
+              margin-top: 0;
+            }
+            .read-more {
+              font-weight: bold;
+            }
+          }
+        }
+
+      }
+
+      .more-on-govuk {
+        padding: 30px 15px 60px;
+        .image, .column {
+          float: left;
+          width: 33.33%;
+        }
+        .column {
+          width: 66.66%;
+          h2 {
+            margin-top: 0;
+          }
+          h3 {
+            font-weight: bold;
+            margin: 30px 0 10px;
+            a {
+              color: $light-blue;
+              text-decoration: none;
+              &:hover, &:focus {
+                text-decoration: underline;
+              }
+            }
+          }
+          p {
+            margin-top: 0;
+          }
+        }
+      }
+
+    }
+  }
+}
