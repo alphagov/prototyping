@@ -28,6 +28,36 @@ $beta-colour: $orange;
       float: left;
     }
   }
+
+  &.not-govuk {
+    #logo {
+      width: auto;
+
+      @include core-24;
+      color: $white;
+      text-decoration: none;
+      line-height: 1.2;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &.with-proposition.not-govuk {
+    .header-proposition {
+      .proposition-name {
+        font-weight: 300;
+      }
+      .proposition-links {
+        li {
+          a {
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
 }
 
 // ALPHA
