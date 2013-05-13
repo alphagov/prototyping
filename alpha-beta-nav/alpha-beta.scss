@@ -13,25 +13,10 @@ $alpha-colour: $pink;
 $beta-colour: $orange;
 
 .global-header {
-  .header-logo {
-    .phase-tag {
-      color: #fff;
-      @include bold-16;
-      line-height: 20px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      text-decoration: none;
-
-      display: block;
-      margin: 3px 10px 0 0;
-      padding: 2px 5px 0;
-      float: left;
-    }
-  }
-
   &.not-govuk {
     #logo {
       width: auto;
+      margin-right: 10px;
 
       @include core-24;
       color: $white;
@@ -43,7 +28,6 @@ $beta-colour: $orange;
       }
     }
   }
-
   &.with-proposition.not-govuk {
     .header-proposition {
       .proposition-name {
@@ -58,6 +42,38 @@ $beta-colour: $orange;
       }
     }
   }
+  &.with-search.not-govuk {
+    .header-proposition {
+      .proposition-links {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  .header-proposition {
+    .proposition-name {
+      display: block;
+      float: left;
+
+      color: #fff;
+      margin-right: 5px;
+    }
+  }
+
+  .phase-tag {
+    display: block;
+    float: left;
+
+    color: #fff;
+    @include bold-16;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    margin: 3px 10px 0 0;
+    padding: 2px 5px 0;
+  }
 }
 
 // ALPHA
@@ -70,10 +86,8 @@ $beta-colour: $orange;
     }
   }
 
-  .header-logo {
-    .phase-tag {
-      background-color: $alpha-colour;
-    }
+  .phase-tag {
+    background-color: $alpha-colour;
   }
 
   &.with-proposition {
@@ -84,9 +98,6 @@ $beta-colour: $orange;
     }
 
     .header-proposition {
-      .proposition-name {
-        color: #fff;
-      }
       .proposition-links {
         li {
           a {
@@ -124,10 +135,8 @@ $beta-colour: $orange;
     }
   }
 
-  .header-logo {
-    .phase-tag {
-      background-color: $beta-colour;
-    }
+  .phase-tag {
+    background-color: $beta-colour;
   }
 
   &.with-proposition {
@@ -138,9 +147,6 @@ $beta-colour: $orange;
     }
 
     .header-proposition {
-      .proposition-name {
-        color: #fff;
-      }
       .proposition-links {
         li {
           a {
