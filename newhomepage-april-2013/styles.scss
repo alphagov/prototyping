@@ -65,6 +65,7 @@ header.homepage {
         }
 
         input {
+          border-color: #fff;
           margin-left: 0;
           padding: 10px;
           width: 90%;
@@ -323,6 +324,13 @@ header.homepage {
           }
         }
         .intro {
+          @extend %contain-floats;
+          margin-bottom : 30px;
+          .head-section {
+            h2 {
+              margin-top: 5px;
+            }
+          }
           .column {
             width: 66.66%;
           }
