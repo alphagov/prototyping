@@ -169,3 +169,35 @@ $beta-colour: $orange;
     }
   }
 }
+
+.sub-nav {
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  background-color: $white;
+
+  border-top: 10px solid $alpha-colour;
+  border-bottom: 1px solid $border-colour;
+
+  ul {
+    list-style: none;
+    @extend %contain-floats;
+
+    padding: 0.5em 15px;
+    margin: 0 0 0 33%;
+
+    li {
+      &:first-child {
+        margin-right: 20px;
+      }
+
+      float: left;
+      margin-right: 10px;
+
+      a {
+        color: $black;
+      }
+    }
+  }
+}
