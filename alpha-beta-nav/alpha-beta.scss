@@ -59,6 +59,19 @@ $beta-colour: $orange;
       color: #fff;
       margin-right: 5px;
     }
+    .proposition-links {
+      li {
+        a:hover {
+          text-decoration: none;
+          border-bottom: 1px solid $turquoise;
+        }
+
+        a.active {
+          color: $white;
+          border-bottom: 1px solid $turquoise;
+        }
+      }
+    }
   }
 
   .phase-tag {
@@ -102,9 +115,7 @@ $beta-colour: $orange;
       .proposition-links {
         li {
           a {
-            &.active {
-              color: $alpha-colour;
-            }
+            border-color: $alpha-colour;
           }
         }
       }
@@ -151,9 +162,7 @@ $beta-colour: $orange;
       .proposition-links {
         li {
           a {
-            &.active {
-              color: $beta-colour;
-            }
+            border-color: $beta-colour;
           }
         }
       }
