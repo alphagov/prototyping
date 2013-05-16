@@ -1,0 +1,210 @@
+---
+title: "child tax calculator"
+layout: default-wrapper
+template: full-width
+css: assets/css/styles.css
+body_class: full-width
+js: assets/js/calculator.js
+---
+
+<section id="content" role="main" class="group category-page">
+  <header class="page-header group">
+    <hgroup class="full-width">
+      <div class="whitehall-wrapper">    
+      <h2>Calculators</h2>
+      </div>
+      <h1>Estimate your High Income Child Benefit Tax Charge</h1>
+    </hgroup>
+  </header>
+
+  <div class="browse-container full-width group">
+    <div class="category-description">
+      <p>The person with the highest income may have to pay some or all of their Child Benefit back as tax if their adjusted net income is over £50,000.</p>
+
+      <p>This affects Child Benefit for weeks after 7 January 2013</p>
+    </div>
+    <section class="two-column form full-width group">
+      <div>
+        <form action="register-account-error.html">
+          
+          <fieldset>
+            <legend>Adjusted net income</legend>
+            <p class="group">
+              <label for="total-annual-income-before-tax">Total annual income before tax <a id="info" href="#">Info</a></label>
+              <input id="total-annual-income-before-tax" type="text" class="income" value="£" /><br>
+            </p>
+            <div id="info-total-net-income">
+              <p> ftdgwyhiqsuoj0dgre78uw9hjxioshygrechiuwdnxsiojanml</p>
+            </div>
+            <p class="group">
+              <span><a id="open-net-income" href="#">I don't know my adjusted net income</a></span>
+            </p>
+            <div id="net-income-calculations">
+              <p id="uknown-income" class="group">
+                <label for="gross-pension-contributions">Gross pension contributions</label>
+                <input id="gross-pension-contributions" type="text" class="income" value="£" />
+              </p>
+              <p class="group">
+                <label for="net-pension-contributions">Net pension contributions</label>
+                <input id="net-pension-contributions" type="text" class="income" value="£">
+              </p>
+              <p class="group">
+                <label for="trading-losses-if-you’re-self-employed ">Trading losses if you’re self-employed</label>
+                <input  id="trading-losses-if-you’re-self-employed" type="text" class="income" value="£">
+              </p>
+              <p class="group">
+                <label for="gift-aid-donations">Gift Aid donations</label>
+                <input type="text" id="gift-aid-donations" class="income" value="£">
+              </p>
+            </div>
+          </fieldset>
+          </p>
+        </form>
+      </div>
+      <div>
+        <form>
+          <fieldset>
+            <legend>Number of children you're claiming for</legend>
+            <p class="group">
+              <label for="children">How many children will you or your partner be getting paid Child Benefit for from %{tax_year_start}?</label>
+              <input type="text" id="children" class="children">
+            </p>
+            <fieldset>
+              <legend><span>New children</span></legend>
+              <p class="inline option group">
+                <label class="inline-radio" for="Yes">
+                  <input id="new_children_yes" type="radio" name="new_children" value="Yes"> Yes
+                </label>
+                <label for="No" class="inline-radio">
+                  <input id="new_children_no" type="radio" name="new_children" value="No"> No
+                </label>
+              </p>
+            </fieldset>
+            <div id="new-children">
+              <div id="children-container"></div>
+              <p class="group">
+                <span><a class="add-child" href="#">Add another child</a></span>
+              </p>
+            </div>
+            <div id="new-child-template" class="new-child">
+              <h2>Child <span class="child-number">1></span></h2>
+              <span><a class="edit" href="#">Edit</a></span>
+              <fieldset>
+                <legend><span>When did you start getting Child Benefit for a new child?</span></legend>
+                <div class="inline group">
+                  <p class="group">
+                    <label for="day" class="visuallyhidden">Day</label>
+                    <select id="day" type="text">
+                      <option value="Day">Day</option>
+                      <!-- Other options go here -->
+                    </select>
+                  </p>
+                  <p class="group">
+                    <label for="month" class="visuallyhidden">Month</label>
+                    <select id="month" type="text">
+                      <option value="Month">Month</option>
+                      <!-- Other options go here -->
+                    </select>
+                  </p>
+                  <p class="group">
+                    <label for="year" class="visuallyhidden">Year</label>
+                    <select id="year" type="text">
+                      <option value="Year">Year</option>
+                      <!-- Other options go here -->
+                    </select>
+                  </p>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend><span>Did you stop getting Child Benefit for that child before %{tax_year_end}?</span></legend>
+                <p class="inline option group">
+                <label class="inline-radio" for="Yes">
+                  <input id="new_children_yes" type="radio" name="new_children" value="Yes"> Yes
+                </label>
+                <label for="No" class="inline-radio">
+                  <input id="new_children_no" type="radio" name="new_children" value="No"> No
+                </label>
+                </p>
+              </fieldset>
+              <fieldset>
+                <legend><span>When did you stop receiving Child Benefit for that child?</span></legend>
+                <div class="inline group">
+                  <p class="group">
+                    <label for="day" class="visuallyhidden">Day</label>
+                    <select id="day" type="text">
+                      <option value="Day">Day</option>
+                      <!-- Other options go here -->
+                    </select>
+                  </p>
+                  <p class="group">
+                    <label for="month" class="visuallyhidden">Month</label>
+                    <select id="month" type="text">
+                      <option value="Month">Month</option>
+                      <!-- Other options go here -->
+                    </select>
+                  </p>
+                  <p class="group">
+                    <label for="year" class="visuallyhidden">Year</label>
+                    <select id="year" type="text">
+                      <option value="Year">Year</option>
+                      <!-- Other options go here -->
+                    </select>
+                  </p>
+                </div>
+              </fieldset>
+          </fieldset>
+         <fieldset>
+              <legend><span>Stopped children</span></legend>
+              <p class="inline option group">
+                <label class="inline-radio" for="Yes">
+                  <input id="stopped_children_yes" type="radio" name="stopped_children" value="Yes"> Yes
+                </label>
+                <label for="No" class="inline-radio">
+                  <input id="stopped_children_no" type="radio" name="stopped_children" value="No"> No
+                </label>
+              </p>
+            </fieldset>
+            <div id="stopped-children">
+              <div id="stopped-children-container"></div>
+              <p class="group">
+                <span><a class="add-child" href="#">Add another child</a></span>
+              </p>
+            </div>
+            <div id="stopped-child-template">
+              <h2>Child <span class="child-number">1</span></h2>
+
+              <fieldset>
+                <legend><span>When did you or your partner stop getting Child Benefit for this child?</span></legend>
+                <div class="inline group">
+                  <p class="group">
+                    <label for="day" class="visuallyhidden">Day</label>
+                    <select id="day" type="text">
+                      <option value="Day">Day</option>
+                      <!-- Other options go here -->
+                    </select>
+                  </p>
+                  <p class="group">
+                    <label for="month" class="visuallyhidden">Month</label>
+                    <select id="month" type="text">
+                      <option value="Month">Month</option>
+                      <!-- Other options go here -->
+                    </select>
+                  </p>
+                  <p class="group">
+                    <label for="year" class="visuallyhidden">Year</label>
+                    <select id="year" type="text">
+                      <option value="Year">Year</option>
+                      <!-- Other options go here -->
+                    </select>
+                  </p>
+                </div>
+              </fieldset>
+            </div>
+            <p>
+              <input class="button" type="submit" value="Submit" /> 
+            </p>
+        </form>
+      </div>
+    </section>
+  </div>
+</section>
