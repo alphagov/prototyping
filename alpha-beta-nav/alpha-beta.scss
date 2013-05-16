@@ -13,25 +13,10 @@ $alpha-colour: $pink;
 $beta-colour: $orange;
 
 .global-header {
-  .header-logo {
-    .phase-tag {
-      color: #fff;
-      @include bold-16;
-      line-height: 20px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      text-decoration: none;
-
-      display: block;
-      margin: 3px 10px 0 0;
-      padding: 2px 5px 0;
-      float: left;
-    }
-  }
-
   &.not-govuk {
     #logo {
       width: auto;
+      margin-right: 10px;
 
       @include core-24;
       color: $white;
@@ -43,13 +28,13 @@ $beta-colour: $orange;
       }
     }
   }
-
   &.with-proposition.not-govuk {
     .header-proposition {
       .proposition-name {
         font-weight: 400;
       }
       .proposition-links {
+        margin-top: 7px;
         li {
           a {
             font-weight: 400;
@@ -57,6 +42,51 @@ $beta-colour: $orange;
         }
       }
     }
+  }
+  &.with-search.not-govuk {
+    .header-proposition {
+      .proposition-links {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  .header-proposition {
+    .proposition-name {
+      display: block;
+      float: left;
+
+      color: #fff;
+      margin-right: 5px;
+    }
+    .proposition-links {
+      li {
+        a:hover {
+          text-decoration: none;
+          border-bottom: 1px solid $turquoise;
+        }
+
+        a.active {
+          color: $white;
+          border-bottom: 1px solid $turquoise;
+        }
+      }
+    }
+  }
+
+  .phase-tag {
+    display: block;
+    float: left;
+
+    color: #fff;
+    @include bold-16;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    margin: 3px 10px 0 0;
+    padding: 2px 5px 0;
   }
 }
 
@@ -70,10 +100,8 @@ $beta-colour: $orange;
     }
   }
 
-  .header-logo {
-    .phase-tag {
-      background-color: $alpha-colour;
-    }
+  .phase-tag {
+    background-color: $alpha-colour;
   }
 
   &.with-proposition {
@@ -84,15 +112,10 @@ $beta-colour: $orange;
     }
 
     .header-proposition {
-      .proposition-name {
-        color: #fff;
-      }
       .proposition-links {
         li {
           a {
-            &.active {
-              color: $alpha-colour;
-            }
+            border-color: $alpha-colour;
           }
         }
       }
@@ -124,10 +147,8 @@ $beta-colour: $orange;
     }
   }
 
-  .header-logo {
-    .phase-tag {
-      background-color: $beta-colour;
-    }
+  .phase-tag {
+    background-color: $beta-colour;
   }
 
   &.with-proposition {
@@ -138,17 +159,44 @@ $beta-colour: $orange;
     }
 
     .header-proposition {
-      .proposition-name {
-        color: #fff;
-      }
       .proposition-links {
         li {
           a {
-            &.active {
-              color: $beta-colour;
-            }
+            border-color: $beta-colour;
           }
         }
+      }
+    }
+  }
+}
+
+.sub-nav {
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  background-color: $white;
+
+  border-top: 10px solid $alpha-colour;
+  border-bottom: 1px solid $border-colour;
+
+  ul {
+    list-style: none;
+    @extend %contain-floats;
+
+    padding: 0.5em 15px;
+    margin: 0 0 0 33%;
+
+    li {
+      &:first-child {
+        margin-right: 20px;
+      }
+
+      float: left;
+      margin-right: 10px;
+
+      a {
+        color: $black;
       }
     }
   }
