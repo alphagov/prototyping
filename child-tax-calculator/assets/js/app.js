@@ -54,10 +54,7 @@ Calculator.prototype = {
     });
   },
   updateOutcome: function() {
-    $(".starting-children").text(this.startingChildren().length);
-    $(".stopping-children").text(this.stoppingChildren().length);
-    $(".adjusted-net-income").text(this.responses.finalIncome);
-    $(".total-owed").text(this.responses.totalOwed);
+    $(".total-owed").text(!isNaN(this.responses.totalOwed) ? this.responses.totalOwed : "...");
   }
     
 };
@@ -164,6 +161,14 @@ $(document).ready(function () {
     hideOldChildren();
   });
 
+  $("body").on("click", ".finish-child", function(e) {
+    e.preventDefault();
+    var $children = $(this).parent(".new-child");
+    $children.find('fieldset').hide();
+    $children.find('.edit').show();
+    $(this).hide();
+  });
+
   var newChildCount = 0;
 
   function addNewChild() {
@@ -193,6 +198,7 @@ $(document).ready(function () {
 
     $children.not(':last-child').find('fieldset').hide();
     $children.not(':last-child').find('.edit').show();
+    $children.not(':last-child').find(".finish-children").hide();
    
   }
 
@@ -200,6 +206,8 @@ $(document).ready(function () {
     childparameter.find(".edit").hide().click(function (e) {
       e.preventDefault();
       $(this).parents('.new-child').find('fieldset').show();
+      $(this).parents('.new-child').find('.finish-child').show();
+
     });
   }
 
