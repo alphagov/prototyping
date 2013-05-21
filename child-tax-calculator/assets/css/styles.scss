@@ -1,0 +1,95 @@
+---
+---
+
+@import "colours";
+@import "typography";
+@import "design-patterns/_show-hide";
+@import "design-patterns/_forms";
+@import "design-patterns/regular-grid";
+@import "design-patterns/account-management-tools";
+
+
+@include account-management-tools;
+
+.category-page header.page-header hgroup h1 {
+  font-family: "nta",Arial,sans-serif;
+  font-size: 48px;
+  font-size: 4.8rem;
+  line-height: 1.04167;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+
+  .inner {
+    padding-right: 2em;
+    & > *:first-child{
+      margin-top: 30px;
+    }
+  }
+}
+
+/* ================================================================
+ * FORMS
+ * ================================================================
+ */
+
+.form{
+  @include form(top);
+
+  input[type='text'], input[type='email'] {
+    background: $white;
+  }
+}
+
+.two-column{
+  margin-top: 0px;
+
+  @include regular-grid(2);
+  form {
+    background-color: $highlight-colour;
+    padding: 1em;
+    padding-top: 10px;
+
+  }
+}
+
+.two-column > * *:first-child {
+  margin-top: 10px;
+}
+.form label {
+  display: block;
+
+  color: #0b0c0c;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  vertical-align: top;
+  padding: 0.25em 0;
+}
+.form input {
+
+}
+#new-child-template, #stopped-child-template {
+  display: none;
+}
+.form .group label.inline-radio {
+  display: inline-block;
+  float: none;
+  margin: 0 1em 0 0;
+}
+
+.form .group label.inline-radio input {
+  margin: 0 0.25em 0 0;
+}
+
+.results-box {
+  border: 3px solid black;
+  padding: 10px;
+  p {
+    font-size: 40px;
+  }
+}
+
