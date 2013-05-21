@@ -84,3 +84,12 @@
 .form .group label.inline-radio input {
   margin: 0 0.25em 0 0;
 }
+
+.results-box {
+  border: 3px solid black;
+  padding: 10px;
+  p {
+    font-size: 40px;
+  }
+}
+
