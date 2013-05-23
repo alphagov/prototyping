@@ -1,0 +1,29 @@
+<header role="banner" id="global-header-3" class="global-header alpha with-proposition">
+  <div class="header-wrapper">
+    <div class="header-global">
+      <div class="header-logo">
+        <div class="content">
+          <a href="" title="Go to the gov.uk homepage" id="logo">
+            <img src="gov.uk_logotype-no_crown-2x.png" alt="GOV.UK">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-proposition">
+      <div class="content">
+        <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+        <nav class="proposition-menu">
+          <a href="performance.html" class="proposition-name">Performance Platform</a>
+          <a href="#" class="phase-tag">Alpha</a>
+          <ul class="proposition-links">
+            <li><a href="services.html"{% if $active_tab == "services" %} class="active"{% endif %}>Services</a></li>
+            <li><a href="dashboard.html" {% if $active_tab == "gov.uk dashboard" %} class="active"{% endif %}>GOV.UK dashboard</a></li>
+            <li><a href="government.html" {% if $active_tab == "inside government dashboard" %} class="active"{% endif %}>Inside Government dashboard</a></li>
+            <li><a href="about.html" {% if $active_tab == "about" %} class="active"{% endif %}>About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

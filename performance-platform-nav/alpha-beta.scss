@@ -1,0 +1,214 @@
+---
+---
+
+@import "_colours";
+@import "_css3";
+@import "_device-pixels";
+@import "_typography";
+@import "_conditionals";
+@import "_shims";
+@import "_conditionals2";
+
+$alpha-colour: $pink;
+$beta-colour: $orange;
+$platform-colour: #097F96;
+
+.global-header {
+  &.not-govuk {
+    #logo {
+      width: auto;
+      margin-right: 10px;
+
+      @include core-24;
+      color: $white;
+      text-decoration: none;
+      line-height: 1.2;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &.with-proposition.not-govuk {
+    .header-proposition {
+      .proposition-name {
+        font-weight: 400;
+      }
+      .proposition-links {
+        margin-top: 7px;
+        li {
+          a {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+  &.with-search.not-govuk {
+    .header-proposition {
+      .proposition-links {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  .header-proposition {
+    .proposition-name {
+      display: block;
+      float: left;
+
+      color: #fff;
+      margin-right: 5px;
+    }
+    .proposition-links {
+      li {
+        a:hover {
+          text-decoration: none;
+          border-bottom: 1px solid $turquoise;
+        }
+
+        a.active {
+          color: $white;
+          border-bottom: 1px solid $turquoise;
+        }
+      }
+    }
+  }
+
+  .phase-tag {
+    display: block;
+    float: left;
+
+    color: #fff;
+    @include bold-16;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    margin: 3px 10px 0 0;
+    padding: 2px 5px 0;
+  }
+}
+
+// ALPHA
+.global-header.alpha {
+  form#search {
+    input.submit {
+      border: 1px solid $alpha-colour;
+      border-left-color: #222;
+      background-color: $alpha-colour;
+    }
+  }
+
+  .phase-tag {
+    background-color: $alpha-colour;
+  }
+
+  &.with-proposition {
+    .search-toggle {
+      @media screen and (max-width: 379px) {
+        background-color: $alpha-colour;
+      }
+    }
+
+    .header-proposition {
+      .proposition-links {
+        li {
+          a {
+             border-color: $platform-colour;
+          }
+        }
+      }
+    }
+  }
+}
+
+#content {
+  border-top: 10px solid $turquoise;
+  max-width: 960px;
+  margin: 0 auto;
+
+  &.platform {
+    border-color: $platform-colour;
+  }
+
+  &.alpha {
+    border-color: $alpha-colour;
+  }
+
+  &.beta {
+    border-color: $beta-colour;
+  }
+}
+
+// BETA
+.global-header.beta {
+  form#search {
+    input.submit {
+      border: 1px solid $beta-colour;
+      border-left-color: #222;
+      background-color: $beta-colour;
+    }
+  }
+
+  .phase-tag {
+    background-color: $beta-colour;
+  }
+
+  &.with-proposition {
+    .search-toggle {
+      @media screen and (max-width: 379px) {
+        background-color: $beta-colour;
+      }
+    }
+
+    .header-proposition {
+      .proposition-links {
+        li {
+          a {
+            border-color: $beta-colour;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sub-nav {
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  background-color: $white;
+
+  border-top: 10px solid $platform-colour;
+  border-bottom: 1px solid $border-colour;
+
+  ul {
+    list-style: none;
+    @extend %contain-floats;
+
+    padding: 0.5em 15px;
+    margin: 0 0 0 33%;
+
+    li {
+      &:first-child {
+        margin-right: 20px;
+      }
+
+      float: left;
+      margin-right: 10px;
+
+      a {
+        color: $black;
+      }
+    }
+  }
+}
+
+h1 {
+  // @include bold-48 !imporant;
+
+
+}
