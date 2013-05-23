@@ -54,7 +54,7 @@
 }
 
 .two-column > * *:first-child {
-  margin-top: 10px;
+  // margin-top: 10px;
 }
 .form label {
   display: block;
@@ -93,3 +93,12 @@
   }
 }
 
+#calculator fieldset:nth-child(1) .steps {
+  float: left;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  text-indent: -5000%;
+  margin-right: 0.75em;
+  background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-step-1-6afb52055d0f49ccc1ffa7c33ef10fb2.png);
+}

@@ -28,9 +28,9 @@ js: assets/js/app.js
     <section class="two-column form full-width group">
       <div>
         <h2>Questions</h2>
-        <form action="register-account-error.html">
+        <form id="calculator" action="">
           <fieldset>
-            <legend>Adjusted net income</legend>
+            <h2><span class="steps"><span class="visuallyhidden">Step </span>1 </span>Adjusted net income</h2>
             <p class="group" id="adjusted-income">
             <label for="total-annual-income-before-tax">Total annual income before tax <a id="info" href="#">Info</a></label>
             <input id="total-annual-income-before-tax" type="text" class="income" value="£" /><br>
@@ -147,6 +147,7 @@ js: assets/js/app.js
               </p>
           </div>
           <input type="submit" name="final-submit" value="Submit" />
+        </ol>
         </form>
       </div>
       <div class="outcome">
