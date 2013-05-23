@@ -13,7 +13,16 @@ $alpha-colour: $pink;
 $beta-colour: $orange;
 $platform-colour: #097F96;
 
+.bottom-bar {
+  max-width: 1020px;
+  margin: 0 auto;
+max-width: 1020px;
+position: relative;
+  border-bottom: 10px solid $platform-colour;
+}
+
 .global-header {
+
   &.not-govuk {
     #logo {
       width: auto;
@@ -58,13 +67,21 @@ $platform-colour: #097F96;
       float: left;
 
       color: #fff;
+      border-bottom: 1px solid $black;
       margin-right: 5px;
+      &:hover {
+        // text-decoration: underline;
+        // text-decoration-color: $platform-colour;
+        // border-color: $platform-colour;
+        border-bottom: 1px solid $platform-colour;
+      }
+
     }
     .proposition-links {
       li {
         a:hover {
           text-decoration: none;
-          border-bottom: 1px solid $turquoise;
+          border-bottom: 1px solid $platform-colour;
         }
 
         a.active {
@@ -125,12 +142,12 @@ $platform-colour: #097F96;
 }
 
 #content {
-  border-top: 10px solid $turquoise;
+  border-top: 1px solid $grey-3;
   max-width: 960px;
   margin: 0 auto;
 
   &.platform {
-    border-color: $platform-colour;
+    // border-color: $platform-colour;
   }
 
   &.alpha {
@@ -181,11 +198,30 @@ $platform-colour: #097F96;
   padding: 0 15px;
 
   background-color: $white;
+  
 
-  border-top: 10px solid $platform-colour;
+  // border-top: 10px solid $platform-colour;
   border-bottom: 1px solid $border-colour;
 
+
+      li {
+        a {
+          text-decoration: none;
+        }
+        a:hover {
+          text-decoration: none;
+          border-bottom: 1px solid black;
+        }
+
+        a.active {
+          // color: $platform-colour;
+          border-bottom: 1px solid black;
+        }
+      }
+    
+
   ul {
+    text-decoration: none;
     list-style: none;
     @extend %contain-floats;
 

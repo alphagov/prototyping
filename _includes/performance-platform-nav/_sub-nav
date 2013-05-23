@@ -1,0 +1,12 @@
+<div class="sub-nav">
+      <nav class="sub-nav-menu">
+          
+          <ul class="sub-nav-links">
+            <li><a href="licensing.html"{% if $sub-nav-tab == "overview" %} class="active"{% endif %}>Licensing overview</a></li>
+            <li><a href="licences.html" {% if $sub-nav-tab == "licences" %} class="active"{% endif %}>Licences</a></li>
+            <li><a href="" {% if $sub-nav-tab == "authorities" %} class="active"{% endif %}>Authorities</a></li>
+           
+          </ul>
+        </nav>
+
+</div>
