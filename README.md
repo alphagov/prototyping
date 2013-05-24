@@ -7,36 +7,34 @@ Built using [Jekyll](https://github.com/mojombo/jekyll).
 
 ## How to make a new prototype and configuration
 
-Just create a new folder, named eg "app-name", then duplicate the root index.html into it.
+Just create a new folder, named eg `app-name`, then duplicate the root `index.html` into it.
 
 Configuration is easy, here's the only bit you need to edit:
 
-<pre>
----
-layout: default
-title: Prototype app
-categories: Format
----
-</pre>
+    ---
+    layout: default
+    title: Prototype app
+    categories: Format
+    ---
 
-Set "layout" to the template file you want to use - the "default" one is just the header and footer from gov.uk. It currently pulls in CSS from the gov.uk CDN. So you can probably leave this alone.
+Set `layout` to the template file you want to use - the `default` one is just the header and footer from gov.uk. It currently pulls in CSS from the gov.uk CDN. So you can probably leave this alone.
 
-Set "title" to the name of the app you are building - it controls what appears as the main page title.
+Set `title` to the name of the app you are building - it controls what appears as the main page title.
 
-Set "categories" to be whatever the gov.uk format might be - eg "service".
+Set `categories` to be whatever the gov.uk format might be - eg `service`.
 
 Then underneath just start shoving in the content of the prototype!
 
 ## Starting the app
 
-Just type "jekyll --server" at the command line in the root folder.
-(add "&" at the end if you don't want to lock up your command line and are happy killing processes)
+Just type `jekyll --server` at the command line in the root folder.
+(add `&` at the end if you don't want to lock up your command line and are happy killing processes)
 
-Then in your browser navigate to http://localhost:4000/[app-name]/index.html
+Then in your browser navigate to `http://localhost:4000/[app-name]/index.html`
 
 Bosh!
 
-(PS If it isn't working or can't find the files, try bundling - at the command line just type "bundle" and let it run)
+(PS If it isn't working or can't find the files, try bundling - at the command line just type `bundle` and let it run)
 
 ## Prerequisites & installation
 
@@ -57,7 +55,7 @@ http://pragmaticstudio.com/blog/2010/9/23/install-rails-ruby-mac
 
 to get a copy of the prototyping tool.
 
-4. Finally install jekyll and dependencies:
+4. Finally install Jekyll and dependencies:
 
     <pre>
     sudo gem install bundle
@@ -66,7 +64,7 @@ to get a copy of the prototyping tool.
 
 ## Pushing online
 
-We have an instance of Heroku (http://www.heroku.com/) that you can push the prototyping app to, in order to share prototypes externally. It lives at http://govuk-prototyping.herokuapp.com
+We have an instance of [Heroku](http://www.heroku.com/) that you can push the prototyping app to, in order to share prototypes externally. It lives at http://govuk-prototyping.herokuapp.com
 
 So you can push to Heroku from your own machine follow these steps:
 
@@ -74,7 +72,7 @@ So you can push to Heroku from your own machine follow these steps:
 
 2. Get invited into our Heroku instance as a contributor
 
-3. Install the Heroku toolbelt from https://toolbelt.herokuapp.com/
+3. Install the [Heroku toolbelt](https://toolbelt.herokuapp.com/)
 
 4. At the command line:
 
@@ -98,7 +96,7 @@ So you can push to Heroku from your own machine follow these steps:
   heroku
   </pre>
 
-7. Then every time you updated and committed your latest work, you can push to Heroku with "git push heroku master", make sure you have also pushed your changes to github to keep the two origins in sync
+7. Then every time you updated and committed your latest work, you can push to Heroku with `git push heroku master`, make sure you have also pushed your changes to github to keep the two origins in sync
 
 8. Finally, you can visit eg http://govuk-prototyping.herokuapp.com/licence-format/ to see your prototype
 
@@ -106,7 +104,7 @@ We might want to think about putting on a password at some point.
 
 ## Using Sass
 
-'.scss' files will be converted to their '.css' counterparts in the generated site. By default the Sass converter looks in `/_includes/stylesheets` and `/assets/toolkit/stylesheets` to resolve @import requests.
+`.scss` files will be converted to their `.css` counterparts in the generated site. By default the Sass converter looks in `/_includes/stylesheets` and `/assets/toolkit/stylesheets` to resolve `@import` requests.
 
 If you want to use the [GOV.UK Frontend Toolkit](https://github.com/alphagov/govuk_frontend_toolkit) Sass, then add the repo as a submodule to `/assets/toolkit` like this:
 
@@ -115,11 +113,11 @@ If you want to use the [GOV.UK Frontend Toolkit](https://github.com/alphagov/gov
     git submodule update
 
 
-Finally, in order for .scss conversion to work with Jekyll you'll need to start each '.scss' file with empty YAML front matter. 
+Finally, in order for `.scss` conversion to work with Jekyll you'll need to start each `.scss` file with empty YAML front matter.
 
 ## Sharing CSS code
 
-If you find that you've created some useful and reusable styles in your prototype, share it with the rest of us by adding them as mixins to '/_includes/scss/_prototyping-library.scss'
+If you find that you've created some useful and reusable styles in your prototype, share it with the rest of us by adding them as mixins to `/_includes/scss/_prototyping-library.scss`
 
 ## Working offline
 
@@ -128,4 +126,4 @@ latest version of the assets. However, there might be times when you need to wor
 
     assets: local
 
-The page will now reference local copies of those assets (in '/static'). Note - these local assets aren't synced in any way and will almost certainly be out date - which is why you should only use this as a temporary measure.
+The page will now reference local copies of those assets (in `/static`). Note - these local assets aren't synced in any way and will almost certainly be out date - which is why you should only use this as a temporary measure.
