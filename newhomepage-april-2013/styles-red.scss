@@ -33,7 +33,7 @@ header#global-header {
 
 // Styles
 header.homepage {
-  background-color: $hm-government;
+  background-color: $red;
   color: $white;
   .wrapper {
     //background: url(images/white-crest.png) right 30px no-repeat;
@@ -214,7 +214,7 @@ header.homepage {
               padding: 0 15px;
               margin: 10px 0;
               a {
-                color: $hm-government;
+                color: $red;
                 display: block;
                 font-weight: bold;
                 margin-right: 10px;
@@ -301,7 +301,7 @@ header.homepage {
         margin-bottom: 30px;
 
         a {
-          color: $fuschia;
+          color: $hm-government;
           text-decoration: none;
           &:hover, &:focus {
             text-decoration: underline;
