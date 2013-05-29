@@ -7,6 +7,7 @@
 @import "design-patterns/_forms";
 @import "design-patterns/regular-grid";
 @import "design-patterns/account-management-tools";
+@import "design-patterns/grid";
 
 
 @include account-management-tools;
@@ -41,37 +42,25 @@
   }
 }
 
-.two-column{
-  margin-top: 0px;
+.thirds {
+   @include grid((2,1));
+}
 
-  @include regular-grid(2);
-  form {
-    background-color: $highlight-colour;
-    padding: 1em;
-    padding-top: 10px;
-
+.form {
+  label {
+    display: block;
+    color: #0b0c0c;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    font-size: 1.9rem;
+    line-height: 1.31579;
+    font-weight: 400;
+    text-transform: none;
+    vertical-align: top;
+    padding: 0.25em 0;
   }
 }
 
-.two-column > * *:first-child {
-  // margin-top: 10px;
-}
-.form label {
-  display: block;
-
-  color: #0b0c0c;
-  font-family: "nta", Arial, sans-serif;
-  font-size: 19px;
-  font-size: 1.9rem;
-  line-height: 1.31579;
-  font-weight: 400;
-  text-transform: none;
-  vertical-align: top;
-  padding: 0.25em 0;
-}
-.form input {
-
-}
 #new-child-template, #stopped-child-template {
   display: none;
 }
@@ -86,19 +75,51 @@
 }
 
 .results-box {
-  border: 3px solid black;
+  border: 5px solid black;
   padding: 10px;
+  margin-bottom: 40px;
   p {
     font-size: 40px;
   }
 }
 
-#calculator fieldset:nth-child(1) .steps {
-  float: left;
-  width: 24px;
-  height: 24px;
-  overflow: hidden;
-  text-indent: -5000%;
-  margin-right: 0.75em;
-  background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-step-1-6afb52055d0f49ccc1ffa7c33ef10fb2.png);
+#calculator {
+  fieldset {
+    margin-bottom: 3em;
+  }
+
+  input[type="text"] {
+    display:block;
+    margin: 0.5em 0;
+  }
+
+  .steps {
+    margin: 0;
+    float: left;
+    width: 23px;
+    height: 23px;
+    overflow: hidden;
+    text-indent: -5000%;
+    margin-right: 0.75em;
+  }
+
+  #step-1 {
+    background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-step-1-6afb52055d0f49ccc1ffa7c33ef10fb2.png);
+  }
+  
+  #step-2 {
+    background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-step-2-959e7eecd3702fe3bc7a61a57a40289b.png);
+  }
+  
+  #step-3 {
+    background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-step-3-c95226d199222c14832170be0941a27a.png);
+  }
+  
+  #step-4 {
+    background-image: url(https://assets.digital.cabinet-office.gov.uk/static/icon-step-4-60af308c82427fdd1d7d6d25276081b9.png);
+  }
+}
+
+.button{
+ @include button;
 }

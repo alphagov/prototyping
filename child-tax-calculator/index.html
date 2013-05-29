@@ -1,14 +1,13 @@
 ---
 title: "child tax calculator"
 layout: default-wrapper
-template: full-width
 css: assets/css/styles.css
 body_class: full-width
 js: assets/js/app.js
 ---
 <section id="content" role="main" class="group category-page">
   <div class="browse-container full-width group">
-    <section class="two-column full-width group">
+    <section class="thirds two-column full-width group">
       <div>
         <header class="group">
           <hgroup>
@@ -16,24 +15,22 @@ js: assets/js/app.js
             <h2>Calculator</h2>
           </div>
           <h1>Estimate your High Income Child Benefit Tax Charge</h1>
-
+             </hgroup>
+          </header>
           <div class="whitehall-wrapper">    
-            <h2>Year 2013/14</h2>
+            <p>Fill out your details in the calculator below to see if you need to pay back any of your Child Benefit as tax.</p>
           </div>
-          </hgroup>
-        </header>
       </div>
     </section>
 
-    <section class="two-column form full-width group">
+    <section class="thirds">
       <div>
-        <h2>Questions</h2>
         <form id="calculator" action="">
           <fieldset>
-            <h2><span class="steps"><span class="visuallyhidden">Step </span>1 </span>Adjusted net income</h2>
+            <h2><span class="steps" id="step-1"><span class="visuallyhidden">Step </span>1 </span>Adjusted net income</h2>
             <p class="group" id="adjusted-income">
             <label for="total-annual-income-before-tax">Total annual income before tax <a id="info" href="#">Info</a></label>
-            <input id="total-annual-income-before-tax" type="text" class="income" value="£" /><br>
+            <input id="total-annual-income-before-tax" type="text" class="income" value="£" />
             </p>
             <div id="info-total-net-income">
               <p> ftdgwyhiqsuoj0dgre78uw9hjxioshygrechiuwdnxsiojanml</p>
@@ -61,13 +58,15 @@ js: assets/js/app.js
             </div>
           </fieldset>
           <fieldset>
-            <legend>Number of children you're claiming for</legend>
-            <p class="group">
+            <h2><span class="steps" id="step-2" ><span class="visuallyhidden">Step </span>2 </span>Number of children you're claiming for</h2>
+            <p class="group" id="children-claim">
             <label for="children">How many children will you or your partner be getting paid Child Benefit for from %{tax_year_start}?</label>
             <input type="text" id="children" class="children">
             </p>
-            <fieldset>
-              <legend><span>New children</span></legend>
+          </fieldset>
+          <fieldset>
+            <h2><span class="steps" id="step-3"><span class="visuallyhidden">Step </span>3 </span>Are you planning on claiming for any new children this year?</h2>
+            <p class="group" id="children-new">
               <p class="inline option group">
               <label class="inline-radio" for="Yes">
                 <input id="new_children_yes" type="radio" name="new_children" value="Yes"> Yes
@@ -76,7 +75,7 @@ js: assets/js/app.js
                 <input id="new_children_no" type="radio" name="new_children" value="No"> No
               </label>
               </p>
-            </fieldset>
+          </fieldset>
             <div id="new-children">
               <div id="children-container"></div>
               <p class="group">
@@ -107,7 +106,8 @@ js: assets/js/app.js
               <a class="finish-child" href="#">Done</a>
             </div>
             <fieldset>
-              <legend><span>Stopped children</span></legend>
+              <h2><span class="steps" id="step-4"><span class="visuallyhidden">Step </span>4 </span>Are you claiming for any children who will cease to be eligable this year?</h2>
+            <p class="group" id="children-old">
               <p class="inline option group">
               <label class="inline-radio" for="Yes">
                 <input id="stopped_children_yes" type="radio" name="stopped_children" value="Yes"> Yes
@@ -143,10 +143,10 @@ js: assets/js/app.js
                   </p>
                 </div>
               </fieldset>
-              <a class="finish-child" href="#">Done</a>
+              <a class="finish-child button" href="#">Done</a>
               </p>
           </div>
-          <input type="submit" name="final-submit" value="Submit" />
+          <input class="button" type="submit" name="final-submit" value="Submit" />
         </ol>
         </form>
       </div>
