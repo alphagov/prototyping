@@ -201,3 +201,25 @@ $beta-colour: $orange;
     }
   }
 }
+
+.cloudstore {
+  #wrapper {
+    background-color: #fff;
+  }
+
+  img.cloudstore {
+    width: 1172px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .sub-nav {
+    max-width: none;
+
+    .inner {
+      max-width: 990px;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+}

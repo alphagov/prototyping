@@ -110,6 +110,32 @@
     }
   }
 
+  #logo-crown {
+    float: left;
+    position: relative;
+    width: 154px;
+    height: 30px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: none;
+
+      /* scale oversized image to container bounds */
+      width: 200%;
+      height: 300%;
+
+      @include ie(6){
+        left: 0;
+      }
+    }
+    &:hover img {
+      top: -30px;
+    }
+  }
+
   .search-toggle {
     display: none;
 
