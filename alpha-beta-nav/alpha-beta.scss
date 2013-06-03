@@ -188,8 +188,9 @@ $beta-colour: $orange;
     margin: 0 0 0 33%;
 
     li {
-      &:first-child {
+      &.account-name {
         margin-right: 20px;
+        font-weight: 600;
       }
 
       float: left;
