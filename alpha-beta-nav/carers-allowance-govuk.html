@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="header.css">
   <link rel="stylesheet" href="alpha-beta.css">
 
+  <script src="alpha.js"></script>
+
   <body class="mainstream full-width">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
@@ -16,6 +18,7 @@
     <div id="wrapper" class="service">
 
       <section id="content" role="main" class="group alpha">
+        {% include alpha-beta-header/_alpha-warning.html %}
 
         <header class="page-header group">
           <hgroup><h1><span>Service</span>Carer's Allowance</h1></hgroup>
@@ -32,6 +35,7 @@
     </div>
     <!--end wrapper-->
 
+    {% include alpha-beta-header/_popup.html %}
     {% include _footer.html %}
   </body>
 </html>
