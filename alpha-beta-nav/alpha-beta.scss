@@ -252,8 +252,9 @@ $beta-colour: $orange;
 }
 
 #popup {
-  margin: 3em auto 0 auto;
+  position: relative;
   max-width: 80%;
+  margin: 3em auto 0 auto;
   background-color: #fff;
 
   header {
@@ -263,15 +264,20 @@ $beta-colour: $orange;
 
     h2 {
       @include bold-24;
+      color: $white;
     }
+  }
 
-    .close {
-      @include core-16;
-      float: right;
-      margin: 0;
+  .close {
+    padding: 0.5em;
+  }
 
-      @include border-radius(5px);
-      background-color: rgba(0,0,0,0.5);
+  div {
+    // @include core-19;
+    padding: 1em 2em 2em 2em;
+
+    p {
+      width: 75%;
     }
   }
 }
