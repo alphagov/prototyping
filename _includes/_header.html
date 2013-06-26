@@ -1,15 +1,32 @@
-    <!--start header-->
-    <header role="banner" class="group" id="global-header"><div class="header-wrapper group">
-        <a href="/" title="Go to the gov.uk homepage" id="logo"><img src="http://static.preview.alphagov.co.uk/static/gov.uk_logotype-2x.png" alt="GOV.UK Logo"></a>
-
-        <a href="#footer" class="visuallyhidden">Skip to footer navigation</a>
-
-        <a href="#search" class="button search-toggle">Search</a>
-
-        <form id="search" class="site-search" action="/search" method="get" role="search">
-          <label for="site-search-text" class="">Search</label>
-          <input type="search" name="q" placeholder="Search GOV.UK" id="site-search-text" title="Search"><input class="button" type="submit" value="Search">
-        </form>
+<header role="banner" id="global-header"{% if page.proposition_title %} class="with-proposition"{% endif %}>
+  <div class="header-wrapper">
+    <div class="header-global">
+      <div class="header-logo">
+        <a href="/" title="Go to the gov.uk homepage" id="logo" class="content">
+          <img src="https://assets.digital.cabinet-office.gov.uk/static/gov.uk_logotype-2x-24145374d271079f08d96c618cc8d4a5.png" alt="GOV.UK">
+        </a>
+        <a href="#search" class="search-toggle js-header-toggle">Search</a>
       </div>
-    </header>
+
+      {% if page.no_search != true %}
+      <form id="search" class="site-search" action="/search" method="get" role="search">
+        <div class="content">
+          <label for="site-search-text">Search</label>
+          <input type="search" name="q" id="site-search-text" title="Search" class="js-search-focus">
+          <input class="submit" type="submit" value="Search" />
+        </div>
+      </form>
+      {% endif %}
+    </div>
+
+    {% if page.proposition_title %}
+    <div class="header-proposition">
+      <div class="content">
+        <nav id="proposition-menu"><a href="#" id="proposition-name">{{ page.proposition_title }}</a>
+        </nav>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</header>
     <!--end header-->
