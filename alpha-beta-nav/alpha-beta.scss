@@ -247,6 +247,29 @@ $beta-colour: $orange;
   }
 }
 
+.beta-warning {
+  padding: 0.5em 0;
+  background-color: $beta-colour;
+
+  p {
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 0 2em;
+
+    color: $text-colour;
+    @include core-16;
+  }
+
+  a, a:link, a:visited, a:active {
+    color: $text-colour;
+  }
+
+  a:hover {
+    color: $text-colour;
+  }
+}
+
+
 #alpha-popup {
   display: none;
 }
