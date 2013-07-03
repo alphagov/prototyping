@@ -1,4 +1,5 @@
 $(document).ready(function() {
-  var html = $('#alpha-popup').html();
-  var popup = NewPopup.popup(html);
+  var $alpha = $('#alpha-popup'),
+  html = $alpha.html();
+  var popup = NewPopup.popup(html, $alpha.attr('class'));
 });

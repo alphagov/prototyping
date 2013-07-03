@@ -225,9 +225,8 @@ $beta-colour: $orange;
   }
 }
 
-.alpha-warning {
+.alpha-warning, .beta-warning {
   padding: 0.5em 0;
-  background-color: $alpha-colour;
 
   p {
     max-width: 990px;
@@ -247,26 +246,12 @@ $beta-colour: $orange;
   }
 }
 
+.alpha-warning {
+    background-color: $alpha-colour;
+}
+
 .beta-warning {
-  padding: 0.5em 0;
   background-color: $beta-colour;
-
-  p {
-    max-width: 990px;
-    margin: 0 auto;
-    padding: 0 2em;
-
-    color: $text-colour;
-    @include core-16;
-  }
-
-  a, a:link, a:visited, a:active {
-    color: $text-colour;
-  }
-
-  a:hover {
-    color: $text-colour;
-  }
 }
 
 
@@ -276,31 +261,153 @@ $beta-colour: $orange;
 
 #popup {
   position: relative;
-  max-width: 80%;
+  max-width: 800px;
   margin: 3em auto 0 auto;
+
   background-color: #fff;
+  border: 10px solid $border-colour;
+  // border-width: 10px 0;
+  // margin: 2em 0;
+  padding: 2em;
 
-  header {
-    display: block;
-    background-color: $alpha-colour;
-    padding: 0.5em 2em;
-
-    h2 {
-      @include bold-24;
-      color: $white;
-    }
-  }
-
-  .close {
-    padding: 0.5em;
+  img {
+    float: left;
+    padding: 0 5% 1em 0;
+    width: 25%;
   }
 
   div {
-    // @include core-19;
-    padding: 1em 2em 2em 2em;
+    float: right;
+    width: 70%;
+  }
 
-    p {
-      width: 75%;
+  h2 {
+    margin-top: 0;
+    @include bold-24;
+  }
+
+  &.alpha {
+    border-color: $alpha-colour;
+
+    .button {
+      background-color: $alpha-colour;
+      @include box-shadow(0 3px 0 darken($alpha-colour, 20%));
     }
+  }
+
+  &.beta {
+    border-color: $beta-colour;
+
+    .button {
+      background-color: $beta-colour;
+      @include box-shadow(0 3px 0 darken($beta-colour, 20%));
+    }
+  }
+}
+
+.get-started .button {
+  padding: 0.60em 1.7em 0.45em 0.67em;
+  background-image: url(https://assets-origin.preview.alphagov.co.uk/static/icon-pointer.png);
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+}
+
+.transformation {
+  border: 10px solid $border-colour;
+  border-width: 10px 0;
+  margin: 2em 0;
+  padding: 2em 0;
+
+  img {
+    float: left;
+    padding: 0 5% 1em 0;
+    width: 25%;
+  }
+
+  div {
+    float: right;
+    width: 70%;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  &.alpha {
+    border-top-color: $alpha-colour;
+
+    .button {
+      background-color: $alpha-colour;
+      @include box-shadow(0 3px 0 darken($alpha-colour, 20%));
+    }
+  }
+
+  &.beta {
+    border-top-color: $beta-colour;
+
+    .button {
+      background-color: $beta-colour;
+      @include box-shadow(0 3px 0 darken($beta-colour, 20%));
+    }
+  }
+}
+
+.transformation-2 {
+  border-width: 1px 0;
+
+  div {
+    float: none;
+    width: auto;
+  }
+}
+
+.transformation-3 {
+  border-width: 0;
+  background-color: lighten($alpha-colour, 20);
+  padding: 1em;
+
+  div {
+    float: none;
+    width: auto;
+  }
+
+  h2 {
+    width: 60%;
+    float: left;
+
+    color: $white;
+  }
+
+  p.get-started {
+    float: right;
+  }
+}
+
+.transformation-4 {
+  background-color: lighten($alpha-colour, 20);
+  border-width: 0;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+
+  div {
+    float: none;
+    width: auto;
+    padding: 1em;
+  }
+
+  h2 {
+    float: left;
+    color: $white;
+    margin: 0;
+    width: 70%;
+  }
+
+  .get-started {
+    margin: 0;
+  }
+
+  .button {
+    float: right;
   }
 }
