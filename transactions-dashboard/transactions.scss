@@ -1,0 +1,336 @@
+---
+---
+
+@import "_colours";
+@import "_css3";
+@import "_device-pixels";
+@import "_typography";
+@import "_conditionals";
+@import "_shims";
+@import "_conditionals2";
+
+@import "whitehall/_colours";
+
+$discovery-colour: $fuschia;
+$alpha-colour: $pink;
+$beta-colour: $orange;
+$live-colour: $grass-green;
+
+#content {
+  margin: 0 auto;
+  max-width: 1020px;
+  position: relative;
+}
+
+.transaction-dashboard {
+  .page-header {
+    margin: 0 30px;
+
+    h1 {
+      @include bold-48;
+
+      @include media(tablet) {
+        @include bold-80;
+      }
+    }
+
+    h2 {
+      @include core-24;
+
+      @include media (tablet) {
+        @include core-36;
+      }
+    }
+
+    .hgroup {
+      padding: 1em 0 2em 0;
+    }
+  }
+
+  .intro {
+    margin: 0 30px;
+
+    p {
+      @include core-19;
+
+      @include media(tablet) {
+        @include core-24;
+        padding-right: 25%;
+      }
+    }
+  }
+
+  .phases {
+    list-style: none;
+    margin: 2em 0;
+    padding: 0 0 2em 0;
+
+    border-bottom: 1px solid $border-colour;
+
+    li {
+      display: block;
+
+      @include media(tablet) {
+        float: left;
+
+        width: 24%;
+        margin: 0 (4%/6);
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      h2 {
+        background-color: $panel-colour;
+
+        @include bold-24;
+        color: $white;
+        text-align: center;
+
+        margin: 0;
+        padding: 0.2em 0;
+      }
+
+      .num-transactions {
+        @include bold-80;
+        text-align: center;
+        color: $secondary-text-colour;
+
+        margin: 0.2em 0;
+      }
+
+      p {
+        @include core-19;
+        text-align: center;
+
+        width: 100%;
+
+        @include media(tablet) {
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      &.discovery {
+        h2 {
+          background-color: $discovery-colour;
+        }
+
+        .num-transactions {
+          color: $discovery-colour;
+        }
+      }
+
+      &.alpha {
+        h2 {
+          background-color: $alpha-colour;
+        }
+
+        .num-transactions {
+          color: $alpha-colour;
+        }
+      }
+
+      &.beta {
+        h2 {
+          background-color: $beta-colour;
+        }
+
+        .num-transactions {
+          color: $beta-colour;
+        }
+      }
+
+      &.live {
+        h2 {
+          background-color: $live-colour;
+        }
+
+        .num-transactions {
+          color: $live-colour;
+        }
+      }
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 30px;
+
+    thead {
+      tr {
+        visibility: hidden;
+        height: 0;
+      }
+
+      th {
+        text-align: left;
+        padding: 0 2%;
+        height: 0;
+      }
+
+      .num {
+        width: 5%;
+      }
+
+      .description {
+        width: 70%;
+      }
+
+      .dept {
+        width: 25%;
+      }
+    }
+
+    tbody {
+      td {
+        vertical-align: top;
+        padding: 0 2% 1em 0;
+      }
+
+      .num {
+        @include bold-80;
+        text-align: right;
+      }
+
+      h3 {
+        @include bold-24;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .phase-tag {
+    display: inline-block;
+
+    color: #fff;
+    @include bold-16;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    margin: 3px 0 0 10px;
+    padding: 2px 5px 0;
+
+    &.discovery {
+      background-color: $discovery-colour;
+    }
+
+    &.alpha {
+      background-color: $alpha-colour;
+    }
+
+    &.beta {
+      background-color: $beta-colour;
+    }
+
+    &.live {
+      background-color: $live-colour;
+    }
+  }
+
+  &.transaction-single {
+    .page-header {
+      h1 {
+        @include media(tablet) {
+          @include bold-48;
+        }
+      }
+
+      .hgroup {
+        width: 64%;
+        float: left;
+      }
+
+      .organisations {
+        float: right;
+        width: 31%;
+
+        padding: 1em 0;
+
+        &>div {
+          padding-bottom: 1em;
+        }
+      }
+    }
+
+    .body {
+      margin: 0 25% 2em 30px;
+
+    }
+
+    blockquote {
+      @include core-24;
+      position: relative;
+      margin: 1em 0;
+
+      &:before {
+        content: "“";
+        @include bold-80;
+        font-size: 200px;
+        color: $panel-colour;
+
+        z-index: -1;
+        position: absolute;
+        left: -30px;
+        top: -30px;
+      }
+
+      &:after {
+        content: "”";
+      }
+    }
+
+    .big-number {
+      width: 50%;
+      float: left;
+      margin: 0.2em 0;
+
+      @include bold-80;
+      color: $turquoise;
+
+      span {
+        @include core-24;
+        display: block;
+      }
+    }
+
+    .screengrab {
+      width: 50%;
+      float: left;
+
+      img {
+        width: 95%
+      }
+
+    }
+  }
+
+
+  @include department-colours('.organisation-logo', border-color);
+
+  .agency-logo {
+    font-family: $Helvetica-Regular;
+    font-size: 19px;
+    line-height: (20/19); /* 20px */
+    font-weight: 400;
+    text-transform: none;
+    text-decoration: none;
+    color: $text-colour;
+    display: block;
+    height: auto;
+    width: auto;
+
+    @include media-down(mobile) {
+      font-size: 13px;
+      line-height: (15/13);
+    }
+  }
+}
