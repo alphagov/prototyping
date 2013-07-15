@@ -363,8 +363,16 @@ $beta-colour: $orange;
 
 .transformation-3 {
   border-width: 0;
-  background-color: lighten($alpha-colour, 20);
   padding: 1em;
+
+  &.alpha {
+    background-color: lighten($alpha-colour, 20);
+  }
+
+  &.beta {
+    background-color: lighten($beta-colour, 10);
+  }
+
 
   div {
     float: none;
@@ -384,11 +392,18 @@ $beta-colour: $orange;
 }
 
 .transformation-4 {
-  background-color: lighten($alpha-colour, 20);
   border-width: 0;
   max-width: 960px;
   margin: 0 auto;
   padding: 0;
+
+  &.alpha {
+    background-color: lighten($alpha-colour, 20);
+  }
+
+  &.beta {
+    background-color: lighten($beta-colour, 10);
+  }
 
   div {
     float: none;
