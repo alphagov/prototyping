@@ -23,9 +23,12 @@ $live-colour: $grass-green;
 }
 
 .transaction-dashboard {
-  .page-header {
+  article {
     margin: 0 30px;
+    width: auto;
+  }
 
+  .page-header {
     h1 {
       @include bold-48;
 
@@ -48,7 +51,8 @@ $live-colour: $grass-green;
   }
 
   .intro {
-    margin: 0 30px;
+    margin: 0;
+    padding: 0;
 
     p {
       @include core-19;
@@ -69,6 +73,7 @@ $live-colour: $grass-green;
 
     li {
       display: block;
+      padding: 0;
 
       @include media(tablet) {
         float: left;
@@ -161,7 +166,8 @@ $live-colour: $grass-green;
   table {
     border-collapse: collapse;
     border-spacing: 0;
-    margin: 0 30px;
+    margin: 0;
+    width: 100%;
 
     thead {
       tr {
@@ -191,12 +197,19 @@ $live-colour: $grass-green;
     tbody {
       td {
         vertical-align: top;
-        padding: 0 2% 1em 0;
+        padding: 10px 2% 1em 0;
+
+        border-width: 1px 0 0 0;
+        border-style: solid;
+        border-color: $border-colour;
+
+        background-color: transparent;
       }
 
       .num {
         @include bold-80;
         text-align: right;
+        padding-bottom: 0;
       }
 
       h3 {
@@ -216,7 +229,7 @@ $live-colour: $grass-green;
     letter-spacing: 1px;
     text-decoration: none;
 
-    margin: 3px 0 0 10px;
+    margin: 3px 0 0 0;
     padding: 2px 5px 0;
 
     &.discovery {
@@ -242,6 +255,17 @@ $live-colour: $grass-green;
         @include media(tablet) {
           @include bold-48;
         }
+
+        span {
+          @include core-27($line-height: 1);
+          display: block;
+          margin-bottom: 0.25em;
+          color: $secondary-text-colour ;
+
+          @include ie-lte(8) {
+            height: 1%;
+          }
+        }
       }
 
       .hgroup {
@@ -262,8 +286,20 @@ $live-colour: $grass-green;
     }
 
     .body {
-      margin: 0 25% 2em 30px;
+      width: 60%;
+      margin: 0 3% 2em 0;
+      float: left;
+    }
 
+    .transformation-logo {
+      width: 25%;
+      display: block;
+      float: left;
+      margin: 0 1em 1em 0;
+
+      img {
+        width: 100%;
+      }
     }
 
     blockquote {
@@ -282,24 +318,10 @@ $live-colour: $grass-green;
         left: -30px;
         top: -30px;
       }
-
-      &:after {
-        content: "”";
-      }
     }
 
-    .big-number {
-      width: 50%;
-      float: left;
-      margin: 0.2em 0;
-
-      @include bold-80;
-      color: $turquoise;
-
-      span {
-        @include core-24;
-        display: block;
-      }
+    cite {
+      font-style: normal;
     }
 
     .screengrab {
@@ -310,6 +332,62 @@ $live-colour: $grass-green;
         width: 95%
       }
 
+    }
+
+    aside {
+      width: 31%;
+      float: right;
+
+      &>div {
+        margin: 0 0 1em 0;
+        border-bottom: 1px solid $border-colour;
+
+        p {
+          @include core-14;
+        }
+      }
+
+      .current-phase {
+        display: inline-block;
+        @include bold-24;
+        color: $white;
+
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        line-height: 30px;
+        padding: 4px 5px 0px 5px;
+
+        &.discovery {
+          background-color: $discovery-colour;
+        }
+
+        &.alpha {
+          background-color: $alpha-colour;
+        }
+
+        &.beta {
+          background-color: $beta-colour;
+        }
+
+        &.live {
+          background-color: $live-colour;
+        }
+      }
+
+      .big-number {
+        margin: 0.2em 0;
+
+        @include bold-80;
+        // color: $turquoise;
+
+        span {
+          @include core-19;
+          display: block;
+        }
+      }
     }
   }
 
