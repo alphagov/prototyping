@@ -1,102 +1,84 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>{{ page.title }}</title>
+    <!-- References production assets -->
+    <link href="https://static.production.alphagov.co.uk/static/application.css" media="screen" rel="stylesheet" type="text/css">
+    <link class="wordsdifficult" href="https://static.production.alphagov.co.uk/stylesheets/wordsdifficult.css" media="screen" rel="alternate stylesheet" title="I find words difficult" type="text/css">
+    <script src="https://static.production.alphagov.co.uk/javascripts/libs/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+    {% if page.css  %}
+    <link rel="stylesheet" href="{{ page.css }}" />
+    {% endif %}
+    <script src="https://static.production.alphagov.co.uk/javascripts/libs/jquery/plugins/carousel.js" type="text/javascript"></script>
+    <script defer src="https://static.production.alphagov.co.uk/javascripts/application.js" type="text/javascript"></script>
 
-    <!-- References local (probably out of date) copies of assets. Only use if you need to work offline temporarily -->
-    <link href="/static/insidegov-refactoring.css" media="screen" rel="stylesheet" type="text/css">
-    <link href="/static/application.css" media="screen" rel="stylesheet" type="text/css">
-    <link class="wordsdifficult" href="../static/wordsdifficult.css" media="screen" rel="alternate stylesheet" title="I find words difficult" type="text/css">
-    <link href="https://www.gov.uk/government/assets/website-5a64276c31414cac40d9e7557318c251.css" media="screen" rel="stylesheet" type="text/css">
-    <script src="/static/jquery-1.7.2.min.js" type="text/javascript"></script>
-    <script src="/static/carousel.js" type="text/javascript"></script>
-    <script defer src="/static/application.js" type="text/javascript"></script>    
+    <link media="screen" type="text/css" rel="stylesheet" href="assets/css/styles.css" />
+    <link href="https://assets.digital.cabinet-office.gov.uk/government/assets/frontend/base-52ed3d16d3a74f6171fb386f4500ebf4.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="assets/js/behaviours.js" type="text/javascript"></script> 
+    
+    <script type="text/javascript">
+    setTimeout(function(){var a=document,g,b={families:(g=
+      ["Gill","Sassoon"]),urls:["https://fast.fonts.com/cssapi/172cb3ce-d500-423b-9495-ef65783e8f1d.css"]},
+      c="https://static.production.alphagov.co.uk/static/libs/goog/webfont-debug.js",d="script",
+      e=a.createElement(d),f=a.getElementsByTagName(d)[0],h=g.length;WebFontConfig
+      ={custom:b},e.src=c,f.parentNode.insertBefore(e,f);for(;h--;a.documentElement
+        .className+=' wf-'+g[h].replace(/\s/g,'').toLowerCase()+'-n4-loading');},0)
+    </script> 
   </head>
 
+  <body class="website government">
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
 
-
-<body class="website government">
-  <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
-
-  <header role="banner" class="group" id="global-header"><div class="header-global group">
-      <h1><a href="/" title="Go to the gov.uk homepage">GOV.UK</a></h1>
-      <nav role="navigation"><ul>
-<li><a href="/settings" class="customisation-settings">Settings</a></li>
-          <li><a href="/help">Help</a></li>
-          <li id="gs-feedback"><a href="/feedback">Feedback</a></li>
-        </ul></nav><div class="search-help">
-        <form id="search" class="site-search" action="/government/search" method="get" role="search">
-          <label for="site-search-text" class="visuallyhidden">
-            <span>Search</span>
-          </label>
-          <input type="search" name="q" id="site-search-text" title="Search"><input type="submit" value="Search" class="button">
-</form>
-      </div>
-    </div>
-
-  </header><!--end header--><div class="header-context group"><!-- deliberately empty --></div>
-<div id="wrapper" class="publications-index">
-      <nav class="group" id="global-nav" role="navigation"><div class="inner">
-          <ul>
-<li id="inside_gov_link"><a href="/government/home" class="home">Inside government</a></li>
-            <li><a href="/government/news-and-speeches" class="primary">News</a></li>
-            <li><a href="/government/policy-topics" class="primary">Policy</a></li>
-            <li><a href="/government/publications" class="primary current">Publications</a></li>
-            <li><a href="/government/consultations" class="">Consultations</a></li>
-            <li><a href="/government/ministers" class="">Ministers</a></li>
-            <li><a href="/government/organisations" class="">Departments</a></li>
-            <li><a href="/government/world" class="">UK &amp; the world</a></li>
-          </ul>
-</div>
-      </nav><div id="content" class="group">
-        
-<div class="g4">
-  <header class="page_header publication icon"><h1 class="page_title">{{ page.title }}</h1>
-  </header>
-  {{ content }}
-</div>
-
-
-</div>
-    </div>
-<!--end wrapper-->
-
-  <footer class="group" id="footer" role="contentinfo"><div class="beta-notice">
-      <p>This is a <a href="http://digital.cabinetoffice.gov.uk/2012/01/31/beta/">test website</a>, so may be inaccurate or misleading. The official website remains <a href="http://www.direct.gov.uk">Directgov</a> and the website of the <a href="http://www.cabinetoffice.gov.uk/content/list-government-departments-and-ministers">relevant government department or organisation</a></p>
-    </div>
-    <div class="inner group">
-      <div class="colophon-and-help">
-        <nav class="help"><ul>
-<li><a href="/help">Help</a></li>
-            <li><a href="/help/cookies">Cookies</a></li>
-          </ul></nav><div class="colophon">
-          <p>Much of the information on this website is available for reuse under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/" rel="license">Open Government Licence</a></p>
-          <p>Built by the <a href="http://digital.cabinetoffice.gov.uk">Government Digital Service</a></p>
+    <header role="banner" id="global-header" class="with-proposition">
+      <div class="header-wrapper">
+        <div class="header-global">
+          <div class="header-logo">
+            <a href="/" title="Go to the GOV.UK homepage" id="logo" class="content">
+              <img src="https://assets.digital.cabinet-office.gov.uk/static/gov.uk_logotype-2x-24145374d271079f08d96c618cc8d4a5.png" alt="GOV.UK"></a>
+            <a href="#search" class="search-toggle js-header-toggle">Search</a>
+          </div>
+          <form id="search" class="site-search" action="/search" method="get" role="search">
+            <div class="content">
+              <label for="site-search-text">Search</label>
+              <input type="search" name="q" id="site-search-text" title="Search" class="js-search-focus"><input class="submit" type="submit" value="Search">
+            </div>
+            <input type="hidden" name="tab" value="government-results">
+          </form>
+        </div>
+        <div class="header-proposition">
+          <div class="content">
+            <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+            <nav id="proposition-menu">
+              <ul id="proposition-links">
+                <li><a href="/government/organisations" class="">Departments</a></li>
+                <li><a href="/government/topics" class="">Topics</a></li>
+                <li><a href="/government/world" class="">Worldwide</a></li>
+                <li><a href="/government/how-government-works" class="">How government works</a></li>
+                <li><a href="/government/get-involved">Get involved</a></li>
+                <li class="clear-child"><a href="/government/policies" class="">Policies</a></li>
+                <li><a href="/government/publications" class="">Publications</a></li>
+                <li><a href="/government/publications?publication_filter_option=consultations" class="">Consultations</a></li>
+                <li><a href="/government/publications?publication_filter_option=statistics" class="">Statistics</a></li>
+                <li><a href="/government/announcements" class="">Announcements</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
-      <div class="copyright">
-        <p>© Crown Copyright</p>
+    </header><!--end header-->
+
+    <div id="whitehall-wrapper">  
+      <div class="whitehall-top-bar"></div>
+      <div class="whitehall-content">
+        <div id="page" class="inside_gov_how-gov-works">
+          <div id="">
+          {{ content }}
+          </div>
+        </div>
       </div>
-    </div>
+    </div><!--end wrapper-->
 
-    <div id="govuk-feedback">
-      <h2>How could this page be better?</h2>
-<p class="close"><a href="#">Close</a></p>
-      <form method="POST" action="https://spreadsheets.google.com/spreadsheet/formResponse?formkey=dEtacjNNZzFyRkliYUtFRWp1eTl6Snc6MQ">
-        <label class="ss-q-help" for="entry_0">Your feedback</label>
-        <div id="feedback-options">
-          <select name="entry.0.single" id="entry_0"><option value="I don't understand something on this page">I don't understand something on this page</option>
-<option value="I have some feedback about the site">The information could be clearer</option>
-<option value="Something went wrong or doesn't work">Something is wrong or doesn't work</option></select>
-</div>
-        <div id="feedback-mechanism">
-          <label for="feedback-form">Your comment: </label><textarea name="entry.2.single" class="ss-q-long" id="entry_2"></textarea><input type="hidden" name="entry.3.single" value="no javascript" class="ss-q-short" id="entry_3"><input type="submit" value="Send" class="button">
-</div>
-      </form>
-      <p><small>This feedback is anonymous.  Please don't include your email address or other contact information.  If you would like to receive a response, please see our <a href="/feedback">other methods of feedback.</a></small></p>
-    </div>
-
-  </footer><!--end footer--><div id="global-app-error" class="app-error hidden"></div>
-
-</body>
+    {% include _footer.html %}
+  </body>
 </html>
