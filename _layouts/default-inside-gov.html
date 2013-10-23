@@ -71,7 +71,7 @@
     <div id="whitehall-wrapper">  
       <div class="whitehall-top-bar"></div>
       <div class="whitehall-content">
-        <div id="page" class="">
+        <div id="page" class="{{ page.categories }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
           <div id="">
           {{ content }}
           </div>

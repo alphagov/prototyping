@@ -248,6 +248,34 @@
 }
 
 
+#whitehall-wrapper .external-gutter-list .govspeak .in-page-navigation {
+  position: absolute;
+  margin: -30px 0 0 -25%;
+  width: 22%;
+  padding: 25px 0 30px 4%;
+}
+#whitehall-wrapper .external-gutter-list .govspeak .in-page-navigation h2 {
+  position: static;
+  margin: 0;
+  width: auto;
+  padding: 5px 0 10px 0;
+}
+
+.external-gutter-list .govspeak h2 .number {
+  background: #fff;
+  padding-right: 0;
+  font-weight: bold;
+}
+@media screen and (min-width: 640px) {
+  .external-gutter-list .govspeak h2 .number {
+    font-size:  27px;
+    position: static;
+    margin: 0;
+    width: auto;
+    padding: 0;
+  }
+}
+
 
 .govspeak {
   h4, h5, h6 {
