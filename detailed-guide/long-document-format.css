@@ -1,0 +1,363 @@
+#page {
+  padding: 30px 30px 0 30px;
+}
+
+.logo-header {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.organisations-icon-list,
+.return {
+  float: left;
+  width: 25%;
+}
+.return {
+  width: 75%;
+}
+.return p {
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+}
+
+.publication-header {
+  background: #2b8cc4;
+  clear: both;
+  padding: 10px;
+  margin: 0 -15px;
+  overflow: hidden;
+}
+@media screen and (min-width: 640px) {
+  .publication-header {
+    padding: 0 30px;
+    margin: 0;    
+  }
+}
+
+#whitehall-wrapper .publication-header .inner-block.floated-children {
+  padding: 0;
+}
+
+.publication-header .headings {
+  overflow: hidden;
+}
+.publication-header .headings h1 {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.04167;
+  margin: 5px 0 15px;
+  color: #fff;
+}
+@media screen and (min-width: 640px) {
+  .publication-header .headings h1 {
+    margin-bottom: 60px;
+  }
+}
+.publication-header .headings p {
+  margin: 15px 0 20px;
+  color: #fff;
+}
+
+.publication-header .headings .document-type {
+  font-size: 27px;
+  display: block;
+  margin: 20px 0 0;
+}
+@media screen and (min-width: 640px) {
+  .publication-header .headings .document-type {
+    margin: 75px 0 10px;
+  }
+}
+
+.in-page-navigation {
+  font-size: 19px;
+  color: #fff;
+  margin: 0 0 40px;
+  width: 70%;
+}
+.in-page-navigation h2 {
+  font-weight: bold;
+}
+.in-page-navigation ol {
+  padding-left: 30px;
+}
+.in-page-navigation ol li {
+  list-style: decimal;
+  font-weight: bold;
+}
+.in-page-navigation ol.unnumbered {
+  padding-left: 0;
+}
+.in-page-navigation ol.unnumbered li {
+  list-style: none;
+}
+#whitehall-wrapper .in-page-navigation a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: normal;
+}
+#whitehall-wrapper .in-page-navigation a:hover,
+#whitehall-wrapper .in-page-navigation a:focus,
+#whitehall-wrapper .in-page-navigation a:active {
+  text-decoration: underline;
+}
+
+
+
+/* govspeak */
+.govspeak h2 {
+  font-size: 36px;
+  margin: 15px 0 10px
+}
+@media screen and (min-width: 640px) {
+  .govspeak h2 {
+    margin: 60px 0 10px;
+  }
+}
+.govspeak h2 .number {
+  background: #fff;
+  padding-right: 10px;
+  font-weight: bold;
+}
+@media screen and (min-width: 640px) {
+  .govspeak h2 .number {
+    font-size:  80px;
+    font-weight: bold;
+    position: absolute;
+    margin: -30px 0 0 -25%;
+    width: 22%;
+    padding: 35px 0 30px 3%;
+  }
+}
+
+.govspeak h3 {
+  font-size: 27px;
+  z-index: 5;
+  position: relative;
+}
+.govspeak h3 .number {
+  background: #fff;
+  color: #6f777b;
+  padding-right: 10px;
+}
+@media screen and (min-width: 640px) {
+  .govspeak h3 .number {
+    padding-right: 0;
+    display: inline-block;
+    width: 75px;
+    margin-left: -75px;
+  }
+}
+
+.govspeak h2,
+.govspeak h3 {
+    font-weight: bold;
+    color: black;
+    margin-top: 30px;
+}
+@media screen and (min-width: 640px) {
+  .govspeak h2,
+  .govspeak h3 {
+    margin-top: ($gutter*2) + $gutter-two-thirds;
+  }
+}
+
+.govspeak h4,
+.govspeak h5,
+.govspeak h6 {
+  font-weight: bold;
+  color: black;
+  margin-top: 30px;
+}
+
+.govspeak p,
+.govspeak ul,
+.govspeak ol {
+  line-height: 1.4736842105;
+  margin: 10px 0;
+}
+.govspeak p a,
+.govspeak ul a,
+.govspeak ol a {
+  text-decoration: underline;
+}
+.govspeak p b,
+.govspeak ul b,
+.govspeak ol b,
+.govspeak p strong,
+.govspeak ul strong,
+.govspeak ol strong,
+.govspeak p i,
+.govspeak ul i,
+.govspeak ol i,
+.govspeak p em,
+.govspeak ul em,
+.govspeak ol em {
+  font-style: normal;
+}
+@media screen and (min-width: 640px) {
+  .govspeak p,
+  .govspeak ul,
+  .govspeak ol {
+    margin: 20px 0;
+}
+
+.govspeak figcaption {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+@media screen and (min-width: 640px) {
+  .govspeak figcaption {
+    margin: 0 0 20px;
+  }
+}
+
+.govspeak ul,
+.govspeak ol {
+  margin: 1.3em;
+}
+.govspeak ul li ul,
+.govspeak ul li ol,
+.govspeak ol li ul
+.govspeak ol li ol {
+  margin-bottom: 0 20px;
+}
+
+#whitehall-wrapper .govspeak p,
+#whitehall-wrapper .govspeak p:first-child {
+  margin: 20px 0;
+}
+
+
+.govspeak {
+  h4, h5, h6 {
+    &+p, &+ul, &+ol {
+      margin-top: 0;
+    }
+  }
+
+  ul, ol {
+
+    li {
+      ol, ul {
+        margin: 0 $gutter-two-thirds;
+      }
+    }
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  table, img {
+    margin: $gutter-half 0;
+    width: 100%;
+    height: auto;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: 1px solid $grey-2;
+    th, td {
+      @include core-14;
+      vertical-align: top;
+      text-align: left;
+      padding: $gutter-one-third $gutter-two-thirds $gutter-one-third 0;
+      border-bottom: 1px solid $grey-2;
+    }
+    th {
+      font-weight: bold;
+    }
+    td {
+      p, ul, ol {
+        margin: 0;
+      }
+      p+p, p+ul, p+ol,
+      ul+p, ul+ol,
+      ol+p {
+        margin-top: $gutter-one-third;
+      }
+    }
+  }
+  .contact {
+    @extend %contain-floats;
+    background: $panel-colour;
+    margin: $gutter $gutter-half*-1;
+    padding: $gutter-one-third $gutter-half;
+    position: relative;
+
+    h4 {
+      @include core-19;
+      font-weight: bold;
+      margin: $gutter-one-third 0 0;
+    }
+    p {
+      @include copy-19;
+      margin: 0;
+    }
+    .adr,
+    .email-url-number,
+    .comments {
+      @include media(tablet){
+        width: 50%;
+        float: left;
+      }
+    }
+    .email-url-number {
+      p {
+        margin: 0;
+      }
+      span {
+        display: block;
+      }
+    }
+    .comments {
+      @include core-16;
+    }
+  }
+  .call-to-action {
+    margin: $gutter 0 $gutter;
+    background: $panel-colour none no-repeat 98% $gutter-two-thirds;
+    padding: $gutter-one-third ($gutter*2) $gutter-one-third $gutter-half;
+    position: relative;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+    ul, ol {
+      margin-left: $gutter-two-thirds;
+      list-style-position: outside;
+    }
+    h3 {
+      padding: $gutter-one-sixth 0;
+      margin-top: 0px;
+      .number {
+        background: none;
+        @include media(tablet){
+          width: $gutter-one-third*9;
+          margin-left: $gutter-one-third*-9;
+        }
+      }
+    }
+  }
+
+  .fraction {
+    sup,
+    sub {
+      @include core-14;
+    }
+    img {
+      display: inline-block;
+      width: auto;
+      margin: 0 0 -5px 0;
+    }
+  }
+}
+
+
+@media screen and (min-width: 640px) {
+  .govspeak  {
+    margin-left: 25%;
+  }
+}
