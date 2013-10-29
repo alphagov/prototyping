@@ -1,0 +1,24 @@
+---
+---
+
+@import "_colours";
+@import "_css3";
+@import "_device-pixels";
+@import "_typography";
+@import "_conditionals";
+@import "_shims";
+@import "_conditionals2";
+
+@import "design-patterns/_buttons";
+
+.button-1 {
+  @include button;
+}
+
+.button-2 {
+  @include button($light-blue);
+}
+
+.button-3 {
+  @include button($mellow-red);
+}
