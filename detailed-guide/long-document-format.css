@@ -27,7 +27,6 @@
   clear: both;
   padding: 10px;
   margin: 0 -15px;
-  overflow: hidden;
 }
 @media screen and (min-width: 640px) {
   .publication-header {
@@ -38,6 +37,34 @@
 
 #whitehall-wrapper .publication-header .inner-block.floated-children {
   padding: 0;
+}
+
+.publication-header .meta {
+  float: right;
+  position: relative;
+  margin-top: -50px;
+  width: 20%;
+  z-index: 49;
+}
+
+.publication-header .overlay {
+  position: absolute;
+  top: 130%;
+  right: -20%;
+  z-index: 10;
+  opacity: 0;
+  display: block;
+  width: 20em;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+/* CSS Added for css target toggle in replace of js-toggle on live site */
+p.toggle:focus ~ #change-notes {
+  opacity: 1;
 }
 
 .publication-header .headings {
@@ -51,10 +78,13 @@
   color: #fff;
 }
 @media screen and (min-width: 640px) {
-  .publication-header .headings h1 {
-    margin-bottom: 60px;
+  .publication-header .headings h1 + p {
+    margin: 0 0 60px 0;
+    font-size: 19px;
+    width: 75%;
   }
 }
+
 .publication-header .headings p {
   margin: 15px 0 20px;
   color: #fff;
@@ -71,11 +101,24 @@
   }
 }
 
-.in-page-navigation {
-  font-size: 19px;
+.publication-header .mainstream-link {
   color: #fff;
+  float: left;
+  width: 33.33%;
+}
+#whitehall-wrapper .publication-header .mainstream-link a,
+#whitehall-wrapper .publication-header .mainstream-link a:hover,
+#whitehall-wrapper .publication-header .mainstream-link a:visited {
+  color: #fff;
+  font-size: 14px;
+}
+
+.in-page-navigation {
+  color: #fff;
+  font-size: 19px;
+  float: left;
   margin: 0 0 40px;
-  width: 70%;
+  width: 66.66%;
 }
 .in-page-navigation h2 {
   font-weight: bold;
@@ -276,7 +319,6 @@
   }
 }
 
-
 .govspeak {
   h4, h5, h6 {
     &+p, &+ul, &+ol {
@@ -405,4 +447,23 @@
   .govspeak  {
     margin-left: 25%;
   }
+}
+
+
+/* Page exception css */
+.external-list .govspeak .in-page-navigation {
+  float: none;
+  width: 100%;
+}
+.external-list .mainstream-link {
+  color: #000;
+  float: none;
+  font-size: 16px;
+  margin: 60px 0 0 25%;
+}
+#whitehall-wrapper .external-list .mainstream-link a,
+#whitehall-wrapper .external-list .mainstream-link a:hover,
+#whitehall-wrapper .external-list .mainstream-link a:visited {
+  font-size: 24px;
+  font-weight: bold;
 }
