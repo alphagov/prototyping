@@ -299,16 +299,21 @@ p.toggle:focus ~ #change-notes {
 
 
 #whitehall-wrapper .external-gutter-list .govspeak .in-page-navigation {
+  font-size: 16px;
   position: absolute;
-  margin: -30px 0 0 -25%;
+  margin: 0 0 0 -25%;
   width: 22%;
-  padding: 25px 0 30px 4%;
+  padding: 0 0 30px 15px;
 }
 #whitehall-wrapper .external-gutter-list .govspeak .in-page-navigation h2 {
+  font-size: 27px;
   position: static;
   margin: 0;
   width: auto;
   padding: 5px 0 10px 0;
+}
+#whitehall-wrapper .external-gutter-list .govspeak .in-page-navigation ol {
+  font-size: 16px;
 }
 
 .external-gutter-list .govspeak h2 .number {
@@ -467,12 +472,17 @@ p.toggle:focus ~ #change-notes {
   margin-left: 0;
 }
 #whitehall-wrapper .back-to-content {
+  background-color: #ccc;
   position: fixed;
-  padding-left: 0;
   left: auto;
-  margin-left: -10px;
-  top: 15px;
-  z-index: 0;
+  margin-left: -30px;
+  top: auto;
+  bottom: 0;
+  z-index: 20;
+}
+#whitehall-wrapper .back-to-content a {
+  display: block;
+  padding: 10px 40px 10px 20px;
 }
 
 #global-header {
@@ -491,9 +501,24 @@ p.toggle:focus ~ #change-notes {
   font-size: 16px;
   margin: 60px 0 0 25%;
 }
+
+#whitehall-wrapper .external-list .govspeak h2:first-child,
+#whitehall-wrapper .external-list .govspeak h3:first-child,
+#whitehall-wrapper .external-list .govspeak h4:first-child,
+#whitehall-wrapper .external-list .govspeak p:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 #whitehall-wrapper .external-list .mainstream-link a,
 #whitehall-wrapper .external-list .mainstream-link a:hover,
 #whitehall-wrapper .external-list .mainstream-link a:visited {
   font-size: 24px;
   font-weight: bold;
+}
+
+#whitehall-wrapper .govspeak .call-to-action p,
+#whitehall-wrapper .govspeak .call-to-action p:first-child {
+  padding: 0;
+  margin: 0;
 }
