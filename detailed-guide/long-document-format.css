@@ -41,7 +41,7 @@
   padding: 0;
 }
 
-.publication-header .meta {
+#whitehall-wrapper .detailed-guides-show .publication-header .meta {
   float: right;
   position: relative;
   margin-top: -50px;
@@ -120,37 +120,39 @@ p.toggle:focus ~ #change-notes {
   text-decoration: underline;
 }
 
-.in-page-navigation {
+#whitehall-wrapper .detailed-guides-show .in-page-navigation {
   color: #fff;
   font-size: 19px;
   float: left;
   margin: 0 0 40px;
   width: 50%;
 }
-.in-page-navigation h2 {
+#whitehall-wrapper .detailed-guides-show .in-page-navigation h2 {
   font-weight: bold;
 }
-.in-page-navigation ol {
+#whitehall-wrapper .detailed-guides-show .in-page-navigation ol {
   padding-left: 30px;
 }
-.in-page-navigation ol li {
+#whitehall-wrapper .detailed-guides-show .in-page-navigation ol li {
+  font-size: 19px;
+  line-height: 1.5;
   list-style: decimal;
   font-weight: bold;
 }
-.in-page-navigation ol.unnumbered {
+#whitehall-wrapper .detailed-guides-show .in-page-navigation ol.unnumbered {
   padding-left: 0;
 }
-.in-page-navigation ol.unnumbered li {
+#whitehall-wrapper .detailed-guides-show .in-page-navigation ol.unnumbered li {
   list-style: none;
 }
-#whitehall-wrapper .in-page-navigation a {
+#whitehall-wrapper .detailed-guides-show .in-page-navigation a {
   color: #fff;
   text-decoration: none;
   font-weight: normal;
 }
-#whitehall-wrapper .in-page-navigation a:hover,
-#whitehall-wrapper .in-page-navigation a:focus,
-#whitehall-wrapper .in-page-navigation a:active {
+#whitehall-wrapper .detailed-guides-show .in-page-navigation a:hover,
+#whitehall-wrapper .detailed-guides-show .in-page-navigation a:focus,
+#whitehall-wrapper .detailed-guides-show .in-page-navigation a:active {
   text-decoration: underline;
 }
 
@@ -297,40 +299,6 @@ p.toggle:focus ~ #change-notes {
   padding-top: 0;
 }
 
-
-#whitehall-wrapper .external-gutter-list .govspeak .in-page-navigation {
-  font-size: 16px;
-  position: absolute;
-  margin: 0 0 0 -25%;
-  width: 22%;
-  padding: 0 0 30px 15px;
-}
-#whitehall-wrapper .external-gutter-list .govspeak .in-page-navigation h2 {
-  font-size: 27px;
-  position: static;
-  margin: 0;
-  width: auto;
-  padding: 5px 0 10px 0;
-}
-#whitehall-wrapper .external-gutter-list .govspeak .in-page-navigation ol {
-  font-size: 16px;
-}
-
-.external-gutter-list .govspeak h2 .number {
-  background: #fff;
-  padding-right: 0;
-  font-weight: bold;
-}
-@media screen and (min-width: 640px) {
-  .external-gutter-list .govspeak h2 .number {
-    font-size:  27px;
-    position: static;
-    margin: 0;
-    width: auto;
-    padding: 0;
-  }
-}
-
 .govspeak {
   h4, h5, h6 {
     &+p, &+ul, &+ol {
@@ -471,8 +439,9 @@ p.toggle:focus ~ #change-notes {
 #whitehall-wrapper .govspeak table {
   margin-left: 0;
 }
-#whitehall-wrapper .back-to-content {
+#whitehall-wrapper .long-document-format .back-to-content {
   background-color: #ccc;
+  padding: 0;
   position: fixed;
   left: auto;
   margin-left: -30px;
@@ -480,7 +449,7 @@ p.toggle:focus ~ #change-notes {
   bottom: 0;
   z-index: 20;
 }
-#whitehall-wrapper .back-to-content a {
+#whitehall-wrapper .long-document-format .back-to-content a {
   display: block;
   padding: 10px 40px 10px 20px;
 }
@@ -491,9 +460,12 @@ p.toggle:focus ~ #change-notes {
 }
 
 /* Page exception css */
-.external-list .govspeak .in-page-navigation {
+#whitehall-wrapper .external-list .govspeak .in-page-navigation {
   float: none;
   width: 100%;
+}
+#whitehall-wrapper .external-list .govspeak .in-page-navigation li {
+  color: #000;
 }
 .external-list .mainstream-link {
   color: #000;
@@ -517,8 +489,57 @@ p.toggle:focus ~ #change-notes {
   font-weight: bold;
 }
 
+#whitehall-wrapper .external-gutter-list .govspeak .in-page-navigation {
+  font-size: 16px;
+  position: absolute;
+  margin: 0 0 0 -25%;
+  width: 22%;
+  padding: 0 0 30px 15px;
+}
+#whitehall-wrapper .external-gutter-list .govspeak .in-page-navigation h2 {
+  font-size: 27px;
+  position: static;
+  margin: 0;
+  width: auto;
+  padding: 5px 0 10px 0;
+}
+#whitehall-wrapper .external-gutter-list .govspeak .in-page-navigation ol {
+  font-size: 16px;
+}
+
+.external-gutter-list .govspeak h2 .number {
+  background: #fff;
+  padding-right: 0;
+  font-weight: bold;
+}
+@media screen and (min-width: 640px) {
+  .external-gutter-list .govspeak h2 .number {
+    font-size:  27px;
+    position: static;
+    margin: 0;
+    width: auto;
+    padding: 0;
+  }
+}
+
+#whitehall-wrapper .detailed-guides-show .in-page-navigation ol li.more-like-this,
+#whitehall-wrapper .external-list .govspeak .in-page-navigation li.more-like-this {
+  list-style: none;
+  margin-top: 15px;
+}
+#whitehall-wrapper .detailed-guides-show .in-page-navigation ol li.more-like-this a,
+#whitehall-wrapper .external-list .govspeak .in-page-navigation li.more-like-this a {
+  text-decoration: underline;
+}
+
 #whitehall-wrapper .govspeak .call-to-action p,
 #whitehall-wrapper .govspeak .call-to-action p:first-child {
   padding: 0;
   margin: 0;
 }
+
+#whitehall-wrapper .detailed-guides-show .block-4 {
+  padding-top: 60px;
+  margin: 0 -30px;
+}
+
