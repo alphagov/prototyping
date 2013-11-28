@@ -1,0 +1,20 @@
+.paragraph-anchor {
+}
+
+.paragraph-anchor span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.paragraph-anchor:before {
+  color: #dee0e2;
+  content: "+";
+  padding: 0 20px 20px;
+  position: absolute;
+  right: 63%;
+}
+
+.paragraph-anchor:hover:before ,
+.paragraph-anchor:focus:before  {
+  color: #2b8cc4;
+}
