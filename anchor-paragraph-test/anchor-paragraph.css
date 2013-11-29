@@ -1,20 +1,51 @@
-.paragraph-anchor {
+#whitehall-wrapper .paragraph-anchor {
+  overflow: hidden;
 }
 
-.paragraph-anchor span {
+#whitehall-wrapper .paragraph-anchor span {
   font-weight: bold;
   margin-right: 10px;
 }
 
-.paragraph-anchor:before {
+#whitehall-wrapper .paragraph-anchor .url-reveal,
+#whitehall-wrapper .paragraph-anchor .url-reveal:visited {
   color: #dee0e2;
-  content: "+";
   padding: 0 20px 20px;
   position: absolute;
   right: 63%;
+  text-decoration: none;
 }
 
-.paragraph-anchor:hover:before ,
-.paragraph-anchor:focus:before  {
+#whitehall-wrapper .paragraph-anchor:hover .url-reveal,
+#whitehall-wrapper .paragraph-anchor:focus .url-reveal {
   color: #2b8cc4;
+}
+
+.url-panel {
+  background: #dee0e2;
+  display: none;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+
+#whitehall-wrapper .url-panel span {
+  font-size: 14px;
+  font-weight: normal;
+  border-bottom: 1px solid #bfc1c3;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.url-panel input {
+  font-size: 14px;
+  width: 100%;
+  text-indent: 5px;
+  padding: 5px 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.show {
+  display: block;
 }

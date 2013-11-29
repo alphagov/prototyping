@@ -5,6 +5,33 @@ css: anchor-paragraph.css
 categories: document-page newsarticle
 ---
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(function() {
+  $( ".one" ).click(function() {
+    $( ".panel-one" ).toggleClass( "show" );
+    return false;
+  });
+  $( ".two" ).click(function() {
+    $( ".panel-two" ).toggleClass( "show" );
+    return false;
+  });
+  $( ".three" ).click(function() {
+    $( ".panel-three" ).toggleClass( "show" );
+    return false;
+  });
+  $( ".four" ).click(function() {
+    $( ".panel-four" ).toggleClass( "show" );
+    return false;
+  });
+  $( ".five" ).click(function() {
+    $( ".panel-five" ).toggleClass( "show" );
+    return false;
+  });
+});
+</script>
+
 <header class="block headings-block">
   <div class="inner-block floated-children">
     <div class="heading-with-extra">
@@ -84,15 +111,46 @@ categories: document-page newsarticle
   <div class="inner-block">
     <div class="document body">
       <div class="govspeak">
-          <p class="paragraph-anchor"><span>1.1</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed orci et quam rutrum varius sit amet sed dolor. Etiam malesuada augue dui, quis facilisis risus blandit posuere. Nunc sed mauris pretium, adipiscing lectus id, tempor augue. Etiam tincidunt, lectus eget aliquet vulputate, felis neque dignissim sem, ac posuere lacus enim sed leo. Integer a aliquam urna. Sed commodo nulla posuere eros fringilla, ut semper odio ornare. Integer eu fermentum diam. Aliquam non augue vel eros ullamcorper pretium semper ac purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum cursus at ligula vitae cursus. Morbi congue leo vel libero interdum, at elementum dolor tempor. Nulla felis quam, vehicula at iaculis et, varius vitae sapien.</p>
-
-          <p class="paragraph-anchor"><span>1.2</span> Nam ac odio feugiat, hendrerit libero bibendum, pulvinar ante. Praesent porta sapien a lobortis mollis. Suspendisse fringilla id sapien nec hendrerit. Maecenas mauris enim, pretium auctor erat eu, consequat vehicula est. Duis at suscipit turpis, eget viverra sapien. Donec ipsum diam, fermentum vel egestas lacinia, hendrerit id est. Vestibulum in gravida est. Duis sit amet sapien eu nisi tempor bibendum in pharetra purus. In imperdiet tristique dolor vitae sollicitudin. Nullam at felis urna. Nullam nec enim feugiat, rutrum urna ut, imperdiet turpis. Donec ac ultricies libero. Proin id ullamcorper urna. Aenean porttitor leo a tortor accumsan volutpat ac vitae magna. Duis sapien mi, tincidunt id molestie eu, lacinia et erat. Proin sit amet consectetur tellus.</p>
-
-          <p class="paragraph-anchor"><span>1.3</span> Nulla facilisi. Nullam ut lectus orci. Curabitur faucibus ipsum id sem vestibulum cursus. Quisque pellentesque placerat massa, vel tincidunt elit lacinia ac. Morbi eu sodales enim. Nulla sodales, metus ut auctor interdum, lorem elit facilisis neque, non consequat urna neque eu mi. Ut nibh mi, euismod eget ante id, porttitor ullamcorper risus. Donec et sodales mi. Maecenas non lorem vel lorem viverra malesuada sit amet commodo nibh. Sed elementum nunc ut arcu gravida posuere. Proin mauris justo, luctus non rhoncus eget, placerat tincidunt odio. Etiam sollicitudin pharetra mauris in eleifend.</p>
-
-          <p class="paragraph-anchor"><span>1.4</span> Donec ultricies lobortis odio ut consequat. Nulla ut vulputate erat, id iaculis nisl. Aliquam tortor eros, tincidunt et sem at, blandit lacinia dui. Pellentesque lectus leo, malesuada eget euismod a, rutrum feugiat arcu. Cras lobortis auctor convallis. Donec dictum eget augue non vulputate. Maecenas scelerisque lectus auctor ipsum malesuada, scelerisque fermentum libero pretium. Praesent id tempus turpis, eget hendrerit erat. Nam non arcu eget ligula scelerisque fermentum vel sed arcu. Vivamus nec purus pretium purus sodales gravida. Sed pellentesque consectetur egestas. Aliquam interdum tellus sed sapien feugiat, ut consectetur mauris rhoncus. Maecenas et pharetra augue.</p>
-
-          <p class="paragraph-anchor"><span>1.5</span> Ut a est lectus. Ut id sapien aliquam, egestas quam vel, tempus tortor. In nunc velit, convallis eu dignissim condimentum, malesuada nec orci. Proin ac placerat mi. Duis pellentesque enim quis leo accumsan, eget tincidunt erat lobortis. Nam nunc mauris, bibendum sit amet quam nec, fringilla congue odio. Quisque malesuada neque quis urna rutrum, sit amet consequat erat aliquam. Vestibulum gravida viverra nunc sed mattis.</p>
+          <p id="news-story-1-1" class="paragraph-anchor">
+            <a href="#" class="url-reveal one">+</a>
+            <span class="url-panel panel-one">
+              <span>Copy and paste this URL in to your feed reader</span>
+              <input value="govuk-prototyping.herokuapp.com/anchor-paragraph-test/index.html#news-story-1-1">
+            </span>
+            <span>1.1</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed orci et quam rutrum varius sit amet sed dolor. Etiam malesuada augue dui, quis facilisis risus blandit posuere. Nunc sed mauris pretium, adipiscing lectus id, tempor augue. Etiam tincidunt, lectus eget aliquet vulputate, felis neque dignissim sem, ac posuere lacus enim sed leo. Integer a aliquam urna. Sed commodo nulla posuere eros fringilla, ut semper odio ornare. Integer eu fermentum diam. Aliquam non augue vel eros ullamcorper pretium semper ac purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum cursus at ligula vitae cursus. Morbi congue leo vel libero interdum, at elementum dolor tempor. Nulla felis quam, vehicula at iaculis et, varius vitae sapien.
+          </p>
+          <p id="news-story-1-2" class="paragraph-anchor">
+            <a href="#" class="url-reveal two">+</a>
+            <span class="url-panel panel-two">
+              <span>Copy and paste this URL in to your feed reader</span>
+              <input value="govuk-prototyping.herokuapp.com/anchor-paragraph-test/index.html#news-story-1-2">
+            </span>
+            <span>1.2</span> Nam ac odio feugiat, hendrerit libero bibendum, pulvinar ante. Praesent porta sapien a lobortis mollis. Suspendisse fringilla id sapien nec hendrerit. Maecenas mauris enim, pretium auctor erat eu, consequat vehicula est. Duis at suscipit turpis, eget viverra sapien. Donec ipsum diam, fermentum vel egestas lacinia, hendrerit id est. Vestibulum in gravida est. Duis sit amet sapien eu nisi tempor bibendum in pharetra purus. In imperdiet tristique dolor vitae sollicitudin. Nullam at felis urna. Nullam nec enim feugiat, rutrum urna ut, imperdiet turpis. Donec ac ultricies libero. Proin id ullamcorper urna. Aenean porttitor leo a tortor accumsan volutpat ac vitae magna. Duis sapien mi, tincidunt id molestie eu, lacinia et erat. Proin sit amet consectetur tellus.
+          </p>
+          <p id="news-story-1-3" class="paragraph-anchor">
+            <a href="#" class="url-reveal three">+</a>
+            <span class="url-panel panel-three">
+              <span>Copy and paste this URL in to your feed reader</span>
+              <input value="govuk-prototyping.herokuapp.com/anchor-paragraph-test/index.html#news-story-1-3">
+            </span>
+            <span>1.3</span> Nulla facilisi. Nullam ut lectus orci. Curabitur faucibus ipsum id sem vestibulum cursus. Quisque pellentesque placerat massa, vel tincidunt elit lacinia ac. Morbi eu sodales enim. Nulla sodales, metus ut auctor interdum, lorem elit facilisis neque, non consequat urna neque eu mi. Ut nibh mi, euismod eget ante id, porttitor ullamcorper risus. Donec et sodales mi. Maecenas non lorem vel lorem viverra malesuada sit amet commodo nibh. Sed elementum nunc ut arcu gravida posuere. Proin mauris justo, luctus non rhoncus eget, placerat tincidunt odio. Etiam sollicitudin pharetra mauris in eleifend.
+          </p>
+          <p id="news-story-1-4" class="paragraph-anchor">
+            <a href="#" class="url-reveal four">+</a>
+            <span class="url-panel panel-four">
+              <span>Copy and paste this URL in to your feed reader</span>
+              <input value="govuk-prototyping.herokuapp.com/anchor-paragraph-test/index.html#news-story-1-4">
+            </span>
+            <span>1.4</span> Donec ultricies lobortis odio ut consequat. Nulla ut vulputate erat, id iaculis nisl. Aliquam tortor eros, tincidunt et sem at, blandit lacinia dui. Pellentesque lectus leo, malesuada eget euismod a, rutrum feugiat arcu. Cras lobortis auctor convallis. Donec dictum eget augue non vulputate. Maecenas scelerisque lectus auctor ipsum malesuada, scelerisque fermentum libero pretium. Praesent id tempus turpis, eget hendrerit erat. Nam non arcu eget ligula scelerisque fermentum vel sed arcu. Vivamus nec purus pretium purus sodales gravida. Sed pellentesque consectetur egestas. Aliquam interdum tellus sed sapien feugiat, ut consectetur mauris rhoncus. Maecenas et pharetra augue.
+          </p>
+          <p id="news-story-1-5" class="paragraph-anchor">
+            <a href="#" class="url-reveal five">+</a>
+            <span class="url-panel panel-five">
+              <span>Copy and paste this URL in to your feed reader</span>
+              <input value="govuk-prototyping.herokuapp.com/anchor-paragraph-test/index.html#news-story-1-5">
+            </span>
+            <span>1.5</span> Ut a est lectus. Ut id sapien aliquam, egestas quam vel, tempus tortor. In nunc velit, convallis eu dignissim condimentum, malesuada nec orci. Proin ac placerat mi. Duis pellentesque enim quis leo accumsan, eget tincidunt erat lobortis. Nam nunc mauris, bibendum sit amet quam nec, fringilla congue odio. Quisque malesuada neque quis urna rutrum, sit amet consequat erat aliquam. Vestibulum gravida viverra nunc sed mattis.
+          </p>
         </div>
       </div>
     </div>
