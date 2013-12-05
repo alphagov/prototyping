@@ -7,13 +7,15 @@
   margin-right: 10px;
 }
 
-#whitehall-wrapper .paragraph-anchor .url-reveal,
-#whitehall-wrapper .paragraph-anchor .url-reveal:visited {
-  color: #bfc1c3;
-  padding: 0 5px 20px 20px;
-  position: absolute;
-  right: 64.5%;
-  text-decoration: none;
+@media screen and (min-width: 640px) {
+  #whitehall-wrapper .url-reveal,
+  #whitehall-wrapper .url-reveal:visited {
+    color: #bfc1c3;
+    padding: 0 20px 20px;
+    position: absolute;
+    margin: 0 0 0 -5%;
+    text-decoration: none!important;
+  }
 }
 
 #whitehall-wrapper .paragraph-anchor:hover .url-reveal,
@@ -28,11 +30,11 @@
   margin-bottom: 5px;
 }
 
-#whitehall-wrapper .url-panel span {
+#whitehall-wrapper .govspeak .url-panel span {
   font-size: 14px;
   font-weight: normal;
   border-bottom: 1px solid #bfc1c3;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   padding-bottom: 5px;
 }
 
@@ -48,4 +50,559 @@
 
 .show {
   display: block;
+}
+
+
+#page {
+  padding: 30px 30px 0 30px;
+}
+
+.logo-header {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.organisations-icon-list,
+.return {
+  float: left;
+  width: 25%;
+}
+.return {
+  width: 75%;
+}
+.return p {
+  position: absolute;
+  bottom: 2px;
+  right: 0;
+}
+
+.publication-header {
+  background: #2b8cc4;
+  clear: both;
+  padding: 10px;
+  margin: 0 -15px;
+  position: relative;
+  z-index: 10;
+}
+@media screen and (min-width: 640px) {
+  .publication-header {
+    padding: 0 30px;
+    margin: 0;    
+  }
+}
+
+#whitehall-wrapper .publication-header .inner-block.floated-children {
+  padding: 0;
+}
+
+#whitehall-wrapper .detailed-guides-show .publication-header .meta {
+  float: right;
+  position: relative;
+  margin-top: -50px;
+  width: 20%;
+  z-index: 49;
+}
+
+.publication-header .overlay {
+  position: absolute;
+  top: 130%;
+  right: -20%;
+  z-index: 10;
+  opacity: 0;
+  display: block;
+  width: 20em;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+/* CSS Added for css target toggle in replace of js-toggle on live site */
+p.toggle:focus ~ #change-notes {
+  opacity: 1;
+}
+
+.publication-header .headings {
+  overflow: hidden;
+}
+.publication-header .headings h1 {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.04167;
+  margin: 5px 0 15px;
+  color: #fff;
+}
+@media screen and (min-width: 640px) {
+  .publication-header .headings h1 + p {
+    margin: 0 0 60px 0;
+    font-size: 19px;
+    width: 75%;
+  }
+}
+
+#whitehall-wrapper .publication-header .headings a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.publication-header .headings p {
+  margin: 15px 0 20px;
+  color: #fff;
+}
+
+.publication-header .headings .document-type {
+  font-size: 27px;
+  display: block;
+  margin: 20px 0 0;
+}
+@media screen and (min-width: 640px) {
+  .publication-header .headings .document-type {
+    margin: 75px 0 10px;
+  }
+}
+
+.publication-header .mainstream-link {
+  color: #fff;
+  float: right;
+  width: 33.33%;
+}
+#whitehall-wrapper .publication-header .mainstream-link a,
+#whitehall-wrapper .publication-header .mainstream-link a:hover,
+#whitehall-wrapper .publication-header .mainstream-link a:visited {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#whitehall-wrapper .detailed-guides-show .in-page-navigation {
+  color: #fff;
+  font-size: 19px;
+  float: left;
+  margin: 0 0 40px;
+  width: 50%;
+}
+#whitehall-wrapper .detailed-guides-show .in-page-navigation h2 {
+  font-weight: bold;
+}
+#whitehall-wrapper .detailed-guides-show .in-page-navigation ol {
+  padding-left: 30px;
+}
+#whitehall-wrapper .detailed-guides-show .in-page-navigation ol li {
+  font-size: 19px;
+  line-height: 1.5;
+  list-style: decimal;
+  font-weight: bold;
+}
+#whitehall-wrapper .detailed-guides-show .in-page-navigation ol.unnumbered {
+  padding-left: 0;
+}
+#whitehall-wrapper .detailed-guides-show .in-page-navigation ol.unnumbered li {
+  list-style: none;
+}
+#whitehall-wrapper .detailed-guides-show .in-page-navigation a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: normal;
+}
+#whitehall-wrapper .detailed-guides-show .in-page-navigation a:hover,
+#whitehall-wrapper .detailed-guides-show .in-page-navigation a:focus,
+#whitehall-wrapper .detailed-guides-show .in-page-navigation a:active {
+  text-decoration: underline;
+}
+
+
+/* govspeak */
+.govspeak h2 {
+  font-size: 36px;
+  margin: 15px 0 10px
+}
+@media screen and (min-width: 640px) {
+  .govspeak h2 {
+    margin: 60px 0 10px;
+  }
+}
+.govspeak h2 .number {
+  background: #fff;
+  padding-right: 10px;
+  font-weight: bold;
+}
+@media screen and (min-width: 640px) {
+  .govspeak h2 .number {
+    font-size:  80px;
+    font-weight: bold;
+    position: absolute;
+    margin: -30px 0 0 -25%;
+    width: 22%;
+    padding: 35px 0 30px 3%;
+  }
+}
+
+.govspeak h3 {
+  font-size: 27px;
+  z-index: 5;
+  position: relative;
+}
+.govspeak h3 .number {
+  background: #fff;
+  font-weight: bold;
+  padding-right: 10px;
+}
+@media screen and (min-width: 640px) {
+  .govspeak h3 .number {
+    display: inline-block;
+  }
+}
+
+.govspeak h2,
+.govspeak h3 {
+    font-weight: bold;
+    color: black;
+    margin-top: 30px;
+}
+@media screen and (min-width: 640px) {
+  .govspeak h2,
+  .govspeak h3 {
+    margin-top: ($gutter*2) + $gutter-two-thirds;
+  }
+}
+
+.govspeak h4,
+.govspeak h5,
+.govspeak h6 {
+  font-weight: bold;
+  color: black;
+  margin-top: 30px;
+}
+
+.govspeak p,
+.govspeak ul,
+.govspeak ol {
+  line-height: 1.4736842105;
+  margin: 10px 0;
+}
+.govspeak p a,
+.govspeak ul a,
+.govspeak ol a {
+  text-decoration: underline;
+}
+.govspeak p b,
+.govspeak ul b,
+.govspeak ol b,
+.govspeak p strong,
+.govspeak ul strong,
+.govspeak ol strong,
+.govspeak p i,
+.govspeak ul i,
+.govspeak ol i,
+.govspeak p em,
+.govspeak ul em,
+.govspeak ol em {
+  font-style: normal;
+}
+@media screen and (min-width: 640px) {
+  .govspeak p,
+  .govspeak ul,
+  .govspeak ol {
+    margin: 20px 0;
+}
+
+.govspeak figcaption {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+@media screen and (min-width: 640px) {
+  .govspeak figcaption {
+    margin: 0 0 20px;
+  }
+}
+
+.govspeak ul,
+.govspeak ol {
+  margin: 1.3em;
+}
+.govspeak ul li ul,
+.govspeak ul li ol,
+.govspeak ol li ul
+.govspeak ol li ol {
+  margin-bottom: 0 20px;
+}
+
+#whitehall-wrapper .govspeak p,
+#whitehall-wrapper .govspeak p:first-child {
+  margin: 20px 0;
+}
+#whitehall-wrapper .govspeak .in-page-navigation h2 {
+  position: absolute;
+  margin: -30px 0 0 -25%;
+  width: 22%;
+  padding: 25px 0 30px 4%;
+}
+#whitehall-wrapper .govspeak .in-page-navigation {
+  padding-top: 40px;
+}
+.govspeak .in-page-navigation,
+#whitehall-wrapper .govspeak .in-page-navigation a {
+  color: #000;
+}
+#whitehall-wrapper .govspeak .in-page-navigation ol {
+  margin: 0 0 10px 0;
+  padding-top: 0;
+}
+
+.govspeak {
+  h4, h5, h6 {
+    &+p, &+ul, &+ol {
+      margin-top: 0;
+    }
+  }
+
+  ul, ol {
+
+    li {
+      ol, ul {
+        margin: 0 $gutter-two-thirds;
+      }
+    }
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  table, img {
+    margin: $gutter-half 0;
+    width: 100%;
+    height: auto;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: 1px solid $grey-2;
+    th, td {
+      @include core-14;
+      vertical-align: top;
+      text-align: left;
+      padding: $gutter-one-third $gutter-two-thirds $gutter-one-third 0;
+      border-bottom: 1px solid $grey-2;
+    }
+    th {
+      font-weight: bold;
+    }
+    td {
+      p, ul, ol {
+        margin: 0;
+      }
+      p+p, p+ul, p+ol,
+      ul+p, ul+ol,
+      ol+p {
+        margin-top: $gutter-one-third;
+      }
+    }
+  }
+  .contact {
+    @extend %contain-floats;
+    background: $panel-colour;
+    margin: $gutter $gutter-half*-1;
+    padding: $gutter-one-third $gutter-half;
+    position: relative;
+
+    h4 {
+      @include core-19;
+      font-weight: bold;
+      margin: $gutter-one-third 0 0;
+    }
+    p {
+      @include copy-19;
+      margin: 0;
+    }
+    .adr,
+    .email-url-number,
+    .comments {
+      @include media(tablet){
+        width: 50%;
+        float: left;
+      }
+    }
+    .email-url-number {
+      p {
+        margin: 0;
+      }
+      span {
+        display: block;
+      }
+    }
+    .comments {
+      @include core-16;
+    }
+  }
+  .call-to-action {
+    margin: $gutter 0 $gutter;
+    background: $panel-colour none no-repeat 98% $gutter-two-thirds;
+    padding: $gutter-one-third ($gutter*2) $gutter-one-third $gutter-half;
+    position: relative;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+    ul, ol {
+      margin-left: $gutter-two-thirds;
+      list-style-position: outside;
+    }
+    h3 {
+      padding: $gutter-one-sixth 0;
+      margin-top: 0px;
+      .number {
+        background: none;
+        @include media(tablet){
+          width: $gutter-one-third*9;
+          margin-left: $gutter-one-third*-9;
+        }
+      }
+    }
+  }
+
+  .fraction {
+    sup,
+    sub {
+      @include core-14;
+    }
+    img {
+      display: inline-block;
+      width: auto;
+      margin: 0 0 -5px 0;
+    }
+  }
+}
+
+
+@media screen and (min-width: 640px) {
+  .govspeak  {
+    margin-left: 25%;
+  }
+}
+
+/* live overides most likely not needed for development on live */
+#whitehall-wrapper .govspeak h2:first-child,
+#whitehall-wrapper .govspeak h3:first-child,
+#whitehall-wrapper .govspeak h4:first-child,
+#whitehall-wrapper .govspeak p:first-child {
+  margin-top: 45px;
+}
+#whitehall-wrapper .govspeak table {
+  margin-left: 0;
+}
+#whitehall-wrapper .long-document-format .back-to-content {
+  background-color: #ccc;
+  padding: 0;
+  position: fixed;
+  left: auto;
+  margin-left: -30px;
+  top: auto;
+  bottom: 0;
+  z-index: 20;
+}
+#whitehall-wrapper .long-document-format .back-to-content a {
+  display: block;
+  padding: 10px 40px 10px 20px;
+}
+
+#global-header {
+  position: relative;
+  z-index: 10;
+}
+
+/* Page exception css */
+#whitehall-wrapper .external-list .govspeak .in-page-navigation {
+  float: none;
+  width: 100%;
+}
+#whitehall-wrapper .external-list .govspeak .in-page-navigation li {
+  color: #000;
+}
+.external-list .mainstream-link {
+  color: #000;
+  float: none;
+  font-size: 16px;
+  margin: 60px 0 0 25%;
+}
+
+#whitehall-wrapper .external-list .govspeak h2:first-child,
+#whitehall-wrapper .external-list .govspeak h3:first-child,
+#whitehall-wrapper .external-list .govspeak h4:first-child,
+#whitehall-wrapper .external-list .govspeak p:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#whitehall-wrapper .external-list .mainstream-link a,
+#whitehall-wrapper .external-list .mainstream-link a:hover,
+#whitehall-wrapper .external-list .mainstream-link a:visited {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#whitehall-wrapper .external-gutter-list .govspeak .in-page-navigation {
+  font-size: 16px;
+  position: absolute;
+  margin: 0 0 0 -25%;
+  width: 22%;
+  padding: 0 0 30px 15px;
+}
+#whitehall-wrapper .external-gutter-list .govspeak .in-page-navigation h2 {
+  font-size: 27px;
+  position: static;
+  margin: 0;
+  width: auto;
+  padding: 5px 0 10px 0;
+}
+#whitehall-wrapper .external-gutter-list .govspeak .in-page-navigation ol {
+  font-size: 16px;
+}
+
+.external-gutter-list .govspeak h2 .number {
+  background: #fff;
+  padding-right: 0;
+  font-weight: bold;
+}
+@media screen and (min-width: 640px) {
+  .external-gutter-list .govspeak h2 .number {
+    font-size:  27px;
+    position: static;
+    margin: 0;
+    width: auto;
+    padding: 0;
+  }
+}
+
+#whitehall-wrapper .detailed-guides-show .in-page-navigation ol li.more-like-this,
+#whitehall-wrapper .external-list .govspeak .in-page-navigation li.more-like-this {
+  list-style: none;
+  margin-top: 15px;
+}
+#whitehall-wrapper .detailed-guides-show .in-page-navigation ol li.more-like-this a,
+#whitehall-wrapper .external-list .govspeak .in-page-navigation li.more-like-this a {
+  text-decoration: underline;
+}
+
+#whitehall-wrapper .govspeak .call-to-action p,
+#whitehall-wrapper .govspeak .call-to-action p:first-child {
+  padding: 0;
+  margin: 0;
+}
+
+#whitehall-wrapper .detailed-guides-show .block-4 {
+  padding-top: 60px;
+  margin: 0 -30px;
+}
+
+@media (min-width: 641px) {
+  #whitehall-wrapper .inner-block.floated-children {
+    padding: 0;
+    position: relative;
+  }
+}
+
+#whitehall-wrapper .publication-external {
+margin: 0 0 20px;
+position: relative;
 }
