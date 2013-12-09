@@ -10,7 +10,7 @@
 @media screen and (min-width: 640px) {
   #whitehall-wrapper .url-reveal,
   #whitehall-wrapper .url-reveal:visited {
-    color: #bfc1c3;
+    color: #bfc1c3!important;
     padding: 0 20px 20px;
     position: absolute;
     margin: 0 0 0 -5%;
@@ -20,7 +20,7 @@
 
 #whitehall-wrapper .paragraph-anchor:hover .url-reveal,
 #whitehall-wrapper .paragraph-anchor:focus .url-reveal {
-  color: #2b8cc4;
+  color: #2b8cc4!important;
 }
 
 .url-panel {
