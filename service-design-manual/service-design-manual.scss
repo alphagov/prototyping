@@ -1,0 +1,9 @@
+---
+---
+
+@import "frontend_toolkit";
+
+// template resets - quicker than building a new layout
+header#global-breadcrumb {
+ display: none;
+}
