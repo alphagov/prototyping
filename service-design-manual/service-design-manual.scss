@@ -65,14 +65,19 @@
         }
       }
 
-      .govdelivery {
-        text-decoration: none;
+      .govdelivery,
+      .print {
+        display: block;
         padding: 0 10px 0 25px;
+        margin-bottom: 5px;
         font-weight: bold;
         background: url(images/mail-icon-white.png) 0 40% no-repeat;
         &:hover {
           text-decoration: underline;
         }
+      }
+      .print {
+        background: url(images/print-icon-white.png) 0 40% no-repeat;
       }
     }
 
@@ -154,6 +159,14 @@
       width: 33.33%;
       .content {
         padding: 0 15px;
+        .image-holder {
+          .img img {
+            width: 100%;
+          }
+        }
+        .summary a {
+          display: block;
+        }
       }
     }
   }
