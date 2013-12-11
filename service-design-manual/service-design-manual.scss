@@ -46,7 +46,7 @@
       }
     }
 
-    .updates {
+    .metadata {
       float: left;
       width: 25%;
       dl {
@@ -64,12 +64,17 @@
           margin: 0;
         }
       }
+    }
 
+    .updates {
+      float: right;
+      padding-top: 30px;
+      width: 25%;
       .govdelivery,
       .print {
         display: block;
         padding: 0 10px 0 25px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         font-weight: bold;
         background: url(images/mail-icon-white.png) 0 40% no-repeat;
         &:hover {
@@ -82,6 +87,7 @@
     }
 
     #header-search {
+      float: left;
       padding-top: 40px;
       clear: both;
       width: 33.33%;
