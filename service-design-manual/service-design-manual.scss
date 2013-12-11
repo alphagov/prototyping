@@ -162,6 +162,7 @@
     padding: 0 15px;
     article {
       float: left;
+      min-height: 30px;
       width: 33.33%;
       .content {
         padding: 0 15px;
@@ -170,8 +171,17 @@
             width: 100%;
           }
         }
-        .summary a {
-          display: block;
+        .summary {
+          font-size: 16px;
+          margin: 0;
+          a {
+            display: block;
+            margin-top: 5px;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
       }
     }
