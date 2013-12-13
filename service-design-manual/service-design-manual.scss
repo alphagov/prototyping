@@ -378,7 +378,7 @@
     &:after {
       color: $black;
       font-size: 10px;
-      content: " \25BC";
+      content: " \25b6";
       position: absolute;
       padding: 10px 20px;
       right: 102%;
@@ -387,7 +387,8 @@
   }
   .open {
     &:after {
-      content: " \25B2";
+      font-size: 12px;
+      content: " \25bc";
     }
   }
   .show-hide {
@@ -395,6 +396,10 @@
   }
   .show {
     display: block;
+  }
+
+  img.video {
+    width: 100%;
   }
 }
 
