@@ -1,0 +1,459 @@
+---
+title: "Welcome to GOV.UK"
+layout: default-no-wrapper
+css: service-design-manual.css
+body_class: full-width stage-two
+---
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(function() {
+  $( ".usd" ).click(function() {
+    $( ".usd-content" ).toggleClass( "show" );
+    $( ".usd" ).toggleClass( "open" );
+    return false;
+  });
+  $( ".accessibility" ).click(function() {
+    $( ".accessibility-content" ).toggleClass( "show" );
+    $( ".accessibility" ).toggleClass( "open" );
+    return false;
+  });
+  $( ".browsers" ).click(function() {
+    $( ".browsers-content" ).toggleClass( "show" );
+    $( ".browsers" ).toggleClass( "open" );
+    return false;
+  });
+  $( ".style-guide" ).click(function() {
+    $( ".style-guide-content" ).toggleClass( "show" );
+    $( ".style-guide" ).toggleClass( "open" );
+    return false;
+  });
+  $( ".data-visualisation" ).click(function() {
+    $( ".data-visualisation-content" ).toggleClass( "show" );
+    $( ".data-visualisation" ).toggleClass( "open" );
+    return false;
+  });
+  $( ".transactions" ).click(function() {
+    $( ".transactions-content" ).toggleClass( "show" );
+    $( ".transactions" ).toggleClass( "open" );
+    return false;
+  });
+  $( ".header-footer" ).click(function() {
+    $( ".header-footer-content" ).toggleClass( "show" );
+    $( ".header-footer" ).toggleClass( "open" );
+    return false;
+  });
+  $( ".users-read" ).click(function() {
+    $( ".users-read-content" ).toggleClass( "show" );
+    $( ".users-read" ).toggleClass( "open" );
+    return false;
+  });
+  $( ".understanding" ).click(function() {
+    $( ".understanding-content" ).toggleClass( "show" );
+    $( ".understanding" ).toggleClass( "open" );
+    return false;
+  });
+  $( ".print-forms" ).click(function() {
+    $( ".print-forms-content" ).toggleClass( "show" );
+    $( ".print-forms" ).toggleClass( "open" );
+    return false;
+  });
+  $( ".typography" ).click(function() {
+    $( ".typography-content" ).toggleClass( "show" );
+    $( ".typography" ).toggleClass( "open" );
+    return false;
+  });
+  $( ".alpha-beta" ).click(function() {
+    $( ".alpha-beta-content" ).toggleClass( "show" );
+    $( ".alpha-beta" ).toggleClass( "open" );
+    return false;
+  });
+  $( ".look-and-feel" ).click(function() {
+    $( ".look-and-feel-content" ).toggleClass( "show" );
+    $( ".look-and-feel" ).toggleClass( "open" );
+    return false;
+  });
+  $( ".prototypes" ).click(function() {
+    $( ".prototypes-content" ).toggleClass( "show" );
+    $( ".prototypes" ).toggleClass( "open" );
+    return false;
+  });
+  $(
+    $(document.location.hash).css('background-color', 'lightyellow')
+  );
+});
+</script>
+
+
+<div id="wrapper" class="{{ page.categories }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
+  <header class="service-design-header">
+    <div class="inner-block floated-children">
+      <div class="headings">
+        <p class="type">Manuals</p>
+        <h1>Government Service Design Manual</h1>
+      </div>
+      <aside class="metadata">
+        <dl>
+          <dt>Manual udated:</dt>
+          <dd>23 January 2015</dd>
+        </dl>
+      </aside>
+      <form id="header-search" class="site-search" action="/search" method="get" role="search">
+        <div class="header-search-content">
+          <label for="search-main">Search this manual</label>
+          <input type="search" name="q" id="search-main" title="Search" class="js-search-focus"><input class="submit" type="submit" value="Search">
+        </div>
+      </form>
+      <aside class="updates">
+        <a href="#" class="govdelivery">Alert me</a>
+        <a href="#" class="print" onclick="window.print()">Print this manual</a>
+      </aside>
+
+    </div>
+  </header>
+
+  <section id="content">
+    <div class="inner-block">
+      <aside>
+        <div class="inner-block">
+          <h2><a href="index.html">Back to contents</a></h2>
+          <dl>
+            <dt>Section udated:</dt>
+            <dd>23 January 2015</dd>
+          </dl>
+          <a href="#" class="print" onclick="window.print()">Print this section</a>
+        </div>
+      </aside>
+      <ol>
+        <li>
+          <h3><span class="number">12.</span>Design</h3>
+          <ol>
+            <li>
+              <a href="#" class="closed usd"></a>
+              <span class="number">12.1</span>
+              <a href="#" class="closed usd">User-centered design</a>
+              Designing content and services for GOV.UK
+              <div class="show-hide usd-content">
+                <p>People come to GOV.UK with specific needs. Anything that gets between our users and meeting those needs should be stripped away. The design of GOV.UK reflects this, existing primarily as a way of providing the right content and services to our users. Find out here how we approach this challenge.</p>
+                <ul class="link-list">
+                  <li><a href="https://www.gov.uk/service-manual/user-centered-design/user-centered-design-alpha-beta">User-centred design in alpha and beta</a> Combining design and research to create user-focused services</li>
+                  <li><a href="https://www.gov.uk/service-manual/user-centered-design/know-your-users">Know your users</a> Techniques for understanding your users' needs</li>
+                  <li><a href="https://www.gov.uk/designprinciples">GOV.UK Design Principles</a>  A guide to designing services that people prefer to use</li>
+                  <li><a href="https://www.gov.uk/service-manual/content-designers/transactions-style-guide">Writing government services</a> Tone of voice, writing style, use of headings and more</li>
+                  <li><a href="https://www.gov.uk/service-manual/user-centered-design/working-with-prototypes">Working with prototypes</a> Learning by doing</li>
+                  <li><a href="https://www.gov.uk/service-manual/user-centered-design/accessibility">Accessibility</a> How to make services that everyone can use</li>
+                  <li><a href="https://www.gov.uk/service-manual/user-centered-design/browsers-and-devices">Browsers and devices</a> Which ones to test with, and how best to support them</li>
+                  <li><a href="https://www.gov.uk/service-manual/user-centered-design/resources/writing-for-transactions">Designing transactions</a> Designing useful and usable government services</li>
+                  <li><a href="https://www.gov.uk/service-manual/user-centered-design/what-should-service-look-like">What should my service look like?</a> Guidance for creating a consistent look-and-feel</li>
+                  <li><a href="https://www.gov.uk/service-manual/user-centered-design/resources/header-footer">Header and footer</a> Guidance on using the GOV.UK header</li>
+                  <li><a href="https://www.gov.uk/service-manual/user-centered-design/print-forms">Print forms</a> Designing or redesigning paper components for transactions</li>
+                  <li><a href="https://www.gov.uk/service-manual/user-centered-design/how-users-read">How users read</a> Reading age, reading online, plain English, learning disabilities</li>
+                  <li><a href="https://www.gov.uk/service-manual/user-centered-design/data-visualisation">Data visualisation</a> Creating valuable and meaningful graphics to help analyse data</li>
+                  <li><a href="https://www.gov.uk/service-manual/user-centered-design/resources/typography">Typography</a> Using easy-to-read type with consistent styles</li>
+                  <li><a href="https://www.gov.uk/service-manual/user-centered-design/resources/colour-palettes">Colour Palettes</a> Colour names and department colours</li>
+                  <li><a href="https://www.gov.uk/service-manual/user-centered-design/resources/shared-asset-libraries">Shared asset libraries</a> Sharing your frontend assets so that they can be easily reused</li>
+                  <li><a href="https://www.gov.uk/service-manual/user-centered-design/resources/sass-repositories">Sass repositories</a> Sharing blocks of code and techniques</li>
+                  <li><a href="https://www.gov.uk/service-manual/user-centered-design/resources/forms">Forms</a> Writing the HTML for forms</li>
+                </ul>
+                <p><a href="https://www.gov.uk/service-manual/designers">See all guides for designers</a></p>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="closed accessibility"></a>
+              <span class="number">12.2</span>
+              <a href="#" class="closed accessibility">Accessibility</a>
+              How to make services that everyone can use
+              <div class="show-hide accessibility-content">
+                <p>The services we provide are for the benefit of all citizens of the United Kingdom. No user should be excluded on the basis of disability. To do so would breach the <a href="http://www.legislation.gov.uk/ukpga/2010/15/contents">Equality Act 2010</a>. Your services must also comply with any other legal requirements, including providing services in accordance with your Welsh Langage Scheme, if you have one.</p>
+                <h2 id="accessibility-standard">Accessibility standard</h2>
+                <p>As a starting point, your service should aim to meet Level AA of the <a href="http://www.w3.org/TR/WCAG/">Web Content Accessibility Guidelines</a> (WCAG) 2.0.</p>
+                <h2 id="accessibility-testing">Accessibility testing</h2>
+                <p>Your service should be tested by disabled people, older people, and people who use assistive technologies. You should aim to do this at least twice as your service is developed.</p>
+                <p><a href="/service-manual/making-software/accessibility-testing.html">Find out more about how to conduct accessibility testing</a></p>
+                <h2 id="accessibility-statements-and-policies">Accessibility statements and policies</h2>
+                <p>We work hard to make our sites and services as accessible and usable as we can for everyone who needs to use them. The GOV.UK website doesn’t include a separate accessibility statement, however, as we aren’t comfortable with a statement that draws a distinction between accessibility and any other aspect of best practice development. This <a href="http://digital.cabinetoffice.gov.uk/2013/02/11/beyond-box-ticking/">blogpost by GDS accessibility expert Léonie Watson</a> explains in more detail why we took this decision.</p>
+                <h2 id="assistive-technologies">Assistive technologies</h2>
+                <p>Your service should be usable by recent versions of these screen readers:</p>
+                <ul>
+                  <li><a href="http://www.freedomscientific.com/products/fs/jaws-product-page.asp">Jaws</a>, <a href="http://www.nvda-project.org/">NVDA</a> </li>
+                  <li><a href="http://www.apple.com/accessibility/voiceover/">VoiceOver</a></li>
+                  <li><a href="http://www.gwmicro.com/Window-Eyes/">Window Eyes</a> and <a href="http://www.yourdolphin.co.uk/productdetail.asp?id=5">Supernova</a> </li>
+                </ul>
+                <p>Your service should also be usable by basic operating system screen magnifiers like:</p>
+                <ul>
+                  <li><a href="http://www.aisquared.com/zoomtext/">ZoomText</a></li>
+                  <li><a href="http://www.freedomscientific.com/products/lv/magic-bl-product-page.asp">MAGic</a> </li>
+                </ul>
+                <p>Your service should be usable by speech recognition software including <a href="http://www.nuance.com/dragon/index.htm">Dragon Naturally Speaking</a>, and native operating system speech packages.</p>
+                <h2 id="accessible-formats">Accessible formats</h2>
+                <p>HTML is quicker, easier and more widely usable/accessible than PDF, but where no other option is possible this <a href="/service-manual/user-centered-design/resources/creating-accessible-PDFs.html">PDF guidance</a> should be followed. There’s more information on <a href="/service-manual/user-centered-design/choosing-appropriate-formats.html">choosing appropriate formats</a>.</p>
+                <h2 id="accessible-content">Accessible content</h2>
+                <p>Accessibility is more than checking the boxes of standards compliance. When writing content, consider what information would be useful to people with access needs.</p>
+                <p>For instance, in a ‘find my nearest’ service, consider user needs like: </p>
+                <ul>
+                  <li>is there disabled parking? </li>
+                  <li>how far is it from the entrance? </li>
+                  <li>what’s the terrain like? Uphill? Downhill? </li>
+                  <li>will I have to cross any roads? </li>
+                </ul>
+                <h2 id="further-reading">Further reading</h2>
+                <p>You can read more about the accessibility testing we’ve carried out while building GOV.UK on <a href="http://digital.cabinetoffice.gov.uk/2012/01/20/user-testing-accessibility/">this blog post by GDS Accessibility Lead Joshua Marshall</a>.</p>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="closed browsers"></a>
+              <span class="number">12.3</span>
+              <a href="#" class="closed browsers">Browsers and devices</a>
+              Which ones to test with, and how best to support them
+              <div class="show-hide browsers-content">
+                <p>Services should be universally accessible, regardless of how the user is choosing to access them.</p>
+                <h2 id="guidance">Guidance</h2>
+                <p>Due to the large range of browsers, devices and resolutions of access routes, it’s to be expected that the user’s experience of a service will vary as the technical capabilities on browsers and devices vary. You must verify that your service works across a representative range of these devices and browsers, and accommodates creating good experiences in all of them.</p>
+                <h2 id="verified-browsers">Verified browsers</h2>
+                <p>These are the browsers we recommend testing on when developing your service.  This list strongly recommends testing on a range of browsers created within the last 3 years that cover the largest representation of the user base.</p>
+                <p>This list is based upon usage statistics for <a href="https://www.gov.uk">GOV.UK</a>.  It allows for a 95% coverage of all browsers used (the remaining browsers are individually insignificant).</p>
+                <p>Browsers not listed may still work well, and it should be noted that this is not a list that intends to suggest that these are the only browsers the service will work on - this is simply a benchmark for testing against to ensure that the service will likely work for as many users as possible alongside appropriate cost-effectiveness and development overhead.</p>
+                <p>Services should ensure there’s an obvious way for users to report problems they may find, and additional testing and adjustments should be made upon receiving such a report.</p>
+                <p>Note: An exception is made for IE6, as this is still in large-scale use in government departments.</p>
+                <p>2 distinct levels of support are given and denoted next to each browser. Where ‘latest version’ is listed, it means the latest stable version plus one version back, as these browsers regularly self-update.</p>
+                <h3 id="desktop">Desktop</h3>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>OS</th>
+                      <th>Browser</th>
+                      <th>Support</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Windows</td>
+                      <td>Internet Explorer 10</td>
+                      <td>Compliant</td>
+                    </tr>
+                    <tr>
+                      <td> </td>
+                      <td>Internet Explorer 9</td>
+                      <td>Compliant</td>
+                    </tr>
+                    <tr>
+                      <td> </td>
+                      <td>Internet Explorer 8</td>
+                      <td>Compliant</td>
+                    </tr>
+                    <tr>
+                      <td> </td>
+                      <td>Internet Explorer 7</td>
+                      <td>Compliant</td>
+                    </tr>
+                    <tr>
+                      <td> </td>
+                      <td>Internet Explorer 6</td>
+                      <td>Functional</td>
+                    </tr>
+                    <tr>
+                      <td> </td>
+                      <td>Google Chrome (latest version)</td>
+                      <td>Compliant</td>
+                    </tr>
+                    <tr>
+                      <td> </td>
+                      <td>Mozilla Firefox (latest version)</td>
+                      <td>Compliant</td>
+                    </tr>
+                    <tr>
+                      <td>Mac OS X</td>
+                      <td>Safari 5</td>
+                      <td>Compliant</td>
+                    </tr>
+                    <tr>
+                      <td> </td>
+                      <td>Google Chrome (latest version)</td>
+                      <td>Compliant</td>
+                    </tr>
+                    <tr>
+                      <td> </td>
+                      <td>Mozilla Firefox (latest version)</td>
+                      <td>Compliant</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3 id="small-screen-devices">Small screen devices</h3>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>OS</th>
+                      <th>Version</th>
+                      <th>Browser</th>
+                      <th>Support</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>iOS</td>
+                      <td>6</td>
+                      <td>Mobile Safari</td>
+                      <td>Compliant</td>
+                    </tr>
+                    <tr>
+                      <td>iOS</td>
+                      <td>5</td>
+                      <td>Mobile Safari</td>
+                      <td>Functional</td>
+                    </tr>
+                    <tr>
+                      <td>Android</td>
+                      <td>4.x</td>
+                      <td>Google Chrome</td>
+                      <td>Compliant</td>
+                    </tr>
+                    <tr>
+                      <td>Android</td>
+                      <td>2.3</td>
+                      <td>Android Browser</td>
+                      <td>Functional</td>
+                    </tr>
+                    <tr>
+                      <td>Blackberry</td>
+                      <td>6+</td>
+                      <td> </td>
+                      <td>Functional</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h2 id="developing-universally-accessible-services">Developing universally accessible services</h2>
+                <p>Digital by default services must take into consideration the limitations of the browsers people use to access them. One important idea for achieving this is <a href="/service-manual/making-software/progressive-enhancement.html">progressive enhancement</a>. This recognises that different bits of technology have different capabilities. While everybody gets access to core functionality, those using more sophisticated technology get an enhanced experience.</p>
+                <p>Progressive enhancement is also important in providing a consistent experience to people using mobile devices or those who may have limited bandwidth. Because mobile traffic now accounts for <a href="http://gs.statcounter.com/#mobile_vs_desktop-GB-monthly-201211-201211-bar" title="Mobile vs Desktop in United Kingdom on November 2012 Statcounter Global Stats">13% of all internet use in the UK</a> and around 20% of traffic to <a href="https://www.gov.uk">GOV.UK</a>, this mode of access is not an optional extra to consider. </p>
+                <p>Where we might previously have developed separate mobile and desktop versions of a service, or bought bespoke apps, design should now be done with one website in mind. This should be done using a <a href="http://en.wikipedia.org/wiki/Responsive_design" title="Responsive Web Design - Wikipedia">responsive design</a> approach. This means websites adapt to suit the dimension of the screen being used to view it.</p>
+                <p>Don’t try to build services for every possible combination of operating system and browser. Avoid the temptation of designing for the obvious without first researching your users.</p>
+                <h3 id="audience">Audience</h3>
+                <p>Every service has an audience and you should investigate yours to see whether it has particular characteristics that you need to be aware of. Do you have existing data for the browsers and devices that your audience has been using already? If so, analyse it to see if you can identify any patterns in usage, or any combinations of:</p>
+                <ul>
+                  <li>operating system</li>
+                  <li>browser</li>
+                  <li>browser version</li>
+                  <li>screen size/resolution</li>
+                  <li>mobile device</li>
+                </ul>
+                <p>This data may sometimes support the case for deprioritising certain development work: although most of <a href="https://www.gov.uk">GOV.UK</a> is designed to work across all screen sizes, the <a href="https://www.gov.uk/trade-tariff">Trade Tariff</a> team chose not to tailor their tool to the smaller screen as it is largely used by office workers working during office hours. Equally, if your audience is likely to include those working in the public sector, there may be higher use of older, more limited browsers.</p>
+                <p>Channel shift means you must also consider your potential future audience. It’s anticipated that operating system, browser and device data from <a href="https://www.gov.uk">GOV.UK</a> will be published as part of the GDS <a href="/service-manual/measurement/performance-platform.html">performance platform</a> and this will provide a valuable insight into the audience for government services. </p>
+                <p>Before launch we noted a marked difference between the existing non-government and government audiences so you should also investigate the data provided by <a href="http://www.netmarketshare.com" title="NetMarketShare">NetMarketShare</a> and <a href="http://gs.statcounter.com" title="Statcounter GlobalStats">GlobalStats</a> who can provide UK and global trends.</p>
+                <h2 id="continuous-compatibility">Continuous compatibility</h2>
+                <p>It’s important to distinguish between those browsers and operating systems whose popularity is either increasing or holding steady and those for which the opposite is true. Although Internet Explorer versions 6 and 7 have only been used by a minority (almost 5% of the total visits to <a href="https://www.gov.uk">GOV.UK</a> since launch) this still accounts for a significant number of individuals who government services must take into account.</p>
+                <p>However, over time this will change. So it’s important to set thresholds for abandoning support and for adopting new and emergent platforms. The iPad Mini, Kindle Fire, Windows 8 and Internet Explorer 10 highlight this dilemma - recently launched products might not appear in any data but it is likely that they’ll eventually enjoy widespread use.</p>
+                <p>Decisions about compatibility can’t be something you specify at the start of the project and then forget about. Transformed digital services need to reflect and adapt to the broader internet context of their users on an ongoing basis.</p>
+                <h2 id="further-reading">Further reading</h2>
+                <p>James Weiner writes about the <a href="http://digital.cabinetoffice.gov.uk/2012/01/25/support-for-browsers/" title="Support for browsers - James Weiner, GDS">decisions made about browser support</a> for the Beta of GOV.UK (January 2012).</p>
+                <p>Ben Welby discusses <a href="http://digital.cabinetoffice.gov.uk/2012/10/11/what-devices-are-we-supporting-at-launch-and-why/" title="What devices are we supporting at launch, and why? - Ben Welby, GDS">the operating systems, browsers and devices supported</a> for the launch of GOV.UK (October 2012).</p>
+                <p>Tom Byers explores the practical ways in which GOV.UK has been <a href="http://digital.cabinetoffice.gov.uk/2012/11/02/designing-for-different-devices/" title="Designing for different devices - Tom Byers, GDS">designed for different devices</a> (November 2012).</p>
+                <p>Dafydd Vaughan with an update on <a href="http://digital.cabinetoffice.gov.uk/2012/12/12/browser-usage-on-gov-uk/" title="Browser usage on GOV.UK - Dafydd Vaughan, GDS">browser usage on GOV.UK</a> post-launch.</p>
+                <p>The Guardian introduce their <a href="http://www.guardian.co.uk/help/developer-blog/2012/oct/18/responsive-design-guardian-introduction" title="Responsive design at the Guardian: an introduction">use of responsive design</a> (October 2012).</p>
+                <p>Helpful summary of <a href="http://www.alistapart.com/articles/understandingprogressiveenhancement/" title="Understanding progressive enhancement">progressive enhancement</a> (October 2008).</p>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="closed style-guide"></a>
+              <span class="number">12.4</span>
+              <a href="#" class="closed style-guide">Content style guide for services</a>
+              Writing questions, wording for labels, addressing the user and more
+              <div class="show-hide style-guide-content">
+
+              </div>
+            </li>
+            <li>
+              <a href="#" class="closed data-visualisation"></a>
+              <span class="number">12.5</span>
+              <a href="#" class="closed data-visualisation">Data visualisation</a>
+              Creating valuable and meaningful graphics to help analyse data
+              <div class="show-hide data-visualisation-content">
+
+              </div>
+            </li>
+            <li>
+              <a href="#" class="closed transactions"></a>
+              <span class="number">12.6</span>
+              <a href="#" class="closed transactions">Designing transactions</a>
+              Designing useful and usable government services
+              <div class="show-hide transactions-content">
+
+              </div>
+            </li>
+            <li>
+              <a href="#" class="closed header-footer"></a>
+              <span class="number">12.7</span>
+              <a href="#" class="closed header-footer">Header and footer</a>
+              Guidance on using the GOV.UK header
+              <div class="show-hide header-footer-content">
+
+              </div>
+            </li>
+            <li>
+              <a href="#" class="closed users-read"></a>
+              <span class="number">12.8</span>
+              <a href="#" class="closed users-read">How users read</a>
+              Reading age, reading online, plain English, learning disabilities
+              <div class="show-hide users-read-content">
+
+              </div>
+            </li>
+            <li>
+              <a href="#" class="closed understanding"></a>
+              <span class="number">12.9</span>
+              <a href="#" class="closed understanding">Know your users</a>
+              Techniques for understanding your users' needs
+              <div class="show-hide understanding-content">
+
+              </div>
+            </li>
+            <li>
+              <a href="#" class="closed print-forms"></a>
+              <span class="number">12.10</span>
+              <a href="#" class="closed print-forms">Print forms</a>
+              Designing or redesigning paper components for transactions
+              <div class="show-hide print-forms-content">
+
+              </div>
+            </li>
+            <li>
+              <a href="#" class="closed typography"></a>
+              <span class="number">12.11</span>
+              <a href="#" class="closed typography">Typography</a>
+              How to make your words look
+              <div class="show-hide typography-content">
+
+              </div>
+            </li>
+            <li>
+              <a href="#" class="closed alpha-beta"></a>
+              <span class="number">12.12</span>
+              <a href="#" class="closed alpha-beta">User-centered design in alpha and beta </a>
+              Combining design and research to create user focussed services
+              <div class="show-hide alpha-beta-content">
+
+              </div>
+            </li>
+            <li>
+              <a href="#" class="closed look-and-feel"></a>
+              <span class="number">12.13</span>
+              <a href="#" class="closed look-and-feel">What should my service look like?</a>
+              Guidance for creating a consistent look-and-feel
+              <div class="show-hide look-and-feel-content">
+
+              </div>
+            </li>
+            <li>
+              <a href="#" class="closed prototypes"></a>
+              <span class="number">12.14</span>
+              <a href="#" class="closed prototypes">Working with prototypes</a>
+              Learning by doing
+              <div class="show-hide prototypes-content">
+
+              </div>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+  </section>
+</div>
