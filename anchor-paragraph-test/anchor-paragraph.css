@@ -10,23 +10,30 @@
 @media screen and (min-width: 640px) {
   #whitehall-wrapper .url-reveal,
   #whitehall-wrapper .url-reveal:visited {
+    background: transparent url(images/link.png) no-repeat center;
     color: #bfc1c3!important;
     padding: 0 20px 20px;
     position: absolute;
-    margin: 0 0 0 -5%;
+    margin: -2px 0 0 -5.7%;
     text-decoration: none!important;
+    overflow: hidden;
+    height: 7px;
+    width: 18px;
+    display: block;
+    text-indent: -9999px;
   }
 }
 
 #whitehall-wrapper .paragraph-anchor:hover .url-reveal,
 #whitehall-wrapper .paragraph-anchor:focus .url-reveal {
+  background: transparent url(images/link-hover.png) no-repeat center;
   color: #2b8cc4!important;
 }
 
 .url-panel {
   background: #dee0e2;
   display: none;
-  padding: 10px 15px;
+  padding: 0px 15px 10px 15px;
   margin-bottom: 5px;
 }
 
