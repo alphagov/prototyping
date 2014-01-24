@@ -1,0 +1,63 @@
+---
+---
+
+@import "frontend_toolkit";
+
+// slightly hacky but much quicker than creating a new template
+#global-header form#search input.submit {
+  background-color: #57da95;
+  &:hover,
+  &:focus {
+    background-color: lighten(#57da95, 5%);
+  }
+}
+#global-breadcrumb ol {
+  border-color: #57da95;
+  li {
+    display: none;
+  }
+}
+
+
+//overide
+#whitehall-wrapper article .headings-block .meta dl dt {
+  @include core-14;
+}
+
+
+.document-list,
+.document-contents {
+  float: left;
+  width: 33.33%;
+}
+
+.document-contents {
+  width: 66.66%;
+}
+
+.additional-list-items {
+  display: none;
+  margin-left: -6px;
+  padding-left: 0;
+  li {
+    list-style-position: outside;
+  }
+}
+
+
+.see-all {
+  font-weight: bold;
+  span {
+    display: inline-block;
+    position: relative;
+    top: -2px;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
