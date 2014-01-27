@@ -36,8 +36,14 @@
 }
 
 article {
+  dd {
+    margin-bottom: 0;
+  }
+
   ul {
+    margin-bottom: 3px;
     li {
+      margin: 0;
       .meta {
         font-size: 14px;
       }
@@ -70,12 +76,12 @@ article {
 
   .see-all {
     font-weight: bold;
-    margin-bottom: 45px;
-    a span {
-      display: inline-block;
-      position: relative;
-      top: -2px;
-    }
+    margin: 0 0 45px 1px;
+  //  a span {
+  //    display: inline-block;
+  //    position: relative;
+  //    top: -2px;
+  //  }
   }
 
   .show {
