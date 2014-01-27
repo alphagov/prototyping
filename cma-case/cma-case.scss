@@ -44,10 +44,14 @@
   }
 }
 
+article h2:first-child {
+  margin-top: 0;
+}
 
 .see-all {
   font-weight: bold;
-  span {
+  margin-bottom: 45px;
+  a span {
     display: inline-block;
     position: relative;
     top: -2px;
