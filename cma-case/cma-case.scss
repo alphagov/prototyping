@@ -25,13 +25,13 @@
 }
 
 
-.document-list,
-.document-contents {
+.document-list {
   float: left;
   width: 33.33%;
 }
 
 .document-contents {
+  float: right;
   width: 66.66%;
 }
 
@@ -109,6 +109,12 @@ article {
 
   .hide {
     display: none;
+  }
+
+  .stick {
+    position: fixed;
+    top: 0px;
+    width: 17%;
   }
 }
 

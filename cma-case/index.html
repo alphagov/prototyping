@@ -27,6 +27,21 @@ $(function() {
     $(document.location.hash).css('background-color', 'lightyellow')
   );
 });
+
+
+$(document).ready(function() {
+    var s = $(".js-stick-at-top-when-scrolling");
+    var pos = s.position();                    
+    $(window).scroll(function() {
+        var windowpos = $(window).scrollTop();
+        if (windowpos >= pos.top+65) {
+            s.addClass("stick");
+        } else {
+            s.removeClass("stick"); 
+        }
+    });
+});
+
 </script>
 
 <div class="whitehall-top-bar"></div>
@@ -85,9 +100,9 @@ $(function() {
             </div>
           </div>
         </div>
-        <div class="document-list">
+        <div class="document-list js-stick-at-top-when-scrolling">
           <div class="inner-block">
-            <nav class="js-stick-at-top-when-scrolling">
+            <nav>
               <ol class="dash-list">
                 <li><a href="#core-documents">Core documents</a></li>
                 <li><a href="#news-releases-and-announcements">News releases and announcements</a></li>
