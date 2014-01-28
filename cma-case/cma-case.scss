@@ -74,6 +74,25 @@ article {
     margin-top: 0;
   } 
 
+  .administrative-timetable {
+    font-size: 14px;
+  }
+
+  table {
+    border: 0;
+    margin: 1em 0 2em;
+    tr {
+      td,
+      th {
+        border-bottom: solid #bfc1c3;
+        border-width: 0 0 1px 0;
+        background-color: white;
+        font-size: 14px;
+        padding-left: 0;
+      }
+    }
+  }
+
   .see-all {
     font-weight: bold;
     margin: 0 0 45px 1px;
