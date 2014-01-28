@@ -70,9 +70,13 @@ article {
     }
   }
 
-  h2:first-child {
-    margin-top: 0;
-  } 
+  h2 {
+    margin-top: 45px;
+    &:first-child {
+      margin-top: 0;
+    }   
+  }
+
 
   .administrative-timetable {
     font-size: 14px;
