@@ -1,0 +1,125 @@
+---
+---
+
+@import "frontend_toolkit";
+
+// slightly hacky but much quicker than creating a new template
+#global-header form#search input.submit {
+  background-color: #57da95;
+  &:hover,
+  &:focus {
+    background-color: lighten(#57da95, 5%);
+  }
+}
+#global-breadcrumb ol {
+  border-color: #57da95;
+  li {
+    display: none;
+  }
+}
+
+
+//overide
+#whitehall-wrapper article .headings-block .meta dl dt {
+  @include core-14;
+}
+
+
+.document-list {
+  float: left;
+  width: 33.33%;
+}
+
+.document-contents {
+  float: right;
+  width: 66.66%;
+}
+
+article {
+  dd {
+    margin-bottom: 0;
+  }
+
+  ul {
+    margin-bottom: 3px;
+    li {
+      margin: 0;
+      .meta {
+        font-size: 14px;
+      }
+
+      .additional-list-items {
+        display: none;
+        margin-left: -6px;
+        padding-left: 0;
+        li {
+          list-style-position: outside;
+        }
+      }
+      .show {
+        display: block;
+      }
+    }
+  }
+
+  ol.dash-list {
+    padding: 0;
+    margin: 0;
+    li {
+      font-size: 16px;
+    }
+  }
+
+  h2 {
+    margin-top: 45px;
+    &:first-child {
+      margin-top: 0;
+    }   
+  }
+
+
+  .administrative-timetable {
+    font-size: 14px;
+  }
+
+  table {
+    border: 0;
+    margin: 1em 0 2em;
+    tr {
+      td,
+      th {
+        border-bottom: solid #bfc1c3;
+        border-width: 0 0 1px 0;
+        background-color: white;
+        font-size: 14px;
+        padding-left: 0;
+      }
+    }
+  }
+
+  .see-all {
+    font-weight: bold;
+    margin: 0 0 45px 1px;
+  //  a span {
+  //    display: inline-block;
+  //    position: relative;
+  //    top: -2px;
+  //  }
+  }
+
+  .show {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .stick {
+    position: fixed;
+    top: 0px;
+    max-width: 340px;
+  }
+}
+
+

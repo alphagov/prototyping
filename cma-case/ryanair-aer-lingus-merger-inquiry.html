@@ -1,0 +1,116 @@
+---
+title: "CMA case page"
+layout: default-detailed-guide
+css: cma-case.css
+body_class: full-width
+---
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(function() {
+  $( ".one" ).click(function() {
+    $( ".one" ).toggleClass( "hide" );
+    $( ".core-docs" ).toggleClass( "show" );
+    return false;
+  });
+  $( ".two" ).click(function() {
+    $( ".two" ).toggleClass( "hide" );
+    $( ".analysis-surveys" ).toggleClass( "show" );
+    return false;
+  });
+  $( ".three" ).click(function() {
+    $( ".three" ).toggleClass( "hide" );
+    $( ".analysis-working-papers" ).toggleClass( "show" );
+    return false;
+  });
+});
+
+
+$(document).ready(function() {
+    var s = $(".js-stick-at-top-when-scrolling");
+    var pos = s.position();                    
+    $(window).scroll(function() {
+        var windowpos = $(window).scrollTop();
+        if (windowpos >= pos.top+65) {
+            s.addClass("stick");
+        } else {
+            s.removeClass("stick"); 
+        }
+    });
+});
+
+</script>
+
+<div class="whitehall-top-bar"></div>
+ <main id="content" role="main" class="whitehall-content">
+    <div id="page" class="corporate-information-pages-show">
+      <article class="publication document-page publication" id="">
+        <header class="block headings-block">
+          <div class="inner-block floated-children">
+            <div class="heading-with-extra">
+              <div class="inner-heading">
+                <p class="type"><a href="#">Competition &amp; Markets Authority case</a></p>
+                <h1>Ryanair / Aer Lingus merger inquiry</h1>
+              </div>
+            </div>
+            <aside class="meta">
+              <div class="inner-heading">
+                <dl>
+                  <dt>Sector:</dt>
+                  <dd><a href="#">Aerospace and related industries</a></dd>
+                  <dt>Case type:</dt>
+                  <dd><a href="#">Merger</a></dd>
+                  <dt>Case state:</dt>
+                  <dd><a href="#">Open</a></dd>
+                </dl>
+              </div>
+            </aside>
+          </div>
+        </header>
+        <div class="block-2 ">
+          <div class="inner-block">
+            <div class="summary">
+              <p>The CMA is investigating the completed acquisition by Ryanair Holdings plc of a minority interest in Aer Lingus Group plc, due to competition concerns. The case has been referred.</p>
+            </div>
+          </div>
+        </div>
+        <div class="document-list js-stick-at-top-when-scrolling">
+          <div class="inner-block">
+            <nav>
+              <ol class="dash-list">
+                <li><a href="#initial-findings-and-decision">Initial findings and decision</a></li>
+                <li><a href="#invitation-to-comment-now-closed">Invitation to comment - now closed</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <div class="document-contents">
+          <h2 id="initial-findings-and-decision">Initial findings and decision</h2>
+          <p>The OFT has decided to refer the completed acquisition by Ryanair Holdings for  further investigation, due to competition concerns. The OFT has concluded that Ryanair's stake may give it the ability to exercise material influence over the commercial policy of Aer Lingus and that there is a realistic prospect that its stake has resulted or will result in a substantial lessening of competition on a number of Ryanair and/or Aer Lingus routes between the UK and Ireland. The OFT therefore considers it appropriate to have a more detailed investigation into this matter.</p>
+          <ul>
+            <li><a href="http://www.oft.gov.uk/news-and-updates/press/2012/47-12#.UuklOHd_uis">Press release</a> <span class="meta">15 June 2012</span></li>
+            <li><a href="http://www.oft.gov.uk/shared_oft/mergers_ea02/2012/Ryanair.pdf">Full text of the decision</a> <span class="meta">PDF, 1 Mb</span></li>
+          </ul>
+
+          <h2 id="invitation-to-comment-now-closed">Invitation to comment - now closed</h2>
+          <p>Completed acquisition by Ryanair Holdings plc of a minority interest in Aer Lingus Group plc<br>
+              Reference number: ME/4694/10</p>
+          <p>The Office of Fair Trading is considering whether arrangements are in progress or in contemplation which, if carried into effect, will result in the creation of a relevant merger situation under the merger provisions of the Enterprise Act 2002 and, if so, whether the creation of that situation may be expected to result in a substantial lessening of competition within any market or markets in the United Kingdom.</p>
+          <p>Affected sector: Airlines</p>
+
+          <h2 id="contacts">Contacts</h2>
+          <p>Please send written representations about any competition or public interest issues to:</p>
+          <p>
+            Neda Moussavi<br>
+            Office of Fair Trading<br>
+            Fleetbank House<br>
+            2-6 Salisbury Square<br>
+            London EC4Y 8JX<br>
+            <a href="mailto:neda.moussavi@oft.gsi.gov.uk">neda.moussavi@oft.gsi.gov.uk</a><br>
+            Fax: 020 7211 5923
+          </p>
+        </div>
+      </article>
+    </div>
+ </main>
