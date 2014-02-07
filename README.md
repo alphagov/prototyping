@@ -68,14 +68,10 @@ We have an instance of [Heroku](http://www.heroku.com/) that you can push the pr
 
 So you can push to Heroku from your own machine follow these steps:
 
-1. Sign up to Heroku
-
+1. [Sign up to Heroku](https://id.heroku.com/signup)
 2. Get invited into our Heroku instance as a contributor
-
 3. Install the [Heroku toolbelt](https://toolbelt.herokuapp.com/)
-
 4. At the command line:
-
   <pre>
   $ heroku login
   Enter your Heroku credentials.
@@ -86,18 +82,13 @@ So you can push to Heroku from your own machine follow these steps:
   Generating new SSH public key.
   Uploading ssh public key /Users/adam/.ssh/id_rsa.pub
   </pre>
-
-5. Make sure you're in the repository, then enter "git remote add heroku git@heroku.com:govuk-prototyping.git", which adds the Heroku instance as a remote server for the repo, so you can push to it
-
-6. You can confirm this has worked by using "git remote" then checking you see:
-
+5. Make sure you're in the repository, then enter `$ git remote add heroku git@heroku.com:govuk-prototyping.git`, which adds the Heroku instance as a remote server for the repo, so you can push to it
+6. You can confirm this has worked by using `$ git remote` then checking you see:
   <pre>
   origin
   heroku
   </pre>
-
-7. Then every time you updated and committed your latest work, you can push to Heroku with `git push heroku master`, make sure you have also pushed your changes to github to keep the two origins in sync
-
+7. Then every time you updated and committed your latest work, you can push to Heroku with `$ git push heroku master`, make sure you have also pushed your changes to github to keep the two origins in sync
 8. Finally, you can visit eg http://govuk-prototyping.herokuapp.com/licence-format/ to see your prototype
 
 We might want to think about putting on a password at some point.
