@@ -28,6 +28,38 @@
 .document-list {
   float: left;
   width: 33.33%;
+  ul {
+    list-style: none;
+    margin-top: 0;
+    padding-left: 0;
+    li {
+      padding-left: 0;
+      h2 {
+        @include core-16;
+        font-weight: bold;
+        color: $grey-1;
+        padding-top: 20px;
+        margin-bottom: 0;
+      }
+      &:first-child h2 {
+        padding-top: 0;
+      }
+
+      &.contact {
+        @include core-16;
+        line-height: 1.31579;
+        text-transform: none;
+        margin-left: 15px;
+        &:before {
+          content: "-";
+          position: relative;
+          float: left;
+          width: 15px;
+          margin-left: -15px;
+        }
+      }
+    }
+  }
 }
 
 .document-contents {
@@ -74,7 +106,24 @@ article {
     margin-top: 45px;
     &:first-child {
       margin-top: 0;
-    }   
+    } 
+    &.label {
+      @include core-36;
+      border-bottom: 5px solid $black;
+      line-height: 1.11111;
+      font-weight: 400;
+      text-transform: none;
+      padding-bottom: 1px;
+      margin-bottom: 20px;
+    }  
+  }
+  h3 {
+    @include core-24;
+    font-weight: bold;
+  }
+  h4 {
+    @include core-19;
+    font-weight: bold;
   }
 
 
@@ -100,11 +149,6 @@ article {
   .see-all {
     font-weight: bold;
     margin: 0 0 45px 1px;
-  //  a span {
-  //    display: inline-block;
-  //    position: relative;
-  //    top: -2px;
-  //  }
   }
 
   .show {
