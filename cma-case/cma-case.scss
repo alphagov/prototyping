@@ -125,6 +125,12 @@ article {
     @include core-19;
     font-weight: bold;
   }
+  h5 {
+    margin-top: 20px;
+    & + ul {
+      margin-top: 0;
+    }
+  }
 
 
   .administrative-timetable {
