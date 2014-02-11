@@ -20,9 +20,30 @@
 
 
 //overide
-#whitehall-wrapper article .headings-block .meta dl dt {
-  @include core-14;
+#whitehall-wrapper {
+  article .headings-block .meta dl dt {
+    @include core-14;
+  }
+
+  .feeds {
+    margin: 15px 0;
+    span {
+      padding-right: 10px;
+    }
+    .govdelivery {
+      background-image: url(/cma-case/images/email.jpg);
+      font-weight: normal;
+      padding-left: 30px;
+    }
+    .feed {
+      background-image: url(/cma-case/images/feed.jpg);
+      font-weight: normal;
+      padding-left: 30px;
+    }    
+  }
+  
 }
+
 
 
 .document-list {
@@ -140,6 +161,8 @@ article {
   table {
     border: 0;
     margin: 1em 0 2em;
+    width: 100%;
+
     tr {
       td,
       th {
