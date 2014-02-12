@@ -10,17 +10,17 @@ body_class: full-width
 $(function() {
   $( ".one" ).click(function() {
     $( ".one" ).toggleClass( "hide" );
-    $( ".core-docs" ).toggleClass( "show" );
+    $( ".possible-remedies" ).toggleClass( "show" );
     return false;
   });
   $( ".two" ).click(function() {
     $( ".two" ).toggleClass( "hide" );
-    $( ".analysis-surveys" ).toggleClass( "show" );
+    $( ".third-parties" ).toggleClass( "show" );
     return false;
   });
   $( ".three" ).click(function() {
     $( ".three" ).toggleClass( "hide" );
-    $( ".analysis-working-papers" ).toggleClass( "show" );
+    $( ".provisional-findings" ).toggleClass( "show" );
     return false;
   });
 });
@@ -169,9 +169,15 @@ $(document).ready(function() {
           <ul>
             <li><a href="#">Interim order (Ryanair)</a> <span class="meta">PDF, 123 Kb 28 September 2012</span></li>
             <li><a href="#">Notice of making interim order (Ryanair)</a> <span class="meta">PDF, 123 Kb 28 September 2012</span></li>
-            <li><a href="#">Interim undertakings (Air Lingus)</a> <span class="meta">PDF, 126 Kb 28 September 2012</span></li>
+            <li>
+              <a href="#">Interim undertakings (Air Lingus)</a> <span class="meta">PDF, 126 Kb 28 September 2012</span>
+              <ul class="additional-list-items possible-remedies">
+                <li><a href="#">Notice of acceptance of interim undertakings (Air Lingus)</a> <span class="meta">PDF, 116 Kb 28 September 2012</span></li>
+                <li><a href="#">Notice of consultation on draft Final Order</a> <span class="meta">PDF, 242 05 Novemnber 2013</span></li>
+              </ul>
+            </li>
           </ul>
-          <p class="see-all"><a href="#">+ 2 others</a></p>
+          <p class="see-all"><a href="#" class="one">+ 2 others</a></p>
 
           <h3 id="evidence">Evidence</h3>
           <h4>Initial submissions:</h4>
@@ -184,9 +190,18 @@ $(document).ready(function() {
           <ul>
             <li><a href="#">Aer Arann</a> <span class="meta">PDF, 40 Kb 24 April 2013</span></li>
             <li><a href="#">Air France</a> <span class="meta">PDF, 45 Kb 17 April 2013</span></li>
-            <li><a href="#">Three financial institutions holding shares in Aer Lingus</a> <span class="meta">PDF, 47 29 April 2013</span></li>
+            <li>
+              <a href="#">Three financial institutions holding shares in Aer Lingus</a> <span class="meta">PDF, 47 29 April 2013</span>
+              <ul class="additional-list-items third-parties">
+                <li><a href="#">Dublin Airport Authority</a> <span class="meta">PDF, 46 17 April 2013</span></li>
+                <li><a href="#">Flybe</a> <span class="meta">PDF, 36 Kb 23 April 2013</span></li>
+                <li><a href="#">IAG</a> <span class="meta">PDF, 41 Kb 23 April 2013</span></li>
+                <li><a href="#">Irish government</a> <span class="meta">PDF, 42 17 April 2013</span></li>
+                <li><a href="#">Lufthansa</a> <span class="meta">PDF, 39 17 April 2013</span></li>
+              </ul>
+            </li>
           </ul>
-          <p class="see-all"><a href="#">+ 5 others</a></p>
+          <p class="see-all"><a href="#" class="two">+ 5 others</a></p>
           <h4>Responses to provisional findings report and notice of possible remedies</h4>
           <ul>
             <li><a href="#">Provisional findings report</a> <span class="meta">PDF, 526 Kb</span> and <a href="#">Appendices &amp; Glossary</a> <span class="meta">PDF, 1.6 Mb 03 June 2013</span></li>
@@ -209,9 +224,17 @@ $(document).ready(function() {
           <ul>
             <li><a href="http://www.competition-commission.org.uk/assets/competitioncommission/docs/2012/ryanair-aer-lingus/130530_notice_of_pfs.pdf">Notice of provisional findings</a> <span class="meta"> PDF, 107 Kb 30 May 2013</span></li>
             <li><a href="http://www.competition-commission.org.uk/assets/competitioncommission/docs/2012/ryanair-aer-lingus/130530_summary_of_pfs.pdf">Summary of provisional findings</a> <span class="meta"> PDF, 102 Kb 30 May 2013</span></li>
-            <li><a href="http://www.competition-commission.org.uk/assets/competitioncommission/docs/2012/ryanair-aer-lingus/130530_notice_of_possible_remedies.pdf">Notice of possible remedies</a> <span class="meta"> PDF, 121 Kb 30 May 2013</span></li>
+            <li>
+              <a href="http://www.competition-commission.org.uk/assets/competitioncommission/docs/2012/ryanair-aer-lingus/130530_notice_of_possible_remedies.pdf">Notice of possible remedies</a> <span class="meta"> PDF, 121 Kb 30 May 2013</span>
+              <ul class="additional-list-items provisional-findings">
+                <li><a href="#">Provisional findings report</a> <span class="meta">PDF, 562 Kb</span> and <a href="#">Appendices and Glossary</a> <span class="meta">PDF, 1.6 3 June 2013</span></li>
+                <li><a href="#">Notice of extension</a> <span class="meta">PDF, 17 Kb 26 June 2013</span></li>
+                <li><a href="#">Revised administrative timetable</a> <span class="meta">PDF, 28 Kb 26 June 2013</span></li>
+                <li><a href="#">Final report</a> <span class="meta">PDF, 781 Kb</span> and <a href="#">Appendices and Glossary</a> <span class="meta">PDF, 1.7 28 August 2013</span></li>
+              </ul>
+            </li>
           </ul>
-          <p class="see-all"><a href="#">+ 4 others</a></p>
+          <p class="see-all"><a href="#" class="three">+ 4 others</a></p>
           <h3 id="phase-2-call-for-evidence">Phase 2 call for evidence</h3>
           <p>A Phase 2 enquiry has been opened. Inquiry Group: Simon Polito (Chairman of the Group), Roger Davis, Professor Michael Waterson, Carolan Dobson - See more at: http://www.competition-commission.org.uk/our-work/directory-of-all-inquiries/ryanair-aer-lingus#sthash.vVvSePwr.dpuf</p>
           <h2 class="label" id="phase-one">Phase 1</h2>
