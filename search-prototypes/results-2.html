@@ -16,6 +16,8 @@
       search_term = window.location.href.match(pattern);
       $('input#search-main').val(search_term[1]);
       $('.descope a').attr("href", "http://www.gov.uk/search?q="+search_term[1]);
+      $('.next a').attr("href", "results-3.html?q="+search_term[1]);
+      $('.previous a').attr("href", "results.html?q="+search_term[1]);
     }
   })
 </script>
