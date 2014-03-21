@@ -1,0 +1,57 @@
+---
+---
+
+@import "frontend_toolkit";
+
+
+.category-page {
+
+  .browse-container {
+    h2 {
+      @include core-36;
+      float: left; 
+      font-weight: bold;
+      margin-top: 0;
+      position: relative;
+      top: -10px;
+      &.published {
+        @include core-27;
+        font-weight: bold;
+        + ol {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    ol {
+      @include core-19;
+      font-weight: bold;
+      margin: 20px 0 60px 30%;
+      list-style: none;
+      li {
+        margin-bottom: $gutter-one-third;
+        a {
+          text-decoration: none;
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+ 
+  .policy-topic {
+    padding: 0 30px 45px;
+    .topic {
+      @include core-36;
+      font-weight: bold;
+      width: 75%;
+      &+ p {
+        @include core-19;
+        width: 75%;
+      }
+    }
+  }
+}
+
