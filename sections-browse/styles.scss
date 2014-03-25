@@ -49,6 +49,7 @@
       width: 75%;
       &+ p {
         @include core-19;
+        margin-bottom: 60px;
         width: 75%;
       }
     }
@@ -146,10 +147,12 @@
 
 .policies {
   float: left;
+  margin-bottom: 60px;
   width: 66.66%;
 
   h2 {
     @include core-24;
+    margin-top: 0;
     font-weight: bold;
   }
 
