@@ -1,8 +1,8 @@
 ---
 title: "Search"
 layout: default-search-results
-css: ../assets/search.css
-js: ../assets/search.js
+css: ../../assets/search.css
+js: ../../assets/search.js
 body_class: full-width
 no_search: true
 ---
@@ -46,14 +46,14 @@ no_search: true
 <div class="search-options">
   <h2>Search options</h2>
   <form>
-    <input type="radio" name="toggler" value="1" id="rdb1" checked><label for="rdb1">See only results from the Department for Education (a government organisation)</label><br>
+    <input type="radio" name="toggler" value="1" id="rdb1"><label for="rdb1">See only results from the Department for Education (a government organisation)</label><br>
     <input type="radio" name="toggler" value="2" id="rdb2"><label for="rdb2">See only results for Schools and colleges</label><br>
     <input type="radio" name="toggler" value="3" id="rdb3"><label for="rdb3">See only results for Education and learning</label><br>
-    <input type="radio" name="toggler" value="4" id="rdb4"><label for="rdb4">See all results</label>
+    <input type="radio" name="toggler" value="4" id="rdb4" checked><label for="rdb4">See all results</label>
   </form>
 </div>
 
-<div id="blk-1" class="search-results toHide">
+<div id="blk-1" class="search-results toHide" style="display:none">
     <h2 class="result-count">You are viewing all 534 results found on <span>Department for Education</span></h2>
 
 
@@ -1240,7 +1240,7 @@ no_search: true
   </div>
 </div>
 
-<div id="blk-4" class="search-results toHide" style="display:none">
+<div id="blk-4" class="search-results toHide">
     <h2 class="result-count">You are viewing all 1178 results found on <span>GOV.UK</span></h2>
 
 
