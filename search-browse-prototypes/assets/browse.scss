@@ -3,6 +3,30 @@
 
 @import "frontend_toolkit";
 
+// horrible hacky overides
+#whitehall-wrapper .organisations-show #what-we-do h1,
+#whitehall-wrapper .organisations-show #topics h1  {
+  font-size: 36px;
+  font-weight: bold;
+  border: none !important;
+  margin-bottom: 10px;
+}
+
+#whitehall-wrapper .organisations-show .block-2 {
+  padding-bottom: 50px !important;
+}
+
+#whitehall-wrapper .documents-grid .document-block {
+  h1 {
+    font-size: 36px !important;
+  }
+
+  .document-list .document-row {
+    border-bottom: none;
+  }
+}
+
+
 
 .category-page {
 
@@ -249,6 +273,15 @@
   }
   h2 {
     @include core-36;
+    font-weight: bold;
+  }
+}
+
+p.see-a-z {
+  clear: both;
+  padding: 15px 0 0 35%;
+  a {
+    @include core-24;
     font-weight: bold;
   }
 }
