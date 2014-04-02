@@ -31,6 +31,8 @@
 .category-page {
 
   .browse-container {
+    min-height: 100px;
+
     h2 {
       @include core-36;
       float: left; 
