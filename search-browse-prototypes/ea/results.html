@@ -17,6 +17,14 @@ no_search: true
       $('.next a').attr("href", "results-2.html?q="+search_term[1]);
     }
   })
+
+  $(function() {
+    $("[name=toggler]").click(function(){
+            $('.toHide').hide();
+            $("#blk-"+$(this).val()).show();
+    });
+ });
+
 </script>
       
 <main id="content" role="main" class="group search ancillary">
@@ -34,235 +42,854 @@ no_search: true
     </fieldset>
 </div>
 </form>
-<div class="descope">
-  <h2>258 results found in Environment Agency</h2>
-  <p><a href="#">Show all 1149 results for GOV.UK</a></p>
+
+<div class="search-options">
+  <h2>Search options</h2>
+  <form>
+    <input type="radio" name="toggler" value="1" id="rdb1" checked><label for="rdb1">See only results from the Environment Agency (a government organisation)</label><br>
+    <!--input type="radio" name="toggler" value="2" id="rdb2"><label for="rdb2">See only results for Schools and colleges</label><br>
+    <input type="radio" name="toggler" value="3" id="rdb3"><label for="rdb3">See only results for Education and learning</label><br -->
+    <input type="radio" name="toggler" value="4" id="rdb4"><label for="rdb4">See all results from GOV.UK</label>
+  </form>
 </div>
 
-<div id="search-results-tabs" class="shouty-tabs">
+<div id="blk-1" class="search-results toHide">
+  <h2 class="result-count">You are viewing all 8 results found on <span>Environment Agency</span></h2>
+
       <div class="search-container group js-tab-content tab-content ">
           <div id="services-information-results" class="js-tab-pane tab-pane ">
           <div class="results">
             <ul class="results-list internal-links">
-            <li class="section-citizenship type-answer">
+              <li class="section- type-publication">
+                <h3>
+                  <a href="https://www.preview.alphagov.co.uk/radioactive-waste-spent-fuel-or-sources">
+                    Radioactive waste, spent fuel or sources
+                  </a>
+                </h3>
+
+                <ul class="attributes">
+                  <li>
+                    <span class="visuallyhidden">Published on: </span>
+                    15 December 2011
+                  </li>
+                  <li>
+                    <span class="visuallyhidden">Departments: </span>
+                    <abbr title="Department for Education">EA</abbr>
+                  </li>
+                </ul>
+              </li>
+              <li class="section- type-publication">
+                <h3>
+                  <a href="https://whitehall-admin.preview.alphagov.co.uk/government/publications/turn-your-waste-into-a-new-non-waste-product-or-material?">
+                    Turn your waste into a new non-waste product or material
+                  </a>
+                </h3>
+
+                <ul class="attributes">
+                  <li>
+                    <span class="visuallyhidden">Published on: </span>
+                    15 December 2011
+                  </li>
+                  <li>
+                    <span class="visuallyhidden">Departments: </span>
+                    <abbr title="Department for Education">EA</abbr>
+                  </li>
+                </ul>
+              </li>
+              <li class="section- type-publication">
+                <h3>
+                  <a href="https://whitehall-admin.preview.alphagov.co.uk/waste-exemptions-using-waste?cachebust=1394788785&preview=306897">
+                    Waste exemptions: using waste
+                  </a>
+                </h3>
+
+                <ul class="attributes">
+                  <li>
+                    <span class="visuallyhidden">Published on: </span>
+                    15 December 2011
+                  </li>
+                  <li>
+                    <span class="visuallyhidden">Departments: </span>
+                    <abbr title="Department for Education">EA</abbr>
+                  </li>
+                </ul>
+              </li>
+              <li class="section- type-publication">
+                <h3>
+                  <a href="https://whitehall-admin.preview.alphagov.co.uk/importing-and-exporting-waste?cachebust=1394788831&preview=293943">
+                    Waste: import and export
+                  </a>
+                </h3>
+
+                <ul class="attributes">
+                  <li>
+                    <span class="visuallyhidden">Published on: </span>
+                    15 December 2011
+                  </li>
+                  <li>
+                    <span class="visuallyhidden">Departments: </span>
+                    <abbr title="Department for Education">EA</abbr>
+                  </li>
+                </ul>
+              </li>
+              <li class="section- type-publication">
+                <h3>
+                  <a href="https://whitehall-admin.preview.alphagov.co.uk/waste-management-of-electrical-and-electronic-equipment?cachebust=1394797106&preview=6638">
+                    Waste management of electrical and electronic equipment
+                  </a>
+                </h3>
+
+                <ul class="attributes">
+                  <li>
+                    <span class="visuallyhidden">Published on: </span>
+                    15 December 2011
+                  </li>
+                  <li>
+                    <span class="visuallyhidden">Departments: </span>
+                    <abbr title="Department for Education">EA</abbr>
+                  </li>
+                </ul>
+              </li>
+              <li class="section- type-publication">
+                <h3>
+                  <a href="https://whitehall-admin.preview.alphagov.co.uk/government/publications/end-of-life-vehicles-authorised-treatment-facilities-england-and-wales?cachebust=1395053658&preview=304346">
+                    End of life vehicles: authorised treatment facilities (England and Wales)
+                  </a>
+                </h3>
+
+                <ul class="attributes">
+                  <li>
+                    <span class="visuallyhidden">Published on: </span>
+                    15 December 2011
+                  </li>
+                  <li>
+                    <span class="visuallyhidden">Departments: </span>
+                    <abbr title="Department for Education">EA</abbr>
+                  </li>
+                </ul>
+              </li>
+              <li class="section- type-publication">
+                <h3>
+                  <a href="https://www.preview.alphagov.co.uk/government/consultations/onshore-oil-and-gas-exploration-standard-rules-risk-assessment-and-waste-management-plans">
+                    Onshore oil and gas exploration: standard rules, risk assessment and waste management plans
+                  </a>
+                </h3>
+
+                <ul class="attributes">
+                  <li>
+                    <span class="visuallyhidden">Published on: </span>
+                    15 December 2011
+                  </li>
+                  <li>
+                    <span class="visuallyhidden">Departments: </span>
+                    <abbr title="Department for Education">EA</abbr>
+                  </li>
+                </ul>
+              </li>
+              <li class="section- type-publication">
+                <h3>
+                  <a href="https://www.preview.alphagov.co.uk/government/consultations/small-clinical-waste-treatment-units-standard-rules-and-risk-assessment">
+                    Small clinical waste treatment units: standard rules and risk assessment
+                  </a>
+                </h3>
+
+                <ul class="attributes">
+                  <li>
+                    <span class="visuallyhidden">Published on: </span>
+                    15 December 2011
+                  </li>
+                  <li>
+                    <span class="visuallyhidden">Departments: </span>
+                    <abbr title="Department for Education">EA</abbr>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="blk-2" class="search-results toHide" style="display:none">
+  <h2 class="result-count">You are viewing all 25 results found on <span>Schools and colleges</span></h2>
+
+  <div class="search-container group js-tab-content tab-content ">
+    <div id="services-information-results" class="js-tab-pane tab-pane ">
+      <div class="results">
+        <ul class="results-list internal-links">
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.gov.uk/government/collections/national-curriculum-review">
+                National curriculum review
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                7 February 2014
+              </li>
+              <!--li>
+                Statistics
+              </li-->
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">DfE</abbr>
+              </li>
+            </ul>
+            <p>This series brings together all documents relating to national curriculum review.</p>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.gov.uk/government/collections/national-curriculum">
+                National curriculum
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                6 February 2014
+              </li>
+              <!--li>
+                Statistics
+              </li-->
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">DfE</abbr>
+              </li>
+            </ul>
+            <p>The national curriculum for England to be taught in all maintained primary and secondary schools from September 2014.</p>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="http://www.education.gov.uk/schools/teachingandlearning/qualifications/b00231686/english-baccalaureate-information-for-schools">
+                English Baccalaureate: information for schools
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                12 February 2014
+              </li>
+              <li>
+                Detailed guide
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">DfE</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.gov.uk/government/publications/national-curriculum-and-assessment-information-for-schools">
+                National curriculum and assessment: information for schools
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                28 January 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">DfE</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/key-stage-2-monitoring-visits-2014-guidance-for-local-authorities">
+                Key stage 2 monitoring visits 2014: guide for local authorities
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/2014-test-administrators-guide-key-stage-2">
+                2014 test administrators' guide: key stage 2
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/check-administrators-guide-phonics-screening-check-2014">
+                Check administrators' guide: phonics screening check 2014
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/eyfs-profile-exemplication-materials">
+                EYFS profile: exemplication materials
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://whitehall-admin.preview.alphagov.co.uk/government/publications/assessment-and-reporting-arrangements-early-years-foundation-stage?cachebust=1392811257&preview=202638">
+                Assessment and reporting arrangements: early years foundation stage
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/key-stage-2-teacher-assessment-data-collection-2014-technical-specification">
+                Key stage 2 teacher assessment data collection 2014: technical specification
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/standards-and-testing-agency-report-and-financial-statement-2011-to-2012">
+                Standards and Testing Agency report and financial statement 2011 to 2012
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/early-years-foundation-stage-profile-handbook-2014">
+                Early years foundation stage profile: handbook 2014
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/national-curriculum-tests-review-outcomes-2011-provisional">
+                National curriculum tests: review outcomes - 2011 (provisional)
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Statistics - National statistics
+              </li>
+              <li>
+                Statistics: key stage 2
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="#">
+                Assessment and reporting arrangements 2014: EYFS
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/p-level-attainment-targets">
+                P level attainment targets
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/national-curriculum-assessments-2014-key-stage-1-arrangements">
+                Assessment and reporting arrangements 2014: key stage 1
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/2012-maladministration-report">
+                2012 maladministration report
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="#">
+                Teacher assessment and reporting arrangements: key stage 3
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="#">
+                NPQH application form and reference and statement of sponsorship
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.gov.uk/government/speeches/michael-gove-speaks-about-securing-our-childrens-future">
+                Michael Gove speaks about securing our children’s future
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="blk-3" class="search-results toHide" style="display:none">
+  <h2 class="result-count">You are viewing all 25 results found on <span>Education and learning</span></h2>
+
+  <div class="search-container group js-tab-content tab-content ">
+    <div id="services-information-results" class="js-tab-pane tab-pane ">
+      <div class="results">
+        <ul class="results-list internal-links">
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/national-curriculum" title="The national curriculum">
+                The national curriculum
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>The English national curriculum means primary and secondary school.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/apply-free-school-meals" title="Apply for free school meals">
+                Apply for free school meals
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Check if your child is eligible for free school meals on your local council's website.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/check-school-closure" title="School closures">
+                School closures
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>School closures happen because of an emergency like severe weather.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/school-attendance-absence" title="School attendance and absence">
+                School attendance and absence
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>You can be prosecuted if your child has unauthorised absence from school.</p>
+          </li>          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/school-discipline-exclusions" title="School discipline and exclusions">
+                School discipline and exclusions
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Schools can punish (discipline) pupils or exclude them.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/school-term-holiday-dates" title="School term and holiday dates">
+                School term and holiday dates
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Find your child's school term, half term and holiday dates on your local council's website.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/after-school-holiday-club" title="After school and holiday clubs">
+                After school and holiday clubs
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Ask your council about after school clubs and holiday play schemes run by the school, private or voluntary organisations.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/apply-special-educational-needs-assessment" title="Apply for a special educational needs assessment">
+                Apply for a special educational needs assessment
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Apply to the council for a special educational needs (SEN) assessment for your child.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/become-school-college-governor" title="Become a school or college governor">
+                Become a school or college governor
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Register your application to be a school or college governor.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/bullying-at-school" title="Bullying at school">
+                Bullying at school
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Bullying at school and the law - what your school and the police must do about bullying and how you should report it.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/school-performance-tables" title="Check school performance tables">
+                Check school performance tables
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Get statistics for schools in England, and compare information about performance, pupils, finance, staffing and Ofsted reports.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/children-with-special-educational-needs" title="Children with special educational needs (SEN)">
+                Children with special educational needs (SEN)
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Children with special educational needs (SEN) can get the help they need to get an education.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/complain-about-school" title="Complain about a school">
+                Complain about a school
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Complain about a school - complaints process, when to complain to the Department for Education, the Education Funding Agency or Ofsted.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/education-attendance-council" title="Education and attendance information from your council">
+                Education and attendance information from your council
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>How your council encourages attendance at school - truancy, unauthorised absences, education welfare officer.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/health-safety-school-children" title="Health and safety for school children">
+                Health and safety for school children
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Schools are responsible for your child's safety while they're at school or on a school trip.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/help-school-clothing-costs" title="Help with school clothing costs">
+                Help with school clothing costs
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Financial help to pay for your child's school clothing - school uniform, games kit.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/illness-child-education" title="Illness and your child's education">
+                Illness and your child's education
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>What happens if your child can't go to school for health reasons.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/exam-timetable" title="Look up your exam timetable">
+                Look up your exam timetable
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Exam dates given by AQA, CCEA, Edexcel, OCR and WJEC for GCSE, GCE A and AS levels, GNVQ, VCE, ELC, AEA, FSMQ and STEP exams.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/know-when-you-can-leave-school" title="School leaving age">
+                School leaving age
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Information on the age you can leave school in England, Scotland, Wales and Northern Ireland.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/school-meals-healthy-eating-standards" title="School meals - healthy eating standards">
+                School meals - healthy eating standards
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Food in schools must meet nutritional standards and include high-quality meat, poultry, fish and vegetables so that children have healthy, balanced diets.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="blk-4" class="search-results toHide" style="display:none">
+    <h2 class="result-count">You are viewing all 426 results found on <span>GOV.UK</span></h2>
+
+
+      <div class="search-container group js-tab-content tab-content ">
+          <div id="services-information-results" class="js-tab-pane tab-pane ">
+          <div class="results">
+            <ul class="results-list internal-links">
+<li class="section-business type-guide">
   
 
     <h3>
-      <a href="https://www.gov.uk/check-if-youre-at-risk-of-flooding" title="View Check flood warnings">
-        Check flood warnings
+      <a href="https://www.gov.uk/managing-your-waste-an-overview" title="View Business and commercial waste">
+        Business and commercial waste
       </a>
     </h3>
       <p class="meta crumbtrail">
         <span class="visuallyhidden">Part of </span>
-        <span class="section">Citizenship</span>
-        
-        
-      </p>
-    <p>Find out your immediate flood risk and your general risk of flooding.</p>
-</li>
-
-  <li class="section-housing type-answer">
-  
-
-    <h3>
-      <a href="https://www.gov.uk/report-flooding-burst-water-mains" title="View Report flooding and burst water mains">
-        Report flooding and burst water mains
-      </a>
-    </h3>
-      <p class="meta crumbtrail">
-        <span class="visuallyhidden">Part of </span>
-        <span class="section">Housing</span>
-        <span class="visuallyhidden">, </span><span class="subsection">Recycling rubbish</span>
+        <span class="section">Business</span>
+        <span class="visuallyhidden">, </span><span class="subsection">Waste environment</span>
         
       </p>
-    <p>Contact your council, water company or a helpline to report flooding from water mains, public drains, sewers, rivers, or the sea</p>
-</li>
-
-  <li class="section- type-publication">
-  
-
-  <h3>
-    <a href="https://www.gov.uk/government/publications/flood-rescue-concept-of-operations" title="View Flood rescue concept of operations">
-      Flood rescue concept of operations
-    </a>
-  </h3>
-
-  <ul class="attributes">
-<li>
-        <span class="visuallyhidden">Published on: </span>
-        18 December 2013
-      </li>
-      <li>
-        Policy paper
-      </li>
-      <li>
-        <span class="visuallyhidden">Departments: </span>
-        <abbr title="Department for Environment, Food &amp; Rural Affairs">Defra</abbr>
-      </li>
-  </ul>
-<p>The FRCO sets out the framework for enhancing the capability and national co-ordination of flood rescue in England.</p>
-</li>
-
-  <li class="section-citizenship type-detailed_guidance">
-  <h3>
-    <a href="https://www.gov.uk/flooding-and-coastal-change-guidance-for-practitioners" title="View Flooding and coastal change: guidance for practitioners">
-      Flooding and coastal change: guidance for practitioners
-    </a>
-  </h3>
-
-    <p class="meta crumbtrail">
-      <span class="visuallyhidden">Part of </span>
-      <span class="section">Citizenship</span>
-      <span class="visuallyhidden">, </span><span class="subsection">Coasts countryside</span>
-      <span class="visuallyhidden">, </span><span class="subsubsection">Flooding and coastal change</span>
-    </p>
-  <p>Guidance for flood risk management authorities and those working in the flood and coastal risk management sector.</p>
-</li>
-
-  <li class="section- type-publication">
-  
-
-  <h3>
-    <a href="https://www.gov.uk/government/publications/flood-defence-partnership-funding" title="View Flood defence partnership funding">
-      Flood defence partnership funding
-    </a>
-  </h3>
-
-  <ul class="attributes">
-<li>
-        <span class="visuallyhidden">Published on: </span>
-         6 February 2014
-      </li>
-      <li>
-        FOI release
-      </li>
-      <li>
-        <span class="visuallyhidden">Departments: </span>
-        <abbr title="Department for Environment, Food &amp; Rural Affairs">Defra</abbr>
-      </li>
-  </ul>
-<p>Partnership funding approach to flood defence spending.</p>
-</li>
-
-  <li class="section-citizenship type-detailed_guidance">
-  <h3>
-    <a href="https://www.gov.uk/flood-risk-management-information-for-flood-risk-management-authorities-asset-owners-and-local-authorities" title="View Flood risk management: information for flood risk management authorities, asset owners and local authorities">
-      Flood risk management: information for flood risk management authorities, asset owners and local authorities
-    </a>
-  </h3>
-
-    <p class="meta crumbtrail">
-      <span class="visuallyhidden">Part of </span>
-      <span class="section">Citizenship</span>
-      <span class="visuallyhidden">, </span><span class="subsection">Coasts countryside</span>
-      <span class="visuallyhidden">, </span><span class="subsubsection">Flooding and coastal change</span>
-    </p>
-  <p>Guidance and information on flood risk management and surface water management.</p>
-</li>
-
-  <li class="section-citizenship type-licence">
-  
-
-    <h3>
-      <a href="https://www.gov.uk/flood-defence-consent-england-wales" title="View Permission to do work on or near a river, flood or sea defences (England)">
-        Permission to do work on or near a river, flood or sea defences (England)
-      </a>
-    </h3>
-      <p class="meta crumbtrail">
-        <span class="visuallyhidden">Part of </span>
-        <span class="section">Citizenship</span>
-        <span class="visuallyhidden">, </span><span class="subsection">Coasts countryside</span>
-        
-      </p>
-    <p>Get permission from the Environment agency to do any work on or next to a watercourse, flood or sea defences.</p>
-</li>
-
-  <li class="section-citizenship type-answer">
-  
-
-    <h3>
-      <a href="https://www.gov.uk/sign-up-for-flood-warnings" title="View Sign up for flood warnings (England and Wales)">
-        Sign up for flood warnings (England and Wales)
-      </a>
-    </h3>
-      <p class="meta crumbtrail">
-        <span class="visuallyhidden">Part of </span>
-        <span class="section">Citizenship</span>
-        <span class="visuallyhidden">, </span><span class="subsection">Coasts countryside</span>
-        
-      </p>
-    <p>Register your home or business in England or Wales with the Floodline Warnings Direct service if you're a tenant, landlord or business owner.</p>
-</li>
-
-  <li class="section-housing type-transaction">
-  
-
-    <h3>
-      <a href="https://www.gov.uk/search-property-information-land-registry" title="View Search for property information from Land Registry">
-        Search for property information from Land Registry
-      </a>
-    </h3>
-      <p class="meta crumbtrail">
-        <span class="visuallyhidden">Part of </span>
-        <span class="section">Housing</span>
-        <span class="visuallyhidden">, </span><span class="subsection">Owning renting property</span>
-        
-      </p>
-    <p>Find a property and get its title plan, find out who owns it by downloading the title register and see if it's at risk of flooding on Land Registry website</p>
-</li>
-
-  <li class="section-housing type-local_transaction">
-  
-
-    <h3>
-      <a href="https://www.gov.uk/local-planning-emergency-major-incident" title="View Preparing for emergencies: find out about local plans">
-        Preparing for emergencies: find out about local plans
-      </a>
-    </h3>
-      <p class="meta crumbtrail">
-        <span class="visuallyhidden">Part of </span>
-        <span class="section">Housing</span>
-        <span class="visuallyhidden">, </span><span class="subsection">Safety environment</span>
-        
-      </p>
-    <p>Check out your local council's emergency plan covering major incidents like flooding, flu pandemics and transport accidents</p>
-</li>
-
-  <li class="section- type-licence">
-  
-
-    <h3>
-      <a href="https://www.gov.uk/scheduled-monument-consent-england-scotland-wales" title="View Scheduled monument consent (England, Scotland and Wales)">
-        Scheduled monument consent (England, Scotland and Wales)
-      </a>
-    </h3>
-    <p>You need a licence to carry out work that would demolish, damage, remove, repair, alter or add to a scheduled monument, or to carry out any flooding or tipping operations on land in, on, or under a monument</p>
+    <p>Business waste management in England - your duty of care, waste collection, licences and waste transfer notes</p>
 </li>
 
   <li class="section-business type-detailed_guidance">
   
 
   <h3>
-    <a href="https://www.gov.uk/animal-welfare-in-severe-weather" title="View Animal welfare in severe weather">
-      Animal welfare in severe weather
-    </a>
-  </h3>
-
-    <p class="meta crumbtrail">
-      <span class="visuallyhidden">Part of </span>
-      <span class="section">Business</span>
-      <span class="visuallyhidden">, </span><span class="subsection">Farming</span>
-      <span class="visuallyhidden">, </span><span class="subsubsection">Livestock</span>
-    </p>
-  <p>Advice to animal keepers on welfare issues in severe weather situations - floods, severe cold weather and hot weather.</p>
-</li>
-
-  <li class="section-business type-detailed_guidance">
-  
-
-  <h3>
-    <a href="https://www.gov.uk/farm-environment-plans" title="View Farm Environment Plans">
-      Farm Environment Plans
+    <a href="https://www.gov.uk/minimising-farm-waste-composting-and-recycling" title="View Minimising farm waste: composting and recycling">
+      Minimising farm waste: composting and recycling
     </a>
   </h3>
 
@@ -272,68 +899,26 @@ no_search: true
       <span class="visuallyhidden">, </span><span class="subsection">Farming</span>
       <span class="visuallyhidden">, </span><span class="subsubsection">Farming and the environment</span>
     </p>
-  <p>Structured surveys of a farm's environmental features, creating new habitats, improving public access, flood management and protecting natural resources.</p>
+  <p>How to reduce general farm waste and deal efficiently with animal waste through good waste management.</p>
 </li>
 
-  <li class="section-business type-detailed_guidance">
-  
-
-  <h3>
-    <a href="https://www.gov.uk/climate-change-adaptation-information-for-local-authorities" title="View Climate change adaptation: information for local authorities">
-      Climate change adaptation: information for local authorities
-    </a>
-  </h3>
-
-    <p class="meta crumbtrail">
-      <span class="visuallyhidden">Part of </span>
-      <span class="section">Business</span>
-      <span class="visuallyhidden">, </span><span class="subsection">Waste environment</span>
-      <span class="visuallyhidden">, </span><span class="subsubsection">Climate change planning and preparation</span>
-    </p>
-  <p>Guidance for local authorities to help ensure the UK is prepared for the impacts of climate change</p>
-</li>
-
-  <li class="section-citizenship type-detailed_guidance">
-  
-
-  <h3>
-    <a href="https://www.gov.uk/national-recovery-guidance" title="View National Recovery Guidance">
-      National Recovery Guidance
-    </a>
-  </h3>
-
-    <p class="meta crumbtrail">
-      <span class="visuallyhidden">Part of </span>
-      <span class="section">Citizenship</span>
-      <span class="visuallyhidden">, </span><span class="subsection">Government</span>
-      <span class="visuallyhidden">, </span><span class="subsubsection">Emergencies preparation response and recovery</span>
-    </p>
-  <p>Guidance primarily aimed at local responders and developed in line with the Civil Contingencies Act (CCA) on recovering from an emergency in the UK.</p>
-</li>
-
-  <li class="section-business type-answer">
+  <li class="section- type-licence">
   
 
     <h3>
-      <a href="https://www.gov.uk/report-an-environmental-incident" title="View Report an environmental incident">
-        Report an environmental incident
+      <a href="https://www.gov.uk/authorisation-to-mix-special-waste-scotland" title="View Authorisation to mix special waste (Scotland)">
+        Authorisation to mix special waste (Scotland)
       </a>
     </h3>
-      <p class="meta crumbtrail">
-        <span class="visuallyhidden">Part of </span>
-        <span class="section">Business</span>
-        <span class="visuallyhidden">, </span><span class="subsection">Waste environment</span>
-        
-      </p>
-    <p>How to report environmental incidents, including pollution</p>
+    <p>To mix different categories of special waste or mix special waste with non-special waste, you need several licences and permits</p>
 </li>
 
   <li class="section-business type-detailed_guidance">
   
 
   <h3>
-    <a href="https://www.gov.uk/marine-construction-and-coastal-protection" title="View Marine construction and coastal protection">
-      Marine construction and coastal protection
+    <a href="https://www.gov.uk/managing-radioactive-waste-safely-a-guide-for-communities" title="View Managing Radioactive Waste Safely: a guide for communities">
+      Managing Radioactive Waste Safely: a guide for communities
     </a>
   </h3>
 
@@ -343,55 +928,280 @@ no_search: true
       <span class="visuallyhidden">, </span><span class="subsection">Waste environment</span>
       <span class="visuallyhidden">, </span><span class="subsubsection">Environmental regulations</span>
     </p>
-  <p>Which licences you need for marine construction works, and how to get them. Also how you can get emergency works approved.</p>
+  <p>Government is using an approach based on voluntarism and partnership to site a geological disposal facility.</p>
 </li>
 
-  <li class="section-housing type-answer">
+  <li class="section- type-licence">
   
 
     <h3>
-      <a href="https://www.gov.uk/your-rights-to-housing-if-youre-under-18" title="View Your rights to housing if you're under 18">
-        Your rights to housing if you're under 18
+      <a href="https://www.gov.uk/hazardous-waste-movement-notice-northern-ireland" title="View Hazardous waste movement notice (Northern Ireland)">
+        Hazardous waste movement notice (Northern Ireland)
+      </a>
+    </h3>
+    <p>You need to pre-notify the Northern Ireland Environment Agency (NIEA) 72 hours in advance if you want to move hazardous waste</p>
+</li>
+
+  <li class="section- type-licence">
+  
+
+    <h3>
+      <a href="https://www.gov.uk/greenfield-soil-declaration-northern-ireland" title="View Greenfield soil declaration (Northern Ireland)">
+        Greenfield soil declaration (Northern Ireland)
+      </a>
+    </h3>
+    <p>You must submit a completed Greenfield Soil Declaration Form to the Northern Ireland Environment Agency If you move clean, greenfield soil within Northern Ireland
+.</p>
+</li>
+
+  <li class="section-business type-guide">
+  
+
+    <h3>
+      <a href="https://www.gov.uk/how-to-classify-different-types-of-waste" title="View How to classify different types of waste">
+        How to classify different types of waste
       </a>
     </h3>
       <p class="meta crumbtrail">
         <span class="visuallyhidden">Part of </span>
-        <span class="section">Housing</span>
-        <span class="visuallyhidden">, </span><span class="subsection">Council housing association</span>
+        <span class="section">Business</span>
+        <span class="visuallyhidden">, </span><span class="subsection">Waste environment</span>
         
       </p>
-    <p>If you're under 18, you can't usually rent your own home, but you'll be on the priority list for council housing - your rights and what happens if you want to leave home</p>
+    <p>How to classify and describe your business waste so you can know how to manage and dispose of it - what you need to do, List of Waste (LoW) codes, technical guidance</p>
 </li>
 
-  <li class="section-foreign-travel-advice type-travel-advice">
+  <li class="section-business type-detailed_guidance">
+  
+
+  <h3>
+    <a href="https://www.gov.uk/access-benefits-through-green-innovation-in-farming" title="View Access benefits through green innovation in farming">
+      Access benefits through green innovation in farming
+    </a>
+  </h3>
+
+    <p class="meta crumbtrail">
+      <span class="visuallyhidden">Part of </span>
+      <span class="section">Business</span>
+      <span class="visuallyhidden">, </span><span class="subsection">Farming</span>
+      <span class="visuallyhidden">, </span><span class="subsubsection">Farm management and finance</span>
+    </p>
+  <p>Green innovation can benefit your farm business and the environment: biotechnology, managing waste, land contamination and water pollution</p>
+</li>
+
+  <li class="section-business type-licence">
   
 
     <h3>
-      <a href="https://www.gov.uk/foreign-travel-advice/indonesia" title="View Indonesia travel advice">
-        Indonesia travel advice
+      <a href="https://www.gov.uk/hazardous-waste-producer-registration" title="View Hazardous waste producer registration (England and Wales)">
+        Hazardous waste producer registration (England and Wales)
       </a>
     </h3>
       <p class="meta crumbtrail">
         <span class="visuallyhidden">Part of </span>
-        <span class="section">Foreign travel advice</span>
-        
+        <span class="section">Business</span>
+        <span class="visuallyhidden">, </span><span class="subsection">Waste environment</span>
         
       </p>
-    <p>Latest travel advice for Indonesia including safety and security, entry requirements, travel warnings and health</p>
+    <p>You need to register your premises with the Environment Agency if you produce or hold hazardous waste</p>
 </li>
-            </ul>
-</div>
-          </div>
+
+  <li class="section-business type-detailed_guidance">
+  
+
+  <h3>
+    <a href="https://www.gov.uk/healthcare-waste" title="View Healthcare waste">
+      Healthcare waste
+    </a>
+  </h3>
+
+    <p class="meta crumbtrail">
+      <span class="visuallyhidden">Part of </span>
+      <span class="section">Business</span>
+      <span class="visuallyhidden">, </span><span class="subsection">Waste environment</span>
+      <span class="visuallyhidden">, </span><span class="subsubsection">Healthcare waste management</span>
+    </p>
+  <p>Guidance on the correct disposal of potentially hazardous clinical waste.</p>
+</li>
+
+  <li class="section-business type-detailed_guidance">
+  
+
+  <h3>
+    <a href="https://www.gov.uk/avoiding-air-water-and-soil-pollution-on-farms" title="View Soil pollution from farming: preventing and minimising">
+      Soil pollution from farming: preventing and minimising
+    </a>
+  </h3>
+
+    <p class="meta crumbtrail">
+      <span class="visuallyhidden">Part of </span>
+      <span class="section">Business</span>
+      <span class="visuallyhidden">, </span><span class="subsection">Farming</span>
+      <span class="visuallyhidden">, </span><span class="subsubsection">Farming and the environment</span>
+    </p>
+  <p>Manage the environmental impact of farming on the land, including minimising waste production and use of water on crops and livestock.</p>
+</li>
+
+  <li class="section-housing type-detailed_guidance">
+  
+
+  <h3>
+    <a href="https://www.gov.uk/household-reward-and-recognition-scheme-guidance-for-local-authorities" title="View Household Reward and Recognition Fund">
+      Household Reward and Recognition Fund
+    </a>
+  </h3>
+
+    <p class="meta crumbtrail">
+      <span class="visuallyhidden">Part of </span>
+      <span class="section">Housing</span>
+      <span class="visuallyhidden">, </span><span class="subsection">Recycling rubbish</span>
+      <span class="visuallyhidden">, </span><span class="subsubsection">Beach and street cleanliness</span>
+    </p>
+  <p>The Reward and Recognition Fund rewards and recognises people or communities for adopting positive behaviours towards managing their waste.</p>
+</li>
+
+  <li class="section-business type-guide">
+  
+
+    <h3>
+      <a href="https://www.gov.uk/electricalwaste-producer-supplier-responsibilities" title="View Electrical waste: retailer and distributor responsibilities">
+        Electrical waste: retailer and distributor responsibilities
+      </a>
+    </h3>
+      <p class="meta crumbtrail">
+        <span class="visuallyhidden">Part of </span>
+        <span class="section">Business</span>
+        <span class="visuallyhidden">, </span><span class="subsection">Waste environment</span>
+        
+      </p>
+    <p>Waste electrical and electronic equipment (WEEE) - supplier and producer responsibilities, waste collection and compliance schemes</p>
+</li>
+
+  <li class="section-business type-detailed_guidance">
+  
+
+  <h3>
+    <a href="https://www.gov.uk/waste-legislation-and-regulations" title="View Waste legislation and regulations">
+      Waste legislation and regulations
+    </a>
+  </h3>
+
+    <p class="meta crumbtrail">
+      <span class="visuallyhidden">Part of </span>
+      <span class="section">Business</span>
+      <span class="visuallyhidden">, </span><span class="subsection">Waste environment</span>
+      <span class="visuallyhidden">, </span><span class="subsubsection">Environmental regulations</span>
+    </p>
+  <p>Guidance for businesses and organisations on how waste disposal is regulated and what they need to do to comply.</p>
+</li>
+
+  <li class="section- type-licence">
+  
+
+    <h3>
+      <a href="https://www.gov.uk/metal-recycling-site-licence-northern-ireland" title="View Metal recycling site licence (Northern Ireland)">
+        Metal recycling site licence (Northern Ireland)
+      </a>
+    </h3>
+    <p>You need a licence to run a metal recycling site in Northern Ireland</p>
+</li>
+
+  <li class="section- type-detailed_guidance">
+  
+
+    <h3>
+      <a href="https://www.gov.uk/waste-exemptions-disposing-of-waste" title="View Waste exemptions: disposing of waste">
+        Waste exemptions: disposing of waste
+      </a>
+    </h3>
+    <p>A list of exemptions covering disposing of waste. Find the one that could apply to your waste operation if you meet the requirements.</p>
+</li>
+
+  <li class="section-business type-detailed_guidance">
+  
+
+  <h3>
+    <a href="https://www.gov.uk/hazardous-waste-treatment-and-disposal" title="View Hazardous farm waste: treatment and disposal">
+      Hazardous farm waste: treatment and disposal
+    </a>
+  </h3>
+
+    <p class="meta crumbtrail">
+      <span class="visuallyhidden">Part of </span>
+      <span class="section">Business</span>
+      <span class="visuallyhidden">, </span><span class="subsection">Farming</span>
+      <span class="visuallyhidden">, </span><span class="subsubsection">Farming and the environment</span>
+    </p>
+  <p>How to identify hazardous farm waste and comply with legal obligations</p>
+</li>
+
+  <li class="section-business type-detailed_guidance">
+  
+
+  <h3>
+    <a href="https://www.gov.uk/turn-your-waste-into-a-new-non-waste-product-or-material" title="View Turn your waste into a new non-waste product or material">
+      Turn your waste into a new non-waste product or material
+    </a>
+  </h3>
+
+    <p class="meta crumbtrail">
+      <span class="visuallyhidden">Part of </span>
+      <span class="section">Business</span>
+      <span class="visuallyhidden">, </span><span class="subsection">Waste environment</span>
+      <span class="visuallyhidden">, </span><span class="subsubsection">Environmental regulations</span>
+    </p>
+  <p>Find out if your material meets the end of waste test so that you can create new products knowing that waste controls no longer apply.</p>
+</li>
+
+  <li class="section-business type-detailed_guidance">
+  
+
+  <h3>
+    <a href="https://www.gov.uk/waste-exemptions-storing-waste" title="View Waste exemptions: storing waste">
+      Waste exemptions: storing waste
+    </a>
+  </h3>
+
+    <p class="meta crumbtrail">
+      <span class="visuallyhidden">Part of </span>
+      <span class="section">Business</span>
+      <span class="visuallyhidden">, </span><span class="subsection">Waste environment</span>
+      <span class="visuallyhidden">, </span><span class="subsubsection">Environmental regulations</span>
+    </p>
+  <p>Read the list of exemptions covering storing waste to find the one that could apply to your waste operation, if you meet the requirements.</p>
+</li>
+
+  <li class="section-business type-guide">
+  
+
+    <h3>
+      <a href="https://www.gov.uk/register-waste-carrier" title="View Transporting or dealing in waste (England and Wales)">
+        Transporting or dealing in waste (England and Wales)
+      </a>
+    </h3>
+      <p class="meta crumbtrail">
+        <span class="visuallyhidden">Part of </span>
+        <span class="section">Business</span>
+        <span class="visuallyhidden">, </span><span class="subsection">Waste environment</span>
+        
+      </p>
+    <p>How to register, update or renew a waste carrier licence in England or Wales, and who needs to register</p>
+</li>
+
+        </ul>
       </div>
+    </div>
   </div>
+</div>
 
-<nav id="show-more-documents" role="navigation">
+
+<!--nav id="show-more-documents" role="navigation">
   <ul class="previous-next-navigation">
     <li class="next">
       <a href="results-2.html">Next <span class="visuallyhidden">page</span> <span class="page-numbers">2 of 58</span></a>
     </li>
   </ul>
-</nav>
+</nav-->
 
 
 </main>
