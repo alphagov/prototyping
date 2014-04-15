@@ -23,16 +23,16 @@
         <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
         <nav id="proposition-menu">
           <ul id="proposition-links">
-            <li><a href="/government/organisations" class="active">Departments</a></li>
-            <li><a href="/government/topics" class="">Topics</a></li>
-            <li><a href="/government/world" class="">Worldwide</a></li>
-            <li><a href="/government/how-government-works" class="">How government works</a></li>
-            <li><a href="/government/get-involved" class="">Get involved</a></li>
-            <li class="clear-child"><a href="/government/policies" class="">Policies</a></li>
-            <li><a href="/government/publications" class="">Publications</a></li>
-            <li><a href="/government/publications?publication_filter_option=consultations" class="">Consultations</a></li>
-            <li><a href="/government/publications?publication_filter_option=statistics" class="">Statistics</a></li>
-            <li><a href="/government/announcements" class="">Announcements</a></li>
+            <li><a href="https://www.gov.uk/government/organisations" class="{% if page.current_nav == 'departments' %}active{% endif %}">Departments</a></li>
+            <li><a href="https://www.gov.uk/government/topics" class="{% if page.current_nav == 'topics' %}active{% endif %}">Topics</a></li>
+            <li><a href="https://www.gov.uk/government/world" class="{% if page.current_nav == 'worldwide' %}active{% endif %}">Worldwide</a></li>
+            <li><a href="https://www.gov.uk/government/how-government-works" class="{% if page.current_nav == 'how-gov-works' %}active{% endif %}">How government works</a></li>
+            <li><a href="https://www.gov.uk/government/get-involved" class="{% if page.current_nav == 'get-involved' %}active{% endif %}">Get involved</a></li>
+            <li class="clear-child"><a href="https://www.gov.uk/government/policies" class="{% if page.current_nav == 'policies' %}active{% endif %}">Policies</a></li>
+            <li><a href="https://www.gov.uk/government/publications" class="{% if page.current_nav == 'publications' %}active{% endif %}">Publications</a></li>
+            <li><a href="https://www.gov.uk/government/publications?publication_filter_option=consultations" class="{% if page.current_nav == 'consultations' %}active{% endif %}">Consultations</a></li>
+            <li><a href="https://www.gov.uk/government/publications?publication_filter_option=statistics" class="{% if page.current_nav == 'statistics' %}active{% endif %}">Statistics</a></li>
+            <li><a href="https://www.gov.uk/government/announcements" class="{% if page.current_nav == 'annoucments' %}active{% endif %}">Announcements</a></li>
           </ul>
         </nav>
       </div>
