@@ -23,7 +23,7 @@
         <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
         <nav id="proposition-menu">
           <ul id="proposition-links">
-            <li><a href="https://www.gov.uk/government/organisations" class="{% if page.current_nav == 'departments' %}active{% endif %}">Departments</a></li>
+            <li><a href="https://www.gov.uk/government/organisations" class="{% unless page.current_nav %}active{% endunless %}{% if page.current_nav == 'departments' %}active{% endif %}">Departments</a></li>
             <li><a href="https://www.gov.uk/government/topics" class="{% if page.current_nav == 'topics' %}active{% endif %}">Topics</a></li>
             <li><a href="https://www.gov.uk/government/world" class="{% if page.current_nav == 'worldwide' %}active{% endif %}">Worldwide</a></li>
             <li><a href="https://www.gov.uk/government/how-government-works" class="{% if page.current_nav == 'how-gov-works' %}active{% endif %}">How government works</a></li>
