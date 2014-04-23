@@ -1,0 +1,137 @@
+---
+---
+
+@import "frontend_toolkit";
+
+.manual-header {
+  position: relative;
+  margin: 0 auto;
+  width: auto;
+  max-width: 1020px;
+  .inner-block {
+    background-color: #2b8cc4;
+    color: #fff;
+    padding: 60px 30px 30px;
+    margin: 0 30px;
+    overflow: hidden;
+
+    a {
+      color: #fff;
+    }
+
+    .headings {
+      float: left;
+      width: 75%;
+      .type {
+        font-size: 27px;
+        margin: 0;
+      }
+      h1 {
+        font-size: 36px;
+        line-height: 1;
+      }
+    }
+
+    .metadata {
+      float: left;
+      width: 25%;
+      dl {
+        margin: 0 0 10px;
+        dt,
+        dd {
+          line-height: 1.3;
+        }
+        dt {
+          font-size: 14px;
+        }
+        dd {
+          font-size: 19px;
+          font-weight: bold;
+          margin: 0;
+        }
+      }
+    }
+
+    .updates {
+      float: right;
+      padding-top: 30px;
+      width: 25%;
+      .govdelivery,
+      .print {
+        display: block;
+        padding: 0 10px 0 25px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        background: url(images/mail-icon-white.png) 0 40% no-repeat;
+      }
+      .print {
+        background: url(images/print-icon-white.png) 0 40% no-repeat;
+      }
+    }
+
+    #header-search {
+      float: left;
+      padding-top: 40px;
+      clear: both;
+      width: 33.33%;
+
+      .header-search-content {
+        position: relative;
+        background: #fff;
+      }
+      label {
+        float: none;
+        position: absolute;
+        left: 0;
+        top: 1px;
+        z-index: 1;
+        width: 100%;
+        margin-right: 0;
+
+        height: 40px;
+        line-height: 40px;
+        text-indent: 15px;
+        overflow: hidden;
+        display: block;
+        color: #6f777b;
+
+      }
+      #search-main {
+        font-family: "nta",Arial,sans-serif;
+        font-size: 19px;
+        line-height: 1.47368;
+        font-weight: 400;
+        margin: 0;
+        text-transform: none;
+        position: relative;
+        padding: 6px;
+        background: transparent;
+        width: 82%;
+        z-index: 3;
+        &:focus {
+          background-color: #fff;
+        }
+      }
+      .submit {
+        position: absolute;
+        z-index: 4;
+        right: 0;
+        top: 0;
+        width: 40px;
+        height: 41px;
+        border: 1px solid #0b0c0c;
+        border-width: 0 0 0 1px;
+        border-left-color: #222;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        overflow: hidden;
+        text-indent: -5000px;
+        cursor: pointer;
+        color: #fff;
+        background: #0b0c0c url("https://assets.digital.cabinet-office.gov.uk/frontend/homepage/search-button.png") no-repeat 2px 50%;
+      }
+    }
+
+  }
+}

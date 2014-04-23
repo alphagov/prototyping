@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {% include _head.html %} 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    {% include _head.html %}
+    <link rel="stylesheet" href="/manuals/assets/stylesheets/manuals.css" />  
   </head>
   <body class="mainstream{% if page.body_class  %} {{ page.body_class }}{% endif %}">
     <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
     {% include _header.html %}
-    {% include _navigation.html %}
     <div id="wrapper" class="{{ page.categories }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
-      {{ content }}
+      <header class="manual-header">
+        <div class="inner-block floated-children">
+          <div class="headings">
+            <h1>{{ page.title }}</h1>
+          </div>
+          {% if page.update %}
+            <aside class="metadata-date">
+              <dl>
+                <dt>Manual updated:</dt>
+                <dd>{{ page.update }}</dd>
+              </dl>
+            </aside>
+          {% endif %}
+          <aside class="metadata-list">
+            <dl>
+              {% if page.meta_organisation %}
+                <dt>Organisation:</dt>
+                <dd><a href="#">{{ page.meta_organisation }}</a></dd>
+              {% endif %}
+              {% if page.meta_policy %}
+                <dt>Policy:</dt>
+                <dd><a href="#">{{ page.meta_policy }}</a></dd>
+              {% endif %}
+              {% if page.meta_sector %}
+                <dt>Sectors:</dt>
+                <dd><a href="#">{{ page.meta_sector }}</a></dd>
+              {% endif %}
+              {% if page.meta_collection %}
+                <dt>Collections:</dt>
+                <dd><a href="#">{{ page.meta_collection }}</a></dd>
+              {% endif %}
+            </dl>
+          </aside>
+          <form id="header-search" class="site-search" action="/search" method="get" role="search">
+            <div class="header-search-content">
+              <label for="search-main">Search this manual</label>
+              <input type="search" name="q" id="search-main" title="Search" class="js-search-focus"><input class="submit" type="submit" value="Search">
+            </div>
+          </form>
+        </div>
+      </header>
+      <main id="content" role="main" class="">
+        {{ content }}
+      </main>
     </div><!--end wrapper-->
     {% include _footer.html %}
   </body>
