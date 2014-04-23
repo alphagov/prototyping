@@ -12,6 +12,7 @@ $(function() {
   $( ".close-this" ).click(function() {
     $(this).parent().parent().toggle();
     $(this).parent().parent().parent().find( ".closed" ).toggleClass( "open" );
+    $(this).parent().parent().parent().find( ".closed-secondary" ).toggleClass( "open" );
     return false;
   });
 
