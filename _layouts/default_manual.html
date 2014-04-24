@@ -26,19 +26,19 @@
             <dl>
               {% if page.meta_organisation %}
                 <dt>Organisation:</dt>
-                <dd><a href="#">{{ page.meta_organisation }}</a></dd>
+                <dd><a href="{{ page.meta_organisation_url }}">{{ page.meta_organisation }}</a></dd>
               {% endif %}
               {% if page.meta_policy %}
                 <dt>Policy:</dt>
-                <dd><a href="#">{{ page.meta_policy }}</a></dd>
+                <dd><a href="{{ page.meta_policy_url }}">{{ page.meta_policy }}</a></dd>
               {% endif %}
               {% if page.meta_sector %}
                 <dt>Sectors:</dt>
-                <dd><a href="#">{{ page.meta_sector }}</a></dd>
+                <dd><a href="{{ page.meta_sector_url }}">{{ page.meta_sector }}</a></dd>
               {% endif %}
               {% if page.meta_collection %}
                 <dt>Collections:</dt>
-                <dd><a href="#">{{ page.meta_collection }}</a></dd>
+                <dd><a href="{{ page.meta_collection_url }}">{{ page.meta_collection }}</a></dd>
               {% endif %}
             </dl>
           </aside>
