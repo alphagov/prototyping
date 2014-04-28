@@ -75,9 +75,16 @@ p.contents-header {
   .hidden-content,
   .hidden-content-secondary {
     display: none;
+    h3 {
+      margin-top: 40px;
+    }
     h4 {
-      font-size: 24px;
+      font-size: 19px;
       font-weight: bold;
+      margin: 20px 0 0 0;
+      & + p {
+        margin-top: 0;
+      }
     }
 
     .close-this {
@@ -91,6 +98,13 @@ p.contents-header {
       }
     }
 
+    ul {
+      list-style: disc;
+      li {
+        border-bottom: none;
+      }
+    }
+
     .feeds,
     dl {
       display: inline-block;
@@ -99,6 +113,28 @@ p.contents-header {
       dt,
       dd {
         display: inline-block;
+      }
+    }
+
+    table {
+      thead {
+        tr th {
+          border-bottom: 1px solid #bfc1c3;
+          border-width: 0 0 1px 0;
+          padding: 3px 0 7px 0;
+        }
+      }
+      td {
+        border-bottom: 1px solid #bfc1c3;
+        border-width: 0 0 1px 0;
+        vertical-align: top;
+        padding: 3px 0 7px 0;
+        ul {
+          padding-left: 20px;
+        }
+        & p:first-child {
+          margin-top: 0;
+        }
       }
     }
 
