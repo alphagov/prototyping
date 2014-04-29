@@ -166,9 +166,22 @@ p.contents-header {
       top: -5px;
     }
   }
-  .open {
+  .open-content {
     &:after {
       font-size: 12px;
       content: " \25bc";
     }
+  }
+
+  .contents .open-content {
+    display: block;
+  }
+
+  .open-close {
+    font-size: 16px;
+    margin: 5px 0 20px 0;
+  }
+
+  .hidden-content.open-content:after {
+    content: "";
   }
