@@ -54,6 +54,7 @@ p.contents-header {
     li {
       border-bottom: 1px solid #bfc1c3;
       margin-bottom: 15px;
+      padding-bottom: 10px;
 
       h3 {
         font-weight: bold;
@@ -66,7 +67,7 @@ p.contents-header {
           }
         }
         &+ p {
-          margin: 0 0 10px 0;
+          margin: 0;
         }
       }
     }
