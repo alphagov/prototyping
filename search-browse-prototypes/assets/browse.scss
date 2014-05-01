@@ -295,3 +295,35 @@ p.see-a-z {
     font-weight: bold;
   }
 }
+
+#whitehall-wrapper .organisations-show {
+  .featured-news {
+    padding-bottom: 0;
+
+    article .content .text {
+      h2,
+      .meta,
+      .summary {
+        margin: 0;
+      }
+    }
+  }
+
+  .recently-updated .content {
+    .document-list {
+      margin-bottom: 0;
+      .attributes {
+        margin-bottom: 5px;
+      }
+    }
+
+    .feeds {
+      border-top: none !important;
+    }
+
+    .see-all {
+      border-top: none;
+    }
+  }
+}
+

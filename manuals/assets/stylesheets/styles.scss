@@ -156,34 +156,34 @@ p.contents-header {
   }
 }
 
-  .closed,
-  .closed-secondary {
-    &:after {
-      color: black;
-      font-size: 10px;
-      content: " \25b6";
-      position: absolute;
-      padding: 10px 20px;
-      right: 101%;
-      top: -5px;
-    }
+.closed,
+.closed-secondary {
+  &:after {
+    color: black;
+    font-size: 10px;
+    content: " \25b6";
+    position: absolute;
+    padding: 10px 20px;
+    right: 101%;
+    top: -5px;
   }
-  .open-content {
-    &:after {
-      font-size: 12px;
-      content: " \25bc";
-    }
+}
+.open-content {
+  &:after {
+    font-size: 12px;
+    content: " \25bc";
   }
+}
 
-  .contents .open-content {
-    display: block;
-  }
+.contents .open-content {
+  display: block;
+}
 
-  .open-close {
-    font-size: 16px;
-    margin: 5px 0 20px 0;
-  }
+.open-close {
+  font-size: 16px;
+  margin: 5px 0 20px 0;
+}
 
-  .hidden-content.open-content:after {
-    content: "";
-  }
+.hidden-content.open-content:after {
+  content: "";
+}
