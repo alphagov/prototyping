@@ -332,7 +332,19 @@ p.see-a-z {
   article {
     min-height: 1px;
   }
-  
+
+  .recently-updated .document-list {
+    border-bottom: none;
+    li {
+      padding-bottom: 0;
+    }
+  }
+
+  .see-all {
+    border-bottom: 1px solid #bfc1c3;
+    padding: 5px 0 15px 0;
+  }
+
   .services-guidance {
       h2,
       ul,
@@ -353,7 +365,7 @@ p.see-a-z {
       .inner {
         background-color: #dee0e2;
         padding: 0;
-        margin-right: 30px;
+        margin-right: 20px;
         overflow: hidden;
 
         .feature {
@@ -397,6 +409,8 @@ p.see-a-z {
             ol,
             .feeds {
               margin-right: 0;
+              border-bottom: none;
+              padding-bottom: 0;
             }
 
             .attributes {
