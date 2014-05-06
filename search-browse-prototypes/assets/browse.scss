@@ -330,6 +330,10 @@ p.see-a-z {
 // styles for alternative org homepage IPO
 #whitehall-wrapper .organisations-show.homepage-alt .services-guidance {
 
+    article {
+      min-height: 1px;
+    }
+
     h2,
     ul,
     .see-a-z {
