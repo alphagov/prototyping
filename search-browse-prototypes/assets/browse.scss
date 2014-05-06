@@ -352,6 +352,13 @@ p.see-a-z {
         float: right;
         width: 65%;
       }
+      ul li a {
+        font-weight: bold;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+      }
 
       .see-a-z {
         clear: none;
@@ -403,6 +410,7 @@ p.see-a-z {
             margin: 0;
             h2 {
               font-size: 16px;
+              margin-bottom: 0;
               width: 100%;
             }
 
@@ -426,4 +434,38 @@ p.see-a-z {
       }
     }
   }
+}
+
+
+// styles for alternative org homepage IPO header swapped
+#whitehall-wrapper .organisations-show.homepage-alt.swapped {
+  .services-guidance .top-featured-updates .inner
+  .top-featured-updates,
+  .header-list {
+    float: left;
+    width: 66.66%;
+
+    h2,
+    ul,
+    .see-a-z {
+      float: left;
+      width: 100%;
+    }
+  }
+  .top-featured-updates {
+    width: 33.33%;
+    .inner {
+      background-color: transparent;
+      margin: 0 0 0 15px;
+
+      .text {
+        padding: 0 !important;
+      }
+
+      .recently-updated.panel {
+        margin: 15px 0;
+      }
+    }
+  }
+
 }
