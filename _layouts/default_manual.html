@@ -20,6 +20,9 @@
                 <dt>Manual updated:</dt>
                 <dd>{{ page.update }}</dd>
               </dl>
+              {% if page.statment_of_changes_url %}
+               <p class="statment-of-changes"><a href="{{ page.statment_of_changes_url }}">Statment of changes</a></p>
+              {% endif %}
             </aside>
           {% endif %}
           <aside class="metadata-list">

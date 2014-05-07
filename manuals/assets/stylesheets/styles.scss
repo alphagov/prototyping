@@ -8,7 +8,7 @@ main#content {
 }
 
 dl {
-  margin: 10px 0 20px;
+  margin: 10px 0;
   dt,
   dd {
     font-size: 14px;
@@ -35,7 +35,7 @@ p.contents-header {
 }
 
 .contents {
-  margin-bottom: 30px;
+  padding-bottom: 60px;
 
   h2 {
     font-weight: bold;
@@ -70,6 +70,10 @@ p.contents-header {
           margin: 0;
         }
       }
+    }
+    &+ p {
+      font-weight: bold;
+      margin-top: 30px;
     }
   }
 

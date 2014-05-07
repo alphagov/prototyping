@@ -35,6 +35,15 @@
   background: none;
 }
 
+.metadata-list {
+  dl {
+    margin-top: 0;
+    dt,
+    dd {
+      display: inline-block;
+    }
+  }
+}
 
 .category-page {
 
