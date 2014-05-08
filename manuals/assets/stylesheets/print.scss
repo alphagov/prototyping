@@ -1,0 +1,50 @@
+---
+---
+
+a {
+  color: #000 !important;
+  text-decoration: none;
+  &:after {
+    text-decoration: none;
+  }
+}
+
+.manual-header .inner-block {
+  color: #000 !important;
+  padding: 0 0 30px !important;
+  margin: 0;
+
+  .metadata-date {
+    margin-bottom: 0;
+  }
+
+  .headings h1 {
+    font-size: 36px;
+    margin-top: 0;
+  }
+}
+
+form,
+.open-close,
+.back-to-contents,
+.feeds .print,
+.close-this {
+  display: none;
+}
+
+.contents ol li {
+  border-bottom: none;
+}
+
+.govdelivery {
+  padding-left: 0;
+}
+
+.contents .hidden-content,
+.contents .hidden-content-secondary {
+  display: block;
+}
+
+.subpage-metadata {
+  clear: none;
+}
