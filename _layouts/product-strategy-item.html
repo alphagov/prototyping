@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	  	    <link rel="stylesheet" href="browse.css" />
+
+  </head>
+  <body>
+  	<div id="main">
+  		<div id="header">
+			<h1>{{ page.title }}</h1>
+			<h4><span style="font-weight: normal;">Product manager:</span> <b>{{ page.product_manager }}</b></h4>
+		</div>
+		<div>
+			<div class="user_need_column"><h3>User needs</h3>
+				{% if page.user_need_1  %}<p class="user_need"> {{ page.user_need_1 }}</p> {% endif %}
+				{% if page.user_need_2  %}<p class="user_need">{{ page.user_need_2 }}</p> {% endif %}
+				{% if page.user_need_3  %}<p class="user_need">{{ page.user_need_3 }}</p> {% endif %}
+			</div>
+			
+			<div class="free_column">
+				{% if page.content %} <h3>Insights</h3>{% endif %}
+				<div class="insights">{{ content }}</div>
+			</div>
+			<div class="visuals_column">
+				{% if page.image_url_1 OR page.image_url_2 OR page.image_url_3   %}<h3>Design</h3>{% endif %}
+				{% if page.image_url_1  %}<img class="visual" src="{{ page.image_url_1 }}"/> {% endif %}
+				{% if page.image_caption_1  %}<span class="caption">{{ page.image_caption_1 }}</span><br /><br />{% endif %}
+				{% if page.image_url_2  %}<img class="visual" src="{{ page.image_url_2 }}"/> {% endif %}
+				{% if page.image_caption_2  %}<span class="caption">{{ page.image_caption_2 }}</span><br /><br />{% endif %}
+				{% if page.image_url_3  %}<img class="visual" src="{{ page.image_url_3 }}"/> {% endif %}
+				{% if page.image_caption_3  %}<span class="caption">{{ page.image_caption_3 }}</span><br />{% endif %}
+			</div>
+        </div>
+    </div>
+  </body>
+</html>

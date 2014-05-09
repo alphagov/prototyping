@@ -1,0 +1,297 @@
+---
+---
+
+@import "frontend_toolkit";
+
+// horrible hacky overides
+#whitehall-wrapper .organisations-show #what-we-do h1,
+#whitehall-wrapper .organisations-show #topics h1  {
+  font-size: 36px;
+  font-weight: bold;
+  border: none !important;
+  margin-bottom: 10px;
+}
+
+.organisation {
+  margin-left: 0 !important;
+}
+
+#whitehall-wrapper .organisations-show .block-2 {
+  padding-bottom: 50px !important;
+}
+
+#whitehall-wrapper .documents-grid .document-block {
+  h1 {
+    font-size: 36px !important;
+  }
+
+  .document-list .document-row {
+    border-bottom: none;
+  }
+}
+
+.environment-agency .organisation-logo {
+  border: none;
+  background: none;
+}
+
+
+.category-page {
+
+  .browse-container {
+    min-height: 100px;
+
+    h2 {
+      @include core-36;
+      float: left; 
+      font-weight: bold;
+      margin-top: 0;
+      position: relative;
+      top: -10px;
+      &.published {
+        @include core-27;
+        font-weight: bold;
+        + ol {
+          margin-bottom: 30px;
+        }
+      }
+      &.running-charity {
+        display: block;
+        border-top: 5px solid #000;
+        @include core-36;
+        font-weight: bold;
+        margin-top: 60px;
+        padding: 15px 0 30px;
+        width: 100%;
+      }
+    }
+
+    .published-by {
+      margin-left: 30%;
+      padding-left: 40px;
+      span {
+        display: block;
+
+        font-weight: bold;
+        a {
+          text-decoration: none;
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+          } 
+        }
+      }
+    }
+
+    ol {
+      @include core-19;
+      font-weight: bold;
+      margin: 20px 0 60px 30%;
+      list-style: none;
+      li {
+        margin-bottom: 10px;
+        a {
+          text-decoration: none;
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+ 
+  .policy-topic {
+    padding: 0 30px 45px;
+    .topic {
+      @include core-36;
+      font-weight: bold;
+      width: 75%;
+      &+ p {
+        @include core-19;
+        margin-bottom: 60px;
+        width: 75%;
+      }
+    }
+  }
+}
+
+.recently-updated {
+  float: left;
+  width: 33.33%;
+
+  .document-list {
+    border-bottom: 1px solid #bfc1c3;
+    list-style: none;
+    margin: 0 30px 20px 0;
+    padding-left: 0;
+
+    h2 {
+      clear: both;
+      @include core-16;
+      font-weight: bold;
+      margin-bottom: 0;
+
+      a {
+        text-decoration: none;
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .attributes {
+    margin-bottom: 20px;
+    padding-left: 0;
+    overflow: hidden;
+
+    li {
+      @include core-14;
+      float: left;
+      margin-right: 5px;
+    }
+  }
+
+  .see-all {
+    @include core-16;
+    font-weight: bold;
+  }
+
+// Copied from whitehall
+  .feeds {
+    @include core-14;
+    border-bottom: 1px solid #bfc1c3;
+    padding-bottom: 15px;
+    margin-right: 30px;
+
+    span {
+      display: block;
+      padding-right: 10px;
+    }
+
+    .feed {
+      padding: 0 10px 0 20px;
+      font-weight: bold;
+      background: url('https://assets.digital.cabinet-office.gov.uk/government/assets/feed-icon-black-2797379a53d9064b97bc610ee4d3adae.png') 0 40% no-repeat;
+    }
+    .govdelivery {
+      padding: 0 10px 0 25px;
+      font-weight: bold;
+      background: url('https://assets.digital.cabinet-office.gov.uk/government/assets/mail-icon-d0277821fbdd6977b32433de46f5fec7.png') 0 40% no-repeat;
+    }
+
+    .feed-panel {
+      display: none;
+      margin-top: 15px;
+      padding: 10px 15px;
+      background: #dee0e2;
+
+      h3 {
+        @include core-14;
+        border-bottom: 1px solid #bfc1c3;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+      }
+
+      input {
+        @include core-14;
+        width: 100%;
+        text-indent: 5px;
+        padding: 5px 0;
+      }
+    }
+  }
+}
+
+.policies {
+  float: left;
+  margin-bottom: 60px;
+  width: 66.66%;
+
+  h2 {
+    @include core-24;
+    margin-top: 0;
+    font-weight: bold;
+  }
+
+  ul {
+    padding-left: 0;
+    li {
+      list-style: none;
+
+      a {
+        @include core-19;
+        font-weight: bold;
+        margin-bottom: 0;
+        text-decoration: none;
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+
+      P {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.content-list {
+  list-style: none;
+  margin-left: 30px;
+  padding-left: 0;
+  width: 66.66%;
+
+  h3 {
+    font-weight: bold;
+    & + p {
+      margin-top: 0;
+    }
+  }
+}
+
+.the-charity-commission-for-england-and-wales {
+  margin: 0;
+
+  .organisation-logo {
+    border: none;
+    background-image: none;
+  }
+}
+
+.services-guidance {
+  padding: 40px 30px 60px;
+  overflow: hidden;
+
+  h2,
+  ul {
+    float: left;
+    width: 33.33%;
+  }
+  ul {
+    @include core-24;
+    float: right;
+    list-style: none;
+    margin-top: 10px;
+    width: 65%;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  h2 {
+    @include core-36;
+    font-weight: bold;
+  }
+}
+
+p.see-a-z {
+  clear: both;
+  padding: 15px 0 0 35%;
+  a {
+    @include core-24;
+    font-weight: bold;
+  }
+}
