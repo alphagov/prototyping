@@ -38,9 +38,17 @@
 .metadata-list {
   dl {
     margin-top: 0;
+    overflow: hidden;
+
     dt,
     dd {
-      display: inline-block;
+      float: left;
+      margin-left: 0;
+    }
+    dt {
+      clear: both;
+      margin-right: 15px;
+      min-width: 100px;
     }
   }
 }
