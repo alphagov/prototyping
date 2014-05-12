@@ -8,9 +8,9 @@
       </div>
       <a href="#search" class="search-toggle js-header-toggle">Search</a>
       {% if page.no_search != true %}
-      <form id="search" class="site-search" action="http://www.gov.uk/search" method="get" role="search">
+      <form id="search" class="site-search" action="{% if page.search_action %}{{ page.search_action }}{% else %}http://www.gov.uk/search{% endif %}" method="get" role="search">
         <div class="content">
-          <label for="site-search-text">Search</label>
+          <label for="site-search-text">{% if page.search_placeholder %}{{ page.search_placeholder }}{% else %}Search{% endif %}</label>
           <input type="search" name="q" id="site-search-text" title="Search" class="js-search-focus"><input class="submit" type="submit" value="Search">
         </div>
       </form>
