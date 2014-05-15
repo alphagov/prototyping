@@ -11,6 +11,11 @@
   border: none !important;
   margin-bottom: 10px;
 }
+#whitehall-wrapper .organisations-show {
+  article {
+    min-height: 1px;
+  }
+}
 
 .organisation {
   margin-left: 0 !important;
@@ -34,6 +39,19 @@
   border: none;
   background: none;
 }
+
+#whitehall-wrapper .organisations-show header.page-header {
+  padding-top: 0;
+  div {
+    padding: 0;
+    .organisations-icon-list {
+      li {
+        float: left;
+      }
+    }
+  }
+}
+
 
 .metadata-list {
   dl {
@@ -352,9 +370,6 @@ p.see-a-z {
 
 // styles for alternative org homepage IPO
 #whitehall-wrapper .organisations-show.homepage-alt {
-  article {
-    min-height: 1px;
-  }
 
   .recently-updated .document-list {
     border-bottom: none;
