@@ -28,12 +28,18 @@ form,
 .open-close,
 .back-to-contents,
 .feeds .print,
+.govdelivery,
 .close-this {
-  display: none;
+  display: none !important;
 }
 
-.contents ol li {
-  border-bottom: none;
+.contents ol {
+  li {
+    border-bottom: none;
+  }
+  &+ p {
+    clear: both;
+  }
 }
 
 .govdelivery {
@@ -47,4 +53,37 @@ form,
 
 .subpage-metadata {
   clear: none;
+}
+
+ol {
+  clear: both;
+  width: 100%;
+
+  .intro {
+    clear: both;
+    float: left;
+    width: 30%;
+    h3 {
+      font-size: 19px;
+    }
+  }
+
+  .hidden-content {
+    float: right;
+    padding-top: 0;
+    margin: 0 0 60px 0;
+    width: 66.66%;
+  }
+}
+
+.main-contents {
+  width: 100%;
+  .hidden-content {
+    h4:first-child {
+      margin-top: 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  }
 }
