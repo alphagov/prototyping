@@ -1,7 +1,7 @@
 safe:        false
 auto:        true
-server:      false
-#server_port: 4000
+#server:      false
+server_port: 4001
 baseurl:    /
 #url: http://localhost:4000
 

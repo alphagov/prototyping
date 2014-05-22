@@ -1,0 +1,190 @@
+
+@import url("button-styles.css");
+
+/* Temporary sketch images */
+.sketch{
+	width: 100%;
+}
+
+/* Product image (ie. a tax disc)*/
+.product-image{
+	float: right;
+	height: 10em;
+	width: 10em;
+	margin: -5em -3em 1em 3em;
+}
+
+/* Footnote style */
+.footnote{
+	font-style: italic;
+	font-size: 1em;
+	color: #aaa;
+	margin-top: 2em;
+}
+
+/* Results table for car lookup */
+.car_reg,
+.car_tax{
+	padding: 0 0.2em;
+	line-height: 1.5em;
+	color: #000;
+	display: block;
+	font-weight: bold;
+	font-size: 3rem;
+	/*width: 5em;*/
+	margin: 0.5em auto 0.5em auto;
+}
+article .car_tax_details h3{
+	margin-top: 0;
+}
+
+.car_reg{
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#fbe712), color-stop(100%,#d3c100));
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	box-shadow: 2px 2px 1px rgba(100, 100, 100, 0.8);
+}
+
+.car_tax{/*
+ background-color:#d53880;
+ color: #fff;
+ font-weight: normal;*/
+}
+
+.car_tax_details,
+article .car_tax_details tr th{
+	/*text-align: center;*/
+}
+
+.car_tax_details td{
+	padding: 1em;
+}
+.car_tax_details td p{
+	margin-top: 0;
+}
+
+
+/* Image of the V11 form */
+#v11image{
+	width: 130px;
+	float: right;
+	margin: -1em 0 0 3em;
+}
+
+/* text input field */
+input[type=text]{
+	display: block;
+	margin-bottom: 1em;
+}
+
+/* Back button */
+.back{
+	margin-left: 1em;
+}
+
+.form-help img{
+	width: 130px;
+}
+
+
+/* ==================================================
+ * Simple Inline Expansion
+ * ================================================== */
+
+ /* A styled-up version of the details/summary HTML5 elements */
+
+details{
+	margin: 0 -1em 1em -1em;
+	padding: 0.7em 1em;
+}
+details summary{
+	cursor: pointer;
+	margin-top: 0;
+	font-size: 112.5%;
+}
+
+/* Closed state */
+details:not(.open){
+	padding-bottom: 0;
+}
+details:not(.open) summary{
+	/* Display element in standard link style */
+	color: #2E3191;
+	display: inline;
+	margin-bottom: 1em;
+	text-decoration: underline;
+}
+details:not(.open) summary:hover{
+  color: #1D97FF;
+}
+
+/* Open state */
+details.open{
+	background-color: #f2f2f2;
+}
+details.open summary{
+  font-weight: bold;
+}
+
+summary:focus{
+	outline: none;
+}
+
+/* ======================
+ * Wating message
+ * ======================
+
+ * Uses spin.js to embed 'spinner' image into element
+ * http://fgnass.github.com/spin.js/ 
+ */
+
+#waiting-message{
+	height: 10em;
+	text-align: center;
+}
+
+
+/* ==================================================
+ * Transaction step indicator
+ * ================================================== */
+
+ /* Taken from ERTP prototype */
+
+ol.transaction-step-indicator {
+	list-style-type: none;
+	font-size:1.1em;
+	text-align:center;
+	padding:0;
+	margin:0;
+}
+
+.transaction-step-indicator > li {
+	width: 161px;
+	height: 60px;
+	margin-left: -35px;
+	background-image: url('images/unselected-icon.png');
+	background-position: right;
+	background-repeat: no-repeat;
+	line-height: 60px;
+	display: inline-block;
+	font-weight:normal;
+	color:#666;
+	text-align:left;
+}
+
+.transaction-step-indicator > li.current {
+	background-image: url('images/selected-icon.png');
+	font-weight:500;
+	color: #fff;
+}
+
+.transaction-step-number {
+	padding: 21px;
+	text-align:center;
+}
+
+.transaction-content {
+	background-color: white;
+	padding: 0em 2em 0em 5em;
+}

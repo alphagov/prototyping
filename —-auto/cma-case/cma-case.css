@@ -1,0 +1,271 @@
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+/* line 4 */
+#global-header form#search input.submit {
+  background-color: #57da95; }
+  /* line 7 */
+  #global-header form#search input.submit:hover, #global-header form#search input.submit:focus {
+    background-color: #6cdfa2; }
+
+/* line 11 */
+#global-breadcrumb ol {
+  border-color: #57da95; }
+  /* line 13 */
+  #global-breadcrumb ol li {
+    display: none; }
+
+/* line 21 */
+#whitehall-wrapper article .headings-block .meta dl dt {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.42857;
+  font-weight: 400;
+  text-transform: none; }
+  @media (max-width: 640px) {
+    /* line 21 */
+    #whitehall-wrapper article .headings-block .meta dl dt {
+      font-size: 1.2rem;
+      line-height: 1.25; } }
+/* line 25 */
+#whitehall-wrapper .feeds {
+  margin: 15px 0; }
+  /* line 27 */
+  #whitehall-wrapper .feeds span {
+    padding-right: 10px; }
+  /* line 30 */
+  #whitehall-wrapper .feeds .govdelivery {
+    background-image: url(/cma-case/images/email.jpg);
+    font-weight: normal;
+    padding-left: 30px; }
+  /* line 35 */
+  #whitehall-wrapper .feeds .feed {
+    background-image: url(/cma-case/images/feed.jpg);
+    font-weight: normal;
+    padding-left: 30px; }
+
+/* line 46 */
+.document-list {
+  float: left;
+  width: 33.33%; }
+  /* line 49 */
+  .document-list ul {
+    list-style: none;
+    margin-top: 0;
+    padding-left: 0; }
+    /* line 53 */
+    .document-list ul li {
+      padding-left: 0; }
+      /* line 55 */
+      .document-list ul li h2 {
+        font-family: "nta", Arial, sans-serif;
+        font-size: 16px;
+        font-size: 1.6rem;
+        line-height: 1.25;
+        font-weight: 300;
+        text-transform: none;
+        font-weight: bold;
+        color: #6f777b;
+        padding-top: 20px;
+        margin-bottom: 0; }
+        @media (max-width: 640px) {
+          /* line 55 */
+          .document-list ul li h2 {
+            font-size: 1.4rem;
+            line-height: 1.14286; } }
+      /* line 62 */
+      .document-list ul li:first-child h2 {
+        padding-top: 0; }
+      /* line 66 */
+      .document-list ul li.contact {
+        font-family: "nta", Arial, sans-serif;
+        font-size: 16px;
+        font-size: 1.6rem;
+        line-height: 1.25;
+        font-weight: 300;
+        text-transform: none;
+        line-height: 1.31579;
+        text-transform: none;
+        margin-left: 15px; }
+        @media (max-width: 640px) {
+          /* line 66 */
+          .document-list ul li.contact {
+            font-size: 1.4rem;
+            line-height: 1.14286; } }
+        /* line 71 */
+        .document-list ul li.contact:before {
+          content: "-";
+          position: relative;
+          float: left;
+          width: 15px;
+          margin-left: -15px; }
+
+/* line 83 */
+.document-contents {
+  float: right;
+  width: 66.66%; }
+
+/* line 89 */
+article dd {
+  margin-bottom: 0; }
+/* line 93 */
+article ul {
+  margin-bottom: 3px; }
+  /* line 95 */
+  article ul li {
+    margin: 0; }
+    /* line 97 */
+    article ul li .meta {
+      font-size: 14px; }
+    /* line 101 */
+    article ul li .additional-list-items {
+      display: none;
+      margin-left: -6px;
+      padding-left: 0; }
+      /* line 105 */
+      article ul li .additional-list-items li {
+        list-style-position: outside; }
+    /* line 109 */
+    article ul li .show {
+      display: block; }
+/* line 115 */
+article ol.dash-list {
+  padding: 0;
+  margin: 0; }
+  /* line 118 */
+  article ol.dash-list li {
+    font-size: 16px; }
+/* line 123 */
+article h2 {
+  margin-top: 45px; }
+  /* line 125 */
+  article h2:first-child {
+    margin-top: 0; }
+  /* line 128 */
+  article h2.label {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 36px;
+    font-size: 3.6rem;
+    line-height: 1.11111;
+    font-weight: 400;
+    text-transform: none;
+    border-bottom: 5px solid #0b0c0c;
+    line-height: 1.11111;
+    font-weight: 400;
+    text-transform: none;
+    padding-bottom: 1px;
+    margin-bottom: 20px; }
+    @media (max-width: 640px) {
+      /* line 128 */
+      article h2.label {
+        font-size: 2.4rem;
+        line-height: 1.04167; } }
+/* line 138 */
+article h3 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: bold; }
+  @media (max-width: 640px) {
+    /* line 138 */
+    article h3 {
+      font-size: 2rem;
+      line-height: 1.2; } }
+/* line 142 */
+article h4 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: bold; }
+  @media (max-width: 640px) {
+    /* line 142 */
+    article h4 {
+      font-size: 1.6rem;
+      line-height: 1.25; } }
+/* line 146 */
+article h5 {
+  margin-top: 20px; }
+  /* line 148 */
+  article h5 + ul {
+    margin-top: 0; }
+/* line 154 */
+article .administrative-timetable {
+  font-size: 14px; }
+/* line 158 */
+article table {
+  border: 0;
+  margin: 1em 0 2em;
+  width: 100%; }
+  /* line 165 */
+  article table tr td,
+  article table tr th {
+    border-bottom: solid #bfc1c3;
+    border-width: 0 0 1px 0;
+    background-color: white;
+    font-size: 14px;
+    padding-left: 0; }
+/* line 175 */
+article .see-all {
+  font-weight: bold;
+  margin: 0 0 45px 1px; }
+/* line 180 */
+article .show {
+  display: block; }
+/* line 184 */
+article .hide {
+  display: none; }
+/* line 188 */
+article .stick {
+  position: fixed;
+  top: 0px;
+  max-width: 340px; }

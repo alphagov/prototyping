@@ -1,0 +1,459 @@
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+/* line 126, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+.button {
+  background-color: #006435;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #00180c;
+  -moz-box-shadow: 0 2px 0 #00180c;
+  box-shadow: 0 2px 0 #00180c;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:visited {
+    background-color: #006435; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:hover, .button:focus {
+    background: #004b27; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #006435;
+    -moz-box-shadow: 0 0 0 #006435;
+    box-shadow: 0 0 0 #006435; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button.disabled, .button[disabled="disabled"], .button[disabled] {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button.disabled:hover, .button[disabled="disabled"]:hover, .button[disabled]:hover {
+      cursor: default;
+      background-color: #006435; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button.disabled:active, .button[disabled="disabled"]:active, .button[disabled]:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #00180c;
+      -moz-box-shadow: 0 2px 0 #00180c;
+      box-shadow: 0 2px 0 #00180c; }
+  /* line 65, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:hover, .button:focus, .button:visited {
+    color: white; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button[rel="external"]:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* line 130, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+.button-secondary {
+  background-color: #dee0e2;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #b5babe;
+  -moz-box-shadow: 0 2px 0 #b5babe;
+  box-shadow: 0 2px 0 #b5babe;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #0b0c0c; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:visited {
+    background-color: #dee0e2; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:hover, .button-secondary:focus {
+    background: #d0d3d6; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #dee0e2;
+    -moz-box-shadow: 0 0 0 #dee0e2;
+    box-shadow: 0 0 0 #dee0e2; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary.disabled, .button-secondary[disabled="disabled"], .button-secondary[disabled] {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-secondary.disabled:hover, .button-secondary[disabled="disabled"]:hover, .button-secondary[disabled]:hover {
+      cursor: default;
+      background-color: #dee0e2; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-secondary.disabled:active, .button-secondary[disabled="disabled"]:active, .button-secondary[disabled]:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #b5babe;
+      -moz-box-shadow: 0 2px 0 #b5babe;
+      box-shadow: 0 2px 0 #b5babe; }
+  /* line 72, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:hover, .button-secondary:focus, .button-secondary:visited {
+    color: #0b0c0c; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary[rel="external"]:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* line 134, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+.button-warning {
+  background-color: #b10e1e;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #6a0812;
+  -moz-box-shadow: 0 2px 0 #6a0812;
+  box-shadow: 0 2px 0 #6a0812;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:visited {
+    background-color: #b10e1e; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:hover, .button-warning:focus {
+    background: #990c1a; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #b10e1e;
+    -moz-box-shadow: 0 0 0 #b10e1e;
+    box-shadow: 0 0 0 #b10e1e; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning.disabled, .button-warning[disabled="disabled"], .button-warning[disabled] {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-warning.disabled:hover, .button-warning[disabled="disabled"]:hover, .button-warning[disabled]:hover {
+      cursor: default;
+      background-color: #b10e1e; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-warning.disabled:active, .button-warning[disabled="disabled"]:active, .button-warning[disabled]:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #6a0812;
+      -moz-box-shadow: 0 2px 0 #6a0812;
+      box-shadow: 0 2px 0 #6a0812; }
+  /* line 65, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:hover, .button-warning:focus, .button-warning:visited {
+    color: white; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning[rel="external"]:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* line 11 */
+.button-1 {
+  background-color: #006435;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #00180c;
+  -moz-box-shadow: 0 2px 0 #00180c;
+  box-shadow: 0 2px 0 #00180c;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-1:visited {
+    background-color: #006435; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-1:hover, .button-1:focus {
+    background: #004b27; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-1:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #006435;
+    -moz-box-shadow: 0 0 0 #006435;
+    box-shadow: 0 0 0 #006435; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-1.disabled, .button-1[disabled="disabled"], .button-1[disabled] {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-1.disabled:hover, .button-1[disabled="disabled"]:hover, .button-1[disabled]:hover {
+      cursor: default;
+      background-color: #006435; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-1.disabled:active, .button-1[disabled="disabled"]:active, .button-1[disabled]:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #00180c;
+      -moz-box-shadow: 0 2px 0 #00180c;
+      box-shadow: 0 2px 0 #00180c; }
+  /* line 65, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-1:hover, .button-1:focus, .button-1:visited {
+    color: white; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-1:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-1:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-1[rel="external"]:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* line 15 */
+.button-2 {
+  background-color: #2b8cc4;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #1d5f85;
+  -moz-box-shadow: 0 2px 0 #1d5f85;
+  box-shadow: 0 2px 0 #1d5f85;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-2:visited {
+    background-color: #2b8cc4; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-2:hover, .button-2:focus {
+    background: #267daf; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-2:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #2b8cc4;
+    -moz-box-shadow: 0 0 0 #2b8cc4;
+    box-shadow: 0 0 0 #2b8cc4; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-2.disabled, .button-2[disabled="disabled"], .button-2[disabled] {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-2.disabled:hover, .button-2[disabled="disabled"]:hover, .button-2[disabled]:hover {
+      cursor: default;
+      background-color: #2b8cc4; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-2.disabled:active, .button-2[disabled="disabled"]:active, .button-2[disabled]:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #1d5f85;
+      -moz-box-shadow: 0 2px 0 #1d5f85;
+      box-shadow: 0 2px 0 #1d5f85; }
+  /* line 65, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-2:hover, .button-2:focus, .button-2:visited {
+    color: white; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-2:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-2:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-2[rel="external"]:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* line 19 */
+.button-3 {
+  background-color: #df3034;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #a81a1d;
+  -moz-box-shadow: 0 2px 0 #a81a1d;
+  box-shadow: 0 2px 0 #a81a1d;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #0b0c0c; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-3:visited {
+    background-color: #df3034; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-3:hover, .button-3:focus {
+    background: #d52125; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-3:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #df3034;
+    -moz-box-shadow: 0 0 0 #df3034;
+    box-shadow: 0 0 0 #df3034; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-3.disabled, .button-3[disabled="disabled"], .button-3[disabled] {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-3.disabled:hover, .button-3[disabled="disabled"]:hover, .button-3[disabled]:hover {
+      cursor: default;
+      background-color: #df3034; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-3.disabled:active, .button-3[disabled="disabled"]:active, .button-3[disabled]:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #a81a1d;
+      -moz-box-shadow: 0 2px 0 #a81a1d;
+      box-shadow: 0 2px 0 #a81a1d; }
+  /* line 72, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-3:hover, .button-3:focus, .button-3:visited {
+    color: #0b0c0c; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-3:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-3:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-3[rel="external"]:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
