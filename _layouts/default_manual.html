@@ -33,8 +33,7 @@
                 <dd><a href="{{ page.meta_policy_url }}">{{ page.meta_policy }}</a>
               {% endif %}
               {% if page.meta_sector %}
-                  and 
-                <a href="{{ page.meta_sector_url }}">{{ page.meta_sector }}</a></dd>
+                and <a href="{{ page.meta_sector_url }}">{{ page.meta_sector }}</a></dd>
               {% endif %}
               {% if page.meta_collection %}
                 <dt>Collections:</dt>
@@ -42,7 +41,12 @@
               {% endif %}
               {% if page.meta_organisation %}
                 <dt>Published by:</dt>
-                <dd><a href="{{ page.meta_organisation_url }}">{{ page.meta_organisation }}</a></dd>
+                <dd>
+                  <a href="{{ page.meta_organisation_url }}">{{ page.meta_organisation }}</a>
+                  {% if page.meta_organisation_secondary %}
+                    and <a href="{{ page.meta_organisation_secondary_url }}">{{ page.meta_organisation_secondary }}</a>
+                  {% endif %}
+                </dd>
               {% endif %}
             </dl>
           </aside>
