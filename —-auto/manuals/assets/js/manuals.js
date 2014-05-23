@@ -1,11 +1,11 @@
 $(function() {
   $( ".closed" ).click(function() {
-    $(this).parent().parent().find( ".hidden-content" ).toggleClass( "open-content" );
+    $(this).parent().parent().parent().find( ".hidden-content" ).toggleClass( "open-content" );
     $(this).toggleClass( "open-content" );
     return false;
   });
   $( ".closed-secondary" ).click(function() {
-    $(this).parent().parent().find( ".hidden-content-secondary" ).toggleClass( "open-content" );
+    $(this).parent().parent().parent().find( ".hidden-content-secondary" ).toggleClass( "open-content" );
     $(this).toggleClass( "open-content" );
     return false;
   });

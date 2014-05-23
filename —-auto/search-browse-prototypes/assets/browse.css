@@ -53,44 +53,58 @@
   margin-bottom: 10px; }
 
 /* line 12 */
+#whitehall-wrapper .organisations-show article {
+  min-height: 1px; }
+
+/* line 17 */
 .organisation {
   margin-left: 0 !important; }
 
-/* line 16 */
+/* line 21 */
 #whitehall-wrapper .organisations-show .block-2 {
   padding-bottom: 50px !important; }
 
-/* line 21 */
+/* line 26 */
 #whitehall-wrapper .documents-grid .document-block h1 {
   font-size: 36px !important; }
-/* line 25 */
+/* line 30 */
 #whitehall-wrapper .documents-grid .document-block .document-list .document-row {
   border-bottom: none; }
 
-/* line 30 */
+/* line 35 */
 .environment-agency .organisation-logo {
   border: none;
   background: none; }
 
-/* line 36 */
+/* line 40 */
+#whitehall-wrapper .organisations-show header.page-header {
+  padding-top: 0; }
+  /* line 42 */
+  #whitehall-wrapper .organisations-show header.page-header div {
+    padding: 0; }
+    /* line 45 */
+    #whitehall-wrapper .organisations-show header.page-header div .organisations-icon-list li {
+      float: left; }
+
+/* line 54 */
 .metadata-list dl {
   margin-top: 0;
   overflow: hidden; }
-  /* line 41 */
+  /* line 59 */
   .metadata-list dl dt,
   .metadata-list dl dd {
     float: left;
     margin-left: 0; }
-  /* line 45 */
+  /* line 63 */
   .metadata-list dl dt {
     clear: both;
     margin-right: 15px;
     min-width: 100px; }
 
-/* line 55 */
+/* line 73 */
 .category-page .browse-container {
   min-height: 100px; }
-  /* line 58 */
+  /* line 76 */
   .category-page .browse-container h2 {
     font-family: "nta", Arial, sans-serif;
     font-size: 36px;
@@ -104,11 +118,11 @@
     position: relative;
     top: -10px; }
     @media (max-width: 640px) {
-      /* line 58 */
+      /* line 76 */
       .category-page .browse-container h2 {
         font-size: 2.4rem;
         line-height: 1.04167; } }
-    /* line 65 */
+    /* line 83 */
     .category-page .browse-container h2.published {
       font-family: "nta", Arial, sans-serif;
       font-size: 27px;
@@ -118,14 +132,14 @@
       text-transform: none;
       font-weight: bold; }
       @media (max-width: 640px) {
-        /* line 65 */
+        /* line 83 */
         .category-page .browse-container h2.published {
           font-size: 1.8rem;
           line-height: 1.11111; } }
-      /* line 68 */
+      /* line 86 */
       .category-page .browse-container h2.published + ol {
         margin-bottom: 30px; }
-    /* line 72 */
+    /* line 90 */
     .category-page .browse-container h2.running-charity {
       display: block;
       border-top: 5px solid #000;
@@ -140,25 +154,25 @@
       padding: 15px 0 30px;
       width: 100%; }
       @media (max-width: 640px) {
-        /* line 72 */
+        /* line 90 */
         .category-page .browse-container h2.running-charity {
           font-size: 2.4rem;
           line-height: 1.04167; } }
-  /* line 83 */
+  /* line 101 */
   .category-page .browse-container .published-by {
     margin-left: 30%;
     padding-left: 40px; }
-    /* line 86 */
+    /* line 104 */
     .category-page .browse-container .published-by span {
       display: block;
       font-weight: bold; }
-      /* line 90 */
+      /* line 108 */
       .category-page .browse-container .published-by span a {
         text-decoration: none; }
-        /* line 93 */
+        /* line 111 */
         .category-page .browse-container .published-by span a:hover, .category-page .browse-container .published-by span a:focus {
           text-decoration: underline; }
-  /* line 100 */
+  /* line 118 */
   .category-page .browse-container ol {
     font-family: "nta", Arial, sans-serif;
     font-size: 19px;
@@ -170,29 +184,29 @@
     margin: 20px 0 60px 30%;
     list-style: none; }
     @media (max-width: 640px) {
-      /* line 100 */
+      /* line 118 */
       .category-page .browse-container ol {
         font-size: 1.6rem;
         line-height: 1.25; } }
-    /* line 105 */
+    /* line 123 */
     .category-page .browse-container ol li {
       margin-bottom: 10px; }
-      /* line 107 */
+      /* line 125 */
       .category-page .browse-container ol li a {
         text-decoration: none; }
-        /* line 110 */
+        /* line 128 */
         .category-page .browse-container ol li a:hover, .category-page .browse-container ol li a:focus {
           text-decoration: underline; }
-      /* line 114 */
+      /* line 132 */
       .category-page .browse-container ol li .updated {
         font-size: 14px;
         font-weight: normal;
         margin-left: 20px;
         color: #6f777b; }
-/* line 124 */
+/* line 142 */
 .category-page .policy-topic {
   padding: 0 30px 45px; }
-  /* line 126 */
+  /* line 144 */
   .category-page .policy-topic .topic {
     font-family: "nta", Arial, sans-serif;
     font-size: 36px;
@@ -203,11 +217,11 @@
     font-weight: bold;
     width: 75%; }
     @media (max-width: 640px) {
-      /* line 126 */
+      /* line 144 */
       .category-page .policy-topic .topic {
         font-size: 2.4rem;
         line-height: 1.04167; } }
-    /* line 130 */
+    /* line 148 */
     .category-page .policy-topic .topic + p {
       font-family: "nta", Arial, sans-serif;
       font-size: 19px;
@@ -218,22 +232,22 @@
       margin-bottom: 60px;
       width: 75%; }
       @media (max-width: 640px) {
-        /* line 130 */
+        /* line 148 */
         .category-page .policy-topic .topic + p {
           font-size: 1.6rem;
           line-height: 1.25; } }
 
-/* line 139 */
+/* line 157 */
 .recently-updated {
   float: left;
   width: 33.33%; }
-  /* line 143 */
+  /* line 161 */
   .recently-updated .document-list {
     border-bottom: 1px solid #bfc1c3;
     list-style: none;
     margin: 0 30px 20px 0;
     padding-left: 0; }
-    /* line 149 */
+    /* line 167 */
     .recently-updated .document-list h2 {
       clear: both;
       font-family: "nta", Arial, sans-serif;
@@ -245,22 +259,22 @@
       font-weight: bold;
       margin-bottom: 0; }
       @media (max-width: 640px) {
-        /* line 149 */
+        /* line 167 */
         .recently-updated .document-list h2 {
           font-size: 1.4rem;
           line-height: 1.14286; } }
-      /* line 155 */
+      /* line 173 */
       .recently-updated .document-list h2 a {
         text-decoration: none; }
-        /* line 158 */
+        /* line 176 */
         .recently-updated .document-list h2 a:hover, .recently-updated .document-list h2 a:focus {
           text-decoration: underline; }
-  /* line 165 */
+  /* line 183 */
   .recently-updated .attributes {
     margin-bottom: 20px;
     padding-left: 0;
     overflow: hidden; }
-    /* line 170 */
+    /* line 188 */
     .recently-updated .attributes li {
       font-family: "nta", Arial, sans-serif;
       font-size: 14px;
@@ -271,11 +285,11 @@
       float: left;
       margin-right: 5px; }
       @media (max-width: 640px) {
-        /* line 170 */
+        /* line 188 */
         .recently-updated .attributes li {
           font-size: 1.2rem;
           line-height: 1.25; } }
-  /* line 177 */
+  /* line 195 */
   .recently-updated .see-all {
     font-family: "nta", Arial, sans-serif;
     font-size: 16px;
@@ -285,11 +299,11 @@
     text-transform: none;
     font-weight: bold; }
     @media (max-width: 640px) {
-      /* line 177 */
+      /* line 195 */
       .recently-updated .see-all {
         font-size: 1.4rem;
         line-height: 1.14286; } }
-  /* line 183 */
+  /* line 201 */
   .recently-updated .feeds {
     font-family: "nta", Arial, sans-serif;
     font-size: 14px;
@@ -301,31 +315,31 @@
     padding-bottom: 15px;
     margin-right: 30px; }
     @media (max-width: 640px) {
-      /* line 183 */
+      /* line 201 */
       .recently-updated .feeds {
         font-size: 1.2rem;
         line-height: 1.25; } }
-    /* line 189 */
+    /* line 207 */
     .recently-updated .feeds span {
       display: block;
       padding-right: 10px; }
-    /* line 194 */
+    /* line 212 */
     .recently-updated .feeds .feed {
       padding: 0 10px 0 20px;
       font-weight: bold;
       background: url("https://assets.digital.cabinet-office.gov.uk/government/assets/feed-icon-black-2797379a53d9064b97bc610ee4d3adae.png") 0 40% no-repeat; }
-    /* line 199 */
+    /* line 217 */
     .recently-updated .feeds .govdelivery {
       padding: 0 10px 0 25px;
       font-weight: bold;
       background: url("https://assets.digital.cabinet-office.gov.uk/government/assets/mail-icon-d0277821fbdd6977b32433de46f5fec7.png") 0 40% no-repeat; }
-    /* line 205 */
+    /* line 223 */
     .recently-updated .feeds .feed-panel {
       display: none;
       margin-top: 15px;
       padding: 10px 15px;
       background: #dee0e2; }
-      /* line 211 */
+      /* line 229 */
       .recently-updated .feeds .feed-panel h3 {
         font-family: "nta", Arial, sans-serif;
         font-size: 14px;
@@ -337,11 +351,11 @@
         margin-bottom: 10px;
         padding-bottom: 5px; }
         @media (max-width: 640px) {
-          /* line 211 */
+          /* line 229 */
           .recently-updated .feeds .feed-panel h3 {
             font-size: 1.2rem;
             line-height: 1.25; } }
-      /* line 218 */
+      /* line 236 */
       .recently-updated .feeds .feed-panel input {
         font-family: "nta", Arial, sans-serif;
         font-size: 14px;
@@ -353,17 +367,17 @@
         text-indent: 5px;
         padding: 5px 0; }
         @media (max-width: 640px) {
-          /* line 218 */
+          /* line 236 */
           .recently-updated .feeds .feed-panel input {
             font-size: 1.2rem;
             line-height: 1.25; } }
 
-/* line 228 */
+/* line 246 */
 .policies {
   float: left;
   margin-bottom: 60px;
   width: 66.66%; }
-  /* line 233 */
+  /* line 251 */
   .policies h2 {
     font-family: "nta", Arial, sans-serif;
     font-size: 24px;
@@ -374,17 +388,17 @@
     margin-top: 0;
     font-weight: bold; }
     @media (max-width: 640px) {
-      /* line 233 */
+      /* line 251 */
       .policies h2 {
         font-size: 2rem;
         line-height: 1.2; } }
-  /* line 239 */
+  /* line 257 */
   .policies ul {
     padding-left: 0; }
-    /* line 241 */
+    /* line 259 */
     .policies ul li {
       list-style: none; }
-      /* line 244 */
+      /* line 262 */
       .policies ul li a {
         font-family: "nta", Arial, sans-serif;
         font-size: 19px;
@@ -396,48 +410,48 @@
         margin-bottom: 0;
         text-decoration: none; }
         @media (max-width: 640px) {
-          /* line 244 */
+          /* line 262 */
           .policies ul li a {
             font-size: 1.6rem;
             line-height: 1.25; } }
-        /* line 250 */
+        /* line 268 */
         .policies ul li a:hover, .policies ul li a:focus {
           text-decoration: underline; }
-      /* line 255 */
+      /* line 273 */
       .policies ul li P {
         margin-top: 0; }
 
-/* line 262 */
+/* line 280 */
 .content-list {
   list-style: none;
   margin-left: 30px;
   padding-left: 0;
   width: 66.66%; }
-  /* line 268 */
+  /* line 286 */
   .content-list h3 {
     font-weight: bold; }
-    /* line 270 */
+    /* line 288 */
     .content-list h3 + p {
       margin-top: 0; }
 
-/* line 276 */
+/* line 294 */
 .the-charity-commission-for-england-and-wales {
   margin: 0; }
-  /* line 279 */
+  /* line 297 */
   .the-charity-commission-for-england-and-wales .organisation-logo {
     border: none;
     background-image: none; }
 
-/* line 285 */
+/* line 303 */
 .services-guidance {
   padding: 40px 30px 60px;
   overflow: hidden; }
-  /* line 290 */
+  /* line 308 */
   .services-guidance h2,
   .services-guidance ul {
     float: left;
     width: 33.33%; }
-  /* line 294 */
+  /* line 312 */
   .services-guidance ul {
     font-family: "nta", Arial, sans-serif;
     font-size: 24px;
@@ -450,14 +464,14 @@
     margin-top: 10px;
     width: 65%; }
     @media (max-width: 640px) {
-      /* line 294 */
+      /* line 312 */
       .services-guidance ul {
         font-size: 2rem;
         line-height: 1.2; } }
-    /* line 300 */
+    /* line 318 */
     .services-guidance ul li {
       margin-bottom: 10px; }
-  /* line 304 */
+  /* line 322 */
   .services-guidance h2 {
     font-family: "nta", Arial, sans-serif;
     font-size: 36px;
@@ -467,16 +481,16 @@
     text-transform: none;
     font-weight: bold; }
     @media (max-width: 640px) {
-      /* line 304 */
+      /* line 322 */
       .services-guidance h2 {
         font-size: 2.4rem;
         line-height: 1.04167; } }
 
-/* line 310 */
+/* line 328 */
 p.see-a-z {
   clear: both;
   padding: 15px 0 0 35%; }
-  /* line 313 */
+  /* line 331 */
   p.see-a-z a {
     font-family: "nta", Arial, sans-serif;
     font-size: 24px;
@@ -486,128 +500,125 @@ p.see-a-z {
     text-transform: none;
     font-weight: bold; }
     @media (max-width: 640px) {
-      /* line 313 */
+      /* line 331 */
       p.see-a-z a {
         font-size: 2rem;
         line-height: 1.2; } }
 
-/* line 320 */
+/* line 338 */
 #whitehall-wrapper .organisations-show .featured-news {
   padding-bottom: 0 !important; }
-  /* line 326 */
+  /* line 344 */
   #whitehall-wrapper .organisations-show .featured-news article .content .text h2,
   #whitehall-wrapper .organisations-show .featured-news article .content .text .meta,
   #whitehall-wrapper .organisations-show .featured-news article .content .text .summary {
     margin: 0; }
-/* line 333 */
+/* line 351 */
 #whitehall-wrapper .organisations-show .recently-updated .content .document-list {
   margin-bottom: 0; }
-  /* line 335 */
+  /* line 353 */
   #whitehall-wrapper .organisations-show .recently-updated .content .document-list .attributes {
     margin-bottom: 5px; }
-/* line 340 */
+/* line 358 */
 #whitehall-wrapper .organisations-show .recently-updated .content .feeds {
   border-top: none !important; }
-/* line 344 */
+/* line 362 */
 #whitehall-wrapper .organisations-show .recently-updated .content .see-all {
   border-top: none; }
 
-/* line 352 */
-#whitehall-wrapper .organisations-show.homepage-alt article {
-  min-height: 1px; }
-/* line 356 */
+/* line 371 */
 #whitehall-wrapper .organisations-show.homepage-alt .recently-updated .document-list {
   border-bottom: none; }
-  /* line 358 */
+  /* line 373 */
   #whitehall-wrapper .organisations-show.homepage-alt .recently-updated .document-list li {
     padding-bottom: 0; }
-/* line 363 */
+/* line 378 */
 #whitehall-wrapper .organisations-show.homepage-alt .see-all {
   border-bottom: 1px solid #bfc1c3;
   padding: 5px 0 15px 0; }
-/* line 371 */
+/* line 386 */
 #whitehall-wrapper .organisations-show.homepage-alt .services-guidance h2,
 #whitehall-wrapper .organisations-show.homepage-alt .services-guidance ul,
 #whitehall-wrapper .organisations-show.homepage-alt .services-guidance .see-a-z {
   float: right;
   width: 65%; }
-/* line 375 */
+/* line 390 */
 #whitehall-wrapper .organisations-show.homepage-alt .services-guidance ul li a {
   font-weight: bold; }
-/* line 379 */
+/* line 394 */
 #whitehall-wrapper .organisations-show.homepage-alt .services-guidance h2 {
   margin-bottom: 10px; }
-/* line 383 */
+/* line 398 */
 #whitehall-wrapper .organisations-show.homepage-alt .services-guidance .see-a-z {
   clear: none;
   padding: 30px 0 0 0; }
-/* line 388 */
+/* line 403 */
 #whitehall-wrapper .organisations-show.homepage-alt .services-guidance .top-featured-updates {
   float: left;
   width: 33.33%; }
-  /* line 392 */
+  /* line 407 */
   #whitehall-wrapper .organisations-show.homepage-alt .services-guidance .top-featured-updates .inner {
     background-color: #dee0e2;
     padding: 0;
     margin-right: 20px;
     overflow: hidden; }
-    /* line 398 */
+    /* line 413 */
     #whitehall-wrapper .organisations-show.homepage-alt .services-guidance .top-featured-updates .inner .feature {
       min-height: 0; }
-      /* line 402 */
+      /* line 417 */
       #whitehall-wrapper .organisations-show.homepage-alt .services-guidance .top-featured-updates .inner .feature .content img {
         max-width: 100%; }
-      /* line 406 */
+      /* line 421 */
       #whitehall-wrapper .organisations-show.homepage-alt .services-guidance .top-featured-updates .inner .feature .content .text {
         padding: 0 15px; }
-        /* line 408 */
+        /* line 423 */
         #whitehall-wrapper .organisations-show.homepage-alt .services-guidance .top-featured-updates .inner .feature .content .text .meta {
           color: #6f777b;
           font-size: 14px;
           margin-bottom: 5px; }
-        /* line 413 */
+        /* line 428 */
         #whitehall-wrapper .organisations-show.homepage-alt .services-guidance .top-featured-updates .inner .feature .content .text h2 {
           font-size: 19px;
           margin-top: 0;
           width: 100%; }
-        /* line 418 */
+        /* line 433 */
         #whitehall-wrapper .organisations-show.homepage-alt .services-guidance .top-featured-updates .inner .feature .content .text .summary {
           font-size: 14px; }
-    /* line 425 */
+    /* line 440 */
     #whitehall-wrapper .organisations-show.homepage-alt .services-guidance .top-featured-updates .inner .recently-updated.panel {
       clear: both;
       margin: 15px;
       width: auto; }
-      /* line 429 */
+      /* line 444 */
       #whitehall-wrapper .organisations-show.homepage-alt .services-guidance .top-featured-updates .inner .recently-updated.panel .content {
         margin: 0; }
-        /* line 431 */
+        /* line 446 */
         #whitehall-wrapper .organisations-show.homepage-alt .services-guidance .top-featured-updates .inner .recently-updated.panel .content h2 {
           font-size: 16px;
           margin-bottom: 0;
           width: 100%; }
-        /* line 438 */
+        /* line 453 */
         #whitehall-wrapper .organisations-show.homepage-alt .services-guidance .top-featured-updates .inner .recently-updated.panel .content ol,
         #whitehall-wrapper .organisations-show.homepage-alt .services-guidance .top-featured-updates .inner .recently-updated.panel .content .feeds {
           margin-right: 0;
           border-bottom: none;
           padding-bottom: 0; }
-        /* line 444 */
+        /* line 459 */
         #whitehall-wrapper .organisations-show.homepage-alt .services-guidance .top-featured-updates .inner .recently-updated.panel .content .attributes {
           float: none;
           width: 100%; }
-          /* line 447 */
+          /* line 462 */
           #whitehall-wrapper .organisations-show.homepage-alt .services-guidance .top-featured-updates .inner .recently-updated.panel .content .attributes li {
             display: inline-block;
             margin-bottom: 0; }
 
-/* line 464 */
+/* line 479 */
 #whitehall-wrapper .organisations-show.homepage-alt.swapped .services-guidance .top-featured-updates .inner
 .top-featured-updates,
 #whitehall-wrapper .organisations-show.homepage-alt.swapped .header-list {
   float: left;
   width: 66.66%; }
-  /* line 470 */
+  /* line 485 */
   #whitehall-wrapper .organisations-show.homepage-alt.swapped .services-guidance .top-featured-updates .inner
   .top-featured-updates h2,
   #whitehall-wrapper .organisations-show.homepage-alt.swapped .services-guidance .top-featured-updates .inner
@@ -619,16 +630,16 @@ p.see-a-z {
   #whitehall-wrapper .organisations-show.homepage-alt.swapped .header-list .see-a-z {
     float: left;
     width: 100%; }
-/* line 475 */
+/* line 490 */
 #whitehall-wrapper .organisations-show.homepage-alt.swapped .top-featured-updates {
   width: 33.33%; }
-  /* line 477 */
+  /* line 492 */
   #whitehall-wrapper .organisations-show.homepage-alt.swapped .top-featured-updates .inner {
     background-color: transparent;
     margin: 0 0 0 15px; }
-    /* line 481 */
+    /* line 496 */
     #whitehall-wrapper .organisations-show.homepage-alt.swapped .top-featured-updates .inner .text {
       padding: 0 !important; }
-    /* line 485 */
+    /* line 500 */
     #whitehall-wrapper .organisations-show.homepage-alt.swapped .top-featured-updates .inner .recently-updated.panel {
       margin: 15px 0; }
