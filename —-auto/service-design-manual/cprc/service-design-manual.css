@@ -1,0 +1,454 @@
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+/* line 13 */
+#global-breadcrumb,
+.header-global .site-search {
+  display: none; }
+
+/* line 17 */
+.service-design-header {
+  position: relative;
+  margin: 0 auto;
+  width: auto;
+  max-width: 1020px; }
+  /* line 22 */
+  .service-design-header .inner-block {
+    background-color: #2b8cc4;
+    color: #fff;
+    padding: 60px 30px 30px;
+    margin: 0 30px;
+    overflow: hidden; }
+    /* line 29 */
+    .service-design-header .inner-block a {
+      color: #fff; }
+    /* line 33 */
+    .service-design-header .inner-block .headings {
+      float: left;
+      width: 75%; }
+      /* line 36 */
+      .service-design-header .inner-block .headings .type {
+        font-size: 27px;
+        margin: 0; }
+      /* line 40 */
+      .service-design-header .inner-block .headings h1 {
+        font-size: 36px;
+        line-height: 1; }
+    /* line 46 */
+    .service-design-header .inner-block .metadata {
+      float: left;
+      width: 25%; }
+      /* line 49 */
+      .service-design-header .inner-block .metadata dl {
+        margin: 0 0 10px; }
+        /* line 52 */
+        .service-design-header .inner-block .metadata dl dt,
+        .service-design-header .inner-block .metadata dl dd {
+          line-height: 1.3; }
+        /* line 55 */
+        .service-design-header .inner-block .metadata dl dt {
+          font-size: 14px; }
+        /* line 58 */
+        .service-design-header .inner-block .metadata dl dd {
+          font-size: 19px;
+          font-weight: bold;
+          margin: 0; }
+    /* line 66 */
+    .service-design-header .inner-block .updates {
+      float: right;
+      padding-top: 30px;
+      width: 25%; }
+      /* line 71 */
+      .service-design-header .inner-block .updates .govdelivery,
+      .service-design-header .inner-block .updates .print {
+        display: block;
+        padding: 0 10px 0 25px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        background: url(images/mail-icon-white.png) 0 40% no-repeat; }
+      /* line 78 */
+      .service-design-header .inner-block .updates .print {
+        background: url(images/print-icon-white.png) 0 40% no-repeat; }
+    /* line 83 */
+    .service-design-header .inner-block #header-search {
+      float: left;
+      padding-top: 40px;
+      clear: both;
+      width: 33.33%; }
+      /* line 89 */
+      .service-design-header .inner-block #header-search .header-search-content {
+        position: relative;
+        background: #fff; }
+      /* line 93 */
+      .service-design-header .inner-block #header-search label {
+        float: none;
+        position: absolute;
+        left: 0;
+        top: 1px;
+        z-index: 1;
+        width: 100%;
+        margin-right: 0;
+        height: 40px;
+        line-height: 40px;
+        text-indent: 15px;
+        overflow: hidden;
+        display: block;
+        color: #6f777b; }
+      /* line 110 */
+      .service-design-header .inner-block #header-search #search-main {
+        font-family: "nta",Arial,sans-serif;
+        font-size: 19px;
+        line-height: 1.47368;
+        font-weight: 400;
+        margin: 0;
+        text-transform: none;
+        position: relative;
+        padding: 6px;
+        background: transparent;
+        width: 82%;
+        z-index: 3; }
+        /* line 122 */
+        .service-design-header .inner-block #header-search #search-main:focus {
+          background-color: #fff; }
+      /* line 126 */
+      .service-design-header .inner-block #header-search .submit {
+        position: absolute;
+        z-index: 4;
+        right: 0;
+        top: 0;
+        width: 40px;
+        height: 41px;
+        border: 1px solid #0b0c0c;
+        border-width: 0 0 0 1px;
+        border-left-color: #222;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        overflow: hidden;
+        text-indent: -5000px;
+        cursor: pointer;
+        color: #fff;
+        background: #0b0c0c url("https://assets.digital.cabinet-office.gov.uk/frontend/homepage/search-button.png") no-repeat 2px 50%; }
+
+/* line 150 */
+.promoted {
+  position: relative;
+  margin: 30px auto 0;
+  width: auto;
+  max-width: 1020px; }
+  /* line 155 */
+  .promoted .inner-block {
+    padding: 0 15px; }
+    /* line 157 */
+    .promoted .inner-block article {
+      float: left;
+      min-height: 30px;
+      width: 33.33%; }
+      /* line 161 */
+      .promoted .inner-block article .content {
+        padding: 0 15px; }
+        /* line 164 */
+        .promoted .inner-block article .content .image-holder .img img {
+          width: 100%; }
+        /* line 169 */
+        .promoted .inner-block article .content .text h2 {
+          margin-top: 10px; }
+        /* line 173 */
+        .promoted .inner-block article .content .summary {
+          font-size: 16px;
+          margin: 0; }
+          /* line 176 */
+          .promoted .inner-block article .content .summary a {
+            display: block;
+            margin-top: 5px;
+            text-decoration: none; }
+            /* line 180 */
+            .promoted .inner-block article .content .summary a:hover {
+              text-decoration: underline; }
+
+/* line 190 */
+#content {
+  clear: both;
+  overflow: hidden;
+  padding-bottom: 60px; }
+  /* line 195 */
+  #content .inner-block {
+    padding: 0 15px; }
+    /* line 198 */
+    #content .inner-block nav {
+      padding-top: 60px; }
+      /* line 200 */
+      #content .inner-block nav h2 {
+        float: left;
+        width: 33.33%; }
+      /* line 204 */
+      #content .inner-block nav h2 {
+        font-size: 27px;
+        font-weight: bold; }
+        /* line 207 */
+        #content .inner-block nav h2 span {
+          padding: 0 15px; }
+    /* line 213 */
+    #content .inner-block ol {
+      float: left;
+      padding: 0;
+      width: 66.66%; }
+      /* line 217 */
+      #content .inner-block ol li {
+        border-bottom: 1px solid #bfc1c3;
+        font-size: 16px;
+        list-style: none;
+        margin: 0 15px 5px;
+        position: relative;
+        padding-bottom: 5px; }
+        /* line 225 */
+        #content .inner-block ol li .number {
+          font-size: 36px;
+          font-weight: bold;
+          line-height: 1;
+          position: absolute;
+          right: 105%; }
+        /* line 232 */
+        #content .inner-block ol li a {
+          display: block;
+          font-size: 19px;
+          font-weight: bold;
+          text-decoration: none; }
+        /* line 238 */
+        #content .inner-block ol li h3 {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 50px; }
+          /* line 242 */
+          #content .inner-block ol li h3 .number {
+            font-size: 24px;
+            margin-top: 3px; }
+      /* line 248 */
+      #content .inner-block ol ol {
+        float: none;
+        width: auto; }
+        /* line 251 */
+        #content .inner-block ol ol li {
+          margin: 0 0 5px; }
+          /* line 253 */
+          #content .inner-block ol ol li .number {
+            float: left;
+            position: static;
+            height: 30px;
+            width: 50px;
+            font-size: 19px;
+            margin: 5px 0 0 0; }
+          /* line 264 */
+          #content .inner-block ol ol li:last-child {
+            border: 0; }
+          /* line 267 */
+          #content .inner-block ol ol li h2 {
+            font-weight: bold; }
+          /* line 271 */
+          #content .inner-block ol ol li div h3 {
+            margin-bottom: 10px; }
+          /* line 275 */
+          #content .inner-block ol ol li div footer {
+            overflow: hidden;
+            padding: 30px 0 60px; }
+            /* line 278 */
+            #content .inner-block ol ol li div footer dl {
+              float: left;
+              margin: 0 0 10px;
+              width: 40%; }
+              /* line 283 */
+              #content .inner-block ol ol li div footer dl dt,
+              #content .inner-block ol ol li div footer dl dd {
+                display: inline;
+                font-size: 14px;
+                line-height: 1.3; }
+              /* line 288 */
+              #content .inner-block ol ol li div footer dl dd {
+                font-weight: bold;
+                margin: 0; }
+            /* line 295 */
+            #content .inner-block ol ol li div footer .print,
+            #content .inner-block ol ol li div footer dd,
+            #content .inner-block ol ol li div footer dt {
+              color: #6f777b; }
+            /* line 298 */
+            #content .inner-block ol ol li div footer .print {
+              float: left;
+              padding: 0 10px 0 25px;
+              margin-bottom: 10px;
+              font-size: 14px;
+              background: url(images/print-icon-grey-1.png) 0 40% no-repeat;
+              width: 50%; }
+            /* line 306 */
+            #content .inner-block ol ol li div footer .close-section {
+              clear: both;
+              font-size: 14px; }
+              /* line 309 */
+              #content .inner-block ol ol li div footer .close-section:after {
+                content: ""; }
+          /* line 317 */
+          #content .inner-block ol ol li p a {
+            font-weight: normal;
+            display: inline; }
+          /* line 323 */
+          #content .inner-block ol ol li ul,
+          #content .inner-block ol ol li ol {
+            padding-left: 20px; }
+            /* line 325 */
+            #content .inner-block ol ol li ul li,
+            #content .inner-block ol ol li ol li {
+              border: 0;
+              list-style: disc !important; }
+              /* line 328 */
+              #content .inner-block ol ol li ul li a,
+              #content .inner-block ol ol li ol li a {
+                font-weight: normal;
+                display: inline; }
+    /* line 338 */
+    #content .inner-block aside {
+      float: left;
+      padding-top: 20px;
+      width: 33.33%; }
+      /* line 342 */
+      #content .inner-block aside h2 {
+        font-size: 19px;
+        font-weight: bold; }
+      /* line 346 */
+      #content .inner-block aside dl {
+        margin: 60px 0 20px; }
+        /* line 349 */
+        #content .inner-block aside dl dt,
+        #content .inner-block aside dl dd {
+          font-size: 14px;
+          line-height: 1.3; }
+        /* line 353 */
+        #content .inner-block aside dl dd {
+          font-weight: bold;
+          margin: 0; }
+      /* line 360 */
+      #content .inner-block aside .print,
+      #content .inner-block aside dd,
+      #content .inner-block aside dt {
+        color: #6f777b; }
+      /* line 363 */
+      #content .inner-block aside .print {
+        display: block;
+        padding: 0 10px 0 25px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        background: url(images/print-icon-grey-1.png) 0 40% no-repeat; }
+  /* line 375 */
+  #content .closed:after {
+    color: #0b0c0c;
+    font-size: 10px;
+    content: " \25b6";
+    position: absolute;
+    padding: 10px 20px;
+    right: 102%;
+    top: -5px; }
+  /* line 386 */
+  #content .open:after {
+    font-size: 12px;
+    content: " \25bc"; }
+  /* line 391 */
+  #content .show-hide {
+    display: none; }
+  /* line 394 */
+  #content .show {
+    display: block; }
+  /* line 398 */
+  #content img.video {
+    width: 100%; }
+
+/* line 406 */
+.stage-two #content {
+  margin-top: 30px; }

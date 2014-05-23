@@ -1,0 +1,2920 @@
+@charset "UTF-8";
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+/* line 49, /Users/jaimes/Sites/assets/toolkit/stylesheets/_shims.scss */
+#global-nav .inner:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+/* Example use:
+    <details>
+      <summary>Wanna know more?</sumary>
+      <p>Of course you do!</p>
+    </details>
+*/
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* line 61, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_utils.scss */
+#global-nav .inner:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+/* line 49, /Users/jaimes/Sites/assets/toolkit/stylesheets/_shims.scss */
+#global-nav .inner:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+/* line 43, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_popups.scss */
+html.noscroll {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%; }
+
+/* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_popups.scss */
+.popover-mask {
+  overflow-y: scroll; }
+
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+/* line 49, /Users/jaimes/Sites/assets/toolkit/stylesheets/_shims.scss */
+#global-nav .inner:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+/* line 126, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+.button, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary {
+  background-color: #006435;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #00180c;
+  -moz-box-shadow: 0 2px 0 #00180c;
+  box-shadow: 0 2px 0 #00180c;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:visited, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:visited {
+    background-color: #006435; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:hover, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:hover, .button:focus, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:focus {
+    background: #004b27; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:active, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #006435;
+    -moz-box-shadow: 0 0 0 #006435;
+    box-shadow: 0 0 0 #006435; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button.disabled, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-primary, .button[disabled="disabled"], .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-primary, .button[disabled], .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-primary {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button.disabled:hover, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-primary:hover, .button[disabled="disabled"]:hover, .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-primary:hover, .button[disabled]:hover, .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-primary:hover {
+      cursor: default;
+      background-color: #006435; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button.disabled:active, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-primary:active, .button[disabled="disabled"]:active, .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-primary:active, .button[disabled]:active, .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-primary:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #00180c;
+      -moz-box-shadow: 0 2px 0 #00180c;
+      box-shadow: 0 2px 0 #00180c; }
+  /* line 65, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:hover, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:hover, .button:focus, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:focus, .button:visited, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:visited {
+    color: white; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:before, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:active:before, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button[rel="external"]:after, .ui-datepicker .ui-datepicker-buttonpane [rel="external"].ui-priority-primary:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* line 130, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+.button-secondary, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev, .ui-datepicker .ui-datepicker-header .ui-datepicker-next, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary {
+  background-color: #dee0e2;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #b5babe;
+  -moz-box-shadow: 0 2px 0 #b5babe;
+  box-shadow: 0 2px 0 #b5babe;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #0b0c0c; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:visited, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:visited, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:visited, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:visited {
+    background-color: #dee0e2; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:hover, .button-secondary:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:focus, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:focus {
+    background: #d0d3d6; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:active, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:active, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:active, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #dee0e2;
+    -moz-box-shadow: 0 0 0 #dee0e2;
+    box-shadow: 0 0 0 #dee0e2; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary.disabled, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-prev, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-next, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-secondary, .button-secondary[disabled="disabled"], .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-prev, .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-next, .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-secondary, .button-secondary[disabled], .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-prev, .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-next, .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-secondary {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-secondary.disabled:hover, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-secondary:hover, .button-secondary[disabled="disabled"]:hover, .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-secondary:hover, .button-secondary[disabled]:hover, .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-secondary:hover {
+      cursor: default;
+      background-color: #dee0e2; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-secondary.disabled:active, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-prev:active, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-next:active, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-secondary:active, .button-secondary[disabled="disabled"]:active, .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-prev:active, .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-next:active, .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-secondary:active, .button-secondary[disabled]:active, .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-prev:active, .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-next:active, .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-secondary:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #b5babe;
+      -moz-box-shadow: 0 2px 0 #b5babe;
+      box-shadow: 0 2px 0 #b5babe; }
+  /* line 72, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:hover, .button-secondary:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:focus, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:focus, .button-secondary:visited, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:visited, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:visited, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:visited {
+    color: #0b0c0c; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:before, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:before, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:before, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:active:before, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:active:before, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:active:before, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary[rel="external"]:after, .ui-datepicker .ui-datepicker-header [rel="external"].ui-datepicker-prev:after, .ui-datepicker .ui-datepicker-header [rel="external"].ui-datepicker-next:after, .ui-datepicker .ui-datepicker-buttonpane [rel="external"].ui-priority-secondary:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* line 134, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+.button-warning {
+  background-color: #b10e1e;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #6a0812;
+  -moz-box-shadow: 0 2px 0 #6a0812;
+  box-shadow: 0 2px 0 #6a0812;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:visited {
+    background-color: #b10e1e; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:hover, .button-warning:focus {
+    background: #990c1a; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #b10e1e;
+    -moz-box-shadow: 0 0 0 #b10e1e;
+    box-shadow: 0 0 0 #b10e1e; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning.disabled, .button-warning[disabled="disabled"], .button-warning[disabled] {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-warning.disabled:hover, .button-warning[disabled="disabled"]:hover, .button-warning[disabled]:hover {
+      cursor: default;
+      background-color: #b10e1e; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-warning.disabled:active, .button-warning[disabled="disabled"]:active, .button-warning[disabled]:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #6a0812;
+      -moz-box-shadow: 0 2px 0 #6a0812;
+      box-shadow: 0 2px 0 #6a0812; }
+  /* line 65, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:hover, .button-warning:focus, .button-warning:visited {
+    color: white; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning[rel="external"]:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* Example use:
+    <details>
+      <summary>Wanna know more?</sumary>
+      <p>Of course you do!</p>
+    </details>
+*/
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* line 255, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.option.group label input[type="text"] {
+  margin-left: 0;
+  width: 14em;
+  margin-top: -0.3em;
+  position: absolute; }
+
+/* line 263, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+::-webkit-input-placeholder {
+  padding-top: 0.15em;
+  color: #6f777b; }
+
+/* line 264, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+::-moz-placeholder {
+  padding-top: 0.15em;
+  color: #6f777b; }
+
+/* firefox 19+ */
+/* line 265, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+:-ms-input-placeholder {
+  padding-top: 0.15em;
+  color: #6f777b; }
+
+/* ie */
+/* line 266, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+input:-moz-placeholder {
+  padding-top: 0.15em;
+  color: #6f777b; }
+
+/* line 450, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.button, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary {
+  background-color: #006435;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #00180c;
+  -moz-box-shadow: 0 2px 0 #00180c;
+  box-shadow: 0 2px 0 #00180c;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:visited, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:visited {
+    background-color: #006435; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:hover, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:hover, .button:focus, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:focus {
+    background: #004b27; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:active, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #006435;
+    -moz-box-shadow: 0 0 0 #006435;
+    box-shadow: 0 0 0 #006435; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button.disabled, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-primary, .button[disabled="disabled"], .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-primary, .button[disabled], .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-primary {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button.disabled:hover, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-primary:hover, .button[disabled="disabled"]:hover, .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-primary:hover, .button[disabled]:hover, .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-primary:hover {
+      cursor: default;
+      background-color: #006435; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button.disabled:active, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-primary:active, .button[disabled="disabled"]:active, .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-primary:active, .button[disabled]:active, .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-primary:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #00180c;
+      -moz-box-shadow: 0 2px 0 #00180c;
+      box-shadow: 0 2px 0 #00180c; }
+  /* line 65, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:hover, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:hover, .button:focus, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:focus, .button:visited, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:visited {
+    color: white; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:before, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:active:before, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button[rel="external"]:after, .ui-datepicker .ui-datepicker-buttonpane [rel="external"].ui-priority-primary:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* line 453, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.button-secondary, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev, .ui-datepicker .ui-datepicker-header .ui-datepicker-next, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary {
+  background-color: #dee0e2;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #b5babe;
+  -moz-box-shadow: 0 2px 0 #b5babe;
+  box-shadow: 0 2px 0 #b5babe;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #0b0c0c; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:visited, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:visited, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:visited, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:visited {
+    background-color: #dee0e2; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:hover, .button-secondary:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:focus, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:focus {
+    background: #d0d3d6; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:active, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:active, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:active, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #dee0e2;
+    -moz-box-shadow: 0 0 0 #dee0e2;
+    box-shadow: 0 0 0 #dee0e2; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary.disabled, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-prev, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-next, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-secondary, .button-secondary[disabled="disabled"], .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-prev, .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-next, .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-secondary, .button-secondary[disabled], .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-prev, .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-next, .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-secondary {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-secondary.disabled:hover, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-secondary:hover, .button-secondary[disabled="disabled"]:hover, .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-secondary:hover, .button-secondary[disabled]:hover, .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-secondary:hover {
+      cursor: default;
+      background-color: #dee0e2; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-secondary.disabled:active, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-prev:active, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-next:active, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-secondary:active, .button-secondary[disabled="disabled"]:active, .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-prev:active, .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-next:active, .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-secondary:active, .button-secondary[disabled]:active, .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-prev:active, .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-next:active, .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-secondary:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #b5babe;
+      -moz-box-shadow: 0 2px 0 #b5babe;
+      box-shadow: 0 2px 0 #b5babe; }
+  /* line 72, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:hover, .button-secondary:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:focus, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:focus, .button-secondary:visited, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:visited, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:visited, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:visited {
+    color: #0b0c0c; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:before, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:before, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:before, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:active:before, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:active:before, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:active:before, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary[rel="external"]:after, .ui-datepicker .ui-datepicker-header [rel="external"].ui-datepicker-prev:after, .ui-datepicker .ui-datepicker-header [rel="external"].ui-datepicker-next:after, .ui-datepicker .ui-datepicker-buttonpane [rel="external"].ui-priority-secondary:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* line 456, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.button-warning {
+  background-color: #b10e1e;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #6a0812;
+  -moz-box-shadow: 0 2px 0 #6a0812;
+  box-shadow: 0 2px 0 #6a0812;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:visited {
+    background-color: #b10e1e; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:hover, .button-warning:focus {
+    background: #990c1a; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #b10e1e;
+    -moz-box-shadow: 0 0 0 #b10e1e;
+    box-shadow: 0 0 0 #b10e1e; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning.disabled, .button-warning[disabled="disabled"], .button-warning[disabled] {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-warning.disabled:hover, .button-warning[disabled="disabled"]:hover, .button-warning[disabled]:hover {
+      cursor: default;
+      background-color: #b10e1e; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-warning.disabled:active, .button-warning[disabled="disabled"]:active, .button-warning[disabled]:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #6a0812;
+      -moz-box-shadow: 0 2px 0 #6a0812;
+      box-shadow: 0 2px 0 #6a0812; }
+  /* line 65, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:hover, .button-warning:focus, .button-warning:visited {
+    color: white; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning[rel="external"]:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* line 126, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+.button, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary {
+  background-color: #006435;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #00180c;
+  -moz-box-shadow: 0 2px 0 #00180c;
+  box-shadow: 0 2px 0 #00180c;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:visited, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:visited {
+    background-color: #006435; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:hover, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:hover, .button:focus, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:focus {
+    background: #004b27; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:active, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #006435;
+    -moz-box-shadow: 0 0 0 #006435;
+    box-shadow: 0 0 0 #006435; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button.disabled, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-primary, .button[disabled="disabled"], .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-primary, .button[disabled], .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-primary {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button.disabled:hover, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-primary:hover, .button[disabled="disabled"]:hover, .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-primary:hover, .button[disabled]:hover, .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-primary:hover {
+      cursor: default;
+      background-color: #006435; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button.disabled:active, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-primary:active, .button[disabled="disabled"]:active, .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-primary:active, .button[disabled]:active, .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-primary:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #00180c;
+      -moz-box-shadow: 0 2px 0 #00180c;
+      box-shadow: 0 2px 0 #00180c; }
+  /* line 65, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:hover, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:hover, .button:focus, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:focus, .button:visited, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:visited {
+    color: white; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:before, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:active:before, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button[rel="external"]:after, .ui-datepicker .ui-datepicker-buttonpane [rel="external"].ui-priority-primary:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* line 130, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+.button-secondary, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev, .ui-datepicker .ui-datepicker-header .ui-datepicker-next, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary {
+  background-color: #dee0e2;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #b5babe;
+  -moz-box-shadow: 0 2px 0 #b5babe;
+  box-shadow: 0 2px 0 #b5babe;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #0b0c0c; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:visited, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:visited, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:visited, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:visited {
+    background-color: #dee0e2; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:hover, .button-secondary:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:focus, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:focus {
+    background: #d0d3d6; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:active, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:active, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:active, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #dee0e2;
+    -moz-box-shadow: 0 0 0 #dee0e2;
+    box-shadow: 0 0 0 #dee0e2; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary.disabled, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-prev, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-next, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-secondary, .button-secondary[disabled="disabled"], .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-prev, .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-next, .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-secondary, .button-secondary[disabled], .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-prev, .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-next, .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-secondary {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-secondary.disabled:hover, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-secondary:hover, .button-secondary[disabled="disabled"]:hover, .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-secondary:hover, .button-secondary[disabled]:hover, .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-secondary:hover {
+      cursor: default;
+      background-color: #dee0e2; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-secondary.disabled:active, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-prev:active, .ui-datepicker .ui-datepicker-header .disabled.ui-datepicker-next:active, .ui-datepicker .ui-datepicker-buttonpane .disabled.ui-priority-secondary:active, .button-secondary[disabled="disabled"]:active, .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-prev:active, .ui-datepicker .ui-datepicker-header [disabled="disabled"].ui-datepicker-next:active, .ui-datepicker .ui-datepicker-buttonpane [disabled="disabled"].ui-priority-secondary:active, .button-secondary[disabled]:active, .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-prev:active, .ui-datepicker .ui-datepicker-header [disabled].ui-datepicker-next:active, .ui-datepicker .ui-datepicker-buttonpane [disabled].ui-priority-secondary:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #b5babe;
+      -moz-box-shadow: 0 2px 0 #b5babe;
+      box-shadow: 0 2px 0 #b5babe; }
+  /* line 72, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:hover, .button-secondary:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:focus, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:focus, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:focus, .button-secondary:visited, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:visited, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:visited, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:visited {
+    color: #0b0c0c; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:before, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:before, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:before, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:active:before, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:active:before, .ui-datepicker .ui-datepicker-header .ui-datepicker-next:active:before, .ui-datepicker .ui-datepicker-buttonpane .ui-priority-secondary:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary[rel="external"]:after, .ui-datepicker .ui-datepicker-header [rel="external"].ui-datepicker-prev:after, .ui-datepicker .ui-datepicker-header [rel="external"].ui-datepicker-next:after, .ui-datepicker .ui-datepicker-buttonpane [rel="external"].ui-priority-secondary:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* line 134, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+.button-warning {
+  background-color: #b10e1e;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #6a0812;
+  -moz-box-shadow: 0 2px 0 #6a0812;
+  box-shadow: 0 2px 0 #6a0812;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:visited {
+    background-color: #b10e1e; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:hover, .button-warning:focus {
+    background: #990c1a; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #b10e1e;
+    -moz-box-shadow: 0 0 0 #b10e1e;
+    box-shadow: 0 0 0 #b10e1e; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning.disabled, .button-warning[disabled="disabled"], .button-warning[disabled] {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-warning.disabled:hover, .button-warning[disabled="disabled"]:hover, .button-warning[disabled]:hover {
+      cursor: default;
+      background-color: #b10e1e; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-warning.disabled:active, .button-warning[disabled="disabled"]:active, .button-warning[disabled]:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #6a0812;
+      -moz-box-shadow: 0 2px 0 #6a0812;
+      box-shadow: 0 2px 0 #6a0812; }
+  /* line 65, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:hover, .button-warning:focus, .button-warning:visited {
+    color: white; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning[rel="external"]:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* line 61, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_utils.scss */
+#global-nav .inner:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+/* line 8, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+.example {
+  background: none repeat scroll 0 0 #E7EBDA;
+  margin: 0.75em -1em;
+  padding: 0.5em 1em; }
+
+/* line 14, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+#popup.help-system .close {
+  right: 2.25em; }
+
+/* line 18, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+#popup.help-system {
+  width: 80%;
+  margin: 2em auto 20em auto;
+  background-color: white;
+  min-height: 26em;
+  position: static;
+  overflow: hidden;
+  padding: 0;
+  border: 0.5em solid #222;
+  margin-top: 0; }
+  /* line 20, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_popups.scss */
+  #popup.help-system .close {
+    top: 0.5em;
+    right: 0.5em; }
+  /* line 26, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_popups.scss */
+  #popup.help-system .header {
+    padding: 1em 0 0.8em 2em;
+    margin: 0 -1em;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    font-size: 1.9rem;
+    line-height: 1.31579;
+    font-weight: 400;
+    text-transform: none;
+    border-bottom: 1px solid #bfc1c3; }
+    @media (max-width: 640px) {
+      /* line 26, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_popups.scss */
+      #popup.help-system .header {
+        font-size: 1.6rem;
+        line-height: 1.25; } }
+  /* line 34, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_popups.scss */
+  #popup.help-system .action.group {
+    clear: both;
+    border-top: 1px solid #bfc1c3;
+    margin: 1em 0 0 -2em;
+    padding: 1em 2em; }
+  /* line 21, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+  #popup.help-system article {
+    padding: 0 0 0 1em;
+    margin: 0;
+    width: auto; }
+    @media (max-width: 640px) {
+      /* line 21, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+      #popup.help-system article {
+        padding: 0 1em; } }
+  /* line 30, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+  #popup.help-system .header {
+    border-color: #d5e8f3;
+    padding-left: 3.25em;
+    padding-right: 3.25em;
+    background: url(https://assets.digital.cabinet-office.gov.uk/static/icon-information-f78d8c1b10b141b5a9a8c7a40220c4a4.png) no-repeat scroll 1em 0.8em white; }
+  /* line 36, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+  #popup.help-system .action.group {
+    border-color: #d5e8f3; }
+    @media (max-width: 640px) {
+      /* line 36, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+      #popup.help-system .action.group {
+        margin-right: -1em; } }
+  /* line 43, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+  #popup.help-system .content {
+    float: left;
+    width: 75%;
+    padding-right: 3em;
+    border-right: 2px solid #d5e8f3;
+    box-sizing: border-box; }
+    @media (max-width: 640px) {
+      /* line 43, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+      #popup.help-system .content {
+        width: 100%;
+        border-right: 0;
+        padding-right: 1em; } }
+    /* line 54, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+    #popup.help-system .content h1 {
+      font-family: "nta", Arial, sans-serif;
+      font-size: 48px;
+      font-size: 4.8rem;
+      line-height: 1.04167;
+      font-weight: 400;
+      text-transform: none;
+      padding-top: 10px;
+      padding-top: 1rem;
+      padding-bottom: 10px;
+      padding-bottom: 1rem;
+      margin-top: 0.5em; }
+      @media (max-width: 640px) {
+        /* line 54, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+        #popup.help-system .content h1 {
+          font-size: 3.2rem;
+          line-height: 1.09375; } }
+      @media (min-width: 641px) {
+        /* line 54, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+        #popup.help-system .content h1 {
+          padding-top: 0.7rem;
+          padding-bottom: 1.3rem; } }
+    /* line 58, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+    #popup.help-system .content h3 {
+      font-family: "nta", Arial, sans-serif;
+      font-size: 19px;
+      font-size: 1.9rem;
+      line-height: 1.31579;
+      font-weight: 400;
+      text-transform: none;
+      font-weight: 700;
+      margin: 2em 0 1em; }
+      @media (max-width: 640px) {
+        /* line 58, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+        #popup.help-system .content h3 {
+          font-size: 1.6rem;
+          line-height: 1.25; } }
+    /* line 62, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+    #popup.help-system .content ul {
+      margin-left: 2em; }
+    /* line 65, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+    #popup.help-system .content section {
+      padding-left: 1em; }
+  /* line 70, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+  #popup.help-system nav {
+    float: left;
+    margin: 0.5em 0 0 -2px;
+    border-left: 2px solid #d5e8f3;
+    width: 25%; }
+    @media (max-width: 640px) {
+      /* line 70, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+      #popup.help-system nav {
+        width: 100%;
+        border-left: 0;
+        border-top: 2px solid #d5e8f3; } }
+    /* line 80, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+    #popup.help-system nav h2 {
+      margin: 0.75em 0 1em 0.5em;
+      padding: 0.25em 1em;
+      font-family: "nta", Arial, sans-serif;
+      font-size: 19px;
+      font-size: 1.9rem;
+      line-height: 1.31579;
+      font-weight: 400;
+      text-transform: none; }
+      @media (max-width: 640px) {
+        /* line 80, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+        #popup.help-system nav h2 {
+          font-size: 1.6rem;
+          line-height: 1.25; } }
+    /* line 85, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+    #popup.help-system nav ul {
+      margin: 0;
+      margin-top: 0.5em;
+      padding-bottom: 1em;
+      list-style-image: none; }
+    /* line 91, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+    #popup.help-system nav li {
+      margin: 0 0 0 -2px;
+      padding: 0.25em 0.5em 0.25em 1.3em;
+      list-style-type: none;
+      border-left: 2px solid transparent; }
+      /* line 96, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+      #popup.help-system nav li.active {
+        border-left: 2px solid #2b8cc4;
+        background: #f8f8f8; }
+        /* line 99, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+        #popup.help-system nav li.active a {
+          color: #0b0c0c;
+          text-decoration: none; }
+    /* line 105, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+    #popup.help-system nav a {
+      font-family: "nta", Arial, sans-serif;
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 1.25;
+      font-weight: 300;
+      text-transform: none;
+      text-decoration: none; }
+      @media (max-width: 640px) {
+        /* line 105, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+        #popup.help-system nav a {
+          font-size: 1.4rem;
+          line-height: 1.14286; } }
+      /* line 108, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+      #popup.help-system nav a:hover {
+        text-decoration: underline; }
+    /* line 112, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+    #popup.help-system nav .current {
+      background: #e8f0f0;
+      position: relative; }
+      /* line 115, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+      #popup.help-system nav .current:before {
+        width: 0;
+        height: 0;
+        content: " ";
+        border: 1.25em solid transparent;
+        border-right-color: #e8f0f0;
+        position: absolute;
+        left: -2.5em;
+        top: 0; }
+      /* line 125, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+      #popup.help-system nav .current a {
+        color: #333; }
+
+/* line 133, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_help-popup.scss */
+article dt {
+  font-weight: bold; }
+
+/* line 6, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_tooltip.scss */
+.tooltip {
+  outline: none;
+  color: #0b0c0c;
+  text-decoration: none;
+  border-bottom: 1px dashed; }
+  /* line 11, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_tooltip.scss */
+  .tooltip:hover {
+    text-decoration: none;
+    border-bottom: none;
+    cursor: pointer; }
+    /* line 15, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_tooltip.scss */
+    .tooltip:hover:after {
+      content: "\25C0";
+      display: block;
+      text-decoration: none;
+      color: black;
+      z-index: 11;
+      margin-left: 10px; }
+    /* line 23, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_tooltip.scss */
+    .tooltip:hover span {
+      display: inline;
+      position: absolute;
+      color: #EEE;
+      background: #0B0C0C; }
+  /* line 30, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_tooltip.scss */
+  .tooltip span {
+    z-index: 10;
+    display: none;
+    padding: 1em;
+    margin-top: -50px;
+    margin-left: 22px;
+    width: 240px;
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.3); }
+
+/* line 1, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+.ui-datepicker {
+  z-index: 2000 !important;
+  display: none;
+  width: 350px;
+  padding: 1em;
+  background: #fff;
+  border: 3px solid #ffbf47;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); }
+  /* line 9, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+  .ui-datepicker .ui-datepicker-header .ui-datepicker-prev, .ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    padding-top: .2em;
+    padding-bottom: .2em; }
+  /* line 17, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+  .ui-datepicker .ui-datepicker-header {
+    position: relative;
+    height: 2.5em;
+    margin: 0 0 0.35em 0;
+    padding: 0 0 0.25em 0;
+    text-align: center;
+    border-bottom: 1px solid #bfc1c3;
+    font-size: 19px; }
+    /* line 25, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+    .ui-datepicker .ui-datepicker-header .ui-datepicker-title {
+      display: inline-block;
+      margin: 0 auto;
+      padding: 0.2em 0 0 0; }
+    /* line 30, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+    .ui-datepicker .ui-datepicker-header .ui-datepicker-month {
+      margin: 0 1em 0 0; }
+    /* line 36, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+    .ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+      left: 0;
+      text-align: left; }
+    /* line 40, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+    .ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+      right: 0;
+      text-align: right; }
+  /* line 45, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+  .ui-datepicker table.ui-datepicker-calendar {
+    width: 100%; }
+  /* line 49, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+  .ui-datepicker thead td, .ui-datepicker thead th, .ui-datepicker tbody td, .ui-datepicker tbody th {
+    width: 40px;
+    padding: 0.35em 0.15em; }
+  /* line 58, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+  .ui-datepicker thead th {
+    font-weight: bold; }
+  /* line 63, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+  .ui-datepicker tbody td {
+    text-align: center; }
+    /* line 65, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+    .ui-datepicker tbody td:hover {
+      cursor: pointer;
+      background: #ffe2ad;
+      color: #fff; }
+    /* line 70, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+    .ui-datepicker tbody td.ui-state-disabled:hover {
+      cursor: default;
+      background: none; }
+    /* line 74, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+    .ui-datepicker tbody td.ui-datepicker-current-day {
+      background: #ffbf47; }
+      /* line 76, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+      .ui-datepicker tbody td.ui-datepicker-current-day a, .ui-datepicker tbody td.ui-datepicker-current-day span {
+        color: #0b0c0c; }
+    /* line 80, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+    .ui-datepicker tbody td.ui-datepicker-today {
+      background: #dee0e2; }
+    /* line 83, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+    .ui-datepicker tbody td a {
+      text-decoration: none; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+  .ui-datepicker a.ui-state-disabled {
+    opacity: 0.5;
+    box-shadow: none !important; }
+    /* line 92, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+    .ui-datepicker a.ui-state-disabled:hover, .ui-datepicker a.ui-state-disabled {
+      opacity: 0.5;
+      cursor: default;
+      background-color: #f8f8f8 !important; }
+  /* line 99, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+  .ui-datepicker td.ui-state-disabled span {
+    text-decoration: line-through; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+  .ui-datepicker td.ui-state-disabled:hover, .ui-datepicker td.ui-state-disabled {
+    color: white; }
+  /* line 106, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+  .ui-datepicker .ui-datepicker-current-day {
+    background: white; }
+  /* line 109, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+  .ui-datepicker .ui-datepicker-buttonpane {
+    background: #F9F9F9;
+    padding: .25em 0 0 0; }
+    /* line 112, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+    .ui-datepicker .ui-datepicker-buttonpane button {
+      margin: 0 .5em 0 0; }
+
+/* line 124, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+.js-enabled .hasDatepicker:focus {
+  outline: none; }
+
+/* line 128, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_date-picker.scss */
+.ui-datepicker-append {
+  padding-top: 0.5em;
+  color: #6f777b; }
+
+/* line 26 */
+header.page-header hgroup {
+  margin-right: 0; }
+
+/* line 31 */
+#search {
+  display: none; }
+
+/* line 36 */
+article table {
+  margin: 0;
+  width: auto;
+  margin-bottom: 2em;
+  width: 100%; }
+  /* line 40 */
+  article table td, article table th {
+    border: 0 solid;
+    background-color: transparent;
+    padding: 0;
+    margin: 0; }
+  /* line 50 */
+  article table th {
+    border-bottom: 2px solid #bfc1c3; }
+  /* line 53 */
+  article table td {
+    border-bottom: 1px solid #bfc1c3; }
+  /* line 56 */
+  article table th, article table td {
+    padding: 0.5em 0; }
+
+/* line 62 */
+#global-header #logo img {
+  height: 200%; }
+
+/* line 11, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_account-management-tools.scss */
+.account-management-tools {
+  margin: -1em -2em 1em 0;
+  padding: 1em 0em;
+  color: white;
+  background: #EAEDEF;
+  color: #0b0c0c; }
+  /* line 17, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_account-management-tools.scss */
+  .account-management-tools ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; }
+    /* line 22, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_account-management-tools.scss */
+    .account-management-tools ul li {
+      float: right;
+      margin: 0;
+      padding: 0 1em 0 0; }
+      /* line 26, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_account-management-tools.scss */
+      .account-management-tools ul li.user {
+        float: left; }
+    /* line 28, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_account-management-tools.scss */
+    .account-management-tools ul a {
+      color: #0b0c0c; }
+
+/* line 18, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+#global-nav {
+  margin: 0;
+  border-bottom: 10px solid #28a197;
+  position: relative;
+  z-index: 60; }
+  @media (min-width: 641px) {
+    /* line 18, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+    #global-nav {
+      margin: 0; } }
+  @media (min-width: 769px) {
+    /* line 18, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+    #global-nav {
+      text-align: right; } }
+  /* line 32, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+  #global-nav .inner {
+    border-bottom: 5px solid #0b0c0c;
+    padding: 5px 2em 2em 2em; }
+    @media (min-width: 641px) {
+      /* line 32, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+      #global-nav .inner {
+        padding-bottom: 0; } }
+  /* line 42, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+  #global-nav a,
+  #global-nav .toggler {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none;
+    display: block;
+    padding: 10px 8px;
+    text-decoration: none;
+    color: #0b0c0c; }
+    @media (max-width: 640px) {
+      /* line 42, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+      #global-nav a,
+      #global-nav .toggler {
+        font-size: 1.4rem;
+        line-height: 1.14286; } }
+    @media (min-width: 769px) {
+      /* line 42, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+      #global-nav a,
+      #global-nav .toggler {
+        display: inline-block; } }
+    /* line 54, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+    #global-nav a:hover, #global-nav a:focus,
+    #global-nav .toggler:hover,
+    #global-nav .toggler:focus {
+      text-decoration: underline; }
+  /* line 59, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+  #global-nav .home a {
+    display: block;
+    float: left;
+    padding-left: 0; }
+  /* line 64, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+  #global-nav .jump-link {
+    float: right; }
+    @media (min-width: 769px) {
+      /* line 64, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+      #global-nav .jump-link {
+        position: absolute;
+        left: -99999em; } }
+  /* line 72, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+  #global-nav .toggler {
+    cursor: pointer; }
+    /* line 75, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+    #global-nav .toggler:focus {
+      outline: none; }
+    /* line 78, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+    #global-nav .toggler:after {
+      display: inline-block;
+      font-size: 8px;
+      height: 8px;
+      padding-left: 5px;
+      vertical-align: middle;
+      content: " \25BC"; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+  #global-nav.open .toggler:after {
+    content: " \25B2"; }
+  /* line 94, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+  #global-nav nav {
+    clear: both;
+    margin-bottom: 3px; }
+    @media (min-width: 769px) {
+      /* line 94, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+      #global-nav nav {
+        clear: none;
+        background: transparent;
+        position: static;
+        margin-bottom: 0; } }
+    /* line 105, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+    #global-nav nav #navigation {
+      margin: 0;
+      padding: 0; }
+    /* line 110, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+    #global-nav nav .user {
+      margin-right: 1em; }
+    /* line 114, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+    #global-nav nav .current {
+      color: white;
+      background: #0b0c0c; }
+    /* line 118, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+    #global-nav nav a {
+      color: #0b0c0c;
+      text-decoration: underline; }
+      /* line 122, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+      #global-nav nav a:hover, #global-nav nav a:focus {
+        text-decoration: none; }
+    /* line 126, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+    #global-nav nav li {
+      display: block;
+      position: relative; }
+      @media (min-width: 769px) {
+        /* line 126, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+        #global-nav nav li {
+          display: inline; } }
+      /* line 133, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+      #global-nav nav li .toggler {
+        position: absolute;
+        left: -9999em; }
+        /* line 136, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+        #global-nav nav li .toggler:focus {
+          text-decoration: none; }
+        @media (min-width: 769px) {
+          /* line 133, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+          #global-nav nav li .toggler {
+            position: relative;
+            left: auto;
+            z-index: 10; } }
+  /* line 149, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+  #global-nav.open .toggler {
+    background: #28a197; }
+  /* line 152, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+  #global-nav.open .toggler.current {
+    background: #0b0c0c; }
+  /* line 157, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+  #global-nav .home a {
+    position: relative; }
+    /* line 159, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+    #global-nav .home a small {
+      position: absolute;
+      top: 0.8em;
+      text-transform: uppercase;
+      color: white;
+      -webkit-font-smoothing: subpixel-antialiased;
+      background-color: #dee0e2;
+      padding: 2px 5px 0;
+      margin-left: 10px; }
+      /* line 170, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+      #global-nav .home a small.alpha {
+        background-color: #d53880; }
+      /* line 174, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_global-nav.scss */
+      #global-nav .home a small.beta {
+        background-color: #f47738; }
+
+/* line 24, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+details {
+  display: block;
+  box-sizing: border-box;
+  padding: 1em 1em 0.25em 1em;
+  margin: 1em -1em 1.5em -1em;
+  background-color: transparent;
+  margin: 0 -1em 0 -1em; }
+  /* line 71, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  details > *:first-child {
+    margin-top: 0em; }
+  /* line 76, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  details ul, details ol {
+    padding-left: 1em; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  details .inner {
+    background-color: white;
+    border: 1px solid #bfc1c3;
+    padding: 2em;
+    margin-bottom: 0.75em; }
+    /* line 95, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+    details .inner input[type="text"],
+    details .inner textarea {
+      background-color: #f8f8f8; }
+  /* line 28, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+  details summary {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    font-size: 1.9rem;
+    line-height: 1.31579;
+    font-weight: 400;
+    text-transform: none;
+    color: #2E3191;
+    cursor: pointer;
+    display: block;
+    text-decoration: underline;
+    margin-bottom: 0.5em;
+    margin-top: 0.2em; }
+    @media (max-width: 640px) {
+      /* line 28, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+      details summary {
+        font-size: 1.6rem;
+        line-height: 1.25; } }
+    /* line 36, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+    details summary:hover {
+      color: #1D97FF; }
+    /* line 37, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+    details summary:focus {
+      background-color: #FFBF47;
+      outline: 3px solid #FFBF47; }
+  /* line 42, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+  details[open] {
+    margin: 0 -1em 0 -1em; }
+    /* line 53, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+    details[open] summary:focus {
+      outline: none;
+      background-color: transparent; }
+
+/* Styles for browsers that don't yet natively support details/summary */
+/* line 60, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+.no-details details > * {
+  display: none; }
+
+/* line 61, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+.no-details details > summary:before {
+  float: left;
+  margin-top: 1px;
+  margin-right: -1px;
+  width: 20px;
+  content: '► '; }
+
+/* line 62, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+.no-details details.open > summary:before {
+  content: '▼ '; }
+
+/* line 63, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+.no-details details summary {
+  display: block; }
+
+/* line 82 */
+nav.progress-indicator {
+  padding-left: 1em;
+  border-bottom: 3px solid #EBEBEB;
+  margin: -1em -2em 1em; }
+  /* line 86 */
+  nav.progress-indicator ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+    margin-bottom: -3px; }
+    @media (max-width: 640px) {
+      /* line 86 */
+      nav.progress-indicator ol {
+        margin: 0.5em 0; } }
+  /* line 96 */
+  nav.progress-indicator li {
+    float: left;
+    margin: 0 1em;
+    padding: 0.75em 0; }
+    /* line 100 */
+    nav.progress-indicator li.active {
+      border-bottom: 3px solid #28a197; }
+      @media (max-width: 640px) {
+        /* line 100 */
+        nav.progress-indicator li.active {
+          border: 0;
+          font-weight: bold;
+          color: #28a197; } }
+    @media (max-width: 640px) {
+      /* line 96 */
+      nav.progress-indicator li {
+        width: 100%;
+        margin-left: 0.5em;
+        padding: 0.25em; } }
+
+/* line 13, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_accordion-form.scss */
+.accordion-form {
+  margin-bottom: 2em; }
+  /* line 15, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_accordion-form.scss */
+  .accordion-form .section {
+    background-color: white; }
+    /* line 18, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_accordion-form.scss */
+    .accordion-form .section.current {
+      border: 1px solid #28a197;
+      margin-bottom: 0.6em; }
+      /* line 22, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_accordion-form.scss */
+      .accordion-form .section.current .accordion-header {
+        display: block;
+        margin: 0;
+        padding: 0.5em 1em;
+        background-color: #28a197;
+        color: white;
+        -webkit-font-smoothing: subpixel-antialiased;
+        font-weight: normal; }
+      /* line 32, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_accordion-form.scss */
+      .accordion-form .section.current .accordion-content {
+        display: block;
+        visibility: visible;
+        max-height: 600em;
+        padding: 0 2em;
+        background-color: white; }
+      /* line 40, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_accordion-form.scss */
+      .accordion-form .section.current .accordion-actions {
+        list-style-image: none;
+        list-style-type: none;
+        padding: 0.5em 2em 0.5em 2em;
+        margin: 1em -2em 0 -2em;
+        background-color: #f9f9f9;
+        clear: both;
+        overflow: hidden; }
+    /* line 51, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_accordion-form.scss */
+    .accordion-form .section.complete {
+      display: block; }
+      /* line 54, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_accordion-form.scss */
+      .accordion-form .section.complete .accordion-header {
+        display: none; }
+      /* line 58, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_accordion-form.scss */
+      .accordion-form .section.complete .accordion-summary {
+        display: block;
+        margin: 0; }
+        /* line 61, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_accordion-form.scss */
+        .accordion-form .section.complete .accordion-summary a {
+          display: block;
+          margin-bottom: 0.5em;
+          padding: 0.5em 2.5em 0.5em 2em;
+          background-color: #f8f8f8;
+          background-image: url("/images/icon/progress-tick.png");
+          background-repeat: no-repeat;
+          background-position: 10px 50%;
+          color: #0b0c0c;
+          text-decoration: none; }
+          /* line 71, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_accordion-form.scss */
+          .accordion-form .section.complete .accordion-summary a .edit {
+            font-family: "nta", Arial, sans-serif;
+            font-size: 16px;
+            font-size: 1.6rem;
+            line-height: 1.25;
+            font-weight: 300;
+            text-transform: none;
+            float: right;
+            margin-right: -2em;
+            margin-top: 0.25em;
+            color: #2e3191; }
+            @media (max-width: 640px) {
+              /* line 71, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_accordion-form.scss */
+              .accordion-form .section.complete .accordion-summary a .edit {
+                font-size: 1.4rem;
+                line-height: 1.14286; } }
+          /* line 80, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_accordion-form.scss */
+          .accordion-form .section.complete .accordion-summary a:hover {
+            background-color: #f0f0f0;
+            text-decoration: underline; }
+            /* line 83, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_accordion-form.scss */
+            .accordion-form .section.complete .accordion-summary a:hover .edit {
+              color: #2e3191;
+              text-decoration: underline; }
+
+/* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_accordion-form.scss */
+.js-enabled .section .accordion-header {
+  display: none; }
+/* line 105, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_accordion-form.scss */
+.js-enabled .section .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  position: relative; }
+/* line 111, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_accordion-form.scss */
+.js-enabled .section .accordion-summary {
+  display: none; }
+
+/* line 128 */
+.accordion-form .section.current .accordion-actions p {
+  width: 50%;
+  float: left; }
+/* line 132 */
+.accordion-form .section.current .accordion-actions .secondary-actions {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 50%; }
+  /* line 137 */
+  .accordion-form .section.current .accordion-actions .secondary-actions li {
+    float: right;
+    list-style-type: none;
+    list-style-image: none;
+    padding: 0;
+    margin: 0.8em 0 0 0.5em; }
+
+/* line 150 */
+.section-intro {
+  margin: 2em 0 1em 0;
+  padding-right: 17%;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #bfc1c3; }
+
+/* line 162 */
+.person-summary {
+  background: url("/images/icon/person.png") no-repeat 0px 3px;
+  background-size: Auto 4.2em;
+  padding-left: 4em;
+  margin-bottom: 1em;
+  min-height: 4em;
+  border-bottom: 1px solid #bfc1c3;
+  padding-bottom: 1em; }
+  /* line 170 */
+  .person-summary h3, .person-summary p {
+    margin: 0; }
+
+/* line 174 */
+.actions {
+  display: inline-block;
+  margin: 0;
+  padding: 0; }
+  /* line 178 */
+  .actions .button, .actions .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary, .ui-datepicker .ui-datepicker-buttonpane .actions .ui-priority-primary {
+    margin-top: 1.2em; }
+  /* line 181 */
+  .actions li {
+    list-style-type: none;
+    list-style-image: none;
+    padding: 0;
+    margin: 0 1em 0 0;
+    display: inline-block; }
+
+/* line 189 */
+.add-another {
+  margin: 2em 0; }
+
+/* line 194 */
+.not-sure {
+  float: right; }
+
+/* line 208 */
+.document-list {
+  box-sizing: border-box;
+  padding: 1em 1em 0.25em 1em;
+  margin: 1em -1em 1.5em -1em;
+  background-color: #dee0e2;
+  margin-top: 2em; }
+  /* line 71, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  .document-list > *:first-child {
+    margin-top: 0em; }
+  /* line 76, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  .document-list ul, .document-list ol {
+    padding-left: 1em; }
+  /* line 83, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  .document-list input[type="text"],
+  .document-list textarea {
+    background-color: white; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  .document-list .inner {
+    background-color: white;
+    border: 1px solid #bfc1c3;
+    padding: 2em;
+    margin-bottom: 0.75em; }
+    /* line 95, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+    .document-list .inner input[type="text"],
+    .document-list .inner textarea {
+      background-color: #f8f8f8; }
+
+/* line 213 */
+.LPA-list .button, .LPA-list .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary, .ui-datepicker .ui-datepicker-buttonpane .LPA-list .ui-priority-primary {
+  top: 0.5em; }
+
+/* line 217 */
+.address.vcard {
+  width: 30%;
+  margin-left: -1em; }
+
+/* line 25, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form .group {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0.75em 0; }
+  @media (max-width: 640px) {
+    /* line 25, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .form .group {
+      font-size: 1.6rem;
+      line-height: 1.25; } }
+/* line 47, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="email"],
+.form input[type="date"],
+.form input[type="datetime"],
+.form input[type="datetime-local"],
+.form input[type="email"],
+.form input[type="month"],
+.form input[type="number"],
+.form input[type="search"],
+.form input[type="tel"],
+.form input[type="time"],
+.form input[type="url"],
+.form input[type="week"],
+.form select[size],
+.form textarea {
+  background-color: #f9f9f9;
+  border: 2px inset;
+  font-size: 1em;
+  padding: 0.1em 0 0.1em 0.4em; }
+/* line 57, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form textarea {
+  min-height: 10em;
+  height: auto; }
+/* line 62, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form details {
+  padding: 0 1em 0 1em; }
+/* line 67, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form label {
+  color: #0b0c0c;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  vertical-align: top;
+  padding: 0.25em 0; }
+  @media (max-width: 640px) {
+    /* line 67, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .form label {
+      font-size: 1.6rem;
+      line-height: 1.25; } }
+/* line 74, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form .option.group {
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  margin-left: -1em; }
+  /* line 78, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form .option.group label {
+    width: auto;
+    float: none;
+    text-align: left; }
+  /* line 83, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form .option.group li {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0; }
+/* line 91, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form input[type="checkbox"],
+.form input[type="radio"] {
+  margin-right: 0.25em;
+  vertical-align: 2px; }
+/* line 97, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form .hint, .form .ui-datepicker-append {
+  clear: left;
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none; }
+  @media (max-width: 640px) {
+    /* line 97, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .form .hint, .form .ui-datepicker-append {
+      font-size: 1.4rem;
+      line-height: 1.14286; } }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form .hint:last-child, .form .ui-datepicker-append:last-child {
+    padding-top: 0.25em; }
+  /* line 103, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form .hint:first-child, .form .ui-datepicker-append:first-child {
+    padding-bottom: 0.25em; }
+/* line 106, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form .inline .help {
+  float: left; }
+/* line 111, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form label abbr {
+  border-bottom: none;
+  color: #0b0c0c; }
+/* line 117, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form .action.group .button, .form .action.group .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary, .ui-datepicker .ui-datepicker-buttonpane .form .action.group .ui-priority-primary {
+  margin-right: 0.5em; }
+/* line 121, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form .inline.option label {
+  float: left;
+  margin-right: 1em; }
+/* line 127, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form .inline .group {
+  float: left;
+  margin-top: 0;
+  width: auto; }
+/* line 134, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form legend {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  margin-bottom: 0.5em;
+  color: #0b0c0c; }
+  @media (max-width: 640px) {
+    /* line 134, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .form legend {
+      font-size: 2rem;
+      line-height: 1.2; } }
+/* line 139, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form fieldset {
+  margin: 0;
+  margin-top: 2em; }
+  /* line 143, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form fieldset fieldset {
+    margin-top: 0; }
+    /* line 145, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .form fieldset fieldset legend {
+      font-family: "nta", Arial, sans-serif;
+      font-size: 19px;
+      font-size: 1.9rem;
+      line-height: 1.31579;
+      font-weight: 400;
+      text-transform: none;
+      color: #0b0c0c; }
+      @media (max-width: 640px) {
+        /* line 145, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+        .form fieldset fieldset legend {
+          font-size: 1.6rem;
+          line-height: 1.25; } }
+/* line 158, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form .validation-summary {
+  border: 3px solid #df3034;
+  box-sizing: border-box;
+  padding: 1em 1em 0.25em 1em;
+  margin: 1em -1em 1.5em -1em;
+  background-color: #fef7f7; }
+  /* line 71, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  .form .validation-summary > *:first-child {
+    margin-top: 0em; }
+  /* line 76, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  .form .validation-summary ul, .form .validation-summary ol {
+    padding-left: 1em; }
+  /* line 83, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  .form .validation-summary input[type="text"],
+  .form .validation-summary textarea {
+    background-color: white; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  .form .validation-summary .inner {
+    background-color: white;
+    border: 1px solid #bfc1c3;
+    padding: 2em;
+    margin-bottom: 0.75em; }
+    /* line 95, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+    .form .validation-summary .inner input[type="text"],
+    .form .validation-summary .inner textarea {
+      background-color: #f8f8f8; }
+  /* line 161, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form .validation-summary h1 {
+    margin-bottom: 0; }
+  /* line 164, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form .validation-summary a {
+    color: #df3034;
+    text-decoration: none; }
+    /* line 167, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .form .validation-summary a:hover {
+      text-decoration: underline; }
+  /* line 171, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form .validation-summary ul, .form .validation-summary ol {
+    color: #df3034; }
+  /* line 174, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form .validation-summary ul {
+    padding-left: 2.2em; }
+    /* line 176, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .form .validation-summary ul li {
+      list-style-type: none;
+      list-style-image: none; }
+  /* line 181, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form .validation-summary li {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none; }
+    @media (max-width: 640px) {
+      /* line 181, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+      .form .validation-summary li {
+        font-size: 1.4rem;
+        line-height: 1.14286; } }
+/* line 187, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form .validation {
+  background-color: #fef7f7;
+  border-left: 3px solid #df3034;
+  margin: 0 -1em 0.5em -1em;
+  padding: 0.75em 1em 1em 1em; }
+  /* line 192, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form .validation .validation-message, .form .validation li {
+    color: #df3034;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none;
+    display: block;
+    padding-bottom: 0.5em; }
+    @media (max-width: 640px) {
+      /* line 192, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+      .form .validation .validation-message, .form .validation li {
+        font-size: 1.4rem;
+        line-height: 1.14286; } }
+/* line 208, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form input[type="text"] {
+  min-width: 2em; }
+/* line 209, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form input[type="email"] {
+  width: 20em; }
+/* line 210, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form input[type="url"] {
+  width: 99%; }
+/* line 212, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form input.search {
+  width: 15em; }
+/* line 213, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form input.password {
+  width: 15em; }
+/* line 214, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form input.email {
+  width: 20em; }
+/* line 215, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form input.name {
+  width: 15em; }
+/* line 216, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form input.url {
+  width: 99%; }
+/* line 217, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form input.full-name {
+  width: 20em; }
+/* line 218, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form input.street {
+  width: 15em; }
+/* line 219, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form input.town {
+  width: 15em; }
+/* line 220, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form input.postcode {
+  width: 5em; }
+/* line 221, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form textarea.big {
+  width: 20em;
+  height: 8em; }
+/* line 223, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form textarea.full-size {
+  width: 99%;
+  height: 15em; }
+/* line 238, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form label {
+  display: block; }
+/* line 239, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form input {
+  margin-left: 0; }
+/* line 240, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form legend span {
+  padding-bottom: 0.3em;
+  display: block; }
+/* line 247, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form .inline input[type=text],
+.form .inline select,
+.form .inline textarea {
+  margin-right: 0.5em; }
+/* line 233 */
+.form .validation {
+  margin: 0.5em 0;
+  padding: 0.25em 1em 0 0.5em; }
+  /* line 236 */
+  .form .validation li {
+    padding-left: 0; }
+
+/* line 339, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.person-form .form label {
+  display: -moz-inline-stack;
+  display: inline-block;
+  text-align: left;
+  width: 8em; }
+  /* line 348, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .person-form .form label.visuallyhidden + input,
+  .person-form .form label.visuallyhidden + select,
+  .person-form .form label.visuallyhidden + textarea {
+    margin-left: 8.7em; }
+/* line 354, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.person-form .form .hint, .person-form .form .ui-datepicker-append {
+  margin-left: 10.25em; }
+/* line 355, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.person-form .form .action.group {
+  padding-left: 8em; }
+/* line 360, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.person-form .form input,
+.person-form .form select,
+.person-form .form textarea,
+.person-form .form .uneditable-field {
+  display: -moz-inline-stack;
+  display: inline-block;
+  margin: 0 0.5em; }
+/* line 364, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.person-form .form input[type="checkbox"] {
+  margin-left: 0.25em; }
+/* line 367, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.person-form .form input[type="radio"] {
+  margin-left: 0em; }
+/* line 370, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.person-form .form select {
+  margin: 0.25em 0.5em; }
+/* line 375, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.person-form .form fieldset legend {
+  display: block;
+  padding-left: 7em; }
+/* line 380, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.person-form .form fieldset fieldset {
+  margin-top: 2em; }
+  /* line 382, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .person-form .form fieldset fieldset legend {
+    padding-left: 0;
+    margin-bottom: 0; }
+    /* line 387, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .person-form .form fieldset fieldset legend span {
+      width: 8em;
+      text-align: left;
+      position: relative;
+      float: left;
+      margin: 0.25em 0; }
+  /* line 398, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .person-form .form fieldset fieldset .inline .group {
+    margin-bottom: 0.5em; }
+/* line 408, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.person-form .form .option.group label {
+  display: block;
+  padding-left: 8.5em; }
+/* line 413, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.person-form .form .option.group .validation-message, .person-form .form .option.group .validation li, .person-form .form .validation .option.group li {
+  width: 8em;
+  display: block;
+  float: left; }
+/* line 421, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.person-form .form .inline {
+  padding-left: 8.25em; }
+  /* line 423, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .person-form .form .inline label {
+    width: auto;
+    float: none;
+    margin-left: 0.5em;
+    text-align: left; }
+    /* line 432, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .person-form .form .inline label.visuallyhidden + input,
+    .person-form .form .inline label.visuallyhidden + select,
+    .person-form .form .inline label.visuallyhidden + textarea {
+      margin-left: 0.5em;
+      margin-right: 0; }
+  /* line 439, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .person-form .form .inline.option.group {
+    padding-left: 9.5em; }
+    /* line 442, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .person-form .form .inline.option.group label {
+      padding-left: 0; }
+
+/* line 24, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+details {
+  display: block;
+  box-sizing: border-box;
+  padding: 1em 1em 0.25em 1em;
+  margin: 1em -1em 1.5em -1em;
+  background-color: transparent;
+  margin: 0 -1em 0 -1em; }
+  /* line 71, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  details > *:first-child {
+    margin-top: 0em; }
+  /* line 76, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  details ul, details ol {
+    padding-left: 1em; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  details .inner {
+    background-color: white;
+    border: 1px solid #bfc1c3;
+    padding: 2em;
+    margin-bottom: 0.75em; }
+    /* line 95, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+    details .inner input[type="text"],
+    details .inner textarea {
+      background-color: #f8f8f8; }
+  /* line 28, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+  details summary {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    font-size: 1.9rem;
+    line-height: 1.31579;
+    font-weight: 400;
+    text-transform: none;
+    color: #2E3191;
+    cursor: pointer;
+    display: block;
+    text-decoration: underline;
+    margin-bottom: 0.5em;
+    margin-top: 0.2em; }
+    @media (max-width: 640px) {
+      /* line 28, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+      details summary {
+        font-size: 1.6rem;
+        line-height: 1.25; } }
+    /* line 36, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+    details summary:hover {
+      color: #1D97FF; }
+    /* line 37, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+    details summary:focus {
+      background-color: #FFBF47;
+      outline: 3px solid #FFBF47; }
+  /* line 42, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+  details[open] {
+    margin: 0 -1em 0 -1em; }
+    /* line 53, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+    details[open] summary:focus {
+      outline: none;
+      background-color: transparent; }
+
+/* Styles for browsers that don't yet natively support details/summary */
+/* line 60, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+.no-details details > * {
+  display: none; }
+
+/* line 61, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+.no-details details > summary:before {
+  float: left;
+  margin-top: 1px;
+  margin-right: -1px;
+  width: 20px;
+  content: '► '; }
+
+/* line 62, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+.no-details details.open > summary:before {
+  content: '▼ '; }
+
+/* line 63, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+.no-details details summary {
+  display: block; }
+
+/* line 24, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+details {
+  display: block;
+  box-sizing: border-box;
+  padding: 1em 1em 0.25em 1em;
+  margin: 1em -1em 1.5em -1em;
+  background-color: transparent;
+  margin: 0 -1em 0 -1em; }
+  /* line 71, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  details > *:first-child {
+    margin-top: 0em; }
+  /* line 76, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  details ul, details ol {
+    padding-left: 1em; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  details .inner {
+    background-color: white;
+    border: 1px solid #bfc1c3;
+    padding: 2em;
+    margin-bottom: 0.75em; }
+    /* line 95, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+    details .inner input[type="text"],
+    details .inner textarea {
+      background-color: #f8f8f8; }
+  /* line 28, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+  details summary {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    font-size: 1.9rem;
+    line-height: 1.31579;
+    font-weight: 400;
+    text-transform: none;
+    color: #2E3191;
+    cursor: pointer;
+    display: block;
+    text-decoration: underline;
+    margin-bottom: 0.5em;
+    margin-top: 0.2em; }
+    @media (max-width: 640px) {
+      /* line 28, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+      details summary {
+        font-size: 1.6rem;
+        line-height: 1.25; } }
+    /* line 36, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+    details summary:hover {
+      color: #1D97FF; }
+    /* line 37, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+    details summary:focus {
+      background-color: #FFBF47;
+      outline: 3px solid #FFBF47; }
+  /* line 42, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+  details[open] {
+    margin: 0 -1em 0 -1em; }
+    /* line 53, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+    details[open] summary:focus {
+      outline: none;
+      background-color: transparent; }
+
+/* Styles for browsers that don't yet natively support details/summary */
+/* line 60, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+.no-details details > * {
+  display: none; }
+
+/* line 61, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+.no-details details > summary:before {
+  float: left;
+  margin-top: 1px;
+  margin-right: -1px;
+  width: 20px;
+  content: '► '; }
+
+/* line 62, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+.no-details details.open > summary:before {
+  content: '▼ '; }
+
+/* line 63, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_show-hide.scss */
+.no-details details summary {
+  display: block; }
+
+/* line 280, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.hidden-controls details {
+  padding-top: 0; }
+  /* line 282, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .hidden-controls details summary {
+    text-decoration: none;
+    margin-bottom: 0; }
+    /* line 285, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .hidden-controls details summary:hover {
+      color: #333;
+      font-weight: 300; }
+    /* line 289, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .hidden-controls details summary::-webkit-details-marker {
+      display: none; }
+  /* line 293, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .hidden-controls details[open] {
+    padding-top: 0; }
+  /* line 296, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .hidden-controls details textarea {
+    margin: 0 0 0.75em 0; }
+
+/* Styles for browsers that don't yet natively support details/summary */
+/* line 302, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.no-details .hidden-controls details > summary:before {
+  display: none; }
+
+/* line 303, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.no-details .hidden-controls details.open > summary:before {
+  display: none; }
+
+/* line 317, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.emphasised input[type="checkbox"],
+.emphasised input[type="radio"] {
+  position: relative; }
+
+/* line 320, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.emphasised.option.group label {
+  display: block;
+  padding: 0.5em 0 0.25em 0.5em; }
+
+/* line 326, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.emphasised label.radio:hover,
+.emphasised label.checkbox:hover {
+  background-color: #d5e8f3; }
+
+/* line 329, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.checked {
+  background-color: #d5e8f3; }
+
+/* line 258 */
+.link-style {
+  color: #2e3191;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0.5em; }
+  /* line 263 */
+  .link-style:hover {
+    color: #2e8aca; }
+
+/* line 268 */
+hr {
+  height: 1px;
+  border: 0;
+  background-color: #bfc1c3;
+  margin: 2em 0; }
+
+/* line 275 */
+.finished-LPA {
+  overflow: hidden;
+  margin: 1em 0; }
+  /* line 278 */
+  .finished-LPA img {
+    width: 4.9em;
+    float: left;
+    margin: 0.1em 1em 0 0; }
+
+/* line 288 */
+.LPA-details {
+  min-width: 17em;
+  overflow: hidden;
+  margin: 1em 0;
+  border: 1px solid #bfc1c3;
+  padding: 1em; }
+  /* line 290 */
+  .LPA-details h3, .LPA-details li {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none; }
+    @media (max-width: 640px) {
+      /* line 290 */
+      .LPA-details h3, .LPA-details li {
+        font-size: 1.4rem;
+        line-height: 1.14286; } }
+  /* line 293 */
+  .LPA-details h3 {
+    font-weight: bold;
+    margin: 0; }
+  /* line 297 */
+  .LPA-details ul {
+    margin: 0; }
+  /* line 300 */
+  .LPA-details ul, .LPA-details li {
+    padding: 0;
+    list-style-image: none;
+    list-style-type: none; }
+  /* line 307 */
+  .LPA-details.right {
+    float: right;
+    margin: 0.25em -5em 0 2em; }
+  /* line 313 */
+  .LPA-details .LPA-actions {
+    margin-top: 0.5em; }
+
+/* line 319 */
+article .next.steps h3 {
+  margin-top: 0.15em; }
+/* line 322 */
+article .next.steps p {
+  margin: 0.75em 0; }
+/* line 325 */
+article .next.steps .form-download {
+  width: 80%; }
+
+/* line 330 */
+article .make-LPA.steps {
+  border-top: 2px solid #bfc1c3;
+  border-bottom: 2px solid #bfc1c3;
+  margin: 0;
+  margin-right: -1em;
+  padding: 0;
+  /*
+  zoom: 1;
+  &:before,
+  &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }*/
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 2em;
+  margin-right: -9em; }
+  /* line 14, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_grid.scss */
+  article .make-LPA.steps > * {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    border-right: solid 1em white;
+    margin-bottom: 1em;
+    width: 25%; }
+    /* line 24, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_grid.scss */
+    article .make-LPA.steps > *:first-child {
+      margin-top: 0; }
+    @media (max-width: 640px) {
+      /* line 14, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_grid.scss */
+      article .make-LPA.steps > * {
+        width: 100% !important; } }
+  /* line 336 */
+  article .make-LPA.steps li {
+    margin-bottom: 0; }
+  /* line 340 */
+  article .make-LPA.steps strong {
+    margin: 0.9em 0 0 1.5em;
+    display: block; }
+  /* line 344 */
+  article .make-LPA.steps p {
+    margin: 0.75em 0; }
+  /* line 347 */
+  article .make-LPA.steps img {
+    width: 75%; }
+  /* line 350 */
+  article .make-LPA.steps .button, article .make-LPA.steps .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary, .ui-datepicker .ui-datepicker-buttonpane article .make-LPA.steps .ui-priority-primary {
+    width: 86%;
+    display: block;
+    text-align: center; }
+
+/* line 359 */
+.title select {
+  display: none; }
+
+/* line 363 */
+.form .role-select {
+  overflow: auto;
+  border-bottom: 1px solid #bfc1c3;
+  margin: 0 0 0 -1.25em;
+  padding: 1em 0 1em 1.25em;
+  background: #f8f8f8; }
+  /* line 369 */
+  .form .role-select a {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none; }
+    @media (max-width: 640px) {
+      /* line 369 */
+      .form .role-select a {
+        font-size: 1.4rem;
+        line-height: 1.14286; } }
+  /* line 372 */
+  .form .role-select select {
+    min-width: 11.5em; }
+
+/* line 379 */
+.duplicate-role-alert {
+  border: 3px solid #DF3034;
+  box-sizing: border-box;
+  padding: 1em;
+  margin: 1em 1.5em 1.5em 0em;
+  background-color: #FEF7F7; }
+  /* line 385 */
+  .duplicate-role-alert label {
+    width: auto;
+    display: inline; }
+
+/* line 393 */
+#address-postcode,
+#postcode-lookup {
+  width: 6.3em; }
+
+/* line 396 */
+.postcode-lookup {
+  vertical-align: top; }
+
+/* line 399 */
+.address-list {
+  width: 16em; }
+
+/* line 402 */
+#popup .address-fields-link {
+  margin-left: 10.3em;
+  overflow: hidden;
+  list-style-type: none;
+  list-style-image: none; }
+  /* line 407 */
+  #popup .address-fields-link li {
+    float: left;
+    line-height: 1em;
+    padding: 0; }
+    /* line 411 */
+    #popup .address-fields-link li:nth-child(2) {
+      padding-left: 0.5em;
+      border-left: 1px solid #bfc1c3;
+      margin-left: 0.5em; }
+
+/* line 421 */
+#popup.form-popup .hint, #popup.form-popup .ui-datepicker-append {
+  width: 19em; }
+
+/* line 426 */
+#attorneyActDecisions,
+.details-textbox textarea {
+  background-color: #F9F9F9;
+  padding: 0.1em 0 0.1em 0.4em;
+  width: 98.5%;
+  height: 20em;
+  margin-bottom: 1em; }
+
+/* line 435 */
+.relationship-other {
+  margin: -1em 0 1em 8em; }
+  /* line 437 */
+  .relationship-other label {
+    display: block;
+    font-size: 16px; }
+  /* line 441 */
+  .relationship-other input {
+    margin-left: 0; }
+
+/* line 451 */
+#form-populate {
+  float: right;
+  padding: 1em 4em; }
+
+/* line 457 */
+#popup.form-popup {
+  width: 38em;
+  margin: 2em auto 20em auto;
+  background-color: white;
+  min-height: 26em;
+  position: static;
+  overflow: hidden;
+  padding: 0;
+  border: 0.5em solid #222; }
+  /* line 20, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_popups.scss */
+  #popup.form-popup .close {
+    top: 0.5em;
+    right: 0.5em; }
+  /* line 26, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_popups.scss */
+  #popup.form-popup .header {
+    padding: 1em 0 0.8em 2em;
+    margin: 0 -1em;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    font-size: 1.9rem;
+    line-height: 1.31579;
+    font-weight: 400;
+    text-transform: none;
+    border-bottom: 1px solid #bfc1c3; }
+    @media (max-width: 640px) {
+      /* line 26, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_popups.scss */
+      #popup.form-popup .header {
+        font-size: 1.6rem;
+        line-height: 1.25; } }
+  /* line 34, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_popups.scss */
+  #popup.form-popup .action.group {
+    clear: both;
+    border-top: 1px solid #bfc1c3;
+    margin: 1em 0 0 -2em;
+    padding: 1em 2em; }
+  /* line 460 */
+  #popup.form-popup .header {
+    background: url("/images/icon/person.png") no-repeat 1em 17px;
+    background-size: 2.5%;
+    padding-left: 2.5em;
+    font-weight: bold; }
+  /* line 467 */
+  #popup.form-popup .action.group {
+    padding-left: 10em; }
+    /* line 469 */
+    #popup.form-popup .action.group .button, #popup.form-popup .action.group .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary, .ui-datepicker .ui-datepicker-buttonpane #popup.form-popup .action.group .ui-priority-primary {
+      margin-right: 4.5em; }
+
+/* line 475 */
+.person-form {
+  position: relative;
+  padding-left: 1em; }
+  /* line 479 */
+  .person-form input[type="text"],
+  .person-form input[type="email"] {
+    width: 15em; }
+
+/* line 490 */
+.form .capture-dates {
+  width: 103.5%; }
+  /* line 492 */
+  .form .capture-dates td, .form .capture-dates th {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    font-size: 1.9rem;
+    line-height: 1.31579;
+    font-weight: 400;
+    text-transform: none;
+    vertical-align: middle; }
+    @media (max-width: 640px) {
+      /* line 492 */
+      .form .capture-dates td, .form .capture-dates th {
+        font-size: 1.6rem;
+        line-height: 1.25; } }
+  /* line 496 */
+  .form .capture-dates label {
+    width: 6em; }
+  /* line 499 */
+  .form .capture-dates .controls label {
+    margin-top: -2em; }
+  /* line 502 */
+  .form .capture-dates h3 {
+    font-size: 1.1875em; }
+  /* line 506 */
+  .form .capture-dates .controls label,
+  .form .capture-dates h3 {
+    font-weight: bold; }
+  /* line 509 */
+  .form .capture-dates .control-label {
+    text-align: left; }
+
+/* line 513 */
+.card-images {
+  display: inline-block;
+  line-height: 4em;
+  height: 2em;
+  margin: -1em 0 0 0.5em; }
+  /* line 518 */
+  .card-images img {
+    width: 2em;
+    margin-top: 0.5em; }
+
+/* line 523 */
+#donor-signature {
+  padding-left: 0; }
+
+/* line 532 */
+.form-download {
+  background: url(https://d17tffe05zdvwj.cloudfront.net/static/icon-file-download-00b5dbb3ea8a18c444a08497b3d03d56.png) no-repeat scroll 98% 1em #d5e8f3;
+  margin: 1em -1em 1.5em -1em;
+  padding: 0.25em 1em 0.25em 1em; }
+  /* line 536 */
+  .form-download p {
+    padding-right: 3em; }
+  /* line 539 */
+  .form-download a {
+    display: block; }
+
+/* line 544 */
+#sign-in-reminder {
+  padding-left: 0; }
+
+/* ================================================================
+ * PROCESS OVERVIEW
+ * ================================================================
+ *
+ * The three-panelled diagrams that explain the LPA process 
+ */
+/* line 562 */
+.process.overview figure {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none; }
+  @media (max-width: 640px) {
+    /* line 562 */
+    .process.overview figure {
+      font-size: 1.4rem;
+      line-height: 1.14286; } }
+
+/* line 570 */
+.process img {
+  margin: 1em;
+  max-width: 9em;
+  width: 100%;
+  margin: 1em; }
+/* line 576 */
+.process li h3 {
+  margin: 0 0 1em 0;
+  padding: 0.5em 0;
+  border-bottom: 3px solid #28A197; }
+/* line 582 */
+.process figcaption a {
+  display: block; }
+/* line 585 */
+.process .button, .process .ui-datepicker .ui-datepicker-buttonpane .ui-priority-primary, .ui-datepicker .ui-datepicker-buttonpane .process .ui-priority-primary {
+  margin: 1em auto; }
+
+/* ================================================================
+ * ACCOUNT MANAGEMENT AND DASHBOARD
+ * ================================================================
+ */
+/* line 599 */
+.two-column {
+  margin: 0;
+  padding: 0;
+  /*
+  zoom: 1;
+  &:before,
+  &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }*/
+  overflow: hidden;
+  *zoom: 1; }
+  /* line 21, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_regular-grid.scss */
+  .two-column > * {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+    float: left;
+    width: 48.75%;
+    margin-right: 2.5%;
+    margin-bottom: 1em; }
+    /* line 43, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_regular-grid.scss */
+    .two-column > *:nth-child(2n) {
+      margin-right: 0; }
+    /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_regular-grid.scss */
+    .two-column > * *:first-child {
+      margin-top: 0; }
+  /* line 601 */
+  .two-column > div {
+    background-color: #f8f8f8;
+    padding-top: 1em; }
+    /* line 607 */
+    .two-column > div .accounts-form input[type='text'],
+    .two-column > div .accounts-form input[type='email'],
+    .two-column > div .accounts-form input[type='password'] {
+      background: white; }
+  /* line 612 */
+  .two-column form {
+    padding: 0 1em; }
+
+/* line 617 */
+.delete-lpa {
+  float: right; }
+
+/* line 621 */
+#populatetestdates {
+  float: right; }
+
+/* line 627 */
+#checklist .person-summary {
+  background: none;
+  padding-left: 0; }
+  /* line 630 */
+  #checklist .person-summary h3 {
+    padding: 0.25em 0; }
+    /* line 632 */
+    #checklist .person-summary h3 span {
+      font-weight: normal; }
+  /* line 636 */
+  #checklist .person-summary label {
+    width: auto; }
+
+/* line 643 */
+.date-field input[type="text"] {
+  width: 6.5em; }
+
+/* line 649 */
+#donor-sign {
+  border-top: 1px solid #bfc1c3;
+  margin: 1em -1em -1.25em;
+  padding: 1em 4em 0.5em 3em;
+  background: #f8f8f8; }
+  /* line 654 */
+  #donor-sign h4 {
+    font-weight: bold; }
+  /* line 657 */
+  #donor-sign p {
+    font-size: 16px; }
+  /* line 660 */
+  #donor-sign label {
+    padding-left: 0; }
+
+/* line 666 */
+#cp-statement h4 {
+  font-weight: bold; }
+/* line 669 */
+#cp-statement textarea {
+  width: 92%; }
+/* line 672 */
+#cp-statement .hint, #cp-statement .ui-datepicker-append {
+  margin-left: 0.25em; }
+
+/* line 684 */
+.attorney-applicant {
+  padding-left: 8em;
+  margin-top: -1.8em; }
+
+/* line 689 */
+.date-field label {
+  margin-top: 0.5em; }
+
+/* line 692 */
+input.hasDatepicker {
+  margin: -0.5em 0 0 0.5em; }
+
+/*
+.accordion-form{
+  counter-reset: question;
+}
+.accordion-summary a:before, .accordion-header:before {  
+    counter-increment: question;  
+    content: counter(question) ". ";  
+}
+*/
+/* line 708 */
+#decisions-form label {
+  overflow: hidden;
+  padding-right: 67%;
+  position: relative;
+  padding-left: 1.6em;
+  padding-bottom: 3em;
+  margin-bottom: 1em; }
+  /* line 715 */
+  #decisions-form label:first-child {
+    padding-bottom: 5em; }
+  /* line 716 */
+  #decisions-form label:last-child {
+    padding-bottom: 1.5em; }
+  /* line 717 */
+  #decisions-form label input {
+    margin-left: -1em;
+    margin-top: 0.15em;
+    position: absolute; }
+/* line 723 */
+#decisions-form .option-help {
+  display: block;
+  padding: 0.25em 1em 1em 1em;
+  float: left;
+  width: 63%;
+  margin-top: -0.5em;
+  font-size: 16px;
+  position: absolute;
+  top: 1em;
+  right: 0; }
+/* line 734 */
+#decisions-form .subtitle {
+  display: block;
+  padding: 1em;
+  float: left;
+  width: 35%; }

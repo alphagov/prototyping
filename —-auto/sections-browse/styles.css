@@ -1,0 +1,323 @@
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+/* line 7 */
+.category-page .browse-container h2 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 36px;
+  font-size: 3.6rem;
+  line-height: 1.11111;
+  font-weight: 400;
+  text-transform: none;
+  float: left;
+  font-weight: bold;
+  margin-top: 0;
+  position: relative;
+  top: -10px; }
+  @media (max-width: 640px) {
+    /* line 7 */
+    .category-page .browse-container h2 {
+      font-size: 2.4rem;
+      line-height: 1.04167; } }
+  /* line 14 */
+  .category-page .browse-container h2.published {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 27px;
+    font-size: 2.7rem;
+    line-height: 1.11111;
+    font-weight: 400;
+    text-transform: none;
+    font-weight: bold; }
+    @media (max-width: 640px) {
+      /* line 14 */
+      .category-page .browse-container h2.published {
+        font-size: 1.8rem;
+        line-height: 1.11111; } }
+    /* line 17 */
+    .category-page .browse-container h2.published + ol {
+      margin-bottom: 30px; }
+/* line 23 */
+.category-page .browse-container ol {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: bold;
+  margin: 20px 0 60px 30%;
+  list-style: none; }
+  @media (max-width: 640px) {
+    /* line 23 */
+    .category-page .browse-container ol {
+      font-size: 1.6rem;
+      line-height: 1.25; } }
+  /* line 28 */
+  .category-page .browse-container ol li {
+    margin-bottom: 10px; }
+    /* line 30 */
+    .category-page .browse-container ol li a {
+      text-decoration: none; }
+      /* line 33 */
+      .category-page .browse-container ol li a:hover, .category-page .browse-container ol li a:focus {
+        text-decoration: underline; }
+/* line 41 */
+.category-page .policy-topic {
+  padding: 0 30px 45px; }
+  /* line 43 */
+  .category-page .policy-topic .topic {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 36px;
+    font-size: 3.6rem;
+    line-height: 1.11111;
+    font-weight: 400;
+    text-transform: none;
+    font-weight: bold;
+    width: 75%; }
+    @media (max-width: 640px) {
+      /* line 43 */
+      .category-page .policy-topic .topic {
+        font-size: 2.4rem;
+        line-height: 1.04167; } }
+    /* line 47 */
+    .category-page .policy-topic .topic + p {
+      font-family: "nta", Arial, sans-serif;
+      font-size: 19px;
+      font-size: 1.9rem;
+      line-height: 1.31579;
+      font-weight: 400;
+      text-transform: none;
+      margin-bottom: 60px;
+      width: 75%; }
+      @media (max-width: 640px) {
+        /* line 47 */
+        .category-page .policy-topic .topic + p {
+          font-size: 1.6rem;
+          line-height: 1.25; } }
+
+/* line 56 */
+.recently-updated {
+  float: left;
+  width: 33.33%; }
+  /* line 60 */
+  .recently-updated .document-list {
+    border-bottom: 1px solid #bfc1c3;
+    list-style: none;
+    margin: 0 30px 20px 0;
+    padding-left: 0; }
+    /* line 66 */
+    .recently-updated .document-list h2 {
+      clear: both;
+      font-family: "nta", Arial, sans-serif;
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 1.25;
+      font-weight: 300;
+      text-transform: none;
+      font-weight: bold;
+      margin-bottom: 0; }
+      @media (max-width: 640px) {
+        /* line 66 */
+        .recently-updated .document-list h2 {
+          font-size: 1.4rem;
+          line-height: 1.14286; } }
+      /* line 72 */
+      .recently-updated .document-list h2 a {
+        text-decoration: none; }
+        /* line 75 */
+        .recently-updated .document-list h2 a:hover, .recently-updated .document-list h2 a:focus {
+          text-decoration: underline; }
+  /* line 82 */
+  .recently-updated .attributes {
+    margin-bottom: 20px;
+    padding-left: 0;
+    overflow: hidden; }
+    /* line 87 */
+    .recently-updated .attributes li {
+      font-family: "nta", Arial, sans-serif;
+      font-size: 14px;
+      font-size: 1.4rem;
+      line-height: 1.42857;
+      font-weight: 400;
+      text-transform: none;
+      float: left;
+      margin-right: 5px; }
+      @media (max-width: 640px) {
+        /* line 87 */
+        .recently-updated .attributes li {
+          font-size: 1.2rem;
+          line-height: 1.25; } }
+  /* line 94 */
+  .recently-updated .see-all {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none;
+    font-weight: bold; }
+    @media (max-width: 640px) {
+      /* line 94 */
+      .recently-updated .see-all {
+        font-size: 1.4rem;
+        line-height: 1.14286; } }
+  /* line 100 */
+  .recently-updated .feeds {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1.42857;
+    font-weight: 400;
+    text-transform: none;
+    border-bottom: 1px solid #bfc1c3;
+    padding-bottom: 15px;
+    margin-right: 30px; }
+    @media (max-width: 640px) {
+      /* line 100 */
+      .recently-updated .feeds {
+        font-size: 1.2rem;
+        line-height: 1.25; } }
+    /* line 106 */
+    .recently-updated .feeds span {
+      display: block;
+      padding-right: 10px; }
+    /* line 111 */
+    .recently-updated .feeds .feed {
+      padding: 0 10px 0 20px;
+      font-weight: bold;
+      background: url("https://assets.digital.cabinet-office.gov.uk/government/assets/feed-icon-black-2797379a53d9064b97bc610ee4d3adae.png") 0 40% no-repeat; }
+    /* line 116 */
+    .recently-updated .feeds .govdelivery {
+      padding: 0 10px 0 25px;
+      font-weight: bold;
+      background: url("https://assets.digital.cabinet-office.gov.uk/government/assets/mail-icon-d0277821fbdd6977b32433de46f5fec7.png") 0 40% no-repeat; }
+    /* line 122 */
+    .recently-updated .feeds .feed-panel {
+      display: none;
+      margin-top: 15px;
+      padding: 10px 15px;
+      background: #dee0e2; }
+      /* line 128 */
+      .recently-updated .feeds .feed-panel h3 {
+        font-family: "nta", Arial, sans-serif;
+        font-size: 14px;
+        font-size: 1.4rem;
+        line-height: 1.42857;
+        font-weight: 400;
+        text-transform: none;
+        border-bottom: 1px solid #bfc1c3;
+        margin-bottom: 10px;
+        padding-bottom: 5px; }
+        @media (max-width: 640px) {
+          /* line 128 */
+          .recently-updated .feeds .feed-panel h3 {
+            font-size: 1.2rem;
+            line-height: 1.25; } }
+      /* line 135 */
+      .recently-updated .feeds .feed-panel input {
+        font-family: "nta", Arial, sans-serif;
+        font-size: 14px;
+        font-size: 1.4rem;
+        line-height: 1.42857;
+        font-weight: 400;
+        text-transform: none;
+        width: 100%;
+        text-indent: 5px;
+        padding: 5px 0; }
+        @media (max-width: 640px) {
+          /* line 135 */
+          .recently-updated .feeds .feed-panel input {
+            font-size: 1.2rem;
+            line-height: 1.25; } }
+
+/* line 145 */
+.policies {
+  float: left;
+  margin-bottom: 60px;
+  width: 66.66%; }
+  /* line 150 */
+  .policies h2 {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none;
+    margin-top: 0;
+    font-weight: bold; }
+    @media (max-width: 640px) {
+      /* line 150 */
+      .policies h2 {
+        font-size: 2rem;
+        line-height: 1.2; } }
+  /* line 156 */
+  .policies ul {
+    padding-left: 0; }
+    /* line 158 */
+    .policies ul li {
+      list-style: none; }
+      /* line 161 */
+      .policies ul li a {
+        font-family: "nta", Arial, sans-serif;
+        font-size: 19px;
+        font-size: 1.9rem;
+        line-height: 1.31579;
+        font-weight: 400;
+        text-transform: none;
+        font-weight: bold;
+        margin-bottom: 0;
+        text-decoration: none; }
+        @media (max-width: 640px) {
+          /* line 161 */
+          .policies ul li a {
+            font-size: 1.6rem;
+            line-height: 1.25; } }
+        /* line 167 */
+        .policies ul li a:hover, .policies ul li a:focus {
+          text-decoration: underline; }
+      /* line 172 */
+      .policies ul li P {
+        margin-top: 0; }

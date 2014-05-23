@@ -1,0 +1,191 @@
+/* line 1 */
+main#content {
+  overflow: hidden;
+  margin-top: 30px;
+  width: 960px; }
+
+/* line 7 */
+dl {
+  margin: 10px 0; }
+  /* line 10 */
+  dl dt,
+  dl dd {
+    font-size: 14px;
+    line-height: 1.3; }
+  /* line 14 */
+  dl dd {
+    font-weight: bold;
+    margin: 0; }
+
+/* line 21 */
+.contents,
+.contents-header {
+  float: left;
+  width: 66.66%; }
+
+/* line 25 */
+.contents-header {
+  clear: both;
+  font-weight: bold;
+  width: 33.33%; }
+
+/* line 30 */
+p.contents-header {
+  margin-top: 15px; }
+
+/* line 34 */
+.contents {
+  padding-bottom: 60px; }
+  /* line 37 */
+  .contents h2 {
+    font-weight: bold; }
+  /* line 42 */
+  .contents .feeds a {
+    display: inline-block; }
+  /* line 47 */
+  .contents ol {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    /* line 51 */
+    .contents ol li {
+      border-bottom: 1px solid #bfc1c3;
+      margin-bottom: 15px;
+      padding-bottom: 10px; }
+      /* line 56 */
+      .contents ol li h3 {
+        font-weight: bold;
+        margin: 0;
+        position: relative; }
+        /* line 60 */
+        .contents ol li h3 a {
+          text-decoration: none; }
+          /* line 62 */
+          .contents ol li h3 a:hover {
+            text-decoration: underline; }
+        /* line 66 */
+        .contents ol li h3 + p {
+          margin: 0; }
+    /* line 71 */
+    .contents ol + p {
+      font-weight: bold;
+      margin-top: 30px; }
+  /* line 78 */
+  .contents .hidden-content,
+  .contents .hidden-content-secondary {
+    display: none; }
+    /* line 80 */
+    .contents .hidden-content h3,
+    .contents .hidden-content-secondary h3 {
+      margin-top: 40px; }
+    /* line 83 */
+    .contents .hidden-content h4,
+    .contents .hidden-content-secondary h4 {
+      font-size: 19px;
+      font-weight: bold;
+      margin: 20px 0 0 0; }
+      /* line 87 */
+      .contents .hidden-content h4 + p,
+      .contents .hidden-content-secondary h4 + p {
+        margin-top: 0; }
+    /* line 92 */
+    .contents .hidden-content .close-this,
+    .contents .hidden-content-secondary .close-this {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 60px;
+      text-decoration: none; }
+      /* line 98 */
+      .contents .hidden-content .close-this:hover,
+      .contents .hidden-content-secondary .close-this:hover {
+        text-decoration: underline; }
+    /* line 103 */
+    .contents .hidden-content ul,
+    .contents .hidden-content-secondary ul {
+      list-style: disc; }
+      /* line 105 */
+      .contents .hidden-content ul li,
+      .contents .hidden-content-secondary ul li {
+        border-bottom: none; }
+    /* line 111 */
+    .contents .hidden-content .feeds,
+    .contents .hidden-content dl,
+    .contents .hidden-content-secondary .feeds,
+    .contents .hidden-content-secondary dl {
+      display: inline-block;
+      margin: 0 30px 0 0; }
+      /* line 116 */
+      .contents .hidden-content .feeds dt,
+      .contents .hidden-content .feeds dd,
+      .contents .hidden-content dl dt,
+      .contents .hidden-content dl dd,
+      .contents .hidden-content-secondary .feeds dt,
+      .contents .hidden-content-secondary .feeds dd,
+      .contents .hidden-content-secondary dl dt,
+      .contents .hidden-content-secondary dl dd {
+        display: inline-block; }
+    /* line 121 */
+    .contents .hidden-content table,
+    .contents .hidden-content-secondary table {
+      margin-bottom: 30px;
+      width: 100%; }
+      /* line 125 */
+      .contents .hidden-content table thead tr th,
+      .contents .hidden-content-secondary table thead tr th {
+        border-bottom: 1px solid #bfc1c3;
+        border-width: 0 0 1px 0;
+        padding: 3px 0 7px 0; }
+      /* line 131 */
+      .contents .hidden-content table td,
+      .contents .hidden-content-secondary table td {
+        border-bottom: 1px solid #bfc1c3;
+        border-width: 0 0 1px 0;
+        vertical-align: top;
+        padding: 3px 0 7px 0; }
+        /* line 136 */
+        .contents .hidden-content table td ul,
+        .contents .hidden-content-secondary table td ul {
+          padding-left: 20px; }
+        /* line 139 */
+        .contents .hidden-content table td p:first-child,
+        .contents .hidden-content-secondary table td p:first-child {
+          margin-top: 0; }
+  /* line 147 */
+  .contents .hidden-content ol {
+    margin-left: 35px; }
+    /* line 150 */
+    .contents .hidden-content ol li h3 {
+      font-weight: normal; }
+    /* line 153 */
+    .contents .hidden-content ol li:last-child {
+      border-bottom: none; }
+
+/* line 162 */
+.closed:after,
+.closed-secondary:after {
+  color: black;
+  font-size: 10px;
+  content: " \25b6";
+  position: absolute;
+  padding: 10px 20px;
+  right: 101%;
+  top: -5px; }
+
+/* line 173 */
+.open-content:after {
+  font-size: 12px;
+  content: " \25bc"; }
+
+/* line 179 */
+.contents .open-content {
+  display: block; }
+
+/* line 183 */
+.open-close {
+  font-size: 16px;
+  margin: 5px 0 20px 0; }
+
+/* line 188 */
+.hidden-content.open-content:after {
+  content: ""; }

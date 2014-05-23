@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Search</title>
+
+    
+        
+        <!--[if gt IE 8]><!--><link href="https://assets-origin.preview.alphagov.co.uk/static/govuk-template-47f5137783f220adb8200d654dd7a1c4.css" media="screen" rel="stylesheet" type="text/css">
+<!--<![endif]--><!--[if IE 6]><link href="https://assets-origin.preview.alphagov.co.uk/static/govuk-template-ie6-e246d6ce64f7d3f3eb2da22f442b2fe6.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 7]><link href="https://assets-origin.preview.alphagov.co.uk/static/govuk-template-ie7-bb74e130c361322975f43e079cc51af8.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 8]><link href="https://assets-origin.preview.alphagov.co.uk/static/govuk-template-ie8-fb9fdc262f10eece5058e0f7f4d979e9.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><link href="https://assets-origin.preview.alphagov.co.uk/static/govuk-template-print-e8347470022aae909a6076606e53d420.css" media="print" rel="stylesheet" type="text/css">
+<!--[if IE 8]>
+    <script type="text/javascript">
+      (function(){if(window.opera){return;}
+       setTimeout(function(){var a=document,g,b={families:(g=
+       ["nta"]),urls:["https://assets-origin.preview.alphagov.co.uk/static/fonts-ie8-1cfe56464fafb850485ba063a7beed4b.css"]},
+       c="https://assets-origin.preview.alphagov.co.uk/static/vendor/goog/webfont-debug-96870cf9f159ed811fd43c39bdf4656b.js",d="script",
+       e=a.createElement(d),f=a.getElementsByTagName(d)[0],h=g.length;WebFontConfig
+       ={custom:b},e.src=c,f.parentNode.insertBefore(e,f);for(;h=h-1;a.documentElement
+       .className+=' wf-'+g[h].replace(/\s/g,'').toLowerCase()+'-n4-loading');},0)
+      })()
+    </script>
+    <![endif]--><!--[if gte IE 9]><!--><link href="https://assets-origin.preview.alphagov.co.uk/static/fonts-607c54f71c7c1f98257595cedaa13a34.css" media="all" rel="stylesheet" type="text/css">
+<!--<![endif]--><!--[if lt IE 9]>
+      <script src="https://assets-origin.preview.alphagov.co.uk/static/ie-fc5bd25c5f46587b9bff917417ab2b7f.js" type="text/javascript"></script>
+    <![endif]--><link rel="shortcut icon" href="https://assets-origin.preview.alphagov.co.uk/static/favicon-447e4ac1ab790342660eacfe3dcce264.ico" type="image/x-icon">
+<!-- For third-generation iPad with high-resolution Retina display: --><link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://assets-origin.preview.alphagov.co.uk/static/apple-touch-icon-144x144-770262db230773585bf296beba8199d2.png">
+<!-- For iPhone with high-resolution Retina display: --><link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://assets-origin.preview.alphagov.co.uk/static/apple-touch-icon-114x114-9f79cf0e3a893167a6f176e65df67648.png">
+<!-- For first- and second-generation iPad: --><link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://assets-origin.preview.alphagov.co.uk/static/apple-touch-icon-72x72-bd1a39be9fe7b871dd2b3b6d04abc6c4.png">
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --><link rel="apple-touch-icon-precomposed" href="https://assets-origin.preview.alphagov.co.uk/static/apple-touch-icon-57x57-21e7fa2c450cf9afbc07a4d48a80d12e.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:image" content="https://assets-origin.preview.alphagov.co.uk/static/opengraph-image-85fc698c83c77d8d8cb5467a44cc12a5.png">
+<!--[if gt IE 8]><!--><link href="https://assets-origin.preview.alphagov.co.uk/static/application-c6eeb0f9b6d289316364adf3d630ccb2.css" media="screen" rel="stylesheet" type="text/css">
+<!--<![endif]--><!--[if IE 6]><link href="https://assets-origin.preview.alphagov.co.uk/static/application-ie6-6089794e545e7bc7443033a24129dc38.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 7]><link href="https://assets-origin.preview.alphagov.co.uk/static/application-ie7-dfab9c049eb865390e1c6d5bab4060ee.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><!--[if IE 8]><link href="https://assets-origin.preview.alphagov.co.uk/static/application-ie8-a80aa7ff54646a32d05569ad24fb84ee.css" media="screen" rel="stylesheet" type="text/css" /><![endif]--><link href="https://assets-origin.preview.alphagov.co.uk/static/print-7bad901b32df5344e949e8b2365568ce.css" media="print" rel="stylesheet" type="text/css">
+<link title="Search" rel="search" type="application/opensearchdescription+xml" href="/search/opensearch.xml">
+<!--[if gt IE 8]><!--><link href="https://assets-origin.preview.alphagov.co.uk/frontend/application-058725753a40d7c02f45ec5114824d8b.css" media="screen" rel="stylesheet" type="text/css">
+<!--<![endif]--><link rel="canonical" href="/">
+
+    
+
+    
+
+    <link rel="stylesheet" href="../../assets/search.css" />
+
+    
+
+    
+    <script defer src="../../assets/search.js" type="text/javascript"></script>
+    
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">           
+  </head>
+  <body class="mainstream">
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
+    <header role="banner" id="global-header">
+  <div class="header-wrapper">
+    <div class="header-global">
+      <div class="header-logo">
+        <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="content">
+          <img src="https://assets.digital.cabinet-office.gov.uk/static/gov.uk_logotype_crown-c09acb07e4d1d5d558f5a0bc53e9e36d.png" alt=""> GOV.UK
+        </a>
+      </div>
+      <a href="#search" class="search-toggle js-header-toggle">Search</a>
+      
+
+      
+    </div>   
+  </div>
+</header>
+    <!--end header-->
+
+    <div id="wrapper" class="">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    pattern = /q=([^&]*)/
+     
+    if (window.location.href.indexOf('q=') != -1) {
+      search_term = window.location.href.match(pattern);
+      $('.next a').attr("href", "results-2.html?q="+search_term[1]);
+    }
+  })
+
+  $(function() {
+    $("[name=toggler]").click(function(){
+            $('.toHide').hide();
+            $("#blk-"+$(this).val()).show();
+    });
+ });
+
+</script>
+      
+<main id="content" role="main" class="group search ancillary">
+  <form action="/search" method="get" accept-charset="utf-8" class="search-header search-header-2 js-search-hash" role="search">
+  <div class="searchfield">
+    <fieldset class="search-input">
+<label for="search-main">
+          <h1>You searched for <span class="visuallyhidden"></span>
+</h1>
+      </label>
+      <input type="search" name="q" value="" id="search-main">
+</fieldset>
+<fieldset class="search-submit">
+<button type="submit" class="button">Search</button>
+    </fieldset>
+</div>
+</form>
+
+<div class="search-options">
+  <h2>Search options</h2>
+  <form>
+    <input type="radio" name="toggler" value="1" id="rdb1" checked><label for="rdb1">See only results from the Charity Commission for England and Wales</label><br>
+    <!--input type="radio" name="toggler" value="2" id="rdb2"><label for="rdb2">See only results for Schools and colleges</label><br>
+    <input type="radio" name="toggler" value="3" id="rdb3"><label for="rdb3">See only results for Education and learning</label><br -->
+    <input type="radio" name="toggler" value="4" id="rdb4"><label for="rdb4">See all results</label>
+  </form>
+</div>
+
+<div id="blk-1" class="search-results toHide">
+  <h2 class="result-count">You are viewing all 534 results found on <span>Charity Commission for England and&nbsp;Wales</span></h2>
+
+
+  <div class="search-container group js-tab-content tab-content ">
+    <div id="services-information-results" class="js-tab-pane tab-pane ">
+      <div class="results">
+        <ul class="results-list internal-links">
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://whitehall-admin.preview.alphagov.co.uk/charity-trustee-whats-involved?cachebust=1393416159&preview=301727">
+                Charity trustee: what's involved
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                  <span class="visuallyhidden">Published on: </span>
+                  April 2014
+                </li>
+                <li>
+                  <span class="visuallyhidden">Departments: </span>
+                  <abbr title="Department for Education">Charity Commission</abbr>
+                </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.charitycommission.gov.uk/trustees-staff-and-volunteers/trustee-board/">
+                Trustee board: how to run your charity
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                  <span class="visuallyhidden">Published on: </span>
+                  April 2014
+                </li>
+                <li>
+                  <span class="visuallyhidden">Departments: </span>
+                  <abbr title="Department for Education">Charity Commission</abbr>
+                </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="http://s3-eu-west-1.amazonaws.com/sectors1/trustee_role_board.html">
+                Report a serious incident in a charity: what trustees must do
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                  <span class="visuallyhidden">Published on: </span>
+                  April 2014
+                </li>
+                <li>
+                  <span class="visuallyhidden">Departments: </span>
+                  <abbr title="Department for Education">Charity Commission</abbr>
+                </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://whitehall-admin.preview.alphagov.co.uk/how-to-choose-a-charity-name?cachebust=1393417025&preview=302250">
+                How to choose a charity name
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                  <span class="visuallyhidden">Published on: </span>
+                  April 2014
+                </li>
+                <li>
+                  <span class="visuallyhidden">Departments: </span>
+                  <abbr title="Department for Education">Charity Commission</abbr>
+                </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://whitehall-admin.preview.alphagov.co.uk/charity-types-and-rules?cachebust=1393419287&preview=300734">
+                Charity types and rules
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                  <span class="visuallyhidden">Published on: </span>
+                  April 2014
+                </li>
+                <li>
+                  <span class="visuallyhidden">Departments: </span>
+                  <abbr title="Department for Education">Charity Commission</abbr>
+                </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://whitehall-admin.preview.alphagov.co.uk/government/publications/changing-your-charitys-governing-document-cc36?cachebust=1393419543&preview=293405">
+                Changing your charity's governing document (CC36)
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                  <span class="visuallyhidden">Published on: </span>
+                  April 2014
+                </li>
+                <li>
+                  <span class="visuallyhidden">Departments: </span>
+                  <abbr title="Department for Education">Charity Commission</abbr>
+                </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.charitycommission.gov.uk/running-a-charity/managing-your-charity/trustees-annual-report-how-to-prepare/">
+                Trustees' annual report: tell your charity's story
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                  <span class="visuallyhidden">Published on: </span>
+                  April 2014
+                </li>
+                <li>
+                  <span class="visuallyhidden">Departments: </span>
+                  <abbr title="Department for Education">Charity Commission</abbr>
+                </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.charitycommission.gov.uk/start-up-a-charity/as-your-charity-grows/changing-what-your-charity-does/">
+                Charity objects: how to change what your charity does
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                  <span class="visuallyhidden">Published on: </span>
+                  April 2014
+                </li>
+                <li>
+                  <span class="visuallyhidden">Departments: </span>
+                  <abbr title="Department for Education">Charity Commission</abbr>
+                </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.charitycommission.gov.uk/contact-us/update-your-details/tell-us-about-a-charity-merger/">
+                How to merge charities
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                  <span class="visuallyhidden">Published on: </span>
+                  April 2014
+                </li>
+                <li>
+                  <span class="visuallyhidden">Departments: </span>
+                  <abbr title="Department for Education">Charity Commission</abbr>
+                </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://whitehall-admin.preview.alphagov.co.uk/how-to-find-charity-trustees?cachebust=1393418978&preview=302109">
+                How to find charity trustees
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                  <span class="visuallyhidden">Published on: </span>
+                  April 2014
+                </li>
+                <li>
+                  <span class="visuallyhidden">Departments: </span>
+                  <abbr title="Department for Education">Charity Commission</abbr>
+                </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://whitehall-admin.preview.alphagov.co.uk/how-to-close-a-charity?cachebust=1393419043&preview=302090">
+                How to close a charity
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                  <span class="visuallyhidden">Published on: </span>
+                  April 2014
+                </li>
+                <li>
+                  <span class="visuallyhidden">Departments: </span>
+                  <abbr title="Department for Education">Charity Commission</abbr>
+                </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.charitycommission.gov.uk/running-a-charity/managing-your-charity/land-and-property/">
+                Charity land and property
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                  <span class="visuallyhidden">Published on: </span>
+                  April 2014
+                </li>
+                <li>
+                  <span class="visuallyhidden">Departments: </span>
+                  <abbr title="Department for Education">Charity Commission</abbr>
+                </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="blk-2" class="search-results toHide" style="display:none">
+  <h2 class="result-count">You are viewing all 25 results found on <span>Schools and colleges</span></h2>
+
+  <div class="search-container group js-tab-content tab-content ">
+    <div id="services-information-results" class="js-tab-pane tab-pane ">
+      <div class="results">
+        <ul class="results-list internal-links">
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.gov.uk/government/collections/national-curriculum-review">
+                National curriculum review
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                7 February 2014
+              </li>
+              <!--li>
+                Statistics
+              </li-->
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">DfE</abbr>
+              </li>
+            </ul>
+            <p>This series brings together all documents relating to national curriculum review.</p>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.gov.uk/government/collections/national-curriculum">
+                National curriculum
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                6 February 2014
+              </li>
+              <!--li>
+                Statistics
+              </li-->
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">DfE</abbr>
+              </li>
+            </ul>
+            <p>The national curriculum for England to be taught in all maintained primary and secondary schools from September 2014.</p>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="http://www.education.gov.uk/schools/teachingandlearning/qualifications/b00231686/english-baccalaureate-information-for-schools">
+                English Baccalaureate: information for schools
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                12 February 2014
+              </li>
+              <li>
+                Detailed guide
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">DfE</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.gov.uk/government/publications/national-curriculum-and-assessment-information-for-schools">
+                National curriculum and assessment: information for schools
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                28 January 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">DfE</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/key-stage-2-monitoring-visits-2014-guidance-for-local-authorities">
+                Key stage 2 monitoring visits 2014: guide for local authorities
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/2014-test-administrators-guide-key-stage-2">
+                2014 test administrators' guide: key stage 2
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/check-administrators-guide-phonics-screening-check-2014">
+                Check administrators' guide: phonics screening check 2014
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/eyfs-profile-exemplication-materials">
+                EYFS profile: exemplication materials
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://whitehall-admin.preview.alphagov.co.uk/government/publications/assessment-and-reporting-arrangements-early-years-foundation-stage?cachebust=1392811257&preview=202638">
+                Assessment and reporting arrangements: early years foundation stage
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/key-stage-2-teacher-assessment-data-collection-2014-technical-specification">
+                Key stage 2 teacher assessment data collection 2014: technical specification
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/standards-and-testing-agency-report-and-financial-statement-2011-to-2012">
+                Standards and Testing Agency report and financial statement 2011 to 2012
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/early-years-foundation-stage-profile-handbook-2014">
+                Early years foundation stage profile: handbook 2014
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Guidance
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/national-curriculum-tests-review-outcomes-2011-provisional">
+                National curriculum tests: review outcomes - 2011 (provisional)
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                Statistics - National statistics
+              </li>
+              <li>
+                Statistics: key stage 2
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="#">
+                Assessment and reporting arrangements 2014: EYFS
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/p-level-attainment-targets">
+                P level attainment targets
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/national-curriculum-assessments-2014-key-stage-1-arrangements">
+                Assessment and reporting arrangements 2014: key stage 1
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.preview.alphagov.co.uk/government/publications/2012-maladministration-report">
+                2012 maladministration report
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="#">
+                Teacher assessment and reporting arrangements: key stage 3
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="#">
+                NPQH application form and reference and statement of sponsorship
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+          <li class="section- type-publication">
+            <h3>
+              <a href="https://www.gov.uk/government/speeches/michael-gove-speaks-about-securing-our-childrens-future">
+                Michael Gove speaks about securing our children’s future
+              </a>
+            </h3>
+            <ul class="attributes">
+              <li>
+                <span class="visuallyhidden">Published on: </span>
+                19 February 2014
+              </li>
+              <li>
+                <span class="visuallyhidden">Departments: </span>
+                <abbr title="Department for Education">STA</abbr>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="blk-3" class="search-results toHide" style="display:none">
+  <h2 class="result-count">You are viewing all 25 results found on <span>Education and learning</span></h2>
+
+  <div class="search-container group js-tab-content tab-content ">
+    <div id="services-information-results" class="js-tab-pane tab-pane ">
+      <div class="results">
+        <ul class="results-list internal-links">
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/national-curriculum" title="The national curriculum">
+                The national curriculum
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>The English national curriculum means primary and secondary school.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/apply-free-school-meals" title="Apply for free school meals">
+                Apply for free school meals
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Check if your child is eligible for free school meals on your local council's website.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/check-school-closure" title="School closures">
+                School closures
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>School closures happen because of an emergency like severe weather.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/school-attendance-absence" title="School attendance and absence">
+                School attendance and absence
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>You can be prosecuted if your child has unauthorised absence from school.</p>
+          </li>          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/school-discipline-exclusions" title="School discipline and exclusions">
+                School discipline and exclusions
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Schools can punish (discipline) pupils or exclude them.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/school-term-holiday-dates" title="School term and holiday dates">
+                School term and holiday dates
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Find your child's school term, half term and holiday dates on your local council's website.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/after-school-holiday-club" title="After school and holiday clubs">
+                After school and holiday clubs
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Ask your council about after school clubs and holiday play schemes run by the school, private or voluntary organisations.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/apply-special-educational-needs-assessment" title="Apply for a special educational needs assessment">
+                Apply for a special educational needs assessment
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Apply to the council for a special educational needs (SEN) assessment for your child.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/become-school-college-governor" title="Become a school or college governor">
+                Become a school or college governor
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Register your application to be a school or college governor.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/bullying-at-school" title="Bullying at school">
+                Bullying at school
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Bullying at school and the law - what your school and the police must do about bullying and how you should report it.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/school-performance-tables" title="Check school performance tables">
+                Check school performance tables
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Get statistics for schools in England, and compare information about performance, pupils, finance, staffing and Ofsted reports.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/children-with-special-educational-needs" title="Children with special educational needs (SEN)">
+                Children with special educational needs (SEN)
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Children with special educational needs (SEN) can get the help they need to get an education.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/complain-about-school" title="Complain about a school">
+                Complain about a school
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Complain about a school - complaints process, when to complain to the Department for Education, the Education Funding Agency or Ofsted.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/education-attendance-council" title="Education and attendance information from your council">
+                Education and attendance information from your council
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>How your council encourages attendance at school - truancy, unauthorised absences, education welfare officer.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/health-safety-school-children" title="Health and safety for school children">
+                Health and safety for school children
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Schools are responsible for your child's safety while they're at school or on a school trip.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/help-school-clothing-costs" title="Help with school clothing costs">
+                Help with school clothing costs
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Financial help to pay for your child's school clothing - school uniform, games kit.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/illness-child-education" title="Illness and your child's education">
+                Illness and your child's education
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>What happens if your child can't go to school for health reasons.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/exam-timetable" title="Look up your exam timetable">
+                Look up your exam timetable
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Exam dates given by AQA, CCEA, Edexcel, OCR and WJEC for GCSE, GCE A and AS levels, GNVQ, VCE, ELC, AEA, FSMQ and STEP exams.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/know-when-you-can-leave-school" title="School leaving age">
+                School leaving age
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Information on the age you can leave school in England, Scotland, Wales and Northern Ireland.</p>
+          </li>
+          <li class="section-citizenship type-answer">
+            <h3>
+              <a href="https://www.gov.uk/school-meals-healthy-eating-standards" title="School meals - healthy eating standards">
+                School meals - healthy eating standards
+              </a>
+            </h3>
+            <p class="meta crumbtrail">
+              <span class="visuallyhidden">Part of </span>
+              <span class="section">Education and learning</span>            
+            </p>
+            <p>Food in schools must meet nutritional standards and include high-quality meat, poultry, fish and vegetables so that children have healthy, balanced diets.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="blk-4" class="search-results toHide" style="display:none">
+    <h2 class="result-count">You are viewing all 1178 results found on <span>GOV.UK</span></h2>
+
+
+      <div class="search-container group js-tab-content tab-content ">
+          <div id="services-information-results" class="js-tab-pane tab-pane ">
+          <div class="results">
+            <ul class="results-list internal-links">
+<li class="section- type-detailed_guidance">
+  
+
+    <h3>
+      <a href="/academies-financial-assurance" title="View Academies financial assurance">
+        Academies financial assurance
+      </a>
+    </h3>
+    <p>This guide helps academy trusts to understand and comply with the financial accountability framework and assurance arrangements. </p>
+</li>
+
+  <li class="section-business type-guide">
+  
+
+    <h3>
+      <a href="/bankruptcy" title="View Bankruptcy">
+        Bankruptcy
+      </a>
+    </h3>
+      <p class="meta crumbtrail">
+        <span class="visuallyhidden">Part of </span>
+        <span class="section">Business</span>
+        <span class="visuallyhidden">, </span><span class="subsection">Funding debt</span>
+        
+      </p>
+    <p>Bankruptcy is one way of dealing with your debts - bankruptcy register, bankruptcy forms and fees, petition the court, restrictions, discharge and your assets</p>
+</li>
+
+  <li class="section-benefits type-detailed_guidance">
+  
+
+  <h3>
+    <a href="/modcare-the-defence-social-service-association" title="View MODCARE: the Defence Social Service Association ">
+      MODCARE: the Defence Social Service Association 
+    </a>
+  </h3>
+
+    <p class="meta crumbtrail">
+      <span class="visuallyhidden">Part of </span>
+      <span class="section">Benefits</span>
+      <span class="visuallyhidden">, </span><span class="subsection">Families</span>
+      <span class="visuallyhidden">, </span><span class="subsubsection">Support services for military and defence personnel and their families</span>
+    </p>
+  <p>MODCARE, supports small, non-national charities: find out how to nominate a charity, donate to MODCARE or take part in fundraising.</p>
+</li>
+
+  <li class="section- type-licence">
+  
+
+    <h3>
+      <a href="/theatre-licence-scotland" title="View Theatre licence (Scotland)">
+        Theatre licence (Scotland)
+      </a>
+    </h3>
+    <p>You must get a licence from the council if you want to run a theatre or put on a public performance of a play</p>
+</li>
+
+  <li class="section-citizenship type-detailed_guidance">
+  
+
+  <h3>
+    <a href="/common-ground-initiative-cgi" title="View Common Ground Initiative (CGI)">
+      Common Ground Initiative (CGI)
+    </a>
+  </h3>
+
+    <p class="meta crumbtrail">
+      <span class="visuallyhidden">Part of </span>
+      <span class="section">Citizenship</span>
+      <span class="visuallyhidden">, </span><span class="subsection">International development</span>
+      <span class="visuallyhidden">, </span><span class="subsubsection">Development funding ngos</span>
+    </p>
+  <p>Increases access to grants for small and diaspora-led UK organisations creating sustainable changes to the poorest communities in Africa.</p>
+</li>
+
+  <li class="section-business type-answer">
+  
+
+    <h3>
+      <a href="/company-director-disqualification" title="View Company director disqualification">
+        Company director disqualification
+      </a>
+    </h3>
+      <p class="meta crumbtrail">
+        <span class="visuallyhidden">Part of </span>
+        <span class="section">Business</span>
+        <span class="visuallyhidden">, </span><span class="subsection">Limited company</span>
+        
+      </p>
+    <p>When you can be disqualified from being a director of a company - how the process works, how to report someone you think should be disqualified</p>
+</li>
+
+  <li class="section-visas-immigration type-smart-answer">
+  
+
+    <h3>
+      <a href="/check-uk-visa" title="View Check if you need a UK visa">
+        Check if you need a UK visa
+      </a>
+    </h3>
+      <p class="meta crumbtrail">
+        <span class="visuallyhidden">Part of </span>
+        <span class="section">Visas immigration</span>
+        
+        
+      </p>
+    <p>You may need a visa to come to the UK to visit, study or work.</p>
+</li>
+
+  <li class="section-tax type-guide">
+  
+
+    <h3>
+      <a href="/inheritance-tax" title="View Inheritance Tax">
+        Inheritance Tax
+      </a>
+    </h3>
+      <p class="meta crumbtrail">
+        <span class="visuallyhidden">Part of </span>
+        <span class="section">Tax</span>
+        <span class="visuallyhidden">, </span><span class="subsection">Inheritance tax</span>
+        
+      </p>
+    <p>Inheritance Tax (IHT) is paid when a person's estate is worth more than £325,000 when they die - exemptions, passing on property and transferring thresholds</p>
+</li>
+
+  <li class="section-tax type-guide">
+  
+
+    <h3>
+      <a href="/self-assessment-tax-returns" title="View Self Assessment tax returns">
+        Self Assessment tax returns
+      </a>
+    </h3>
+      <p class="meta crumbtrail">
+        <span class="visuallyhidden">Part of </span>
+        <span class="section">Tax</span>
+        <span class="visuallyhidden">, </span><span class="subsection">Self assessment</span>
+        
+      </p>
+    <p>Self Assessment tax returns - deadlines, who must send a tax return, penalties, corrections and paying your tax bill</p>
+</li>
+
+  <li class="section-housing type-detailed_guidance">
+  
+
+  <h3>
+    <a href="/school-land-and-property-protection-transfer-and-disposal" title="View School land and property: protection, transfer and disposal">
+      School land and property: protection, transfer and disposal
+    </a>
+  </h3>
+
+    <p class="meta crumbtrail">
+      <span class="visuallyhidden">Part of </span>
+      <span class="section">Housing</span>
+      <span class="visuallyhidden">, </span><span class="subsection">Local councils</span>
+      <span class="visuallyhidden">, </span><span class="subsubsection">Public sector land use</span>
+    </p>
+  <p>Information and guidance about the protection of school playing fields and disposal of assets.</p>
+</li>
+
+  <li class="section-employing-people type-guide">
+  
+
+    <h3>
+      <a href="/uk-visa-sponsorship-employers" title="View UK visa sponsorship for employers">
+        UK visa sponsorship for employers
+      </a>
+    </h3>
+      <p class="meta crumbtrail">
+        <span class="visuallyhidden">Part of </span>
+        <span class="section">Employing people</span>
+        <span class="visuallyhidden">, </span><span class="subsection">Recruiting hiring</span>
+        
+      </p>
+    <p>UK visa sponsorship information for employers - sponsorship licences, requirements, certificates and skilled worker tiers</p>
+</li>
+
+  <li class="section-citizenship type-detailed_guidance">
+  
+
+  <h3>
+    <a href="/marriage-registration-guidance-for-authorised-persons" title="View Marriage registration: guidance for authorised persons">
+      Marriage registration: guidance for authorised persons
+    </a>
+  </h3>
+
+    <p class="meta crumbtrail">
+      <span class="visuallyhidden">Part of </span>
+      <span class="section">Citizenship</span>
+      <span class="visuallyhidden">, </span><span class="subsection">Charities honours</span>
+      <span class="visuallyhidden">, </span><span class="subsubsection">Public services improving efficiency and funding</span>
+    </p>
+  <p>Guidance for authorised persons, the clergy and secretaries of synagogues</p>
+</li>
+
+  <li class="section- type-detailed_guidance">
+  
+
+    <h3>
+      <a href="/criminal-injuries-compensation-a-guide" title="View Criminal injuries compensation: a guide">
+        Criminal injuries compensation: a guide
+      </a>
+    </h3>
+    <p>A guide to applying for compensation under the Criminal Injuries Compensation Scheme.</p>
+</li>
+
+  <li class="section-births-deaths-marriages type-guide">
+  
+
+    <h3>
+      <a href="/valuing-estate-of-someone-who-died" title="View Valuing the estate of someone who's died">
+        Valuing the estate of someone who's died
+      </a>
+    </h3>
+      <p class="meta crumbtrail">
+        <span class="visuallyhidden">Part of </span>
+        <span class="section">Births deaths marriages</span>
+        <span class="visuallyhidden">, </span><span class="subsection">Death</span>
+        
+      </p>
+    <p>When someone dies, you need to find out the value of the estate to see if Inheritance Tax is due - valuing the estate, reliefs, gifts, joint assets, stocks and shares, trusts and deductions 
+</p>
+</li>
+
+  <li class="section-citizenship type-guide">
+  
+
+    <h3>
+      <a href="/volunteering" title="View Volunteer placements, rights and expenses">
+        Volunteer placements, rights and expenses
+      </a>
+    </h3>
+      <p class="meta crumbtrail">
+        <span class="visuallyhidden">Part of </span>
+        <span class="section">Citizenship</span>
+        <span class="visuallyhidden">, </span><span class="subsection">Charities honours</span>
+        
+      </p>
+    <p>Find volunteering opportunities, and volunteer rights, pay, expenses, age limits, criminal record checks </p>
+</li>
+
+  <li class="section-business type-detailed_guidance">
+  
+
+  <h3>
+    <a href="/apply-for-a-discretionary-grant-where-the-dissolved-company-cannot-be-restored-cb3" title="View Apply for a discretionary grant (company can't be restored) (CB3)">
+      Apply for a discretionary grant (company can't be restored) (CB3)
+    </a>
+  </h3>
+
+    <p class="meta crumbtrail">
+      <span class="visuallyhidden">Part of </span>
+      <span class="section">Business</span>
+      <span class="visuallyhidden">, </span><span class="subsection">Limited company</span>
+      <span class="visuallyhidden">, </span><span class="subsubsection">Business auditing accounting and reporting</span>
+    </p>
+  <p>How to apply for a discretionary grant of bona vacantia where the dissolved company cannot be restored.</p>
+</li>
+
+  <li class="section-business type-guide">
+  
+
+    <h3>
+      <a href="/employment-agencies-and-businesses" title="View Employment agencies and businesses">
+        Employment agencies and businesses
+      </a>
+    </h3>
+      <p class="meta crumbtrail">
+        <span class="visuallyhidden">Part of </span>
+        <span class="section">Business</span>
+        <span class="visuallyhidden">, </span><span class="subsection">Setting up</span>
+        
+      </p>
+    <p>The rules for employment agencies and businesses: licences, vulnerable people, opting out, job advertisements, transfer fees, trade unions, terms and conditions and contracts, travel and accommodation for work-seekers</p>
+</li>
+
+  <li class="section- type-detailed_guidance">
+  
+
+    <h3>
+      <a href="/become-an-academy-information-for-schools" title="View Become an academy: information for schools">
+        Become an academy: information for schools
+      </a>
+    </h3>
+    <p>How schools can convert to become academies.</p>
+</li>
+
+  <li class="section-benefits type-detailed_guidance">
+  
+
+  <h3>
+    <a href="/directorate-children-and-young-people" title="View Directorate Children and Young People">
+      Directorate Children and Young People
+    </a>
+  </h3>
+
+    <p class="meta crumbtrail">
+      <span class="visuallyhidden">Part of </span>
+      <span class="section">Benefits</span>
+      <span class="visuallyhidden">, </span><span class="subsection">Families</span>
+      <span class="visuallyhidden">, </span><span class="subsubsection">Support services for military and defence personnel and their families</span>
+    </p>
+  <p>Find out how the Directorate Children and Young People help children fulfil their potential.</p>
+</li>
+
+  <li class="section-citizenship type-detailed_guidance">
+  
+
+  <h3>
+    <a href="/capital-markets-climate-initiative" title="View Capital Markets Climate Initiative">
+      Capital Markets Climate Initiative
+    </a>
+  </h3>
+
+    <p class="meta crumbtrail">
+      <span class="visuallyhidden">Part of </span>
+      <span class="section">Citizenship</span>
+      <span class="visuallyhidden">, </span><span class="subsection">Government</span>
+      <span class="visuallyhidden">, </span><span class="subsubsection">Government funding programmes</span>
+    </p>
+  <p>Guidance on the government's CMCI programme to raise private funding for renewable energy projects in the developing world.</p>
+</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<nav id="show-more-documents" role="navigation">
+  <ul class="previous-next-navigation">
+    <li class="next">
+      <a href="results-2.html">Next <span class="visuallyhidden">page</span> <span class="page-numbers">2 of 58</span></a>
+    </li>
+  </ul>
+</nav>
+
+
+</main>
+
+<h3 class="visuallyhidden">No more results for <span class="visuallyhidden">“flooding”</span>. <a href="#search-main">Try a different search?</a>
+</h3>
+
+    </div><!--end wrapper-->
+    <footer class="group js-footer" id="footer" role="contentinfo">
+  <div class="footer-wrapper">
+    <div class="footer-categories">
+      <div class="footer-explore">
+        <h2>Services and information</h2>
+        <ul>
+          <li><a href="/browse/driving">Driving and transport</a></li>
+          <li><a href="/browse/benefits">Benefits</a></li>
+          <li><a href="/browse/business">Businesses and self-employed</a></li>
+          <li><a href="/browse/employing-people">Employing people</a></li>
+          <li><a href="/browse/abroad">Passports, travel and living abroad</a></li>
+          <li><a href="/browse/education">Education and learning</a></li>
+          <li><a href="/browse/working">Working, jobs and pensions</a></li>
+          <li><a href="/browse/housing">Housing and local services</a></li>
+          <li><a href="/browse/justice">Crime, justice and the law</a></li>
+          <li><a href="/browse/tax">Money and tax</a></li>
+          <li><a href="/browse/births-deaths-marriages">Births, deaths, marriages and care</a></li>
+          <li><a href="/browse/disabilities">Disabled people</a></li>
+          <li><a href="/browse/citizenship">Citizenship and life in the UK</a></li>
+        </ul>
+      </div>
+      <div class="footer-inside-government">
+        <h2>Departments and policy</h2>
+        <ul>
+          <li><a href="/government/how-government-works">How government works</a></li>
+          <li><a href="/government/organisations">Departments</a></li>
+          <li><a href="/government/world">Worldwide</a></li>
+          <li><a href="/government/topics">Topics</a></li>
+          <li><a href="/government/policies">Policies</a></li>
+          <li><a href="/government/publications">Publications</a></li>
+          <li><a href="/government/announcements">Announcements</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <div class="footer-meta-inner">
+        <h2 class="visuallyhidden">Support links</h2>
+        <ul>
+        <li><a href="/help">Help</a></li>
+          <li><a href="/help/cookies">Cookies</a></li>
+          <li><a href="/feedback">Contact</a></li>
+          <li><a href="/cymraeg">Cymraeg</a></li>
+          <li>Built by the <a href="http://digital.cabinetoffice.gov.uk/">Government Digital Service</a>
+        </li>
+        </ul>
+        <div class="open-government-licence">
+          <h2><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2"><img src="https://assets.digital.cabinet-office.gov.uk/static/open-government-licence_2x-d273d7eca3045d3b710a863d9bfc0b33.png" alt="OGL"></a></h2>
+          <p>All content is available under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2">Open Government Licence v2.0</a>, except where otherwise stated</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <a href="http://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm">© Crown Copyright</a>
+      </div>
+    </div>
+  </div>
+</footer><!--end footer-->
+  </body>
+</html>

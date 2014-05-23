@@ -1,0 +1,42 @@
+* {margin: 0; padding: 0; border: none;}
+body {font-family: "Helvetica Neue",Helvetica, sans-serif; font-size: 10pt;}
+#main {width: 28.7cm; margin: .5cm; height: 20cm; border: solid 0px grey;}
+h1 {font-size: 35pt; margin-bottom: 7pt;}
+h3 {color: #2b8cc4; margin-bottom: 14pt;}
+h4 { margin-bottom: 0cm; margin-top: 0;}
+.user_need {font-size: 21pt; margin-bottom: 21pt;}
+.user_need_column {float: left; width: 8.5cm; margin-right: 1cm;}
+.visuals_column {float: left; width: 8.5cm; margin-right: 0;}
+.free_column {float: left; width: 8.5cm; margin-right: 1cm;}
+#header {margin-bottom: 1cm;}
+.visual {max-width: 100%; width: 100%; -moz-box-shadow: 0px 5px 5px 0px #ccc; -webkit-box-shadow: 0px 5px 5px 0px #ccc}
+.caption {font-size: 9pt; font-style: italic; color: #6F777B; margin: 0; margin-bottom: 14pt; }
+.insight p {font-size: 14pt; margin: 0 0 0.5cm 0 }
+img {margin: 0; padding: 0; max-width: 100%; width: 100%;}
+a {margin: 0; padding: 0; border: 0;}
+p {font-size: 10pt; margin-bottom: 7pt;}
+
+
+.overview_column {float: left; width: 4cm; margin-right: 0.25cm; }
+.last {margin-right: 0;}
+.overview_header {width: 100%; }
+.on_platform {width: 100%; border-top: solid 1px #85994b; margin-top: 0.05cm; padding-top: 0.05cm;}
+.off_platform {width: 100%; border-top: dotted 1px grey; margin-top: 0.05cm; padding-top: 0.05cm;}
+
+.clear {clear:both;}
+
+
+
+.overview_header .overview_column a {background: #85994b; font-weight: bold; text-align: center; font-size: 14pt; color: white; margin-bottom: 0; }
+.overview_column a {background: #e7ebda; padding: 0.1cm; margin: 0; margin-bottom: 0.05cm; width: 3.8cm;  display: block; text-decoration: none; color: #85994b;}
+.overview_column a:hover {background: #85994b; color: white;}
+.overview_column a.active {background: #c2cca3; color: white; }
+.overview_column a.active:hover {background: #85994b; color: white; }
+
+.audience {text-align: center; font-size: 14pt;  font-weight: bold; color: #2b8cc4; float: left; width: 4cm; margin-right: 0.25cm; }
+.audience a { font-size: 10pt; background: none; font-weight: normal; display: block; padding: 0.1cm 0 0.1cm 0; margin-bottom: 0.25cm; color: #2b8cc4;}
+.audience a:hover {background: #2b8cc4; color: white;}
+.audience h2 {font-size: 14pt; font-weight: bold; color: #2b8cc4; padding: 0.1cm;}
+.audience_column {border-top: solid 1px #2b8cc4; margin-top: 0.05cm; padding-top: 0.05cm;}
+.channel { vertical-align: top; text-align: center; width: 3cm; color: #85994b; font-style: italic;}
+.framework {width: 24.45cm; float: left;}

@@ -1,0 +1,1829 @@
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+/* line 126, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+.button {
+  background-color: #006435;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #00180c;
+  -moz-box-shadow: 0 2px 0 #00180c;
+  box-shadow: 0 2px 0 #00180c;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:visited {
+    background-color: #006435; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:hover, .button:focus {
+    background: #004b27; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #006435;
+    -moz-box-shadow: 0 0 0 #006435;
+    box-shadow: 0 0 0 #006435; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button.disabled, .button[disabled="disabled"], .button[disabled] {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button.disabled:hover, .button[disabled="disabled"]:hover, .button[disabled]:hover {
+      cursor: default;
+      background-color: #006435; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button.disabled:active, .button[disabled="disabled"]:active, .button[disabled]:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #00180c;
+      -moz-box-shadow: 0 2px 0 #00180c;
+      box-shadow: 0 2px 0 #00180c; }
+  /* line 65, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:hover, .button:focus, .button:visited {
+    color: white; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button[rel="external"]:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* line 130, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+.button-secondary {
+  background-color: #dee0e2;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #b5babe;
+  -moz-box-shadow: 0 2px 0 #b5babe;
+  box-shadow: 0 2px 0 #b5babe;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #0b0c0c; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:visited {
+    background-color: #dee0e2; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:hover, .button-secondary:focus {
+    background: #d0d3d6; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #dee0e2;
+    -moz-box-shadow: 0 0 0 #dee0e2;
+    box-shadow: 0 0 0 #dee0e2; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary.disabled, .button-secondary[disabled="disabled"], .button-secondary[disabled] {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-secondary.disabled:hover, .button-secondary[disabled="disabled"]:hover, .button-secondary[disabled]:hover {
+      cursor: default;
+      background-color: #dee0e2; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-secondary.disabled:active, .button-secondary[disabled="disabled"]:active, .button-secondary[disabled]:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #b5babe;
+      -moz-box-shadow: 0 2px 0 #b5babe;
+      box-shadow: 0 2px 0 #b5babe; }
+  /* line 72, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:hover, .button-secondary:focus, .button-secondary:visited {
+    color: #0b0c0c; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary[rel="external"]:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* line 134, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+.button-warning {
+  background-color: #b10e1e;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #6a0812;
+  -moz-box-shadow: 0 2px 0 #6a0812;
+  box-shadow: 0 2px 0 #6a0812;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:visited {
+    background-color: #b10e1e; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:hover, .button-warning:focus {
+    background: #990c1a; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #b10e1e;
+    -moz-box-shadow: 0 0 0 #b10e1e;
+    box-shadow: 0 0 0 #b10e1e; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning.disabled, .button-warning[disabled="disabled"], .button-warning[disabled] {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-warning.disabled:hover, .button-warning[disabled="disabled"]:hover, .button-warning[disabled]:hover {
+      cursor: default;
+      background-color: #b10e1e; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-warning.disabled:active, .button-warning[disabled="disabled"]:active, .button-warning[disabled]:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #6a0812;
+      -moz-box-shadow: 0 2px 0 #6a0812;
+      box-shadow: 0 2px 0 #6a0812; }
+  /* line 65, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:hover, .button-warning:focus, .button-warning:visited {
+    color: white; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning[rel="external"]:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* Example use:
+    <details>
+      <summary>Wanna know more?</sumary>
+      <p>Of course you do!</p>
+    </details>
+*/
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* line 255, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.option.group label input[type="text"] {
+  margin-left: 0;
+  width: 14em;
+  margin-top: -0.3em;
+  position: absolute; }
+
+/* line 263, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+::-webkit-input-placeholder {
+  padding-top: 0.15em;
+  color: #6f777b; }
+
+/* line 264, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+::-moz-placeholder {
+  padding-top: 0.15em;
+  color: #6f777b; }
+
+/* firefox 19+ */
+/* line 265, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+:-ms-input-placeholder {
+  padding-top: 0.15em;
+  color: #6f777b; }
+
+/* ie */
+/* line 266, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+input:-moz-placeholder {
+  padding-top: 0.15em;
+  color: #6f777b; }
+
+/* line 450, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.button {
+  background-color: #006435;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #00180c;
+  -moz-box-shadow: 0 2px 0 #00180c;
+  box-shadow: 0 2px 0 #00180c;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:visited {
+    background-color: #006435; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:hover, .button:focus {
+    background: #004b27; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #006435;
+    -moz-box-shadow: 0 0 0 #006435;
+    box-shadow: 0 0 0 #006435; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button.disabled, .button[disabled="disabled"], .button[disabled] {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button.disabled:hover, .button[disabled="disabled"]:hover, .button[disabled]:hover {
+      cursor: default;
+      background-color: #006435; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button.disabled:active, .button[disabled="disabled"]:active, .button[disabled]:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #00180c;
+      -moz-box-shadow: 0 2px 0 #00180c;
+      box-shadow: 0 2px 0 #00180c; }
+  /* line 65, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:hover, .button:focus, .button:visited {
+    color: white; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button[rel="external"]:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* line 453, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.button-secondary {
+  background-color: #dee0e2;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #b5babe;
+  -moz-box-shadow: 0 2px 0 #b5babe;
+  box-shadow: 0 2px 0 #b5babe;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #0b0c0c; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:visited {
+    background-color: #dee0e2; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:hover, .button-secondary:focus {
+    background: #d0d3d6; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #dee0e2;
+    -moz-box-shadow: 0 0 0 #dee0e2;
+    box-shadow: 0 0 0 #dee0e2; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary.disabled, .button-secondary[disabled="disabled"], .button-secondary[disabled] {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-secondary.disabled:hover, .button-secondary[disabled="disabled"]:hover, .button-secondary[disabled]:hover {
+      cursor: default;
+      background-color: #dee0e2; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-secondary.disabled:active, .button-secondary[disabled="disabled"]:active, .button-secondary[disabled]:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #b5babe;
+      -moz-box-shadow: 0 2px 0 #b5babe;
+      box-shadow: 0 2px 0 #b5babe; }
+  /* line 72, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:hover, .button-secondary:focus, .button-secondary:visited {
+    color: #0b0c0c; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-secondary[rel="external"]:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* line 456, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.button-warning {
+  background-color: #b10e1e;
+  position: relative;
+  top: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.35em 0.5em 0.15em 0.5em;
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0 2px 0 #6a0812;
+  -moz-box-shadow: 0 2px 0 #6a0812;
+  box-shadow: 0 2px 0 #6a0812;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: white; }
+  /* line 31, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:visited {
+    background-color: #b10e1e; }
+  /* line 35, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:hover, .button-warning:focus {
+    background: #990c1a; }
+  /* line 38, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:active {
+    top: 2px;
+    -webkit-box-shadow: 0 0 0 #b10e1e;
+    -moz-box-shadow: 0 0 0 #b10e1e;
+    box-shadow: 0 0 0 #b10e1e; }
+  /* line 46, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning.disabled, .button-warning[disabled="disabled"], .button-warning[disabled] {
+    opacity: 0.5; }
+    /* line 48, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-warning.disabled:hover, .button-warning[disabled="disabled"]:hover, .button-warning[disabled]:hover {
+      cursor: default;
+      background-color: #b10e1e; }
+    /* line 52, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+    .button-warning.disabled:active, .button-warning[disabled="disabled"]:active, .button-warning[disabled]:active {
+      top: 0;
+      -webkit-box-shadow: 0 2px 0 #6a0812;
+      -moz-box-shadow: 0 2px 0 #6a0812;
+      box-shadow: 0 2px 0 #6a0812; }
+  /* line 65, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:hover, .button-warning:focus, .button-warning:visited {
+    color: white; }
+  /* line 79, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:before {
+    content: "";
+    height: 110%;
+    width: 100%;
+    display: block;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning:active:before {
+    top: -10%;
+    height: 120%; }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_buttons.scss */
+  .button-warning[rel="external"]:after {
+    display: none;
+    content: none;
+    margin-left: 0;
+    margin-right: 0; }
+
+/* Forms */
+/* line 25, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 .group {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0.75em 0; }
+  @media (max-width: 640px) {
+    /* line 25, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .form-example-1 .group {
+      font-size: 1.6rem;
+      line-height: 1.25; } }
+/* line 47, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 input[type="text"],
+.form-example-1 input[type="password"],
+.form-example-1 input[type="email"],
+.form-example-1 input[type="date"],
+.form-example-1 input[type="datetime"],
+.form-example-1 input[type="datetime-local"],
+.form-example-1 input[type="email"],
+.form-example-1 input[type="month"],
+.form-example-1 input[type="number"],
+.form-example-1 input[type="search"],
+.form-example-1 input[type="tel"],
+.form-example-1 input[type="time"],
+.form-example-1 input[type="url"],
+.form-example-1 input[type="week"],
+.form-example-1 select[size],
+.form-example-1 textarea {
+  background-color: #f9f9f9;
+  border: 2px inset;
+  font-size: 1em;
+  padding: 0.1em 0 0.1em 0.4em; }
+/* line 57, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 textarea {
+  min-height: 10em;
+  height: auto; }
+/* line 62, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 details {
+  padding: 0 1em 0 1em; }
+/* line 67, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 label {
+  color: #0b0c0c;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  vertical-align: top;
+  padding: 0.25em 0; }
+  @media (max-width: 640px) {
+    /* line 67, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .form-example-1 label {
+      font-size: 1.6rem;
+      line-height: 1.25; } }
+/* line 74, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 .option.group {
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  margin-left: -1em; }
+  /* line 78, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form-example-1 .option.group label {
+    width: auto;
+    float: none;
+    text-align: left; }
+  /* line 83, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form-example-1 .option.group li {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0; }
+/* line 91, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 input[type="checkbox"],
+.form-example-1 input[type="radio"] {
+  margin-right: 0.25em;
+  vertical-align: 2px; }
+/* line 97, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 .hint {
+  clear: left;
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none; }
+  @media (max-width: 640px) {
+    /* line 97, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .form-example-1 .hint {
+      font-size: 1.4rem;
+      line-height: 1.14286; } }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form-example-1 .hint:last-child {
+    padding-top: 0.25em; }
+  /* line 103, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form-example-1 .hint:first-child {
+    padding-bottom: 0.25em; }
+/* line 106, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 .inline .help {
+  float: left; }
+/* line 111, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 label abbr {
+  border-bottom: none;
+  color: #0b0c0c; }
+/* line 117, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 .action.group .button {
+  margin-right: 0.5em; }
+/* line 121, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 .inline.option label {
+  float: left;
+  margin-right: 1em; }
+/* line 127, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 .inline .group {
+  float: left;
+  margin-top: 0;
+  width: auto; }
+/* line 134, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 legend {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  margin-bottom: 0.5em;
+  color: #0b0c0c; }
+  @media (max-width: 640px) {
+    /* line 134, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .form-example-1 legend {
+      font-size: 2rem;
+      line-height: 1.2; } }
+/* line 139, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 fieldset {
+  margin: 0;
+  margin-top: 2em; }
+  /* line 143, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form-example-1 fieldset fieldset {
+    margin-top: 0; }
+    /* line 145, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .form-example-1 fieldset fieldset legend {
+      font-family: "nta", Arial, sans-serif;
+      font-size: 19px;
+      font-size: 1.9rem;
+      line-height: 1.31579;
+      font-weight: 400;
+      text-transform: none;
+      color: #0b0c0c; }
+      @media (max-width: 640px) {
+        /* line 145, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+        .form-example-1 fieldset fieldset legend {
+          font-size: 1.6rem;
+          line-height: 1.25; } }
+/* line 158, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 .validation-summary {
+  border: 3px solid #df3034;
+  box-sizing: border-box;
+  padding: 1em 1em 0.25em 1em;
+  margin: 1em -1em 1.5em -1em;
+  background-color: #fef7f7; }
+  /* line 71, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  .form-example-1 .validation-summary > *:first-child {
+    margin-top: 0em; }
+  /* line 76, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  .form-example-1 .validation-summary ul, .form-example-1 .validation-summary ol {
+    padding-left: 1em; }
+  /* line 83, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  .form-example-1 .validation-summary input[type="text"],
+  .form-example-1 .validation-summary textarea {
+    background-color: white; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  .form-example-1 .validation-summary .inner {
+    background-color: white;
+    border: 1px solid #bfc1c3;
+    padding: 2em;
+    margin-bottom: 0.75em; }
+    /* line 95, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+    .form-example-1 .validation-summary .inner input[type="text"],
+    .form-example-1 .validation-summary .inner textarea {
+      background-color: #f8f8f8; }
+  /* line 161, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form-example-1 .validation-summary h1 {
+    margin-bottom: 0; }
+  /* line 164, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form-example-1 .validation-summary a {
+    color: #df3034;
+    text-decoration: none; }
+    /* line 167, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .form-example-1 .validation-summary a:hover {
+      text-decoration: underline; }
+  /* line 171, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form-example-1 .validation-summary ul, .form-example-1 .validation-summary ol {
+    color: #df3034; }
+  /* line 174, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form-example-1 .validation-summary ul {
+    padding-left: 2.2em; }
+    /* line 176, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    .form-example-1 .validation-summary ul li {
+      list-style-type: none;
+      list-style-image: none; }
+  /* line 181, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form-example-1 .validation-summary li {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none; }
+    @media (max-width: 640px) {
+      /* line 181, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+      .form-example-1 .validation-summary li {
+        font-size: 1.4rem;
+        line-height: 1.14286; } }
+/* line 187, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 .validation {
+  background-color: #fef7f7;
+  border-left: 3px solid #df3034;
+  margin: 0 -1em 0.5em -1em;
+  padding: 0.75em 1em 1em 1em; }
+  /* line 192, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  .form-example-1 .validation .validation-message {
+    color: #df3034;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none;
+    display: block;
+    padding-bottom: 0.5em; }
+    @media (max-width: 640px) {
+      /* line 192, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+      .form-example-1 .validation .validation-message {
+        font-size: 1.4rem;
+        line-height: 1.14286; } }
+/* line 208, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 input[type="text"] {
+  min-width: 2em; }
+/* line 209, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 input[type="email"] {
+  width: 20em; }
+/* line 210, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 input[type="url"] {
+  width: 99%; }
+/* line 212, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 input.search {
+  width: 15em; }
+/* line 213, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 input.password {
+  width: 15em; }
+/* line 214, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 input.email {
+  width: 20em; }
+/* line 215, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 input.name {
+  width: 15em; }
+/* line 216, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 input.url {
+  width: 99%; }
+/* line 217, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 input.full-name {
+  width: 20em; }
+/* line 218, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 input.street {
+  width: 15em; }
+/* line 219, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 input.town {
+  width: 15em; }
+/* line 220, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 input.postcode {
+  width: 5em; }
+/* line 221, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 textarea.big {
+  width: 20em;
+  height: 8em; }
+/* line 223, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 textarea.full-size {
+  width: 99%;
+  height: 15em; }
+/* line 238, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 label {
+  display: block; }
+/* line 239, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 input {
+  margin-left: 0; }
+/* line 240, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 legend span {
+  padding-bottom: 0.3em;
+  display: block; }
+/* line 247, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+.form-example-1 .inline input[type=text],
+.form-example-1 .inline select,
+.form-example-1 .inline textarea {
+  margin-right: 0.5em; }
+
+/* line 25, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top .group {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0.75em 0; }
+  @media (max-width: 640px) {
+    /* line 25, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.top .group {
+      font-size: 1.6rem;
+      line-height: 1.25; } }
+/* line 47, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top input[type="text"],
+#form-example-2.top input[type="password"],
+#form-example-2.top input[type="email"],
+#form-example-2.top input[type="date"],
+#form-example-2.top input[type="datetime"],
+#form-example-2.top input[type="datetime-local"],
+#form-example-2.top input[type="email"],
+#form-example-2.top input[type="month"],
+#form-example-2.top input[type="number"],
+#form-example-2.top input[type="search"],
+#form-example-2.top input[type="tel"],
+#form-example-2.top input[type="time"],
+#form-example-2.top input[type="url"],
+#form-example-2.top input[type="week"],
+#form-example-2.top select[size],
+#form-example-2.top textarea {
+  background-color: #f9f9f9;
+  border: 2px inset;
+  font-size: 1em;
+  padding: 0.1em 0 0.1em 0.4em; }
+/* line 57, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top textarea {
+  min-height: 10em;
+  height: auto; }
+/* line 62, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top details {
+  padding: 0 1em 0 1em; }
+/* line 67, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top label {
+  color: #0b0c0c;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  vertical-align: top;
+  padding: 0.25em 0; }
+  @media (max-width: 640px) {
+    /* line 67, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.top label {
+      font-size: 1.6rem;
+      line-height: 1.25; } }
+/* line 74, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top .option.group {
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  margin-left: -1em; }
+  /* line 78, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.top .option.group label {
+    width: auto;
+    float: none;
+    text-align: left; }
+  /* line 83, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.top .option.group li {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0; }
+/* line 91, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top input[type="checkbox"],
+#form-example-2.top input[type="radio"] {
+  margin-right: 0.25em;
+  vertical-align: 2px; }
+/* line 97, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top .hint {
+  clear: left;
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none; }
+  @media (max-width: 640px) {
+    /* line 97, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.top .hint {
+      font-size: 1.4rem;
+      line-height: 1.14286; } }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.top .hint:last-child {
+    padding-top: 0.25em; }
+  /* line 103, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.top .hint:first-child {
+    padding-bottom: 0.25em; }
+/* line 106, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top .inline .help {
+  float: left; }
+/* line 111, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top label abbr {
+  border-bottom: none;
+  color: #0b0c0c; }
+/* line 117, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top .action.group .button {
+  margin-right: 0.5em; }
+/* line 121, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top .inline.option label {
+  float: left;
+  margin-right: 1em; }
+/* line 127, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top .inline .group {
+  float: left;
+  margin-top: 0;
+  width: auto; }
+/* line 134, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top legend {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  margin-bottom: 0.5em;
+  color: #0b0c0c; }
+  @media (max-width: 640px) {
+    /* line 134, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.top legend {
+      font-size: 2rem;
+      line-height: 1.2; } }
+/* line 139, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top fieldset {
+  margin: 0;
+  margin-top: 2em; }
+  /* line 143, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.top fieldset fieldset {
+    margin-top: 0; }
+    /* line 145, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.top fieldset fieldset legend {
+      font-family: "nta", Arial, sans-serif;
+      font-size: 19px;
+      font-size: 1.9rem;
+      line-height: 1.31579;
+      font-weight: 400;
+      text-transform: none;
+      color: #0b0c0c; }
+      @media (max-width: 640px) {
+        /* line 145, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+        #form-example-2.top fieldset fieldset legend {
+          font-size: 1.6rem;
+          line-height: 1.25; } }
+/* line 158, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top .validation-summary {
+  border: 3px solid #df3034;
+  box-sizing: border-box;
+  padding: 1em 1em 0.25em 1em;
+  margin: 1em -1em 1.5em -1em;
+  background-color: #fef7f7; }
+  /* line 71, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  #form-example-2.top .validation-summary > *:first-child {
+    margin-top: 0em; }
+  /* line 76, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  #form-example-2.top .validation-summary ul, #form-example-2.top .validation-summary ol {
+    padding-left: 1em; }
+  /* line 83, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  #form-example-2.top .validation-summary input[type="text"],
+  #form-example-2.top .validation-summary textarea {
+    background-color: white; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  #form-example-2.top .validation-summary .inner {
+    background-color: white;
+    border: 1px solid #bfc1c3;
+    padding: 2em;
+    margin-bottom: 0.75em; }
+    /* line 95, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+    #form-example-2.top .validation-summary .inner input[type="text"],
+    #form-example-2.top .validation-summary .inner textarea {
+      background-color: #f8f8f8; }
+  /* line 161, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.top .validation-summary h1 {
+    margin-bottom: 0; }
+  /* line 164, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.top .validation-summary a {
+    color: #df3034;
+    text-decoration: none; }
+    /* line 167, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.top .validation-summary a:hover {
+      text-decoration: underline; }
+  /* line 171, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.top .validation-summary ul, #form-example-2.top .validation-summary ol {
+    color: #df3034; }
+  /* line 174, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.top .validation-summary ul {
+    padding-left: 2.2em; }
+    /* line 176, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.top .validation-summary ul li {
+      list-style-type: none;
+      list-style-image: none; }
+  /* line 181, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.top .validation-summary li {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none; }
+    @media (max-width: 640px) {
+      /* line 181, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+      #form-example-2.top .validation-summary li {
+        font-size: 1.4rem;
+        line-height: 1.14286; } }
+/* line 187, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top .validation {
+  background-color: #fef7f7;
+  border-left: 3px solid #df3034;
+  margin: 0 -1em 0.5em -1em;
+  padding: 0.75em 1em 1em 1em; }
+  /* line 192, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.top .validation .validation-message {
+    color: #df3034;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none;
+    display: block;
+    padding-bottom: 0.5em; }
+    @media (max-width: 640px) {
+      /* line 192, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+      #form-example-2.top .validation .validation-message {
+        font-size: 1.4rem;
+        line-height: 1.14286; } }
+/* line 208, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top input[type="text"] {
+  min-width: 2em; }
+/* line 209, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top input[type="email"] {
+  width: 20em; }
+/* line 210, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top input[type="url"] {
+  width: 99%; }
+/* line 212, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top input.search {
+  width: 15em; }
+/* line 213, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top input.password {
+  width: 15em; }
+/* line 214, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top input.email {
+  width: 20em; }
+/* line 215, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top input.name {
+  width: 15em; }
+/* line 216, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top input.url {
+  width: 99%; }
+/* line 217, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top input.full-name {
+  width: 20em; }
+/* line 218, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top input.street {
+  width: 15em; }
+/* line 219, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top input.town {
+  width: 15em; }
+/* line 220, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top input.postcode {
+  width: 5em; }
+/* line 221, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top textarea.big {
+  width: 20em;
+  height: 8em; }
+/* line 223, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top textarea.full-size {
+  width: 99%;
+  height: 15em; }
+/* line 238, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top label {
+  display: block; }
+/* line 239, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top input {
+  margin-left: 0; }
+/* line 240, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top legend span {
+  padding-bottom: 0.3em;
+  display: block; }
+/* line 247, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.top .inline input[type=text],
+#form-example-2.top .inline select,
+#form-example-2.top .inline textarea {
+  margin-right: 0.5em; }
+
+/* line 25, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left .group {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0.75em 0; }
+  @media (max-width: 640px) {
+    /* line 25, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.left .group {
+      font-size: 1.6rem;
+      line-height: 1.25; } }
+/* line 47, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left input[type="text"],
+#form-example-2.left input[type="password"],
+#form-example-2.left input[type="email"],
+#form-example-2.left input[type="date"],
+#form-example-2.left input[type="datetime"],
+#form-example-2.left input[type="datetime-local"],
+#form-example-2.left input[type="email"],
+#form-example-2.left input[type="month"],
+#form-example-2.left input[type="number"],
+#form-example-2.left input[type="search"],
+#form-example-2.left input[type="tel"],
+#form-example-2.left input[type="time"],
+#form-example-2.left input[type="url"],
+#form-example-2.left input[type="week"],
+#form-example-2.left select[size],
+#form-example-2.left textarea {
+  background-color: #f9f9f9;
+  border: 2px inset;
+  font-size: 1em;
+  padding: 0.1em 0 0.1em 0.4em; }
+/* line 57, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left textarea {
+  min-height: 10em;
+  height: auto; }
+/* line 62, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left details {
+  padding: 0 1em 0 1em; }
+/* line 67, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left label {
+  color: #0b0c0c;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  vertical-align: top;
+  padding: 0.25em 0; }
+  @media (max-width: 640px) {
+    /* line 67, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.left label {
+      font-size: 1.6rem;
+      line-height: 1.25; } }
+/* line 74, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left .option.group {
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  margin-left: -1em; }
+  /* line 78, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.left .option.group label {
+    width: auto;
+    float: none;
+    text-align: left; }
+  /* line 83, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.left .option.group li {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0; }
+/* line 91, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left input[type="checkbox"],
+#form-example-2.left input[type="radio"] {
+  margin-right: 0.25em;
+  vertical-align: 2px; }
+/* line 97, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left .hint {
+  clear: left;
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none; }
+  @media (max-width: 640px) {
+    /* line 97, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.left .hint {
+      font-size: 1.4rem;
+      line-height: 1.14286; } }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.left .hint:last-child {
+    padding-top: 0.25em; }
+  /* line 103, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.left .hint:first-child {
+    padding-bottom: 0.25em; }
+/* line 106, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left .inline .help {
+  float: left; }
+/* line 111, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left label abbr {
+  border-bottom: none;
+  color: #0b0c0c; }
+/* line 117, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left .action.group .button {
+  margin-right: 0.5em; }
+/* line 121, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left .inline.option label {
+  float: left;
+  margin-right: 1em; }
+/* line 127, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left .inline .group {
+  float: left;
+  margin-top: 0;
+  width: auto; }
+/* line 134, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left legend {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  margin-bottom: 0.5em;
+  color: #0b0c0c; }
+  @media (max-width: 640px) {
+    /* line 134, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.left legend {
+      font-size: 2rem;
+      line-height: 1.2; } }
+/* line 139, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left fieldset {
+  margin: 0;
+  margin-top: 2em; }
+  /* line 143, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.left fieldset fieldset {
+    margin-top: 0; }
+    /* line 145, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.left fieldset fieldset legend {
+      font-family: "nta", Arial, sans-serif;
+      font-size: 19px;
+      font-size: 1.9rem;
+      line-height: 1.31579;
+      font-weight: 400;
+      text-transform: none;
+      color: #0b0c0c; }
+      @media (max-width: 640px) {
+        /* line 145, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+        #form-example-2.left fieldset fieldset legend {
+          font-size: 1.6rem;
+          line-height: 1.25; } }
+/* line 158, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left .validation-summary {
+  border: 3px solid #df3034;
+  box-sizing: border-box;
+  padding: 1em 1em 0.25em 1em;
+  margin: 1em -1em 1.5em -1em;
+  background-color: #fef7f7; }
+  /* line 71, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  #form-example-2.left .validation-summary > *:first-child {
+    margin-top: 0em; }
+  /* line 76, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  #form-example-2.left .validation-summary ul, #form-example-2.left .validation-summary ol {
+    padding-left: 1em; }
+  /* line 83, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  #form-example-2.left .validation-summary input[type="text"],
+  #form-example-2.left .validation-summary textarea {
+    background-color: white; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  #form-example-2.left .validation-summary .inner {
+    background-color: white;
+    border: 1px solid #bfc1c3;
+    padding: 2em;
+    margin-bottom: 0.75em; }
+    /* line 95, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+    #form-example-2.left .validation-summary .inner input[type="text"],
+    #form-example-2.left .validation-summary .inner textarea {
+      background-color: #f8f8f8; }
+  /* line 161, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.left .validation-summary h1 {
+    margin-bottom: 0; }
+  /* line 164, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.left .validation-summary a {
+    color: #df3034;
+    text-decoration: none; }
+    /* line 167, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.left .validation-summary a:hover {
+      text-decoration: underline; }
+  /* line 171, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.left .validation-summary ul, #form-example-2.left .validation-summary ol {
+    color: #df3034; }
+  /* line 174, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.left .validation-summary ul {
+    padding-left: 2.2em; }
+    /* line 176, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.left .validation-summary ul li {
+      list-style-type: none;
+      list-style-image: none; }
+  /* line 181, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.left .validation-summary li {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none; }
+    @media (max-width: 640px) {
+      /* line 181, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+      #form-example-2.left .validation-summary li {
+        font-size: 1.4rem;
+        line-height: 1.14286; } }
+/* line 187, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left .validation {
+  background-color: #fef7f7;
+  border-left: 3px solid #df3034;
+  margin: 0 -1em 0.5em -1em;
+  padding: 0.75em 1em 1em 1em; }
+  /* line 192, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.left .validation .validation-message {
+    color: #df3034;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none;
+    display: block;
+    padding-bottom: 0.5em; }
+    @media (max-width: 640px) {
+      /* line 192, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+      #form-example-2.left .validation .validation-message {
+        font-size: 1.4rem;
+        line-height: 1.14286; } }
+/* line 208, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left input[type="text"] {
+  min-width: 2em; }
+/* line 209, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left input[type="email"] {
+  width: 20em; }
+/* line 210, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left input[type="url"] {
+  width: 99%; }
+/* line 212, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left input.search {
+  width: 15em; }
+/* line 213, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left input.password {
+  width: 15em; }
+/* line 214, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left input.email {
+  width: 20em; }
+/* line 215, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left input.name {
+  width: 15em; }
+/* line 216, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left input.url {
+  width: 99%; }
+/* line 217, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left input.full-name {
+  width: 20em; }
+/* line 218, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left input.street {
+  width: 15em; }
+/* line 219, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left input.town {
+  width: 15em; }
+/* line 220, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left input.postcode {
+  width: 5em; }
+/* line 221, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left textarea.big {
+  width: 20em;
+  height: 8em; }
+/* line 223, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left textarea.full-size {
+  width: 99%;
+  height: 15em; }
+/* line 339, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left label {
+  display: -moz-inline-stack;
+  display: inline-block;
+  text-align: left;
+  width: 7.5em; }
+  /* line 348, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.left label.visuallyhidden + input,
+  #form-example-2.left label.visuallyhidden + select,
+  #form-example-2.left label.visuallyhidden + textarea {
+    margin-left: 8.2em; }
+/* line 354, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left .hint {
+  margin-left: 9.75em; }
+/* line 355, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left .action.group {
+  padding-left: 7.5em; }
+/* line 360, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left input,
+#form-example-2.left select,
+#form-example-2.left textarea,
+#form-example-2.left .uneditable-field {
+  display: -moz-inline-stack;
+  display: inline-block;
+  margin: 0 0.5em; }
+/* line 364, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left input[type="checkbox"] {
+  margin-left: 0.25em; }
+/* line 367, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left input[type="radio"] {
+  margin-left: 0em; }
+/* line 370, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left select {
+  margin: 0.25em 0.5em; }
+/* line 375, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left fieldset legend {
+  display: block;
+  padding-left: 6.5em; }
+/* line 380, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left fieldset fieldset {
+  margin-top: 2em; }
+  /* line 382, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.left fieldset fieldset legend {
+    padding-left: 0;
+    margin-bottom: 0; }
+    /* line 387, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.left fieldset fieldset legend span {
+      width: 7.5em;
+      text-align: left;
+      position: relative;
+      float: left;
+      margin: 0.25em 0; }
+  /* line 398, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.left fieldset fieldset .inline .group {
+    margin-bottom: 0.5em; }
+/* line 408, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left .option.group label {
+  display: block;
+  padding-left: 8em; }
+/* line 413, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left .option.group .validation-message {
+  width: 7.5em;
+  display: block;
+  float: left; }
+/* line 421, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.left .inline {
+  padding-left: 7.75em; }
+  /* line 423, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.left .inline label {
+    width: auto;
+    float: none;
+    margin-left: 0.5em;
+    text-align: left; }
+    /* line 432, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.left .inline label.visuallyhidden + input,
+    #form-example-2.left .inline label.visuallyhidden + select,
+    #form-example-2.left .inline label.visuallyhidden + textarea {
+      margin-left: 0.5em;
+      margin-right: 0; }
+  /* line 439, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.left .inline.option.group {
+    padding-left: 9em; }
+    /* line 442, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.left .inline.option.group label {
+      padding-left: 0; }
+
+/* line 25, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right .group {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  margin: 0.75em 0; }
+  @media (max-width: 640px) {
+    /* line 25, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.right .group {
+      font-size: 1.6rem;
+      line-height: 1.25; } }
+/* line 47, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right input[type="text"],
+#form-example-2.right input[type="password"],
+#form-example-2.right input[type="email"],
+#form-example-2.right input[type="date"],
+#form-example-2.right input[type="datetime"],
+#form-example-2.right input[type="datetime-local"],
+#form-example-2.right input[type="email"],
+#form-example-2.right input[type="month"],
+#form-example-2.right input[type="number"],
+#form-example-2.right input[type="search"],
+#form-example-2.right input[type="tel"],
+#form-example-2.right input[type="time"],
+#form-example-2.right input[type="url"],
+#form-example-2.right input[type="week"],
+#form-example-2.right select[size],
+#form-example-2.right textarea {
+  background-color: #f9f9f9;
+  border: 2px inset;
+  font-size: 1em;
+  padding: 0.1em 0 0.1em 0.4em; }
+/* line 57, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right textarea {
+  min-height: 10em;
+  height: auto; }
+/* line 62, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right details {
+  padding: 0 1em 0 1em; }
+/* line 67, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right label {
+  color: #0b0c0c;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 19px;
+  font-size: 1.9rem;
+  line-height: 1.31579;
+  font-weight: 400;
+  text-transform: none;
+  vertical-align: top;
+  padding: 0.25em 0; }
+  @media (max-width: 640px) {
+    /* line 67, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.right label {
+      font-size: 1.6rem;
+      line-height: 1.25; } }
+/* line 74, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right .option.group {
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  margin-left: -1em; }
+  /* line 78, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.right .option.group label {
+    width: auto;
+    float: none;
+    text-align: left; }
+  /* line 83, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.right .option.group li {
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0; }
+/* line 91, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right input[type="checkbox"],
+#form-example-2.right input[type="radio"] {
+  margin-right: 0.25em;
+  vertical-align: 2px; }
+/* line 97, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right .hint {
+  clear: left;
+  display: block;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none; }
+  @media (max-width: 640px) {
+    /* line 97, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.right .hint {
+      font-size: 1.4rem;
+      line-height: 1.14286; } }
+  /* line 102, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.right .hint:last-child {
+    padding-top: 0.25em; }
+  /* line 103, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.right .hint:first-child {
+    padding-bottom: 0.25em; }
+/* line 106, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right .inline .help {
+  float: left; }
+/* line 111, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right label abbr {
+  border-bottom: none;
+  color: #0b0c0c; }
+/* line 117, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right .action.group .button {
+  margin-right: 0.5em; }
+/* line 121, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right .inline.option label {
+  float: left;
+  margin-right: 1em; }
+/* line 127, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right .inline .group {
+  float: left;
+  margin-top: 0;
+  width: auto; }
+/* line 134, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right legend {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  margin-bottom: 0.5em;
+  color: #0b0c0c; }
+  @media (max-width: 640px) {
+    /* line 134, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.right legend {
+      font-size: 2rem;
+      line-height: 1.2; } }
+/* line 139, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right fieldset {
+  margin: 0;
+  margin-top: 2em; }
+  /* line 143, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.right fieldset fieldset {
+    margin-top: 0; }
+    /* line 145, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.right fieldset fieldset legend {
+      font-family: "nta", Arial, sans-serif;
+      font-size: 19px;
+      font-size: 1.9rem;
+      line-height: 1.31579;
+      font-weight: 400;
+      text-transform: none;
+      color: #0b0c0c; }
+      @media (max-width: 640px) {
+        /* line 145, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+        #form-example-2.right fieldset fieldset legend {
+          font-size: 1.6rem;
+          line-height: 1.25; } }
+/* line 158, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right .validation-summary {
+  border: 3px solid #df3034;
+  box-sizing: border-box;
+  padding: 1em 1em 0.25em 1em;
+  margin: 1em -1em 1.5em -1em;
+  background-color: #fef7f7; }
+  /* line 71, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  #form-example-2.right .validation-summary > *:first-child {
+    margin-top: 0em; }
+  /* line 76, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  #form-example-2.right .validation-summary ul, #form-example-2.right .validation-summary ol {
+    padding-left: 1em; }
+  /* line 83, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  #form-example-2.right .validation-summary input[type="text"],
+  #form-example-2.right .validation-summary textarea {
+    background-color: white; }
+  /* line 89, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+  #form-example-2.right .validation-summary .inner {
+    background-color: white;
+    border: 1px solid #bfc1c3;
+    padding: 2em;
+    margin-bottom: 0.75em; }
+    /* line 95, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_panels.scss */
+    #form-example-2.right .validation-summary .inner input[type="text"],
+    #form-example-2.right .validation-summary .inner textarea {
+      background-color: #f8f8f8; }
+  /* line 161, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.right .validation-summary h1 {
+    margin-bottom: 0; }
+  /* line 164, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.right .validation-summary a {
+    color: #df3034;
+    text-decoration: none; }
+    /* line 167, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.right .validation-summary a:hover {
+      text-decoration: underline; }
+  /* line 171, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.right .validation-summary ul, #form-example-2.right .validation-summary ol {
+    color: #df3034; }
+  /* line 174, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.right .validation-summary ul {
+    padding-left: 2.2em; }
+    /* line 176, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.right .validation-summary ul li {
+      list-style-type: none;
+      list-style-image: none; }
+  /* line 181, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.right .validation-summary li {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none; }
+    @media (max-width: 640px) {
+      /* line 181, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+      #form-example-2.right .validation-summary li {
+        font-size: 1.4rem;
+        line-height: 1.14286; } }
+/* line 187, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right .validation {
+  background-color: #fef7f7;
+  border-left: 3px solid #df3034;
+  margin: 0 -1em 0.5em -1em;
+  padding: 0.75em 1em 1em 1em; }
+  /* line 192, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.right .validation .validation-message {
+    color: #df3034;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none;
+    display: block;
+    padding-bottom: 0.5em; }
+    @media (max-width: 640px) {
+      /* line 192, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+      #form-example-2.right .validation .validation-message {
+        font-size: 1.4rem;
+        line-height: 1.14286; } }
+/* line 208, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right input[type="text"] {
+  min-width: 2em; }
+/* line 209, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right input[type="email"] {
+  width: 20em; }
+/* line 210, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right input[type="url"] {
+  width: 99%; }
+/* line 212, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right input.search {
+  width: 15em; }
+/* line 213, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right input.password {
+  width: 15em; }
+/* line 214, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right input.email {
+  width: 20em; }
+/* line 215, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right input.name {
+  width: 15em; }
+/* line 216, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right input.url {
+  width: 99%; }
+/* line 217, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right input.full-name {
+  width: 20em; }
+/* line 218, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right input.street {
+  width: 15em; }
+/* line 219, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right input.town {
+  width: 15em; }
+/* line 220, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right input.postcode {
+  width: 5em; }
+/* line 221, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right textarea.big {
+  width: 20em;
+  height: 8em; }
+/* line 223, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right textarea.full-size {
+  width: 99%;
+  height: 15em; }
+/* line 339, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right label {
+  display: -moz-inline-stack;
+  display: inline-block;
+  text-align: right;
+  width: 7.5em; }
+  /* line 348, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.right label.visuallyhidden + input,
+  #form-example-2.right label.visuallyhidden + select,
+  #form-example-2.right label.visuallyhidden + textarea {
+    margin-left: 8.2em; }
+/* line 354, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right .hint {
+  margin-left: 9.75em; }
+/* line 355, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right .action.group {
+  padding-left: 7.5em; }
+/* line 360, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right input,
+#form-example-2.right select,
+#form-example-2.right textarea,
+#form-example-2.right .uneditable-field {
+  display: -moz-inline-stack;
+  display: inline-block;
+  margin: 0 0.5em; }
+/* line 364, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right input[type="checkbox"] {
+  margin-left: 0.25em; }
+/* line 367, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right input[type="radio"] {
+  margin-left: 0em; }
+/* line 370, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right select {
+  margin: 0.25em 0.5em; }
+/* line 375, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right fieldset legend {
+  display: block;
+  padding-left: 6.5em; }
+/* line 380, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right fieldset fieldset {
+  margin-top: 2em; }
+  /* line 382, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.right fieldset fieldset legend {
+    padding-left: 0;
+    margin-bottom: 0; }
+    /* line 387, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.right fieldset fieldset legend span {
+      width: 7.5em;
+      text-align: right;
+      position: relative;
+      float: left;
+      margin: 0.25em 0; }
+  /* line 398, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.right fieldset fieldset .inline .group {
+    margin-bottom: 0.5em; }
+/* line 408, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right .option.group label {
+  display: block;
+  padding-left: 8em; }
+/* line 413, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right .option.group .validation-message {
+  width: 7.5em;
+  display: block;
+  float: left; }
+/* line 421, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+#form-example-2.right .inline {
+  padding-left: 7.75em; }
+  /* line 423, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.right .inline label {
+    width: auto;
+    float: none;
+    margin-left: 0.5em;
+    text-align: left; }
+    /* line 432, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.right .inline label.visuallyhidden + input,
+    #form-example-2.right .inline label.visuallyhidden + select,
+    #form-example-2.right .inline label.visuallyhidden + textarea {
+      margin-left: 0.5em;
+      margin-right: 0; }
+  /* line 439, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+  #form-example-2.right .inline.option.group {
+    padding-left: 9em; }
+    /* line 442, /Users/jaimes/Sites/_includes/stylesheets/design-patterns/_forms.scss */
+    #form-example-2.right .inline.option.group label {
+      padding-left: 0; }

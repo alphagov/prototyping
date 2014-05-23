@@ -1,0 +1,401 @@
+/* CSS 3 Mixins
+
+  Add them as you need them. This should let us manage vendor prefixes in one place.
+ */
+@font-face {
+  font-family: GDS-Logo;
+  src: local("HelveticaNeue"), local("Helvetica Neue"), local("Arial"), local("Helvetica"); }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Cross-browser shims
+
+  Ways of normalising properties across browsers.
+ */
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+/* Usage:
+   @include inline-block
+
+   or
+
+   @include inline-block("250px")
+
+   which gives a min-height to the inline-block elements.
+*/
+/* Contain floats usage:
+
+   .this-has-floated-children {
+     @extend %contain-floats;
+   }
+
+*/
+/* line 49, /Users/jaimes/Sites/assets/toolkit/stylesheets/_shims.scss */
+.sub-nav ul:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+/* line 14 */
+.global-header.not-govuk #logo {
+  width: auto;
+  margin-right: 10px;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  color: white;
+  text-decoration: none;
+  line-height: 1.2; }
+  @media (max-width: 640px) {
+    /* line 14 */
+    .global-header.not-govuk #logo {
+      font-size: 2rem;
+      line-height: 1.2; } }
+  /* line 23 */
+  .global-header.not-govuk #logo:hover {
+    text-decoration: underline; }
+/* line 30 */
+.global-header.with-proposition.not-govuk .header-proposition .proposition-name {
+  font-weight: 400; }
+/* line 33 */
+.global-header.with-proposition.not-govuk .header-proposition .proposition-links {
+  margin-top: 7px; }
+  /* line 36 */
+  .global-header.with-proposition.not-govuk .header-proposition .proposition-links li a {
+    font-weight: 400; }
+/* line 45 */
+.global-header.with-search.not-govuk .header-proposition .proposition-links {
+  margin-top: 35px; }
+/* line 52 */
+.global-header .header-proposition .proposition-name {
+  display: block;
+  float: left;
+  color: #fff;
+  margin-right: 5px; }
+/* line 61 */
+.global-header .header-proposition .proposition-links li a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #28a197; }
+/* line 66 */
+.global-header .header-proposition .proposition-links li a.active {
+  color: white;
+  border-bottom: 1px solid #28a197; }
+/* line 74 */
+.global-header .phase-tag {
+  display: block;
+  float: left;
+  color: #fff;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  font-weight: 300;
+  text-transform: none;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin: 3px 10px 0 0;
+  padding: 2px 5px 0; }
+  @media (max-width: 640px) {
+    /* line 74 */
+    .global-header .phase-tag {
+      font-size: 1.4rem;
+      line-height: 1.14286; } }
+
+/* line 93 */
+.global-header.alpha form#search input.submit {
+  border: 1px solid #d53880;
+  border-left-color: #222;
+  background-color: #d53880; }
+/* line 100 */
+.global-header.alpha .phase-tag {
+  background-color: #d53880; }
+@media screen and (max-width: 379px) {
+  /* line 105 */
+  .global-header.alpha.with-proposition .search-toggle {
+    background-color: #d53880; } }
+/* line 114 */
+.global-header.alpha.with-proposition .header-proposition .proposition-links li a {
+  border-color: #d53880; }
+
+/* line 123 */
+#content {
+  max-width: 960px;
+  margin: 0 auto; }
+  /* line 128 */
+  #content.alpha {
+    border-color: #d53880; }
+  /* line 132 */
+  #content.beta {
+    border-color: #f47738; }
+
+/* line 140 */
+.global-header.beta form#search input.submit {
+  border: 1px solid #f47738;
+  border-left-color: #222;
+  background-color: #f47738; }
+/* line 147 */
+.global-header.beta .phase-tag {
+  background-color: #f47738; }
+@media screen and (max-width: 379px) {
+  /* line 152 */
+  .global-header.beta.with-proposition .search-toggle {
+    background-color: #f47738; } }
+/* line 161 */
+.global-header.beta.with-proposition .header-proposition .proposition-links li a {
+  border-color: #f47738; }
+
+/* line 170 */
+.sub-nav {
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: white;
+  border-bottom: 1px solid #bfc1c3; }
+  /* line 180 */
+  .sub-nav ul {
+    list-style: none;
+    padding: 0.5em 15px;
+    margin: 0 0 0 33%; }
+    /* line 187 */
+    .sub-nav ul li {
+      float: left;
+      margin-right: 10px; }
+      /* line 188 */
+      .sub-nav ul li.account-name {
+        margin-right: 20px;
+        font-weight: 600; }
+      /* line 196 */
+      .sub-nav ul li a {
+        color: #0b0c0c; }
+
+/* line 204 */
+.cloudstore #wrapper {
+  background-color: #fff; }
+/* line 208 */
+.cloudstore img.cloudstore {
+  width: 1172px;
+  margin: 0 auto;
+  display: block; }
+/* line 214 */
+.cloudstore .sub-nav {
+  max-width: none; }
+  /* line 217 */
+  .cloudstore .sub-nav .inner {
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 0; }
+
+/* line 225 */
+.alpha-warning, .beta-warning {
+  padding: 0.5em 0; }
+  /* line 228 */
+  .alpha-warning p, .beta-warning p {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+    color: #0b0c0c;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    font-weight: 300;
+    text-transform: none; }
+    @media (max-width: 640px) {
+      /* line 228 */
+      .alpha-warning p, .beta-warning p {
+        font-size: 1.4rem;
+        line-height: 1.14286; } }
+  /* line 237 */
+  .alpha-warning a, .alpha-warning a:link, .alpha-warning a:visited, .alpha-warning a:active, .beta-warning a, .beta-warning a:link, .beta-warning a:visited, .beta-warning a:active {
+    color: #0b0c0c; }
+  /* line 241 */
+  .alpha-warning a:hover, .beta-warning a:hover {
+    color: #0b0c0c; }
+
+/* line 246 */
+.alpha-warning {
+  background-color: #d53880; }
+
+/* line 250 */
+.beta-warning {
+  background-color: #f47738; }
+
+/* line 255 */
+#alpha-popup {
+  display: none; }
+
+/* line 259 */
+#popup {
+  position: relative;
+  max-width: 800px;
+  margin: 3em auto 0 auto;
+  background-color: #fff;
+  border: 10px solid #bfc1c3;
+  padding: 2em; }
+  /* line 270 */
+  #popup img {
+    float: left;
+    padding: 0 5% 1em 0;
+    width: 25%; }
+  /* line 276 */
+  #popup div {
+    float: right;
+    width: 70%; }
+  /* line 281 */
+  #popup h2 {
+    margin-top: 0;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: none;
+    font-weight: 700; }
+    @media (max-width: 640px) {
+      /* line 281 */
+      #popup h2 {
+        font-size: 2rem;
+        line-height: 1.2; } }
+  /* line 286 */
+  #popup.alpha {
+    border-color: #d53880; }
+    /* line 289 */
+    #popup.alpha .button {
+      background-color: #d53880;
+      -webkit-box-shadow: 0 3px 0 #8a1d4f;
+      -moz-box-shadow: 0 3px 0 #8a1d4f;
+      box-shadow: 0 3px 0 #8a1d4f; }
+  /* line 295 */
+  #popup.beta {
+    border-color: #f47738; }
+    /* line 298 */
+    #popup.beta .button {
+      background-color: #f47738;
+      -webkit-box-shadow: 0 3px 0 #bc460a;
+      -moz-box-shadow: 0 3px 0 #bc460a;
+      box-shadow: 0 3px 0 #bc460a; }
+
+/* line 305 */
+.get-started .button {
+  padding: 0.60em 1.7em 0.45em 0.67em;
+  background-image: url(https://assets-origin.preview.alphagov.co.uk/static/icon-pointer.png);
+  background-position: 100% 50%;
+  background-repeat: no-repeat; }
+
+/* line 312 */
+.transformation {
+  border: 10px solid #bfc1c3;
+  border-width: 10px 0;
+  margin: 2em 0;
+  padding: 2em 0; }
+  /* line 318 */
+  .transformation img {
+    float: left;
+    padding: 0 5% 1em 0;
+    width: 25%; }
+  /* line 324 */
+  .transformation div {
+    float: right;
+    width: 70%; }
+  /* line 329 */
+  .transformation h2 {
+    margin-top: 0; }
+  /* line 333 */
+  .transformation.alpha {
+    border-top-color: #d53880; }
+    /* line 336 */
+    .transformation.alpha .button {
+      background-color: #d53880;
+      -webkit-box-shadow: 0 3px 0 #8a1d4f;
+      -moz-box-shadow: 0 3px 0 #8a1d4f;
+      box-shadow: 0 3px 0 #8a1d4f; }
+  /* line 342 */
+  .transformation.beta {
+    border-top-color: #f47738; }
+    /* line 345 */
+    .transformation.beta .button {
+      background-color: #f47738;
+      -webkit-box-shadow: 0 3px 0 #bc460a;
+      -moz-box-shadow: 0 3px 0 #bc460a;
+      box-shadow: 0 3px 0 #bc460a; }
+
+/* line 352 */
+.transformation-2 {
+  border-width: 1px 0; }
+  /* line 355 */
+  .transformation-2 div {
+    float: none;
+    width: auto; }
+
+/* line 361 */
+.transformation-3 {
+  border-width: 0;
+  padding: 1em; }
+  /* line 365 */
+  .transformation-3.alpha {
+    background-color: #e78cb6; }
+  /* line 369 */
+  .transformation-3.beta {
+    background-color: #f79868; }
+  /* line 374 */
+  .transformation-3 div {
+    float: none;
+    width: auto; }
+  /* line 379 */
+  .transformation-3 h2 {
+    width: 60%;
+    float: left;
+    color: white; }
+  /* line 386 */
+  .transformation-3 p.get-started {
+    float: right; }
+
+/* line 391 */
+.transformation-4 {
+  border-width: 0;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0; }
+  /* line 397 */
+  .transformation-4.alpha {
+    background-color: #e78cb6; }
+  /* line 401 */
+  .transformation-4.beta {
+    background-color: #f79868; }
+  /* line 405 */
+  .transformation-4 div {
+    float: none;
+    width: auto;
+    padding: 1em; }
+  /* line 411 */
+  .transformation-4 h2 {
+    float: left;
+    color: white;
+    margin: 0;
+    width: 70%; }
+  /* line 418 */
+  .transformation-4 .get-started {
+    margin: 0; }
+  /* line 422 */
+  .transformation-4 .button {
+    float: right; }
