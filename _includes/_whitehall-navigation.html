@@ -1,14 +1,11 @@
-<header role="banner" id="global-header" class="with-proposition">
-  <div class="header-wrapper">
-    <div class="header-global">
-      <div class="header-logo">
-        <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="content">
-          <img src="https://assets.digital.cabinet-office.gov.uk/static/gov.uk_logotype_crown-c09acb07e4d1d5d558f5a0bc53e9e36d.png" alt=""> GOV.UK
-        </a>
-      </div>
-
-      <a href="#search" class="search-toggle js-header-toggle">Search</a>
-
+<header role="banner" id="global-header" class=" with-proposition"><div class="header-wrapper">
+  <div class="header-global">
+    <div class="header-logo">
+      <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="content">
+        <img src="https://assets.digital.cabinet-office.gov.uk/static/gov.uk_logotype_crown-c09acb07e4d1d5d558f5a0bc53e9e36d.png" width="35" height="31" alt=""> GOV.UK
+      </a>
+    </div>
+    <a href="#search" class="search-toggle js-header-toggle">Search</a>
       <form id="search" class="site-search" action="{% if page.search_action %}{{ page.search_action }}{% else %}http://www.gov.uk/search{% endif %}" method="get" role="search">
         <div class="content">
           <label for="site-search-text">{% if page.search_placeholder %}{{ page.search_placeholder }}{% else %}Search{% endif %}</label>
@@ -17,11 +14,11 @@
         <input type="hidden" name="tab" value="government-results">
       </form>
     </div>
-
+        
     <div class="header-proposition">
       <div class="content">
         <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
-        <nav id="proposition-menu">
+        <nav id="proposition-menu" class="no-proposition-name">
           <ul id="proposition-links">
             <li><a href="https://www.gov.uk/government/organisations" class="{% unless page.current_nav %}active{% endunless %}{% if page.current_nav == 'departments' %}active{% endif %}">Departments</a></li>
             <li><a href="https://www.gov.uk/government/topics" class="{% if page.current_nav == 'topics' %}active{% endif %}">Topics</a></li>
