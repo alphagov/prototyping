@@ -99,8 +99,17 @@ header.page-header {
 
 .category-page {
 
+  .a-z {
+    @include core-36;
+    font-weight: bold;
+    float: left;
+    width: 115px;
+  }
+
   .browse-container {
     min-height: 100px;
+    float: left;
+    width: 88%;
 
     h2 {
       @include core-19;
@@ -108,7 +117,7 @@ header.page-header {
       font-weight: bold;
       margin: 0 3.33% 0 0;
       position: relative;
-      width: 30%;
+      width: 21%;
 
       &.published {
         @include core-27;
@@ -151,7 +160,7 @@ header.page-header {
       float: left;
       margin: 0 0 60px;
       list-style: none;
-      width: 66.66%;
+      width: 75.66%;
 
       li {
         margin-bottom: 10px;
@@ -159,6 +168,9 @@ header.page-header {
           text-decoration: none;
           &:hover,
           &:focus {
+            text-decoration: underline;
+          }
+          &.other {
             text-decoration: underline;
           }
         }
