@@ -71,7 +71,6 @@ p.contents-header {
       }
     }
     &+ p {
-      font-weight: bold;
       margin-top: 30px;
     }
   }
@@ -263,4 +262,9 @@ p.contents-header {
   dt {
     font-weight: normal;
   }
+}
+
+.grey {
+  color: #6f777b;
+  padding-bottom: 30px;
 }
