@@ -17,6 +17,10 @@ ol.group {
   }
 }
 
+.clear-selected {
+  display: none;
+}
+
 
 #wrapper {
   position: relative;;
@@ -64,6 +68,14 @@ ol.group {
       }
     }
 
+    .checkbox-filter {
+      .head {
+        cursor: pointer;
+        padding: 5px;
+        position: relative;
+      }
+    }
+
     .checkbox-container {
       position: relative;
       padding: 5px;
@@ -108,6 +120,15 @@ ol.group {
       font-size: 24px;
       line-height: 1.25;
       font-weight: bold;
+    }
+
+    .closed {
+      .checkbox-container {
+        position: absolute;
+        left: -9999px;
+        padding: 0;
+        margin: 0;
+      }
     }
 
   }
