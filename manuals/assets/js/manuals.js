@@ -1,6 +1,7 @@
 $(function() {
   $( ".closed" ).click(function() {
     $(this).parent().parent().parent().find( ".hidden-content" ).toggleClass( "open-content" );
+    $(this).parent().parent().find( ".fade-summary" ).toggleClass( "grey" );
     $(this).toggleClass( "open-content" );
     return false;
   });

@@ -1,0 +1,270 @@
+---
+---
+
+main#content {
+  overflow: hidden;
+  width: 960px;
+  position: relative;
+  margin: 0 auto;
+}
+
+dl {
+  margin: 10px 0;
+  dt,
+  dd {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  dd {
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+.contents,
+.contents-header {
+
+}
+.contents-header {
+  clear: both;
+  font-weight: bold;
+}
+p.contents-header {
+  margin-top: 15px;
+}
+
+.contents {
+  padding-bottom: 60px;
+
+  h2 {
+    font-weight: bold;
+  }
+
+  .feeds {
+    a {
+      display: inline-block;
+    }
+  }
+
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      border-bottom: 1px solid #bfc1c3;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+
+      h3 {
+        font-weight: bold;
+        margin: 0;
+        position: relative;
+        a {
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        &+ p {
+          margin: 0;
+        }
+      }
+    }
+    &+ p {
+      margin-top: 30px;
+    }
+  }
+
+  .hidden-content,
+  .hidden-content-secondary {
+    display: none;
+    width: 66.66%;
+
+    p {
+      margin-bottom: 30px;
+    }
+    h3 {
+      margin-top: 40px;
+    }
+    h4 {
+      font-size: 19px;
+      font-weight: bold;
+      margin: 20px 0 0 0;
+      & + p {
+        margin-top: 0;
+      }
+    }
+
+    .close-this {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 60px;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+      li {
+        border-bottom: none;
+      }
+    }
+
+    .feeds,
+    dl {
+      display: inline-block;
+      margin: 0 30px 0 0;
+
+      dt,
+      dd {
+        display: inline-block;
+      }
+    }
+
+    table {
+      margin-bottom: 30px;
+      width: 100%;
+      thead {
+        tr th {
+          border-bottom: 1px solid #bfc1c3;
+          border-width: 0 0 1px 0;
+          padding: 3px 0 7px 0;
+        }
+      }
+      td {
+        border-bottom: 1px solid #bfc1c3;
+        border-width: 0 0 1px 0;
+        vertical-align: top;
+        padding: 3px 0 7px 0;
+        ul {
+          padding-left: 20px;
+        }
+        & p:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
+  }
+
+  .hidden-content ol {
+    margin-left: 35px;
+    li {
+      h3 {
+        font-weight: normal;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.closed,
+.closed-secondary {
+  display: block;
+  background: url("/manuals/assets/images/open-closed-arrows.png") right 7px no-repeat;
+}
+.open-content {
+  display: block;
+  background-position: right -85px;
+}
+
+.contents .open-content {
+  display: block;
+}
+
+.open-close {
+  font-size: 16px;
+  margin: 5px 0 20px 0;
+}
+
+.hidden-content.open-content:after {
+  content: "";
+}
+
+.breadcrumbs {
+  border-bottom: 1px solid #bfc1c3;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 30px;
+  overflow: hidden;
+  padding: 10px 0;
+  width: 100%;
+
+  li {
+    color: #6f777b;
+    float: left;
+    list-style: none;
+    &:before {
+      content: "\003e";
+      font-weight: normal;
+      padding: 0 10px;
+    }
+    &:first-child:before {
+      content: "";
+      padding: 0;
+    }
+  }
+  &+ .contents-header + .contents {
+    overflow: hidden;
+    padding-bottom: 30px;
+
+    p {
+      float: left;
+      width: 63%;
+      .archived {
+        display: block;
+        padding: 10px 0;
+      }
+    }
+    .feeds {
+      float: right;
+      width: 33.33%;
+      a {
+        display: block;
+      }
+    }
+  }
+  &+ .subpage-header {
+    float: left;
+    width: 63%;
+    &+ .subpage-metadata {
+      clear: none;
+      float: right;
+      width: 33.33%;
+    }
+  }
+}
+
+.main-contents {
+  position: relative;
+  clear: both;
+  h3 {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .open-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  ol {
+    margin-bottom: 60px;
+  }
+}
+
+.subpage-metadata {
+  dt {
+    font-weight: normal;
+  }
+}
+
+.grey {
+  color: #6f777b;
+  padding-bottom: 30px;
+}

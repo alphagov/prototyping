@@ -1,0 +1,283 @@
+---
+title: "Environment Agency"
+layout: default-wrapper
+css: ../assets/finder.css
+js: ../assets/finder.js
+body_class: full-width
+home_url: https://www.gov.uk/
+---
+
+
+<main id="content" role="main" class="group category-page">
+  <header class="page-header group">
+    <div class="full-width">
+      <h1>Air Accident Investigation Branch reports</h1>
+    </div>
+  </header>
+
+<div class="filter-form">
+  <div class="inner-block">
+    <p>Use the search and filters to find the reports you're interested in.</p>
+
+    <form method="get" action="">
+      <div class="filter">
+        <label class="legend" for="search">Search</label>
+        <input value="" placeholder="eg registration, aircraft type, location" type="text" name="keywords" id="search">
+      </div>
+      <div class="filter" id="date-range-filter">
+        <div class="filter-inner">
+          <span class="legend">Incident date</span>
+          <input id="from_date" name="from_date" placeholder="After - e.g. 01/01/2013" type="text">
+          <input id="to_date" name="to_date" placeholder="Before - e.g. 30/02/2013" type="text">
+        </div>
+      </div>
+      <div class="filter" id="date-range-filter">
+        <div class="filter-inner">
+          <span class="legend">Report published</span>
+          <input id="from_date" name="from_date" placeholder="After - e.g. 01/01/2013" type="text">
+          <input id="to_date" name="to_date" placeholder="Before - e.g. 30/02/2013" type="text">
+        </div>
+      </div>
+
+      <div class="filter checkbox-filter js-openable-filter closed" tabindex="0">
+        <div class="head">
+          <span class="legend">Aircraft category</span>
+          <div class="controls">
+            <a class="clear-selected js-hidden">clear</a>
+            <div class="toggle"></div>
+          </div>
+        </div>
+        <div class="checkbox-container">
+          <ul>
+            <li>
+              <input type="checkbox" name="case_type[]" value="general-fixed-wing" id="general-fixed-wing"><label for="general-fixed-wing">General - fixed wing</label>
+            </li>
+            <li>
+              <input type="checkbox" name="case_type[]" value="general-rotocraft" id="general-rotocraft"><label for="general-rotocraft">General - rotocraft</label>
+            </li>
+           <li>
+              <input type="checkbox" name="case_type[]" value="commercial-fixed-wing" id="commercial-fixed-wing"><label for="commercial-fixed-wing">Commercial - fixed wing</label>
+            </li>
+            <li>
+              <input type="checkbox" name="case_type[]" value="commercial-rotocraft" id="commercial-rotocraft"><label for="commercial-rotocraft">Commercial - rotocraft</label>
+            </li>
+            <li>
+              <input type="checkbox" name="case_type[]" value="sport-aviation-balloons" id="sport-aviation-balloons"><label for="sport-aviation-balloons">Sport aviation &amp; balloons</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="filter checkbox-filter js-openable-filter closed" tabindex="0">
+        <div class="head">
+          <span class="legend">Report type</span>
+          <div class="controls">
+            <a class="clear-selected js-hidden">clear</a>
+            <div class="toggle"></div>
+          </div>
+        </div>
+        <div class="checkbox-container">
+          <ul>
+            <li>
+              <input type="checkbox" name="case_type[]" value="special-bulletins" id="special-bulletins"><label for="special-bulletins">Special bulletins</label>
+            </li>
+            <li>
+              <input type="checkbox" name="case_type[]" value="field-investigations" id="field-investigations"><label for="field-investigations">Field investigations</label>
+            </li>
+            <li>
+              <input type="checkbox" name="case_type[]" value="correspondance-investigation" id="correspondance-investigation"><label for="correspondance-investigation">Correspondance investigation</label>
+            </li>
+            <li>
+              <input type="checkbox" name="case_type[]" value="formal-reports" id="formal-reports"><label for="formal-reports">Formal reports</label>
+            </li>
+            <li>
+              <input type="checkbox" name="case_type[]" value="annual-safety-reports" id="annual-safety-reports"><label for="annual-safety-reports">Annual safety reports</label>
+            </li>
+            <li>
+              <input type="checkbox" name="case_type[]" value="foreign-reports" id="foreign-reports"><label for="foreign-reports">Foreign reports</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <input type="submit" value="Filter results" class="button">
+</form>
+  </div>
+</div>
+
+
+<div class="filtered-results">
+  <div class="inner-block">
+    <p class="result-info"><span class="result-count">15</span> reports</p>
+    <ul class="results">
+      <li class="document commercial-rotocraft special-bulletins">
+        <h3><a href="http://www.aaib.gov.uk/publications/bulletins/may_2014/s3_2014_agusta_aw139__g_lbal.cfm">Agusta AW139 (G-LBAL), near Gillingham Hall, Norfolk (special bulletin)</a></h3>
+        <dl>
+          <dt>Aircraft category</dt>
+          <dd>Commercial - rotocraft</dd>
+          <dt>Occured date</dt>
+          <dd>Occured: 13 March 2014</dd>
+          <dt>Published date</dt>
+          <dd>Published: 30 May 2014</dd>
+        </dl>
+      </li>
+      <li class="document commercial-fixed-wing field-investigations">
+        <h3><a href="http://www.aaib.gov.uk/publications/bulletins/may_2014/cessna_t303_crusader__n289cw.cfm">Cessna T303 (N289CW), struck the sea during final approach to Runway 09 at Jersey Airport</a></h3>
+        <dl>
+          <dt>Aircraft category</dt>
+          <dd>Commercial - fixed wing</dd>
+          <dt>Occured date</dt>
+          <dd>Occured: 4 September 2013</dd>
+          <dt>Published date</dt>
+          <dd>Published: 30 May 2014</dd>
+        </dl>
+      </li>
+      <li class="document sport-aviation-balloons field-investigations">
+        <h3><a href="http://www.aaib.gov.uk/publications/bulletins/may_2014/pegasus_xl_r__g_mvkm_.cfm">Pegasus XLR (G-MVKM), microlight struck power cables and crashed, Stourton, West Midlands</a></h3>
+        <dl>
+          <dt>Aircraft category</dt>
+          <dd>Sport aviation &amp; balloons</dd>
+          <dt>Occured date</dt>
+          <dd>Occured: 6 October 2013</dd>
+          <dt>Published date</dt>
+          <dd>Published: 28 May 2014</dd>
+        </dl>
+      </li>
+      <li class="document commercial-fixed-wing correspondance-investigation">
+        <h3><a href="http://www.aaib.gov.uk/publications/bulletins/may_2014/airbus_a320_214__ei_ezv_.cfm">Airbus A320-214 (EI-EZV), hard landing, London Heathrow Airport</a></h3>
+        <dl>
+          <dt>Aircraft category</dt>
+          <dd>Commercial - fixed wing</dd>
+          <dt>Occured date</dt>
+          <dd>Occured: 16 January 2014</dd>
+          <dt>Published date</dt>
+          <dd>Published: 26 May 2014</dd>
+        </dl>
+      </li>
+      <li class="document commercial-fixed-wing correspondance-investigation">
+        <h3><a href="http://www.aaib.gov.uk/publications/bulletins/may_2014/atr_72_212_a__g_cobo_.cfm">ATR 72-212 A (G-COBO), turbulence encounter and altitude deviation en route, near the Isle of Wight</a></h3>
+        <dl>
+          <dt>Aircraft category</dt>
+          <dd>Commercial - fixed wing</dd>
+          <dt>Occured date</dt>
+          <dd>Occured: 20 October 2013</dd>
+          <dt>Published date</dt>
+          <dd>Published: 20 May 2014</dd>
+        </dl>
+      </li>
+      <li class="document commercial-fixed-wing correspondance-investigation">
+        <h3><a href="http://www.aaib.gov.uk/publications/bulletins/may_2014/bn2a_mk_iii_2_trislander__g_rlon_.cfm">BN2A Mk.III-2 Trislander (G-RLON), runway excursion, Alderney airport</a></h3>
+        <dl>
+          <dt>Aircraft category</dt>
+          <dd>Commercial - fixed wing</dd>
+          <dt>Occured date</dt>
+          <dd>Occured: 12 January 2014</dd>
+          <dt>Published date</dt>
+          <dd>Published: 19 May 2014</dd>
+        </dl>
+      </li>
+      <li class="document commercial-fixed-wing correspondance-investigation">
+        <h3><a href="http://www.aaib.gov.uk/publications/bulletins/may_2014/boeing_747_436__g_bnlv_.cfm">Boeing 747-436 (G-BNLV), APU bay fire, London Heathrow Airport</a></h3>
+        <dl>
+          <dt>Aircraft category</dt>
+          <dd>Commercial - fixed wing</dd>
+          <dt>Occured date</dt>
+          <dd>Occured: 22 August 2013</dd>
+          <dt>Published date</dt>
+          <dd>Published: 14 May 2014</dd>
+        </dl>
+      </li>
+      <li class="document commercial-fixed-wing correspondance-investigation">
+        <h3><a href="http://www.aaib.gov.uk/publications/bulletins/may_2014/cessna_340a__n340dw_.cfm">Cessna 340A (N340DW), left main landing gear collapsed on landing at Grand Turk Airport</a></h3>
+        <dl>
+          <dt>Aircraft category</dt>
+          <dd>Commercial - fixed wing</dd>
+          <dt>Occured date</dt>
+          <dd>Occured: 23 October 2013</dd>
+          <dt>Published date</dt>
+          <dd>Published: 12 May 2014</dd>
+        </dl>
+      </li>
+      <li class="document general-fixed-wing correspondance-investigation">
+        <h3><a href="http://www.aaib.gov.uk/publications/bulletins/may_2014/auster_j5g_cirrus_autocar__g_arkg_.cfm">Auster J5G (G-ARKG), aileron cable breakage near Oakham, East Midlands</a></h3>
+        <dl>
+          <dt>Aircraft category</dt>
+          <dd>General - fixed wing</dd>
+          <dt>Occured date</dt>
+          <dd>Occured: 30 November 2013</dd>
+          <dt>Published date</dt>
+          <dd>Published: 12 May 2014</dd>
+        </dl>
+      </li>
+      <li class="document general-fixed-wing correspondance-investigation">
+        <h3><a href="http://www.aaib.gov.uk/publications/bulletins/may_2014/mooney_m20j__i_ijmw_.cfm">Mooney M20J (I-IJMW), landing gear collapsed following runway excursion whilst landing, Dunkeswell Airfield</a></h3>
+        <dl>
+          <dt>Aircraft category</dt>
+          <dd>General - fixed wing</dd>
+          <dt>Occured date</dt>
+          <dd>Occured: 11 January 2014</dd>
+          <dt>Published date</dt>
+          <dd>Published: May 2014</dd>
+        </dl>
+      </li>
+      <li class="document general-fixed-wing correspondance-investigation">
+        <h3><a href="http://www.aaib.gov.uk/publications/bulletins/may_2014/piper_l18c__modified__super_cub__g_rcub_.cfm">Piper L18C (Modified) (G-RCUB), struck trees during go-around at Tandragee Airfield</a></h3>
+        <dl>
+          <dt>Aircraft category</dt>
+          <dd>General - fixed wing</dd>
+          <dt>Occured date</dt>
+          <dd>Occured: 25 December 2013</dd>
+          <dt>Published date</dt>
+          <dd>Published: May 2014</dd>
+        </dl>
+      </li>
+      <li class="document general-fixed-wing correspondance-investigation">
+        <h3><a href="http://www.aaib.gov.uk/publications/bulletins/may_2014/taylor_titch__g_babe_.cfm">Taylor Titch (G-BABE), cartwheeled on takeoff at Netherthorpe Airfield</a></h3>
+        <dl>
+          <dt>Aircraft category</dt>
+          <dd>General - fixed wing</dd>
+          <dt>Occured date</dt>
+          <dd>Occured: 15 December 2013</dd>
+          <dt>Published date</dt>
+          <dd>Published: May 2014</dd>
+        </dl>
+      </li>
+      <li class="document sport-aviation-balloons correspondance-investigation">
+        <h3><a href="http://www.aaib.gov.uk/publications/bulletins/may_2014/ev_97_teameurostar_uk__g_chjg_.cfm">EV-97 Teameurostar UK (G-CHJG), nose landing gear collapse on landing, Cumbernauld Airport</a></h3>
+        <dl>
+          <dt>Aircraft category</dt>
+          <dd>Sport aviation &amp; balloons</dd>
+          <dt>Occured date</dt>
+          <dd>Occured: 4 December 2013</dd>
+          <dt>Published date</dt>
+          <dd>Published: May 2014</dd>
+        </dl>
+      </li>
+      <li class="document sport-aviation-balloons correspondance-investigation">
+        <h3><a href="http://www.aaib.gov.uk/publications/bulletins/may_2014/mainair_rapier__g_cchv_.cfm">Mainair Rapier (G-CCHV), blown onto its side preparing to takeoff, Sywell Airfield</a></h3>
+        <dl>
+          <dt>Aircraft category</dt>
+          <dd>Sport aviation &amp; balloons</dd>
+          <dt>Occured date</dt>
+          <dd>Occured: 30 October 2013</dd>
+          <dt>Published date</dt>
+          <dd>Published: May 2014</dd>
+        </dl>
+      </li>
+      <li class="document sport-aviation-balloons correspondance-investigation">
+        <h3><a href="http://www.aaib.gov.uk/publications/bulletins/may_2014/savannah_jabiru_5___g_ceck_.cfm">Savannah Jabiru(5) (G-CECK), loss of control on take off, Palmer Moor Farm, Ashbourne, Derbyshire</a></h3>
+        <dl>
+          <dt>Aircraft category</dt>
+          <dd>Sport aviation &amp; balloons</dd>
+          <dt>Occured date</dt>
+          <dd>Occured: 24 November 2013</dd>
+          <dt>Published date</dt>
+          <dd>Published: May 2014</dd>
+        </dl>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+</main>

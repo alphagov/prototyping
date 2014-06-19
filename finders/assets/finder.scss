@@ -1,0 +1,184 @@
+---
+---
+
+@import "frontend_toolkit";
+
+ol.group {
+  border-top: 10px solid #005ea5;
+}
+.result-info {
+  @include core-16;
+  border-bottom: solid 1px #bfc1c3;
+  padding-bottom: 15px;
+  .result-count {
+    @include core-48;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+}
+
+.clear-selected {
+  display: none;
+}
+
+
+#wrapper {
+  position: relative;;
+  margin: 0 auto;
+  width: 1020px;
+
+  .inner-block {
+    padding: 0 30px;
+  }
+
+  .page-header {
+    padding: 0 30px;
+    margin: 40px 0 50px 0;
+    width: 66.66%;
+
+    h1 {
+      @include core-48;
+      font-weight: bold;
+    }
+  }
+
+  .filter-form {
+    float: left;
+    width: 33.33%;
+
+    form {
+      margin-top: 30px;
+      .filter {
+        background-color: #dee0e2;
+        margin-bottom: 30px;
+        padding: 5px;
+
+        .legend {
+          @include core-19;
+          font-weight: bold;
+          display: block;
+        }
+        label {
+          display: block;
+        }
+        input {
+          padding: 5px;
+          width: 95%;
+        }
+      }
+    }
+
+    .checkbox-filter {
+      .head {
+        cursor: pointer;
+        padding: 5px;
+        position: relative;
+      }
+      .controls {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+  
+        .toggle {
+          background: url(https://assets.digital.cabinet-office.gov.uk/finder-frontend/toggle-sprite-4886981e9cc3345f34d720e106366c4b.png) no-repeat;
+          height: 10px;
+          width: 12px;
+          background-position: -12px 0;
+          display: inline-block;
+        }
+      }
+      &.closed .toggle {
+        background-position: 0 0;
+      }
+    }
+
+    .checkbox-container {
+      position: relative;
+      padding: 5px;
+      background-color: white;
+      max-height: 200px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      ul {
+        list-style: none;
+
+        input {
+          width: 12px;
+          border: none;
+          margin: 3px 10px 0 0;
+          vertical-align: top;
+          position: absolute;
+        }
+
+        label {
+          display: inline-block;
+          margin-left: 20px;
+        }
+      }
+    }
+
+    .button {
+      background-color: #00823b;
+      position: relative;
+      display: inline-block;
+      padding: 0.35em 0.5em 0.15em 0.5em;
+      border: none;
+      -webkit-box-shadow: 0 2px 0 #003518;
+      -moz-box-shadow: 0 2px 0 #003518;
+      box-shadow: 0 2px 0 #003518;
+      font-size: 1em;
+      line-height: 1.25;
+      text-decoration: none;
+      cursor: pointer;
+      color: white;
+      width: auto;
+      font-size: 24px;
+      line-height: 1.25;
+      font-weight: bold;
+    }
+
+    .closed {
+      .checkbox-container {
+        position: absolute;
+        left: -9999px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+  }
+
+  .filtered-results {
+    float: left;
+    padding-bottom: 60px;
+    width: 66.66%;
+
+    ul {
+      list-style: none;
+
+      .document {
+        border-bottom: solid 1px #bfc1c3;
+        padding: 15px 0;
+
+        h3 {
+          @include core-19;
+          font-weight: bold;
+        }
+
+        dl {
+          margin: 0;
+          dt {
+            display: none;
+          }
+          dd {
+            @include core-14;
+            margin-left: 0;
+            margin-right: 10px;
+            display: inline-block;
+          }
+        }
+      }      
+    }
+  }
+}

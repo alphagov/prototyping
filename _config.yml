@@ -3,7 +3,7 @@ auto:        true
 #server:      false
 server_port: 4001
 baseurl:    /
-#url: http://localhost:4000
+#url: http://localhost:4001
 
 source:      .
 destination: ./_site

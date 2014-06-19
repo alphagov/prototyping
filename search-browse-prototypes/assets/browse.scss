@@ -4,6 +4,13 @@
 @import "frontend_toolkit";
 
 // horrible hacky overides
+
+#content {
+  position: relative;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
 #whitehall-wrapper .organisations-show #what-we-do h1,
 #whitehall-wrapper .organisations-show #topics h1  {
   font-size: 36px;
@@ -52,6 +59,25 @@
   }
 }
 
+header.page-header {
+  h1 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 40px 0;
+
+    span {
+      color: #6f777b;
+      display: block;
+      font-size: 37px;
+      font-weight: normal;
+    }
+    &+ .metadata-list {
+      font-size: 14px;
+      margin-bottom: 60px;
+    }
+  }
+}
 
 .metadata-list {
   dl {
@@ -77,12 +103,13 @@
     min-height: 100px;
 
     h2 {
-      @include core-36;
+      @include core-19;
       float: left; 
       font-weight: bold;
-      margin-top: 0;
+      margin: 0 3.33% 0 0;
       position: relative;
-      top: -10px;
+      width: 30%;
+
       &.published {
         @include core-27;
         font-weight: bold;
@@ -121,8 +148,11 @@
     ol {
       @include core-19;
       font-weight: bold;
-      margin: 20px 0 60px 30%;
+      float: left;
+      margin: 0 0 60px;
       list-style: none;
+      width: 66.66%;
+
       li {
         margin-bottom: 10px;
         a {
@@ -506,4 +536,15 @@ p.see-a-z {
     }
   }
 
+}
+
+aside.heading-extra {
+  h2,
+  p {
+    padding-left: 20px;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
 }
