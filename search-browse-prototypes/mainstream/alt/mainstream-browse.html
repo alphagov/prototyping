@@ -4007,6 +4007,7 @@
         $('#third-level li').removeClass('selected');
         $($(this).attr('href')).addClass('selected');
         $('#content').addClass('third-level-has-focus');
+        $("html, body").animate({ scrollTop: 0 });
         return(false);
       });
       
