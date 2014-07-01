@@ -1,0 +1,263 @@
+/* line 1 */
+main#content {
+  overflow: hidden;
+  width: 960px;
+  position: relative;
+  margin: 0 auto; }
+
+/* line 8 */
+dl {
+  margin: 10px 0; }
+  /* line 11 */
+  dl dt,
+  dl dd {
+    font-size: 14px;
+    line-height: 1.3; }
+  /* line 15 */
+  dl dd {
+    font-weight: bold;
+    margin: 0; }
+
+/* line 25 */
+.contents-header {
+  clear: both;
+  font-weight: bold; }
+
+/* line 29 */
+p.contents-header {
+  margin-top: 15px; }
+
+/* line 33 */
+.contents {
+  padding-bottom: 60px; }
+  /* line 36 */
+  .contents h2 {
+    font-weight: bold; }
+  /* line 41 */
+  .contents .feeds a {
+    display: inline-block; }
+  /* line 46 */
+  .contents ol {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    /* line 50 */
+    .contents ol li {
+      border-bottom: 1px solid #bfc1c3;
+      margin-bottom: 15px;
+      padding-bottom: 10px; }
+      /* line 55 */
+      .contents ol li h3 {
+        font-weight: bold;
+        margin: 0;
+        position: relative; }
+        /* line 59 */
+        .contents ol li h3 a {
+          text-decoration: none; }
+          /* line 61 */
+          .contents ol li h3 a:hover {
+            text-decoration: underline; }
+        /* line 65 */
+        .contents ol li h3 + p {
+          margin: 0; }
+    /* line 70 */
+    .contents ol + p {
+      margin-top: 30px; }
+  /* line 76 */
+  .contents .hidden-content,
+  .contents .hidden-content-secondary {
+    display: none;
+    width: 66.66%; }
+    /* line 80 */
+    .contents .hidden-content p,
+    .contents .hidden-content-secondary p {
+      margin-bottom: 30px; }
+    /* line 83 */
+    .contents .hidden-content h3,
+    .contents .hidden-content-secondary h3 {
+      margin-top: 40px; }
+    /* line 86 */
+    .contents .hidden-content h4,
+    .contents .hidden-content-secondary h4 {
+      font-size: 19px;
+      font-weight: bold;
+      margin: 20px 0 0 0; }
+      /* line 90 */
+      .contents .hidden-content h4 + p,
+      .contents .hidden-content-secondary h4 + p {
+        margin-top: 0; }
+    /* line 95 */
+    .contents .hidden-content .close-this,
+    .contents .hidden-content-secondary .close-this {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 60px;
+      text-decoration: none; }
+      /* line 101 */
+      .contents .hidden-content .close-this:hover,
+      .contents .hidden-content-secondary .close-this:hover {
+        text-decoration: underline; }
+    /* line 106 */
+    .contents .hidden-content ul,
+    .contents .hidden-content-secondary ul {
+      list-style: disc;
+      padding-left: 20px; }
+      /* line 109 */
+      .contents .hidden-content ul li,
+      .contents .hidden-content-secondary ul li {
+        border-bottom: none; }
+    /* line 115 */
+    .contents .hidden-content .feeds,
+    .contents .hidden-content dl,
+    .contents .hidden-content-secondary .feeds,
+    .contents .hidden-content-secondary dl {
+      display: inline-block;
+      margin: 0 30px 0 0; }
+      /* line 120 */
+      .contents .hidden-content .feeds dt,
+      .contents .hidden-content .feeds dd,
+      .contents .hidden-content dl dt,
+      .contents .hidden-content dl dd,
+      .contents .hidden-content-secondary .feeds dt,
+      .contents .hidden-content-secondary .feeds dd,
+      .contents .hidden-content-secondary dl dt,
+      .contents .hidden-content-secondary dl dd {
+        display: inline-block; }
+    /* line 125 */
+    .contents .hidden-content table,
+    .contents .hidden-content-secondary table {
+      margin-bottom: 30px;
+      width: 100%; }
+      /* line 129 */
+      .contents .hidden-content table thead tr th,
+      .contents .hidden-content-secondary table thead tr th {
+        border-bottom: 1px solid #bfc1c3;
+        border-width: 0 0 1px 0;
+        padding: 3px 0 7px 0; }
+      /* line 135 */
+      .contents .hidden-content table td,
+      .contents .hidden-content-secondary table td {
+        border-bottom: 1px solid #bfc1c3;
+        border-width: 0 0 1px 0;
+        vertical-align: top;
+        padding: 3px 0 7px 0; }
+        /* line 140 */
+        .contents .hidden-content table td ul,
+        .contents .hidden-content-secondary table td ul {
+          padding-left: 20px; }
+        /* line 143 */
+        .contents .hidden-content table td p:first-child,
+        .contents .hidden-content-secondary table td p:first-child {
+          margin-top: 0; }
+  /* line 151 */
+  .contents .hidden-content ol {
+    margin-left: 35px; }
+    /* line 154 */
+    .contents .hidden-content ol li h3 {
+      font-weight: normal; }
+    /* line 157 */
+    .contents .hidden-content ol li:last-child {
+      border-bottom: none; }
+
+/* line 165 */
+.closed,
+.closed-secondary {
+  display: block;
+  background: url("/manuals/assets/images/open-closed-arrows.png") right 7px no-repeat; }
+
+/* line 169 */
+.open-content {
+  display: block;
+  background-position: right -85px; }
+
+/* line 174 */
+.contents .open-content {
+  display: block; }
+
+/* line 178 */
+.open-close {
+  font-size: 16px;
+  margin: 5px 0 20px 0; }
+
+/* line 183 */
+.hidden-content.open-content:after {
+  content: ""; }
+
+/* line 187 */
+.breadcrumbs {
+  border-bottom: 1px solid #bfc1c3;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 30px;
+  overflow: hidden;
+  padding: 10px 0;
+  width: 100%; }
+  /* line 196 */
+  .breadcrumbs li {
+    color: #6f777b;
+    float: left;
+    list-style: none; }
+    /* line 200 */
+    .breadcrumbs li:before {
+      content: "\003e";
+      font-weight: normal;
+      padding: 0 10px; }
+    /* line 205 */
+    .breadcrumbs li:first-child:before {
+      content: "";
+      padding: 0; }
+  /* line 210 */
+  .breadcrumbs + .contents-header + .contents {
+    overflow: hidden;
+    padding-bottom: 30px; }
+    /* line 214 */
+    .breadcrumbs + .contents-header + .contents p {
+      float: left;
+      width: 63%; }
+      /* line 217 */
+      .breadcrumbs + .contents-header + .contents p .archived {
+        display: block;
+        padding: 10px 0; }
+    /* line 222 */
+    .breadcrumbs + .contents-header + .contents .feeds {
+      float: right;
+      width: 33.33%; }
+      /* line 225 */
+      .breadcrumbs + .contents-header + .contents .feeds a {
+        display: block; }
+  /* line 230 */
+  .breadcrumbs + .subpage-header {
+    float: left;
+    width: 63%; }
+    /* line 233 */
+    .breadcrumbs + .subpage-header + .subpage-metadata {
+      clear: none;
+      float: right;
+      width: 33.33%; }
+
+/* line 241 */
+.main-contents {
+  position: relative;
+  clear: both; }
+  /* line 244 */
+  .main-contents h3 {
+    font-weight: bold;
+    margin-bottom: 20px; }
+  /* line 248 */
+  .main-contents .open-close {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  /* line 253 */
+  .main-contents ol {
+    margin-bottom: 60px; }
+
+/* line 259 */
+.subpage-metadata dt {
+  font-weight: normal; }
+
+/* line 264 */
+.grey {
+  color: #6f777b;
+  padding-bottom: 30px; }
