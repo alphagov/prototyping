@@ -3,6 +3,7 @@
 
 @import "frontend_toolkit";
 
+
 ol.group {
   border-top: 10px solid #005ea5;
 }
@@ -64,6 +65,14 @@ ol.group {
         input {
           padding: 5px;
           width: 95%;
+        }
+      }
+      .radio-filter {
+        label {
+          display: inline-block;
+        }
+        input {
+          width: auto;
         }
       }
     }
