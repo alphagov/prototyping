@@ -15,6 +15,16 @@ $(function() {
     }
   };
 
+  var showAndHideRadio = function($this){
+    var state = $this.data('state');
+    if (state !== 'all') {
+      $('li.document').hide();
+      $('li.document.' + state).show();  
+    } else {
+      $('li.document').show();
+    }
+  };
+
   var updateCount = function(){
     var n = $( ".results li:visible" ).size();
     $( "span.result-count" ).text(n);
@@ -22,6 +32,11 @@ $(function() {
 
   $('input[type=checkbox]').on('change', function() {
     showAndHide();
+    updateCount();
+  });
+
+  $('input[type=radio]').on('change', function() {
+    showAndHideRadio($(this));
     updateCount();
   });
 });

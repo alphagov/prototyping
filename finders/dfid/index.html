@@ -1,0 +1,761 @@
+---
+title: "Environment Agency"
+layout: default-wrapper
+css: ../assets/finder.css
+js: ../assets/finder.js
+body_class: full-width
+home_url: https://www.gov.uk/
+---
+
+
+<main id="content" role="main" class="group category-page">
+  <header class="page-header group">
+    <div class="full-width">
+      <h1>International development funding</h1>
+    </div>
+  </header>
+
+<div class="filter-form">
+  <div class="inner-block">
+    <p>Use the search and filters to find the guidance you're interested in.</p>
+
+    <form method="get" action="">
+      <div class="filter">
+        <label class="legend" for="search">Search</label>
+        <input value="" placeholder="eg registration, aircraft type, location" type="text" name="keywords" id="search">
+      </div>
+      <!--div class="filter" id="date-range-filter">
+        <div class="filter-inner">
+          <span class="legend">Incident date</span>
+          <input id="from_date" name="from_date" placeholder="After - e.g. 01/01/2013" type="text">
+          <input id="to_date" name="to_date" placeholder="Before - e.g. 30/02/2013" type="text">
+        </div>
+      </div>
+      <div class="filter" id="date-range-filter">
+        <div class="filter-inner">
+          <span class="legend">Report published</span>
+          <input id="from_date" name="from_date" placeholder="After - e.g. 01/01/2013" type="text">
+          <input id="to_date" name="to_date" placeholder="Before - e.g. 30/02/2013" type="text">
+        </div>
+      </div-->
+
+      <div class="filter radio-filter js-openable-filter closed" tabindex="0">
+        <div class="head">
+          <span class="legend">Application state</span>
+          <div class="controls">
+            <a class="clear-selected js-hidden">clear</a>
+            <div class="toggle"></div>
+          </div>
+        </div>
+        <fieldset>
+          <label for="open">
+            <input type="radio" name="case_state" value="open" id="open" data-state="open">
+            Open
+          </label>
+          <label for="closed">
+            <input type="radio" name="case_state" value="closed" id="closed" data-state="closed">
+            Closed
+          </label>
+          <label for="">
+            <input type="radio" name="case_state" value="" id="" data-state="all">
+            All
+          </label>
+        </fieldset>
+      </div>
+
+
+      <div class="filter checkbox-filter js-openable-filter closed" tabindex="0">
+        <div class="head">
+          <span class="legend">Countries</span>
+          <div class="controls">
+            <a class="clear-selected js-hidden">clear</a>
+            <div class="toggle"></div>
+          </div>
+        </div>
+        <div class="checkbox-container">
+          <ul>
+            <li><input type="checkbox" name="case_type[]" value="Afghanistan" id="Afghanistan"><label for="Afghanistan">Afghanistan</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Albania" id="Albania"><label for="Albania">Albania</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Algeria" id="Algeria"><label for="Algeria">Algeria</label></li>
+            <li><input type="checkbox" name="case_type[]" value="American-Samoa" id="American-Samoa"><label for="American-Samoa">American Samoa</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Andorra" id="Andorra"><label for="Andorra">Andorra</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Angola" id="Angola"><label for="Angola">Angola</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Anguilla" id="Anguilla"><label for="Anguilla">Anguilla</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Antigua-and-Barbuda" id="Antigua-and-Barbuda"><label for="Antigua-and-Barbuda">Antigua and Barbuda</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Argentina" id="Argentina"><label for="Argentina">Argentina</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Armenia" id="Armenia"><label for="Armenia">Armenia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Aruba" id="Aruba"><label for="Aruba">Aruba</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Australia" id="Australia"><label for="Australia">Australia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Austria" id="Austria"><label for="Austria">Austria</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Azerbaijan" id="Azerbaijan"><label for="Azerbaijan">Azerbaijan</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Bahamas" id="Bahamas"><label for="Bahamas">Bahamas</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Bahrain" id="Bahrain"><label for="Bahrain">Bahrain</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Bangladesh" id="Bangladesh"><label for="Bangladesh">Bangladesh</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Barbados" id="Barbados"><label for="Barbados">Barbados</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Belarus" id="Belarus"><label for="Belarus">Belarus</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Belgium" id="Belgium"><label for="Belgium">Belgium</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Belize" id="Belize"><label for="Belize">Belize</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Benin" id="Benin"><label for="Benin">Benin</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Bermuda" id="Bermuda"><label for="Bermuda">Bermuda</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Bhutan" id="Bhutan"><label for="Bhutan">Bhutan</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Bolivia" id="Bolivia"><label for="Bolivia">Bolivia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Bonaire-St-Eustatius-Saba" id="Bonaire-St-Eustatius-Saba"><label for="Bonaire-St-Eustatius-Saba">Bonaire/St Eustatius/Saba</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Bosnia-and-Herzegovina" id="Bosnia-and-Herzegovina"><label for="Bosnia-and-Herzegovina">Bosnia and Herzegovina</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Botswana" id="Botswana"><label for="Botswana">Botswana</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Brazil" id="Brazil"><label for="Brazil">Brazil</label></li>
+            <li><input type="checkbox" name="case_type[]" value="British-Antarctic-Territory" id="British-Antarctic-Territory"><label for="British-Antarctic-Territory">British Antarctic Territory</label></li>
+            <li><input type="checkbox" name="case_type[]" value="British Indian Ocean Territory" id="British Indian Ocean Territory"><label for="British Indian Ocean Territory">British Indian Ocean Territory</label></li>
+            <li><input type="checkbox" name="case_type[]" value="British Virgin Islands" id="British Virgin Islands"><label for="British Virgin Islands">British Virgin Islands</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Brunei" id="Brunei"><label for="Brunei">Brunei</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Bulgaria" id="Bulgaria"><label for="Bulgaria">Bulgaria</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Burkina Faso" id="Burkina Faso"><label for="Burkina Faso">Burkina Faso</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Burma" id="Burma"><label for="Burma">Burma</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Burundi" id="Burundi"><label for="Burundi">Burundi</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Cambodia" id="Cambodia"><label for="Cambodia">Cambodia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Cameroon" id="Cameroon"><label for="Cameroon">Cameroon</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Canada" id="Canada"><label for="Canada">Canada</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Cape Verde" id="Cape Verde"><label for="Cape Verde">Cape Verde</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Cayman-Islands" id="Cayman-Islands"><label for="Cayman-Islands">Cayman Islands</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Central-African-Republic" id="Central-African-Republic"><label for="Central-African-Republic">Central African Republic</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Chad" id="Chad"><label for="Chad">Chad</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Chile" id="Chile"><label for="Chile">Chile</label></li>
+            <li><input type="checkbox" name="case_type[]" value="China" id="China"><label for="China">China</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Colombia" id="Colombia"><label for="Colombia">Colombia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Comoros" id="Comoros"><label for="Comoros">Comoros</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Congo" id="Congo"><label for="Congo">Congo</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Costa-Rica" id="Costa-Rica"><label for="Costa-Rica">Costa Rica</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Cote-dIvoire" id="Cote-dIvoire"><label for="Cote-dIvoire">Cote d’Ivoire</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Croatia" id="Croatia"><label for="Croatia">Croatia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Cuba" id="Cuba"><label for="Cuba">Cuba</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Curacao" id="Curacao"><label for="Curacao">Curaçao</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Cyprus" id="Cyprus"><label for="Cyprus">Cyprus</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Czech-Republic" id="Czech-Republic"><label for="Czech-Republic">Czech Republic</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Democratic-Republic-of-Congo" id="Democratic-Republic-of-Congo"><label for="Democratic-Republic-of-Congo">Democratic Republic of Congo</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Denmark" id="Denmark"><label for="Denmark">Denmark</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Djibouti" id="Djibouti"><label for="Djibouti">Djibouti</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Dominica" id="Dominica"><label for="Dominica">Dominica</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Dominican-Republic" id="Dominican-Republic"><label for="Dominican-Republic">Dominican Republic</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Ecuador" id="Ecuador"><label for="Ecuador">Ecuador</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Egypt" id="Egypt"><label for="Egypt">Egypt</label></li>
+            <li><input type="checkbox" name="case_type[]" value="El-Salvador" id="El-Salvador"><label for="El-Salvador">El Salvador</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Equatorial-Guinea" id="Equatorial-Guinea"><label for="Equatorial-Guinea">Equatorial Guinea</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Eritrea" id="Eritrea"><label for="Eritrea">Eritrea</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Estonia" id="Estonia"><label for="Estonia">Estonia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Ethiopia" id="Ethiopia"><label for="Ethiopia">Ethiopia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Falkland-Islands" id="Falkland-Islands"><label for="Falkland-Islands">Falkland Islands</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Fiji" id="Fiji"><label for="Fiji">Fiji</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Finland" id="Finland"><label for="Finland">Finland</label></li>
+            <li><input type="checkbox" name="case_type[]" value="France" id="France"><label for="France">France</label></li>
+            <li><input type="checkbox" name="case_type[]" value="French-Guiana" id="French-Guiana"><label for="French-Guiana">French Guiana</label></li>
+            <li><input type="checkbox" name="case_type[]" value="French-Polynesia" id="French-Polynesia"><label for="French-Polynesia">French Polynesia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Gabon" id="Gabon"><label for="Gabon">Gabon</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Gambia" id="Gambia"><label for="Gambia">Gambia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Georgia" id="Georgia"><label for="Georgia">Georgia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Germany" id="Germany"><label for="Germany">Germany</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Ghana" id="Ghana"><label for="Ghana">Ghana</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Gibraltar" id="Gibraltar"><label for="Gibraltar">Gibraltar</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Greece" id="Greece"><label for="Greece">Greece</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Grenada" id="Grenada"><label for="Grenada">Grenada</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Guadeloupe" id="Guadeloupe"><label for="Guadeloupe">Guadeloupe</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Guatemala" id="Guatemala"><label for="Guatemala">Guatemala</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Guinea" id="Guinea"><label for="Guinea">Guinea</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Guinea-Bissau" id="Guinea-Bissau"><label for="Guinea-Bissau">Guinea-Bissau</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Guyana" id="Guyana"><label for="Guyana">Guyana</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Haiti" id="Haiti"><label for="Haiti">Haiti</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Holy-See" id="Holy-See"><label for="Holy-See">Holy See</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Honduras" id="Honduras"><label for="Honduras">Honduras</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Hong-Kong" id="Hong-Kong"><label for="Hong-Kong">Hong Kong</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Hungary" id="Hungary"><label for="Hungary">Hungary</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Iceland" id="Iceland"><label for="Iceland">Iceland</label></li>
+            <li><input type="checkbox" name="case_type[]" value="India" id="India"><label for="India">India</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Indonesia" id="Indonesia"><label for="Indonesia">Indonesia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Iran" id="Iran"><label for="Iran">Iran</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Iraq" id="Iraq"><label for="Iraq">Iraq</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Ireland" id="Ireland"><label for="Ireland">Ireland</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Israel" id="Israel"><label for="Israel">Israel</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Italy" id="Italy"><label for="Italy">Italy</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Jamaica" id="Jamaica"><label for="Jamaica">Jamaica</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Japan" id="Japan"><label for="Japan">Japan</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Jordan" id="Jordan"><label for="Jordan">Jordan</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Kazakhstan" id="Kazakhstan"><label for="Kazakhstan">Kazakhstan</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Kenya" id="Kenya"><label for="Kenya">Kenya</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Kiribati" id="Kiribati"><label for="Kiribati">Kiribati</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Kosovo" id="Kosovo"><label for="Kosovo">Kosovo</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Kuwait" id="Kuwait"><label for="Kuwait">Kuwait</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Kyrgyzstan" id="Kyrgyzstan"><label for="Kyrgyzstan">Kyrgyzstan</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Laos" id="Laos"><label for="Laos">Laos</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Latvia" id="Latvia"><label for="Latvia">Latvia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Lebanon" id="Lebanon"><label for="Lebanon">Lebanon</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Lesotho" id="Lesotho"><label for="Lesotho">Lesotho</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Liberia" id="Liberia"><label for="Liberia">Liberia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Libya" id="Libya"><label for="Libya">Libya</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Liechtenstein" id="Liechtenstein"><label for="Liechtenstein">Liechtenstein</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Lithuania" id="Lithuania"><label for="Lithuania">Lithuania</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Luxembourg" id="Luxembourg"><label for="Luxembourg">Luxembourg</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Macao" id="Macao"><label for="Macao">Macao</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Macedonia" id="Macedonia"><label for="Macedonia">Macedonia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Madagascar" id="Madagascar"><label for="Madagascar">Madagascar</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Malawi" id="Malawi"><label for="Malawi">Malawi</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Malaysia" id="Malaysia"><label for="Malaysia">Malaysia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Maldives" id="Maldives"><label for="Maldives">Maldives</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Mali" id="Mali"><label for="Mali">Mali</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Malta" id="Malta"><label for="Malta">Malta</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Marshall-Islands" id="Marshall-Islands"><label for="Marshall-Islands">Marshall Islands</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Martinique" id="Martinique"><label for="Martinique">Martinique</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Mauritania" id="Mauritania"><label for="Mauritania">Mauritania</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Mauritius" id="Mauritius"><label for="Mauritius">Mauritius</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Mayotte" id="Mayotte"><label for="Mayotte">Mayotte</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Mexico" id="Mexico"><label for="Mexico">Mexico</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Micronesia" id="Micronesia"><label for="Micronesia">Micronesia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Moldova" id="Moldova"><label for="Moldova">Moldova</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Monaco" id="Monaco"><label for="Monaco">Monaco</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Mongolia" id="Mongolia"><label for="Mongolia">Mongolia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Montenegro" id="Montenegro"><label for="Montenegro">Montenegro</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Montserrat" id="Montserrat"><label for="Montserrat">Montserrat</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Morocco" id="Morocco"><label for="Morocco">Morocco</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Mozambique" id="Mozambique"><label for="Mozambique">Mozambique</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Namibia" id="Namibia"><label for="Namibia">Namibia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Nauru" id="Nauru"><label for="Nauru">Nauru</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Nepal" id="Nepal"><label for="Nepal">Nepal</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Netherlands" id="Netherlands"><label for="Netherlands">Netherlands</label></li>
+            <li><input type="checkbox" name="case_type[]" value="New Caledonia" id="New Caledonia"><label for="New Caledonia">New Caledonia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="New Zealand" id="New Zealand"><label for="New Zealand">New Zealand</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Nicaragua" id="Nicaragua"><label for="Nicaragua">Nicaragua</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Niger" id="Niger"><label for="Niger">Niger</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Nigeria" id="Nigeria"><label for="Nigeria">Nigeria</label></li>
+            <li><input type="checkbox" name="case_type[]" value="North-Korea" id="North-Korea"><label for="North-Korea">North Korea</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Norway" id="Norway"><label for="Norway">Norway</label></li>
+            <li><input type="checkbox" name="case_type[]" value="The-Occupied-Palestinian-Territories" id="The-Occupied-Palestinian-Territories"><label for="The-Occupied-Palestinian-Territories">The Occupied Palestinian Territories</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Oman" id="Oman"><label for="Oman">Oman</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Pakistan" id="Pakistan"><label for="Pakistan">Pakistan</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Palau" id="Palau"><label for="Palau">Palau</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Panama" id="Panama"><label for="Panama">Panama</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Papua New Guinea" id="Papua New Guinea"><label for="Papua New Guinea">Papua New Guinea</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Paraguay" id="Paraguay"><label for="Paraguay">Paraguay</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Peru" id="Peru"><label for="Peru">Peru</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Philippines" id="Philippines"><label for="Philippines">Philippines</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Pitcairn-Island" id="Pitcairn-Island"><label for="Pitcairn-Island">Pitcairn Island</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Poland" id="Poland"><label for="Poland">Poland</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Portugal" id="Portugal"><label for="Portugal">Portugal</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Qatar" id="Qatar"><label for="Qatar">Qatar</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Romania" id="Romania"><label for="Romania">Romania</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Russia" id="Russia"><label for="Russia">Russia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Rwanda" id="Rwanda"><label for="Rwanda">Rwanda</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Reunion" id="Reunion"><label for="Reunion">Réunion</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Samoa" id="Samoa"><label for="Samoa">Samoa</label></li>
+            <li><input type="checkbox" name="case_type[]" value="San-Marino" id="San-Marino"><label for="San-Marino">San Marino</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Saudi-Arabia" id="Saudi-Arabia"><label for="Saudi-Arabia">Saudi Arabia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Senegal" id="Senegal"><label for="Senegal">Senegal</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Serbia" id="Serbia"><label for="Serbia">Serbia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Seychelles" id="Seychelles"><label for="Seychelles">Seychelles</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Sierra-Leone" id="Sierra-Leone"><label for="Sierra-Leone">Sierra Leone</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Singapore" id="Singapore"><label for="Singapore">Singapore</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Slovakia" id="Slovakia"><label for="Slovakia">Slovakia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Slovenia" id="Slovenia"><label for="Slovenia">Slovenia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Solomon-Islands" id="Solomon-Islands"><label for="Solomon-Islands">Solomon Islands</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Somalia" id="Somalia"><label for="Somalia">Somalia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="South-Africa" id="South-Africa"><label for="South-Africa">South Africa</label></li>
+            <li><input type="checkbox" name="case_type[]" value="South-Georgia-and-the-South-Sandwich-Islands" id="South-Georgia-and-the-South-Sandwich-Islands"><label for="South-Georgia-and-the-South-Sandwich-Islands">South Georgia and the South Sandwich Islands</label></li>
+            <li><input type="checkbox" name="case_type[]" value="South-Korea" id="South-Korea"><label for="South-Korea">South Korea</label></li>
+            <li><input type="checkbox" name="case_type[]" value="South-Sudan" id="South-Sudan"><label for="South-Sudan">South Sudan</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Spain" id="Spain"><label for="Spain">Spain</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Sri-Lanka" id="Sri-Lanka"><label for="Sri-Lanka">Sri Lanka</label></li>
+            <li><input type="checkbox" name="case_type[]" value="St-Helena-Ascension-and-Tristan-da-Cunha" id="St-Helena-Ascension-and-Tristan-da-Cunha"><label for="St-Helena-Ascension-and-Tristan-da-Cunha">St Helena, Ascension and Tristan da Cunha</label></li>
+            <li><input type="checkbox" name="case_type[]" value="St-Kitts-and-Nevis" id="St-Kitts-and-Nevis"><label for="St-Kitts-and-Nevis">St Kitts and Nevis</label></li>
+            <li><input type="checkbox" name="case_type[]" value="St-Lucia" id="St-Lucia"><label for="St-Lucia">St Lucia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="St-Maarten" id="St-Maarten"><label for="St-Maarten">St Maarten</label></li>
+            <li><input type="checkbox" name="case_type[]" value="St-Pierre-Miquelon" id="St-Pierre-Miquelon"><label for="St-Pierre-Miquelon">St Pierre &amp; Miquelon</label></li>
+            <li><input type="checkbox" name="case_type[]" value="St-Vincent-and-The-Grenadines" id="St-Vincent-and-The-Grenadines"><label for="St-Vincent-and-The-Grenadines">St Vincent and The Grenadines</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Sudan" id="Sudan"><label for="Sudan">Sudan</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Suriname" id="Suriname"><label for="Suriname">Suriname</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Swaziland" id="Swaziland"><label for="Swaziland">Swaziland</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Sweden" id="Sweden"><label for="Sweden">Sweden</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Switzerland" id="Switzerland"><label for="Switzerland">Switzerland</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Syria" id="Syria"><label for="Syria">Syria</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Sao-Tome-and-Principe" id="Sao-Tome-and-Principe"><label for="Sao-Tome-and-Principe">São Tomé and Principe</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Taiwan" id="Taiwan"><label for="Taiwan">Taiwan</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Tajikistan" id="Tajikistan"><label for="Tajikistan">Tajikistan</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Tanzania" id="Tanzania"><label for="Tanzania">Tanzania</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Thailand" id="Thailand"><label for="Thailand">Thailand</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Timor-Leste" id="Timor-Leste"><label for="Timor-Leste">Timor Leste</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Togo" id="Togo"><label for="Togo">Togo</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Tonga" id="Tonga"><label for="Tonga">Tonga</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Trinidad-and-Tobago" id="Trinidad-and-Tobago"><label for="Trinidad-and-Tobago">Trinidad and Tobago</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Tunisia" id="Tunisia"><label for="Tunisia">Tunisia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Turkey" id="Turkey"><label for="Turkey">Turkey</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Turkmenistan" id="Turkmenistan"><label for="Turkmenistan">Turkmenistan</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Turks-and-Caicos-Islands" id="Turks-and-Caicos-Islands"><label for="Turks-and-Caicos-Islands">Turks and Caicos Islands</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Tuvalu" id="Tuvalu"><label for="Tuvalu">Tuvalu</label></li>
+            <li><input type="checkbox" name="case_type[]" value="USA" id="USA"><label for="USA">USA</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Uganda" id="Uganda"><label for="Uganda">Uganda</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Ukraine" id="Ukraine"><label for="Ukraine">Ukraine</label></li>
+            <li><input type="checkbox" name="case_type[]" value="United-Arab-Emirates" id="United-Arab-Emirates"><label for="United-Arab-Emirates">United Arab Emirates</label></li>
+            <li><input type="checkbox" name="case_type[]" value="United-Kingdom" id="United-Kingdom"><label for="United-Kingdom">United Kingdom</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Uruguay" id="Uruguay"><label for="Uruguay">Uruguay</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Uzbekistan" id="Uzbekistan"><label for="Uzbekistan">Uzbekistan</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Vanuatu" id="Vanuatu"><label for="Vanuatu">Vanuatu</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Venezuela" id="Venezuela"><label for="Venezuela">Venezuela</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Vietnam" id="Vietnam"><label for="Vietnam">Vietnam</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Wallis-and-Futuna" id="Wallis-and-Futuna"><label for="Wallis-and-Futuna">Wallis and Futuna</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Western-Sahara" id="Western-Sahara"><label for="Western-Sahara">Western Sahara</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Yemen" id="Yemen"><label for="Yemen">Yemen</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Zambia" id="Zambia"><label for="Zambia">Zambia</label></li>
+            <li><input type="checkbox" name="case_type[]" value="Zimbabwe" id="Zimbabwe"><label for="Zimbabwe">Zimbabwe</label></li>
+          </ul>
+        </div>
+      </div>
+      <div class="filter checkbox-filter js-openable-filter closed" tabindex="1">
+        <div class="head">
+          <span class="legend">Sector</span>
+          <div class="controls">
+            <a class="clear-selected js-hidden">clear</a>
+            <div class="toggle"></div>
+          </div>
+        </div>
+        <div class="checkbox-container" style="max-height: 250px;">
+          <ul>
+            <li><input type="checkbox" name="case_type[]" value="partnerships" id="partnerships"><label for="partnerships">Partnerships with local governments</label></li>
+            <li><input type="checkbox" name="case_type[]" value="ngo" id="ngo"><label for="ngo">NGOs</label></li>
+            <li><input type="checkbox" name="case_type[]" value="businesses" id="businesses"><label for="businesses">Businesses in the UK and developing countries</label></li>
+            <li><input type="checkbox" name="case_type[]" value="studying-working" id="studying-working"><label for="studying-working">Studying or working in developing countries</label></li>
+            <li><input type="checkbox" name="case_type[]" value="humanitarian-emergencies" id="humanitarian-emergencies"><label for="humanitarian-emergencies">Humanitarian emergencies and fragile states</label></li>
+            <li><input type="checkbox" name="case_type[]" value="education" id="education"><label for="education">Education</label></li>
+          </ul>
+        </div>
+      </div>
+      <div class="filter checkbox-filter js-openable-filter closed" tabindex="2">
+        <div class="head">
+          <span class="legend">Value of fund</span>
+          <div class="controls">
+            <a class="clear-selected js-hidden">clear</a>
+            <div class="toggle"></div>
+          </div>
+        </div>
+        <div class="checkbox-container" style="max-height: 250px;">
+          <ul>
+            <li><input type="checkbox" name="case_type[]" value="1-1000" id="1-1000"><label for="1-1000">&pound; 1 - 1,000</label></li>
+            <li><input type="checkbox" name="case_type[]" value="1000-10000" id="1000-10000"><label for="1000-10000">&pound; 1,000 - 10,000</label></li>
+            <li><input type="checkbox" name="case_type[]" value="10000-100000" id="10000-100000"><label for="10000-100000">&pound; 10,000 - 100,000</label></li>
+            <li><input type="checkbox" name="case_type[]" value="100000" id="100000"><label for="100000">&pound; 100,000+</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <input type="submit" value="Filter results" class="button">
+</form>
+  </div>
+</div>
+
+
+<div class="filtered-results">
+  <div class="inner-block">
+    <p class="result-info"><span class="result-count">15</span> reports</p>
+    <ul class="results">
+      <li class="document closed">
+        <h3><a href="https://www.gov.uk/commonwealth-broadcasting-association-worldview">Commonwealth Broadcasting Association WorldView</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>25 March 2013</dd>
+          <dt>State</dt>
+          <dd>Closed</dd>
+        </dl>
+      </li>
+      <li class="document closed 100000 10000-100000">
+        <h3><a href="https://www.gov.uk/commonwealth-broadcasting-association-worldview">Construction Ideas Fund</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>22 January 2014</dd>
+          <dt>State</dt>
+          <dd>Closed</dd>
+          <dt>Value range</dt>
+          <dd>&pound; 10,000 - 100,000, &pound; 100,000+</dd>
+        </dl>
+      </li>
+      <li class="document open ngo">
+        <h3><a href="https://www.gov.uk/building-resilience-and-adaptation-to-climate-extremes-and-disasters-programme-braced">Building resilience and adaptation to climate extremes and disasters programme (BRACED)</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd>NGOs</dd>
+          <dt>Published</dt>
+          <dd>18 June 2014</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd></dd>
+        </dl>
+      </li>
+      <li class="document open ngo">
+        <h3><a href="https://www.gov.uk/civil-society-challenge-fund">Civil Society Challenge Fund</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd>NGOs</dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>30 May 2014</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd></dd>
+        </dl>
+      </li>
+      <li class="document open ngo 100000">
+        <h3><a href="https://www.gov.uk/common-ground-initiative-cgi">Common Ground Initiative (CGI)</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd>NGOs</dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>25 March 2013</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd>&pound; 100,000+</dd>
+        </dl>
+      </li>
+      <li class="document open ngo 100000">
+        <h3><a href="https://www.gov.uk/disability-rights-fund-drf">Disability Rights Fund (DRF)</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd>NGOs</dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>25 March 2013</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd>&pound; 100,000+</dd>
+        </dl>
+      </li>
+      <li class="document open Rwanda">
+        <h3><a href="https://www.gov.uk/environment-and-climate-change-fund-fonerwa">Environment and Climate Change Fund: FONERWA</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd></dd>
+          <dt>Country</dt>
+          <dd>Rwanda</dd>
+          <dt>Published</dt>
+          <dd>15 January 2014</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd></dd>
+        </dl>
+      </li>
+      <li class="document open ngo humanitarian-emergencies 100000">
+        <h3><a href="https://www.gov.uk/funding-for-what-works-to-prevent-violence-against-women-and-girls">Funding for What Works to Prevent Violence against Women and Girls</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd>NGOs</dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>4 April 2014</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd>&pound; 100,000+</dd>
+        </dl>
+      </li>
+      <li class="document open ngo humanitarian-emergencies 100000">
+        <h3><a href="https://www.gov.uk/girls-education-challenge">Girls' Education Challenge</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd>NGOs</dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>6 May 2014</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd>&pound; 100,000+</dd>
+        </dl>
+      </li>
+      <li class="document open ngo humanitarian-emergencies 100000">
+        <h3><a href="https://www.gov.uk/global-poverty-action-fund-gpaf">Global Poverty Action Fund (GPAF)</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd>NGOs</dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>11 June 2014</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd>&pound; 100,000+</dd>
+        </dl>
+      </li>
+      <li class="document open ngo 100000">
+        <h3><a href="https://www.gov.uk/governance-and-transparency-fund-gtf">Governance and Transparency Fund (GTF)</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd>NGOs</dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>5 December 2013</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd>&pound; 100,000+</dd>
+        </dl>
+      </li>
+      <li class="document open ngo 100000">
+        <h3><a href="https://www.gov.uk/programme-partnership-arrangements-ppas">Programme Partnership Arrangements (PPAs)</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd>NGOs</dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>13 September 2013</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd>&pound; 100,000+</dd>
+        </dl>
+      </li>
+      <li class="document open ngo 100000">
+        <h3><a href="https://www.gov.uk/uk-aid-match">UK Aid Match</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd>NGOs</dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>25 June 2014</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd>&pound; 100,000+</dd>
+        </dl>
+      </li>
+      <li class="document open 100000">
+        <h3><a href="https://www.gov.uk/advanced-market-commitments-amc">Advanced Market Commitments (AMC)</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd></dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>25 June 2014</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd>&pound; 100,000+</dd>
+        </dl>
+      </li>
+      <li class="document open">
+        <h3><a href="https://www.gov.uk/health-partnership-scheme">Health Partnership Scheme</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd></dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>25 March 2013</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd></dd>
+        </dl>
+      </li>
+      <li class="document open 100000">
+        <h3><a href="https://www.gov.uk/international-finance-facility-for-immunisation-iffim">International Finance Facility for Immunisation (IFFIm)</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd></dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>25 March 2013</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd>&pound; 100,000+</dd>
+        </dl>
+      </li>
+      <li class="document open 10000-100000">
+        <h3><a href="https://www.gov.uk/medicines-transparency-alliance-meta">Medicines Transparency Alliance (MeTA)</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd></dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>25 March 2013</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd>&pound; 10,000 - 100,000</dd>
+        </dl>
+      </li>
+      <li class="document open partnerships 10000-100000">
+        <h3><a href="https://www.gov.uk/commonwealth-local-government-good-practice-scheme">Commonwealth Local Government Good Practice Scheme</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd>Partnerships with local governments</dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>25 March 2013</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd>&pound; 10,000 - 100,000</dd>
+        </dl>
+      </li>
+      <li class="document open partnerships">
+        <h3><a href="https://www.gov.uk/construction-sector-transparency-initiative-cost">Construction Sector Transparency Initiative (CoST)</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd>Partnerships with local governments</dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>15 May 2014</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd></dd>
+        </dl>
+      </li>
+      <li class="document open partnerships">
+        <h3><a href="https://www.gov.uk/global-school-partnerships-local-authority-grants">Global School Partnerships local authority grants</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd>Partnerships with local governments</dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>25 March 2013</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd></dd>
+        </dl>
+      </li>
+      <li class="document open partnerships">
+        <h3><a href="https://www.gov.uk/the-investment-climate-facility-for-africa-icf">The Investment Climate Facility for Africa (ICF)</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd>Partnerships with local governments</dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>25 March 2013</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd></dd>
+        </dl>
+      </li>
+      <li class="document open partnerships">
+        <h3><a href="https://www.gov.uk/trade-advocacy-fund-taf">Trade Advocacy Fund (TAF)</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd>Partnerships with local governments</dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>25 March 2013</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd></dd>
+        </dl>
+      </li>
+      <li class="document open partnerships">
+        <h3><a href="https://www.gov.uk/arab-partnership">Arab Partnership</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd>Partnerships with local governments</dd>
+          <dt>Country</dt>
+          <dd></dd>
+          <dt>Published</dt>
+          <dd>25 March 2013</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd></dd>
+        </dl>
+      </li>
+      <li class="document open Ghana">
+        <h3><a href="https://www.gov.uk/business-sector-advocacy-challenge-busac-fund-ghana">Business Sector Advocacy Challenge (BUSAC) fund – Ghana</a></h3>
+        <dl>
+          <dt>Type</dt>
+          <dd>Guidance</dd>
+          <dt>Sector</dt>
+          <dd></dd>
+          <dt>Country</dt>
+          <dd>Ghana</dd>
+          <dt>Published</dt>
+          <dd>25 March 2013</dd>
+          <dt>State</dt>
+          <dd>Open</dd>
+          <dt>Value range</dt>
+          <dd></dd>
+        </dl>
+      </li>
+
+
+    </ul>
+  </div>
+</div>
+
+
+</main>
