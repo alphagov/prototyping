@@ -291,7 +291,7 @@ header.page-header {
 .policies {
   float: left;
   margin-bottom: 60px;
-  width: 66.66%;
+  width: 75%;
 
   h2 {
     @include core-24;
@@ -303,6 +303,7 @@ header.page-header {
     padding-left: 0;
     li {
       list-style: none;
+      margin-bottom: 30px;
 
       a {
         @include core-19;
