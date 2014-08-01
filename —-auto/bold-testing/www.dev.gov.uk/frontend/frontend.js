@@ -1,5 +1,0 @@
-// Frontend manifest
-
-
-
-;
