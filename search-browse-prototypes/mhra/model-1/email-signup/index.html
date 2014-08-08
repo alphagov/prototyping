@@ -17,7 +17,7 @@ home_url: https://www.gov.uk/
 
 <div class="filter-form" style="width: 100%;">
   <div class="inner-block">
-    <p>Use the filters to subscribe to relevant safety alerts and recalls</p>
+    <p>Use the filters to choose which safety alerts and recalls you want to recieve</p>
 
     <form method="get" action="">
       <div class="filter checkbox-filter js-openable-filter closed" tabindex="0" style="float: left; width: 30%; margin-right: 30px;">
@@ -29,6 +29,9 @@ home_url: https://www.gov.uk/
           </div>
         </div>
         <div class="checkbox-container">
+          <ul>
+            <li><input type="checkbox" name="case_type[]" value="all-drug-alerts" id="all-drug-alerts"><label for="all-drug-alerts" class="all-types">All alert types</label></li>
+          </ul>
           <h3>Drugs</h3>
           <ul>
             <li><input type="checkbox" name="case_type[]" value="drug-alerts" id="drug-alerts"><label for="drug-alerts">Drug alerts</label></li>
@@ -51,6 +54,7 @@ home_url: https://www.gov.uk/
         </div>
         <div class="checkbox-container" style="max-height: 250px;">
           <ul>
+            <li><input type="checkbox" name="case_type[]" value="all-areas-of-specialism" id="all-areas-of-specialism"><label for="all-areas-of-specialism" class="all-types">All areas of specialism</label></li>
             <li><input type="checkbox" name="case_type[]" value="anaesthetics" id="anaesthetics"><label for="anaesthetics">Anaesthetics</label></li>
             <li><input type="checkbox" name="case_type[]" value="cardiology" id="cardiology"><label for="cardiology">Cardiology</label></li>
             <li><input type="checkbox" name="case_type[]" value="care-home-staff" id="care-home-staff"><label for="care-home-staff">Care home staff</label></li>
@@ -80,6 +84,10 @@ home_url: https://www.gov.uk/
             <li><input type="checkbox" name="case_type[]" value="herbal-homeopathy" id="herbal-homeopathy"><label for="herbal-homeopathy">Herbal/homeopathy</label></li>
           </ul>
         </div>
+      </div>
+
+      <div style="float: left; width: 30%;">
+        <p>No email alert categories selected</p>
       </div>
 
       <div style="clear: both; padding: 40px 0 60px;">
