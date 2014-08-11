@@ -69,7 +69,6 @@ home_url: https://www.gov.uk/
           <ul>
             <li><input type="checkbox" name="case_type[]" value="anaesthetics" id="anaesthetics"><label for="anaesthetics">Anaesthetics</label></li>
             <li><input type="checkbox" name="case_type[]" value="cardiology" id="cardiology"><label for="cardiology">Cardiology</label></li>
-            <li><input type="checkbox" name="case_type[]" value="care-home-staff" id="care-home-staff"><label for="care-home-staff">Care home staff</label></li>
             <li><input type="checkbox" name="case_type[]" value="cosmetic-surgery" id="cosmetic-surgery"><label for="cosmetic-surgery">Cosmetic surgery</label></li>
             <li><input type="checkbox" name="case_type[]" value="critical-care-practitioners" id="critical-care-practitioners"><label for="critical-care-practitioners">Critical care practitioners</label></li>
             <li><input type="checkbox" name="case_type[]" value="dentistry" id="dentistry"><label for="dentistry">Dentistry</label></li>
@@ -79,6 +78,7 @@ home_url: https://www.gov.uk/
             <li><input type="checkbox" name="case_type[]" value="haemotology" id="haemotology"><label for="haemotology">Haemotology</label></li>
             <li><input type="checkbox" name="case_type[]" value="herbal-homeopathy" id="herbal-homeopathy"><label for="herbal-homeopathy">Herbal/homeopathy</label></li>
             <li><input type="checkbox" name="case_type[]" value="infection-prevention" id="infection-prevention"><label for="infection-prevention">Infection prevention</label></li>
+            <li><input type="checkbox" name="case_type[]" value="mobility" id="mobility"><label for="mobility">Mobility</label></li>
             <li><input type="checkbox" name="case_type[]" value="obstetrics-and-gynaecology" id="obstetrics-and-gynaecology"><label for="obstetrics-and-gynaecology">Obstetrics and gynaecology</label></li>
             <li><input type="checkbox" name="case_type[]" value="oncology" id="oncology"><label for="oncology">Oncology</label></li>
             <li><input type="checkbox" name="case_type[]" value="ophthalmology" id="ophthalmology"><label for="ophthalmology">Ophthalmology</label></li>
@@ -108,7 +108,7 @@ home_url: https://www.gov.uk/
   <div class="inner-block">
     <p class="result-info"><span class="result-count">40</span> alerts</p>
     <ul class="results">
-      <li class="document drug-alerts">
+      <li class="document drug-alerts paediatrics general-practice">
         <h3><a href="#">Buccolam Oromucosal Solution manufactured by ViroPharma SPRL (EL (14)A/12)</a></h3>
         <p>ViroPharma SPRL is recalling specific batches of Buccolam Oromucosal Solution, listed in the attached appendix, following a routine inspection of the company’s contract manufacturing site in the UK.</p>
         <dl>
@@ -118,7 +118,7 @@ home_url: https://www.gov.uk/
           <dd>28 July 2014</dd>
         </dl>
       </li>
-      <li class="document drug-safety-warning">
+      <li class="document drug-safety-warning oncology">
         <h3><a href="#">Arzerra (ofatumumab)</a></h3>
         <p>Ofatumumab can cause serious or fatal infusion reactions. It should only be given under the supervision of a physician experienced in the use of cancer therapy and where facilities to monitor and treat infusion reactions are available.</p>
         <dl>
@@ -138,7 +138,7 @@ home_url: https://www.gov.uk/
           <dd>25 July 2014</dd>
         </dl>
       </li>
-      <li class="document medical-device-alerts">
+      <li class="document medical-device-alerts general-surgery orthopedics">
         <h3><a href="#">Surgical instrument: Standard Offset Cup Impactor manufactured by Greatbatch (MDA/2014/031)</a></h3>
         <p>This medical device alert is being issued due to the potential for infection from inadequately sterilized devices.</p>
         <dl>
@@ -148,7 +148,7 @@ home_url: https://www.gov.uk/
           <dd>24 July 2014</dd>
         </dl>
       </li>
-      <li class="document medical-device-alerts">
+      <li class="document medical-device-alerts critical-care-practitioners orthopedics">
         <h3><a href="#">Synthes trauma external fixation system (small, medium, distraction osteogenesis (DO) ring and large) manufactured by DePuy Synthes (MDA/2014/030)</a></h3>
         <p>This Medical device alert is being issued as due to a change in instructions for use devices are now 'MR-Conditional', placing additional restrictions on patient positioning.</p>
         <dl>
@@ -158,7 +158,7 @@ home_url: https://www.gov.uk/
           <dd>23 July 2014</dd>
         </dl>
       </li>
-      <li class="document medical-device-alerts">
+      <li class="document medical-device-alerts general-surgery anaesthetics">
         <h3><a href="#">Ventstar disposable breathing systems manufactured by Draeger (MDA/2014/029)</a></h3>
         <p>This MDA is being issued as due to a manufacturing issue, there is the potential for loose adhesive residue to be inside the breathing systems.</p>
         <dl>
@@ -168,7 +168,7 @@ home_url: https://www.gov.uk/
           <dd>22 July 2014</dd>
         </dl>
       </li>
-      <li class="document drug-alerts">
+      <li class="document drug-alerts general-practice pharmacy">
         <h3><a href="#">Amoxicillin Sodium 500mg Powder for Solution for Injection manufactured by Wockhardt UK Ltd (EL (14)A/11)</a></h3>
         <p>Further to the Class 4 'caution in use' Alert issued on 9 July 2014, ref. EL (14)A/09, Wockhardt UK Ltd has received a small number of additional reports of injection site reactions in both paediatrics and adults. As a precaution, some batches of the 500mg presentation are now being recalled</p>
         <dl>
@@ -178,7 +178,7 @@ home_url: https://www.gov.uk/
           <dd>22 July 2014</dd>
         </dl>
       </li>
-      <li class="document drug-alerts">
+      <li class="document drug-alerts general-surgery general-practice">
         <h3><a href="#">Midazolam Buccal Liquid 10mg / 1ml, 5ml manufactured by Penn Pharma, distributed in Quantum Pharmaceutical livery (EL (14)/A10)</a></h3>
         <p>Specific batches of Midazolam Buccal Liquid 10mg / 1ml, 5ml are being recalled because the screw caps on some units have not been correctly placed during manufacture. This may result in evaporation of the aqueous component of the product and a consequent increase in the concentration of Midazolam.</p>
         <dl>
@@ -188,7 +188,7 @@ home_url: https://www.gov.uk/
           <dd>16 July 2014</dd>
         </dl>
       </li>
-       <li class="document drug-safety-warning">
+       <li class="document drug-safety-warning oncology">
         <h3><a href="#">Velcade (bortezomib) powder for solution for injection</a></h3>
         <p>The licence-holder has received reports of cracked or broken vials. Precautions to take into account when dispensing or preparing Velcade for injection.</p>
         <dl>
@@ -198,7 +198,7 @@ home_url: https://www.gov.uk/
           <dd>16 July 2014</dd>
         </dl>
       </li>
-      <li class="document medical-device-alerts">
+      <li class="document medical-device-alerts critical-care-practitioners">
         <h3><a href="#">Procedure packs containing various central venous catheters manufactured by Arrow International (a division of Teleflex) (MDA/2014/028)</a></h3>
         <p>The Medical Device Alert has been issued as an update to MDA/2014/022, procedure packs containing various central venous catheters manufactured by Arrow International (a division of Teleflex).</p>
         <dl>
@@ -208,17 +208,7 @@ home_url: https://www.gov.uk/
           <dd>11 July 2014</dd>
         </dl>
       </li>
-      <li class="document medical-device-alerts">
-        <h3><a href="#">Procedure packs containing various central venous catheters manufactured by Arrow International (a division of Teleflex) (MDA/2014/028)</a></h3>
-        <p>The Medical Device Alert has been issued as an update to MDA/2014/022, procedure packs containing various central venous catheters manufactured by Arrow International (a division of Teleflex).</p>
-        <dl>
-          <dt>Class</dt>
-          <dd></dd>
-          <dt>Published</dt>
-          <dd>11 July 2014</dd>
-        </dl>
-      </li>
-      <li class="document medical-device-alerts">
+      <li class="document medical-device-alerts general-surgery cosmetic-surgery">
         <h3><a href="#">Breast implants. All types, makes and models (MDA/2014/027)</a></h3>
         <p>This MDA has been issued to further encourage healthcare professionals to report cases of anaplastic large cell lymphoma (ALCL) in women who have breast implants or who have had them removed.</p>
         <dl>
@@ -228,7 +218,7 @@ home_url: https://www.gov.uk/
           <dd>10 July 2014</dd>
         </dl>
       </li>
-      <li class="document drug-alerts">
+      <li class="document drug-alerts general-practice">
         <h3><a href="#">Amoxicillin Sodium 250mg, 500g, &amp; 1mg Powder for Solution for Injection, manufactured by Wockhardt UK Ltd (EL (14)A/09)</a></h3>
         <p>Wockhardt UK Ltd are asking all healthcare professionals treating neonates and infants not to use Wockhardt Amoxicillin Sodium Powder for Solution for Injection (all batches) in such patients until further notice.</p>
         <dl>
@@ -248,7 +238,7 @@ home_url: https://www.gov.uk/
           <dd>9 July 2014</dd>
         </dl>
       </li>
-      <li class="document medical-device-alerts">
+      <li class="document medical-device-alerts mobility">
         <h3><a href="#">ReTurn 7400 and ReTurn 7500 turning aids manufactured by Handicare AB (MDA/2014/025)</a></h3>
         <p>The Medical Device Alert has been issued as there is a risk of injury due to wing handles coming loose.</p>
         <dl>
@@ -278,7 +268,7 @@ home_url: https://www.gov.uk/
           <dd>27 June 2014</dd>
         </dl>
       </li>
-      <li class="document medical-device-alerts">
+      <li class="document medical-device-alerts ">
         <h3><a href="#">HeartStart MRx defibrillators/monitors manufactured by Philips (MDA/2014/024)</a></h3>
         <p>The Medical Device Alert has been issued as there is a risk of delay in delivering CPR</p>
         <dl>
