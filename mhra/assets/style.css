@@ -33,13 +33,10 @@ p.quiet {
   margin:1em auto;
 }
 
-ul {
-  padding-left:0;
 
-}
 
-li {
-  list-style:none;
+li{
+  padding-bottom:0.5em;
 }
 
 a.button {
