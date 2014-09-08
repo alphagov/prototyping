@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="/manuals/assets/js/jquery-1.7.2.js"></script>
+    {% include _head.html %}
+    <link rel="stylesheet" href="/manuals/assets/stylesheets/manuals.css" />
+    <link href="/manuals/assets/stylesheets/print.css" media="print" rel="stylesheet" type="text/css">
+  </head>
+  <body class="mainstream{% if page.body_class  %} {{ page.body_class }}{% endif %}">
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script><a href="#content" class="visuallyhidden">Skip to main content</a>
+    {% include _header.html %}
+    <div id="wrapper" class="{{ page.categories }}{% if page.section_class  %} {{ page.section_class }}{% endif %}">
+      <header class="manual-header">
+        <div class="inner-block floated-children">
+          <div class="headings">
+            <h1>{{ page.title }}</h1>
+          </div>
+          {% if page.update %}
+            <aside class="metadata-date">
+              <dl>
+                <dt>Document updated:</dt>
+                <dd>{{ page.update }}</dd>
+              </dl>
+              <a href="/guidance/family-procedure-rules/updates">See all updates</a>
+            </aside>
+          {% endif %}
+          <aside class="metadata-list">
+            <dl>
+              <dt>Published by:</dt>
+              <dd>
+                <a href="{{ page.meta_organisation_url }}">{{ page.meta_organisation }}</a>
+              </dd>
+            </dl>
+          </aside>
+        </div>
+      </header>
+      <main id="content" role="main" class="">
+        {{ content }}
+      </main>
+    </div><!--end wrapper-->
+    {% include _footer.html %}
+  </body>
+</html>
