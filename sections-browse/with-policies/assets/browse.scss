@@ -11,58 +11,6 @@
   max-width: 960px;
 }
 
-.what-are-we-doing-about {
-  margin-bottom: 40px;
-
-  h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  p {
-    font-size: 19px;
-
-    &.more {
-      margin-top: 5px;
-      a { font-weight: bold; }
-    }
-  }
-}
-
-.policies-latest-container {
-  margin: 30px 0;
-  overflow: auto;
-  position: relative;
-}
-
-.policies-major-programmes {
-  float: left;
-  width: 66.666%;
-
-  .content {
-    border-top: 5px solid #005EA5;
-    margin-right: 20px;
-  }
-
-  li {
-    list-style: none;
-    font-size: 19px;
-    line-height: 1.6;
-  }
-
-  h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 15px 0 10px;
-  }
-}
-
-.recently-updated {
-  width: 33.333%;
-  float: right;
-}
-
 header.page-header {
   h1 {
     font-size: 48px;
@@ -177,7 +125,57 @@ header.page-header {
   }
 }
 
+.what-are-we-doing-about {
+  margin-bottom: 40px;
+
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 19px;
+
+    &.more {
+      margin-top: 5px;
+      a { font-weight: bold; }
+    }
+  }
+}
+
+.policies-latest-container {
+  margin: 30px 0;
+  overflow: auto;
+  position: relative;
+}
+
+.policies-major-programmes {
+  float: left;
+  width: 66.666%;
+
+  .content {
+    border-top: 5px solid #005EA5;
+    margin-right: 20px;
+  }
+
+  li {
+    list-style: none;
+    font-size: 19px;
+    line-height: 1.6;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px 0 10px;
+  }
+}
+
 .recently-updated {
+  width: 33.333%;
+  float: right;
+
   .content {
     border-top: 1px solid #bfc1c3;
     padding-top: 15px;
@@ -274,4 +272,72 @@ header.page-header {
       }
     }
   }
+}
+
+.programme {
+
+  .intro {
+    @include core-24;
+  }
+
+  .pages {
+    border-top: 1px solid #ddd;
+    margin: 40px 0;
+    padding: 30px 0 0;
+    overflow: auto;
+    position: relative;
+
+    .left-col {
+      box-sizing: border-box;
+      width: 33.3333%;
+      float: left;
+
+      .recently-updated {
+        width: 100%;
+        float: none;
+        margin-top: 30px;
+      }
+    }
+    nav {
+      li {
+        list-style: none;
+
+        a {
+          @include core-19;
+
+          display: block;
+          padding: 6px 0;
+        }
+
+        &.selected {
+          a, a:link, a:hover, a:visited {
+            color: #000;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    article {
+      box-sizing: border-box;
+      width: 66.6667%;
+      float: right;
+      padding-left: 40px;
+
+      h1 {
+        @include heading-27;
+        font-weight: bold;
+        margin-top: 35px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      p {
+        @include copy-19;
+        margin: 10px 0;
+      }
+    }
+  }
+
 }
