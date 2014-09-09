@@ -2,15 +2,12 @@ $(function() {
 
   window.addEventListener("scroll", function(e) {
 
-    if ($(document).scrollTop() > ($('.manual-content').position().top) && !$('.up-nav').hasClass('fixed')) {
+    if ($(document).scrollTop() > ($('.manual-content').position().top + 200) && !$('.up-nav').hasClass('fixed')) {
       $('.up-nav').addClass('fixed');
-
-
     }
 
-    if ($(document).scrollTop() < $('.manual-content').position().top && $('.up-nav').hasClass('fixed')) {
+    if ($(document).scrollTop() < ($('.manual-content').position().top + 200) && $('.up-nav').hasClass('fixed')) {
       $('.up-nav').removeClass('fixed');
-
     }
   });
 
