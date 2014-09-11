@@ -319,6 +319,12 @@ header.page-header {
         margin-top: 30px;
       }
     }
+    article {
+      width: 66.6667%;
+      float: right;
+      padding-left: 40px;
+      box-sizing: border-box;
+    }
     nav {
       li {
         list-style: none;
@@ -338,27 +344,42 @@ header.page-header {
         }
       }
     }
-    article {
-      box-sizing: border-box;
-      width: 66.6667%;
-      float: right;
-      padding-left: 40px;
-
-      h1 {
-        @include heading-27;
-        font-weight: bold;
-        margin-top: 35px;
-
-        &:first-child {
-          margin-top: 0;
-        }
-      }
-
-      p {
-        @include copy-19;
-        margin: 10px 0;
-      }
-    }
   }
 
+}
+
+.policy {
+  header.page-header h1 {
+    @include heading-36;
+    @include bold-36;
+  }
+}
+
+.policy, .programme {
+  article {
+    @include copy-19;
+
+    h1, h2 {
+      @include heading-27;
+      font-weight: bold;
+      margin-top: 35px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    h3 {
+      @include bold-19;
+      font-weight: bold;
+      margin-top: 35px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+  }
 }
