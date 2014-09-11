@@ -142,6 +142,16 @@ header.page-header {
       a { font-weight: bold; }
     }
   }
+
+  ul {
+    font-size: 19px;
+    padding-left: 20px;
+    margin-top: 8px;
+
+    li {
+      padding: 2px 0;
+    }
+  }
 }
 
 .policies-latest-container {
@@ -150,7 +160,7 @@ header.page-header {
   position: relative;
 }
 
-.policies-major-programmes {
+.major-programmes {
   float: left;
   width: 66.666%;
 
@@ -163,6 +173,17 @@ header.page-header {
     list-style: none;
     font-size: 19px;
     line-height: 1.6;
+  }
+
+  a {
+    font-weight: bold;
+
+    &:link, &:visited {
+      text-decoration: none;
+    }
+    &:hover, &:active {
+      text-decoration: underline;
+    }
   }
 
   h2 {
