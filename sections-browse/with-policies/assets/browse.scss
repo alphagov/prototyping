@@ -1,0 +1,385 @@
+---
+---
+
+@import "frontend_toolkit";
+
+// horrible hacky overides
+
+#content {
+  position: relative;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+header.page-header {
+  h1 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 40px 0;
+
+    span {
+      color: #6f777b;
+      display: block;
+      font-size: 27px;
+      font-weight: normal;
+    }
+    &+ .metadata-list {
+      font-size: 14px;
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.metadata-list {
+  dl {
+    margin-top: 0;
+    overflow: hidden;
+
+    dt,
+    dd {
+      float: left;
+      margin-left: 0;
+    }
+    dt {
+      clear: both;
+      margin-right: 15px;
+      min-width: 100px;
+    }
+  }
+}
+
+.category-page {
+
+  .browse-container {
+    min-height: 100px;
+
+    h2 {
+      @include core-19;
+      float: left;
+      font-weight: bold;
+      margin: 0 3.33% 0 0;
+      position: relative;
+      width: 30%;
+
+      &.published {
+        @include core-27;
+        font-weight: bold;
+        + ol {
+          margin-bottom: 30px;
+        }
+      }
+      &.running-charity {
+        display: block;
+        border-top: 5px solid #000;
+        @include core-36;
+        font-weight: bold;
+        margin-top: 60px;
+        padding: 15px 0 30px;
+        width: 100%;
+      }
+    }
+
+    .published-by {
+      margin-left: 30%;
+      padding-left: 40px;
+      span {
+        display: block;
+
+        font-weight: bold;
+        a {
+          text-decoration: none;
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    ol {
+      @include core-19;
+      font-weight: bold;
+      float: left;
+      margin: 0 0 60px;
+      list-style: none;
+      width: 66.66%;
+
+      li {
+        margin-bottom: 10px;
+        a {
+          text-decoration: none;
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+          }
+        }
+        .updated {
+          font-size: 14px;
+          font-weight: normal;
+          margin-left: 20px;
+          color: #6f777b;
+        }
+      }
+    }
+  }
+}
+
+.what-are-we-doing-about {
+  margin-bottom: 40px;
+
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 19px;
+
+    &.more {
+      margin-top: 5px;
+      a { font-weight: bold; }
+    }
+  }
+
+  ul {
+    font-size: 19px;
+    padding-left: 20px;
+    margin-top: 8px;
+
+    li {
+      padding: 2px 0;
+    }
+  }
+}
+
+.policies-latest-container {
+  margin: 30px 0;
+  overflow: auto;
+  position: relative;
+}
+
+.major-programmes {
+  float: left;
+  width: 66.666%;
+
+  .content {
+    border-top: 5px solid #005EA5;
+    margin-right: 20px;
+  }
+
+  li {
+    list-style: none;
+    font-size: 19px;
+    line-height: 1.6;
+  }
+
+  a {
+    font-weight: bold;
+
+    &:link, &:visited {
+      text-decoration: none;
+    }
+    &:hover, &:active {
+      text-decoration: underline;
+    }
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px 0 10px;
+  }
+}
+
+.recently-updated {
+  width: 33.333%;
+  float: right;
+
+  .content {
+    border-top: 1px solid #bfc1c3;
+    padding-top: 15px;
+  }
+
+  header h1 {
+    @include core-19;
+    font-weight: bold;
+  }
+
+  .document-list {
+    border-bottom: 1px solid #bfc1c3;
+    list-style: none;
+    margin: 0 0 10px 0;
+    padding-left: 0;
+
+    > li {
+      margin: 15px 0;
+    }
+
+    h2 {
+      clear: both;
+      @include core-16;
+      font-weight: bold;
+      margin-bottom: 0;
+
+      a {
+        text-decoration: none;
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .attributes {
+    padding-left: 0;
+    overflow: hidden;
+
+    li {
+      @include core-14;
+      float: left;
+      margin-right: 5px;
+    }
+  }
+
+  .see-all {
+    @include core-16;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+// Copied from whitehall
+  .feeds {
+    @include core-14;
+    border-bottom: 1px solid #bfc1c3;
+    padding-bottom: 10px;
+
+    span {
+      display: block;
+      padding-right: 10px;
+    }
+
+    .feed {
+      padding: 0 10px 0 20px;
+      font-weight: bold;
+      background: url('https://assets.digital.cabinet-office.gov.uk/government/assets/feed-icon-black-2797379a53d9064b97bc610ee4d3adae.png') 0 40% no-repeat;
+    }
+    .govdelivery {
+      padding: 0 10px 0 25px;
+      font-weight: bold;
+      background: url('https://assets.digital.cabinet-office.gov.uk/government/assets/mail-icon-d0277821fbdd6977b32433de46f5fec7.png') 0 40% no-repeat;
+    }
+
+    .feed-panel {
+      display: none;
+      margin-top: 15px;
+      padding: 10px 15px;
+      background: #dee0e2;
+
+      h3 {
+        @include core-14;
+        border-bottom: 1px solid #bfc1c3;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+      }
+
+      input {
+        @include core-14;
+        width: 100%;
+        text-indent: 5px;
+        padding: 5px 0;
+      }
+    }
+  }
+}
+
+.programme {
+
+  .intro {
+    @include core-24;
+  }
+
+  .pages {
+    border-top: 1px solid #ddd;
+    margin: 40px 0;
+    padding: 30px 0 0;
+    overflow: auto;
+    position: relative;
+
+    .left-col {
+      box-sizing: border-box;
+      width: 33.3333%;
+      float: left;
+
+      .recently-updated {
+        width: 100%;
+        float: none;
+        margin-top: 30px;
+      }
+    }
+    article {
+      width: 66.6667%;
+      float: right;
+      padding-left: 40px;
+      box-sizing: border-box;
+    }
+    nav {
+      li {
+        list-style: none;
+
+        a {
+          @include core-19;
+
+          display: block;
+          padding: 6px 0;
+        }
+
+        &.selected {
+          a, a:link, a:hover, a:visited {
+            color: #000;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.policy {
+  header.page-header h1 {
+    @include heading-36;
+    @include bold-36;
+  }
+}
+
+.policy, .programme {
+  article {
+    @include copy-19;
+
+    h1, h2 {
+      @include heading-27;
+      font-weight: bold;
+      margin-top: 35px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    h3 {
+      @include bold-19;
+      font-weight: bold;
+      margin-top: 35px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+  }
+}
