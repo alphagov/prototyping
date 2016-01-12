@@ -1,3 +1,7 @@
+# NOT CURRENTLY MAINTAINED
+
+Use the [govuk prototype kit](https://github.com/alphagov/govuk_prototype_kit) instead.
+
 Prototyping
 ===========
 
